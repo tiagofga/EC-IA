@@ -1,23 +1,28 @@
-# Status da v0.1.0
+# Estado do repositório
 
-A v0.1.0 estabelece a estrutura pública definitiva até a Aula 04 e a Lista 04.
+## Versão atual
 
-## Incluído materialmente
+`v0.2.0`
 
-- Lista 04 em PDF;
-- visualização de Busca por traces;
-- notas iniciais;
+## Conteúdo público organizado
+
+- Plano Didático 2026/2;
+- Aulas 01 a 04;
+- Listas 01 a 04;
+- notas públicas por aula;
+- estudos guiados das Aulas 01 a 04;
 - pseudocódigos conceituais de Busca;
-- transcrição pública do Plano Didático 2026/2;
-- estrutura do GitHub Pages.
+- visualização interativa de Busca por traces;
+- estrutura inicial do GitHub Pages.
 
-## Arquivos públicos a complementar pelo docente
+## Não incluído
 
-- PDF da Aula 01;
-- PDF da Aula 02;
-- PDF da Aula 03;
-- PDFs das duas partes da Aula 04;
-- PDFs das Listas 01, 02 e 03;
-- arquivo oficial do Plano Didático, caso se deseje disponibilizar além da transcrição em Markdown.
+- fontes `.tex`;
+- gabaritos;
+- soluções de referência restritas;
+- testes ocultos;
+- geradores privados de traces;
+- Trabalho 1;
+- simulados.
 
-As fontes `.tex` não serão incorporadas ao repositório público.
+Os arquivos públicos restantes podem ser complementados pelo docente progressivamente.
