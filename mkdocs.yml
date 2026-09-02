@@ -4,10 +4,14 @@ site_description: Material público da disciplina de Inteligência Artificial
 theme:
   name: readthedocs
 
+extra_css:
+  - assets/extra.css
+
 nav:
   - Início: index.md
   - Plano didático: planos/index.md
   - Aulas: aulas/index.md
   - Atividades: atividades/index.md
   - Estudos guiados: estudos-guiados/index.md
+  - Pseudocódigos: pseudocodigos/index.md
   - Visualizações: visualizacoes/index.md
