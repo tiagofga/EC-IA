@@ -1,0 +1,12 @@
+site_name: EC-IA
+site_description: Material público da disciplina de Inteligência Artificial
+
+theme:
+  name: readthedocs
+
+nav:
+  - Início: index.md
+  - Plano didático: planos/index.md
+  - Aulas: aulas/index.md
+  - Atividades: atividades/index.md
+  - Visualizações: visualizacoes/index.md
