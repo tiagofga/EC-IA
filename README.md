@@ -1,12 +1,85 @@
-# EC-IA
+# EC-IA - Inteligência Artificial
 
-Material público da disciplina de **Inteligência Artificial** do Curso de Engenharia de Computação do CEFET-MG, campus Divinópolis.
+Material público da disciplina de **Inteligência Artificial** do Curso de Engenharia de Computação do **CEFET-MG, campus Divinópolis**.
 
-## Versão atual
+> **Página da disciplina:** https://tiagofga.github.io/EC-IA/
 
-`v0.2.0` - adiciona estudos guiados públicos para as Aulas 01 a 04.
+Este repositório reúne materiais de apoio às aulas, atividades, estudos guiados, pseudocódigos conceituais e visualizações didáticas. O conteúdo é organizado progressivamente ao longo do semestre.
 
-## Conteúdo público
+## Como usar este repositório
+
+Para cada assunto, a sequência recomendada é:
+
+1. revisar o conteúdo apresentado na aula;
+2. realizar o estudo guiado correspondente;
+3. resolver a atividade proposta;
+4. usar as visualizações para acompanhar o comportamento dos algoritmos;
+5. consultar notas e pseudocódigos para revisar conceitos específicos.
+
+A proposta não é apenas disponibilizar arquivos, mas organizar um percurso de estudo que possa ser retomado antes de atividades e avaliações.
+
+## Conteúdo disponível
+
+| Seção | O que você encontra |
+|---|---|
+| `planos/` | plano didático e organização da disciplina |
+| `aulas/` | materiais públicos organizados por aula |
+| `atividades/` | listas destinadas aos estudantes |
+| `estudos-guiados/` | roteiros de revisão e autoavaliação |
+| `notas/` | notas públicas complementares |
+| `pseudoalgoritmos/` | descrições conceituais dos algoritmos estudados |
+| `visualizacoes/` | visualizações interativas para acompanhar execuções passo a passo |
+| `docs/` | páginas utilizadas na publicação do GitHub Pages |
+
+### Aulas organizadas
+
+| Aula | Tema |
+|---|---|
+| 01 | Introdução à Inteligência Artificial |
+| 02 | Agentes Inteligentes |
+| 03 | Representação do Conhecimento e Solução de Problemas |
+| 04 | Estratégias de Busca |
+
+## Estudos guiados
+
+Os estudos guiados das Aulas 01 a 04 foram preparados para revisão ativa. Eles incluem:
+
+- objetivos de aprendizagem;
+- conceitos que precisam estar claros;
+- perguntas de verificação;
+- aplicações e comparações;
+- erros conceituais a evitar;
+- autoavaliação ao final.
+
+A recomendação é tentar responder às perguntas **antes** de consultar novamente os slides ou as notas.
+
+## Visualizações de busca
+
+A Aula 04 possui uma visualização interativa baseada em **traces pré-calculados**.
+
+### Busca não informada
+
+- Busca em Largura - BFS;
+- Busca em Profundidade - DFS;
+- Busca de Custo Uniforme - UCS.
+
+### Busca informada
+
+- Busca Gulosa - Greedy Search;
+- A*;
+- Beam Search.
+
+### Busca local e evolucionária
+
+- Hill Climbing;
+- Simulated Annealing;
+- Algoritmo Genético - AG.
+
+A visualização permite acompanhar estados, fronteiras, custos, heurísticas, configurações e decisões registradas em cada passo.
+
+**Importante:** o visualizador público não implementa os algoritmos. Ele apenas reproduz traces previamente gerados. Dessa forma, o recurso pode ser utilizado para estudo sem disponibilizar uma implementação reutilizável diretamente nas atividades da disciplina.
+
+## Organização do repositório
 
 ```text
 EC-IA/
@@ -17,67 +90,40 @@ EC-IA/
 │   ├── 03-conhecimento/
 │   └── 04-busca/
 ├── atividades/
-│   ├── 01-introducao/lista-01/
-│   ├── 02-agentes/lista-02/
-│   ├── 03-conhecimento/lista-03/
-│   └── 04-busca/lista-04/
-├── notas/
+│   ├── 01-introducao/
+│   ├── 02-agentes/
+│   ├── 03-conhecimento/
+│   └── 04-busca/
 ├── estudos-guiados/
+├── notas/
 ├── pseudoalgoritmos/
 ├── visualizacoes/
 └── docs/
 ```
 
-## O que não faz parte deste repositório
+## O que não é publicado aqui
 
-As fontes LaTeX (`.tex`) das aulas e atividades permanecem com o docente e não são publicadas aqui. Também não fazem parte do repositório público:
+Para preservar a organização da disciplina e a integridade das atividades, alguns materiais permanecem restritos ao docente, incluindo:
 
+- fontes LaTeX (`.tex`);
 - gabaritos;
 - soluções de referência ainda não liberadas;
 - testes ocultos;
 - geradores privados de traces;
 - materiais internos de avaliação.
 
-## Aulas disponíveis na estrutura inicial
+## Versão de referência
 
-| Aula | Tema | Situação na v0.1.0 |
-|---|---|---|
-| 01 | Introdução à Inteligência Artificial | diretório público preparado |
-| 02 | Agentes Inteligentes | diretório público preparado |
-| 03 | Representação do Conhecimento e Solução de Problemas | diretório público preparado |
-| 04 | Busca | diretório público preparado em duas partes |
+A versão pública de referência é a `v0.2.0`. A branch `main` pode conter melhorias posteriores ainda não consolidadas em uma nova versão.
 
-A Aula 04 contempla:
+## Desenvolvimento do repositório
 
-- busca não informada: BFS, DFS e Custo Uniforme;
-- busca informada: Busca Gulosa e A*.
-
-## Estudos guiados
-
-`estudos-guiados/` contém roteiros de estudo ativo para as Aulas 01 a 04. Cada roteiro combina objetivos, conceitos essenciais, perguntas de verificação, aplicação e autoavaliação. Não há simulados nesta versão.
-
-## Atividades
-
-O diretório `atividades/` contém somente versões destinadas aos estudantes. O Trabalho 1 não faz parte da v0.1.0 e será incorporado posteriormente.
-
-## Visualização de Busca
-
-`visualizacoes/04-busca/` contém uma visualização interativa baseada em **traces pré-calculados**. O visualizador não implementa os algoritmos de busca e, portanto, não fornece uma solução copiável para o Trabalho 1.
-
-## Conventional Commits
-
-Este repositório adota [Conventional Commits](https://www.conventionalcommits.org/) para todo o histórico.
-
-Exemplos:
+O histórico utiliza **Conventional Commits**. Exemplos:
 
 ```text
 feat(busca): add local search visualization
 fix(pages): correct visualization path
 content(aula-05): add logic lecture pdf
-docs(repo): update course navigation
-chore(release): prepare v0.2.0
+docs(repo): improve student navigation
+chore(release): prepare v0.3.0
 ```
-
-## GitHub Pages
-
-A estrutura `docs/` e o arquivo `mkdocs.yml` deixam o repositório preparado para publicação progressiva no GitHub Pages.
