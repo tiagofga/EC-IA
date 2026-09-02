@@ -1,2 +1,1 @@
 mkdocs>=1.6,<2
-reportlab>=4,<5
