@@ -2,7 +2,9 @@
 
 Material público da disciplina de **Inteligência Artificial** do Curso de Engenharia de Computação do **CEFET-MG, campus Divinópolis**.
 
-Esta página organiza os materiais de estudo da disciplina. Use o menu lateral para acessar aulas, atividades, estudos guiados, plano didático e visualizações.
+Esta página organiza os materiais de estudo da disciplina. Use o menu lateral para acessar aulas, atividades, estudos guiados, plano didático, pseudocódigos e visualizações.
+
+> **Repositório público do projeto:** [github.com/tiagofga/EC-IA](https://github.com/tiagofga/EC-IA)
 
 ## Por onde começar
 
@@ -19,8 +21,8 @@ Se você está acompanhando a disciplina durante o semestre, use esta sequência
 | Aula | Tema | Recursos principais |
 |---|---|---|
 | 01 | Introdução à Inteligência Artificial | aula, atividade e estudo guiado |
-| 02 | Agentes Inteligentes | aula, atividade e estudo guiado |
-| 03 | Representação do Conhecimento e Solução de Problemas | aula, atividade e estudo guiado |
+| 02 | Agentes Inteligentes | aula, atividade, estudo guiado e pseudocódigos selecionados |
+| 03 | Representação do Conhecimento e Solução de Problemas | aula, atividade, estudo guiado e fundamentos de busca |
 | 04 | Estratégias de Busca | aula, atividade, estudo guiado, pseudocódigos e visualizações |
 
 ## Visualização interativa de busca
