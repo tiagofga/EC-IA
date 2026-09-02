@@ -6,6 +6,7 @@ on:
     paths:
       - 'docs/**'
       - 'visualizacoes/**'
+      - 'estudos-guiados/**'
       - 'mkdocs.yml'
       - 'requirements.txt'
       - '.github/workflows/pages.yml'
@@ -23,6 +24,13 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -r requirements.txt ghp-import
+      - name: Prepare MkDocs sources
+        run: |
+          mkdir -p docs/estudos-guiados
+          cp -R estudos-guiados/01-introducao docs/estudos-guiados/01-introducao
+          cp -R estudos-guiados/02-agentes docs/estudos-guiados/02-agentes
+          cp -R estudos-guiados/03-conhecimento docs/estudos-guiados/03-conhecimento
+          cp -R estudos-guiados/04-busca docs/estudos-guiados/04-busca
       - run: mkdocs build --strict
       - name: Include interactive visualizations
         run: |
