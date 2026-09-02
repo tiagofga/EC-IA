@@ -10,6 +10,9 @@ theme:
 extra_css:
   - assets/extra.css
 
+extra_javascript:
+  - assets/vercel-analytics.js
+
 nav:
   - Início: index.md
   - Plano didático: planos/index.md
