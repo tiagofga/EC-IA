@@ -1,0 +1,24 @@
+/* Usa melhor a largura disponível no tema Read the Docs. */
+.wy-nav-content {
+  max-width: 1200px;
+}
+
+/* Mantém boa legibilidade em telas largas. */
+.rst-content p,
+.rst-content li {
+  line-height: 1.65;
+}
+
+.rst-content table.docutils {
+  width: 100%;
+}
+
+.rst-content pre {
+  overflow-x: auto;
+}
+
+@media (min-width: 1400px) {
+  .wy-nav-content {
+    max-width: 1380px;
+  }
+}
