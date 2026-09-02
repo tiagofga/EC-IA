@@ -4,7 +4,7 @@ Material público da disciplina de **Inteligência Artificial** do Curso de Enge
 
 ## Versão atual
 
-`v0.1.0` - organização inicial do material público até a Aula 04 e a Lista 04.
+`v0.2.0` - adiciona estudos guiados públicos para as Aulas 01 a 04.
 
 ## Conteúdo público
 
@@ -22,6 +22,7 @@ EC-IA/
 │   ├── 03-conhecimento/lista-03/
 │   └── 04-busca/lista-04/
 ├── notas/
+├── estudos-guiados/
 ├── pseudoalgoritmos/
 ├── visualizacoes/
 └── docs/
@@ -50,6 +51,10 @@ A Aula 04 contempla:
 
 - busca não informada: BFS, DFS e Custo Uniforme;
 - busca informada: Busca Gulosa e A*.
+
+## Estudos guiados
+
+`estudos-guiados/` contém roteiros de estudo ativo para as Aulas 01 a 04. Cada roteiro combina objetivos, conceitos essenciais, perguntas de verificação, aplicação e autoavaliação. Não há simulados nesta versão.
 
 ## Atividades
 
