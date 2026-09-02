@@ -4,8 +4,6 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT_DIR"
 
-python -m pip install -r requirements.txt
-
 mkdir -p docs/estudos-guiados
 
 for guide in \
