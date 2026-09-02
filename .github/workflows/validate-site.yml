@@ -1,0 +1,28 @@
+name: validate-site
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'docs/**'
+      - 'visualizacoes/**'
+      - 'estudos-guiados/**'
+      - 'scripts/**'
+      - 'mkdocs.yml'
+      - 'requirements.txt'
+      - 'vercel.json'
+      - '.github/workflows/validate-site.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate static site build
+        run: bash scripts/build-site.sh
