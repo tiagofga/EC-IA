@@ -7,8 +7,10 @@ on:
       - 'docs/**'
       - 'visualizacoes/**'
       - 'estudos-guiados/**'
+      - 'scripts/**'
       - 'mkdocs.yml'
       - 'requirements.txt'
+      - 'vercel.json'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -23,17 +25,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: pip install -r requirements.txt ghp-import
-      - name: Prepare MkDocs sources
-        run: |
-          mkdir -p docs/estudos-guiados
-          cp -R estudos-guiados/01-introducao docs/estudos-guiados/01-introducao
-          cp -R estudos-guiados/02-agentes docs/estudos-guiados/02-agentes
-          cp -R estudos-guiados/03-conhecimento docs/estudos-guiados/03-conhecimento
-          cp -R estudos-guiados/04-busca docs/estudos-guiados/04-busca
-      - run: mkdocs build --strict
-      - name: Include interactive visualizations
-        run: |
-          mkdir -p site/visualizacoes
-          cp -R visualizacoes/04-busca site/visualizacoes/04-busca
-      - run: ghp-import -n -p -f site
+      - name: Build static site
+        run: bash scripts/build-site.sh
+      - name: Install Pages publisher
+        run: python -m pip install ghp-import
+      - name: Publish gh-pages branch
+        run: ghp-import -n -p -f site
