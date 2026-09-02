@@ -1,10 +1,77 @@
-# Pseudocódigos - Aula 04
+# Pseudocódigos
 
-Esta seção reúne versões **conceituais** dos algoritmos estudados em Busca. O objetivo é ajudar na leitura do fluxo de decisão de cada método sem fornecer uma implementação pronta em uma linguagem de programação.
+Esta seção reúne versões **conceituais** dos pseudocódigos apresentados nas aulas e dos algoritmos estudados em Busca. O objetivo é ajudar na leitura do fluxo de decisão de cada método sem fornecer uma implementação pronta em uma linguagem de programação.
 
-> Os pseudocódigos devem ser usados em conjunto com os slides, o estudo guiado e as visualizações interativas.
+> Use os pseudocódigos em conjunto com os slides, os estudos guiados e, quando disponível, as visualizações interativas.
 
-## Comparação rápida
+## Aula 02 - Agentes Inteligentes
+
+Nos slides da Aula 02 aparecem três estruturas que efetivamente podem ser representadas como pseudocódigo. Os demais tipos de agentes são apresentados como arquiteturas conceituais.
+
+### Agente baseado em tabela
+
+```text
+receber uma nova percepção
+adicionar a percepção à sequência perceptiva
+consultar na tabela a ação correspondente à sequência perceptiva
+retornar a ação encontrada
+```
+
+**Ideia central:** a função do agente é representada por uma tabela que associa sequências perceptivas a ações. A abordagem é simples, mas não escala para ambientes grandes.
+
+### Agente reativo simples
+
+```text
+receber a percepção atual
+interpretar a percepção como um estado
+selecionar a regra condição-ação compatível com o estado
+retornar a ação indicada pela regra
+```
+
+**Ideia central:** a decisão depende apenas da percepção atual. Não existe memória explícita do passado.
+
+### Agente reativo baseado em modelo
+
+```text
+receber a percepção atual
+atualizar o estado interno usando:
+    estado interno anterior
+    percepção atual
+    modelo de evolução do ambiente
+    informação sobre a ação anterior
+
+selecionar a regra condição-ação compatível com o estado interno
+retornar a ação indicada pela regra
+```
+
+**Ideia central:** o agente mantém um estado interno para representar aspectos do ambiente que não são diretamente observáveis na percepção corrente.
+
+### O que não foi convertido em pseudocódigo
+
+A Aula 02 também apresenta:
+
+- agente orientado por metas;
+- agente orientado por utilidade;
+- agente de aprendizagem.
+
+Nos slides, esses modelos aparecem como **diagramas de arquitetura**, e não como pseudocódigos. Por isso, esta seção preserva a forma original do conteúdo e não cria algoritmos que não foram apresentados em aula.
+
+## Aula 03 - Representação do Conhecimento e Solução de Problemas
+
+A Aula 03 introduz a mecânica necessária para compreender os algoritmos de busca, mas não apresenta uma estratégia específica em pseudocódigo. Os principais elementos são:
+
+- estado inicial, ações, modelo de transição, teste de meta e custo;
+- árvore de busca e espaço de estados;
+- estrutura de um nó: `STATE`, `PARENT`, `ACTION` e `PATH-COST`;
+- operações de fronteira: `IS-EMPTY`, `POP` e `TOP`;
+- fronteiras FIFO, LIFO e por prioridade;
+- controle de estados explorados para evitar caminhos redundantes e laços.
+
+Esses elementos formam a base estrutural usada pelos algoritmos da Aula 04.
+
+## Aula 04 - Estratégias de Busca
+
+### Comparação rápida
 
 | Família | Método | Critério principal |
 |---|---|---|
@@ -18,11 +85,10 @@ Esta seção reúne versões **conceituais** dos algoritmos estudados em Busca. 
 | Busca local | Simulated Annealing | pode aceitar pioras conforme a temperatura |
 | Busca local/evolucionária | Algoritmo Genético | evolui uma população por seleção, cruzamento e mutação |
 
-## BFS - Busca em Largura
+### BFS - Busca em Largura
 
 ```text
 inicializar a fronteira com o estado inicial em uma fila FIFO
-
 marcar nenhum estado como explorado
 
 enquanto a fronteira não estiver vazia:
@@ -41,11 +107,10 @@ retornar falha
 
 **Observe:** BFS prioriza a profundidade, não o custo do caminho.
 
-## DFS - Busca em Profundidade
+### DFS - Busca em Profundidade
 
 ```text
 inicializar a fronteira com o estado inicial em uma pilha LIFO
-
 marcar nenhum estado como explorado
 
 enquanto a fronteira não estiver vazia:
@@ -64,13 +129,13 @@ retornar falha
 
 **Observe:** a ordem de geração dos sucessores pode alterar profundamente o percurso da DFS.
 
-## UCS - Busca de Custo Uniforme
+### UCS - Busca de Custo Uniforme
 
 ```text
 inicializar a fronteira como fila de prioridade
 atribuir g(inicial) = 0
 
-quanto a fronteira não estiver vazia:
+enquanto a fronteira não estiver vazia:
     remover o nó com menor g(n)
 
     se o nó satisfaz o objetivo:
@@ -87,13 +152,13 @@ retornar falha
 
 **Observe:** UCS prioriza o custo já pago no caminho.
 
-## Greedy Search - Busca Gulosa
+### Greedy Search - Busca Gulosa
 
 ```text
 inicializar a fronteira como fila de prioridade
 ordenar os nós pelo menor h(n)
 
-quanto a fronteira não estiver vazia:
+enquanto a fronteira não estiver vazia:
     remover o nó com menor h(n)
 
     se o nó satisfaz o objetivo:
@@ -106,16 +171,16 @@ quanto a fronteira não estiver vazia:
 retornar falha
 ```
 
-**Observe:** a busca gulosa considera a estimativa até a meta, mas ignora diretamente o custo já acumulado.
+**Observe:** a Busca Gulosa considera a estimativa até a meta, mas ignora diretamente o custo já acumulado.
 
-## A*
+### A*
 
 ```text
 inicializar a fronteira como fila de prioridade
 atribuir g(inicial) = 0
 calcular f(inicial) = g(inicial) + h(inicial)
 
-quanto a fronteira não estiver vazia:
+enquanto a fronteira não estiver vazia:
     remover o nó com menor f(n)
 
     se o nó satisfaz o objetivo:
@@ -133,7 +198,7 @@ retornar falha
 
 **Observe:** A* combina custo acumulado e estimativa heurística.
 
-## Beam Search
+### Beam Search
 
 ```text
 inicializar o feixe com o estado inicial
@@ -153,7 +218,7 @@ retornar falha
 
 **Observe:** limitar o feixe reduz o uso de memória, mas pode descartar caminhos necessários para encontrar a melhor solução.
 
-## Hill Climbing
+### Hill Climbing
 
 ```text
 escolher um estado inicial
@@ -171,7 +236,7 @@ repetir:
 
 **Observe:** o método pode parar em ótimos locais ou platôs.
 
-## Simulated Annealing
+### Simulated Annealing
 
 ```text
 escolher um estado inicial
@@ -194,7 +259,7 @@ retornar o melhor estado encontrado
 
 **Observe:** aceitar algumas pioras permite escapar de regiões locais no início da busca.
 
-## Algoritmo Genético - AG
+### Algoritmo Genético - AG
 
 ```text
 criar uma população inicial de indivíduos
@@ -214,12 +279,12 @@ retornar o melhor indivíduo encontrado
 
 ## Como estudar esta seção
 
-Para cada algoritmo, tente responder:
+Para cada pseudocódigo, tente identificar:
 
-1. qual estrutura ou conjunto de estados é mantido durante a busca;
-2. qual critério decide o próximo estado ou conjunto de estados;
-3. qual informação é usada: profundidade, custo, heurística, temperatura ou aptidão;
-4. em que situação o algoritmo pode falhar ou produzir uma solução não ótima;
-5. qual diferença essencial existe em relação ao método anterior.
+1. que informação o método mantém;
+2. como a próxima ação, nó ou estado é escolhido;
+3. que estrutura de dados aparece implicitamente;
+4. qual é o critério de parada;
+5. que informação diferencia esse método dos demais.
 
-Os pseudocódigos desta página são intencionalmente independentes de linguagem de programação e não constituem solução pronta para as atividades da disciplina.
+Os pseudocódigos são intencionalmente independentes de linguagem de programação e não constituem soluções prontas para as atividades da disciplina.
