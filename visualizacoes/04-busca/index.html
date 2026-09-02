@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EC-IA - Visualização de Busca</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div>
+      <span class="eyebrow">EC-IA · Aula 04</span>
+      <h1>Busca não informada e busca informada</h1>
+      <p>
+        Visualização didática baseada em <strong>traces pré-calculados</strong>.
+        Esta página não contém implementações dos algoritmos de busca.
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <section class="controls card">
+      <div>
+        <label for="algorithm">Estratégia</label>
+        <select id="algorithm">
+          <optgroup label="Busca não informada">
+            <option value="bfs">Busca em Largura - BFS</option>
+            <option value="dfs">Busca em Profundidade - DFS</option>
+            <option value="ucs">Custo Uniforme - UCS</option>
+          </optgroup>
+          <optgroup label="Busca informada">
+            <option value="greedy">Busca Gulosa</option>
+            <option value="astar">A*</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div class="buttons">
+        <button id="prev">Anterior</button>
+        <button id="next">Próximo</button>
+        <button id="reset">Reiniciar</button>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card graph-card">
+        <div class="section-title">
+          <div>
+            <span id="family" class="badge"></span>
+            <h2 id="algorithm-name"></h2>
+          </div>
+          <span id="step-counter"></span>
+        </div>
+        <p id="rule" class="muted"></p>
+        <svg id="graph" viewBox="0 0 680 340" role="img" aria-label="Grafo do exemplo"></svg>
+        <div class="legend">
+          <span><i class="dot current"></i> atual</span>
+          <span><i class="dot frontier"></i> fronteira</span>
+          <span><i class="dot explored"></i> explorado</span>
+          <span><i class="dot solution"></i> solução</span>
+        </div>
+      </article>
+
+      <aside class="card state-card">
+        <h2>Estado do trace</h2>
+        <dl>
+          <dt>Nó atual</dt><dd id="current"></dd>
+          <dt>Fronteira</dt><dd id="frontier"></dd>
+          <dt>Explorados</dt><dd id="explored"></dd>
+          <dt>Caminho do nó</dt><dd id="path"></dd>
+        </dl>
+        <div id="scores-wrap">
+          <h3>Valores registrados</h3>
+          <div id="scores"></div>
+        </div>
+        <div class="note">
+          <strong>Leitura do passo</strong>
+          <p id="note"></p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="card integrity">
+      <h2>Por que o visualizador usa traces?</h2>
+      <p>
+        O navegador apenas lê uma sequência de estados previamente produzida e a
+        representa graficamente. Ele não decide qual nó deve ser expandido, não
+        calcula prioridades e não executa BFS, DFS, UCS, Gulosa ou A*. Isso permite
+        discutir o comportamento dos algoritmos sem publicar uma implementação que
+        possa ser reutilizada diretamente no trabalho.
+      </p>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
