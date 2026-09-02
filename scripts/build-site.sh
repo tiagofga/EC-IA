@@ -37,8 +37,7 @@ copy_if_exists "aulas/04-busca/EC_IA_004_Busca_Parte_2.pdf" "docs/downloads/aula
 
 copy_if_exists "atividades/04-busca/lista-04/EC_IA_004_Busca_Lista_04.pdf" "docs/downloads/atividades/EC_IA_004_Busca_Lista_04.pdf"
 copy_if_exists "planos/2026-2/plano-didatico.md" "docs/downloads/planos/plano-didatico-2026-2.md"
-
-python scripts/generate-plan-pdf.py
+copy_if_exists "planos/2026-2/Plano_Didatico_IA_2026_2.pdf" "docs/downloads/planos/Plano_Didatico_IA_2026_2.pdf"
 
 mkdocs build --strict
 
