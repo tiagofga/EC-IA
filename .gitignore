@@ -1,0 +1,22 @@
+# Arquivos privados / fontes autorais
+*.tex
+*.aux
+*.log
+*.nav
+*.snm
+*.toc
+*.vrb
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Gabaritos e soluções
+**/gabarito*
+**/solucao*
+**/solutions/**
+
+# Ambiente local
+site/
+.DS_Store
+.vscode/
+.idea/
