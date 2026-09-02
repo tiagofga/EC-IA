@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from pathlib import Path
+from html import escape
 import re
 
 from reportlab.lib import colors
@@ -18,6 +19,10 @@ def clean(text: str) -> str:
     text = re.sub(r'\*\*(.*?)\*\*', r'\1', text)
     text = text.replace('`', '')
     return text.strip()
+
+
+def safe(text: str) -> str:
+    return escape(clean(text))
 
 
 def page_number(canvas, doc):
@@ -50,6 +55,18 @@ def main():
         spaceBefore=8,
         spaceAfter=6,
     ))
+    styles.add(ParagraphStyle(
+        name='TableCell',
+        parent=styles['BodyText'],
+        fontName='Helvetica',
+        fontSize=7.6,
+        leading=9.5,
+    ))
+    styles.add(ParagraphStyle(
+        name='TableHeader',
+        parent=styles['TableCell'],
+        fontName='Helvetica-Bold',
+    ))
     styles['BodyText'].fontSize = 9.5
     styles['BodyText'].leading = 13
 
@@ -64,12 +81,12 @@ def main():
             continue
 
         if line.startswith('# '):
-            story.append(Paragraph(clean(line[2:]), styles['CourseTitle']))
+            story.append(Paragraph(safe(line[2:]), styles['CourseTitle']))
             i += 1
             continue
 
         if line.startswith('## '):
-            story.append(Paragraph(clean(line[3:]), styles['Section']))
+            story.append(Paragraph(safe(line[3:]), styles['Section']))
             i += 1
             continue
 
@@ -78,22 +95,33 @@ def main():
             while i < len(lines) and lines[i].strip().startswith('|'):
                 raw = lines[i].strip()
                 cells = [clean(cell) for cell in raw.strip('|').split('|')]
-                if not all(re.fullmatch(r':?-{3,}:?', cell.replace(' ', '')) for cell in cells):
+                separator = all(
+                    re.fullmatch(r':?-{3,}:?', cell.replace(' ', ''))
+                    for cell in cells
+                )
+                if not separator:
                     rows.append(cells)
                 i += 1
 
             if rows:
                 columns = max(len(r) for r in rows)
                 normalized = [r + [''] * (columns - len(r)) for r in rows]
+                rendered = []
+                for row_index, row in enumerate(normalized):
+                    style = styles['TableHeader'] if row_index == 0 else styles['TableCell']
+                    rendered.append([Paragraph(escape(cell), style) for cell in row])
+
                 available = A4[0] - 4 * cm
-                widths = [available / columns] * columns
-                table = Table(normalized, colWidths=widths, repeatRows=1)
+                if columns == 2:
+                    widths = [3.2 * cm, available - 3.2 * cm]
+                elif columns == 3:
+                    widths = [available * 0.44, available * 0.38, available * 0.18]
+                else:
+                    widths = [available / columns] * columns
+
+                table = Table(rendered, colWidths=widths, repeatRows=1)
                 table.setStyle(TableStyle([
                     ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#E9EEF5')),
-                    ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
-                    ('FONTNAME', (0, 1), (-1, -1), 'Helvetica'),
-                    ('FONTSIZE', (0, 0), (-1, -1), 8),
-                    ('LEADING', (0, 0), (-1, -1), 10),
                     ('GRID', (0, 0), (-1, -1), 0.35, colors.HexColor('#AAB2BD')),
                     ('VALIGN', (0, 0), (-1, -1), 'TOP'),
                     ('LEFTPADDING', (0, 0), (-1, -1), 4),
@@ -106,11 +134,11 @@ def main():
             continue
 
         if line.startswith('- '):
-            story.append(Paragraph(f'• {clean(line[2:])}', styles['BodyText']))
+            story.append(Paragraph(f'- {safe(line[2:])}', styles['BodyText']))
             i += 1
             continue
 
-        story.append(Paragraph(clean(line), styles['BodyText']))
+        story.append(Paragraph(safe(line), styles['BodyText']))
         i += 1
 
     doc = SimpleDocTemplate(
