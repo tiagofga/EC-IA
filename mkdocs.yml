@@ -1,5 +1,8 @@
 site_name: EC-IA
 site_description: Material público da disciplina de Inteligência Artificial
+site_url: https://tiagofga.github.io/EC-IA/
+repo_url: https://github.com/tiagofga/EC-IA
+repo_name: tiagofga/EC-IA
 
 theme:
   name: readthedocs
@@ -15,3 +18,4 @@ nav:
   - Estudos guiados: estudos-guiados/index.md
   - Pseudocódigos: pseudocodigos/index.md
   - Visualizações: visualizacoes/index.md
+  - Repositório no GitHub: https://github.com/tiagofga/EC-IA
