@@ -12,7 +12,7 @@ from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, Tabl
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / 'planos' / '2026-2' / 'plano-didatico.md'
-OUTPUT = ROOT / 'site' / 'downloads' / 'planos' / 'Plano_Didatico_IA_2026_2.pdf'
+OUTPUT = ROOT / 'docs' / 'downloads' / 'planos' / 'Plano_Didatico_IA_2026_2.pdf'
 
 
 def clean(text: str) -> str:
