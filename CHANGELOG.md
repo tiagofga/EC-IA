@@ -4,6 +4,31 @@ Todas as mudanças relevantes deste projeto serão registradas neste arquivo.
 
 O histórico de commits segue Conventional Commits.
 
+## [0.3.0] - 2026-09-03
+
+### Added
+
+- PDFs públicos das Aulas 00 a 04;
+- PDFs públicos das Atividades 01 a 04;
+- página de notas complementares na navegação do site;
+- configuração estática específica para publicação da branch `gh-pages` na Vercel.
+
+### Changed
+
+- documentação atualizada para refletir os materiais efetivamente publicados;
+- estrutura dos PDFs das atividades padronizada dentro de `lista-01/` a `lista-04/`;
+- script de build atualizado para usar os caminhos canônicos dos materiais públicos;
+- README atualizado para refletir a estrutura pública atual.
+
+### Fixed
+
+- deploy da Vercel ao publicar a branch `gh-pages`, evitando a execução de `scripts/build-site.sh` em uma branch que contém apenas o site compilado.
+
+### Notes
+
+- nenhum simulado foi incluído nesta versão;
+- fontes LaTeX, gabaritos e soluções restritas continuam fora do repositório público.
+
 ## [0.2.0] - 2026-09-02
 
 ### Added
