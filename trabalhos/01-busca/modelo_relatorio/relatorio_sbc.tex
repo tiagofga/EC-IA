@@ -1,0 +1,157 @@
+\documentclass[12pt]{article}
+
+% Modelo de relatório do Trabalho 01, baseado no template de conferências da
+% Sociedade Brasileira de Computação (SBC), versão atualizada em 2017.
+\usepackage{sbc-template}
+\usepackage{graphicx,url}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage[hidelinks]{hyperref}
+
+\sloppy
+\renewcommand{\tablename}{Tabela}
+\renewcommand{\figurename}{Figura}
+\renewcommand{\refname}{Referências}
+
+\title{Trabalho 01 - Busca Não Informada, Busca Informada e Busca Local}
+
+% Substitua pelos nomes da dupla. Se o trabalho for individual, remova o segundo nome.
+\author{Nome Completo do Aluno 1\inst{1}, Nome Completo do Aluno 2\inst{1}}
+
+\address{Curso de Engenharia de Computação - CEFET-MG, campus Divinópolis\\
+Disciplina de Inteligência Artificial - 2026/2
+\email{email1@aluno.cefetmg.br, email2@aluno.cefetmg.br}}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This report presents the implementation and experimental analysis of uninformed, informed, and local search algorithms developed for Assignment 01. The experiments compare BFS, DFS, Uniform-Cost Search, Greedy Best-First Search, and A* in a weighted grid, and Hill Climbing and Random-Restart Hill Climbing in the 8-Queens problem. Replace this paragraph with a concise summary of the problem, methodology, main quantitative results, and conclusions. The abstract should not exceed approximately 10 lines.
+\end{abstract}
+
+\begin{resumo}
+Este relatório apresenta a implementação e a análise experimental dos algoritmos de busca desenvolvidos no Trabalho 01. Os experimentos comparam BFS, DFS, Busca de Custo Uniforme, Busca Gulosa e A* em um ambiente ponderado, além de Hill Climbing e Random-Restart Hill Climbing no problema das 8 rainhas. Substitua este texto por um resumo objetivo contendo problema, metodologia, principais resultados quantitativos e conclusão. O resumo deve ter aproximadamente 10 linhas ou menos.
+\end{resumo}
+
+\section{Introdução}
+Apresente brevemente os dois problemas tratados no trabalho e o objetivo da comparação experimental. Não transforme esta seção em uma revisão extensa dos algoritmos. O foco do relatório é a implementação realizada pelos autores e a interpretação dos resultados obtidos.
+
+Ao final desta seção, indique de forma objetiva as perguntas que a análise pretende responder, como a relação entre número de passos e custo, o efeito das heurísticas e as limitações do Hill Climbing.
+
+\section{Representação e implementação}
+\subsection{Parte 1 - Busca não informada e informada}
+Descreva a representação do estado, as estruturas utilizadas para fronteira e estados visitados, o tratamento de custos e a reconstrução do caminho. Explique também como foram implementados os critérios de desempate exigidos no enunciado.
+
+Evite inserir grandes trechos de código. Quando necessário, use apenas pequenos fragmentos para explicar uma decisão de implementação relevante.
+
+\subsection{Heurísticas}
+Informe como foram calculadas as distâncias Manhattan e Euclidiana e explique por que elas são adequadas ao modelo de movimento adotado. A discussão sobre admissibilidade deve aparecer posteriormente, com base nos resultados e nas propriedades do problema.
+
+\subsection{Problema das 8 rainhas}
+Descreva a representação de uma configuração, a função de avaliação $h(s)$, a definição da vizinhança e os critérios de parada do Hill Climbing. Explique também como os reinícios aleatórios foram realizados e como as sementes foram controladas.
+
+\section{Metodologia experimental}
+Descreva o ambiente utilizado para os experimentos, a versão do Python e qualquer dependência relevante. Informe os mapas utilizados, as heurísticas avaliadas e a forma de obtenção das métricas.
+
+Para as 8 rainhas, indique explicitamente que foram executadas as sementes de 0 a 99 e que o Random-Restart Hill Climbing utilizou o limite estabelecido no enunciado.
+
+O relatório deve permitir que outra pessoa reproduza os resultados utilizando o repositório entregue. Informe neste parágrafo o endereço do repositório Git e a tag utilizada na entrega final.
+
+\noindent\textbf{Repositório:} \url{https://...} \\
+\textbf{Tag da entrega final:} \texttt{entrega-final}.
+
+\section{Resultados}
+\subsection{Parte 1 - Busca não informada e informada}
+A Tabela~\ref{tab:grid} deve ser preenchida com os resultados obtidos no mapa público de teste. Se os autores realizarem experimentos adicionais, apresente-os apenas quando ajudarem a responder às questões do trabalho.
+
+\begin{table}[H]
+\centering
+\caption{Resultados dos algoritmos de busca no mapa de teste.}
+\label{tab:grid}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llrrrrrrr}
+\toprule
+Algoritmo & Heurística & Passos & Custo & Gerados & Expandidos & Pico fronteira & Memória & Tempo (ms) \\
+\midrule
+BFS     & -          & - & - & - & - & - & - & - \\
+DFS     & -          & - & - & - & - & - & - & - \\
+UCS     & -          & - & - & - & - & - & - & - \\
+Gulosa  & Manhattan  & - & - & - & - & - & - & - \\
+Gulosa  & Euclidiana & - & - & - & - & - & - & - \\
+A*      & Manhattan  & - & - & - & - & - & - & - \\
+A*      & Euclidiana & - & - & - & - & - & - & - \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+Inclua pelo menos uma representação visual dos caminhos encontrada pelos algoritmos quando ela contribuir para a discussão. Não é necessário inserir uma figura para cada execução se isso apenas repetir informação.
+
+\subsection{Parte 2 - Busca local e 8 rainhas}
+A Tabela~\ref{tab:queens} resume os experimentos obrigatórios com as sementes de 0 a 99.
+
+\begin{table}[H]
+\centering
+\caption{Resultados dos métodos de busca local no problema das 8 rainhas.}
+\label{tab:queens}
+\begin{tabularx}{\textwidth}{Xrr}
+\toprule
+Métrica & Hill Climbing & Random Restart \\
+\midrule
+Execuções & 100 & 100 \\
+Soluções encontradas & - & - \\
+Taxa de sucesso (\%) & - & - \\
+Média de iterações & - & - \\
+Mediana de iterações & - & - \\
+Média de estados avaliados & - & - \\
+Média de reinícios & N/A & - \\
+Máximo de reinícios & N/A & - \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Apresente ainda pelo menos um caso de falha do Hill Climbing. Informe a semente, o estado inicial, o estado final, os valores inicial e final de $h(s)$ e explique por que nenhum movimento permitido produziu melhora.
+
+\section{Discussão}
+Esta é a seção central do relatório. Não se limite a repetir os números das tabelas. Explique os resultados à luz das propriedades dos algoritmos e responda explicitamente às questões do enunciado.
+
+A discussão deve contemplar, pelo menos:
+\begin{itemize}
+    \item diferença entre menor número de ações e menor custo;
+    \item comportamento de BFS, DFS e UCS no mapa ponderado;
+    \item desempenho e limitações da Busca Gulosa;
+    \item comparação entre UCS e A* em custo e número de expansões;
+    \item efeito das heurísticas Manhattan e Euclidiana;
+    \item admissibilidade das heurísticas;
+    \item diferença conceitual entre Busca Gulosa e Hill Climbing;
+    \item motivo das falhas do Hill Climbing e efeito do Random Restart;
+    \item completude e optimalidade das estratégias de busca nas condições adotadas no trabalho.
+\end{itemize}
+
+Sempre que possível, associe uma afirmação a um resultado quantitativo obtido pelos autores.
+
+\section{Conclusão}
+Sintetize os principais achados do trabalho. Indique quais estratégias foram mais adequadas em cada cenário e quais limitações foram observadas. Não introduza resultados novos nesta seção.
+
+\section*{Contribuições dos autores}
+Em trabalhos em dupla, descreva objetivamente a contribuição de cada integrante na implementação, experimentos, testes, análise e redação. Em trabalho individual, informe que todas as etapas foram realizadas pelo autor.
+
+\section*{Declaração de uso de IA}
+O detalhamento do uso de ferramentas de Inteligência Artificial deve constar no arquivo \texttt{IA\_USAGE.md} entregue com o repositório. Nesta seção, escreva apenas uma síntese, por exemplo: ``Foram utilizadas ferramentas de IA para revisão textual e esclarecimento de mensagens de erro, conforme detalhado no arquivo IA\_USAGE.md''. Caso nenhuma ferramenta tenha sido utilizada, declare isso explicitamente.
+
+\begin{thebibliography}{99}
+
+\bibitem[Stuart and Norvig 2021]{russell2021}
+Russell, S. and Norvig, P. (2021). \textit{Artificial Intelligence: A Modern Approach}. Pearson, 4th edition.
+
+% Adicione aqui outras referências realmente consultadas. Todo material externo usado
+% na fundamentação, implementação ou discussão deve ser citado.
+
+\end{thebibliography}
+
+\end{document}
