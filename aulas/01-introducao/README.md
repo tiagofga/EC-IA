@@ -1,9 +1,11 @@
 # Aula 01 - Introdução à Inteligência Artificial
 
-Material público previsto:
+Material público disponível:
 
 ```text
 EC_IA_001_Introducao.pdf
 ```
 
-O PDF final deve ser adicionado pelo docente. A fonte LaTeX não faz parte do repositório público.
+A aula introduz conceitos de inteligência, definições e perspectivas de IA, fundamentos, histórico, aplicações, limitações e responsabilidades.
+
+A fonte LaTeX permanece fora do repositório público.
