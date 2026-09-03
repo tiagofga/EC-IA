@@ -4,6 +4,15 @@ Todas as mudanças relevantes deste projeto serão registradas neste arquivo.
 
 O histórico de commits segue Conventional Commits.
 
+## [Unreleased]
+
+### Added
+
+- estrutura pública do Trabalho 01 - Busca;
+- código-base incompleto para BFS, DFS, UCS, Busca Gulosa, A*, Hill Climbing e Random-Restart Hill Climbing;
+- mapa público, testes de infraestrutura, roteiro de experimentos, modelo SBC e declaração de uso de IA;
+- página de Trabalhos na documentação pública.
+
 ## [0.3.0] - 2026-09-03
 
 ### Added

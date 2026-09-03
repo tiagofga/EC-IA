@@ -17,7 +17,7 @@ for guide in \
 done
 
 # Prepare public downloads inside docs before MkDocs validates links.
-mkdir -p docs/downloads/aulas docs/downloads/atividades docs/downloads/planos
+mkdir -p docs/downloads/aulas docs/downloads/atividades docs/downloads/trabalhos docs/downloads/planos
 
 copy_if_exists() {
   local source="$1"
@@ -39,6 +39,9 @@ copy_if_exists "atividades/01-introducao/lista-01/EC_IA_001_Introducao_Atividade
 copy_if_exists "atividades/02-agentes/lista-02/EC_IA_002_Agentes_Atividades.pdf" "docs/downloads/atividades/EC_IA_002_Agentes_Atividades.pdf"
 copy_if_exists "atividades/03-conhecimento/lista-03/EC_IA_003_Conhecimento_Atividades.pdf" "docs/downloads/atividades/EC_IA_003_Conhecimento_Atividades.pdf"
 copy_if_exists "atividades/04-busca/lista-04/EC_IA_004_Busca_Atividades.pdf" "docs/downloads/atividades/EC_IA_004_Busca_Atividades.pdf"
+
+copy_if_exists "trabalhos/01-busca/EC_IA_Trabalho_01_2026.pdf" "docs/downloads/trabalhos/EC_IA_Trabalho_01_2026.pdf"
+copy_if_exists "trabalhos/01-busca/EC_IA_Trabalho_01_2026_Alunos.zip" "docs/downloads/trabalhos/EC_IA_Trabalho_01_2026_Alunos.zip"
 
 copy_if_exists "planos/2026-2/plano-didatico.md" "docs/downloads/planos/plano-didatico-2026-2.md"
 copy_if_exists "planos/2026-2/Plano_Didatico_IA_2026_2.pdf" "docs/downloads/planos/Plano_Didatico_IA_2026_2.pdf"
