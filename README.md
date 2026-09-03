@@ -54,7 +54,7 @@ O Trabalho 01 integra os conteúdos da Aula 04 em duas etapas:
 
 O trabalho vale **20,0 pontos** e pode ser desenvolvido individualmente ou em dupla. O código-base público contém apenas infraestrutura, testes iniciais e funções deliberadamente incompletas.
 
-A versão `v0.4.0` passa a consolidar oficialmente o Trabalho 01 no repositório, incluindo o enunciado em PDF e o pacote destinado aos estudantes, além do código-base e dos recursos públicos já organizados em `trabalhos/01-busca/`.
+A versão `v0.4.0` passa a consolidar oficialmente o Trabalho 01 no repositório, incluindo o enunciado em PDF, o código-base e os recursos públicos organizados em `trabalhos/01-busca/`.
 
 Consulte `trabalhos/01-busca/README.md` antes de iniciar.
 
@@ -128,7 +128,7 @@ Modelos LaTeX explicitamente destinados aos estudantes, como o modelo SBC do Tra
 
 ## Versão de referência
 
-A versão pública de referência é a **`v0.4.0`**, que consolida o Trabalho 01 - Busca, seus materiais públicos, o enunciado oficial e o pacote de distribuição aos estudantes.
+A versão pública de referência é a **`v0.4.0`**, que consolida o Trabalho 01 - Busca, seu enunciado oficial, código-base e demais recursos públicos.
 
 ## Desenvolvimento do repositório
 
