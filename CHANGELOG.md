@@ -6,12 +6,29 @@ O histórico de commits segue Conventional Commits.
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-09-03
+
 ### Added
 
 - estrutura pública do Trabalho 01 - Busca;
 - código-base incompleto para BFS, DFS, UCS, Busca Gulosa, A*, Hill Climbing e Random-Restart Hill Climbing;
 - mapa público, testes de infraestrutura, roteiro de experimentos, modelo SBC e declaração de uso de IA;
-- página de Trabalhos na documentação pública.
+- página de Trabalhos na documentação pública;
+- enunciado oficial do Trabalho 01 em PDF;
+- pacote público de distribuição do Trabalho 01 destinado aos estudantes.
+
+### Changed
+
+- README atualizado para incluir o Trabalho 01 no percurso de estudo e na estrutura pública do repositório;
+- página inicial da documentação atualizada para destacar a avaliação prática de Busca;
+- documentação de Trabalhos atualizada para apresentar cronograma, materiais públicos e regras de versionamento da entrega.
+
+### Notes
+
+- o Trabalho 01 vale 20,0 pontos, com entregas em 08/10/2026 e 15/10/2026;
+- as implementações centrais permanecem deliberadamente incompletas no código-base público;
+- fontes LaTeX de aulas e enunciados, gabaritos, testes/mapas ocultos e soluções de referência permanecem fora do repositório público;
+- nenhum simulado foi incluído nesta versão.
 
 ## [0.3.0] - 2026-09-03
 
