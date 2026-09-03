@@ -44,9 +44,8 @@ A versão `v0.4.0` consolida os materiais públicos do Trabalho 01. Estão dispo
 
 - [Abrir a pasta do Trabalho 01 no GitHub](https://github.com/tiagofga/EC-IA/tree/main/trabalhos/01-busca)
 - <span data-download="../downloads/trabalhos/EC_IA_Trabalho_01_2026.pdf" data-label="Baixar enunciado em PDF">Verificando PDF...</span>
-- <span data-download="../downloads/trabalhos/EC_IA_Trabalho_01_2026_Alunos.zip" data-label="Baixar pacote completo">Verificando pacote...</span>
 
-O pacote completo reúne o código-base, mapa público, testes iniciais, instruções para o relatório, modelo SBC e declaração de uso de IA. O enunciado oficial prevalece sobre qualquer resumo apresentado na documentação do site.
+Na pasta do trabalho estão disponíveis o código-base, mapa público, testes iniciais, instruções para o relatório, modelo SBC e declaração de uso de IA. O enunciado oficial prevalece sobre qualquer resumo apresentado na documentação do site.
 
 ## Entrega e versionamento
 

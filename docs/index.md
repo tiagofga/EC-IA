@@ -19,7 +19,7 @@ Se você está acompanhando a disciplina durante o semestre, use esta sequência
 
 ## Conteúdo publicado
 
-Os PDFs públicos das aulas estão disponíveis da Aula 00 à Aula 04. As atividades correspondentes às Aulas 01 a 04 também estão publicadas. A versão **v0.4.0** acrescenta o Trabalho 01 - Busca como avaliação prática pública da disciplina, com enunciado oficial, código-base, recursos de apoio e pacote destinado aos estudantes.
+Os PDFs públicos das aulas estão disponíveis da Aula 00 à Aula 04. As atividades correspondentes às Aulas 01 a 04 também estão publicadas. A versão **v0.4.0** acrescenta o Trabalho 01 - Busca como avaliação prática pública da disciplina, com enunciado oficial, código-base e recursos de apoio.
 
 | Aula | Tema | Recursos principais |
 |---|---|---|
@@ -38,7 +38,7 @@ O primeiro trabalho prático utiliza diretamente os conteúdos da Aula 04.
 - **Valor:** 20,0 pontos;
 - **Modalidade:** individual ou em dupla.
 
-A área pública do trabalho reúne o PDF do enunciado, o pacote de distribuição aos estudantes, mapa de teste, infraestrutura inicial em Python, testes públicos, roteiro de experimentos, instruções para o relatório, modelo SBC e declaração de uso de IA.
+A área pública do trabalho reúne o PDF do enunciado, mapa de teste, infraestrutura inicial em Python, testes públicos, roteiro de experimentos, instruções para o relatório, modelo SBC e declaração de uso de IA.
 
 [Acessar o Trabalho 01](trabalhos/)
 

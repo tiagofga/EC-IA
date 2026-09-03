@@ -12,7 +12,7 @@ Material público do Trabalho 01 da disciplina de Inteligência Artificial.
 
 Leia primeiro o arquivo **`EC_IA_Trabalho_01_2026.pdf`**. O enunciado prevalece sobre qualquer resumo apresentado neste README.
 
-> Este pacote público contém somente os arquivos necessários aos estudantes. A fonte de geração do enunciado não faz parte do repositório público.
+> Este material público contém somente os arquivos necessários aos estudantes. A fonte de geração do enunciado não faz parte do repositório público.
 
 ## Identificação da entrega
 
@@ -56,7 +56,7 @@ O `README.md` e o relatório final devem informar o endereço do repositório e 
 
 O histórico de commits poderá ser utilizado como elemento auxiliar na verificação da autoria e da contribuição dos integrantes, sem exigência de quantidade mínima de commits.
 
-## Conteúdo deste pacote
+## Conteúdo disponibilizado
 
 ```text
 .

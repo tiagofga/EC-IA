@@ -14,14 +14,14 @@ O histórico de commits segue Conventional Commits.
 - código-base incompleto para BFS, DFS, UCS, Busca Gulosa, A*, Hill Climbing e Random-Restart Hill Climbing;
 - mapa público, testes de infraestrutura, roteiro de experimentos, modelo SBC e declaração de uso de IA;
 - página de Trabalhos na documentação pública;
-- enunciado oficial do Trabalho 01 em PDF;
-- pacote público de distribuição do Trabalho 01 destinado aos estudantes.
+- enunciado oficial do Trabalho 01 em PDF.
 
 ### Changed
 
 - README atualizado para incluir o Trabalho 01 no percurso de estudo e na estrutura pública do repositório;
 - página inicial da documentação atualizada para destacar a avaliação prática de Busca;
-- documentação de Trabalhos atualizada para apresentar cronograma, materiais públicos e regras de versionamento da entrega.
+- documentação de Trabalhos atualizada para apresentar cronograma, materiais públicos e regras de versionamento da entrega;
+- distribuição pública do Trabalho 01 mantida diretamente na estrutura versionada do repositório, sem arquivo ZIP duplicado.
 
 ### Notes
 
