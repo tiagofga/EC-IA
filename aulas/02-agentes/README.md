@@ -1,9 +1,11 @@
 # Aula 02 - Agentes Inteligentes
 
-Material público previsto:
+Material público disponível:
 
 ```text
 EC_IA_002_Agentes.pdf
 ```
 
-O PDF final deve ser adicionado pelo docente. A fonte LaTeX não faz parte do repositório público.
+A aula aborda agentes, racionalidade, PEAS, propriedades de ambientes de tarefa e arquiteturas de agentes, incluindo a discussão sobre agentes de software e LLMs.
+
+A fonte LaTeX permanece fora do repositório público.

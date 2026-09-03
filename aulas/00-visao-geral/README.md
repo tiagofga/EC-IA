@@ -1,9 +1,11 @@
-# Aula 00 - Visão Geral da Disciplina
+# Aula 00 - Visão Geral
 
-Material público previsto:
+Material público disponível:
 
 ```text
 EC_IA_000_Visao_Geral.pdf
 ```
 
-O PDF final deve ser adicionado pelo docente. A fonte LaTeX não faz parte do repositório público.
+Esta aula apresenta a organização geral da disciplina e deve ser consultada junto ao plano didático.
+
+A fonte LaTeX permanece fora do repositório público.

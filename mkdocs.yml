@@ -20,6 +20,7 @@ nav:
   - Aulas: aulas/index.md
   - Atividades: atividades/index.md
   - Estudos guiados: estudos-guiados/index.md
+  - Notas complementares: notas/index.md
   - Pseudocódigos: pseudocodigos/index.md
   - Visualizações: visualizacoes/index.md
   - Repositório no GitHub: https://github.com/tiagofga/EC-IA

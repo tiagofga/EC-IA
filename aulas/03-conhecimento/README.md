@@ -1,9 +1,11 @@
 # Aula 03 - Representação do Conhecimento e Solução de Problemas
 
-Material público previsto:
+Material público disponível:
 
 ```text
 EC_IA_003_Conhecimento.pdf
 ```
 
-O PDF final deve ser adicionado pelo docente. A fonte LaTeX não faz parte do repositório público.
+A aula trabalha representação do conhecimento, formulação de problemas, estados, ações, transições, espaço de estados, árvore de busca e fronteira, preparando a transição para a Aula 04.
+
+A fonte LaTeX permanece fora do repositório público.
