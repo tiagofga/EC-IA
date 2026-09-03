@@ -13,7 +13,7 @@ Conteúdo principal:
 Arquivo público:
 
 ```text
-EC_IA_004_Busca_Lista_04.pdf
+EC_IA_004_Busca_Atividades.pdf
 ```
 
 O gabarito e a fonte LaTeX não são publicados nesta versão.

@@ -36,9 +36,9 @@ copy_if_exists "aulas/04-busca/EC_IA_004_Busca_Parte1.pdf" "docs/downloads/aulas
 copy_if_exists "aulas/04-busca/EC_IA_004_Busca_Parte2.pdf" "docs/downloads/aulas/EC_IA_004_Busca_Parte2.pdf"
 
 copy_if_exists "atividades/01-introducao/lista-01/EC_IA_001_Introducao_Atividades.pdf" "docs/downloads/atividades/EC_IA_001_Introducao_Atividades.pdf"
-copy_if_exists "atividades/02-agentes/EC_IA_002_Agentes_Atividades.pdf" "docs/downloads/atividades/EC_IA_002_Agentes_Atividades.pdf"
-copy_if_exists "atividades/03-conhecimento/EC_IA_003_Conhecimento_Atividades.pdf" "docs/downloads/atividades/EC_IA_003_Conhecimento_Atividades.pdf"
-copy_if_exists "atividades/04-busca/EC_IA_004_Busca_Atividades.pdf" "docs/downloads/atividades/EC_IA_004_Busca_Atividades.pdf"
+copy_if_exists "atividades/02-agentes/lista-02/EC_IA_002_Agentes_Atividades.pdf" "docs/downloads/atividades/EC_IA_002_Agentes_Atividades.pdf"
+copy_if_exists "atividades/03-conhecimento/lista-03/EC_IA_003_Conhecimento_Atividades.pdf" "docs/downloads/atividades/EC_IA_003_Conhecimento_Atividades.pdf"
+copy_if_exists "atividades/04-busca/lista-04/EC_IA_004_Busca_Atividades.pdf" "docs/downloads/atividades/EC_IA_004_Busca_Atividades.pdf"
 
 copy_if_exists "planos/2026-2/plano-didatico.md" "docs/downloads/planos/plano-didatico-2026-2.md"
 copy_if_exists "planos/2026-2/Plano_Didatico_IA_2026_2.pdf" "docs/downloads/planos/Plano_Didatico_IA_2026_2.pdf"

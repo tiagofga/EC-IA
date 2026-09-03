@@ -29,16 +29,19 @@ A proposta não é apenas disponibilizar arquivos, mas organizar um percurso de 
 | `notas/` | notas públicas complementares |
 | `pseudoalgoritmos/` | descrições conceituais dos algoritmos estudados |
 | `visualizacoes/` | visualizações interativas para acompanhar execuções passo a passo |
-| `docs/` | páginas utilizadas na publicação do GitHub Pages |
+| `docs/` | páginas utilizadas na publicação do site |
 
 ### Aulas organizadas
 
 | Aula | Tema |
 |---|---|
+| 00 | Visão Geral da Disciplina |
 | 01 | Introdução à Inteligência Artificial |
 | 02 | Agentes Inteligentes |
 | 03 | Representação do Conhecimento e Solução de Problemas |
-| 04 | Estratégias de Busca |
+| 04 | Estruturas e Estratégias de Busca |
+
+Os PDFs públicos das Aulas 00 a 04 e das Atividades 01 a 04 já fazem parte do repositório.
 
 ## Estudos guiados
 
@@ -85,15 +88,16 @@ A visualização permite acompanhar estados, fronteiras, custos, heurísticas, c
 EC-IA/
 ├── planos/
 ├── aulas/
+│   ├── 00-visao-geral/
 │   ├── 01-introducao/
 │   ├── 02-agentes/
 │   ├── 03-conhecimento/
 │   └── 04-busca/
 ├── atividades/
-│   ├── 01-introducao/
-│   ├── 02-agentes/
-│   ├── 03-conhecimento/
-│   └── 04-busca/
+│   ├── 01-introducao/lista-01/
+│   ├── 02-agentes/lista-02/
+│   ├── 03-conhecimento/lista-03/
+│   └── 04-busca/lista-04/
 ├── estudos-guiados/
 ├── notas/
 ├── pseudoalgoritmos/
@@ -114,7 +118,7 @@ Para preservar a organização da disciplina e a integridade das atividades, alg
 
 ## Versão de referência
 
-A versão pública de referência é a `v0.2.0`. A branch `main` pode conter melhorias posteriores ainda não consolidadas em uma nova versão.
+A última versão marcada é a `v0.2.0`. O conteúdo atualmente consolidado na `main`, incluindo aulas e atividades públicas, prepara a próxima versão `v0.3.0`.
 
 ## Desenvolvimento do repositório
 
