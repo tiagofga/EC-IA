@@ -16,14 +16,24 @@ Se você está acompanhando a disciplina durante o semestre, use esta sequência
 4. **Visualizações** - acompanhe passo a passo o comportamento dos algoritmos;
 5. **Notas e pseudocódigos** - use como apoio para revisar pontos específicos.
 
-## Conteúdo disponível
+## Conteúdo publicado
+
+Os PDFs públicos das aulas já estão disponíveis da Aula 00 à Aula 04. As atividades correspondentes às Aulas 01 a 04 também estão publicadas.
 
 | Aula | Tema | Recursos principais |
 |---|---|---|
+| 00 | Visão Geral da Disciplina | aula e plano didático |
 | 01 | Introdução à Inteligência Artificial | aula, atividade e estudo guiado |
-| 02 | Agentes Inteligentes | aula, atividade, estudo guiado e pseudocódigos selecionados |
+| 02 | Agentes Inteligentes | aula, atividade e estudo guiado |
 | 03 | Representação do Conhecimento e Solução de Problemas | aula, atividade, estudo guiado e fundamentos de busca |
-| 04 | Estratégias de Busca | aula, atividade, estudo guiado, pseudocódigos e visualizações |
+| 04 | Estruturas e Estratégias de Busca | duas partes da aula, atividade, estudo guiado, pseudocódigos e visualizações |
+
+## Aula 04 - Busca
+
+A Aula 04 está organizada em duas partes:
+
+- **Parte I - Busca Não Informada e Informada**: BFS, Custo Uniforme, DFS, aprofundamento iterativo, heurísticas, Busca Gulosa e A*;
+- **Parte II - Busca Local e Ambientes Complexos**: Hill Climbing, Simulated Annealing, Busca em Feixe Local, Algoritmos Genéticos, busca não determinística, estados de crença e busca online.
 
 ## Visualização interativa de busca
 
@@ -39,6 +49,6 @@ O visualizador é baseado em **traces pré-calculados**. Ele apresenta a evoluç
 
 ## Sobre este material
 
-O repositório contém apenas a parte pública da disciplina. Gabaritos, testes ocultos, soluções de referência ainda não liberadas e materiais internos de avaliação não são publicados.
+O repositório contém apenas a parte pública da disciplina. Gabaritos, fontes LaTeX, testes ocultos, soluções de referência ainda não liberadas e materiais internos de avaliação não são publicados.
 
 O conteúdo será ampliado progressivamente conforme o andamento das aulas.
