@@ -4,7 +4,7 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT_DIR"
 
-mkdir -p docs/estudos-guiados
+mkdir -p docs/estudos-guiados docs/notas
 
 for guide in \
   01-introducao \
@@ -14,6 +14,18 @@ for guide in \
  do
   rm -rf "docs/estudos-guiados/$guide"
   cp -R "estudos-guiados/$guide" "docs/estudos-guiados/$guide"
+done
+
+# As notas são mantidas em notas/ como fonte pública e sincronizadas para o
+# diretório do MkDocs durante o build. O índice docs/notas/index.md é preservado.
+for note in \
+  01-introducao \
+  02-agentes \
+  03-conhecimento \
+  04-busca
+ do
+  rm -rf "docs/notas/$note"
+  cp -R "notas/$note" "docs/notas/$note"
 done
 
 # Prepare public downloads inside docs before MkDocs validates links.
