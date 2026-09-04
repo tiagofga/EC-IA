@@ -46,7 +46,7 @@ A proposta não é apenas disponibilizar arquivos, mas organizar um percurso de 
 
 Os PDFs públicos das Aulas 00 a 04 e das Atividades 01 a 04 já fazem parte do repositório.
 
-## Notas de aula
+## Notas visuais
 
 As Aulas 01 a 04 possuem notas públicas em Markdown concebidas como **mapas mentais e guias de estudo**. Elas incluem:
 
@@ -57,7 +57,7 @@ As Aulas 01 a 04 possuem notas públicas em Markdown concebidas como **mapas men
 - erros conceituais frequentes;
 - checklists de revisão.
 
-A ideia é usar as notas depois dos slides e antes dos estudos guiados.
+A ideia é usar as notas depois dos slides e antes dos estudos guiados. No site, **Notas visuais** aparece como uma seção principal, no mesmo nível de Aulas, Atividades, Trabalhos, Estudos guiados e Visualizações.
 
 ## Trabalho 01 - Busca
 
@@ -68,7 +68,7 @@ O Trabalho 01 integra os conteúdos da Aula 04 em duas etapas:
 
 O trabalho vale **20,0 pontos** e pode ser desenvolvido individualmente ou em dupla. O código-base público contém apenas infraestrutura, testes iniciais e funções deliberadamente incompletas.
 
-A versão `v0.4.0` passa a consolidar oficialmente o Trabalho 01 no repositório, incluindo o enunciado em PDF, o código-base e os recursos públicos organizados em `trabalhos/01-busca/`.
+A versão `v0.4.0` consolidou oficialmente o Trabalho 01 no repositório, incluindo o enunciado em PDF, o código-base e os recursos públicos organizados em `trabalhos/01-busca/`.
 
 Consulte `trabalhos/01-busca/README.md` antes de iniciar.
 
@@ -146,7 +146,7 @@ Modelos LaTeX explicitamente destinados aos estudantes, como o modelo SBC do Tra
 
 ## Versão de referência
 
-A versão pública de referência é a **`v0.4.0`**, que consolida o Trabalho 01 - Busca, seu enunciado oficial, código-base e demais recursos públicos. As notas de aula estão sendo preparadas para a próxima versão pública.
+A próxima versão pública de referência é a **`v0.5.0`**, que acrescenta as notas visuais completas das Aulas 01 a 04 e sua integração ao site. A versão `v0.4.0` permanece como o marco de consolidação do Trabalho 01 - Busca.
 
 ## Desenvolvimento do repositório
 
@@ -158,5 +158,5 @@ fix(pages): correct visualization path
 content(trabalho-01): add search assignment starter
 docs(notas): add aula 04 visual review guide
 docs(repo): improve student navigation
-chore(release): prepare v0.4.0
+chore(release): prepare v0.5.0
 ```

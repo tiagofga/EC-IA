@@ -6,19 +6,28 @@ O histórico de commits segue Conventional Commits.
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-09-04
+
 ### Added
 
 - notas visuais completas para as Aulas 01 a 04 em Markdown;
 - mapas mentais, fluxos Mermaid, tabelas comparativas, resumos rápidos, alertas conceituais e checklists de revisão;
 - renderização Mermaid no site público;
-- navegação direta para cada nota de aula no MkDocs.
+- seção principal de Notas visuais no MkDocs.
 
 ### Changed
 
 - percurso de estudo atualizado para usar a sequência aula -> nota visual -> estudo guiado -> atividade;
 - índice de notas reformulado como mapa de estudo;
 - script de build atualizado para sincronizar `notas/` com a documentação publicada;
-- estilos do site ampliados para diagramas e blocos de revisão.
+- estilos do site ampliados para diagramas e blocos de revisão;
+- navegação ajustada para manter Notas visuais no mesmo nível de Aulas, Atividades, Trabalhos, Estudos guiados e Visualizações;
+- README atualizado para refletir a nova camada didática e a versão de referência `v0.5.0`.
+
+### Notes
+
+- as notas visuais são materiais conceituais de revisão e não incluem gabaritos, soluções de referência, testes/mapas ocultos ou implementações prontas dos algoritmos exigidos no Trabalho 01;
+- a versão `v0.4.0` permanece como o marco de consolidação do Trabalho 01 - Busca.
 
 ## [0.4.0] - 2026-09-03
 
