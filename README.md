@@ -4,18 +4,19 @@ Material público da disciplina de **Inteligência Artificial** do Curso de Enge
 
 > **Página da disciplina:** https://tiagofga.github.io/EC-IA/
 
-Este repositório reúne materiais de apoio às aulas, atividades, estudos guiados, trabalhos, pseudocódigos conceituais e visualizações didáticas. O conteúdo é organizado progressivamente ao longo do semestre.
+Este repositório reúne materiais de apoio às aulas, notas visuais, atividades, estudos guiados, trabalhos, pseudocódigos conceituais e visualizações didáticas. O conteúdo é organizado progressivamente ao longo do semestre.
 
 ## Como usar este repositório
 
 Para cada assunto, a sequência recomendada é:
 
 1. revisar o conteúdo apresentado na aula;
-2. realizar o estudo guiado correspondente;
-3. resolver a atividade proposta;
-4. usar as visualizações para acompanhar o comportamento dos algoritmos;
-5. consultar notas e pseudocódigos para revisar conceitos específicos;
-6. desenvolver os trabalhos práticos somente após revisar os requisitos e critérios de entrega.
+2. consultar a nota visual correspondente para reorganizar os conceitos;
+3. realizar o estudo guiado;
+4. resolver a atividade proposta;
+5. usar as visualizações para acompanhar o comportamento dos algoritmos;
+6. consultar pseudocódigos para revisar estruturas e critérios específicos;
+7. desenvolver os trabalhos práticos somente após revisar os requisitos e critérios de entrega.
 
 A proposta não é apenas disponibilizar arquivos, mas organizar um percurso de estudo que possa ser retomado antes de atividades e avaliações.
 
@@ -25,9 +26,9 @@ A proposta não é apenas disponibilizar arquivos, mas organizar um percurso de 
 |---|---|
 | `planos/` | plano didático e organização da disciplina |
 | `aulas/` | materiais públicos organizados por aula |
+| `notas/` | mapas mentais e guias visuais de revisão |
 | `atividades/` | listas destinadas aos estudantes |
 | `estudos-guiados/` | roteiros de revisão e autoavaliação |
-| `notas/` | notas públicas complementares |
 | `pseudoalgoritmos/` | descrições conceituais dos algoritmos estudados |
 | `visualizacoes/` | visualizações interativas para acompanhar execuções passo a passo |
 | `trabalhos/` | enunciados, código-base e recursos públicos dos trabalhos práticos |
@@ -44,6 +45,19 @@ A proposta não é apenas disponibilizar arquivos, mas organizar um percurso de 
 | 04 | Estruturas e Estratégias de Busca |
 
 Os PDFs públicos das Aulas 00 a 04 e das Atividades 01 a 04 já fazem parte do repositório.
+
+## Notas de aula
+
+As Aulas 01 a 04 possuem notas públicas em Markdown concebidas como **mapas mentais e guias de estudo**. Elas incluem:
+
+- mapas conceituais e fluxos em Mermaid;
+- tabelas comparativas;
+- resumos de 30 segundos e de 1 minuto;
+- conexões entre aulas;
+- erros conceituais frequentes;
+- checklists de revisão.
+
+A ideia é usar as notas depois dos slides e antes dos estudos guiados.
 
 ## Trabalho 01 - Busca
 
@@ -99,6 +113,11 @@ EC-IA/
 │   ├── 02-agentes/
 │   ├── 03-conhecimento/
 │   └── 04-busca/
+├── notas/
+│   ├── 01-introducao/
+│   ├── 02-agentes/
+│   ├── 03-conhecimento/
+│   └── 04-busca/
 ├── atividades/
 │   ├── 01-introducao/lista-01/
 │   ├── 02-agentes/lista-02/
@@ -107,7 +126,6 @@ EC-IA/
 ├── trabalhos/
 │   └── 01-busca/
 ├── estudos-guiados/
-├── notas/
 ├── pseudoalgoritmos/
 ├── visualizacoes/
 └── docs/
@@ -128,7 +146,7 @@ Modelos LaTeX explicitamente destinados aos estudantes, como o modelo SBC do Tra
 
 ## Versão de referência
 
-A versão pública de referência é a **`v0.4.0`**, que consolida o Trabalho 01 - Busca, seu enunciado oficial, código-base e demais recursos públicos.
+A versão pública de referência é a **`v0.4.0`**, que consolida o Trabalho 01 - Busca, seu enunciado oficial, código-base e demais recursos públicos. As notas de aula estão sendo preparadas para a próxima versão pública.
 
 ## Desenvolvimento do repositório
 
@@ -138,6 +156,7 @@ O histórico utiliza **Conventional Commits**. Exemplos:
 feat(busca): add local search visualization
 fix(pages): correct visualization path
 content(trabalho-01): add search assignment starter
+docs(notas): add aula 04 visual review guide
 docs(repo): improve student navigation
 chore(release): prepare v0.4.0
 ```
