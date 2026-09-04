@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://tiagofga.github.io/EC-IA/estudos-guiados/03-conhecimento/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Estudo Guiado 03 - Representação do Conhecimento e Solução de Problemas - EC-IA</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Estudo Guiado 03 - Representa\u00e7\u00e3o do Conhecimento e Solu\u00e7\u00e3o de Problemas";
+        var mkdocs_page_input_path = "estudos-guiados/03-conhecimento/README.md";
+        var mkdocs_page_url = "/EC-IA/estudos-guiados/03-conhecimento/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> EC-IA
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Início</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../planos/">Plano didático</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../aulas/">Aulas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../atividades/">Atividades</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../trabalhos/">Trabalhos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Estudos guiados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../notas/">Notas visuais</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../pseudocodigos/">Pseudocódigos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../visualizacoes/">Visualizações</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://github.com/tiagofga/EC-IA">Repositório no GitHub</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">EC-IA</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Estudo Guiado 03 - Representação do Conhecimento e Solução de Problemas</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/tiagofga/EC-IA/edit/master/docs/estudos-guiados/03-conhecimento/README.md">Edit on tiagofga/EC-IA</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="estudo-guiado-03-representacao-do-conhecimento-e-solucao-de-problemas">Estudo Guiado 03 - Representação do Conhecimento e Solução de Problemas</h1>
+<h2 id="objetivo">Objetivo</h2>
+<p>Ao concluir este estudo, você deve ser capaz de explicar por que representar um domínio é uma decisão de projeto, formular um problema em termos computacionais e distinguir espaço de estados, árvore de busca e fronteira.</p>
+<h2 id="1-fio-condutor">1. Fio condutor</h2>
+<p>A questão central desta aula é:</p>
+<blockquote>
+<p>Como transformar uma meta de um agente em uma representação computável de problema e, depois, em uma sequência de ações?</p>
+</blockquote>
+<p>Antes de avançar, tente responder a essa pergunta usando apenas os conceitos da Aula 02.</p>
+<h2 id="2-dado-informacao-conhecimento-e-representacao">2. Dado, informação, conhecimento e representação</h2>
+<p>Crie um exemplo próprio e identifique:</p>
+<ul>
+<li>um dado bruto;</li>
+<li>uma informação obtida a partir dele;</li>
+<li>um conhecimento que permita interpretar ou utilizar essa informação;</li>
+<li>uma forma de representar esse conhecimento computacionalmente.</li>
+</ul>
+<p>O objetivo não é memorizar quatro definições independentes, mas perceber a transformação de um nível para outro.</p>
+<h2 id="3-por-que-representar">3. Por que representar?</h2>
+<p>Uma representação pode ser usada para:</p>
+<ul>
+<li>interpretar o ambiente;</li>
+<li>organizar elementos e relações do domínio;</li>
+<li>formular consultas;</li>
+<li>prever consequências;</li>
+<li>deduzir novos fatos;</li>
+<li>apoiar decisão, planejamento ou aprendizagem.</li>
+</ul>
+<p>Escolha um domínio e explique quais dessas finalidades seriam relevantes.</p>
+<h2 id="4-simbolico-e-sub-simbolico">4. Simbólico e sub-simbólico</h2>
+<p>Compare uma representação explícita por regras ou relações com uma representação distribuída em vetores ou parâmetros aprendidos.</p>
+<p>Analise:</p>
+<ul>
+<li>interpretabilidade;</li>
+<li>facilidade de manipulação;</li>
+<li>capacidade de representar conhecimento incompleto ou ruidoso;</li>
+<li>necessidade de dados;</li>
+<li>facilidade de explicar uma decisão;</li>
+<li>adequação ao problema.</li>
+</ul>
+<p>Evite concluir que uma abordagem é universalmente superior à outra.</p>
+<h2 id="5-abstracao">5. Abstração</h2>
+<p>A formulação de um problema exige decidir o que será representado e o que será omitido.</p>
+<p>Para um problema de navegação em um campus, considere duas representações:</p>
+<ol>
+<li>cada posição física possível em coordenadas contínuas;</li>
+<li>apenas prédios e caminhos relevantes entre eles.</li>
+</ol>
+<p>Responda:</p>
+<ul>
+<li>qual representação possui mais detalhes;</li>
+<li>qual pode produzir um espaço de estados maior;</li>
+<li>que informações são irrelevantes para algumas metas;</li>
+<li>em que situação a representação mais abstrata poderia deixar de ser suficiente.</li>
+</ul>
+<h2 id="6-componentes-de-um-problema">6. Componentes de um problema</h2>
+<p>Você deve conseguir identificar, para qualquer problema de busca:</p>
+<ul>
+<li>estado inicial;</li>
+<li>conjunto ou representação de estados;</li>
+<li>ações;</li>
+<li>modelo de transição ou função sucessora;</li>
+<li>teste de objetivo;</li>
+<li>custo de ação e custo de caminho, quando aplicáveis.</li>
+</ul>
+<h3 id="exercicio-de-formulacao">Exercício de formulação</h3>
+<p>Formule um problema em que um robô precisa deslocar-se entre salas de um prédio.</p>
+<p>Não escolha ainda BFS, DFS ou qualquer outro algoritmo. Primeiro descreva apenas o problema.</p>
+<p>Depois pergunte:</p>
+<ul>
+<li>dois caminhos diferentes podem chegar ao mesmo estado?</li>
+<li>o custo depende apenas da quantidade de ações?</li>
+<li>toda ação é possível em todo estado?</li>
+<li>como reconhecer que a meta foi atingida?</li>
+</ul>
+<h2 id="7-estado-nao-e-no">7. Estado não é nó</h2>
+<p>Explique com suas palavras:</p>
+<ul>
+<li>o que é um estado do problema;</li>
+<li>o que é um nó da árvore de busca;</li>
+<li>por que o mesmo estado pode aparecer em nós diferentes;</li>
+<li>quais informações adicionais um nó pode armazenar, como pai, ação, profundidade e custo.</li>
+</ul>
+<p>Essa distinção será essencial na Aula 04.</p>
+<h2 id="8-espaco-de-estados-e-arvore-de-busca">8. Espaço de estados e árvore de busca</h2>
+<p>Desenhe um pequeno problema com pelo menos cinco estados e duas rotas alternativas para a mesma meta.</p>
+<p>Depois represente:</p>
+<ol>
+<li>o grafo ou espaço de estados;</li>
+<li>os primeiros níveis de uma árvore de busca iniciada em um estado específico.</li>
+</ol>
+<p>Compare as duas representações e identifique repetições que aparecem na árvore.</p>
+<h2 id="9-fronteira">9. Fronteira</h2>
+<p>A fronteira contém nós gerados que ainda podem ser escolhidos para expansão.</p>
+<p>Considere três maneiras de retirar elementos da fronteira:</p>
+<ul>
+<li>primeiro que entrou;</li>
+<li>último que entrou;</li>
+<li>elemento com menor prioridade numérica.</li>
+</ul>
+<p>Explique por que a mesma estrutura geral de busca pode produzir comportamentos diferentes apenas alterando a regra de seleção da fronteira.</p>
+<p>Não implemente os algoritmos ainda. O objetivo é entender a consequência conceitual da estrutura de dados utilizada.</p>
+<h2 id="10-ponte-para-a-aula-04">10. Ponte para a Aula 04</h2>
+<p>Ao final desta aula, a pergunta deixa de ser apenas "como representar o problema?" e passa a ser:</p>
+<blockquote>
+<p>Entre todos os nós disponíveis na fronteira, qual deve ser expandido em seguida?</p>
+</blockquote>
+<p>Essa decisão dá origem às diferentes estratégias de busca.</p>
+<h2 id="autoavaliacao">Autoavaliação</h2>
+<ul>
+<li>[ ] Consigo explicar por que a representação é uma escolha de projeto.</li>
+<li>[ ] Consigo comparar representações simbólicas e sub-simbólicas sem simplificações excessivas.</li>
+<li>[ ] Consigo formular um problema com estado inicial, ações, transições, meta e custos.</li>
+<li>[ ] Consigo diferenciar estado e nó.</li>
+<li>[ ] Consigo diferenciar espaço de estados e árvore de busca.</li>
+<li>[ ] Consigo explicar o papel da fronteira.</li>
+<li>[ ] Consigo explicar por que a estratégia de seleção da fronteira muda o comportamento da busca.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/tiagofga/EC-IA" class="fa fa-code-fork" style="color: #fcfcfc"> tiagofga/EC-IA</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+      <script src="../../assets/mermaid-init.js"></script>
+      <script src="../../assets/downloads.js"></script>
+      <script src="../../assets/vercel-analytics.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

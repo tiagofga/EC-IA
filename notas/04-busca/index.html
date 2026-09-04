@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://tiagofga.github.io/EC-IA/notas/04-busca/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Aula 04 - Estruturas e Estratégias de Busca - EC-IA</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Aula 04 - Estruturas e Estrat\u00e9gias de Busca";
+        var mkdocs_page_input_path = "notas/04-busca/README.md";
+        var mkdocs_page_url = "/EC-IA/notas/04-busca/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> EC-IA
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Início</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../planos/">Plano didático</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../aulas/">Aulas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../atividades/">Atividades</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../trabalhos/">Trabalhos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../estudos-guiados/">Estudos guiados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Notas visuais</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../pseudocodigos/">Pseudocódigos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../visualizacoes/">Visualizações</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://github.com/tiagofga/EC-IA">Repositório no GitHub</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">EC-IA</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Aula 04 - Estruturas e Estratégias de Busca</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/tiagofga/EC-IA/edit/master/docs/notas/04-busca/README.md">Edit on tiagofga/EC-IA</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="aula-04-estruturas-e-estrategias-de-busca">Aula 04 - Estruturas e Estratégias de Busca</h1>
+<blockquote>
+<p><strong>Guia visual de revisão.</strong> Esta nota organiza a Aula 04 em três blocos: busca não informada, busca informada e busca local/ambientes complexos. Use-a como mapa mental para comparar estratégias sem confundir critério de seleção, custo, heurística, completude e otimalidade.</p>
+</blockquote>
+<h2 id="visao-em-30-segundos">Visão em 30 segundos</h2>
+<table>
+<thead>
+<tr>
+<th>Estratégia</th>
+<th>Ideia central</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BFS</td>
+<td>expande primeiro os nós mais rasos</td>
+</tr>
+<tr>
+<td>DFS</td>
+<td>aprofunda um ramo antes de retornar</td>
+</tr>
+<tr>
+<td>UCS</td>
+<td>escolhe o menor custo acumulado <code>g(n)</code></td>
+</tr>
+<tr>
+<td>Gulosa</td>
+<td>escolhe o menor valor heurístico <code>h(n)</code></td>
+</tr>
+<tr>
+<td>A*</td>
+<td>combina custo acumulado e estimativa: <code>f(n)=g(n)+h(n)</code></td>
+</tr>
+<tr>
+<td>Hill Climbing</td>
+<td>move para um vizinho localmente melhor</td>
+</tr>
+<tr>
+<td>Simulated Annealing</td>
+<td>aceita ocasionalmente movimentos piores para escapar de ótimos locais</td>
+</tr>
+<tr>
+<td>Beam Search</td>
+<td>mantém apenas um conjunto limitado de candidatos</td>
+</tr>
+<tr>
+<td>Algoritmo Genético</td>
+<td>evolui uma população de soluções candidatas</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mapa-mental-da-aula">Mapa mental da aula</h2>
+<pre><code class="language-mermaid">mindmap
+  root((Estratégias de Busca))
+    Não informada
+      BFS
+      DFS
+      Custo Uniforme
+      Profundidade limitada
+      Aprofundamento iterativo
+    Informada
+      Heurística
+      Busca Gulosa
+      A estrela
+      RBFS
+    Local
+      Hill Climbing
+      Simulated Annealing
+      Beam Search
+      Algoritmo Genético
+    Ambientes complexos
+      Ações não determinísticas
+      AND-OR
+      Estados de crença
+      Busca online
+</code></pre>
+<h2 id="1-a-pergunta-que-diferencia-as-estrategias">1. A pergunta que diferencia as estratégias</h2>
+<p>A estrutura geral permanece parecida:</p>
+<pre><code class="language-mermaid">flowchart LR
+    F[Fronteira] --&gt; S{Qual nó selecionar?}
+    S --&gt; E[Expandir]
+    E --&gt; G[Gerar sucessores]
+    G --&gt; F
+</code></pre>
+<p>A diferença central está no <strong>critério de seleção da fronteira</strong>.</p>
+<h2 id="2-quadro-comparativo-principal">2. Quadro comparativo principal</h2>
+<table>
+<thead>
+<tr>
+<th>Estratégia</th>
+<th>Seleção da fronteira</th>
+<th style="text-align: right;"><code>g(n)</code></th>
+<th style="text-align: right;"><code>h(n)</code></th>
+<th>Intuição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BFS</td>
+<td>menor profundidade / FIFO</td>
+<td style="text-align: right;">não</td>
+<td style="text-align: right;">não</td>
+<td>explorar por camadas</td>
+</tr>
+<tr>
+<td>DFS</td>
+<td>maior profundidade / LIFO</td>
+<td style="text-align: right;">não</td>
+<td style="text-align: right;">não</td>
+<td>seguir um ramo</td>
+</tr>
+<tr>
+<td>UCS</td>
+<td>menor <code>g(n)</code></td>
+<td style="text-align: right;">sim</td>
+<td style="text-align: right;">não</td>
+<td>priorizar caminho já mais barato</td>
+</tr>
+<tr>
+<td>Gulosa</td>
+<td>menor <code>h(n)</code></td>
+<td style="text-align: right;">não</td>
+<td style="text-align: right;">sim</td>
+<td>aproximar-se rapidamente da meta</td>
+</tr>
+<tr>
+<td>A*</td>
+<td>menor <code>f(n)=g(n)+h(n)</code></td>
+<td style="text-align: right;">sim</td>
+<td style="text-align: right;">sim</td>
+<td>equilibrar custo passado e estimativa futura</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-mermaid">flowchart TB
+    Q[Que informação orienta a busca?] --&gt; N[Nenhuma informação extra]
+    Q --&gt; C[Custo acumulado]
+    Q --&gt; H[Heurística]
+    Q --&gt; CH[Custo + heurística]
+    N --&gt; BFS[BFS]
+    N --&gt; DFS[DFS]
+    C --&gt; UCS[UCS]
+    H --&gt; G[Busca Gulosa]
+    CH --&gt; AS[A*]
+</code></pre>
+<h2 id="3-busca-em-largura-bfs">3. Busca em Largura - BFS</h2>
+<p>A BFS prioriza nós de menor profundidade.</p>
+<pre><code class="language-text">nível 0 → nível 1 → nível 2 → nível 3 → ...
+</code></pre>
+<pre><code class="language-mermaid">flowchart TD
+    S((S)) --&gt; A((A))
+    S --&gt; B((B))
+    A --&gt; C((C))
+    A --&gt; D((D))
+    B --&gt; E((E))
+    B --&gt; F((F))
+</code></pre>
+<p>Ordem típica por camadas:</p>
+<pre><code class="language-text">S → A, B → C, D, E, F
+</code></pre>
+<h3 id="pontos-chave">Pontos-chave</h3>
+<ul>
+<li>completa em condições usuais de espaço finito ou fator de ramificação finito;</li>
+<li>ótima quando todos os custos de passo são iguais;</li>
+<li>pode consumir muita memória porque mantém uma fronteira larga;</li>
+<li>encontrar a meta na fronteira não é necessariamente o mesmo que selecioná-la para expansão, dependendo da especificação adotada.</li>
+</ul>
+<blockquote>
+<p><strong>Erro comum:</strong> dizer que BFS é sempre ótima. Ela é ótima em número de passos quando os custos são uniformes.</p>
+</blockquote>
+<h2 id="4-busca-em-profundidade-dfs">4. Busca em Profundidade - DFS</h2>
+<p>A DFS prioriza o nó mais recentemente inserido, aprofundando um ramo.</p>
+<pre><code class="language-mermaid">flowchart TD
+    S((S)) --&gt; A((A))
+    S --&gt; B((B))
+    A --&gt; C((C))
+    C --&gt; D((D))
+    D --&gt; E((E))
+</code></pre>
+<p>Intuição:</p>
+<pre><code class="language-text">S → A → C → D → E
+            ↑
+       volta quando necessário
+</code></pre>
+<h3 id="pontos-chave_1">Pontos-chave</h3>
+<ul>
+<li>usa pouca memória em comparação com BFS em muitos cenários;</li>
+<li>pode se perder em ramos profundos ou ciclos;</li>
+<li>não garante a solução mais rasa;</li>
+<li>a ordem de geração dos sucessores influencia fortemente o percurso.</li>
+</ul>
+<blockquote>
+<p><strong>Ponto de atenção:</strong> "DFS é mais rápida" não é uma propriedade geral. O desempenho depende da posição da solução e da estrutura do espaço.</p>
+</blockquote>
+<h2 id="5-profundidade-limitada-e-aprofundamento-iterativo">5. Profundidade limitada e aprofundamento iterativo</h2>
+<p>A busca em profundidade limitada introduz um limite <code>L</code>.</p>
+<pre><code class="language-text">DFS + profundidade máxima L
+</code></pre>
+<p>O aprofundamento iterativo repete buscas com limites crescentes:</p>
+<pre><code class="language-text">L=0 → L=1 → L=2 → L=3 → ...
+</code></pre>
+<pre><code class="language-mermaid">flowchart LR
+    L0[L=0] --&gt; L1[L=1]
+    L1 --&gt; L2[L=2]
+    L2 --&gt; L3[L=3]
+    L3 --&gt; LN[...]
+</code></pre>
+<p>A ideia é combinar a economia de memória da busca em profundidade com a exploração sistemática por níveis.</p>
+<h2 id="6-busca-de-custo-uniforme-ucs">6. Busca de Custo Uniforme - UCS</h2>
+<p>A UCS seleciona o nó com menor custo acumulado:</p>
+<pre><code class="language-text">g(n)
+</code></pre>
+<pre><code class="language-mermaid">flowchart LR
+    S((S)) --&gt;|2| A((A))
+    S --&gt;|5| B((B))
+    A --&gt;|2| G((G))
+    B --&gt;|1| G
+</code></pre>
+<p>Mesmo que um caminho tenha menos passos, ele pode custar mais.</p>
+<table>
+<thead>
+<tr>
+<th>Caminho</th>
+<th style="text-align: right;">Passos</th>
+<th style="text-align: right;">Custo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>S → A → G</code></td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr>
+<td><code>S → B → G</code></td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">6</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pontos-chave_2">Pontos-chave</h3>
+<ul>
+<li>prioriza custo, não profundidade;</li>
+<li>com custos positivos adequados, possui garantia de otimalidade;</li>
+<li>um estado conhecido pode precisar ser atualizado se surgir um caminho de menor custo;</li>
+<li>entradas antigas em fila de prioridade podem se tornar obsoletas.</li>
+</ul>
+<blockquote>
+<p><strong>Conexão com o Trabalho 01:</strong> a definição de geração, expansão, reinserção e entrada obsoleta precisa ser seguida exatamente conforme o enunciado.</p>
+</blockquote>
+<h2 id="7-heuristicas">7. Heurísticas</h2>
+<p>Uma heurística estima o custo restante até a meta:</p>
+<pre><code class="language-text">h(n) ≈ custo de n até a meta
+</code></pre>
+<pre><code class="language-mermaid">flowchart LR
+    N((n)) --&gt;|custo já pago = g(n)| P[passado]
+    N --&gt;|estimativa = h(n)| G((meta))
+</code></pre>
+<h3 id="heuristica-nao-e-custo-real">Heurística não é custo real</h3>
+<table>
+<thead>
+<tr>
+<th>Termo</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>g(n)</code></td>
+<td>custo real acumulado até <code>n</code></td>
+</tr>
+<tr>
+<td><code>h(n)</code></td>
+<td>estimativa do custo restante</td>
+</tr>
+<tr>
+<td><code>f(n)</code></td>
+<td>estimativa do custo total via <code>n</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-admissibilidade-e-consistencia">8. Admissibilidade e consistência</h2>
+<h3 id="admissibilidade">Admissibilidade</h3>
+<p>Uma heurística admissível não superestima o custo real mínimo até a meta:</p>
+<pre><code class="language-text">h(n) ≤ h*(n)
+</code></pre>
+<p>onde <code>h*(n)</code> representa o custo real ótimo restante.</p>
+<h3 id="consistencia">Consistência</h3>
+<p>A estimativa deve respeitar uma forma de desigualdade triangular ao longo das transições:</p>
+<pre><code class="language-text">h(n) ≤ c(n,n') + h(n')
+</code></pre>
+<pre><code class="language-mermaid">flowchart LR
+    N((n)) --&gt;|c(n,n')| NP((n'))
+    NP --&gt;|h(n')| G((meta))
+    N -. h(n) não deve ultrapassar esse caminho estimado .-&gt; G
+</code></pre>
+<blockquote>
+<p><strong>Não memorize isoladamente:</strong> admissibilidade limita a superestimação em relação à meta; consistência controla a coerência da estimativa entre estados vizinhos.</p>
+</blockquote>
+<h2 id="9-busca-gulosa">9. Busca Gulosa</h2>
+<p>A Busca Gulosa escolhe o menor:</p>
+<pre><code class="language-text">h(n)
+</code></pre>
+<pre><code class="language-mermaid">flowchart LR
+    S((S)) --&gt; A((A&lt;br/&gt;h=8))
+    S --&gt; B((B&lt;br/&gt;h=3))
+    S --&gt; C((C&lt;br/&gt;h=5))
+    B --&gt; G((G))
+</code></pre>
+<p>Ela tende a escolher <code>B</code> porque parece mais próxima da meta.</p>
+<h3 id="vantagem">Vantagem</h3>
+<p>Pode direcionar rapidamente a exploração.</p>
+<h3 id="limitacao">Limitação</h3>
+<p>Ignora o custo já pago:</p>
+<pre><code class="language-text">prioridade = h(n)
+</code></pre>
+<p>Portanto, uma direção aparentemente promissora pode levar a um caminho globalmente caro.</p>
+<h2 id="10-a">10. A*</h2>
+<p>A* combina passado e futuro:</p>
+<pre><code class="language-text">f(n) = g(n) + h(n)
+</code></pre>
+<pre><code class="language-mermaid">flowchart TB
+    N((n)) --&gt; G1[g(n)&lt;br/&gt;custo acumulado]
+    N --&gt; H1[h(n)&lt;br/&gt;estimativa restante]
+    G1 --&gt; F[f(n)]
+    H1 --&gt; F
+</code></pre>
+<h3 id="casos-uteis-para-compreender-a">Casos úteis para compreender A*</h3>
+<pre><code class="language-text">h(n)=0 para todos os nós
+→ A* se comporta como UCS
+</code></pre>
+<p>Quanto mais informativa for uma heurística adequada, mais a busca pode evitar expansões desnecessárias.</p>
+<blockquote>
+<p><strong>Erro comum:</strong> "A* sempre é ótima". A propriedade depende das condições da heurística e da forma de implementação da busca.</p>
+</blockquote>
+<h2 id="11-comparacao-visual-bfs-ucs-gulosa-e-a">11. Comparação visual: BFS, UCS, Gulosa e A*</h2>
+<pre><code class="language-mermaid">flowchart TD
+    Q[O que a estratégia considera?]
+    Q --&gt; BFS[BFS&lt;br/&gt;profundidade]
+    Q --&gt; UCS[UCS&lt;br/&gt;g(n)]
+    Q --&gt; GREEDY[Gulosa&lt;br/&gt;h(n)]
+    Q --&gt; ASTAR[A*&lt;br/&gt;g(n)+h(n)]
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Situação</th>
+<th>Estratégia a considerar primeiro</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>custos iguais e solução mais rasa</td>
+<td>BFS</td>
+</tr>
+<tr>
+<td>custos diferentes e sem heurística</td>
+<td>UCS</td>
+</tr>
+<tr>
+<td>heurística disponível e rapidez mais importante que otimalidade</td>
+<td>Gulosa</td>
+</tr>
+<tr>
+<td>heurística adequada e custo da solução importante</td>
+<td>A*</td>
+</tr>
+<tr>
+<td>memória muito limitada e qualquer solução pode bastar</td>
+<td>DFS, dependendo do espaço</td>
+</tr>
+</tbody>
+</table>
+<h2 id="12-busca-local-mudanca-de-perspectiva">12. Busca local: mudança de perspectiva</h2>
+<p>Na busca clássica, normalmente queremos um <strong>caminho</strong> do estado inicial até a meta.</p>
+<p>Na busca local, muitas vezes interessa principalmente a <strong>qualidade do estado atual</strong>.</p>
+<pre><code class="language-mermaid">flowchart LR
+    C[Busca clássica] --&gt; CP[Caminho importa]
+    L[Busca local] --&gt; LS[Estado/solução importa]
+</code></pre>
+<p>Exemplos de aplicação incluem problemas de otimização em que uma configuração completa já representa uma solução candidata.</p>
+<h2 id="13-hill-climbing">13. Hill Climbing</h2>
+<p>Hill Climbing move-se para um vizinho considerado melhor segundo uma função de avaliação.</p>
+<pre><code class="language-mermaid">flowchart LR
+    S0[Estado atual] --&gt; V[Vizinhos]
+    V --&gt; B[Selecionar melhor vizinho]
+    B --&gt; Q{Melhora?}
+    Q --&gt;|sim| S1[Novo estado]
+    S1 --&gt; V
+    Q --&gt;|não| STOP[Parar]
+</code></pre>
+<h3 id="problemas-tipicos">Problemas típicos</h3>
+<ul>
+<li>ótimo local;</li>
+<li>platô;</li>
+<li>crista ou região de progresso difícil.</li>
+</ul>
+<pre><code class="language-text">qualidade
+  ^          /
+  |     ____/ \__ ótimo global
+  | ___/          
+  |/  ótimo local
+  +-----------------&gt; estados
+</code></pre>
+<h3 id="random-restart">Random Restart</h3>
+<p>Executa Hill Climbing a partir de diferentes estados iniciais.</p>
+<pre><code class="language-mermaid">flowchart LR
+    R1[reinício 1] --&gt; HC1[Hill Climbing]
+    R2[reinício 2] --&gt; HC2[Hill Climbing]
+    R3[reinício 3] --&gt; HC3[Hill Climbing]
+    HC1 --&gt; BEST[Melhor resultado]
+    HC2 --&gt; BEST
+    HC3 --&gt; BEST
+</code></pre>
+<h2 id="14-simulated-annealing">14. Simulated Annealing</h2>
+<p>Simulated Annealing permite ocasionalmente aceitar movimentos piores.</p>
+<p>A probabilidade dessa aceitação diminui conforme a "temperatura" cai.</p>
+<pre><code class="language-mermaid">flowchart TD
+    A[Estado atual] --&gt; V[Escolher vizinho]
+    V --&gt; B{Vizinho melhor?}
+    B --&gt;|sim| C[Aceitar]
+    B --&gt;|não| P{Aceitar probabilisticamente?}
+    P --&gt;|sim| C
+    P --&gt;|não| A
+    C --&gt; T[Reduzir temperatura]
+    T --&gt; A
+</code></pre>
+<p>Intuição:</p>
+<pre><code class="language-text">início: mais exploração
+↓
+temperatura cai
+↓
+menos aceitação de movimentos piores
+↓
+mais exploração local
+</code></pre>
+<h2 id="15-beam-search">15. Beam Search</h2>
+<p>Beam Search mantém apenas um número limitado de candidatos por etapa.</p>
+<pre><code class="language-mermaid">flowchart TD
+    L1[A B C D E] --&gt; K1[manter os k melhores]
+    K1 --&gt; L2[B1 B2 C1 C2]
+    L2 --&gt; K2[manter os k melhores]
+</code></pre>
+<p>O parâmetro <code>k</code> controla o compromisso entre diversidade e memória.</p>
+<blockquote>
+<p><strong>Ponto de atenção:</strong> a taxonomia de Beam Search pode variar conforme a literatura e o contexto; nesta disciplina ele aparece junto à discussão de estratégias locais/limitadas.</p>
+</blockquote>
+<h2 id="16-algoritmo-genetico">16. Algoritmo Genético</h2>
+<p>O Algoritmo Genético trabalha com uma <strong>população</strong> de soluções candidatas.</p>
+<pre><code class="language-mermaid">flowchart LR
+    P[População] --&gt; E[Avaliação]
+    E --&gt; S[Seleção]
+    S --&gt; C[Cruzamento]
+    C --&gt; M[Mutação]
+    M --&gt; NP[Nova população]
+    NP --&gt; E
+</code></pre>
+<p>Vocabulário básico:</p>
+<ul>
+<li>indivíduo;</li>
+<li>população;</li>
+<li>aptidão;</li>
+<li>seleção;</li>
+<li>cruzamento;</li>
+<li>mutação;</li>
+<li>geração.</li>
+</ul>
+<p>A grande diferença para Hill Climbing é que o AG mantém múltiplas soluções e combina informação entre elas.</p>
+<h2 id="17-ambientes-nao-deterministicos-e-and-or">17. Ambientes não determinísticos e AND-OR</h2>
+<p>Quando uma ação pode produzir diferentes resultados, um plano pode precisar prever alternativas.</p>
+<pre><code class="language-mermaid">flowchart TD
+    A[Ação] --&gt; O1[Resultado 1]
+    A --&gt; O2[Resultado 2]
+    A --&gt; O3[Resultado 3]
+</code></pre>
+<p>Uma solução deixa de ser apenas um caminho linear e pode assumir a forma de uma estratégia condicional.</p>
+<pre><code class="language-text">SE resultado 1 → faça X
+SE resultado 2 → faça Y
+</code></pre>
+<p>As estruturas AND-OR ajudam a representar decisões em que uma ação precisa lidar com múltiplos resultados possíveis.</p>
+<h2 id="18-estados-de-crenca">18. Estados de crença</h2>
+<p>Em ambientes parcialmente observáveis, o agente pode não saber exatamente em qual estado está.</p>
+<p>Em vez de representar um único estado, pode representar um conjunto de estados possíveis:</p>
+<pre><code class="language-text">{estado 2, estado 5, estado 8}
+</code></pre>
+<pre><code class="language-mermaid">flowchart LR
+    O[Observação incompleta] --&gt; B[Estado de crença]
+    B --&gt; S1[Estado possível 1]
+    B --&gt; S2[Estado possível 2]
+    B --&gt; S3[Estado possível 3]
+</code></pre>
+<h2 id="19-busca-online">19. Busca online</h2>
+<p>Na busca offline, o agente pode planejar antes de agir.</p>
+<p>Na busca online, planejamento e execução se alternam.</p>
+<pre><code class="language-mermaid">flowchart LR
+    P[Planejar um passo] --&gt; A[Agir]
+    A --&gt; O[Observar]
+    O --&gt; P
+</code></pre>
+<p>Isso é especialmente relevante quando o ambiente não é conhecido completamente de antemão.</p>
+<h2 id="20-grande-mapa-de-decisao">20. Grande mapa de decisão</h2>
+<pre><code class="language-mermaid">flowchart TD
+    Q[Qual é o problema?] --&gt; P1{Preciso de caminho?}
+    P1 --&gt;|sim| P2{Custos são uniformes?}
+    P2 --&gt;|sim| BFS[BFS pode ser adequada]
+    P2 --&gt;|não| P3{Tenho heurística?}
+    P3 --&gt;|não| UCS[UCS]
+    P3 --&gt;|sim| A[A* ou Gulosa conforme garantia desejada]
+    P1 --&gt;|não, quero otimizar estado| L{Busca local}
+    L --&gt; HC[Hill Climbing]
+    L --&gt; SA[Simulated Annealing]
+    L --&gt; BS[Beam Search]
+    L --&gt; GA[Algoritmo Genético]
+</code></pre>
+<h2 id="21-erros-conceituais-frequentes">21. Erros conceituais frequentes</h2>
+<blockquote>
+<p>⚠️ <strong>"BFS é sempre ótima."</strong> Apenas sob condições apropriadas de custo.</p>
+<p>⚠️ <strong>"DFS é incompleta em qualquer situação."</strong> A propriedade depende do espaço e dos controles adotados.</p>
+<p>⚠️ <strong>"UCS escolhe o caminho com menos ações."</strong> Ela escolhe o menor custo acumulado.</p>
+<p>⚠️ <strong>"Gulosa usa <code>g(n)+h(n)</code>."</strong> Isso é A*; Gulosa usa <code>h(n)</code>.</p>
+<p>⚠️ <strong>"A* é sempre ótima independentemente da heurística."</strong> A garantia depende das propriedades da heurística e da implementação.</p>
+<p>⚠️ <strong>"Hill Climbing e Busca Gulosa são a mesma coisa."</strong> Gulosa é uma estratégia de busca em fronteira; Hill Climbing é busca local sobre vizinhança do estado atual.</p>
+<p>⚠️ <strong>"Random Restart muda o Hill Climbing internamente."</strong> Ele repete a busca local a partir de diferentes estados iniciais.</p>
+</blockquote>
+<h2 id="revisao-de-1-minuto">Revisão de 1 minuto</h2>
+<pre><code class="language-text">Busca
+├── não informada
+│   ├── BFS → profundidade
+│   ├── DFS → aprofundamento
+│   └── UCS → g(n)
+├── informada
+│   ├── Gulosa → h(n)
+│   └── A* → g(n)+h(n)
+├── local
+│   ├── Hill Climbing
+│   ├── Simulated Annealing
+│   ├── Beam Search
+│   └── Algoritmo Genético
+└── ambientes complexos
+    ├── não determinismo
+    ├── AND-OR
+    ├── estados de crença
+    └── busca online
+</code></pre>
+<h2 id="checklist">Checklist</h2>
+<ul>
+<li>[ ] Consigo explicar a regra de seleção de BFS, DFS, UCS, Gulosa e A*.</li>
+<li>[ ] Diferencio profundidade, <code>g(n)</code>, <code>h(n)</code> e <code>f(n)</code>.</li>
+<li>[ ] Consigo explicar admissibilidade e consistência conceitualmente.</li>
+<li>[ ] Consigo escolher uma estratégia com base nas propriedades do problema.</li>
+<li>[ ] Diferencio busca clássica de busca local.</li>
+<li>[ ] Consigo explicar ótimo local, platô e reinício aleatório.</li>
+<li>[ ] Entendo a ideia de Simulated Annealing, Beam Search e Algoritmo Genético.</li>
+<li>[ ] Consigo explicar por que ambientes não determinísticos exigem soluções condicionais.</li>
+<li>[ ] Entendo estados de crença e a motivação da busca online.</li>
+</ul>
+<p><strong>Próximo passo:</strong> faça o <a href="../../estudos-guiados/04-busca/">Estudo Guiado 04</a>, use a visualização interativa para observar a fronteira e depois resolva a atividade antes de iniciar o Trabalho 01.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/tiagofga/EC-IA" class="fa fa-code-fork" style="color: #fcfcfc"> tiagofga/EC-IA</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+      <script src="../../assets/mermaid-init.js"></script>
+      <script src="../../assets/downloads.js"></script>
+      <script src="../../assets/vercel-analytics.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

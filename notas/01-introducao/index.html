@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://tiagofga.github.io/EC-IA/notas/01-introducao/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Aula 01 - Introdução à Inteligência Artificial - EC-IA</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Aula 01 - Introdu\u00e7\u00e3o \u00e0 Intelig\u00eancia Artificial";
+        var mkdocs_page_input_path = "notas/01-introducao/README.md";
+        var mkdocs_page_url = "/EC-IA/notas/01-introducao/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> EC-IA
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Início</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../planos/">Plano didático</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../aulas/">Aulas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../atividades/">Atividades</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../trabalhos/">Trabalhos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../estudos-guiados/">Estudos guiados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Notas visuais</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../pseudocodigos/">Pseudocódigos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../visualizacoes/">Visualizações</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://github.com/tiagofga/EC-IA">Repositório no GitHub</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">EC-IA</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Aula 01 - Introdução à Inteligência Artificial</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/tiagofga/EC-IA/edit/master/docs/notas/01-introducao/README.md">Edit on tiagofga/EC-IA</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="aula-01-introducao-a-inteligencia-artificial">Aula 01 - Introdução à Inteligência Artificial</h1>
+<blockquote>
+<p><strong>Guia visual de revisão.</strong> Use esta nota depois da aula para reorganizar os conceitos antes do estudo guiado e da atividade. O objetivo não é substituir os slides, mas transformar o conteúdo em um mapa de relações.</p>
+</blockquote>
+<h2 id="visao-em-30-segundos">Visão em 30 segundos</h2>
+<table>
+<thead>
+<tr>
+<th>Pergunta</th>
+<th>Ideia-chave</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O que é IA?</td>
+<td>Uma área que estuda e constrói sistemas capazes de realizar tarefas associadas a capacidades inteligentes.</td>
+</tr>
+<tr>
+<td>Existe uma única definição?</td>
+<td>Não. A área pode ser analisada pelo comportamento humano, pelos processos humanos, pela racionalidade do raciocínio ou pela racionalidade da ação.</td>
+</tr>
+<tr>
+<td>IA é sinônimo de aprendizado de máquina?</td>
+<td>Não. Aprendizado é uma das capacidades e abordagens presentes na área.</td>
+</tr>
+<tr>
+<td>Alto desempenho significa inteligência geral?</td>
+<td>Não. Um sistema pode ser excelente em uma tarefa específica e ainda ter limitações importantes fora daquele contexto.</td>
+</tr>
+<tr>
+<td>Qual conceito prepara a próxima aula?</td>
+<td><strong>Racionalidade</strong>, que será central para entender agentes inteligentes.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mapa-mental-da-aula">Mapa mental da aula</h2>
+<pre><code class="language-mermaid">mindmap
+  root((Inteligência Artificial))
+    Perspectivas
+      Pensar como humanos
+      Agir como humanos
+      Pensar racionalmente
+      Agir racionalmente
+    Capacidades
+      Percepção
+      Raciocínio
+      Aprendizagem
+      Tomada de decisão
+      Geração
+    Representação
+      Simbólica
+      Sub-simbólica
+    Avaliação
+      Desempenho
+      Limitações
+      Contexto de uso
+      Riscos
+    Próximo passo
+      Racionalidade
+      Agentes inteligentes
+</code></pre>
+<h2 id="1-quatro-formas-classicas-de-olhar-para-ia">1. Quatro formas clássicas de olhar para IA</h2>
+<p>A diferença entre as quatro perspectivas está principalmente em <strong>qual referência usamos para dizer que um sistema é inteligente</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Perspectiva</th>
+<th>Pergunta central</th>
+<th>Foco da avaliação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pensar como humanos</strong></td>
+<td>O sistema reproduz processos cognitivos humanos?</td>
+<td>Modelagem do processo de pensamento.</td>
+</tr>
+<tr>
+<td><strong>Agir como humanos</strong></td>
+<td>O comportamento produzido se aproxima do comportamento humano?</td>
+<td>Resultado observável da interação.</td>
+</tr>
+<tr>
+<td><strong>Pensar racionalmente</strong></td>
+<td>O raciocínio segue princípios que conduzem a conclusões adequadas?</td>
+<td>Correção do processo de inferência.</td>
+</tr>
+<tr>
+<td><strong>Agir racionalmente</strong></td>
+<td>O sistema escolhe ações adequadas para atingir objetivos?</td>
+<td>Decisão e desempenho esperado.</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-mermaid">flowchart LR
+    A[Como avaliar um sistema?] --&gt; B{Referência}
+    B --&gt; C[Humano]
+    B --&gt; D[Racionalidade]
+    C --&gt; E[Pensar como humanos]
+    C --&gt; F[Agir como humanos]
+    D --&gt; G[Pensar racionalmente]
+    D --&gt; H[Agir racionalmente]
+</code></pre>
+<blockquote>
+<p><strong>Ponto de atenção:</strong> imitar um comportamento humano não prova que o sistema raciocina como um humano. Da mesma forma, agir racionalmente não exige reproduzir os mecanismos cognitivos humanos.</p>
+</blockquote>
+<h2 id="2-ia-como-conjunto-de-capacidades">2. IA como conjunto de capacidades</h2>
+<p>É mais útil analisar <strong>o que o sistema precisa fazer</strong> do que apenas perguntar se determinada tecnologia "é IA".</p>
+<pre><code class="language-mermaid">flowchart LR
+    P[Perceber] --&gt; R[Representar]
+    R --&gt; C[Raciocinar / buscar]
+    C --&gt; D[Decidir]
+    D --&gt; A[Agir ou gerar saída]
+    A --&gt; O[Observar resultado]
+    O --&gt; P
+    L[Aprender] -. pode modificar .-&gt; R
+    L -. pode modificar .-&gt; C
+    L -. pode modificar .-&gt; D
+</code></pre>
+<p>Capacidades recorrentes:</p>
+<ul>
+<li><strong>percepção</strong> - obter informação do ambiente;</li>
+<li><strong>representação</strong> - organizar internamente informações relevantes;</li>
+<li><strong>raciocínio</strong> - relacionar informações e derivar consequências;</li>
+<li><strong>busca e planejamento</strong> - explorar alternativas para atingir uma meta;</li>
+<li><strong>aprendizagem</strong> - modificar comportamento ou representação a partir de dados e experiência;</li>
+<li><strong>decisão</strong> - escolher uma ação entre alternativas;</li>
+<li><strong>geração</strong> - produzir texto, imagem, código ou outra saída estruturada.</li>
+</ul>
+<h2 id="3-simbolico-e-sub-simbolico">3. Simbólico e sub-simbólico</h2>
+<p>As duas famílias não devem ser tratadas como rivais absolutas. Elas representam formas diferentes de organizar conhecimento e processamento.</p>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Abordagem simbólica</th>
+<th>Abordagem sub-simbólica</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Representação</td>
+<td>símbolos, regras e relações explícitas</td>
+<td>parâmetros, vetores e representações distribuídas</td>
+</tr>
+<tr>
+<td>Conhecimento</td>
+<td>mais diretamente inspecionável</td>
+<td>frequentemente aprendido a partir de dados</td>
+</tr>
+<tr>
+<td>Explicação</td>
+<td>pode ser mais direta</td>
+<td>pode exigir técnicas adicionais de interpretação</td>
+</tr>
+<tr>
+<td>Aprendizagem</td>
+<td>não é obrigatória</td>
+<td>frequentemente central</td>
+</tr>
+<tr>
+<td>Uso</td>
+<td>raciocínio explícito, regras, conhecimento estruturado</td>
+<td>percepção, reconhecimento de padrões, aprendizagem estatística</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-mermaid">flowchart TB
+    IA[Inteligência Artificial] --&gt; S[Simbólica]
+    IA --&gt; SS[Sub-simbólica]
+    S --&gt; SR[Regras e relações]
+    S --&gt; SI[Inferência explícita]
+    SS --&gt; SD[Dados]
+    SS --&gt; SP[Padrões aprendidos]
+    SR --&gt; H[Sistemas híbridos]
+    SP --&gt; H
+</code></pre>
+<blockquote>
+<p><strong>Evite a simplificação:</strong> "IA moderna é somente aprendizado de máquina". A disciplina mostrará busca, representação, lógica, aprendizagem e métodos inspirados na natureza como partes de um repertório maior.</p>
+</blockquote>
+<h2 id="4-automacao-adaptacao-e-comportamento-inteligente">4. Automação, adaptação e comportamento inteligente</h2>
+<p>Nem toda automação precisa ser classificada como IA. Uma boa análise considera o problema, a representação utilizada e o modo como o sistema decide.</p>
+<pre><code class="language-text">Automação simples
+    ↓
+regras fixas para situações previstas
+    ↓
+comportamento adaptativo
+    ↓
+ajuste diante de dados, contexto ou experiência
+    ↓
+decisão em ambientes com alternativas e incerteza
+</code></pre>
+<p>Perguntas úteis ao analisar um sistema:</p>
+<ol>
+<li>Qual problema está sendo resolvido?</li>
+<li>Quais informações entram no sistema?</li>
+<li>Que representação é utilizada?</li>
+<li>O sistema precisa escolher entre alternativas?</li>
+<li>Há aprendizagem ou adaptação?</li>
+<li>Existe uma medida de desempenho?</li>
+<li>Quais limites de operação foram assumidos?</li>
+</ol>
+<h2 id="5-desempenho-nao-e-compreensao-geral">5. Desempenho não é compreensão geral</h2>
+<p>Um sistema pode apresentar ótimo desempenho em uma tarefa e ainda:</p>
+<ul>
+<li>falhar quando o contexto muda;</li>
+<li>depender de dados ou instruções específicas;</li>
+<li>não transferir conhecimento para outra tarefa;</li>
+<li>produzir respostas plausíveis, mas incorretas;</li>
+<li>não possuir autonomia para agir no ambiente;</li>
+<li>não ter acesso às informações necessárias para uma decisão.</li>
+</ul>
+<blockquote>
+<p><strong>Regra prática:</strong> avalie a capacidade demonstrada e o contexto em que ela foi medida. Evite transformar desempenho específico em afirmações gerais sobre inteligência.</p>
+</blockquote>
+<h2 id="6-como-analisar-uma-aplicacao-de-ia">6. Como analisar uma aplicação de IA</h2>
+<p>Use este pequeno roteiro:</p>
+<pre><code class="language-mermaid">flowchart TD
+    A[Aplicação] --&gt; B[Qual é o problema?]
+    B --&gt; C[Entradas e percepções]
+    C --&gt; D[Representação e processamento]
+    D --&gt; E[Decisão ou saída]
+    E --&gt; F[Critério de desempenho]
+    F --&gt; G[Limitações e riscos]
+</code></pre>
+<h3 id="exemplo-de-categorias-para-classificacao">Exemplo de categorias para classificação</h3>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Pergunta de revisão</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Problema</td>
+<td>O que precisa ser resolvido?</td>
+</tr>
+<tr>
+<td>Entrada</td>
+<td>O que o sistema observa ou recebe?</td>
+</tr>
+<tr>
+<td>Saída</td>
+<td>O que ele produz ou executa?</td>
+</tr>
+<tr>
+<td>Capacidade central</td>
+<td>Percepção, busca, raciocínio, aprendizagem, geração ou recomendação?</td>
+</tr>
+<tr>
+<td>Perspectiva</td>
+<td>Humana ou racional? Pensamento ou ação?</td>
+</tr>
+<tr>
+<td>Limitação</td>
+<td>Em que situação a capacidade deixa de ser confiável?</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-erros-conceituais-frequentes">7. Erros conceituais frequentes</h2>
+<blockquote>
+<p>⚠️ <strong>"IA é qualquer programa complexo."</strong> Complexidade de código não define inteligência.</p>
+<p>⚠️ <strong>"IA é apenas aprendizado de máquina."</strong> Aprendizado é uma parte da área, não a área inteira.</p>
+<p>⚠️ <strong>"Se parece humano, pensa como humano."</strong> Sem evidência sobre o processo interno, essa conclusão não é válida.</p>
+<p>⚠️ <strong>"Se acertou muito, entende o problema de forma geral."</strong> Desempenho em uma tarefa não implica generalização irrestrita.</p>
+<p>⚠️ <strong>"Racionalidade significa sempre acertar."</strong> A decisão racional depende das informações disponíveis e do critério de desempenho.</p>
+</blockquote>
+<h2 id="8-ponte-para-a-aula-02">8. Ponte para a Aula 02</h2>
+<p>A perspectiva <strong>agir racionalmente</strong> leva diretamente ao conceito de agente.</p>
+<pre><code class="language-mermaid">flowchart LR
+    IA[IA] --&gt; R[Agir racionalmente]
+    R --&gt; AG[Agente]
+    AG --&gt; P[Percebe o ambiente]
+    AG --&gt; D[Decide]
+    AG --&gt; A[Age]
+    P --&gt; D --&gt; A
+</code></pre>
+<p>Na próxima aula, a pergunta deixa de ser apenas <strong>"o que é inteligência?"</strong> e passa a ser:</p>
+<blockquote>
+<p><strong>Como descrever um sistema que percebe um ambiente e escolhe ações para atingir objetivos?</strong></p>
+</blockquote>
+<h2 id="revisao-de-1-minuto">Revisão de 1 minuto</h2>
+<pre><code class="language-text">IA
+├── pode ser definida por referência ao humano ou à racionalidade
+├── pode enfatizar pensamento ou ação
+├── reúne capacidades como percepção, representação, raciocínio e aprendizagem
+├── pode usar representações simbólicas, sub-simbólicas ou híbridas
+├── deve ser avaliada no contexto de uma tarefa e de uma medida de desempenho
+└── prepara o conceito de agente racional
+</code></pre>
+<h2 id="checklist">Checklist</h2>
+<ul>
+<li>[ ] Diferencio as quatro perspectivas clássicas.</li>
+<li>[ ] Consigo explicar por que IA não é sinônimo de aprendizado de máquina.</li>
+<li>[ ] Consigo distinguir comportamento observado de processo interno.</li>
+<li>[ ] Consigo analisar uma aplicação por problema, entrada, saída e desempenho.</li>
+<li>[ ] Consigo explicar por que desempenho específico não implica inteligência geral.</li>
+<li>[ ] Consigo relacionar racionalidade à próxima aula sobre agentes.</li>
+</ul>
+<p><strong>Próximo passo:</strong> faça o <a href="../../estudos-guiados/01-introducao/">Estudo Guiado 01</a> e depois retorne aos slides para revisar os pontos em que sua explicação ainda estiver imprecisa.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/tiagofga/EC-IA" class="fa fa-code-fork" style="color: #fcfcfc"> tiagofga/EC-IA</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+      <script src="../../assets/mermaid-init.js"></script>
+      <script src="../../assets/downloads.js"></script>
+      <script src="../../assets/vercel-analytics.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

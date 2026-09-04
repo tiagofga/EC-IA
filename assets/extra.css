@@ -1,0 +1,54 @@
+/* Usa melhor a largura disponível no tema Read the Docs. */
+.wy-nav-content {
+  max-width: 1200px;
+}
+
+/* Mantém boa legibilidade em telas largas. */
+.rst-content p,
+.rst-content li {
+  line-height: 1.65;
+}
+
+.rst-content table.docutils {
+  width: 100%;
+}
+
+.rst-content pre {
+  overflow-x: auto;
+}
+
+/* Notas de aula: diagramas e blocos de revisão. */
+.rst-content .mermaid {
+  margin: 1.5rem 0 2rem;
+  padding: 1rem;
+  overflow-x: auto;
+  text-align: center;
+  border: 1px solid #e1e4e5;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.rst-content blockquote {
+  margin: 1.25rem 0;
+  padding: 0.9rem 1rem;
+  border-left: 4px solid #2980b9;
+  background: #f4f8fb;
+}
+
+.rst-content blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.rst-content table.docutils th {
+  vertical-align: top;
+}
+
+.rst-content code {
+  word-break: normal;
+}
+
+@media (min-width: 1400px) {
+  .wy-nav-content {
+    max-width: 1380px;
+  }
+}

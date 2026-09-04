@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://tiagofga.github.io/EC-IA/pseudocodigos/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Pseudocódigos - EC-IA</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../assets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Pseudoc\u00f3digos";
+        var mkdocs_page_input_path = "pseudocodigos/index.md";
+        var mkdocs_page_url = "/EC-IA/pseudocodigos/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> EC-IA
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Início</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../planos/">Plano didático</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../aulas/">Aulas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../atividades/">Atividades</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../trabalhos/">Trabalhos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../estudos-guiados/">Estudos guiados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../notas/">Notas visuais</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Pseudocódigos</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#aula-02-agentes-inteligentes">Aula 02 - Agentes Inteligentes</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#agente-baseado-em-tabela">Agente baseado em tabela</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#agente-reativo-simples">Agente reativo simples</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#agente-reativo-baseado-em-modelo">Agente reativo baseado em modelo</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#o-que-nao-foi-convertido-em-pseudocodigo">O que não foi convertido em pseudocódigo</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#aula-03-representacao-do-conhecimento-e-solucao-de-problemas">Aula 03 - Representação do Conhecimento e Solução de Problemas</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#aula-04-estrategias-de-busca">Aula 04 - Estratégias de Busca</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#comparacao-rapida">Comparação rápida</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#bfs-busca-em-largura">BFS - Busca em Largura</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#dfs-busca-em-profundidade">DFS - Busca em Profundidade</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ucs-busca-de-custo-uniforme">UCS - Busca de Custo Uniforme</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#greedy-search-busca-gulosa">Greedy Search - Busca Gulosa</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#a">A*</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#beam-search">Beam Search</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#hill-climbing">Hill Climbing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#simulated-annealing">Simulated Annealing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#algoritmo-genetico-ag">Algoritmo Genético - AG</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#como-estudar-esta-secao">Como estudar esta seção</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../visualizacoes/">Visualizações</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://github.com/tiagofga/EC-IA">Repositório no GitHub</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">EC-IA</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Pseudocódigos</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/tiagofga/EC-IA/edit/master/docs/pseudocodigos/index.md">Edit on tiagofga/EC-IA</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="pseudocodigos">Pseudocódigos</h1>
+<p>Esta seção reúne versões <strong>conceituais</strong> dos pseudocódigos apresentados nas aulas e dos algoritmos estudados em Busca. O objetivo é ajudar na leitura do fluxo de decisão de cada método sem fornecer uma implementação pronta em uma linguagem de programação.</p>
+<blockquote>
+<p>Use os pseudocódigos em conjunto com os slides, os estudos guiados e, quando disponível, as visualizações interativas.</p>
+</blockquote>
+<h2 id="aula-02-agentes-inteligentes">Aula 02 - Agentes Inteligentes</h2>
+<p>Nos slides da Aula 02 aparecem três estruturas que efetivamente podem ser representadas como pseudocódigo. Os demais tipos de agentes são apresentados como arquiteturas conceituais.</p>
+<h3 id="agente-baseado-em-tabela">Agente baseado em tabela</h3>
+<pre><code class="language-text">receber uma nova percepção
+adicionar a percepção à sequência perceptiva
+consultar na tabela a ação correspondente à sequência perceptiva
+retornar a ação encontrada
+</code></pre>
+<p><strong>Ideia central:</strong> a função do agente é representada por uma tabela que associa sequências perceptivas a ações. A abordagem é simples, mas não escala para ambientes grandes.</p>
+<h3 id="agente-reativo-simples">Agente reativo simples</h3>
+<pre><code class="language-text">receber a percepção atual
+interpretar a percepção como um estado
+selecionar a regra condição-ação compatível com o estado
+retornar a ação indicada pela regra
+</code></pre>
+<p><strong>Ideia central:</strong> a decisão depende apenas da percepção atual. Não existe memória explícita do passado.</p>
+<h3 id="agente-reativo-baseado-em-modelo">Agente reativo baseado em modelo</h3>
+<pre><code class="language-text">receber a percepção atual
+atualizar o estado interno usando:
+    estado interno anterior
+    percepção atual
+    modelo de evolução do ambiente
+    informação sobre a ação anterior
+
+selecionar a regra condição-ação compatível com o estado interno
+retornar a ação indicada pela regra
+</code></pre>
+<p><strong>Ideia central:</strong> o agente mantém um estado interno para representar aspectos do ambiente que não são diretamente observáveis na percepção corrente.</p>
+<h3 id="o-que-nao-foi-convertido-em-pseudocodigo">O que não foi convertido em pseudocódigo</h3>
+<p>A Aula 02 também apresenta:</p>
+<ul>
+<li>agente orientado por metas;</li>
+<li>agente orientado por utilidade;</li>
+<li>agente de aprendizagem.</li>
+</ul>
+<p>Nos slides, esses modelos aparecem como <strong>diagramas de arquitetura</strong>, e não como pseudocódigos. Por isso, esta seção preserva a forma original do conteúdo e não cria algoritmos que não foram apresentados em aula.</p>
+<h2 id="aula-03-representacao-do-conhecimento-e-solucao-de-problemas">Aula 03 - Representação do Conhecimento e Solução de Problemas</h2>
+<p>A Aula 03 introduz a mecânica necessária para compreender os algoritmos de busca, mas não apresenta uma estratégia específica em pseudocódigo. Os principais elementos são:</p>
+<ul>
+<li>estado inicial, ações, modelo de transição, teste de meta e custo;</li>
+<li>árvore de busca e espaço de estados;</li>
+<li>estrutura de um nó: <code>STATE</code>, <code>PARENT</code>, <code>ACTION</code> e <code>PATH-COST</code>;</li>
+<li>operações de fronteira: <code>IS-EMPTY</code>, <code>POP</code> e <code>TOP</code>;</li>
+<li>fronteiras FIFO, LIFO e por prioridade;</li>
+<li>controle de estados explorados para evitar caminhos redundantes e laços.</li>
+</ul>
+<p>Esses elementos formam a base estrutural usada pelos algoritmos da Aula 04.</p>
+<h2 id="aula-04-estrategias-de-busca">Aula 04 - Estratégias de Busca</h2>
+<h3 id="comparacao-rapida">Comparação rápida</h3>
+<table>
+<thead>
+<tr>
+<th>Família</th>
+<th>Método</th>
+<th>Critério principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Busca não informada</td>
+<td>BFS</td>
+<td>menor profundidade / FIFO</td>
+</tr>
+<tr>
+<td>Busca não informada</td>
+<td>DFS</td>
+<td>maior profundidade / LIFO</td>
+</tr>
+<tr>
+<td>Busca não informada</td>
+<td>UCS</td>
+<td>menor custo acumulado <code>g(n)</code></td>
+</tr>
+<tr>
+<td>Busca informada</td>
+<td>Greedy Search</td>
+<td>menor heurística <code>h(n)</code></td>
+</tr>
+<tr>
+<td>Busca informada</td>
+<td>A*</td>
+<td>menor <code>f(n) = g(n) + h(n)</code></td>
+</tr>
+<tr>
+<td>Busca informada</td>
+<td>Beam Search</td>
+<td>mantém os <code>k</code> melhores candidatos por nível</td>
+</tr>
+<tr>
+<td>Busca local</td>
+<td>Hill Climbing</td>
+<td>move para o melhor vizinho que melhora a avaliação</td>
+</tr>
+<tr>
+<td>Busca local</td>
+<td>Simulated Annealing</td>
+<td>pode aceitar pioras conforme a temperatura</td>
+</tr>
+<tr>
+<td>Busca local/evolucionária</td>
+<td>Algoritmo Genético</td>
+<td>evolui uma população por seleção, cruzamento e mutação</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bfs-busca-em-largura">BFS - Busca em Largura</h3>
+<pre><code class="language-text">inicializar a fronteira com o estado inicial em uma fila FIFO
+marcar nenhum estado como explorado
+
+enquanto a fronteira não estiver vazia:
+    remover o primeiro nó da fila
+
+    se o nó satisfaz o objetivo:
+        retornar a solução
+
+    se o estado ainda não foi explorado:
+        marcar o estado como explorado
+        gerar os sucessores relevantes
+        inserir os novos nós no final da fila
+
+retornar falha
+</code></pre>
+<p><strong>Observe:</strong> BFS prioriza a profundidade, não o custo do caminho.</p>
+<h3 id="dfs-busca-em-profundidade">DFS - Busca em Profundidade</h3>
+<pre><code class="language-text">inicializar a fronteira com o estado inicial em uma pilha LIFO
+marcar nenhum estado como explorado
+
+enquanto a fronteira não estiver vazia:
+    remover o nó do topo da pilha
+
+    se o nó satisfaz o objetivo:
+        retornar a solução
+
+    se o estado ainda não foi explorado:
+        marcar o estado como explorado
+        gerar os sucessores
+        inserir os sucessores na pilha segundo a ordem definida
+
+retornar falha
+</code></pre>
+<p><strong>Observe:</strong> a ordem de geração dos sucessores pode alterar profundamente o percurso da DFS.</p>
+<h3 id="ucs-busca-de-custo-uniforme">UCS - Busca de Custo Uniforme</h3>
+<pre><code class="language-text">inicializar a fronteira como fila de prioridade
+atribuir g(inicial) = 0
+
+enquanto a fronteira não estiver vazia:
+    remover o nó com menor g(n)
+
+    se o nó satisfaz o objetivo:
+        retornar a solução
+
+    para cada sucessor:
+        calcular o novo custo acumulado
+
+        se este caminho for melhor que o conhecido:
+            atualizar o custo e a alternativa na fronteira
+
+retornar falha
+</code></pre>
+<p><strong>Observe:</strong> UCS prioriza o custo já pago no caminho.</p>
+<h3 id="greedy-search-busca-gulosa">Greedy Search - Busca Gulosa</h3>
+<pre><code class="language-text">inicializar a fronteira como fila de prioridade
+ordenar os nós pelo menor h(n)
+
+enquanto a fronteira não estiver vazia:
+    remover o nó com menor h(n)
+
+    se o nó satisfaz o objetivo:
+        retornar a solução
+
+    gerar os sucessores relevantes
+    calcular h(n) para os sucessores
+    inserir os sucessores na fronteira
+
+retornar falha
+</code></pre>
+<p><strong>Observe:</strong> a Busca Gulosa considera a estimativa até a meta, mas ignora diretamente o custo já acumulado.</p>
+<h3 id="a">A*</h3>
+<pre><code class="language-text">inicializar a fronteira como fila de prioridade
+atribuir g(inicial) = 0
+calcular f(inicial) = g(inicial) + h(inicial)
+
+enquanto a fronteira não estiver vazia:
+    remover o nó com menor f(n)
+
+    se o nó satisfaz o objetivo:
+        retornar a solução
+
+    para cada sucessor:
+        calcular novo g(n)
+        calcular f(n) = g(n) + h(n)
+
+        se a nova alternativa for melhor:
+            atualizar o nó na fronteira
+
+retornar falha
+</code></pre>
+<p><strong>Observe:</strong> A* combina custo acumulado e estimativa heurística.</p>
+<h3 id="beam-search">Beam Search</h3>
+<pre><code class="language-text">inicializar o feixe com o estado inicial
+
+enquanto o feixe não estiver vazio:
+    se algum estado do feixe satisfaz o objetivo:
+        retornar a solução
+
+    gerar os sucessores de todos os estados do feixe
+    avaliar os sucessores pela heurística
+    ordenar os candidatos
+    manter apenas os k melhores candidatos
+    descartar os demais
+
+retornar falha
+</code></pre>
+<p><strong>Observe:</strong> limitar o feixe reduz o uso de memória, mas pode descartar caminhos necessários para encontrar a melhor solução.</p>
+<h3 id="hill-climbing">Hill Climbing</h3>
+<pre><code class="language-text">escolher um estado inicial
+avaliar o estado atual
+
+repetir:
+    gerar os vizinhos do estado atual
+    selecionar o melhor vizinho
+
+    se o melhor vizinho melhora o estado atual:
+        mover para o melhor vizinho
+    caso contrário:
+        retornar o estado atual
+</code></pre>
+<p><strong>Observe:</strong> o método pode parar em ótimos locais ou platôs.</p>
+<h3 id="simulated-annealing">Simulated Annealing</h3>
+<pre><code class="language-text">escolher um estado inicial
+inicializar a temperatura T
+
+repetir enquanto T for suficiente:
+    escolher um vizinho do estado atual
+    calcular a variação de qualidade Δ
+
+    se o vizinho for melhor:
+        aceitar o vizinho
+    caso contrário:
+        calcular a probabilidade de aceitação
+        aceitar a piora com essa probabilidade
+
+    reduzir a temperatura T
+
+retornar o melhor estado encontrado
+</code></pre>
+<p><strong>Observe:</strong> aceitar algumas pioras permite escapar de regiões locais no início da busca.</p>
+<h3 id="algoritmo-genetico-ag">Algoritmo Genético - AG</h3>
+<pre><code class="language-text">criar uma população inicial de indivíduos
+avaliar a população
+
+repetir até atingir o critério de parada:
+    selecionar indivíduos para reprodução
+    aplicar cruzamento para gerar descendentes
+    aplicar mutação em alguns descendentes
+    avaliar os novos indivíduos
+    formar a próxima população
+
+retornar o melhor indivíduo encontrado
+</code></pre>
+<p><strong>Observe:</strong> o AG trabalha com uma população de soluções, não com um único estado corrente.</p>
+<h2 id="como-estudar-esta-secao">Como estudar esta seção</h2>
+<p>Para cada pseudocódigo, tente identificar:</p>
+<ol>
+<li>que informação o método mantém;</li>
+<li>como a próxima ação, nó ou estado é escolhido;</li>
+<li>que estrutura de dados aparece implicitamente;</li>
+<li>qual é o critério de parada;</li>
+<li>que informação diferencia esse método dos demais.</li>
+</ol>
+<p>Os pseudocódigos são intencionalmente independentes de linguagem de programação e não constituem soluções prontas para as atividades da disciplina.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../notas/" class="btn btn-neutral float-left" title="Notas visuais"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../visualizacoes/" class="btn btn-neutral float-right" title="Visualizações">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/tiagofga/EC-IA" class="fa fa-code-fork" style="color: #fcfcfc"> tiagofga/EC-IA</a>
+        </span>
+    
+    
+      <span><a href="../notas/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../visualizacoes/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+      <script src="../assets/mermaid-init.js"></script>
+      <script src="../assets/downloads.js"></script>
+      <script src="../assets/vercel-analytics.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

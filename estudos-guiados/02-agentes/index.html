@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://tiagofga.github.io/EC-IA/estudos-guiados/02-agentes/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Estudo Guiado 02 - Agentes Inteligentes - EC-IA</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Estudo Guiado 02 - Agentes Inteligentes";
+        var mkdocs_page_input_path = "estudos-guiados/02-agentes/README.md";
+        var mkdocs_page_url = "/EC-IA/estudos-guiados/02-agentes/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> EC-IA
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Início</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../planos/">Plano didático</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../aulas/">Aulas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../atividades/">Atividades</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../trabalhos/">Trabalhos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Estudos guiados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../notas/">Notas visuais</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../pseudocodigos/">Pseudocódigos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../visualizacoes/">Visualizações</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://github.com/tiagofga/EC-IA">Repositório no GitHub</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">EC-IA</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Estudo Guiado 02 - Agentes Inteligentes</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/tiagofga/EC-IA/edit/master/docs/estudos-guiados/02-agentes/README.md">Edit on tiagofga/EC-IA</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="estudo-guiado-02-agentes-inteligentes">Estudo Guiado 02 - Agentes Inteligentes</h1>
+<h2 id="objetivo">Objetivo</h2>
+<p>Ao concluir este estudo, você deve ser capaz de modelar um sistema como agente, definir sua tarefa por meio de PEAS, classificar o ambiente e justificar a arquitetura de agente mais adequada ao problema.</p>
+<h2 id="1-retomada">1. Retomada</h2>
+<p>Antes de iniciar, responda:</p>
+<ul>
+<li>o que significa agir racionalmente;</li>
+<li>por que uma ação pode ser racional mesmo quando o resultado final não é o melhor possível;</li>
+<li>qual é a diferença entre ter informação completa e agir da melhor forma com a informação disponível.</li>
+</ul>
+<p>Essas respostas conectam a Aula 01 ao conceito de agente racional.</p>
+<h2 id="2-vocabulario-fundamental">2. Vocabulário fundamental</h2>
+<p>Certifique-se de distinguir:</p>
+<ul>
+<li>agente;</li>
+<li>ambiente;</li>
+<li>percepção;</li>
+<li>sequência perceptiva;</li>
+<li>sensor;</li>
+<li>atuador;</li>
+<li>ação;</li>
+<li>função do agente;</li>
+<li>programa do agente;</li>
+<li>medida de desempenho;</li>
+<li>racionalidade.</li>
+</ul>
+<p>Não trate sensor e percepção como sinônimos, nem atuador e ação como a mesma coisa.</p>
+<h2 id="3-modelo-percepcao-acao">3. Modelo percepção-ação</h2>
+<p>Escolha dois exemplos diferentes, como um robô móvel e um agente de software. Para cada um, complete:</p>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Exemplo 1</th>
+<th>Exemplo 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ambiente</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Sensores/fontes de percepção</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Percepções</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Ações</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Atuadores/meios de atuação</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Medida de desempenho</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Depois responda: o que mudaria se o agente tivesse acesso apenas parcial ao ambiente?</p>
+<h2 id="4-peas">4. PEAS</h2>
+<p>PEAS organiza a especificação da tarefa de um agente:</p>
+<ul>
+<li><strong>P</strong> - Performance measure, ou medida de desempenho;</li>
+<li><strong>E</strong> - Environment, ou ambiente;</li>
+<li><strong>A</strong> - Actuators, ou atuadores;</li>
+<li><strong>S</strong> - Sensors, ou sensores.</li>
+</ul>
+<p>Monte um PEAS completo para um dos seguintes sistemas:</p>
+<ul>
+<li>veículo autônomo;</li>
+<li>agente de recomendação acadêmica;</li>
+<li>sistema de monitoramento de infraestrutura;</li>
+<li>robô de entrega.</li>
+</ul>
+<p>Não use apenas palavras genéricas. A medida de desempenho deve permitir discutir o que significa uma ação boa ou ruim naquele contexto.</p>
+<h2 id="5-racionalidade-nao-e-onisciencia">5. Racionalidade não é onisciência</h2>
+<p>Considere um agente que toma uma decisão com base em informações incompletas e, depois, descobre que outra ação teria produzido resultado melhor.</p>
+<p>Responda:</p>
+<ol>
+<li>Isso prova que a decisão inicial foi irracional?</li>
+<li>Que informação estava disponível no momento da decisão?</li>
+<li>Qual era a medida de desempenho?</li>
+<li>A ação escolhida maximizava o desempenho esperado com base no que era conhecido?</li>
+</ol>
+<p>A racionalidade deve ser analisada no momento da decisão, não apenas depois de observar o resultado.</p>
+<h2 id="6-natureza-do-ambiente">6. Natureza do ambiente</h2>
+<p>Para um sistema escolhido por você, classifique o ambiente segundo os pares estudados na aula, justificando cada classificação:</p>
+<ul>
+<li>completamente observável ou parcialmente observável;</li>
+<li>determinístico ou estocástico;</li>
+<li>episódico ou sequencial;</li>
+<li>estático ou dinâmico;</li>
+<li>discreto ou contínuo;</li>
+<li>agente único ou multiagente.</li>
+</ul>
+<p>Em seguida, altere uma hipótese do problema e verifique se alguma classificação muda.</p>
+<h2 id="7-estruturas-de-agentes">7. Estruturas de agentes</h2>
+<p>Compare as seguintes arquiteturas:</p>
+<ul>
+<li>agente reativo simples;</li>
+<li>agente reativo baseado em modelo;</li>
+<li>agente orientado por metas;</li>
+<li>agente orientado por utilidade;</li>
+<li>agente com aprendizagem.</li>
+</ul>
+<p>Para cada uma, responda:</p>
+<ul>
+<li>que informação precisa ser mantida;</li>
+<li>como a ação é escolhida;</li>
+<li>que limitação da arquitetura anterior ela procura superar;</li>
+<li>em que tipo de ambiente ela seria adequada.</li>
+</ul>
+<h2 id="8-discussao-chatgpt-e-um-agente">8. Discussão: ChatGPT é um agente?</h2>
+<p>Não responda apenas "sim" ou "não". Analise dois cenários:</p>
+<h3 id="cenario-a">Cenário A</h3>
+<p>Um modelo recebe uma mensagem e produz uma resposta, sem executar ações externas.</p>
+<h3 id="cenario-b">Cenário B</h3>
+<p>Um sistema usa um modelo para observar informações, decidir passos, chamar ferramentas, verificar resultados e continuar até atingir uma meta.</p>
+<p>Para os dois cenários, identifique:</p>
+<ul>
+<li>ambiente;</li>
+<li>percepções;</li>
+<li>ações;</li>
+<li>grau de autonomia;</li>
+<li>medida de desempenho ou objetivo;</li>
+<li>se a descrição como agente é adequada.</li>
+</ul>
+<h2 id="9-ponte-para-a-aula-03">9. Ponte para a Aula 03</h2>
+<p>Um agente orientado por metas precisa saber algo sobre o mundo e sobre as consequências de suas ações.</p>
+<p>Explique por que isso conduz naturalmente às perguntas:</p>
+<ul>
+<li>como representar estados do ambiente?</li>
+<li>como representar ações e transições?</li>
+<li>como transformar uma meta em um problema computacional?</li>
+</ul>
+<h2 id="autoavaliacao">Autoavaliação</h2>
+<ul>
+<li>[ ] Consigo definir agente sem depender de um exemplo específico.</li>
+<li>[ ] Consigo distinguir percepção, sensor, ação e atuador.</li>
+<li>[ ] Consigo montar um PEAS coerente.</li>
+<li>[ ] Consigo diferenciar racionalidade de onisciência.</li>
+<li>[ ] Consigo classificar um ambiente e justificar cada propriedade.</li>
+<li>[ ] Consigo comparar as principais estruturas de agentes.</li>
+<li>[ ] Consigo explicar a passagem de agentes orientados por metas para formulação de problemas.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/tiagofga/EC-IA" class="fa fa-code-fork" style="color: #fcfcfc"> tiagofga/EC-IA</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+      <script src="../../assets/mermaid-init.js"></script>
+      <script src="../../assets/downloads.js"></script>
+      <script src="../../assets/vercel-analytics.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

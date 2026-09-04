@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://tiagofga.github.io/EC-IA/notas/03-conhecimento/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Aula 03 - Representação do Conhecimento e Solução de Problemas - EC-IA</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Aula 03 - Representa\u00e7\u00e3o do Conhecimento e Solu\u00e7\u00e3o de Problemas";
+        var mkdocs_page_input_path = "notas/03-conhecimento/README.md";
+        var mkdocs_page_url = "/EC-IA/notas/03-conhecimento/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> EC-IA
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Início</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../planos/">Plano didático</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../aulas/">Aulas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../atividades/">Atividades</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../trabalhos/">Trabalhos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../estudos-guiados/">Estudos guiados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Notas visuais</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../pseudocodigos/">Pseudocódigos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../visualizacoes/">Visualizações</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://github.com/tiagofga/EC-IA">Repositório no GitHub</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">EC-IA</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Aula 03 - Representação do Conhecimento e Solução de Problemas</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/tiagofga/EC-IA/edit/master/docs/notas/03-conhecimento/README.md">Edit on tiagofga/EC-IA</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="aula-03-representacao-do-conhecimento-e-solucao-de-problemas">Aula 03 - Representação do Conhecimento e Solução de Problemas</h1>
+<blockquote>
+<p><strong>Guia visual de revisão.</strong> Esta nota organiza a passagem entre agentes orientados por metas e problemas de busca: representação, abstração, estados, ações, transições, meta, espaço de estados, árvore de busca e fronteira.</p>
+</blockquote>
+<h2 id="visao-em-30-segundos">Visão em 30 segundos</h2>
+<table>
+<thead>
+<tr>
+<th>Pergunta</th>
+<th>Ideia-chave</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Por que representar conhecimento?</td>
+<td>Para transformar aspectos relevantes do mundo em estruturas que possam ser consultadas, relacionadas e manipuladas computacionalmente.</td>
+</tr>
+<tr>
+<td>O que é abstração?</td>
+<td>Escolher quais detalhes do domínio são relevantes para o problema e quais podem ser omitidos.</td>
+</tr>
+<tr>
+<td>O que compõe um problema de busca?</td>
+<td>Estado inicial, estados, ações, transições, teste de objetivo e, quando aplicável, custos.</td>
+</tr>
+<tr>
+<td>Estado e nó são a mesma coisa?</td>
+<td>Não. Estado pertence ao problema; nó pertence ao processo de busca e pode guardar pai, ação, profundidade e custo.</td>
+</tr>
+<tr>
+<td>Qual conceito prepara a Aula 04?</td>
+<td>A <strong>fronteira</strong>, porque diferentes estratégias escolhem de forma diferente qual nó expandir em seguida.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mapa-mental-da-aula">Mapa mental da aula</h2>
+<pre><code class="language-mermaid">mindmap
+  root((Conhecimento e Problemas))
+    Representação
+      Dado
+      Informação
+      Conhecimento
+      Relações
+    Abstração
+      O que representar
+      O que omitir
+    Formulação
+      Estado inicial
+      Estados
+      Ações
+      Transições
+      Meta
+      Custos
+    Estruturas
+      Espaço de estados
+      Nós
+      Árvore de busca
+      Fronteira
+    Próximo passo
+      Estratégia de expansão
+      Busca
+</code></pre>
+<h2 id="1-dado-informacao-conhecimento-e-representacao">1. Dado, informação, conhecimento e representação</h2>
+<p>Uma forma útil de organizar os conceitos é pensar em níveis de interpretação.</p>
+<pre><code class="language-mermaid">flowchart LR
+    D[Dado] --&gt; I[Informação]
+    I --&gt; K[Conhecimento]
+    K --&gt; R[Representação computacional]
+    R --&gt; DEC[Inferência ou decisão]
+</code></pre>
+<h3 id="exemplo-conceitual">Exemplo conceitual</h3>
+<pre><code class="language-text">42
+↓
+&quot;temperatura atual = 42 °C&quot;
+↓
+&quot;essa temperatura está acima da faixa operacional segura&quot;
+↓
+regra, relação, atributo, vetor ou outra estrutura computável
+↓
+acionar uma decisão
+</code></pre>
+<blockquote>
+<p><strong>Ponto central:</strong> a representação não é uma cópia neutra do mundo. Ela é uma escolha de projeto.</p>
+</blockquote>
+<h2 id="2-representar-e-escolher">2. Representar é escolher</h2>
+<p>Qualquer representação enfatiza alguns aspectos e omite outros.</p>
+<pre><code class="language-mermaid">flowchart TD
+    M[Mundo real] --&gt; F[Filtro de relevância]
+    F --&gt; R[Representação]
+    R --&gt; P[Problema computacional]
+</code></pre>
+<p>Perguntas para avaliar uma representação:</p>
+<ul>
+<li>quais objetos precisam existir na representação?</li>
+<li>quais propriedades desses objetos importam?</li>
+<li>quais relações precisam ser preservadas?</li>
+<li>que detalhes podem ser ignorados sem comprometer a meta?</li>
+<li>a representação permite calcular sucessores e reconhecer a meta?</li>
+</ul>
+<h2 id="3-abstracao">3. Abstração</h2>
+<p>Considere um problema de navegação entre prédios.</p>
+<h3 id="representacao-detalhada">Representação detalhada</h3>
+<pre><code class="language-text">posição contínua + orientação + velocidade + obstáculos + geometria completa
+</code></pre>
+<h3 id="representacao-abstrata">Representação abstrata</h3>
+<pre><code class="language-text">Prédio A ── Prédio B ── Prédio C
+   │            │
+Prédio D ── Prédio E
+</code></pre>
+<p>A segunda representação pode ser suficiente se o objetivo for apenas decidir uma sequência de prédios, mas pode ser insuficiente se o problema exigir trajetória física precisa.</p>
+<table>
+<thead>
+<tr>
+<th>Mais detalhe</th>
+<th>Mais abstração</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>maior fidelidade</td>
+<td>menor espaço de representação</td>
+</tr>
+<tr>
+<td>maior custo de processamento</td>
+<td>foco no que importa para a meta</td>
+</tr>
+<tr>
+<td>mais variáveis</td>
+<td>menos variáveis</td>
+</tr>
+<tr>
+<td>pode capturar restrições finas</td>
+<td>pode ocultar restrições importantes</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Boa abstração:</strong> elimina detalhes irrelevantes sem eliminar informações necessárias para resolver o problema.</p>
+</blockquote>
+<h2 id="4-formulacao-de-um-problema">4. Formulação de um problema</h2>
+<p>Antes de escolher qualquer algoritmo, formule corretamente o problema.</p>
+<pre><code class="language-mermaid">flowchart LR
+    EI[Estado inicial] --&gt; A[Ações]
+    A --&gt; T[Modelo de transição]
+    T --&gt; E[Novos estados]
+    E --&gt; G{Meta atingida?}
+    G --&gt;|não| A
+    G --&gt;|sim| S[Solução]
+</code></pre>
+<h3 id="componentes-fundamentais">Componentes fundamentais</h3>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Pergunta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Estado inicial</strong></td>
+<td>de onde o problema começa?</td>
+</tr>
+<tr>
+<td><strong>Estados</strong></td>
+<td>como representar uma configuração possível?</td>
+</tr>
+<tr>
+<td><strong>Ações</strong></td>
+<td>o que pode ser feito em cada estado?</td>
+</tr>
+<tr>
+<td><strong>Transição / sucessor</strong></td>
+<td>qual estado resulta de uma ação?</td>
+</tr>
+<tr>
+<td><strong>Teste de objetivo</strong></td>
+<td>como reconhecer uma solução?</td>
+</tr>
+<tr>
+<td><strong>Custo de ação</strong></td>
+<td>quanto custa executar uma ação?</td>
+</tr>
+<tr>
+<td><strong>Custo de caminho</strong></td>
+<td>quanto custou a sequência completa?</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-exemplo-navegacao-em-salas">5. Exemplo: navegação em salas</h2>
+<p>Considere:</p>
+<pre><code class="language-text">Sala A ── Sala B ── Sala C
+  │          │
+Sala D ── Sala E
+</code></pre>
+<p>Uma formulação possível:</p>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Representação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>estado</td>
+<td>sala atual</td>
+</tr>
+<tr>
+<td>estado inicial</td>
+<td>Sala A</td>
+</tr>
+<tr>
+<td>ações</td>
+<td>mover para uma sala adjacente</td>
+</tr>
+<tr>
+<td>transição</td>
+<td>posição passa para a sala escolhida</td>
+</tr>
+<tr>
+<td>objetivo</td>
+<td>chegar à Sala C</td>
+</tr>
+<tr>
+<td>custo</td>
+<td>1 por movimento, ou outro valor definido pelo problema</td>
+</tr>
+</tbody>
+</table>
+<p>Observe que <strong>a formulação não escolhe ainda BFS, DFS ou A</strong>*. Ela apenas descreve o problema.</p>
+<h2 id="6-estado-nao-e-no">6. Estado não é nó</h2>
+<p>Essa distinção é essencial.</p>
+<pre><code class="language-mermaid">flowchart TB
+    S[Estado: Sala E]
+    N1[Nó 1&lt;br/&gt;pai=A, profundidade=2, custo=2] --&gt; S
+    N2[Nó 2&lt;br/&gt;pai=B, profundidade=4, custo=5] --&gt; S
+</code></pre>
+<p>O mesmo estado pode ser alcançado por caminhos diferentes.</p>
+<h3 id="estado">Estado</h3>
+<p>Representa uma configuração do problema.</p>
+<h3 id="no">Nó</h3>
+<p>É uma estrutura usada pelo algoritmo de busca e pode armazenar:</p>
+<ul>
+<li>estado;</li>
+<li>nó pai;</li>
+<li>ação usada para chegar ali;</li>
+<li>profundidade;</li>
+<li>custo acumulado <code>g(n)</code>;</li>
+<li>outras informações necessárias à estratégia.</li>
+</ul>
+<blockquote>
+<p><strong>Erro comum:</strong> confundir "estado já existe no domínio" com "nó já foi gerado pela busca".</p>
+</blockquote>
+<h2 id="7-espaco-de-estados-x-arvore-de-busca">7. Espaço de estados x árvore de busca</h2>
+<h3 id="espaco-de-estados">Espaço de estados</h3>
+<p>Representa <strong>as configurações possíveis e suas transições</strong>.</p>
+<pre><code class="language-mermaid">flowchart LR
+    A((A)) --&gt; B((B))
+    A --&gt; D((D))
+    B --&gt; C((C))
+    B --&gt; E((E))
+    D --&gt; E
+    E --&gt; C
+</code></pre>
+<h3 id="arvore-de-busca">Árvore de busca</h3>
+<p>Representa <strong>como um algoritmo explora caminhos a partir do estado inicial</strong>.</p>
+<pre><code class="language-mermaid">flowchart TD
+    A[A] --&gt; AB[B]
+    A --&gt; AD[D]
+    AB --&gt; ABC[C]
+    AB --&gt; ABE[E]
+    AD --&gt; ADE[E]
+    ABE --&gt; ABEC[C]
+</code></pre>
+<p>O estado <code>E</code> aparece em mais de um nó porque pode ser alcançado por trajetórias diferentes.</p>
+<table>
+<thead>
+<tr>
+<th>Espaço de estados</th>
+<th>Árvore de busca</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>descreve o problema</td>
+<td>descreve a exploração</td>
+</tr>
+<tr>
+<td>estado é entidade central</td>
+<td>nó é entidade central</td>
+</tr>
+<tr>
+<td>pode conter ciclos</td>
+<td>a árvore representa caminhos gerados</td>
+</tr>
+<tr>
+<td>independente da estratégia</td>
+<td>depende da ordem e das decisões da busca</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-gerar-inserir-e-expandir">8. Gerar, inserir e expandir</h2>
+<p>Os termos precisam ser separados.</p>
+<pre><code class="language-mermaid">flowchart LR
+    N[Nó atual] --&gt; G[Gerar sucessor]
+    G --&gt; I[Inserir na fronteira]
+    I --&gt; S[Selecionar da fronteira]
+    S --&gt; E[Expandir]
+    E --&gt; G
+</code></pre>
+<ul>
+<li><strong>gerar:</strong> produzir um sucessor candidato;</li>
+<li><strong>inserir na fronteira:</strong> torná-lo disponível para futura seleção;</li>
+<li><strong>selecionar:</strong> retirar um nó conforme a estratégia;</li>
+<li><strong>expandir:</strong> executar a função sucessora sobre o nó selecionado.</li>
+</ul>
+<p>Essa distinção será importante ao comparar métricas dos algoritmos.</p>
+<h2 id="9-a-fronteira">9. A fronteira</h2>
+<p>A fronteira contém nós já gerados que ainda podem ser escolhidos para expansão.</p>
+<pre><code class="language-mermaid">flowchart TD
+    G[Nós gerados] --&gt; F[Fronteira]
+    F --&gt;|regra de seleção| N[Próximo nó]
+    N --&gt; E[Expansão]
+    E --&gt; G
+</code></pre>
+<p>A grande ideia que prepara a próxima aula é:</p>
+<blockquote>
+<p><strong>Se mudarmos apenas a regra de seleção da fronteira, mudamos a estratégia de busca.</strong></p>
+</blockquote>
+<h3 id="tres-exemplos-de-regra">Três exemplos de regra</h3>
+<table>
+<thead>
+<tr>
+<th>Regra</th>
+<th>Comportamento esperado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>primeiro que entrou</td>
+<td>prioriza nós mais antigos na fronteira</td>
+</tr>
+<tr>
+<td>último que entrou</td>
+<td>prioriza o ramo mais recentemente aprofundado</td>
+</tr>
+<tr>
+<td>menor prioridade numérica</td>
+<td>prioriza um critério como custo ou heurística</td>
+</tr>
+</tbody>
+</table>
+<h2 id="10-busca-em-arvore-e-busca-em-grafo">10. Busca em árvore e busca em grafo</h2>
+<p>Quando estados podem ser revisitados, controlar estados já conhecidos evita repetir trabalho indefinidamente.</p>
+<pre><code class="language-mermaid">flowchart LR
+    A((A)) --&gt; B((B))
+    B --&gt; C((C))
+    C --&gt; A
+</code></pre>
+<p>Sem algum controle, o ciclo <code>A → B → C → A</code> pode gerar expansões repetidas.</p>
+<p>A busca em grafo introduz mecanismos para acompanhar estados já vistos ou explorados. A forma exata desse controle depende do algoritmo e das regras adotadas.</p>
+<blockquote>
+<p><strong>Ponto de atenção:</strong> evitar repetição não significa simplesmente "ignorar tudo que já apareceu". Em estratégias baseadas em custo, um caminho melhor para um estado conhecido pode ser relevante.</p>
+</blockquote>
+<h2 id="11-da-formulacao-para-a-busca">11. Da formulação para a busca</h2>
+<p>A sequência conceitual das aulas pode ser visualizada assim:</p>
+<pre><code class="language-mermaid">flowchart LR
+    AG[Agente com meta] --&gt; REP[Representação]
+    REP --&gt; FORM[Formulação do problema]
+    FORM --&gt; ESP[Espaço de estados]
+    ESP --&gt; FRONT[Fronteira]
+    FRONT --&gt; STRAT[Estratégia de busca]
+</code></pre>
+<p>A pergunta da Aula 03 é:</p>
+<blockquote>
+<p><strong>Como representar o problema?</strong></p>
+</blockquote>
+<p>A pergunta da Aula 04 será:</p>
+<blockquote>
+<p><strong>Qual nó da fronteira deve ser expandido em seguida?</strong></p>
+</blockquote>
+<h2 id="12-erros-conceituais-frequentes">12. Erros conceituais frequentes</h2>
+<blockquote>
+<p>⚠️ <strong>"Quanto mais detalhada a representação, melhor."</strong> Detalhe desnecessário aumenta o espaço de estados e o custo de solução.</p>
+<p>⚠️ <strong>"Estado e nó são a mesma coisa."</strong> Um nó contém um estado, mas também informações sobre o caminho da busca.</p>
+<p>⚠️ <strong>"A árvore de busca é o próprio espaço de estados."</strong> A árvore é uma estrutura gerada durante a exploração.</p>
+<p>⚠️ <strong>"Escolher o algoritmo vem antes de formular o problema."</strong> Uma formulação ruim não é corrigida por um algoritmo mais sofisticado.</p>
+<p>⚠️ <strong>"Se um estado apareceu uma vez, qualquer nova ocorrência pode ser descartada."</strong> Estratégias baseadas em custo podem precisar considerar melhorias.</p>
+</blockquote>
+<h2 id="revisao-de-1-minuto">Revisão de 1 minuto</h2>
+<pre><code class="language-text">Agente com meta
+↓
+representa o domínio
+↓
+escolhe uma abstração
+↓
+formula estados, ações, transições, meta e custos
+↓
+constrói/explora um espaço de estados
+↓
+gera nós de busca
+↓
+mantém uma fronteira
+↓
+precisa decidir qual nó expandir
+</code></pre>
+<h2 id="checklist">Checklist</h2>
+<ul>
+<li>[ ] Consigo explicar por que representação é uma escolha de projeto.</li>
+<li>[ ] Consigo explicar o papel da abstração.</li>
+<li>[ ] Consigo formular um problema antes de escolher o algoritmo.</li>
+<li>[ ] Diferencio estado de nó.</li>
+<li>[ ] Diferencio espaço de estados de árvore de busca.</li>
+<li>[ ] Diferencio gerar, inserir, selecionar e expandir.</li>
+<li>[ ] Consigo explicar o papel da fronteira.</li>
+<li>[ ] Consigo explicar por que a regra de seleção da fronteira define estratégias diferentes.</li>
+</ul>
+<p><strong>Próximo passo:</strong> faça o <a href="../../estudos-guiados/03-conhecimento/">Estudo Guiado 03</a>. Quando estiver confortável com fronteira, custo e expansão, avance para as estratégias da Aula 04.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/tiagofga/EC-IA" class="fa fa-code-fork" style="color: #fcfcfc"> tiagofga/EC-IA</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+      <script src="../../assets/mermaid-init.js"></script>
+      <script src="../../assets/downloads.js"></script>
+      <script src="../../assets/vercel-analytics.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

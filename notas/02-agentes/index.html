@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://tiagofga.github.io/EC-IA/notas/02-agentes/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Aula 02 - Agentes Inteligentes - EC-IA</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Aula 02 - Agentes Inteligentes";
+        var mkdocs_page_input_path = "notas/02-agentes/README.md";
+        var mkdocs_page_url = "/EC-IA/notas/02-agentes/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> EC-IA
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Início</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../planos/">Plano didático</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../aulas/">Aulas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../atividades/">Atividades</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../trabalhos/">Trabalhos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../estudos-guiados/">Estudos guiados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Notas visuais</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../pseudocodigos/">Pseudocódigos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../visualizacoes/">Visualizações</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://github.com/tiagofga/EC-IA">Repositório no GitHub</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">EC-IA</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Aula 02 - Agentes Inteligentes</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/tiagofga/EC-IA/edit/master/docs/notas/02-agentes/README.md">Edit on tiagofga/EC-IA</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="aula-02-agentes-inteligentes">Aula 02 - Agentes Inteligentes</h1>
+<blockquote>
+<p><strong>Guia visual de revisão.</strong> Esta nota organiza os conceitos de agente, racionalidade, PEAS, propriedades do ambiente e arquiteturas de agentes. Use-a como ponte entre os slides e o Estudo Guiado 02.</p>
+</blockquote>
+<h2 id="visao-em-30-segundos">Visão em 30 segundos</h2>
+<table>
+<thead>
+<tr>
+<th>Pergunta</th>
+<th>Ideia-chave</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O que é um agente?</td>
+<td>Uma entidade que percebe um ambiente e age sobre ele.</td>
+</tr>
+<tr>
+<td>O que torna um agente racional?</td>
+<td>Escolher a ação que maximiza o desempenho esperado com base nas percepções, conhecimento e ações disponíveis.</td>
+</tr>
+<tr>
+<td>Racionalidade é onisciência?</td>
+<td>Não. Uma decisão pode ser racional mesmo quando o resultado posterior não é o melhor possível.</td>
+</tr>
+<tr>
+<td>Para que serve PEAS?</td>
+<td>Para especificar tarefa, ambiente, meios de atuação e fontes de percepção.</td>
+</tr>
+<tr>
+<td>Por que classificar o ambiente?</td>
+<td>Porque observabilidade, incerteza, dinâmica e continuidade influenciam a arquitetura do agente.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mapa-mental-da-aula">Mapa mental da aula</h2>
+<pre><code class="language-mermaid">mindmap
+  root((Agentes Inteligentes))
+    Agente
+      Percepções
+      Sensores
+      Ações
+      Atuadores
+    Racionalidade
+      Medida de desempenho
+      Informação disponível
+      Conhecimento prévio
+      Ações possíveis
+    PEAS
+      Performance
+      Environment
+      Actuators
+      Sensors
+    Ambiente
+      Observabilidade
+      Determinismo
+      Episódico ou sequencial
+      Estático ou dinâmico
+      Discreto ou contínuo
+      Único ou multiagente
+    Arquiteturas
+      Reativo simples
+      Baseado em modelo
+      Orientado por metas
+      Orientado por utilidade
+      Aprendizagem
+</code></pre>
+<h2 id="1-o-ciclo-percepcao-acao">1. O ciclo percepção-ação</h2>
+<p>A forma mais direta de visualizar um agente é como um ciclo contínuo entre ambiente, percepção, decisão e ação.</p>
+<pre><code class="language-mermaid">flowchart LR
+    ENV[Ambiente] --&gt;|percepções| SEN[Sensores]
+    SEN --&gt; AG[Agente]
+    AG --&gt; DEC[Escolha da ação]
+    DEC --&gt; ACT[Atuadores]
+    ACT --&gt;|ações| ENV
+</code></pre>
+<h3 id="termos-que-nao-sao-sinonimos">Termos que não são sinônimos</h3>
+<table>
+<thead>
+<tr>
+<th>Termo</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sensor</strong></td>
+<td>mecanismo ou fonte usada para captar informação</td>
+</tr>
+<tr>
+<td><strong>Percepção</strong></td>
+<td>informação recebida em determinado instante</td>
+</tr>
+<tr>
+<td><strong>Sequência perceptiva</strong></td>
+<td>histórico das percepções recebidas</td>
+</tr>
+<tr>
+<td><strong>Ação</strong></td>
+<td>decisão executada pelo agente</td>
+</tr>
+<tr>
+<td><strong>Atuador</strong></td>
+<td>meio utilizado para produzir a ação no ambiente</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Ponto de atenção:</strong> sensor não é percepção, assim como atuador não é ação.</p>
+</blockquote>
+<h2 id="2-funcao-do-agente-e-programa-do-agente">2. Função do agente e programa do agente</h2>
+<p>A <strong>função do agente</strong> descreve conceitualmente o mapeamento entre sequência perceptiva e ação.</p>
+<pre><code class="language-text">sequência de percepções → ação
+</code></pre>
+<p>O <strong>programa do agente</strong> é a implementação concreta dessa função em uma arquitetura computacional.</p>
+<pre><code class="language-mermaid">flowchart LR
+    P[Sequência perceptiva] --&gt; F[Função do agente]
+    F --&gt; A[Ação]
+    F -. implementada por .-&gt; PR[Programa do agente]
+    PR --&gt; ARQ[Arquitetura]
+</code></pre>
+<h2 id="3-racionalidade">3. Racionalidade</h2>
+<p>Um agente racional escolhe a ação que <strong>maximiza o desempenho esperado</strong>, considerando:</p>
+<ul>
+<li>a medida de desempenho;</li>
+<li>a sequência perceptiva disponível;</li>
+<li>o conhecimento prévio sobre o ambiente;</li>
+<li>as ações que podem ser executadas.</li>
+</ul>
+<pre><code class="language-mermaid">flowchart TD
+    R[Racionalidade] --&gt; P[Percepções disponíveis]
+    R --&gt; K[Conhecimento prévio]
+    R --&gt; A[Ações possíveis]
+    R --&gt; M[Medida de desempenho]
+    P --&gt; D[Decisão]
+    K --&gt; D
+    A --&gt; D
+    M --&gt; D
+</code></pre>
+<h3 id="racionalidade-onisciencia">Racionalidade ≠ onisciência</h3>
+<p>Considere duas ideias:</p>
+<pre><code class="language-text">Onisciência: saber antecipadamente o resultado real de cada ação.
+Racionalidade: decidir da melhor forma possível com o que se sabe agora.
+</code></pre>
+<p>Uma decisão racional pode produzir um resultado ruim se o ambiente for incerto ou parcialmente observável.</p>
+<blockquote>
+<p><strong>Regra de análise:</strong> julgue a decisão pelas informações disponíveis no momento em que ela foi tomada, não apenas pelo resultado observado depois.</p>
+</blockquote>
+<h2 id="4-peas">4. PEAS</h2>
+<p>PEAS ajuda a especificar uma tarefa de agente de forma disciplinada.</p>
+<table>
+<thead>
+<tr>
+<th>Letra</th>
+<th>Elemento</th>
+<th>Pergunta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P</strong></td>
+<td>Performance measure</td>
+<td>Como saberemos se o agente está indo bem?</td>
+</tr>
+<tr>
+<td><strong>E</strong></td>
+<td>Environment</td>
+<td>Em que ambiente ele opera?</td>
+</tr>
+<tr>
+<td><strong>A</strong></td>
+<td>Actuators</td>
+<td>Como ele age sobre o ambiente?</td>
+</tr>
+<tr>
+<td><strong>S</strong></td>
+<td>Sensors</td>
+<td>Como ele percebe o ambiente?</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-mermaid">flowchart TB
+    T[Tarefa do agente] --&gt; P[P - Desempenho]
+    T --&gt; E[E - Ambiente]
+    T --&gt; A[A - Atuadores]
+    T --&gt; S[S - Sensores]
+</code></pre>
+<h3 id="exemplo-generico-robo-de-entrega">Exemplo genérico: robô de entrega</h3>
+<table>
+<thead>
+<tr>
+<th>PEAS</th>
+<th>Possíveis elementos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P</td>
+<td>segurança, tempo de entrega, energia, taxa de sucesso</td>
+</tr>
+<tr>
+<td>E</td>
+<td>corredores, pessoas, portas, elevadores, obstáculos</td>
+</tr>
+<tr>
+<td>A</td>
+<td>motores, direção, sinalização, manipuladores</td>
+</tr>
+<tr>
+<td>S</td>
+<td>câmera, distância, localização, estado de bateria</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Evite medidas vagas:</strong> "fazer um bom trabalho" não especifica desempenho. Prefira critérios observáveis e comparáveis.</p>
+</blockquote>
+<h2 id="5-como-classificar-um-ambiente">5. Como classificar um ambiente</h2>
+<p>As propriedades do ambiente ajudam a definir quanta informação o agente precisa manter e como deve escolher suas ações.</p>
+<pre><code class="language-mermaid">flowchart LR
+    ENV[Ambiente] --&gt; O[Observabilidade]
+    ENV --&gt; D[Determinismo]
+    ENV --&gt; E[Episódico / sequencial]
+    ENV --&gt; S[Estático / dinâmico]
+    ENV --&gt; C[Discreto / contínuo]
+    ENV --&gt; M[Único / multiagente]
+</code></pre>
+<h3 id="quadro-de-revisao">Quadro de revisão</h3>
+<table>
+<thead>
+<tr>
+<th>Dimensão</th>
+<th>Extremo A</th>
+<th>Extremo B</th>
+<th>Pergunta útil</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Observabilidade</td>
+<td>completamente observável</td>
+<td>parcialmente observável</td>
+<td>o agente vê tudo que importa?</td>
+</tr>
+<tr>
+<td>Resultado das ações</td>
+<td>determinístico</td>
+<td>estocástico</td>
+<td>a mesma ação sempre produz o mesmo resultado?</td>
+</tr>
+<tr>
+<td>Dependência temporal</td>
+<td>episódico</td>
+<td>sequencial</td>
+<td>decisões atuais afetam decisões futuras?</td>
+</tr>
+<tr>
+<td>Mudança do ambiente</td>
+<td>estático</td>
+<td>dinâmico</td>
+<td>o mundo muda enquanto o agente decide?</td>
+</tr>
+<tr>
+<td>Representação</td>
+<td>discreto</td>
+<td>contínuo</td>
+<td>estados, tempo e ações assumem valores discretos?</td>
+</tr>
+<tr>
+<td>Participantes</td>
+<td>agente único</td>
+<td>multiagente</td>
+<td>outros agentes influenciam o resultado?</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Importante:</strong> uma classificação depende da modelagem adotada. Alterar hipóteses do problema pode alterar a classificação.</p>
+</blockquote>
+<h2 id="6-arquiteturas-de-agentes">6. Arquiteturas de agentes</h2>
+<p>As arquiteturas podem ser vistas como respostas progressivas a limitações do agente mais simples.</p>
+<pre><code class="language-mermaid">flowchart LR
+    R[Reativo simples] --&gt; M[Baseado em modelo]
+    M --&gt; G[Orientado por metas]
+    G --&gt; U[Orientado por utilidade]
+    U --&gt; L[Com aprendizagem]
+</code></pre>
+<h3 id="comparacao">Comparação</h3>
+<table>
+<thead>
+<tr>
+<th>Arquitetura</th>
+<th style="text-align: right;">Usa estado interno?</th>
+<th style="text-align: right;">Usa meta?</th>
+<th style="text-align: right;">Usa utilidade?</th>
+<th style="text-align: right;">Pode aprender?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reativo simples</td>
+<td style="text-align: right;">não necessariamente</td>
+<td style="text-align: right;">não</td>
+<td style="text-align: right;">não</td>
+<td style="text-align: right;">não necessariamente</td>
+</tr>
+<tr>
+<td>Baseado em modelo</td>
+<td style="text-align: right;">sim</td>
+<td style="text-align: right;">não</td>
+<td style="text-align: right;">não</td>
+<td style="text-align: right;">não necessariamente</td>
+</tr>
+<tr>
+<td>Orientado por metas</td>
+<td style="text-align: right;">sim</td>
+<td style="text-align: right;">sim</td>
+<td style="text-align: right;">não necessariamente</td>
+<td style="text-align: right;">não necessariamente</td>
+</tr>
+<tr>
+<td>Orientado por utilidade</td>
+<td style="text-align: right;">sim</td>
+<td style="text-align: right;">sim</td>
+<td style="text-align: right;">sim</td>
+<td style="text-align: right;">não necessariamente</td>
+</tr>
+<tr>
+<td>Com aprendizagem</td>
+<td style="text-align: right;">depende da arquitetura base</td>
+<td style="text-align: right;">pode usar</td>
+<td style="text-align: right;">pode usar</td>
+<td style="text-align: right;">sim</td>
+</tr>
+</tbody>
+</table>
+<h3 id="o-raciocinio-por-tras-da-evolucao">O raciocínio por trás da evolução</h3>
+<pre><code class="language-text">Só reagir ao presente
+    ↓
+lembrar aspectos não observados diretamente
+    ↓
+considerar objetivos futuros
+    ↓
+comparar alternativas por preferência/desempenho
+    ↓
+aprender com experiência
+</code></pre>
+<h2 id="7-chatgpt-e-um-agente">7. ChatGPT é um agente?</h2>
+<p>A resposta depende da <strong>configuração do sistema</strong>, não apenas do modelo.</p>
+<pre><code class="language-mermaid">flowchart TB
+    M[Modelo recebe texto e responde] --&gt; Q1{Interage autonomamente com ambiente?}
+    Q1 --&gt;|não| C1[Pode ser tratado como componente de um sistema]
+    Q1 --&gt;|sim| Q2[Percebe resultados, escolhe ações e continua até uma meta]
+    Q2 --&gt; C2[Descrição como agente torna-se mais adequada]
+</code></pre>
+<h3 id="dois-cenarios">Dois cenários</h3>
+<table>
+<thead>
+<tr>
+<th>Cenário</th>
+<th>Percepção</th>
+<th>Ação</th>
+<th>Autonomia</th>
+<th>Interpretação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>modelo responde a uma mensagem</td>
+<td>prompt</td>
+<td>resposta</td>
+<td>baixa</td>
+<td>componente interativo</td>
+</tr>
+<tr>
+<td>sistema observa, usa ferramentas, verifica e continua</td>
+<td>mensagens + resultados</td>
+<td>chamadas de ferramentas + respostas</td>
+<td>maior</td>
+<td>arquitetura de agente</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Ponto central:</strong> não classifique apenas pelo nome da tecnologia. Identifique ambiente, percepções, ações, objetivo e grau de autonomia.</p>
+</blockquote>
+<h2 id="8-agente-orientado-por-metas-e-busca">8. Agente orientado por metas e busca</h2>
+<p>Um agente orientado por metas precisa considerar <strong>estados futuros</strong> e <strong>sequências de ações</strong>.</p>
+<pre><code class="language-mermaid">flowchart LR
+    AG[Agente orientado por metas] --&gt; EI[Estado atual]
+    AG --&gt; G[Meta]
+    EI --&gt; P[Formular problema]
+    G --&gt; P
+    P --&gt; B[Buscar sequência de ações]
+    B --&gt; EX[Executar]
+</code></pre>
+<p>Essa transição prepara diretamente as Aulas 03 e 04.</p>
+<h2 id="9-erros-conceituais-frequentes">9. Erros conceituais frequentes</h2>
+<blockquote>
+<p>⚠️ <strong>"Agente é qualquer programa."</strong> A análise por agentes enfatiza percepção, ação e relação com um ambiente.</p>
+<p>⚠️ <strong>"Racionalidade significa sempre escolher a ação que dará o melhor resultado real."</strong> Isso exigiria conhecimento perfeito do futuro.</p>
+<p>⚠️ <strong>"Parcialmente observável significa que o sensor está com defeito."</strong> A própria natureza do problema pode impedir acesso completo ao estado relevante.</p>
+<p>⚠️ <strong>"Agente orientado por metas sempre sabe o melhor caminho."</strong> A meta define o que se deseja; encontrar como chegar até ela pode exigir busca.</p>
+</blockquote>
+<h2 id="revisao-de-1-minuto">Revisão de 1 minuto</h2>
+<pre><code class="language-text">Agente
+├── percebe o ambiente por sensores
+├── recebe percepções
+├── escolhe ações
+├── atua por atuadores
+├── é avaliado por uma medida de desempenho
+├── pode operar sob informação incompleta
+└── pode usar modelos, metas, utilidade e aprendizagem
+</code></pre>
+<h2 id="checklist">Checklist</h2>
+<ul>
+<li>[ ] Diferencio sensor, percepção, ação e atuador.</li>
+<li>[ ] Consigo explicar racionalidade sem confundir com onisciência.</li>
+<li>[ ] Consigo montar um PEAS coerente.</li>
+<li>[ ] Consigo classificar um ambiente e justificar cada dimensão.</li>
+<li>[ ] Consigo comparar as principais arquiteturas de agentes.</li>
+<li>[ ] Consigo analisar quando um sistema baseado em modelo de linguagem pode ser tratado como agente.</li>
+<li>[ ] Consigo explicar por que agentes orientados por metas levam à formulação de problemas e busca.</li>
+</ul>
+<p><strong>Próximo passo:</strong> faça o <a href="../../estudos-guiados/02-agentes/">Estudo Guiado 02</a> e observe como as perguntas sobre estado, meta e consequências das ações conduzem à Aula 03.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/tiagofga/EC-IA" class="fa fa-code-fork" style="color: #fcfcfc"> tiagofga/EC-IA</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+      <script src="../../assets/mermaid-init.js"></script>
+      <script src="../../assets/downloads.js"></script>
+      <script src="../../assets/vercel-analytics.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://tiagofga.github.io/EC-IA/estudos-guiados/04-busca/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Estudo Guiado 04 - Estratégias de Busca - EC-IA</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Estudo Guiado 04 - Estrat\u00e9gias de Busca";
+        var mkdocs_page_input_path = "estudos-guiados/04-busca/README.md";
+        var mkdocs_page_url = "/EC-IA/estudos-guiados/04-busca/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> EC-IA
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Início</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../planos/">Plano didático</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../aulas/">Aulas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../atividades/">Atividades</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../trabalhos/">Trabalhos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Estudos guiados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../notas/">Notas visuais</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../pseudocodigos/">Pseudocódigos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../visualizacoes/">Visualizações</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://github.com/tiagofga/EC-IA">Repositório no GitHub</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">EC-IA</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Estudo Guiado 04 - Estratégias de Busca</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/tiagofga/EC-IA/edit/master/docs/estudos-guiados/04-busca/README.md">Edit on tiagofga/EC-IA</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="estudo-guiado-04-estrategias-de-busca">Estudo Guiado 04 - Estratégias de Busca</h1>
+<h2 id="objetivo">Objetivo</h2>
+<p>Ao concluir este estudo, você deve ser capaz de executar e comparar BFS, DFS, Busca de Custo Uniforme, Busca Gulosa e A*, explicando como cada estratégia seleciona nós da fronteira e em quais condições suas propriedades diferem.</p>
+<h2 id="1-pre-requisitos">1. Pré-requisitos</h2>
+<p>Antes de estudar os algoritmos, confirme que consegue explicar:</p>
+<ul>
+<li>estado e nó;</li>
+<li>espaço de estados e árvore de busca;</li>
+<li>expansão de um nó;</li>
+<li>fronteira;</li>
+<li>caminho e custo de caminho;</li>
+<li>teste de objetivo.</li>
+</ul>
+<p>Se algum desses termos ainda estiver impreciso, retorne ao Estudo Guiado 03.</p>
+<h2 id="2-a-pergunta-central">2. A pergunta central</h2>
+<p>Todos os algoritmos deste capítulo trabalham sobre o mesmo problema geral. A diferença central está em:</p>
+<blockquote>
+<p>Qual nó da fronteira será selecionado para expansão em seguida?</p>
+</blockquote>
+<p>Use essa pergunta como eixo para comparar os métodos.</p>
+<h2 id="3-busca-nao-informada">3. Busca não informada</h2>
+<h3 id="31-busca-em-largura-bfs">3.1 Busca em Largura - BFS</h3>
+<p>Estude a relação entre BFS e uma fronteira FIFO.</p>
+<p>Verifique se consegue responder:</p>
+<ol>
+<li>Por que os nós de menor profundidade são expandidos primeiro?</li>
+<li>Em que condição BFS encontra uma solução de menor custo?</li>
+<li>Por que o consumo de memória pode crescer rapidamente?</li>
+<li>O que acontece quando o fator de ramificação é elevado?</li>
+</ol>
+<h3 id="32-busca-em-profundidade-dfs">3.2 Busca em Profundidade - DFS</h3>
+<p>Estude a relação entre DFS e uma fronteira LIFO.</p>
+<p>Responda:</p>
+<ol>
+<li>Por que DFS tende a seguir um ramo antes de explorar alternativas?</li>
+<li>Qual é sua principal vantagem de memória em comparação com BFS?</li>
+<li>Em que tipo de espaço a profundidade pode se tornar um problema?</li>
+<li>Por que encontrar uma solução primeiro não significa encontrar a melhor solução?</li>
+</ol>
+<h3 id="33-busca-de-custo-uniforme-ucs">3.3 Busca de Custo Uniforme - UCS</h3>
+<p>A prioridade é o custo acumulado:</p>
+<pre><code class="language-text">g(n)
+</code></pre>
+<p>Responda:</p>
+<ol>
+<li>Qual é a diferença entre profundidade e custo acumulado?</li>
+<li>Quando UCS e BFS podem produzir comportamento equivalente?</li>
+<li>Por que um caminho com mais ações pode ser preferível?</li>
+<li>O que deve acontecer se um caminho mais barato para um estado já conhecido for encontrado?</li>
+</ol>
+<h2 id="4-primeira-comparacao">4. Primeira comparação</h2>
+<p>Complete sem consultar o material:</p>
+<table>
+<thead>
+<tr>
+<th>Estratégia</th>
+<th>Critério principal</th>
+<th style="text-align: right;">Usa custo <code>g(n)</code>?</th>
+<th style="text-align: right;">Usa heurística?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BFS</td>
+<td></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>DFS</td>
+<td></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>UCS</td>
+<td></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<p>Depois confira nos slides e pseudocódigos.</p>
+<h2 id="5-heuristicas">5. Heurísticas</h2>
+<p>Uma heurística <code>h(n)</code> estima o custo ou distância restante entre um nó e uma meta.</p>
+<p>Antes de estudar Gulosa e A*, responda:</p>
+<ul>
+<li>uma heurística precisa ser exata?</li>
+<li>uma heurística ruim pode prejudicar a busca?</li>
+<li>qual é a diferença entre custo conhecido e custo estimado?</li>
+<li>o que significa uma heurística superestimar o custo real?</li>
+</ul>
+<h3 id="admissibilidade">Admissibilidade</h3>
+<p>Uma heurística admissível não superestima o custo real mínimo até a meta.</p>
+<p>Crie três valores hipotéticos de custo real e três estimativas heurísticas. Classifique quais estimativas preservam admissibilidade.</p>
+<h3 id="consistencia">Consistência</h3>
+<p>Explique a relação entre a estimativa de um nó, o custo de avançar para um sucessor e a estimativa desse sucessor.</p>
+<p>Não memorize apenas a desigualdade. Interprete o que ela significa para o comportamento da estimativa ao longo de um caminho.</p>
+<h2 id="6-busca-gulosa">6. Busca Gulosa</h2>
+<p>A Busca Gulosa prioriza:</p>
+<pre><code class="language-text">h(n)
+</code></pre>
+<p>Responda:</p>
+<ol>
+<li>Que informação sobre o passado da trajetória é ignorada pela prioridade?</li>
+<li>Por que a estratégia pode parecer muito eficiente em alguns mapas?</li>
+<li>Por que uma boa estimativa local não garante o melhor caminho global?</li>
+<li>Como uma heurística enganosa pode alterar a ordem de expansão?</li>
+</ol>
+<h2 id="7-a">7. A*</h2>
+<p>A* combina:</p>
+<pre><code class="language-text">f(n) = g(n) + h(n)
+</code></pre>
+<p>Interprete os três termos:</p>
+<ul>
+<li><code>g(n)</code> - custo já acumulado;</li>
+<li><code>h(n)</code> - estimativa do custo restante;</li>
+<li><code>f(n)</code> - estimativa do custo total de uma solução passando por <code>n</code>.</li>
+</ul>
+<p>Responda:</p>
+<ol>
+<li>Por que A* não é apenas uma Busca Gulosa com outro nome?</li>
+<li>O que acontece conceitualmente quando <code>h(n) = 0</code> para todos os nós?</li>
+<li>Como a qualidade da heurística afeta a quantidade de nós explorados?</li>
+<li>Que propriedade da heurística é importante para discutir otimalidade?</li>
+</ol>
+<h2 id="8-use-a-visualizacao-interativa">8. Use a visualização interativa</h2>
+<p>Abra <code>visualizacoes/04-busca/</code> e execute os traces disponíveis.</p>
+<p>Para cada estratégia, registre:</p>
+<ul>
+<li>primeiro nó expandido após o inicial;</li>
+<li>sequência de nós atuais;</li>
+<li>como a fronteira muda;</li>
+<li>quando o objetivo aparece na fronteira;</li>
+<li>quando o objetivo é efetivamente selecionado;</li>
+<li>caminho final mostrado.</li>
+</ul>
+<h3 id="observacao-importante">Observação importante</h3>
+<p>A visualização não executa os algoritmos. Ela reproduz traces pré-calculados. Portanto, use-a para interpretar a dinâmica da busca, não para inferir uma implementação pronta.</p>
+<h2 id="9-comparacao-integrada">9. Comparação integrada</h2>
+<p>Complete a tabela com base no que você estudou:</p>
+<table>
+<thead>
+<tr>
+<th>Estratégia</th>
+<th>Seleção da fronteira</th>
+<th style="text-align: right;"><code>g(n)</code></th>
+<th style="text-align: right;"><code>h(n)</code></th>
+<th>Otimalidade</th>
+<th>Memória</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BFS</td>
+<td></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>DFS</td>
+<td></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>UCS</td>
+<td></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Gulosa</td>
+<td></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>A*</td>
+<td></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Não preencha "sim" ou "não" mecanicamente para completude e otimalidade. Registre também as condições necessárias quando elas existirem.</p>
+<h2 id="10-problema-de-execucao-manual">10. Problema de execução manual</h2>
+<p>Desenhe um grafo pequeno com:</p>
+<ul>
+<li>um estado inicial;</li>
+<li>uma meta;</li>
+<li>pelo menos seis estados;</li>
+<li>dois caminhos diferentes para a meta;</li>
+<li>custos não uniformes;</li>
+<li>valores heurísticos.</li>
+</ul>
+<p>Execute manualmente:</p>
+<ol>
+<li>BFS;</li>
+<li>DFS;</li>
+<li>UCS;</li>
+<li>Gulosa;</li>
+<li>A*.</li>
+</ol>
+<p>Para cada passo, registre:</p>
+<pre><code class="language-text">nó atual
+fronteira
+explorados
+custo g(n), quando aplicável
+heurística h(n), quando aplicável
+f(n), quando aplicável
+</code></pre>
+<p>Depois compare os caminhos e a ordem de expansão.</p>
+<h2 id="11-escolha-da-estrategia">11. Escolha da estratégia</h2>
+<p>Para cada cenário, indique qual estratégia você consideraria primeiro e justifique:</p>
+<ol>
+<li>todas as ações têm mesmo custo e a solução mais rasa é desejada;</li>
+<li>memória é muito limitada e qualquer solução pode ser aceitável;</li>
+<li>custos são diferentes e não há heurística disponível;</li>
+<li>existe uma heurística barata e velocidade é mais importante que garantia de caminho ótimo;</li>
+<li>existe uma heurística adequada e o custo da solução é importante.</li>
+</ol>
+<p>A justificativa é mais importante que o nome do algoritmo.</p>
+<h2 id="12-erros-conceituais-a-evitar">12. Erros conceituais a evitar</h2>
+<p>Verifique se você consegue explicar por que estas frases são problemáticas:</p>
+<ul>
+<li>"BFS é sempre ótima";</li>
+<li>"DFS é mais rápida que BFS";</li>
+<li>"UCS escolhe o caminho com menos passos";</li>
+<li>"Gulosa considera o custo total da solução";</li>
+<li>"A* sempre é ótima independentemente da heurística";</li>
+<li>"se o objetivo apareceu na fronteira, qualquer estratégia já pode encerrar".</li>
+</ul>
+<h2 id="autoavaliacao">Autoavaliação</h2>
+<ul>
+<li>[ ] Consigo executar BFS e DFS manualmente.</li>
+<li>[ ] Consigo explicar quando BFS é ótima.</li>
+<li>[ ] Consigo executar UCS usando <code>g(n)</code>.</li>
+<li>[ ] Consigo explicar o papel de uma heurística.</li>
+<li>[ ] Consigo distinguir admissibilidade e consistência.</li>
+<li>[ ] Consigo executar Busca Gulosa usando <code>h(n)</code>.</li>
+<li>[ ] Consigo executar A* usando <code>g(n) + h(n)</code>.</li>
+<li>[ ] Consigo comparar as cinco estratégias por critério de seleção, completude, otimalidade, tempo e memória.</li>
+<li>[ ] Consigo escolher uma estratégia e justificar a decisão pelas propriedades do problema.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/tiagofga/EC-IA" class="fa fa-code-fork" style="color: #fcfcfc"> tiagofga/EC-IA</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+      <script src="../../assets/mermaid-init.js"></script>
+      <script src="../../assets/downloads.js"></script>
+      <script src="../../assets/vercel-analytics.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
