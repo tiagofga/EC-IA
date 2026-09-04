@@ -23,12 +23,7 @@ nav:
   - Atividades: atividades/index.md
   - Trabalhos: trabalhos/index.md
   - Estudos guiados: estudos-guiados/index.md
-  - Notas de aula:
-      - Visão geral: notas/index.md
-      - Aula 01 - Introdução: notas/01-introducao/README.md
-      - Aula 02 - Agentes: notas/02-agentes/README.md
-      - Aula 03 - Conhecimento: notas/03-conhecimento/README.md
-      - Aula 04 - Busca: notas/04-busca/README.md
+  - Notas visuais: notas/index.md
   - Pseudocódigos: pseudocodigos/index.md
   - Visualizações: visualizacoes/index.md
   - Repositório no GitHub: https://github.com/tiagofga/EC-IA
