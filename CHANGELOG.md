@@ -6,6 +6,20 @@ O histórico de commits segue Conventional Commits.
 
 ## [Unreleased]
 
+### Added
+
+- notas visuais completas para as Aulas 01 a 04 em Markdown;
+- mapas mentais, fluxos Mermaid, tabelas comparativas, resumos rápidos, alertas conceituais e checklists de revisão;
+- renderização Mermaid no site público;
+- navegação direta para cada nota de aula no MkDocs.
+
+### Changed
+
+- percurso de estudo atualizado para usar a sequência aula -> nota visual -> estudo guiado -> atividade;
+- índice de notas reformulado como mapa de estudo;
+- script de build atualizado para sincronizar `notas/` com a documentação publicada;
+- estilos do site ampliados para diagramas e blocos de revisão.
+
 ## [0.4.0] - 2026-09-03
 
 ### Added
