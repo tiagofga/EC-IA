@@ -120,10 +120,6 @@ html[data-theme="dark"] .rst-content .mermaid {
   background: #171d25;
 }
 
-html[data-theme="dark"] .rst-content .mermaid svg {
-  filter: invert(0.88) hue-rotate(180deg);
-}
-
 html[data-theme="dark"] .highlight,
 html[data-theme="dark"] .highlight pre,
 html[data-theme="dark"] .codehilite,
@@ -137,6 +133,19 @@ html[data-theme="dark"] .btn-neutral {
   color: #d8dee9 !important;
   border-color: #3a4654 !important;
   box-shadow: none;
+}
+
+.rst-content img {
+  display: block;
+  margin: 1rem auto 1.5rem auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+html[data-theme="dark"] .rst-content img {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
 @media (max-width: 768px) {
@@ -153,18 +162,4 @@ html[data-theme="dark"] .btn-neutral {
   .theme-toggle-mobile {
     display: none;
   }
-}
-
-.note-visual img,
-.md-content img {
-  display: block;
-  margin: 1rem auto 1.5rem auto;
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-}
-
-[data-theme="dark"] .md-content img {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
