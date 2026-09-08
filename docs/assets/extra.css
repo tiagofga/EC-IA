@@ -28,6 +28,18 @@
   background: #fff;
 }
 
+.rst-content .mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.rst-content .mermaid-error {
+  color: #7a2e2e;
+  border-color: #e0b4b4;
+  background: #fff5f5;
+  font-style: italic;
+}
+
 .rst-content blockquote {
   margin: 1.25rem 0;
   padding: 0.9rem 1rem;
