@@ -9,6 +9,7 @@ theme:
 
 extra_css:
   - assets/extra.css
+  - assets/theme.css
 
 extra_javascript:
   - assets/theme-toggle.js
