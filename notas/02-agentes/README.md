@@ -2,6 +2,12 @@
 
 > **Guia visual de revisão.** Esta nota organiza os conceitos de agente, racionalidade, PEAS, propriedades do ambiente e arquiteturas de agentes. Use-a como ponte entre os slides e o Estudo Guiado 02.
 
+## Nota visual da aula
+
+![Nota visual da Aula 02 - Agentes Inteligentes](./nota-visual-aula-02.png)
+
+*Síntese visual dos principais conceitos da Aula 02. Use a figura para uma primeira revisão e, em seguida, percorra as seções abaixo para aprofundar cada conceito.*
+
 ## Visão em 30 segundos
 
 | Pergunta | Ideia-chave |
@@ -288,9 +294,3 @@ Agente
 - [ ] Consigo explicar por que agentes orientados por metas levam à formulação de problemas e busca.
 
 **Próximo passo:** faça o [Estudo Guiado 02](../../estudos-guiados/02-agentes/README.md) e observe como as perguntas sobre estado, meta e consequências das ações conduzem à Aula 03.
-
-## Nota visual da aula
-
-![Nota visual da Aula 02 - Agentes Inteligentes](./nota-visual-aula-02.png)
-
-*Síntese visual dos principais conceitos da Aula 02. Use a figura para uma primeira revisão e, em seguida, percorra as seções abaixo para aprofundar cada conceito.*
