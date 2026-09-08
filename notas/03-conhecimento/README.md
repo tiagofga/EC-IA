@@ -2,6 +2,12 @@
 
 > **Guia visual de revisão.** Esta nota organiza a passagem entre agentes orientados por metas e problemas de busca: representação, abstração, estados, ações, transições, meta, espaço de estados, árvore de busca e fronteira.
 
+## Nota visual da aula
+
+![Nota visual da Aula 03 - Representação do Conhecimento e Solução de Problemas](./nota-visual-aula-03.png)
+
+*Síntese visual dos principais conceitos da Aula 03. Use a figura para uma primeira revisão e, em seguida, percorra as seções abaixo para aprofundar cada conceito.*
+
 ## Visão em 30 segundos
 
 | Pergunta | Ideia-chave |
@@ -362,9 +368,3 @@ precisa decidir qual nó expandir
 - [ ] Consigo explicar por que a regra de seleção da fronteira define estratégias diferentes.
 
 **Próximo passo:** faça o [Estudo Guiado 03](../../estudos-guiados/03-conhecimento/README.md). Quando estiver confortável com fronteira, custo e expansão, avance para as estratégias da Aula 04.
-
-## Nota visual da aula
-
-![Nota visual da Aula 03 - Representação do Conhecimento](./nota-visual-aula-03.png)
-
-*Síntese visual dos principais conceitos da Aula 03. Use a figura para uma primeira revisão e, em seguida, percorra as seções abaixo para aprofundar cada conceito.*
