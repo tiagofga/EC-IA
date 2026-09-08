@@ -5,6 +5,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     source
       .replace(/<br\s*\/?>/gi, " - ")
       .replace(/\u00a0/g, " ")
+      // Mermaid flowcharts are sensitive to punctuation such as (), + and *
+      // inside unquoted node and edge labels. Quote those labels before parsing.
+      .replace(/\[([^\]\n]*[()+*][^\]\n]*)\]/g, (_, label) => `["${label.replace(/"/g, "'")}"]`)
+      .replace(/\|([^|\n]*[()+*][^|\n]*)\|/g, (_, label) => `|"${label.replace(/"/g, "'")}"|`)
       .trim();
 
   const diagrams = [];
@@ -82,7 +86,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     if (box && box.width > 0 && box.height > 0) {
-      const padding = Math.max(36, Math.min(72, Math.max(box.width, box.height) * 0.04));
+      const padding = Math.max(48, Math.min(96, Math.max(box.width, box.height) * 0.06));
       svg.setAttribute(
         "viewBox",
         `${box.x - padding} ${box.y - padding} ${box.width + padding * 2} ${box.height + padding * 2}`
@@ -96,6 +100,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   };
 
   const renderDiagrams = async (theme) => {
+    // Mermaid measures text while computing node dimensions. Waiting for fonts
+    // avoids nodes being sized with fallback metrics and clipped afterwards.
     if (document.fonts?.ready) {
       await document.fonts.ready;
     }
@@ -104,8 +110,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       startOnLoad: false,
       securityLevel: "strict",
       theme: "base",
-      flowchart: { useMaxWidth: true, htmlLabels: false, padding: 20 },
-      mindmap: { useMaxWidth: true, padding: 36 },
+      flowchart: { useMaxWidth: true, htmlLabels: false, padding: 28 },
+      mindmap: { useMaxWidth: true, padding: 48 },
       themeVariables: themeVariables(theme)
     });
 
