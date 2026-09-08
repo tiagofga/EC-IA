@@ -6,6 +6,16 @@ O histórico de commits segue Conventional Commits.
 
 ## [Unreleased]
 
+### Added
+
+- alternador de modo claro/escuro no site público;
+- persistência da preferência visual no navegador;
+- detecção automática de `prefers-color-scheme` quando não há escolha manual.
+
+### Changed
+
+- estilos do conteúdo, tabelas, códigos, blocos de revisão, navegação e diagramas ajustados para suportar o modo escuro.
+
 ## [0.5.0] - 2026-09-04
 
 ### Added
