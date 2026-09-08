@@ -26,24 +26,24 @@ document.addEventListener("DOMContentLoaded", async () => {
   const themeVariables = (theme) =>
     theme === "dark"
       ? {
-          primaryColor: "#274c77",
+          primaryColor: "#2563eb",
           primaryTextColor: "#f8fafc",
-          primaryBorderColor: "#7db7ff",
-          lineColor: "#8ec5ff",
-          secondaryColor: "#237a57",
-          secondaryTextColor: "#f8fafc",
-          tertiaryColor: "#8a6518",
-          tertiaryTextColor: "#fff7db",
+          primaryBorderColor: "#93c5fd",
+          lineColor: "#93c5fd",
+          secondaryColor: "#059669",
+          secondaryTextColor: "#ecfdf5",
+          tertiaryColor: "#d97706",
+          tertiaryTextColor: "#fff7ed",
           background: "#171d25",
-          mainBkg: "#274c77",
-          secondBkg: "#237a57",
-          tertiaryBkg: "#8a6518",
-          nodeBkg: "#274c77",
-          nodeBorder: "#7db7ff",
+          mainBkg: "#2563eb",
+          secondBkg: "#059669",
+          tertiaryBkg: "#d97706",
+          nodeBkg: "#1d4ed8",
+          nodeBorder: "#bfdbfe",
           clusterBkg: "#202833",
-          clusterBorder: "#52606f",
+          clusterBorder: "#64748b",
           edgeLabelBackground: "#171d25",
-          textColor: "#f1f5f9",
+          textColor: "#f8fafc",
           fontFamily: "Inter, Arial, sans-serif"
         }
       : {
@@ -68,13 +68,37 @@ document.addEventListener("DOMContentLoaded", async () => {
           fontFamily: "Inter, Arial, sans-serif"
         };
 
+  const padSvgViewBox = (diagram) => {
+    const svg = diagram.querySelector("svg");
+    if (!svg) return;
+
+    const padding = 48;
+    const viewBox = svg.getAttribute("viewBox");
+
+    if (viewBox) {
+      const values = viewBox.trim().split(/\s+/).map(Number);
+      if (values.length === 4 && values.every(Number.isFinite)) {
+        const [x, y, width, height] = values;
+        svg.setAttribute(
+          "viewBox",
+          `${x - padding} ${y - padding} ${width + padding * 2} ${height + padding * 2}`
+        );
+      }
+    }
+
+    svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
+    svg.style.overflow = "visible";
+    svg.style.maxWidth = "100%";
+    svg.style.height = "auto";
+  };
+
   const renderDiagrams = async (theme) => {
     mermaid.initialize({
       startOnLoad: false,
       securityLevel: "strict",
       theme: "base",
       flowchart: { useMaxWidth: true, htmlLabels: false },
-      mindmap: { useMaxWidth: true },
+      mindmap: { useMaxWidth: true, padding: 24 },
       themeVariables: themeVariables(theme)
     });
 
@@ -87,6 +111,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         diagram.textContent = source;
         await mermaid.parse(source);
         await mermaid.run({ nodes: [diagram] });
+        padSvgViewBox(diagram);
       } catch (error) {
         console.error("Falha ao renderizar diagrama Mermaid:", error, source);
         diagram.classList.add("mermaid-error");
