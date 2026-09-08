@@ -20,17 +20,31 @@
 /* Notas de aula: diagramas e blocos de revisão. */
 .rst-content .mermaid {
   margin: 1.5rem 0 2rem;
-  padding: 1rem;
-  overflow-x: auto;
+  padding: 1.25rem 1.5rem;
+  overflow: visible;
   text-align: center;
   border: 1px solid #e1e4e5;
-  border-radius: 6px;
+  border-radius: 8px;
   background: #fff;
 }
 
 .rst-content .mermaid svg {
+  display: block;
+  width: 100%;
   max-width: 100%;
   height: auto;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.rst-content .mermaid .node,
+.rst-content .mermaid .mindmap-node {
+  overflow: visible;
+}
+
+.rst-content .mermaid text {
+  paint-order: stroke;
+  stroke-width: 0;
 }
 
 .rst-content .mermaid-error {
@@ -57,6 +71,17 @@
 
 .rst-content code {
   word-break: normal;
+}
+
+@media (max-width: 768px) {
+  .rst-content .mermaid {
+    padding: 1rem;
+    overflow-x: auto;
+  }
+
+  .rst-content .mermaid svg {
+    min-width: 720px;
+  }
 }
 
 @media (min-width: 1400px) {
