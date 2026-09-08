@@ -5,6 +5,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     source
       .replace(/<br\s*\/?>/gi, " - ")
       .replace(/\u00a0/g, " ")
+      // Mermaid flowcharts are sensitive to punctuation such as (), + and *
+      // inside unquoted node and edge labels. Quote those labels before parsing.
+      .replace(/\[([^\]\n]*[()+*][^\]\n]*)\]/g, (_, label) => `["${label.replace(/"/g, "'")}"]`)
+      .replace(/\|([^|\n]*[()+*][^|\n]*)\|/g, (_, label) => `|"${label.replace(/"/g, "'")}"|`)
       .trim();
 
   const diagrams = [];
@@ -44,7 +48,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           clusterBorder: "#64748b",
           edgeLabelBackground: "#171d25",
           textColor: "#f8fafc",
-          fontFamily: "Inter, Arial, sans-serif"
+          fontFamily: "Arial, Helvetica, sans-serif"
         }
       : {
           primaryColor: "#dbeafe",
@@ -65,40 +69,49 @@ document.addEventListener("DOMContentLoaded", async () => {
           clusterBorder: "#94a3b8",
           edgeLabelBackground: "#ffffff",
           textColor: "#172033",
-          fontFamily: "Inter, Arial, sans-serif"
+          fontFamily: "Arial, Helvetica, sans-serif"
         };
 
-  const padSvgViewBox = (diagram) => {
+  const fitSvgToContent = (diagram) => {
     const svg = diagram.querySelector("svg");
     if (!svg) return;
 
-    const padding = 48;
-    const viewBox = svg.getAttribute("viewBox");
+    const content = svg.querySelector("g") || svg;
+    let box;
 
-    if (viewBox) {
-      const values = viewBox.trim().split(/\s+/).map(Number);
-      if (values.length === 4 && values.every(Number.isFinite)) {
-        const [x, y, width, height] = values;
-        svg.setAttribute(
-          "viewBox",
-          `${x - padding} ${y - padding} ${width + padding * 2} ${height + padding * 2}`
-        );
-      }
+    try {
+      box = content.getBBox();
+    } catch (error) {
+      console.warn("Não foi possível medir o SVG Mermaid:", error);
     }
 
+    if (box && box.width > 0 && box.height > 0) {
+      const padding = Math.max(48, Math.min(96, Math.max(box.width, box.height) * 0.06));
+      svg.setAttribute(
+        "viewBox",
+        `${box.x - padding} ${box.y - padding} ${box.width + padding * 2} ${box.height + padding * 2}`
+      );
+    }
+
+    svg.removeAttribute("width");
+    svg.removeAttribute("height");
     svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
     svg.style.overflow = "visible";
-    svg.style.maxWidth = "100%";
-    svg.style.height = "auto";
   };
 
   const renderDiagrams = async (theme) => {
+    // Mermaid measures text while computing node dimensions. Waiting for fonts
+    // avoids nodes being sized with fallback metrics and clipped afterwards.
+    if (document.fonts?.ready) {
+      await document.fonts.ready;
+    }
+
     mermaid.initialize({
       startOnLoad: false,
       securityLevel: "strict",
       theme: "base",
-      flowchart: { useMaxWidth: true, htmlLabels: false },
-      mindmap: { useMaxWidth: true, padding: 24 },
+      flowchart: { useMaxWidth: true, htmlLabels: false, padding: 28 },
+      mindmap: { useMaxWidth: true, padding: 48 },
       themeVariables: themeVariables(theme)
     });
 
@@ -111,7 +124,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         diagram.textContent = source;
         await mermaid.parse(source);
         await mermaid.run({ nodes: [diagram] });
-        padSvgViewBox(diagram);
+        await new Promise((resolve) => requestAnimationFrame(resolve));
+        fitSvgToContent(diagram);
       } catch (error) {
         console.error("Falha ao renderizar diagrama Mermaid:", error, source);
         diagram.classList.add("mermaid-error");
