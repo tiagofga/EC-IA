@@ -20,3 +20,10 @@ site/
 .DS_Store
 .vscode/
 .idea/
+
+# Artefatos gerados pelo build do MkDocs
+docs/downloads/
+docs/notas/01-introducao/
+docs/notas/02-agentes/
+docs/notas/03-conhecimento/
+docs/notas/04-busca/

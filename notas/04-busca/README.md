@@ -579,3 +579,9 @@ Busca
 - [ ] Entendo estados de crença e a motivação da busca online.
 
 **Próximo passo:** faça o [Estudo Guiado 04](../../estudos-guiados/04-busca/README.md), use a visualização interativa para observar a fronteira e depois resolva a atividade antes de iniciar o Trabalho 01.
+
+## Nota visual da aula
+
+![Nota visual da Aula 04 - Estratégias de Busca](./nota-visual-aula-04.png)
+
+*Síntese visual dos principais conceitos da Aula 04. Use a figura para uma primeira revisão e, em seguida, percorra as seções abaixo para aprofundar cada conceito.*

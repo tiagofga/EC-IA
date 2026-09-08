@@ -7,6 +7,11 @@ document.addEventListener("DOMContentLoaded", async () => {
       .replace(/\u00a0/g, " ")
       .trim();
 
+  const isDark =
+    document.documentElement.dataset.theme === "dark" ||
+    document.body.dataset.theme === "dark" ||
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
+
   const diagrams = [];
 
   document.querySelectorAll("pre code.language-mermaid").forEach((code) => {
@@ -26,9 +31,48 @@ document.addEventListener("DOMContentLoaded", async () => {
   mermaid.initialize({
     startOnLoad: false,
     securityLevel: "strict",
-    theme: "neutral",
+    theme: "base",
     flowchart: { useMaxWidth: true, htmlLabels: false },
-    mindmap: { useMaxWidth: true }
+    mindmap: { useMaxWidth: true },
+    themeVariables: isDark
+      ? {
+          primaryColor: "#2f6fed",
+          primaryTextColor: "#f5f7fb",
+          primaryBorderColor: "#7aa2ff",
+          lineColor: "#8fb3ff",
+          secondaryColor: "#1e9e6a",
+          tertiaryColor: "#d79b00",
+          background: "#0f172a",
+          mainBkg: "#1e293b",
+          secondBkg: "#173b2f",
+          tertiaryBkg: "#4a3b08",
+          nodeBkg: "#1e293b",
+          nodeBorder: "#7aa2ff",
+          clusterBkg: "#111827",
+          clusterBorder: "#475569",
+          edgeLabelBackground: "#0f172a",
+          textColor: "#e5e7eb",
+          fontFamily: "Inter, Arial, sans-serif"
+        }
+      : {
+          primaryColor: "#dbeafe",
+          primaryTextColor: "#0f172a",
+          primaryBorderColor: "#2563eb",
+          lineColor: "#2563eb",
+          secondaryColor: "#dcfce7",
+          tertiaryColor: "#fef3c7",
+          background: "#ffffff",
+          mainBkg: "#eff6ff",
+          secondBkg: "#ecfdf5",
+          tertiaryBkg: "#fffbeb",
+          nodeBkg: "#ffffff",
+          nodeBorder: "#2563eb",
+          clusterBkg: "#f8fafc",
+          clusterBorder: "#94a3b8",
+          edgeLabelBackground: "#ffffff",
+          textColor: "#0f172a",
+          fontFamily: "Inter, Arial, sans-serif"
+        }
   });
 
   for (const diagram of diagrams) {

@@ -234,3 +234,9 @@ IA
 - [ ] Consigo relacionar racionalidade à próxima aula sobre agentes.
 
 **Próximo passo:** faça o [Estudo Guiado 01](../../estudos-guiados/01-introducao/README.md) e depois retorne aos slides para revisar os pontos em que sua explicação ainda estiver imprecisa.
+
+## Nota visual da aula
+
+![Nota visual da Aula 01 - Agentes Inteligentes](./nota-visual-aula-01.png)
+
+*Síntese visual dos principais conceitos da Aula 01. Use a figura para uma primeira revisão e, em seguida, percorra as seções abaixo para aprofundar cada conceito.*

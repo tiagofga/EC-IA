@@ -154,3 +154,17 @@ html[data-theme="dark"] .btn-neutral {
     display: none;
   }
 }
+
+.note-visual img,
+.md-content img {
+  display: block;
+  margin: 1rem auto 1.5rem auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+[data-theme="dark"] .md-content img {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
