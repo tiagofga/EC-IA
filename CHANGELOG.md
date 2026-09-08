@@ -6,6 +6,16 @@ O histórico de commits segue Conventional Commits.
 
 ## [Unreleased]
 
+## [0.5.2] - 2026-09-08
+
+### Fixed
+
+- cortes de nós e rótulos nas bordas dos diagramas Mermaid, com expansão do `viewBox` após a renderização;
+- margem interna dos mapas mentais Mermaid, reduzindo clipping em diagramas mais largos;
+- responsividade dos SVGs, preservando proporção e permitindo overflow/rolagem quando necessário;
+- contraste da paleta Mermaid no modo escuro, com cores mais vivas e legíveis;
+- manutenção da re-renderização dos diagramas ao alternar entre os modos claro e escuro.
+
 ## [0.5.1] - 2026-09-08
 
 ### Added
