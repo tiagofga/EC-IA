@@ -2,6 +2,12 @@
 
 > **Guia visual de revisão.** Esta nota organiza a Aula 04 em três blocos: busca não informada, busca informada e busca local/ambientes complexos. Use-a como mapa mental para comparar estratégias sem confundir critério de seleção, custo, heurística, completude e otimalidade.
 
+## Nota visual da aula
+
+![Nota visual da Aula 04 - Estruturas e Estratégias de Busca](./nota-visual-aula-04.png)
+
+*Síntese visual dos principais conceitos da Aula 04. Use a figura para uma primeira revisão e, em seguida, percorra as seções abaixo para aprofundar cada conceito.*
+
 ## Visão em 30 segundos
 
 | Estratégia | Ideia central |
@@ -579,9 +585,3 @@ Busca
 - [ ] Entendo estados de crença e a motivação da busca online.
 
 **Próximo passo:** faça o [Estudo Guiado 04](../../estudos-guiados/04-busca/README.md), use a visualização interativa para observar a fronteira e depois resolva a atividade antes de iniciar o Trabalho 01.
-
-## Nota visual da aula
-
-![Nota visual da Aula 04 - Estratégias de Busca](./nota-visual-aula-04.png)
-
-*Síntese visual dos principais conceitos da Aula 04. Use a figura para uma primeira revisão e, em seguida, percorra as seções abaixo para aprofundar cada conceito.*
