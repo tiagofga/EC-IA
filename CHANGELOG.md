@@ -6,6 +6,8 @@ O histórico de commits segue Conventional Commits.
 
 ## [Unreleased]
 
+## [0.5.1] - 2026-09-08
+
 ### Added
 
 - alternador de modo claro/escuro no site público;
@@ -19,6 +21,12 @@ O histórico de commits segue Conventional Commits.
 - diagramas Mermaid passam a usar uma paleta colorida própria nos modos claro e escuro;
 - Mermaid é renderizado novamente quando o usuário alterna o tema, preservando contraste e cores;
 - figuras de síntese posicionadas no início de cada nota, sem substituir mapas Mermaid, tabelas, explicações, revisão e checklist.
+
+### Fixed
+
+- robustez da renderização Mermaid, com normalização de rótulos e isolamento de falhas por diagrama;
+- incompatibilidades de rótulos com `<br>`/`<br/>` nos diagramas;
+- links entre notas visuais e estudos guiados verificados no site publicado.
 
 ## [0.5.0] - 2026-09-04
 

@@ -50,7 +50,8 @@ Os PDFs públicos das Aulas 00 a 04 e das Atividades 01 a 04 já fazem parte do 
 
 As Aulas 01 a 04 possuem notas públicas em Markdown concebidas como **mapas mentais e guias de estudo**. Elas incluem:
 
-- mapas conceituais e fluxos em Mermaid;
+- figuras de síntese visual;
+- mapas conceituais e fluxos em Mermaid colorido;
 - tabelas comparativas;
 - resumos de 30 segundos e de 1 minuto;
 - conexões entre aulas;
@@ -146,7 +147,7 @@ Modelos LaTeX explicitamente destinados aos estudantes, como o modelo SBC do Tra
 
 ## Versão de referência
 
-A próxima versão pública de referência é a **`v0.5.0`**, que acrescenta as notas visuais completas das Aulas 01 a 04 e sua integração ao site. A versão `v0.4.0` permanece como o marco de consolidação do Trabalho 01 - Busca.
+A versão pública de referência é a **`v0.5.1`**, que consolida as notas visuais das Aulas 01 a 04 com figuras de síntese, diagramas Mermaid coloridos e suporte a modo claro/escuro no site. A versão `v0.5.0` introduziu a camada de notas visuais, e a `v0.4.0` permanece como o marco de consolidação do Trabalho 01 - Busca.
 
 ## Desenvolvimento do repositório
 
@@ -158,5 +159,5 @@ fix(pages): correct visualization path
 content(trabalho-01): add search assignment starter
 docs(notas): add aula 04 visual review guide
 docs(repo): improve student navigation
-chore(release): prepare v0.5.0
+chore(release): prepare v0.5.1
 ```
