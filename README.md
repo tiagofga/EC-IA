@@ -147,7 +147,7 @@ Modelos LaTeX explicitamente destinados aos estudantes, como o modelo SBC do Tra
 
 ## Versão de referência
 
-A versão pública de referência é a **`v0.5.1`**, que consolida as notas visuais das Aulas 01 a 04 com figuras de síntese, diagramas Mermaid coloridos e suporte a modo claro/escuro no site. A versão `v0.5.0` introduziu a camada de notas visuais, e a `v0.4.0` permanece como o marco de consolidação do Trabalho 01 - Busca.
+A versão pública de referência é a **`v0.5.2`**, que corrige o clipping de diagramas Mermaid e melhora o contraste das cores no modo escuro. A versão `v0.5.1` consolidou as figuras de síntese, os diagramas Mermaid coloridos e o suporte a modo claro/escuro; a `v0.5.0` introduziu a camada de notas visuais; e a `v0.4.0` permanece como o marco de consolidação do Trabalho 01 - Busca.
 
 ## Desenvolvimento do repositório
 
@@ -159,5 +159,5 @@ fix(pages): correct visualization path
 content(trabalho-01): add search assignment starter
 docs(notas): add aula 04 visual review guide
 docs(repo): improve student navigation
-chore(release): prepare v0.5.1
+chore(release): prepare v0.5.2
 ```
