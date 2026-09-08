@@ -10,11 +10,15 @@ O histórico de commits segue Conventional Commits.
 
 - alternador de modo claro/escuro no site público;
 - persistência da preferência visual no navegador;
-- detecção automática de `prefers-color-scheme` quando não há escolha manual.
+- detecção automática de `prefers-color-scheme` quando não há escolha manual;
+- figuras de síntese visual para as notas das Aulas 01 a 04.
 
 ### Changed
 
-- estilos do conteúdo, tabelas, códigos, blocos de revisão, navegação e diagramas ajustados para suportar o modo escuro.
+- estilos do conteúdo, tabelas, códigos, blocos de revisão, navegação e diagramas ajustados para suportar o modo escuro;
+- diagramas Mermaid passam a usar uma paleta colorida própria nos modos claro e escuro;
+- Mermaid é renderizado novamente quando o usuário alterna o tema, preservando contraste e cores;
+- figuras de síntese posicionadas no início de cada nota, sem substituir mapas Mermaid, tabelas, explicações, revisão e checklist.
 
 ## [0.5.0] - 2026-09-04
 
