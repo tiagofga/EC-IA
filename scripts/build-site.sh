@@ -4,7 +4,7 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT_DIR"
 
-mkdir -p docs/estudos-guiados docs/notas
+mkdir -p docs/estudos-guiados docs/notas docs/simulados
 
 for guide in \
   01-introducao \
@@ -27,6 +27,12 @@ for note in \
   rm -rf "docs/notas/$note"
   cp -R "notas/$note" "docs/notas/$note"
 done
+
+# Os simulados são mantidos em simulados/ como fonte pública e sincronizados
+# para o diretório do MkDocs. Apenas enunciados são publicados; gabaritos
+# permanecem fora do repositório público.
+rm -rf docs/simulados
+cp -R simulados docs/simulados
 
 # Prepare public downloads inside docs before MkDocs validates links.
 mkdir -p docs/downloads/aulas docs/downloads/atividades docs/downloads/trabalhos docs/downloads/planos
