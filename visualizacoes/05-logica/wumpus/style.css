@@ -1,0 +1,26 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: #f5f7fb; color: #172033; }
+header { background: #0e4aa8; color: #fff; padding: 1rem 1.25rem; }
+header h1 { margin: 0 0 0.25rem; font-size: 1.5rem; }
+header p { margin: 0; opacity: 0.95; }
+.layout { display: grid; grid-template-columns: 1.1fr 1fr; gap: 1rem; padding: 1rem; }
+.left-panel, .right-panel { min-width: 0; }
+.board-header, .controls, .legend { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: center; margin-bottom: 0.75rem; }
+.board { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.4rem; background: #dfe6f4; padding: 0.5rem; border-radius: 12px; }
+.cell { aspect-ratio: 1 / 1; background: #fff; border: 2px solid #c7d3eb; border-radius: 10px; padding: 0.35rem; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; }
+.cell.current { border-color: #0e4aa8; box-shadow: 0 0 0 3px rgba(14,74,168,0.15); }
+.cell.visited { background: #eef5ff; }
+.cell.safe { background: #eefcf2; }
+.cell.hazardHint { background: #fff8ea; }
+.cell.revealedHazard { background: #ffe9e9; }
+.cell .coord { font-size: 0.72rem; color: #51607b; }
+.cell .marks { font-size: 0.75rem; line-height: 1.25; }
+.agent { font-size: 1.3rem; font-weight: bold; color: #0e4aa8; }
+.controls button { border: none; border-radius: 8px; padding: 0.7rem 0.9rem; background: #0e4aa8; color: white; cursor: pointer; }
+.controls button:hover { filter: brightness(1.05); }
+.card { background: #fff; border: 1px solid #d8e0ef; border-radius: 12px; padding: 0.9rem; margin-bottom: 0.9rem; box-shadow: 0 2px 6px rgba(16, 30, 54, 0.06); }
+.card h2 { margin: 0 0 0.55rem; font-size: 1.02rem; color: #0e4aa8; }
+.log { max-height: 180px; overflow: auto; background: #f8fbff; border: 1px solid #e5ebf6; border-radius: 8px; padding: 0.6rem; white-space: pre-wrap; }
+.highlight { background: #eef5ff; border-left: 4px solid #0e4aa8; padding: 0.7rem; border-radius: 8px; }
+ul { margin: 0; padding-left: 1.1rem; }
+@media (max-width: 980px) { .layout { grid-template-columns: 1fr; } }
