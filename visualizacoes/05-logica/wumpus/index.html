@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mundo do Wumpus - Aula 05</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Mundo do Wumpus - Aula 05</h1>
+    <p>Percepção, base de conhecimento, inferência e ação em um agente baseado em conhecimento.</p>
+  </header>
+
+  <main class="layout">
+    <section class="left-panel">
+      <div class="board-header">
+        <div><strong>Modo:</strong> <span id="modeLabel">Aluno</span></div>
+        <div><strong>Orientação:</strong> <span id="orientationLabel"></span></div>
+      </div>
+      <div id="board" class="board"></div>
+      <div class="controls">
+        <button id="turnLeftBtn">↶ Girar à esquerda</button>
+        <button id="forwardBtn">↑ Avançar</button>
+        <button id="turnRightBtn">↷ Girar à direita</button>
+        <button id="shootBtn">🏹 Atirar</button>
+        <button id="grabBtn">🪙 Pegar ouro</button>
+        <button id="toggleRevealBtn">👁 Revelar mundo</button>
+        <button id="restartBtn">⟳ Reiniciar</button>
+      </div>
+      <div class="legend">
+        <span><b>A</b> agente</span>
+        <span><b>✓</b> segura</span>
+        <span><b>P?</b> possível poço</span>
+        <span><b>W?</b> possível Wumpus</span>
+        <span><b>★</b> ouro</span>
+      </div>
+    </section>
+
+    <section class="right-panel">
+      <div class="card"><h2>Estado atual</h2><div id="status"></div></div>
+      <div class="card"><h2>Percepções</h2><ul id="percepts"></ul></div>
+      <div class="card"><h2>TELL - Sentenças inseridas na KB</h2><div id="kbLog" class="log"></div></div>
+      <div class="card"><h2>Inferências</h2><div id="inferenceLog" class="log"></div></div>
+      <div class="card"><h2>ASK - Sugestão de ação</h2><div id="askResult" class="highlight"></div></div>
+      <div class="card"><h2>Mensagens</h2><div id="messageLog" class="log"></div></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
