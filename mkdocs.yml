@@ -25,11 +25,11 @@ nav:
   - Início: index.md
   - Plano didático: planos/index.md
   - Aulas: aulas/index.md
-  - Atividades: atividades/index.md
-  - Trabalhos: trabalhos/index.md
-  - Estudos guiados: estudos-guiados/index.md
-  - Simulados: simulados/index.md
   - Notas visuais: notas/index.md
-  - Pseudocódigos: pseudocodigos/index.md
+  - Estudos guiados: estudos-guiados/index.md
+  - Atividades: atividades/index.md
+  - Simulados: simulados/index.md
   - Visualizações: visualizacoes/index.md
+  - Pseudocódigos: pseudocodigos/index.md
+  - Trabalhos: trabalhos/index.md
   - Repositório no GitHub: https://github.com/tiagofga/EC-IA

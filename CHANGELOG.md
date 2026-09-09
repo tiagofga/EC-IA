@@ -20,7 +20,20 @@ O histórico de commits segue Conventional Commits.
 - índices de Aulas, Notas, Estudos Guiados e Visualizações atualizados para incluir a Aula 05;
 - página inicial e README atualizados para refletir os novos materiais públicos;
 - script de build atualizado para publicar os PDFs da Aula 05, sincronizar nota e estudo guiado, copiar os pseudocódigos de lógica e publicar a visualização do Wumpus;
-- workflows de validação e publicação passam a reagir também a alterações em `notas/**` e `pseudoalgoritmos/**`.
+- workflows de validação e publicação passam a reagir também a alterações em `notas/**` e `pseudoalgoritmos/**`;
+- navegação principal reorganizada para acompanhar o percurso de estudo: Aulas, Notas visuais, Estudos guiados, Atividades, Simulados, Visualizações, Pseudocódigos e Trabalhos;
+- identidade visual do site e das visualizações harmonizada com uma paleta comum, hierarquia de cartões e controles mais consistente;
+- visualizadores das Aulas 04 e 05 alinhados em tipografia, cabeçalho, estados de foco, botões, cores semânticas e comportamento responsivo;
+- README revisado para refletir a Aula 05 já integrada ao `main` e documentar a identidade visual das visualizações.
+
+### Fixed
+
+- menu lateral impedido de exibir títulos internos das páginas como uma segunda árvore de navegação;
+- responsividade do Mundo do Wumpus em telas largas, intermediárias e móveis;
+- distinção visual das percepções de brisa, fedor e brilho no tabuleiro do Wumpus;
+- encerramento explícito da partida do Wumpus em condições de sucesso ou falha;
+- conflito de build entre o `README.md` e o `index.html` da visualização do Wumpus;
+- links e sincronização da visualização do Wumpus ajustados para manter `mkdocs build --strict` válido.
 
 ### Notes
 

@@ -1,6 +1,29 @@
-/* Usa melhor a largura disponível no tema Read the Docs. */
+/* EC-IA: largura, hierarquia visual e identidade comum do site. */
+:root {
+  --ecia-brand: #1f5aa6;
+  --ecia-brand-strong: #17467f;
+  --ecia-brand-soft: #eef5fb;
+  --ecia-ink: #172033;
+  --ecia-muted: #637083;
+  --ecia-border: #d8e1ec;
+}
+
 .wy-nav-content {
   max-width: 1200px;
+}
+
+/* Mantém o menu principal visualmente consistente com as visualizações. */
+.wy-side-nav-search {
+  background: linear-gradient(145deg, var(--ecia-brand-strong), var(--ecia-brand));
+}
+
+.wy-menu-vertical a:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.wy-menu-vertical li.current > a,
+.wy-menu-vertical li.on a {
+  border-right: 3px solid #5aa3e8;
 }
 
 /* Mantém boa legibilidade em telas largas. */
@@ -9,12 +32,31 @@
   line-height: 1.65;
 }
 
+.rst-content h1,
+.rst-content h2,
+.rst-content h3 {
+  color: var(--ecia-ink);
+}
+
+.rst-content h2 {
+  margin-top: 1.7rem;
+}
+
 .rst-content table.docutils {
   width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.rst-content table.docutils th {
+  background: var(--ecia-brand-soft);
+  color: var(--ecia-ink);
+  vertical-align: top;
 }
 
 .rst-content pre {
   overflow-x: auto;
+  border-radius: 8px;
 }
 
 /* Notas de aula: diagramas e blocos de revisão. */
@@ -23,9 +65,10 @@
   padding: 1.25rem 1.5rem;
   overflow: visible;
   text-align: center;
-  border: 1px solid #e1e4e5;
-  border-radius: 8px;
+  border: 1px solid var(--ecia-border);
+  border-radius: 12px;
   background: #fff;
+  box-shadow: 0 4px 14px rgba(23, 32, 51, 0.04);
 }
 
 .rst-content .mermaid svg {
@@ -57,30 +100,34 @@
 .rst-content blockquote {
   margin: 1.25rem 0;
   padding: 0.9rem 1rem;
-  border-left: 4px solid #2980b9;
+  border-left: 4px solid var(--ecia-brand);
   background: #f4f8fb;
+  border-radius: 0 8px 8px 0;
 }
 
 .rst-content blockquote p:last-child {
   margin-bottom: 0;
 }
 
-.rst-content table.docutils th {
-  vertical-align: top;
-}
-
 .rst-content code {
   word-break: normal;
 }
 
+.rst-content a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
 @media (max-width: 768px) {
   .rst-content .mermaid {
-    padding: 1rem;
+    padding: 0.85rem;
     overflow-x: auto;
   }
 
+  /* Evita encolhimento excessivo sem obrigar todos os diagramas a 720 px. */
   .rst-content .mermaid svg {
-    min-width: 720px;
+    width: auto;
+    min-width: min(640px, 100%);
   }
 }
 

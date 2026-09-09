@@ -2,7 +2,7 @@
 
 Material público da disciplina de **Inteligência Artificial** do Curso de Engenharia de Computação do **CEFET-MG, campus Divinópolis**.
 
-Esta página organiza os materiais de estudo e avaliação da disciplina. Use o menu lateral para acessar plano didático, aulas, notas de aula, atividades, estudos guiados, simulados, pseudocódigos, visualizações e trabalhos.
+Esta página organiza os materiais de estudo e avaliação da disciplina. Use o menu lateral para acessar plano didático, aulas, notas visuais, estudos guiados, atividades, simulados, visualizações, pseudocódigos e trabalhos.
 
 > **Repositório público do projeto:** [github.com/tiagofga/EC-IA](https://github.com/tiagofga/EC-IA)
 
@@ -11,7 +11,7 @@ Esta página organiza os materiais de estudo e avaliação da disciplina. Use o 
 Se você está acompanhando a disciplina durante o semestre, use esta sequência:
 
 1. **Aulas** - revise o conteúdo apresentado em sala;
-2. **Notas de aula** - reorganize os conceitos com mapas mentais, fluxos e tabelas;
+2. **Notas visuais** - reorganize os conceitos com mapas mentais, fluxos e tabelas;
 3. **Estudos guiados** - responda às perguntas sem consultar o material inicialmente;
 4. **Atividades** - aplique os conceitos trabalhados;
 5. **Simulados** - faça uma revisão integrada e treine a resolução sob limite de tempo;
@@ -49,11 +49,11 @@ O Mundo do Wumpus funciona como fio condutor para conectar percepção, `TELL`, 
 
 [Abrir as Visualizações](visualizacoes/)
 
-## Notas de aula
+## Notas visuais
 
-As notas são mapas mentais e guias de revisão. Elas incluem diagramas Mermaid, tabelas comparativas, fluxos conceituais, alertas de erros frequentes e checklists.
+As notas funcionam como mapas mentais e guias de revisão. Elas incluem diagramas Mermaid, tabelas comparativas, fluxos conceituais, alertas de erros frequentes e checklists.
 
-[Abrir as Notas de aula](notas/)
+[Abrir as Notas visuais](notas/)
 
 ## Simulados
 
@@ -62,6 +62,14 @@ Estão disponíveis três simulados para revisão integrada das Aulas 01 a 04. E
 A recomendação é resolvê-los em sequência e, inicialmente, sem consulta. O Simulado 03 utiliza um grafo didático inspirado em cidades brasileiras e apresenta a identificação das siglas das cidades utilizadas. Os gabaritos permanecem fora do site público.
 
 [Acessar os Simulados](simulados/)
+
+## Visualizações
+
+A Aula 04 possui um visualizador de estratégias de busca baseado em **traces pré-calculados**. A Aula 05 acrescenta o mini laboratório interativo do Mundo do Wumpus para acompanhar percepção, representação e inferência.
+
+As visualizações compartilham a mesma identidade visual: azul como cor principal; verde para solução/sucesso; amarelo para atenção ou fronteira; vermelho para estados críticos; violeta para diferenciações específicas. A interface foi pensada para funcionar em desktop, tablet e celular.
+
+[Abrir a seção de visualizações](visualizacoes/)
 
 ## Trabalho 01 - Busca
 
@@ -74,15 +82,9 @@ O primeiro trabalho prático utiliza diretamente os conteúdos da Aula 04.
 
 [Acessar o Trabalho 01](trabalhos/)
 
-## Visualizações
-
-A Aula 04 possui um visualizador de estratégias de busca baseado em **traces pré-calculados**. A Aula 05 acrescenta o mini laboratório interativo do Mundo do Wumpus para acompanhar percepção, representação e inferência.
-
-[Abrir a seção de visualizações](visualizacoes/)
-
 ## Versão pública
 
-A versão de referência continua sendo **v0.6.0**. As mudanças da Aula 05 permanecem em `Unreleased` até a definição do próximo release.
+A versão pública de referência continua sendo **v0.6.0**. O branch `main` já contém a Aula 05; essas mudanças permanecem em `Unreleased` até a definição do próximo release.
 
 ## Sobre este material
 
