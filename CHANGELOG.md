@@ -6,6 +6,24 @@ O histórico de commits segue Conventional Commits.
 
 ## [Unreleased]
 
+### Added
+
+- seção pública de Simulados no site e no repositório;
+- três simulados progressivos para revisão integrada das Aulas 01 a 04;
+- grafos em Mermaid para as questões de execução de busca, incluindo o exercício de busca informada inspirado em cidades brasileiras.
+
+### Changed
+
+- navegação do MkDocs atualizada para incluir Simulados como seção principal;
+- percurso recomendado de estudo atualizado para incluir os simulados após atividades e estudos guiados;
+- script de build atualizado para sincronizar `simulados/` com a documentação publicada.
+
+### Notes
+
+- apenas os enunciados dos simulados são públicos;
+- gabaritos e soluções de referência permanecem fora do repositório e do site público;
+- os simulados são apresentados sem ano ou referência a uma edição específica da disciplina.
+
 ## [0.5.1] - 2026-09-08
 
 ### Added
