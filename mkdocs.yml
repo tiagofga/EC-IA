@@ -27,8 +27,6 @@ nav:
   - Estudos guiados: estudos-guiados/index.md
   - Simulados: simulados/index.md
   - Notas visuais: notas/index.md
-  - Pseudocódigos:
-      - Visão geral: pseudocodigos/index.md
-      - Aula 05 - Lógica: pseudocodigos/05-logica/README.md
+  - Pseudocódigos: pseudocodigos/index.md
   - Visualizações: visualizacoes/index.md
   - Repositório no GitHub: https://github.com/tiagofga/EC-IA
