@@ -27,11 +27,12 @@ function perceptsAt(x,y) {
 
 function log(arr, text) {
   arr.push(text);
-  if (arr.length > 100) arr.shift();
+  if (arr.length > 120) arr.shift();
 }
 const tell = s => log(state.kb, s);
 const infer = s => log(state.inf, s);
 const message = s => log(state.messages, s);
+const tellAction = action => tell(`TELL(KB, Action(${action}))`);
 
 function resetState() {
   const source = worlds[Math.floor(Math.random() * worlds.length)];
@@ -43,6 +44,7 @@ function resetState() {
     possiblePit: new Set(), possibleWumpus: new Set(),
     kb: [], inf: [], messages: [],
     reveal: false, goldCollected: false, alive: true, arrowUsed: false,
+    won: false, finished: false,
     lastBump: false, lastScream: false
   };
   message(`Mundo carregado: ${state.world.name}. O agente inicia em [1,1].`);
@@ -90,6 +92,8 @@ function processCurrentCell() {
   tell(`TELL(KB, ${p.breeze ? '' : '¬'}B${x},${y})`);
   tell(`TELL(KB, ${p.stench ? '' : '¬'}S${x},${y})`);
   tell(`TELL(KB, ${p.glitter ? '' : '¬'}G${x},${y})`);
+  if (p.bump) tell('TELL(KB, Bump)');
+  if (p.scream) tell('TELL(KB, Scream)');
 
   const adj = neighbors(x,y);
   if (!p.breeze) adj.forEach(([a,b]) => markNoPit(a,b, `sem brisa em [${x},${y}]`));
@@ -103,14 +107,22 @@ function processCurrentCell() {
     }
   }
 
-  if (hasPit(x,y)) { state.alive = false; message(`O agente caiu em um poço em [${x},${y}].`); }
-  if (hasWumpus(x,y)) { state.alive = false; message(`O agente encontrou o Wumpus em [${x},${y}] e foi derrotado.`); }
+  if (hasPit(x,y)) {
+    state.alive = false; state.finished = true;
+    message(`O agente caiu em um poço em [${x},${y}].`);
+  }
+  if (hasWumpus(x,y)) {
+    state.alive = false; state.finished = true;
+    message(`O agente encontrou o Wumpus em [${x},${y}] e foi derrotado.`);
+  }
   updateUI();
 }
 
 function askSuggestedAction() {
+  if (state.finished) return state.won ? 'ASK(KB, resultado?) -> objetivo alcançado' : 'ASK(KB, resultado?) -> exploração encerrada';
   if (!state.alive) return 'Nenhuma ação sugerida: o agente não está mais ativo.';
   if (hasGold(state.x,state.y)) return 'ASK(KB, próxima ação?) -> pegar o ouro';
+  if (state.goldCollected && state.x === 1 && state.y === 1) return 'ASK(KB, próxima ação?) -> sair da caverna';
   const adj = neighbors(state.x,state.y);
   const safeUnvisited = adj.filter(([a,b]) => state.safe.has(key(a,b)) && !state.visited.has(key(a,b)));
   if (safeUnvisited.length) {
@@ -126,6 +138,11 @@ function askSuggestedAction() {
 }
 
 function arrowChar() { return ['↑','→','↓','←'][state.dir]; }
+function resultText() {
+  if (state.won) return 'sucesso';
+  if (state.finished) return 'encerrado sem sucesso';
+  return 'em andamento';
+}
 
 function updateUI() {
   const board = document.getElementById('board');
@@ -156,7 +173,7 @@ function updateUI() {
   const p = perceptsAt(state.x,state.y);
   document.getElementById('modeLabel').textContent = state.reveal ? 'Professor' : 'Aluno';
   document.getElementById('orientationLabel').textContent = directions[state.dir];
-  document.getElementById('status').innerHTML = `Posição atual: <b>[${state.x},${state.y}]</b><br>Mundo: <b>${state.world.name}</b><br>Flecha disponível: <b>${state.arrowUsed ? 'não' : 'sim'}</b><br>Ouro coletado: <b>${state.goldCollected ? 'sim' : 'não'}</b><br>Agente ativo: <b>${state.alive ? 'sim' : 'não'}</b>`;
+  document.getElementById('status').innerHTML = `Posição atual: <b>[${state.x},${state.y}]</b><br>Mundo: <b>${state.world.name}</b><br>Flecha disponível: <b>${state.arrowUsed ? 'não' : 'sim'}</b><br>Ouro coletado: <b>${state.goldCollected ? 'sim' : 'não'}</b><br>Agente ativo: <b>${state.alive ? 'sim' : 'não'}</b><br>Resultado: <b>${resultText()}</b>`;
   document.getElementById('percepts').innerHTML = [
     `Brisa: ${p.breeze?'sim':'não'}`, `Fedor: ${p.stench?'sim':'não'}`, `Brilho: ${p.glitter?'sim':'não'}`,
     `Colisão: ${p.bump?'sim':'não'}`, `Grito: ${p.scream?'sim':'não'}`
@@ -167,35 +184,66 @@ function updateUI() {
   document.getElementById('messageLog').textContent = state.messages.join('\n');
 }
 
+function canAct() { return state.alive && !state.finished; }
 function clearMomentaryPercepts() { state.lastBump = false; state.lastScream = false; }
-function turnLeft() { if (!state.alive) return; clearMomentaryPercepts(); state.dir=(state.dir+3)%4; message(`Ação: girar à esquerda. ${directions[state.dir]}.`); updateUI(); }
-function turnRight() { if (!state.alive) return; clearMomentaryPercepts(); state.dir=(state.dir+1)%4; message(`Ação: girar à direita. ${directions[state.dir]}.`); updateUI(); }
+function turnLeft() {
+  if (!canAct()) return;
+  clearMomentaryPercepts(); state.dir=(state.dir+3)%4;
+  tellAction('TurnLeft'); message(`Ação: girar à esquerda. ${directions[state.dir]}.`); updateUI();
+}
+function turnRight() {
+  if (!canAct()) return;
+  clearMomentaryPercepts(); state.dir=(state.dir+1)%4;
+  tellAction('TurnRight'); message(`Ação: girar à direita. ${directions[state.dir]}.`); updateUI();
+}
 function forward() {
-  if (!state.alive) return;
-  clearMomentaryPercepts();
+  if (!canAct()) return;
+  clearMomentaryPercepts(); tellAction('Forward');
   let nx=state.x, ny=state.y;
   if (state.dir===0) ny++; if (state.dir===1) nx++; if (state.dir===2) ny--; if (state.dir===3) nx--;
-  if (!inBounds(nx,ny)) { state.lastBump=true; message('Ação: avançar. Colisão com a parede.'); updateUI(); return; }
-  state.x=nx; state.y=ny; state.visited.add(key(nx,ny)); message(`Ação: avançar para [${nx},${ny}].`); processCurrentCell();
+  if (!inBounds(nx,ny)) {
+    state.lastBump=true; tell('TELL(KB, Bump)');
+    message('Ação: avançar. Colisão com a parede.'); updateUI(); return;
+  }
+  state.x=nx; state.y=ny; state.visited.add(key(nx,ny));
+  message(`Ação: avançar para [${nx},${ny}].`); processCurrentCell();
 }
 function shoot() {
-  if (!state.alive) return;
+  if (!canAct()) return;
   state.lastBump=false; state.lastScream=false;
   if (state.arrowUsed) { message('A flecha já foi utilizada.'); updateUI(); return; }
-  state.arrowUsed=true;
+  state.arrowUsed=true; tellAction('Shoot');
   let x=state.x, y=state.y;
   while (true) {
     if (state.dir===0) y++; if (state.dir===1) x++; if (state.dir===2) y--; if (state.dir===3) x--;
     if (!inBounds(x,y)) break;
     if (hasWumpus(x,y)) {
       state.world.wumpus=null; state.lastScream=true;
-      message(`Ação: atirar. O Wumpus foi atingido no alinhamento de [${x},${y}].`);
-      infer(`⊢ ¬W${x},${y} (grito após o tiro)`); updateUI(); return;
+      tell('TELL(KB, Scream)'); infer(`⊢ ¬W${x},${y} (grito após o tiro)`);
+      message(`Ação: atirar. O Wumpus foi atingido no alinhamento de [${x},${y}].`); updateUI(); return;
     }
   }
   message('Ação: atirar. Nenhum grito foi ouvido.'); updateUI();
 }
-function grab() { if (!state.alive) return; clearMomentaryPercepts(); if (hasGold(state.x,state.y)) { state.goldCollected=true; message(`Ação: pegar o ouro em [${state.x},${state.y}].`); } else message('Não há ouro na casa atual.'); updateUI(); }
+function grab() {
+  if (!canAct()) return;
+  clearMomentaryPercepts(); tellAction('Grab');
+  if (hasGold(state.x,state.y)) {
+    state.goldCollected=true; tell(`TELL(KB, HasGold)`);
+    message(`Ação: pegar o ouro em [${state.x},${state.y}].`);
+  } else message('Não há ouro na casa atual.');
+  updateUI();
+}
+function exitCave() {
+  if (!canAct()) return;
+  clearMomentaryPercepts(); tellAction('Climb');
+  if (state.x !== 1 || state.y !== 1) {
+    message('A saída só está disponível na casa inicial [1,1].'); updateUI(); return;
+  }
+  state.finished = true; state.won = state.goldCollected;
+  message(state.won ? 'O agente saiu da caverna com o ouro. Objetivo alcançado.' : 'O agente saiu da caverna sem o ouro.');
+  updateUI();
+}
 function toggleReveal() { state.reveal=!state.reveal; updateUI(); }
 
 document.getElementById('turnLeftBtn').addEventListener('click', turnLeft);
@@ -203,6 +251,7 @@ document.getElementById('turnRightBtn').addEventListener('click', turnRight);
 document.getElementById('forwardBtn').addEventListener('click', forward);
 document.getElementById('shootBtn').addEventListener('click', shoot);
 document.getElementById('grabBtn').addEventListener('click', grab);
+document.getElementById('exitBtn').addEventListener('click', exitCave);
 document.getElementById('toggleRevealBtn').addEventListener('click', toggleReveal);
 document.getElementById('restartBtn').addEventListener('click', resetState);
 
