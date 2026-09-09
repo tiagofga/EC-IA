@@ -1,8 +1,6 @@
 # Visualizações
 
-As visualizações foram preparadas para ajudar na compreensão do **comportamento dos algoritmos**, e não apenas do resultado final.
-
-Use os botões de avanço e retorno para observar cada passo com calma e tente explicar por que o próximo estado foi escolhido antes de avançar.
+As visualizações foram preparadas para ajudar na compreensão do **comportamento dos algoritmos e dos mecanismos de raciocínio**, e não apenas do resultado final.
 
 ## Aula 04 - Estratégias de Busca
 
@@ -26,25 +24,36 @@ Use os botões de avanço e retorno para observar cada passo com calma e tente e
 
 <a href="04-busca/" class="btn">Abrir visualização interativa da Aula 04</a>
 
-## Como estudar com o visualizador
+## Aula 05 - Mundo do Wumpus
 
-Uma sequência útil é:
+A visualização da Aula 05 funciona como um mini laboratório de lógica. O estudante controla o agente em um tabuleiro 4x4 e acompanha, simultaneamente:
 
-1. selecione um algoritmo;
-2. observe o estado inicial;
-3. tente prever o próximo passo;
-4. avance uma etapa;
-5. confira fronteira, explorados, custos, heurísticas ou configuração atual;
-6. compare o comportamento com outro algoritmo sobre o mesmo problema.
+- percepções locais: brisa, fedor, brilho, colisão e grito;
+- sentenças acrescentadas à base de conhecimento por `TELL`;
+- inferências sobre casas seguras, possíveis poços e possível Wumpus;
+- uma sugestão de ação apresentada como resultado de `ASK`;
+- alternância entre **modo aluno** e **modo professor**, revelando ou ocultando o mundo real.
 
-Para as buscas em grafo, procure principalmente comparar **ordem de expansão**, **informação utilizada para decisão**, **custo do caminho** e **quantidade de estados considerados**.
+O objetivo é tornar visível o ciclo:
 
-Para as buscas locais, observe que o foco deixa de ser a construção de um caminho completo em um grafo e passa a ser a **melhoria de um estado candidato**.
+```text
+percepção -> TELL -> KB -> inferência -> ASK -> ação
+```
+
+<a href="05-logica/wumpus/" class="btn">Abrir Mundo do Wumpus</a>
+
+## Como estudar com as visualizações
+
+Para Busca, tente prever o próximo estado antes de avançar e compare ordem de expansão, custos e heurísticas.
+
+No Wumpus, compare sempre três níveis:
+
+1. o que o agente **percebe**;
+2. o que foi **registrado na KB**;
+3. o que foi **inferido** a partir dessas sentenças.
 
 ## Integridade acadêmica
 
-A visualização pública é baseada em **traces pré-calculados**. O navegador apenas representa estados previamente produzidos.
+A visualização pública da Aula 04 continua baseada em **traces pré-calculados** e não disponibiliza implementações reutilizáveis dos algoritmos exigidos nas avaliações.
 
-O código público não executa BFS, DFS, UCS, Busca Gulosa, A*, Beam Search, Hill Climbing, Simulated Annealing ou Algoritmo Genético. Também não contém os mecanismos privados utilizados para gerar os traces.
-
-Assim, o recurso pode ser utilizado para compreender e comparar os algoritmos sem disponibilizar uma implementação diretamente reutilizável nas atividades da disciplina.
+A visualização do Wumpus é uma demonstração didática independente das implementações cobradas no Trabalho 01 e serve para explorar os conceitos de representação e inferência da Aula 05.
