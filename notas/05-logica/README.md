@@ -1,61 +1,56 @@
 # Aula 05 - Lógica e Raciocínio em IA
 
-> **Guia visual de revisão.** Esta nota organiza a Aula 05 em dois blocos complementares: (i) representação, conhecimento e agentes baseados em conhecimento e (ii) lógica proposicional como linguagem formal para representar fatos e realizar inferências. Use-a para conectar o ciclo `percepção -> TELL -> KB -> ASK -> ação` ao Mundo do Wumpus.
+> **Guia visual de revisão.** Use esta nota depois da aula para reorganizar os conceitos antes do estudo guiado e da atividade. O objetivo não é substituir os slides, mas transformar o conteúdo em um mapa de relações, mantendo o mesmo padrão das notas anteriores.
 
 ## Nota visual da aula
 
 ![Nota visual da Aula 05 - Lógica e Raciocínio em IA](./nota-visual-aula-05.svg)
 
-*Síntese visual dos principais conceitos da Aula 05. Faça uma leitura rápida da figura e, em seguida, use as seções abaixo para aprofundar as relações entre representação, modelos, consequência lógica e resolução.*
+*Síntese visual dos principais conceitos da Aula 05. Use a figura para uma primeira revisão e, em seguida, percorra as seções abaixo para aprofundar cada conceito.*
 
 ## Visão em 30 segundos
 
-| Bloco | Ideia central |
+| Pergunta | Ideia-chave |
 |---|---|
-| Agente baseado em conhecimento | armazena sentenças sobre o mundo e raciocina sobre elas |
-| `TELL` | insere novas informações na base de conhecimento |
-| `ASK` | consulta o que pode ser concluído a partir da base de conhecimento |
-| Sintaxe | define como as sentenças são escritas |
-| Semântica | define quando as sentenças são verdadeiras |
-| Modelo | uma interpretação possível do mundo |
-| Consequência lógica | `KB ⊨ α` significa que `α` é verdadeira em todos os modelos da KB |
-| Verificação de modelos | decide consequência lógica enumerando modelos |
-| FNC | forma adequada para aplicar resolução |
-| Resolução | prova por refutação sem enumerar todos os modelos |
+| O que faz um agente baseado em conhecimento? | Mantém uma base de conhecimento e usa inferência para decidir como agir. |
+| O que faz `TELL`? | Insere na KB uma sentença que representa uma percepção, fato ou ação. |
+| O que faz `ASK`? | Consulta o que pode ser concluído a partir da KB. |
+| Qual é o papel do Mundo do Wumpus? | Tornar visível a passagem de percepção para representação, inferência e ação. |
+| O que é um modelo? | Uma interpretação possível dos símbolos da linguagem. |
+| O que significa `KB ⊨ α`? | Toda interpretação que satisfaz a KB também satisfaz `α`. |
+| Como provar uma conclusão? | Por verificação de modelos ou por regras de inferência, como resolução. |
 
 ## Mapa mental da aula
 
 ```mermaid
 mindmap
   root((Lógica e Raciocínio em IA))
-    Agentes baseados em conhecimento
+    Agente baseado em conhecimento
       Base de conhecimento
       TELL
       ASK
       Máquina de inferência
-      Sensores e atuadores
     Representação
-      Linguagem formal
       Sintaxe
       Semântica
       Sentenças
       Modelos
     Mundo do Wumpus
-      Fedor
       Brisa
+      Fedor
       Brilho
-      Inferência de casas seguras
+      Casas seguras
     Lógica proposicional
-      Átomos
+      Símbolos
       Conectivos
-      Precedência
-      Tabelas-verdade
+      Tabelas verdade
+      Validade
+      Satisfatibilidade
     Inferência
       Consequência lógica
       Verificação de modelos
-      Regras de inferência
-      Resolução
       FNC
+      Resolução
 ```
 
 ## 1. A pergunta central da aula
@@ -64,61 +59,62 @@ A Aula 05 responde à seguinte pergunta:
 
 > **Como um agente pode representar conhecimento sobre o mundo e usá-lo para inferir novas informações antes de agir?**
 
-Essa pergunta liga a discussão de agentes à formalização lógica. O Mundo do Wumpus funciona como o fio condutor porque permite observar a passagem de **percepção** para **conhecimento representado** e, depois, para **inferência**.
-
-## 2. Retomada de `TELL` e `ASK`
-
-Na disciplina, `TELL` e `ASK` não aparecem como conceitos isolados. Eles são a interface operacional de um agente baseado em conhecimento.
+O Mundo do Wumpus funciona como fio condutor porque permite observar toda a cadeia de raciocínio do agente.
 
 ```mermaid
 flowchart LR
-    P[Percepção] --> T[TELL na KB]
-    T --> KB[Base de conhecimento]
-    KB --> I[Inferência]
-    I --> A[ASK sobre a ação]
-    A --> X[Ação]
-    X --> P
+    P["Percepção"] --> T["TELL"]
+    T --> K["Base de conhecimento"]
+    K --> I["Inferência"]
+    I --> Q["ASK"]
+    Q --> A["Ação"]
+    A --> P
 ```
+
+## 2. Retomando `TELL` e `ASK`
+
+`TELL` e `ASK` já aparecem na discussão de agentes baseados em conhecimento. Nesta aula, a ideia é aprofundar **o que existe dentro da KB** e **como uma consulta pode ser respondida por inferência**.
 
 | Operação | Papel |
 |---|---|
 | `TELL(KB, sentença)` | acrescenta conhecimento novo à KB |
 | `ASK(KB, consulta)` | pergunta o que pode ser concluído a partir da KB |
 
-### Exemplo intuitivo
+Exemplo:
 
 ```text
 Percepção em [1,1]: sem brisa e sem fedor
-TELL(KB, ¬B1,1)
-TELL(KB, ¬S1,1)
-ASK(KB, "Há casa segura adjacente?")
+TELL(KB, não há brisa em [1,1])
+TELL(KB, não há fedor em [1,1])
+ASK(KB, "há uma casa segura adjacente?")
 ```
 
-A partir das regras do domínio, o agente pode concluir que as casas adjacentes não contêm poço nem Wumpus.
+> **Ponto de atenção:** `ASK` não significa apenas recuperar algo que já estava explicitamente armazenado. A resposta pode depender de inferência.
 
 ## 3. Base de conhecimento e máquina de inferência
 
-Uma base de conhecimento (KB) armazena sentenças em alguma linguagem formal. A máquina de inferência é o mecanismo que produz conclusões a partir dessas sentenças.
+Uma base de conhecimento contém sentenças em uma linguagem formal. A máquina de inferência usa essas sentenças para produzir novas conclusões.
 
 ```mermaid
 flowchart LR
-    S[Sensores] --> KB[KB]
-    A1[Atuadores] <-- MI[Máquina de inferência]
-    KB --> MI
-    MI --> Q[Consultas e respostas]
+    S["Sensores"] --> T["TELL"]
+    T --> K["Base de conhecimento"]
+    K --> M["Máquina de inferência"]
+    M --> Q["ASK"]
+    Q --> A["Atuadores"]
 ```
 
-### Três níveis úteis de descrição
+### Três níveis de descrição
 
 | Nível | O que observamos |
 |---|---|
 | conhecimento | o agente "sabe" algo sobre o ambiente |
-| lógico | esse conhecimento vira sentenças |
+| lógico | esse conhecimento é expresso como sentenças |
 | implementação | um programa manipula representações simbólicas |
 
 ## 4. Mundo do Wumpus como exemplo central
 
-No Mundo do Wumpus, o agente percebe sinais locais e precisa inferir perigos não observáveis diretamente.
+No Mundo do Wumpus, o agente recebe sinais locais e precisa inferir perigos que não consegue observar diretamente.
 
 | Percepção | Significado local |
 |---|---|
@@ -130,10 +126,10 @@ No Mundo do Wumpus, o agente percebe sinais locais e precisa inferir perigos nã
 
 ```mermaid
 flowchart TD
-    P1[Sem brisa em [1,1]] --> C1[Não há poço em casas adjacentes]
-    P2[Sem fedor em [1,1]] --> C2[Não há Wumpus em casas adjacentes]
-    C1 --> S[Casas adjacentes seguras]
-    C2 --> S
+    B["Sem brisa na casa inicial"] --> NP["Não há poço nas casas adjacentes"]
+    S["Sem fedor na casa inicial"] --> NW["Não há Wumpus nas casas adjacentes"]
+    NP --> SAFE["Casas adjacentes são seguras"]
+    NW --> SAFE
 ```
 
 > **Percepção não é o mesmo que inferência.** O agente percebe a ausência de brisa. A conclusão de que uma casa adjacente é segura é uma consequência lógica.
@@ -150,11 +146,11 @@ A distinção entre sintaxe e semântica é central.
 Exemplo proposicional:
 
 ```text
-B1,1 ↔ (P1,2 ∨ P2,1)
+B11 <-> (P12 ou P21)
 ```
 
-- **Sintaxe:** a expressão usa conectivos e símbolos proposicionais válidos.
-- **Semântica:** a sentença é verdadeira quando o valor de `B1,1` coincide com a disjunção `P1,2 ∨ P2,1`.
+- **Sintaxe:** a expressão precisa seguir as regras da linguagem.
+- **Semântica:** precisamos definir em quais interpretações a sentença é verdadeira.
 
 ## 6. Modelos e mundos possíveis
 
@@ -162,33 +158,38 @@ Um modelo é uma interpretação possível para os símbolos de uma linguagem.
 
 ```mermaid
 flowchart LR
-    K[KB] --> M1[Modelo 1]
-    K --> M2[Modelo 2]
-    K --> M3[Modelo 3]
-    M1 --> V[α verdadeira?]
+    K["KB"] --> M1["Modelo 1"]
+    K --> M2["Modelo 2"]
+    K --> M3["Modelo 3"]
+    M1 --> V["A consulta é verdadeira?"]
     M2 --> V
     M3 --> V
 ```
 
-- cada modelo representa uma forma possível de o mundo ser;
-- alguns modelos satisfazem a KB;
-- outros violam a KB;
-- uma sentença `α` é consequência lógica da KB se for verdadeira em **todos** os modelos que satisfazem a KB.
+A KB restringe os mundos possíveis. Quanto mais conhecimento consistente é acrescentado, menos modelos permanecem compatíveis.
 
 ## 7. Consequência lógica
 
-A notação `KB ⊨ α` significa que toda interpretação em que a KB é verdadeira também torna `α` verdadeira.
-
-Se a KB contém:
+A notação:
 
 ```text
-¬B1,1
-B1,1 ↔ (P1,2 ∨ P2,1)
+KB ⊨ α
 ```
 
-então podemos concluir `¬P1,2 ∧ ¬P2,1`.
+significa que `α` é verdadeira em **todos os modelos** em que a KB é verdadeira.
 
-## 8. Lógica proposicional: linguagem básica
+```mermaid
+flowchart TD
+    K["Modelos que satisfazem a KB"] --> Q{"A conclusão é verdadeira em todos?"}
+    Q -->|sim| E["KB implica a conclusão"]
+    Q -->|não| C["Existe um contraexemplo"]
+```
+
+> **Erro comum:** encontrar um único modelo em que a conclusão é verdadeira não basta para demonstrar consequência lógica.
+
+## 8. Lógica proposicional
+
+A lógica proposicional trabalha com símbolos atômicos e conectivos.
 
 | Símbolo | Leitura |
 |---|---|
@@ -198,7 +199,11 @@ então podemos concluir `¬P1,2 ∧ ¬P2,1`.
 | `p ⇒ q` | se `p`, então `q` |
 | `p ⇔ q` | `p` se e somente se `q` |
 
-Precedência usual: `¬ > ∧ > ∨ > ⇒ > ⇔`.
+Precedência usual:
+
+```text
+¬  >  ∧  >  ∨  >  ⇒  >  ⇔
+```
 
 ## 9. Validade, satisfatibilidade e equivalência
 
@@ -207,57 +212,78 @@ Precedência usual: `¬ > ∧ > ∨ > ⇒ > ⇔`.
 | satisfatível | existe ao menos um modelo que torna a sentença verdadeira |
 | insatisfatível | não existe modelo que torne a sentença verdadeira |
 | válida | a sentença é verdadeira em todos os modelos |
-| equivalente | duas sentenças têm exatamente os mesmos modelos |
+| equivalente | duas sentenças possuem os mesmos modelos |
 
 ## 10. Verificação de modelos
 
+A forma mais direta de verificar uma consequência lógica é enumerar modelos.
+
 ```mermaid
 flowchart TD
-    I[Identificar símbolos] --> E[Enumerar modelos]
-    E --> K[Filtrar modelos que satisfazem a KB]
-    K --> T{α é verdadeira em todos eles?}
-    T -->|sim| C[KB ⊨ α]
-    T -->|não| N[KB ⊭ α]
+    S["Identificar símbolos"] --> E["Enumerar modelos"]
+    E --> F["Filtrar os modelos que satisfazem a KB"]
+    F --> T{"A consulta é verdadeira em todos?"}
+    T -->|sim| Y["Consequência lógica"]
+    T -->|não| N["Não é consequência lógica"]
 ```
 
-Essa abordagem é correta e completa, mas cresce como `2^n` em função do número de símbolos proposicionais.
+Com `n` símbolos proposicionais existem `2^n` interpretações possíveis. Por isso, o custo cresce rapidamente.
 
-## 11. Da enumeração à prova
+## 11. Prova como busca no espaço de inferências
 
-Em vez de verificar todos os modelos, também podemos produzir uma prova por regras de inferência.
+Também podemos produzir uma prova como uma sequência de sentenças derivadas.
 
 ```mermaid
 flowchart LR
-    KB[Sentenças da KB] --> R[Regras de inferência]
-    R --> D[Novas sentenças derivadas]
-    D --> G[Conclusão desejada]
+    K["Sentenças da KB"] --> R["Regras de inferência"]
+    R --> D["Novas sentenças"]
+    D --> G["Conclusão desejada"]
 ```
+
+Essa visão conecta a Aula 05 ao conteúdo anterior de busca: o estado inicial contém a KB e as ações correspondem às regras de inferência aplicáveis.
 
 ## 12. Forma Normal Conjuntiva e resolução
 
-1. adicionar `¬α` à KB;
-2. converter `KB ∧ ¬α` para FNC;
-3. aplicar a regra de resolução repetidamente;
-4. se surgir a cláusula vazia `□`, então `KB ⊨ α`.
+Na resolução por refutação:
+
+1. acrescentamos a negação da consulta à KB;
+2. convertemos as sentenças para FNC;
+3. aplicamos a regra de resolução;
+4. se obtivermos a cláusula vazia, chegamos a uma contradição e a conclusão foi provada.
 
 ```mermaid
 flowchart TD
-    A[KB e negação da consulta] --> B[Converter para FNC]
-    B --> C[Aplicar resolução]
-    C --> D{Surgiu cláusula vazia?}
-    D -->|sim| E[Conclusão provada]
-    D -->|não e sem cláusulas novas| F[Conclusão não provada]
+    A["KB mais a negação da consulta"] --> B["Converter para FNC"]
+    B --> C["Aplicar resolução"]
+    C --> D{"Cláusula vazia?"}
+    D -->|sim| E["Conclusão provada"]
+    D -->|não| F["Continuar enquanto surgirem cláusulas novas"]
 ```
 
-## 13. Erros conceituais frequentes
+## 13. Conexões com as aulas anteriores
 
-> ⚠️ **"Perceber é o mesmo que concluir."** Não. A percepção alimenta a KB; a inferência produz novas conclusões.
+```mermaid
+flowchart LR
+    A1["Agentes"] --> A5["Agente baseado em conhecimento"]
+    A3["Representação"] --> A5
+    A4["Busca"] --> P["Prova como busca"]
+    A5 --> LPO["Próximo passo: Lógica de Primeira Ordem"]
+```
 
-> ⚠️ **"Modelo" e "mundo real" são sinônimos.** Não. Modelo é uma interpretação formal possível.
+- **Agentes:** percepção, ação e racionalidade reaparecem no agente lógico.
+- **Representação:** agora a representação ganha sintaxe e semântica formais.
+- **Busca:** uma prova pode ser vista como busca em um espaço de inferências.
+- **Próxima etapa:** a Lógica de Primeira Ordem amplia o poder de representação.
 
-> ⚠️ **"Se `ASK` retorna algo, então o agente observou diretamente isso."** Não. A resposta pode ter sido inferida.
+## 14. Erros conceituais frequentes
 
-> ⚠️ **"Validade" e "satisfatibilidade" significam a mesma coisa.** Não. Validade exige verdade em todos os modelos; satisfatibilidade exige ao menos um.
+> **Erro 1:** perceber é o mesmo que concluir. Não. Percepções alimentam a KB; inferências produzem conclusões.
+
+> **Erro 2:** modelo e mundo real são sinônimos. Não. Um modelo é uma interpretação formal possível.
+
+> **Erro 3:** se `ASK` retorna algo, o agente observou diretamente aquilo. Não. A resposta pode ter sido inferida.
+
+> **Erro 4:** validade e satisfatibilidade significam a mesma coisa. Não. Validade exige verdade em todos os modelos; satisfatibilidade exige ao menos um.
 
 ## Revisão de 1 minuto
 
@@ -268,18 +294,20 @@ Lógica e Raciocínio em IA
 │   ├── ASK
 │   ├── KB
 │   └── máquina de inferência
-├── representação
+├── representação formal
 │   ├── sintaxe
-│   └── semântica
-├── Wumpus
+│   ├── semântica
+│   └── modelos
+├── Mundo do Wumpus
 │   ├── percepções locais
-│   └── inferências sobre perigo e segurança
+│   └── inferências sobre segurança e perigo
 ├── lógica proposicional
-│   ├── átomos e conectivos
-│   ├── modelos
-│   ├── consequência lógica
-│   └── tabelas-verdade
-└── prova
+│   ├── conectivos
+│   ├── tabelas-verdade
+│   ├── validade
+│   └── satisfatibilidade
+└── inferência
+    ├── consequência lógica
     ├── verificação de modelos
     ├── FNC
     └── resolução
@@ -287,14 +315,14 @@ Lógica e Raciocínio em IA
 
 ## Checklist
 
-- [ ] Consigo explicar o papel de `TELL` e `ASK` em um agente baseado em conhecimento.
+- [ ] Consigo explicar o papel de `TELL` e `ASK`.
 - [ ] Diferencio percepção, representação e inferência.
-- [ ] Consigo interpretar percepções do Mundo do Wumpus.
+- [ ] Consigo interpretar as percepções do Mundo do Wumpus.
 - [ ] Sei distinguir sintaxe e semântica.
 - [ ] Entendo o que é um modelo.
 - [ ] Consigo explicar o significado de `KB ⊨ α`.
 - [ ] Diferencio validade, satisfatibilidade e equivalência.
-- [ ] Entendo por que a verificação de modelos é cara.
-- [ ] Consigo descrever a ideia da resolução por refutação.
+- [ ] Entendo por que a verificação de modelos cresce exponencialmente.
+- [ ] Consigo descrever a resolução por refutação.
 
-**Próximo passo:** faça o [Estudo Guiado 05](../../estudos-guiados/05-logica/README.md), explore a visualização do Mundo do Wumpus e revise os pseudocódigos da Aula 05.
+**Próximo passo:** faça o [Estudo Guiado 05](../../estudos-guiados/05-logica/README.md), explore o [Mundo do Wumpus](../../visualizacoes/05-logica/wumpus/README.md) e revise os pseudocódigos da Aula 05.
