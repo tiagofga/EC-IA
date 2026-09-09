@@ -66,6 +66,19 @@ Em seguida, explique por que "primeiro caminho encontrado" e "caminho de menor c
 
 O grafo a seguir é um modelo didático inspirado em cidades brasileiras. Os custos das arestas foram definidos para o exercício e **não representam distâncias rodoviárias oficiais**. O objetivo é sair de **Divinópolis (DVL)** e chegar a **Brasília (BSB)**.
 
+As siglas usadas no grafo correspondem às seguintes cidades:
+
+| Sigla | Cidade | UF |
+|---|---|---|
+| DVL | Divinópolis | MG |
+| BH | Belo Horizonte | MG |
+| UDI | Uberlândia | MG |
+| RP | Ribeirão Preto | SP |
+| GYN | Goiânia | GO |
+| SP | São Paulo | SP |
+| RIO | Rio de Janeiro | RJ |
+| BSB | Brasília | DF |
+
 ```mermaid
 graph LR
     DVL((DVL)) ---|120| BH((BH))
