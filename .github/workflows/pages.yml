@@ -11,6 +11,8 @@ on:
       - 'planos/**'
       - 'visualizacoes/**'
       - 'estudos-guiados/**'
+      - 'pseudoalgoritmos/**'
+      - 'notas/**'
       - 'simulados/**'
       - 'scripts/**'
       - 'mkdocs.yml'
