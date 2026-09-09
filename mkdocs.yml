@@ -6,6 +6,9 @@ repo_name: tiagofga/EC-IA
 
 theme:
   name: readthedocs
+  navigation_depth: 1
+  titles_only: true
+  collapse_navigation: true
 
 extra_css:
   - assets/extra.css

@@ -12,12 +12,22 @@ Os materiais públicos estão organizados por aula. A recomendação é revisar 
 | 03 | Representação do Conhecimento e Solução de Problemas | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/aulas/03-conhecimento) | <span data-download="../downloads/aulas/EC_IA_003_Conhecimento.pdf">Verificando PDF...</span> |
 | 04 | Estruturas e Estratégias de Busca - Parte I | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/aulas/04-busca) | <span data-download="../downloads/aulas/EC_IA_004_Busca_Parte1.pdf">Verificando PDF...</span> |
 | 04 | Estruturas e Estratégias de Busca - Parte II | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/aulas/04-busca) | <span data-download="../downloads/aulas/EC_IA_004_Busca_Parte2.pdf">Verificando PDF...</span> |
+| 05 | Lógica e Raciocínio em IA - Parte I: Representação, Conhecimento e Agentes Baseados em Conhecimento | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/aulas/05-logica) | <span data-download="../downloads/aulas/EC_IA_005_Logica_Parte1.pdf">Verificando PDF...</span> |
+| 05 | Lógica e Raciocínio em IA - Parte II: Lógica Proposicional | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/aulas/05-logica) | <span data-download="../downloads/aulas/EC_IA_005_Logica_Parte2.pdf">Verificando PDF...</span> |
 
 ## Organização da Aula 04
 
 A Parte I cobre busca não informada e informada, incluindo BFS, Custo Uniforme, DFS, aprofundamento iterativo, heurísticas, Busca Gulosa e A*.
 
 A Parte II amplia a discussão para busca local e ambientes complexos, incluindo Hill Climbing, Simulated Annealing, Busca em Feixe Local, Algoritmos Genéticos, busca não determinística, estados de crença e busca online.
+
+## Organização da Aula 05
+
+A Parte I introduz agentes baseados em conhecimento, base de conhecimento, TELL/ASK, representação, sintaxe, semântica, modelos, mundos possíveis e consequência lógica, usando o Mundo do Wumpus como fio condutor.
+
+A Parte II formaliza a Lógica Proposicional: conectivos, tabelas-verdade, representação proposicional do Wumpus, verificação de modelos, equivalência, validade, satisfazibilidade, Forma Normal Conjuntiva e resolução.
+
+A numeração da Aula 05 segue a organização didática da disciplina. Nas listas e referências ao Russell & Norvig, esses conteúdos se relacionam principalmente ao Capítulo 7 do livro.
 
 ## Sequência recomendada
 

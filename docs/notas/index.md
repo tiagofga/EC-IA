@@ -16,6 +16,7 @@ Aula → Nota visual → Estudo guiado → Atividade → Revisão
 | 02 | Agentes Inteligentes | percepção-ação, racionalidade, PEAS, ambientes e arquiteturas de agentes | [Abrir nota](02-agentes/README.md) |
 | 03 | Representação do Conhecimento e Solução de Problemas | representação, abstração, formulação, estados, nós, árvore e fronteira | [Abrir nota](03-conhecimento/README.md) |
 | 04 | Estruturas e Estratégias de Busca | BFS, DFS, UCS, Gulosa, A*, busca local e ambientes complexos | [Abrir nota](04-busca/README.md) |
+| 05 | Lógica e Raciocínio em IA | TELL/ASK, KB, Wumpus, sintaxe, semântica, modelos, consequência lógica e resolução | [Abrir nota](05-logica/README.md) |
 
 ## Como usar
 

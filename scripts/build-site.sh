@@ -4,13 +4,14 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT_DIR"
 
-mkdir -p docs/estudos-guiados docs/notas docs/simulados
+mkdir -p docs/estudos-guiados docs/notas docs/simulados docs/pseudocodigos docs/visualizacoes
 
 for guide in \
   01-introducao \
   02-agentes \
   03-conhecimento \
-  04-busca
+  04-busca \
+  05-logica
  do
   rm -rf "docs/estudos-guiados/$guide"
   cp -R "estudos-guiados/$guide" "docs/estudos-guiados/$guide"
@@ -22,11 +23,23 @@ for note in \
   01-introducao \
   02-agentes \
   03-conhecimento \
-  04-busca
+  04-busca \
+  05-logica
  do
   rm -rf "docs/notas/$note"
   cp -R "notas/$note" "docs/notas/$note"
 done
+
+# A Aula 05 possui pseudocódigos conceituais próprios de lógica.
+rm -rf docs/pseudocodigos/05-logica
+cp -R pseudoalgoritmos/05-logica docs/pseudocodigos/05-logica
+
+# Para a validação do MkDocs, publique apenas o README da visualização.
+# O laboratório HTML completo é copiado para site/ após o build, evitando
+# conflito entre README.md e index.html no mesmo caminho.
+rm -rf docs/visualizacoes/05-logica
+mkdir -p docs/visualizacoes/05-logica/wumpus
+cp visualizacoes/05-logica/wumpus/README.md docs/visualizacoes/05-logica/wumpus/README.md
 
 # Os simulados são mantidos em simulados/ como fonte pública e sincronizados
 # para o diretório do MkDocs. Apenas enunciados são publicados; gabaritos
@@ -40,10 +53,7 @@ mkdir -p docs/downloads/aulas docs/downloads/atividades docs/downloads/trabalhos
 copy_if_exists() {
   local source="$1"
   local destination="$2"
-
-  if [[ -f "$source" ]]; then
-    cp "$source" "$destination"
-  fi
+  if [[ -f "$source" ]]; then cp "$source" "$destination"; fi
 }
 
 copy_if_exists "aulas/00-visao-geral/EC_IA_000_Visao_Geral.pdf" "docs/downloads/aulas/EC_IA_000_Visao_Geral.pdf"
@@ -52,6 +62,8 @@ copy_if_exists "aulas/02-agentes/EC_IA_002_Agentes.pdf" "docs/downloads/aulas/EC
 copy_if_exists "aulas/03-conhecimento/EC_IA_003_Conhecimento.pdf" "docs/downloads/aulas/EC_IA_003_Conhecimento.pdf"
 copy_if_exists "aulas/04-busca/EC_IA_004_Busca_Parte1.pdf" "docs/downloads/aulas/EC_IA_004_Busca_Parte1.pdf"
 copy_if_exists "aulas/04-busca/EC_IA_004_Busca_Parte2.pdf" "docs/downloads/aulas/EC_IA_004_Busca_Parte2.pdf"
+copy_if_exists "aulas/05-logica/EC_IA_005_Logica_Parte1.pdf" "docs/downloads/aulas/EC_IA_005_Logica_Parte1.pdf"
+copy_if_exists "aulas/05-logica/EC_IA_005_Logica_Parte2.pdf" "docs/downloads/aulas/EC_IA_005_Logica_Parte2.pdf"
 
 copy_if_exists "atividades/01-introducao/lista-01/EC_IA_001_Introducao_Atividades.pdf" "docs/downloads/atividades/EC_IA_001_Introducao_Atividades.pdf"
 copy_if_exists "atividades/02-agentes/lista-02/EC_IA_002_Agentes_Atividades.pdf" "docs/downloads/atividades/EC_IA_002_Agentes_Atividades.pdf"
@@ -59,7 +71,6 @@ copy_if_exists "atividades/03-conhecimento/lista-03/EC_IA_003_Conhecimento_Ativi
 copy_if_exists "atividades/04-busca/lista-04/EC_IA_004_Busca_Atividades.pdf" "docs/downloads/atividades/EC_IA_004_Busca_Atividades.pdf"
 
 copy_if_exists "trabalhos/01-busca/EC_IA_Trabalho_01_2026.pdf" "docs/downloads/trabalhos/EC_IA_Trabalho_01_2026.pdf"
-
 copy_if_exists "planos/2026-2/plano-didatico.md" "docs/downloads/planos/plano-didatico-2026-2.md"
 copy_if_exists "planos/2026-2/Plano_Didatico_IA_2026_2.pdf" "docs/downloads/planos/Plano_Didatico_IA_2026_2.pdf"
 
@@ -68,5 +79,7 @@ mkdocs build --strict
 mkdir -p site/visualizacoes
 rm -rf site/visualizacoes/04-busca
 cp -R visualizacoes/04-busca site/visualizacoes/04-busca
+rm -rf site/visualizacoes/05-logica
+cp -R visualizacoes/05-logica site/visualizacoes/05-logica
 
 echo "Site gerado em: $ROOT_DIR/site"

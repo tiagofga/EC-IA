@@ -15,13 +15,13 @@ Se você está acompanhando a disciplina durante o semestre, use esta sequência
 3. **Estudos guiados** - responda às perguntas sem consultar o material inicialmente;
 4. **Atividades** - aplique os conceitos trabalhados;
 5. **Simulados** - faça uma revisão integrada e treine a resolução sob limite de tempo;
-6. **Visualizações** - acompanhe passo a passo o comportamento dos algoritmos;
-7. **Pseudocódigos** - revise estruturas e critérios específicos;
+6. **Visualizações** - acompanhe passo a passo algoritmos e mecanismos de raciocínio;
+7. **Pseudocódigos** - revise estruturas e procedimentos específicos;
 8. **Trabalhos** - consulte enunciado, código-base e regras de entrega das avaliações práticas.
 
 ## Conteúdo publicado
 
-Os PDFs públicos das aulas estão disponíveis da Aula 00 à Aula 04. As atividades correspondentes às Aulas 01 a 04 também estão publicadas. As Aulas 01 a 04 possuem notas visuais em Markdown para revisão rápida e preparação para os estudos guiados. Há ainda três simulados públicos para revisão integrada dos conteúdos, sem gabaritos ou soluções de referência.
+Os PDFs públicos das aulas estão disponíveis da Aula 00 à Aula 05. As atividades correspondentes às Aulas 01 a 04 também estão publicadas. As Aulas 01 a 05 possuem notas visuais e estudos guiados. Há ainda três simulados públicos para revisão integrada das Aulas 01 a 04, sem gabaritos ou soluções de referência.
 
 | Aula | Tema | Recursos principais |
 |---|---|---|
@@ -30,6 +30,24 @@ Os PDFs públicos das aulas estão disponíveis da Aula 00 à Aula 04. As ativid
 | 02 | Agentes Inteligentes | aula, nota visual, atividade e estudo guiado |
 | 03 | Representação do Conhecimento e Solução de Problemas | aula, nota visual, atividade, estudo guiado e fundamentos de busca |
 | 04 | Estruturas e Estratégias de Busca | duas partes da aula, nota visual, atividade, estudo guiado, pseudocódigos, visualizações e Trabalho 01 |
+| 05 | Lógica e Raciocínio em IA | duas partes da aula, nota visual, estudo guiado, pseudocódigos de lógica e Mundo do Wumpus interativo |
+
+## Aula 05 - Lógica e Raciocínio em IA
+
+A Aula 05 está organizada em duas partes:
+
+- **Parte I - Representação, Conhecimento e Agentes Baseados em Conhecimento**;
+- **Parte II - Lógica Proposicional**.
+
+O Mundo do Wumpus funciona como fio condutor para conectar percepção, `TELL`, base de conhecimento, inferência, `ASK` e ação. A visualização interativa permite observar essa sequência e alternar entre a visão limitada do agente e o mundo completo.
+
+[Abrir a Aula 05](aulas/)
+
+[Abrir a Nota Visual 05](notas/05-logica/README.md)
+
+[Abrir o Estudo Guiado 05](estudos-guiados/05-logica/README.md)
+
+[Abrir as Visualizações](visualizacoes/)
 
 ## Notas de aula
 
@@ -54,26 +72,17 @@ O primeiro trabalho prático utiliza diretamente os conteúdos da Aula 04.
 - **Valor:** 20,0 pontos;
 - **Modalidade:** individual ou em dupla.
 
-A área pública do trabalho reúne o PDF do enunciado, mapa de teste, infraestrutura inicial em Python, testes públicos, roteiro de experimentos, instruções para o relatório, modelo SBC e declaração de uso de IA.
-
 [Acessar o Trabalho 01](trabalhos/)
 
-## Aula 04 - Busca
+## Visualizações
 
-A Aula 04 está organizada em duas partes:
-
-- **Parte I - Busca Não Informada e Informada**: BFS, Custo Uniforme, DFS, aprofundamento iterativo, heurísticas, Busca Gulosa e A*;
-- **Parte II - Busca Local e Ambientes Complexos**: Hill Climbing, Simulated Annealing, Busca em Feixe Local, Algoritmos Genéticos, busca não determinística, estados de crença e busca online.
-
-## Visualização interativa de busca
-
-A Aula 04 possui um visualizador para comparar diferentes estratégias de busca e otimização. O visualizador é baseado em **traces pré-calculados** e não disponibiliza a implementação dos algoritmos utilizados nas avaliações.
+A Aula 04 possui um visualizador de estratégias de busca baseado em **traces pré-calculados**. A Aula 05 acrescenta o mini laboratório interativo do Mundo do Wumpus para acompanhar percepção, representação e inferência.
 
 [Abrir a seção de visualizações](visualizacoes/)
 
 ## Versão pública
 
-A versão de referência deste conjunto de materiais é **v0.6.0**, que consolida a seção de Simulados, sua integração ao site e ao percurso de estudo, além dos ajustes visuais e de publicação realizados desde `v0.5.1`.
+A versão de referência continua sendo **v0.6.0**. As mudanças da Aula 05 permanecem em `Unreleased` até a definição do próximo release.
 
 ## Sobre este material
 
