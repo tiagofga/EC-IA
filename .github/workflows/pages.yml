@@ -11,6 +11,7 @@ on:
       - 'planos/**'
       - 'visualizacoes/**'
       - 'estudos-guiados/**'
+      - 'simulados/**'
       - 'scripts/**'
       - 'mkdocs.yml'
       - 'requirements.txt'
