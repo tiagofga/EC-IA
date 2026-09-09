@@ -28,11 +28,11 @@ A proposta não é apenas disponibilizar arquivos, mas organizar um percurso de 
 | `planos/` | plano didático e organização da disciplina |
 | `aulas/` | materiais públicos organizados por aula |
 | `notas/` | mapas mentais e guias visuais de revisão |
-| `atividades/` | listas destinadas aos estudantes |
 | `estudos-guiados/` | roteiros de revisão e autoavaliação |
+| `atividades/` | listas destinadas aos estudantes |
 | `simulados/` | simulados públicos para revisão integrada, sem gabaritos |
-| `pseudoalgoritmos/` | descrições conceituais dos algoritmos e procedimentos estudados |
 | `visualizacoes/` | visualizações interativas para acompanhar execuções e raciocínio |
+| `pseudoalgoritmos/` | descrições conceituais dos algoritmos e procedimentos estudados |
 | `trabalhos/` | enunciados, código-base e recursos públicos dos trabalhos práticos |
 | `docs/` | páginas utilizadas na publicação do site |
 
@@ -54,7 +54,7 @@ Os PDFs públicos das Aulas 00 a 05 e das Atividades 01 a 04 já fazem parte do 
 As Aulas 01 a 05 possuem notas públicas em Markdown concebidas como **mapas mentais e guias de estudo**. Elas incluem:
 
 - figuras de síntese visual;
-- mapas conceituais e fluxos Mermaid colorido;
+- mapas conceituais e fluxos Mermaid coloridos;
 - tabelas comparativas;
 - resumos de 30 segundos e de 1 minuto;
 - conexões entre aulas;
@@ -114,6 +114,8 @@ A recomendação é tentar responder às perguntas **antes** de consultar novame
 
 ## Visualizações
 
+As visualizações seguem uma identidade visual comum: azul institucional como cor principal, verde para sucesso/solução, amarelo para atenção/fronteira, vermelho para estado crítico e violeta para diferenciações específicas. A interface prioriza legibilidade, responsividade e distinção visual entre estado, ação, inferência e resultado.
+
 ### Aula 04 - Busca
 
 A Aula 04 possui visualizações interativas baseadas em **traces pré-calculados** para:
@@ -132,7 +134,9 @@ A Aula 04 possui visualizações interativas baseadas em **traces pré-calculado
 
 ### Aula 05 - Mundo do Wumpus
 
-A Aula 05 possui um mini laboratório interativo que permite controlar o agente, observar percepções, acompanhar `TELL`, inferências e uma sugestão de `ASK`, além de alternar entre modo aluno e modo professor.
+A Aula 05 possui um mini laboratório interativo que permite controlar o agente, observar percepções, acompanhar `TELL`, inferências e uma consulta didática de `ASK`, além de alternar entre modo aluno e modo professor.
+
+A interface registra visualmente as percepções de **brisa**, **fedor** e **brilho** nas casas visitadas, diferencia casas seguras e perigos possíveis e encerra a partida em condições explícitas de sucesso ou falha.
 
 ## Organização do repositório
 
@@ -157,19 +161,19 @@ EC-IA/
 │   ├── 02-agentes/lista-02/
 │   ├── 03-conhecimento/lista-03/
 │   └── 04-busca/lista-04/
+├── estudos-guiados/
 ├── simulados/
 │   ├── index.md
 │   ├── simulado-01.md
 │   ├── simulado-02.md
 │   └── simulado-03.md
-├── trabalhos/
-│   └── 01-busca/
-├── estudos-guiados/
-├── pseudoalgoritmos/
-│   └── 05-logica/
 ├── visualizacoes/
 │   ├── 04-busca/
 │   └── 05-logica/wumpus/
+├── pseudoalgoritmos/
+│   └── 05-logica/
+├── trabalhos/
+│   └── 01-busca/
 └── docs/
 ```
 
@@ -188,7 +192,7 @@ Modelos LaTeX explicitamente destinados aos estudantes, como o modelo SBC do Tra
 
 ## Versão de referência
 
-A versão pública de referência é a **`v0.6.0`**. As mudanças da Aula 05 permanecem em **Unreleased** até a definição do próximo release.
+A versão pública de referência é a **`v0.6.0`**. O branch `main` já contém a Aula 05 e seus materiais complementares; essas mudanças permanecem em **Unreleased** até a definição do próximo release.
 
 Marcos anteriores:
 
@@ -207,5 +211,6 @@ fix(pages): correct visualization path
 content(trabalho-01): add search assignment starter
 docs(notas): add aula 05 visual review guide
 docs(repo): improve student navigation
+style(site): unify public material visual identity
 chore(release): prepare v0.6.0
 ```
