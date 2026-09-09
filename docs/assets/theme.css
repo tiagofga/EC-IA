@@ -22,14 +22,13 @@
   outline-offset: 2px;
 }
 
-.theme-toggle-side {
-  margin-top: 0.75rem;
-}
+.theme-toggle-side { margin-top: 0.75rem; }
+.theme-toggle-mobile { float: right; margin: 0.25rem 0.6rem 0 0; }
 
-.theme-toggle-mobile {
-  float: right;
-  margin: 0.25rem 0.6rem 0 0;
-}
+/* O menu lateral mostra apenas as seções principais definidas em mkdocs.yml.
+   Os títulos internos de cada página permanecem no conteúdo, mas não viram
+   uma segunda árvore de navegação no menu principal. */
+.wy-menu-vertical li.toctree-l1.current > ul { display: none !important; }
 
 html[data-theme="dark"] body,
 html[data-theme="dark"] .wy-body-for-nav,
@@ -45,17 +44,10 @@ html[data-theme="dark"] .rst-content h3,
 html[data-theme="dark"] .rst-content h4,
 html[data-theme="dark"] .rst-content h5,
 html[data-theme="dark"] .rst-content h6,
-html[data-theme="dark"] .rst-content strong {
-  color: #f0f3f6;
-}
+html[data-theme="dark"] .rst-content strong { color: #f0f3f6; }
 
-html[data-theme="dark"] .rst-content a {
-  color: #6cb6ff;
-}
-
-html[data-theme="dark"] .rst-content a:visited {
-  color: #b6a6ff;
-}
+html[data-theme="dark"] .rst-content a { color: #6cb6ff; }
+html[data-theme="dark"] .rst-content a:visited { color: #b6a6ff; }
 
 html[data-theme="dark"] .rst-content code,
 html[data-theme="dark"] .rst-content tt {
@@ -76,14 +68,10 @@ html[data-theme="dark"] .rst-content table.docutils,
 html[data-theme="dark"] .rst-content table.docutils td,
 html[data-theme="dark"] .rst-content table.docutils th,
 html[data-theme="dark"] .rst-content table td,
-html[data-theme="dark"] .rst-content table th {
-  border-color: #3a4654;
-}
+html[data-theme="dark"] .rst-content table th { border-color: #3a4654; }
 
 html[data-theme="dark"] .rst-content table.docutils:not(.field-list) tr:nth-child(2n-1) td,
-html[data-theme="dark"] .rst-content table:not(.field-list) tr:nth-child(2n-1) td {
-  background: #191f27;
-}
+html[data-theme="dark"] .rst-content table:not(.field-list) tr:nth-child(2n-1) td { background: #191f27; }
 
 html[data-theme="dark"] .rst-content table.docutils th,
 html[data-theme="dark"] .rst-content table th {
@@ -104,16 +92,12 @@ html[data-theme="dark"] .rst-content .warning {
   color: #d8dee9;
 }
 
-html[data-theme="dark"] .rst-content hr {
-  border-color: #34404d;
-}
+html[data-theme="dark"] .rst-content hr { border-color: #34404d; }
 
 html[data-theme="dark"] .wy-breadcrumbs,
 html[data-theme="dark"] .wy-breadcrumbs a,
 html[data-theme="dark"] footer,
-html[data-theme="dark"] footer a {
-  color: #aeb8c4;
-}
+html[data-theme="dark"] footer a { color: #aeb8c4; }
 
 html[data-theme="dark"] .rst-content .mermaid {
   border-color: #3a4654;
@@ -144,22 +128,13 @@ html[data-theme="dark"] .btn-neutral {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
-html[data-theme="dark"] .rst-content img {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-}
+html[data-theme="dark"] .rst-content img { box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35); }
 
 @media (max-width: 768px) {
-  .theme-toggle-side {
-    display: none;
-  }
-
-  .theme-toggle-label {
-    display: none;
-  }
+  .theme-toggle-side { display: none; }
+  .theme-toggle-label { display: none; }
 }
 
 @media (min-width: 769px) {
-  .theme-toggle-mobile {
-    display: none;
-  }
+  .theme-toggle-mobile { display: none; }
 }
