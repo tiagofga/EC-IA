@@ -42,6 +42,7 @@ function resetState() {
     visited: new Set([key(1,1)]), safe: new Set([key(1,1)]),
     noPit: new Set([key(1,1)]), noWumpus: new Set([key(1,1)]),
     possiblePit: new Set(), possibleWumpus: new Set(),
+    perceptHistory: new Map(),
     kb: [], inf: [], messages: [],
     reveal: false, goldCollected: false, alive: true, arrowUsed: false,
     won: false, finished: false,
@@ -88,6 +89,8 @@ function markPossibleWumpus(x,y,reason) {
 function processCurrentCell() {
   const {x,y} = state;
   const p = perceptsAt(x,y);
+  state.perceptHistory.set(key(x,y), { ...p });
+
   tell(`TELL(KB, At(${x},${y}))`);
   tell(`TELL(KB, ${p.breeze ? '' : '¬'}B${x},${y})`);
   tell(`TELL(KB, ${p.stench ? '' : '¬'}S${x},${y})`);
@@ -144,17 +147,29 @@ function resultText() {
   return 'em andamento';
 }
 
+function perceptIcons(p) {
+  if (!p) return '';
+  const icons = [];
+  if (p.breeze) icons.push('<span title="Brisa">🌬️</span>');
+  if (p.stench) icons.push('<span title="Fedor">☁️</span>');
+  if (p.glitter) icons.push('<span title="Brilho">✨</span>');
+  return icons.join('');
+}
+
 function updateUI() {
   const board = document.getElementById('board');
   board.innerHTML = '';
   for (let y = SIZE; y >= 1; y--) {
     for (let x = 1; x <= SIZE; x++) {
       const k = key(x,y), cell = document.createElement('div');
+      const knownPercepts = state.perceptHistory.get(k);
       cell.className = 'cell';
       if (state.visited.has(k)) cell.classList.add('visited');
       if (state.safe.has(k)) cell.classList.add('safe');
       if (state.possiblePit.has(k) || state.possibleWumpus.has(k)) cell.classList.add('hazardHint');
       if (state.reveal && (hasPit(x,y) || hasWumpus(x,y))) cell.classList.add('revealedHazard');
+      if (knownPercepts?.breeze) cell.classList.add('breeze');
+      if (knownPercepts?.stench) cell.classList.add('stench');
       if (state.x === x && state.y === y) cell.classList.add('current');
 
       const labels = [];
@@ -165,7 +180,7 @@ function updateUI() {
       if (state.reveal && hasWumpus(x,y)) labels.push('Wumpus');
       if (state.reveal && hasGold(x,y)) labels.push('★');
 
-      cell.innerHTML = `<div class="coord">[${x},${y}]</div><div class="agent">${state.x===x && state.y===y ? arrowChar() : ''}</div><div class="marks">${labels.join(' ')}</div>`;
+      cell.innerHTML = `<div class="coord">[${x},${y}]</div><div class="percept-icons">${perceptIcons(knownPercepts)}</div><div class="agent">${state.x===x && state.y===y ? arrowChar() : ''}</div><div class="marks">${labels.join(' ')}</div>`;
       board.appendChild(cell);
     }
   }
@@ -175,8 +190,8 @@ function updateUI() {
   document.getElementById('orientationLabel').textContent = directions[state.dir];
   document.getElementById('status').innerHTML = `Posição atual: <b>[${state.x},${state.y}]</b><br>Mundo: <b>${state.world.name}</b><br>Flecha disponível: <b>${state.arrowUsed ? 'não' : 'sim'}</b><br>Ouro coletado: <b>${state.goldCollected ? 'sim' : 'não'}</b><br>Agente ativo: <b>${state.alive ? 'sim' : 'não'}</b><br>Resultado: <b>${resultText()}</b>`;
   document.getElementById('percepts').innerHTML = [
-    `Brisa: ${p.breeze?'sim':'não'}`, `Fedor: ${p.stench?'sim':'não'}`, `Brilho: ${p.glitter?'sim':'não'}`,
-    `Colisão: ${p.bump?'sim':'não'}`, `Grito: ${p.scream?'sim':'não'}`
+    `🌬️ Brisa: ${p.breeze?'sim':'não'}`, `☁️ Fedor: ${p.stench?'sim':'não'}`, `✨ Brilho: ${p.glitter?'sim':'não'}`,
+    `🧱 Colisão: ${p.bump?'sim':'não'}`, `📣 Grito: ${p.scream?'sim':'não'}`
   ].map(v => `<li>${v}</li>`).join('');
   document.getElementById('kbLog').textContent = state.kb.join('\n');
   document.getElementById('inferenceLog').textContent = state.inf.join('\n');
