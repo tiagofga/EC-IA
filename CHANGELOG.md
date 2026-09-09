@@ -6,6 +6,28 @@ O histórico de commits segue Conventional Commits.
 
 ## [Unreleased]
 
+### Added
+
+- Aula 05 - Lógica e Raciocínio em IA publicada em duas partes;
+- nota visual da Aula 05 com síntese de agentes baseados em conhecimento, `TELL`, `ASK`, Mundo do Wumpus, modelos, consequência lógica e resolução;
+- Estudo Guiado 05 com exercícios de representação, modelos, consequência lógica e resolução;
+- pseudocódigos conceituais de agente baseado em conhecimento, verificação de modelos e resolução proposicional por refutação;
+- mini laboratório interativo do Mundo do Wumpus com modo aluno e modo professor;
+- painéis da visualização para percepções, `TELL`, inferências, `ASK` e estado corrente.
+
+### Changed
+
+- índices de Aulas, Notas, Estudos Guiados e Visualizações atualizados para incluir a Aula 05;
+- página inicial e README atualizados para refletir os novos materiais públicos;
+- script de build atualizado para publicar os PDFs da Aula 05, sincronizar nota e estudo guiado, copiar os pseudocódigos de lógica e publicar a visualização do Wumpus;
+- workflows de validação e publicação passam a reagir também a alterações em `notas/**` e `pseudoalgoritmos/**`.
+
+### Notes
+
+- as fontes LaTeX da Aula 05 permanecem fora do repositório público;
+- a numeração da Aula 05 segue a organização didática da disciplina; bibliograficamente, o conteúdo se relaciona principalmente ao Capítulo 7 de Russell & Norvig;
+- as mudanças permanecem em `Unreleased` até a definição do próximo release.
+
 ## [0.6.0] - 2026-09-09
 
 ### Added
@@ -22,7 +44,7 @@ O histórico de commits segue Conventional Commits.
 - percurso recomendado de estudo atualizado para incluir os simulados após atividades e estudos guiados;
 - página inicial do site e README atualizados para refletir a nova camada de revisão;
 - script de build atualizado para sincronizar `simulados/` com a documentação publicada;
-- workflows de validação e publicação atualizados para reagir a alterações em `simulados/`;
+- workflows de validação e publicação atualizados para reagir a alterações em `simulados/**`;
 - página canônica da seção de simulados consolidada em `simulados/index.md`.
 
 ### Fixed
