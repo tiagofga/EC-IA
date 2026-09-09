@@ -2,7 +2,7 @@
 
 Material público da disciplina de **Inteligência Artificial** do Curso de Engenharia de Computação do **CEFET-MG, campus Divinópolis**.
 
-Esta página organiza os materiais de estudo e avaliação da disciplina. Use o menu lateral para acessar plano didático, aulas, notas de aula, atividades, estudos guiados, pseudocódigos, visualizações e trabalhos.
+Esta página organiza os materiais de estudo e avaliação da disciplina. Use o menu lateral para acessar plano didático, aulas, notas de aula, atividades, estudos guiados, simulados, pseudocódigos, visualizações e trabalhos.
 
 > **Repositório público do projeto:** [github.com/tiagofga/EC-IA](https://github.com/tiagofga/EC-IA)
 
@@ -14,13 +14,14 @@ Se você está acompanhando a disciplina durante o semestre, use esta sequência
 2. **Notas de aula** - reorganize os conceitos com mapas mentais, fluxos e tabelas;
 3. **Estudos guiados** - responda às perguntas sem consultar o material inicialmente;
 4. **Atividades** - aplique os conceitos trabalhados;
-5. **Visualizações** - acompanhe passo a passo o comportamento dos algoritmos;
-6. **Pseudocódigos** - revise estruturas e critérios específicos;
-7. **Trabalhos** - consulte enunciado, código-base e regras de entrega das avaliações práticas.
+5. **Simulados** - faça uma revisão integrada e treine a resolução sob limite de tempo;
+6. **Visualizações** - acompanhe passo a passo o comportamento dos algoritmos;
+7. **Pseudocódigos** - revise estruturas e critérios específicos;
+8. **Trabalhos** - consulte enunciado, código-base e regras de entrega das avaliações práticas.
 
 ## Conteúdo publicado
 
-Os PDFs públicos das aulas estão disponíveis da Aula 00 à Aula 04. As atividades correspondentes às Aulas 01 a 04 também estão publicadas. As Aulas 01 a 04 possuem notas visuais em Markdown para revisão rápida e preparação para os estudos guiados.
+Os PDFs públicos das aulas estão disponíveis da Aula 00 à Aula 04. As atividades correspondentes às Aulas 01 a 04 também estão publicadas. As Aulas 01 a 04 possuem notas visuais em Markdown para revisão rápida e preparação para os estudos guiados. Há ainda três simulados públicos para revisão integrada dos conteúdos, sem gabaritos ou soluções de referência.
 
 | Aula | Tema | Recursos principais |
 |---|---|---|
@@ -35,6 +36,14 @@ Os PDFs públicos das aulas estão disponíveis da Aula 00 à Aula 04. As ativid
 As notas são mapas mentais e guias de revisão. Elas incluem diagramas Mermaid, tabelas comparativas, fluxos conceituais, alertas de erros frequentes e checklists.
 
 [Abrir as Notas de aula](notas/)
+
+## Simulados
+
+Estão disponíveis três simulados para revisão integrada das Aulas 01 a 04. Eles cobrem fundamentos de IA, agentes inteligentes, PEAS, representação e formulação de problemas, BFS, DFS, Busca de Custo Uniforme, heurísticas, Busca Gulosa e A*.
+
+A recomendação é resolvê-los em sequência e, inicialmente, sem consulta. Os gabaritos permanecem fora do site público.
+
+[Acessar os Simulados](simulados/)
 
 ## Trabalho 01 - Busca
 

@@ -4,7 +4,7 @@ Material público da disciplina de **Inteligência Artificial** do Curso de Enge
 
 > **Página da disciplina:** https://tiagofga.github.io/EC-IA/
 
-Este repositório reúne materiais de apoio às aulas, notas visuais, atividades, estudos guiados, trabalhos, pseudocódigos conceituais e visualizações didáticas. O conteúdo é organizado progressivamente ao longo do semestre.
+Este repositório reúne materiais de apoio às aulas, notas visuais, atividades, estudos guiados, simulados, trabalhos, pseudocódigos conceituais e visualizações didáticas. O conteúdo é organizado progressivamente ao longo do semestre.
 
 ## Como usar este repositório
 
@@ -14,9 +14,10 @@ Para cada assunto, a sequência recomendada é:
 2. consultar a nota visual correspondente para reorganizar os conceitos;
 3. realizar o estudo guiado;
 4. resolver a atividade proposta;
-5. usar as visualizações para acompanhar o comportamento dos algoritmos;
-6. consultar pseudocódigos para revisar estruturas e critérios específicos;
-7. desenvolver os trabalhos práticos somente após revisar os requisitos e critérios de entrega.
+5. resolver os simulados de forma progressiva e, inicialmente, sem consulta;
+6. usar as visualizações para acompanhar o comportamento dos algoritmos;
+7. consultar pseudocódigos para revisar estruturas e critérios específicos;
+8. desenvolver os trabalhos práticos somente após revisar os requisitos e critérios de entrega.
 
 A proposta não é apenas disponibilizar arquivos, mas organizar um percurso de estudo que possa ser retomado antes de atividades e avaliações.
 
@@ -29,6 +30,7 @@ A proposta não é apenas disponibilizar arquivos, mas organizar um percurso de 
 | `notas/` | mapas mentais e guias visuais de revisão |
 | `atividades/` | listas destinadas aos estudantes |
 | `estudos-guiados/` | roteiros de revisão e autoavaliação |
+| `simulados/` | simulados públicos para revisão integrada, sem gabaritos |
 | `pseudoalgoritmos/` | descrições conceituais dos algoritmos estudados |
 | `visualizacoes/` | visualizações interativas para acompanhar execuções passo a passo |
 | `trabalhos/` | enunciados, código-base e recursos públicos dos trabalhos práticos |
@@ -58,7 +60,13 @@ As Aulas 01 a 04 possuem notas públicas em Markdown concebidas como **mapas men
 - erros conceituais frequentes;
 - checklists de revisão.
 
-A ideia é usar as notas depois dos slides e antes dos estudos guiados. No site, **Notas visuais** aparece como uma seção principal, no mesmo nível de Aulas, Atividades, Trabalhos, Estudos guiados e Visualizações.
+A ideia é usar as notas depois dos slides e antes dos estudos guiados. No site, **Notas visuais** aparece como uma seção principal, no mesmo nível de Aulas, Atividades, Trabalhos, Estudos guiados, Simulados e Visualizações.
+
+## Simulados
+
+A seção `simulados/` reúne três simulados públicos para revisão integrada das Aulas 01 a 04. O conjunto trabalha conceitos fundamentais de IA, agentes inteligentes, PEAS, representação e formulação de problemas, BFS, DFS, UCS, heurísticas, Busca Gulosa e A*.
+
+Os simulados foram organizados em progressão: revisão conceitual e execução, análise e comparação, e uma resolução integrada em condições próximas às de uma avaliação. Os gabaritos e soluções de referência não são publicados.
 
 ## Trabalho 01 - Busca
 
@@ -124,6 +132,10 @@ EC-IA/
 │   ├── 02-agentes/lista-02/
 │   ├── 03-conhecimento/lista-03/
 │   └── 04-busca/lista-04/
+├── simulados/
+│   ├── simulado-01.md
+│   ├── simulado-02.md
+│   └── simulado-03.md
 ├── trabalhos/
 │   └── 01-busca/
 ├── estudos-guiados/
