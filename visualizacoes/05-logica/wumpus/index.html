@@ -14,11 +14,15 @@
 
   <main class="layout">
     <section class="left-panel">
+      <div id="gameResult" class="game-result" hidden></div>
+
       <div class="board-header">
         <div><strong>Modo:</strong> <span id="modeLabel">Aluno</span></div>
         <div><strong>Orientação:</strong> <span id="orientationLabel"></span></div>
       </div>
-      <div id="board" class="board"></div>
+
+      <div id="board" class="board" aria-label="Tabuleiro 4 por 4 do Mundo do Wumpus"></div>
+
       <div class="controls">
         <button id="turnLeftBtn">↶ Girar à esquerda</button>
         <button id="forwardBtn">↑ Avançar</button>
@@ -27,8 +31,9 @@
         <button id="grabBtn">🪙 Pegar ouro</button>
         <button id="exitBtn">🚪 Sair</button>
         <button id="toggleRevealBtn">👁 Revelar mundo</button>
-        <button id="restartBtn">⟳ Reiniciar</button>
+        <button id="restartBtn">⟳ Novo mundo</button>
       </div>
+
       <div class="legend">
         <span class="legend-chip"><b>A</b> agente</span>
         <span class="legend-chip"><b>✓</b> segura</span>
@@ -37,8 +42,10 @@
         <span class="legend-chip">🌬️ brisa</span>
         <span class="legend-chip">☁️ fedor</span>
         <span class="legend-chip">✨ brilho</span>
-        <span class="legend-chip"><b>★</b> ouro</span>
+        <span class="legend-chip"><b>★</b> ouro revelado</span>
       </div>
+
+      <p class="goal-note"><strong>Objetivo:</strong> encontrar o ouro e retornar à casa inicial [1,1]. Ao retornar com o ouro, a partida termina automaticamente.</p>
     </section>
 
     <section class="right-panel">
