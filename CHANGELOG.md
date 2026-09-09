@@ -6,6 +6,8 @@ O histórico de commits segue Conventional Commits.
 
 ## [Unreleased]
 
+## [0.7.0] - 2026-09-09
+
 ### Added
 
 - Aula 05 - Lógica e Raciocínio em IA publicada em duas partes;
@@ -24,7 +26,7 @@ O histórico de commits segue Conventional Commits.
 - navegação principal reorganizada para acompanhar o percurso de estudo: Aulas, Notas visuais, Estudos guiados, Atividades, Simulados, Visualizações, Pseudocódigos e Trabalhos;
 - identidade visual do site e das visualizações harmonizada com uma paleta comum, hierarquia de cartões e controles mais consistente;
 - visualizadores das Aulas 04 e 05 alinhados em tipografia, cabeçalho, estados de foco, botões, cores semânticas e comportamento responsivo;
-- README revisado para refletir a Aula 05 já integrada ao `main` e documentar a identidade visual das visualizações.
+- README revisado para refletir a Aula 05 integrada ao `main` e documentar a identidade visual das visualizações.
 
 ### Fixed
 
@@ -39,7 +41,7 @@ O histórico de commits segue Conventional Commits.
 
 - as fontes LaTeX da Aula 05 permanecem fora do repositório público;
 - a numeração da Aula 05 segue a organização didática da disciplina; bibliograficamente, o conteúdo se relaciona principalmente ao Capítulo 7 de Russell & Norvig;
-- as mudanças permanecem em `Unreleased` até a definição do próximo release.
+- o laboratório do Mundo do Wumpus é uma demonstração didática de percepção, representação e inferência; ele não substitui um provador de teoremas completo.
 
 ## [0.6.0] - 2026-09-09
 
