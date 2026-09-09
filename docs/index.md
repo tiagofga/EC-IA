@@ -84,7 +84,9 @@ O primeiro trabalho prático utiliza diretamente os conteúdos da Aula 04.
 
 ## Versão pública
 
-A versão pública de referência continua sendo **v0.6.0**. O branch `main` já contém a Aula 05; essas mudanças permanecem em `Unreleased` até a definição do próximo release.
+A versão pública de referência é **v0.7.0**.
+
+Esta versão consolida a Aula 05, seus materiais complementares, o laboratório interativo do Mundo do Wumpus e a harmonização visual do site e das visualizações.
 
 ## Sobre este material
 
