@@ -15,8 +15,8 @@ Para cada assunto, a sequência recomendada é:
 3. realizar o estudo guiado;
 4. resolver a atividade proposta;
 5. resolver os simulados de forma progressiva e, inicialmente, sem consulta;
-6. usar as visualizações para acompanhar o comportamento dos algoritmos;
-7. consultar pseudocódigos para revisar estruturas e critérios específicos;
+6. usar as visualizações para acompanhar algoritmos e mecanismos de raciocínio;
+7. consultar pseudocódigos para revisar estruturas e procedimentos específicos;
 8. desenvolver os trabalhos práticos somente após revisar os requisitos e critérios de entrega.
 
 A proposta não é apenas disponibilizar arquivos, mas organizar um percurso de estudo que possa ser retomado antes de atividades e avaliações.
@@ -31,8 +31,8 @@ A proposta não é apenas disponibilizar arquivos, mas organizar um percurso de 
 | `atividades/` | listas destinadas aos estudantes |
 | `estudos-guiados/` | roteiros de revisão e autoavaliação |
 | `simulados/` | simulados públicos para revisão integrada, sem gabaritos |
-| `pseudoalgoritmos/` | descrições conceituais dos algoritmos estudados |
-| `visualizacoes/` | visualizações interativas para acompanhar execuções passo a passo |
+| `pseudoalgoritmos/` | descrições conceituais dos algoritmos e procedimentos estudados |
+| `visualizacoes/` | visualizações interativas para acompanhar execuções e raciocínio |
 | `trabalhos/` | enunciados, código-base e recursos públicos dos trabalhos práticos |
 | `docs/` | páginas utilizadas na publicação do site |
 
@@ -45,22 +45,47 @@ A proposta não é apenas disponibilizar arquivos, mas organizar um percurso de 
 | 02 | Agentes Inteligentes |
 | 03 | Representação do Conhecimento e Solução de Problemas |
 | 04 | Estruturas e Estratégias de Busca |
+| 05 | Lógica e Raciocínio em IA |
 
-Os PDFs públicos das Aulas 00 a 04 e das Atividades 01 a 04 já fazem parte do repositório.
+Os PDFs públicos das Aulas 00 a 05 e das Atividades 01 a 04 já fazem parte do repositório.
 
 ## Notas visuais
 
-As Aulas 01 a 04 possuem notas públicas em Markdown concebidas como **mapas mentais e guias de estudo**. Elas incluem:
+As Aulas 01 a 05 possuem notas públicas em Markdown concebidas como **mapas mentais e guias de estudo**. Elas incluem:
 
 - figuras de síntese visual;
-- mapas conceituais e fluxos em Mermaid colorido;
+- mapas conceituais e fluxos Mermaid colorido;
 - tabelas comparativas;
 - resumos de 30 segundos e de 1 minuto;
 - conexões entre aulas;
 - erros conceituais frequentes;
 - checklists de revisão.
 
-A ideia é usar as notas depois dos slides e antes dos estudos guiados. No site, **Notas visuais** aparece como uma seção principal, no mesmo nível de Aulas, Atividades, Trabalhos, Estudos guiados, Simulados e Visualizações.
+A Aula 05 acrescenta uma síntese específica sobre agentes baseados em conhecimento, `TELL`, `ASK`, Mundo do Wumpus, modelos, consequência lógica e resolução.
+
+## Aula 05 - Lógica e Raciocínio em IA
+
+A Aula 05 é organizada em duas partes:
+
+- **Parte I - Representação, Conhecimento e Agentes Baseados em Conhecimento**;
+- **Parte II - Lógica Proposicional**.
+
+O Mundo do Wumpus funciona como fio condutor. O material complementar da aula inclui:
+
+- nota visual;
+- estudo guiado;
+- pseudocódigo de agente baseado em conhecimento;
+- pseudocódigo de verificação de modelos;
+- pseudocódigo de resolução proposicional por refutação;
+- visualização interativa do Mundo do Wumpus.
+
+A visualização destaca explicitamente o ciclo:
+
+```text
+percepção -> TELL -> KB -> inferência -> ASK -> ação
+```
+
+A numeração da Aula 05 segue a organização didática da disciplina. Nas listas e referências bibliográficas, esse conteúdo se relaciona principalmente ao Capítulo 7 de Russell & Norvig.
 
 ## Simulados
 
@@ -83,33 +108,31 @@ Consulte `trabalhos/01-busca/README.md` antes de iniciar.
 
 ## Estudos guiados
 
-Os estudos guiados das Aulas 01 a 04 foram preparados para revisão ativa. Eles incluem objetivos de aprendizagem, conceitos essenciais, perguntas de verificação, aplicações, erros conceituais a evitar e autoavaliação.
+Os estudos guiados das Aulas 01 a 05 foram preparados para revisão ativa. Eles incluem objetivos de aprendizagem, conceitos essenciais, perguntas de verificação, aplicações, erros conceituais a evitar e autoavaliação.
 
 A recomendação é tentar responder às perguntas **antes** de consultar novamente os slides ou as notas.
 
-## Visualizações de busca
+## Visualizações
 
-A Aula 04 possui visualizações interativas baseadas em **traces pré-calculados**.
+### Aula 04 - Busca
 
-### Busca não informada
+A Aula 04 possui visualizações interativas baseadas em **traces pré-calculados** para:
 
 - Busca em Largura - BFS;
 - Busca em Profundidade - DFS;
-- Busca de Custo Uniforme - UCS.
-
-### Busca informada
-
+- Busca de Custo Uniforme - UCS;
 - Busca Gulosa - Greedy Search;
 - A*;
-- Beam Search.
-
-### Busca local e evolucionária
-
+- Beam Search;
 - Hill Climbing;
 - Simulated Annealing;
 - Algoritmo Genético - AG.
 
-**Importante:** o visualizador público não implementa os algoritmos. Ele apenas reproduz traces previamente gerados. Dessa forma, o recurso pode ser utilizado para estudo sem disponibilizar uma implementação reutilizável diretamente nas atividades e no Trabalho 01.
+**Importante:** o visualizador público da Aula 04 não implementa os algoritmos. Ele apenas reproduz traces previamente gerados.
+
+### Aula 05 - Mundo do Wumpus
+
+A Aula 05 possui um mini laboratório interativo que permite controlar o agente, observar percepções, acompanhar `TELL`, inferências e uma sugestão de `ASK`, além de alternar entre modo aluno e modo professor.
 
 ## Organização do repositório
 
@@ -121,12 +144,14 @@ EC-IA/
 │   ├── 01-introducao/
 │   ├── 02-agentes/
 │   ├── 03-conhecimento/
-│   └── 04-busca/
+│   ├── 04-busca/
+│   └── 05-logica/
 ├── notas/
 │   ├── 01-introducao/
 │   ├── 02-agentes/
 │   ├── 03-conhecimento/
-│   └── 04-busca/
+│   ├── 04-busca/
+│   └── 05-logica/
 ├── atividades/
 │   ├── 01-introducao/lista-01/
 │   ├── 02-agentes/lista-02/
@@ -141,7 +166,10 @@ EC-IA/
 │   └── 01-busca/
 ├── estudos-guiados/
 ├── pseudoalgoritmos/
+│   └── 05-logica/
 ├── visualizacoes/
+│   ├── 04-busca/
+│   └── 05-logica/wumpus/
 └── docs/
 ```
 
@@ -160,7 +188,7 @@ Modelos LaTeX explicitamente destinados aos estudantes, como o modelo SBC do Tra
 
 ## Versão de referência
 
-A versão pública de referência é a **`v0.6.0`**. Ela consolida a nova seção de Simulados, a integração dos simulados ao percurso de estudo e ao site, os ajustes de publicação relacionados a essa seção e as correções visuais dos diagramas Mermaid realizadas após `v0.5.1`.
+A versão pública de referência é a **`v0.6.0`**. As mudanças da Aula 05 permanecem em **Unreleased** até a definição do próximo release.
 
 Marcos anteriores:
 
@@ -174,9 +202,10 @@ O histórico utiliza **Conventional Commits**. Exemplos:
 
 ```text
 feat(busca): add local search visualization
+feat(aula-05): add Wumpus logic lab
 fix(pages): correct visualization path
 content(trabalho-01): add search assignment starter
-docs(notas): add aula 04 visual review guide
+docs(notas): add aula 05 visual review guide
 docs(repo): improve student navigation
 chore(release): prepare v0.6.0
 ```
