@@ -4,7 +4,7 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT_DIR"
 
-mkdir -p docs/estudos-guiados docs/notas docs/simulados docs/pseudocodigos
+mkdir -p docs/estudos-guiados docs/notas docs/simulados docs/pseudocodigos docs/visualizacoes
 
 for guide in \
   01-introducao \
@@ -33,6 +33,11 @@ done
 # A Aula 05 possui pseudocódigos conceituais próprios de lógica.
 rm -rf docs/pseudocodigos/05-logica
 cp -R pseudoalgoritmos/05-logica docs/pseudocodigos/05-logica
+
+# O laboratório do Mundo do Wumpus precisa existir em docs antes da validação
+# para que os links das notas e do estudo guiado sejam resolvidos pelo MkDocs.
+rm -rf docs/visualizacoes/05-logica
+cp -R visualizacoes/05-logica docs/visualizacoes/05-logica
 
 # Os simulados são mantidos em simulados/ como fonte pública e sincronizados
 # para o diretório do MkDocs. Apenas enunciados são publicados; gabaritos
@@ -73,10 +78,10 @@ copy_if_exists "planos/2026-2/Plano_Didatico_IA_2026_2.pdf" "docs/downloads/plan
 
 mkdocs build --strict
 
+# A visualização de Busca continua publicada diretamente, pois usa a estrutura
+# histórica baseada em traces fora de docs/.
 mkdir -p site/visualizacoes
 rm -rf site/visualizacoes/04-busca
 cp -R visualizacoes/04-busca site/visualizacoes/04-busca
-rm -rf site/visualizacoes/05-logica
-cp -R visualizacoes/05-logica site/visualizacoes/05-logica
 
 echo "Site gerado em: $ROOT_DIR/site"
