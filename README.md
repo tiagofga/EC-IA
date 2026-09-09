@@ -192,10 +192,20 @@ Modelos LaTeX explicitamente destinados aos estudantes, como o modelo SBC do Tra
 
 ## Versão de referência
 
-A versão pública de referência é a **`v0.6.0`**. O branch `main` já contém a Aula 05 e seus materiais complementares; essas mudanças permanecem em **Unreleased** até a definição do próximo release.
+A versão pública de referência é a **`v0.7.0`**.
+
+Principais marcos desta versão:
+
+- publicação da Aula 05 - Lógica e Raciocínio em IA em duas partes;
+- nota visual e Estudo Guiado 05;
+- pseudocódigos de agente baseado em conhecimento, verificação de modelos e resolução proposicional;
+- laboratório interativo do Mundo do Wumpus;
+- harmonização visual do site e dos visualizadores das Aulas 04 e 05;
+- reorganização da navegação principal conforme o percurso recomendado de estudo.
 
 Marcos anteriores:
 
+- `v0.6.0` - três simulados progressivos e consolidação da revisão para a Prova I;
 - `v0.5.1` - figuras de síntese, Mermaid colorido e suporte a modo claro/escuro;
 - `v0.5.0` - introdução das notas visuais;
 - `v0.4.0` - consolidação do Trabalho 01 - Busca.
@@ -212,5 +222,5 @@ content(trabalho-01): add search assignment starter
 docs(notas): add aula 05 visual review guide
 docs(repo): improve student navigation
 style(site): unify public material visual identity
-chore(release): prepare v0.6.0
+chore(release): prepare v0.7.0
 ```
