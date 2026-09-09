@@ -41,7 +41,7 @@ As notas são mapas mentais e guias de revisão. Elas incluem diagramas Mermaid,
 
 Estão disponíveis três simulados para revisão integrada das Aulas 01 a 04. Eles cobrem fundamentos de IA, agentes inteligentes, PEAS, representação e formulação de problemas, BFS, DFS, Busca de Custo Uniforme, heurísticas, Busca Gulosa e A*.
 
-A recomendação é resolvê-los em sequência e, inicialmente, sem consulta. Os gabaritos permanecem fora do site público.
+A recomendação é resolvê-los em sequência e, inicialmente, sem consulta. O Simulado 03 utiliza um grafo didático inspirado em cidades brasileiras e apresenta a identificação das siglas das cidades utilizadas. Os gabaritos permanecem fora do site público.
 
 [Acessar os Simulados](simulados/)
 
@@ -70,6 +70,10 @@ A Aula 04 está organizada em duas partes:
 A Aula 04 possui um visualizador para comparar diferentes estratégias de busca e otimização. O visualizador é baseado em **traces pré-calculados** e não disponibiliza a implementação dos algoritmos utilizados nas avaliações.
 
 [Abrir a seção de visualizações](visualizacoes/)
+
+## Versão pública
+
+A versão de referência deste conjunto de materiais é **v0.6.0**, que consolida a seção de Simulados, sua integração ao site e ao percurso de estudo, além dos ajustes visuais e de publicação realizados desde `v0.5.1`.
 
 ## Sobre este material
 

@@ -66,7 +66,7 @@ A ideia é usar as notas depois dos slides e antes dos estudos guiados. No site,
 
 A seção `simulados/` reúne três simulados públicos para revisão integrada das Aulas 01 a 04. O conjunto trabalha conceitos fundamentais de IA, agentes inteligentes, PEAS, representação e formulação de problemas, BFS, DFS, UCS, heurísticas, Busca Gulosa e A*.
 
-Os simulados foram organizados em progressão: revisão conceitual e execução, análise e comparação, e uma resolução integrada em condições próximas às de uma avaliação. Os gabaritos e soluções de referência não são publicados.
+Os simulados foram organizados em progressão: revisão conceitual e execução, análise e comparação, e uma resolução integrada em condições próximas às de uma avaliação. O Simulado 03 inclui uma questão de busca informada em um grafo didático inspirado em cidades brasileiras, com identificação explícita das siglas utilizadas. Os gabaritos e soluções de referência não são publicados.
 
 ## Trabalho 01 - Busca
 
@@ -133,6 +133,7 @@ EC-IA/
 │   ├── 03-conhecimento/lista-03/
 │   └── 04-busca/lista-04/
 ├── simulados/
+│   ├── index.md
 │   ├── simulado-01.md
 │   ├── simulado-02.md
 │   └── simulado-03.md
@@ -159,7 +160,13 @@ Modelos LaTeX explicitamente destinados aos estudantes, como o modelo SBC do Tra
 
 ## Versão de referência
 
-A versão pública de referência é a **`v0.5.1`**, que consolida as notas visuais das Aulas 01 a 04 com figuras de síntese, diagramas Mermaid coloridos e suporte a modo claro/escuro no site. A versão `v0.5.0` introduziu a camada de notas visuais, e a `v0.4.0` permanece como o marco de consolidação do Trabalho 01 - Busca.
+A versão pública de referência é a **`v0.6.0`**. Ela consolida a nova seção de Simulados, a integração dos simulados ao percurso de estudo e ao site, os ajustes de publicação relacionados a essa seção e as correções visuais dos diagramas Mermaid realizadas após `v0.5.1`.
+
+Marcos anteriores:
+
+- `v0.5.1` - figuras de síntese, Mermaid colorido e suporte a modo claro/escuro;
+- `v0.5.0` - introdução das notas visuais;
+- `v0.4.0` - consolidação do Trabalho 01 - Busca.
 
 ## Desenvolvimento do repositório
 
@@ -171,5 +178,5 @@ fix(pages): correct visualization path
 content(trabalho-01): add search assignment starter
 docs(notas): add aula 04 visual review guide
 docs(repo): improve student navigation
-chore(release): prepare v0.5.1
+chore(release): prepare v0.6.0
 ```

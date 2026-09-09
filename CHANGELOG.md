@@ -6,23 +6,38 @@ O histórico de commits segue Conventional Commits.
 
 ## [Unreleased]
 
+## [0.6.0] - 2026-09-09
+
 ### Added
 
 - seção pública de Simulados no site e no repositório;
 - três simulados progressivos para revisão integrada das Aulas 01 a 04;
-- grafos em Mermaid para as questões de execução de busca, incluindo o exercício de busca informada inspirado em cidades brasileiras.
+- grafos em Mermaid para as questões de execução de busca;
+- exercício de busca informada em grafo didático inspirado em cidades brasileiras;
+- identificação explícita das siglas, cidades e UFs utilizadas no Simulado 03.
 
 ### Changed
 
 - navegação do MkDocs atualizada para incluir Simulados como seção principal;
 - percurso recomendado de estudo atualizado para incluir os simulados após atividades e estudos guiados;
-- script de build atualizado para sincronizar `simulados/` com a documentação publicada.
+- página inicial do site e README atualizados para refletir a nova camada de revisão;
+- script de build atualizado para sincronizar `simulados/` com a documentação publicada;
+- workflows de validação e publicação atualizados para reagir a alterações em `simulados/`;
+- página canônica da seção de simulados consolidada em `simulados/index.md`.
+
+### Fixed
+
+- cortes de nós e rótulos nas bordas dos diagramas Mermaid, com ajuste de `viewBox` após a renderização;
+- margem interna e responsividade dos SVGs Mermaid, preservando proporção e legibilidade;
+- contraste da paleta Mermaid no modo escuro;
+- conflito de build causado pela coexistência de `README.md` e `index.md` na seção de simulados.
 
 ### Notes
 
 - apenas os enunciados dos simulados são públicos;
 - gabaritos e soluções de referência permanecem fora do repositório e do site público;
-- os simulados são apresentados sem ano ou referência a uma edição específica da disciplina.
+- os simulados são apresentados sem ano ou referência a uma edição específica da disciplina;
+- a versão `v0.6.0` substitui a preparação não publicada da `v0.5.2`, que foi encerrada sem merge.
 
 ## [0.5.1] - 2026-09-08
 
