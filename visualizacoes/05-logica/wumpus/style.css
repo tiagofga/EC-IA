@@ -10,51 +10,64 @@ body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: var(--b
 header { background: var(--blue); color: #fff; padding: 1rem 1.25rem; }
 header h1 { margin: 0 0 0.25rem; font-size: clamp(1.25rem, 2.2vw, 1.6rem); }
 header p { margin: 0; opacity: 0.95; }
-.layout { display: grid; grid-template-columns: minmax(360px, 720px) minmax(320px, 1fr); gap: 1rem; padding: 1rem; align-items: start; }
+.layout { display: grid; grid-template-columns: minmax(340px, 680px) minmax(320px, 1fr); gap: 1rem; padding: 1rem; align-items: start; max-width: 1500px; margin: 0 auto; }
 .left-panel, .right-panel { min-width: 0; }
-.left-panel { width: 100%; max-width: 720px; }
-.board-header, .controls, .legend { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: center; margin-bottom: 0.75rem; }
-.board { width: 100%; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.4rem; background: #dfe6f4; padding: 0.5rem; border-radius: 12px; }
+.left-panel { width: 100%; max-width: 680px; }
+.board-header, .controls, .legend { display: flex; flex-wrap: wrap; gap: 0.5rem 0.8rem; align-items: center; margin-bottom: 0.75rem; }
+.board { width: 100%; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.35rem; background: #dfe6f4; padding: 0.45rem; border-radius: 12px; }
 .cell { aspect-ratio: 1 / 1; min-width: 0; background: #fff; border: 2px solid var(--border); border-radius: 10px; padding: 0.35rem; display: grid; grid-template-rows: auto 1fr auto; position: relative; overflow: hidden; }
 .cell.current { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(14,74,168,0.15); }
 .cell.visited { background: #eef5ff; }
 .cell.safe { background: #eefcf2; }
 .cell.hazardHint { background: #fff8ea; }
 .cell.revealedHazard { background: #ffe9e9; }
-.cell.breeze { box-shadow: inset 0 0 0 3px rgba(44, 130, 201, 0.20); }
-.cell.stench { background-image: radial-gradient(circle at 85% 18%, rgba(126, 87, 194, 0.16), transparent 30%); }
+.cell.breeze { box-shadow: inset 0 0 0 3px rgba(44,130,201,0.22); }
+.cell.stench { background-image: radial-gradient(circle at 84% 18%, rgba(126,87,194,0.22), transparent 34%); }
+.cell.breeze.stench { background-image: radial-gradient(circle at 84% 18%, rgba(126,87,194,0.22), transparent 34%); box-shadow: inset 0 0 0 3px rgba(44,130,201,0.22); }
 .cell .coord { font-size: clamp(0.62rem, 1.1vw, 0.76rem); color: #51607b; }
 .cell .marks { font-size: clamp(0.64rem, 1.05vw, 0.78rem); line-height: 1.25; min-height: 1.1rem; }
-.cell .percept-icons { position: absolute; top: 0.28rem; right: 0.32rem; display: flex; gap: 0.18rem; font-size: clamp(0.72rem, 1.2vw, 1rem); }
+.cell .percept-icons { position: absolute; top: 0.28rem; right: 0.32rem; display: flex; gap: 0.18rem; font-size: clamp(0.78rem, 1.25vw, 1.05rem); }
 .agent { display: flex; justify-content: center; align-items: center; font-size: clamp(1.2rem, 3vw, 2rem); font-weight: bold; color: var(--blue); }
-.controls button { border: none; border-radius: 8px; padding: 0.68rem 0.85rem; background: var(--blue); color: white; cursor: pointer; font-size: 0.9rem; }
+.controls button { border: none; border-radius: 8px; padding: 0.66rem 0.82rem; background: var(--blue); color: white; cursor: pointer; font-size: 0.88rem; }
 .controls button:hover { filter: brightness(1.05); }
-.legend { font-size: 0.9rem; }
+.controls button:disabled { cursor: not-allowed; opacity: 0.42; filter: grayscale(0.25); }
+.legend { font-size: 0.88rem; }
 .legend .legend-chip { background: #fff; border: 1px solid #d8e0ef; border-radius: 999px; padding: 0.3rem 0.55rem; }
-.card { background: #fff; border: 1px solid #d8e0ef; border-radius: 12px; padding: 0.9rem; margin-bottom: 0.9rem; box-shadow: 0 2px 6px rgba(16, 30, 54, 0.06); }
-.card h2 { margin: 0 0 0.55rem; font-size: 1.02rem; color: var(--blue); }
-.log { max-height: 180px; overflow: auto; background: #f8fbff; border: 1px solid #e5ebf6; border-radius: 8px; padding: 0.6rem; white-space: pre-wrap; }
+.goal-note { margin: 0.35rem 0 0; padding: 0.7rem 0.8rem; background: #fff; border-left: 4px solid var(--blue); border-radius: 8px; font-size: 0.9rem; }
+.game-result { margin-bottom: 0.75rem; padding: 0.85rem 1rem; border-radius: 10px; font-size: 0.95rem; line-height: 1.35; }
+.game-result.success { background: #e9f9ee; border: 1px solid #8fd3a3; color: #14532d; }
+.game-result.failure { background: #fff0f0; border: 1px solid #e2a2a2; color: #7f1d1d; }
+.card { background: #fff; border: 1px solid #d8e0ef; border-radius: 12px; padding: 0.85rem; margin-bottom: 0.8rem; box-shadow: 0 2px 6px rgba(16,30,54,0.06); }
+.card h2 { margin: 0 0 0.5rem; font-size: 1rem; color: var(--blue); }
+.log { max-height: 165px; overflow: auto; background: #f8fbff; border: 1px solid #e5ebf6; border-radius: 8px; padding: 0.6rem; white-space: pre-wrap; }
 .highlight { background: var(--blue-soft); border-left: 4px solid var(--blue); padding: 0.7rem; border-radius: 8px; }
 ul { margin: 0; padding-left: 1.1rem; }
 
-@media (max-width: 1180px) {
-  .layout { grid-template-columns: minmax(320px, 620px) minmax(300px, 1fr); }
-  .controls button { padding: 0.6rem 0.72rem; }
+@media (max-width: 1100px) {
+  .layout { grid-template-columns: minmax(320px, 580px) minmax(300px, 1fr); }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 880px) {
   .layout { grid-template-columns: 1fr; }
-  .left-panel { max-width: 680px; margin: 0 auto; }
+  .left-panel { max-width: 640px; margin: 0 auto; }
+  .right-panel { width: 100%; }
 }
 
 @media (max-width: 560px) {
-  .layout { padding: 0.65rem; gap: 0.7rem; }
+  .layout { padding: 0.6rem; gap: 0.65rem; }
   header { padding: 0.85rem 0.9rem; }
-  .board { gap: 0.25rem; padding: 0.35rem; }
-  .cell { border-width: 1px; border-radius: 7px; padding: 0.22rem; }
-  .controls { gap: 0.4rem; }
-  .controls button { flex: 1 1 calc(50% - 0.4rem); font-size: 0.8rem; padding: 0.58rem 0.45rem; }
-  .legend { gap: 0.35rem; }
-  .legend .legend-chip { font-size: 0.76rem; padding: 0.22rem 0.4rem; }
-  .card { padding: 0.72rem; }
+  header p { font-size: 0.88rem; }
+  .board { gap: 0.22rem; padding: 0.3rem; }
+  .cell { border-width: 1px; border-radius: 7px; padding: 0.2rem; }
+  .controls { gap: 0.35rem; }
+  .controls button { flex: 1 1 calc(50% - 0.35rem); font-size: 0.79rem; padding: 0.56rem 0.4rem; }
+  .legend { gap: 0.3rem; }
+  .legend .legend-chip { font-size: 0.74rem; padding: 0.2rem 0.36rem; }
+  .card { padding: 0.68rem; }
+  .log { max-height: 140px; }
+}
+
+@media (max-width: 380px) {
+  .controls button { flex-basis: 100%; }
+  .cell .percept-icons { font-size: 0.68rem; gap: 0.08rem; }
 }
