@@ -41,8 +41,10 @@ cp -R pseudoalgoritmos/06-lpo-inferencia docs/pseudocodigos/06-lpo-inferencia
 # O laboratório HTML completo é copiado para site/ após o build, evitando
 # conflito entre README.md e index.html no mesmo caminho.
 rm -rf docs/visualizacoes/05-logica
-mkdir -p docs/visualizacoes/05-logica/wumpus
+mkdir -p docs/visualizacoes/05-logica/wumpus docs/visualizacoes/05-logica/modelos docs/visualizacoes/05-logica/resolucao
 cp visualizacoes/05-logica/wumpus/README.md docs/visualizacoes/05-logica/wumpus/README.md
+cp visualizacoes/05-logica/modelos/README.md docs/visualizacoes/05-logica/modelos/README.md
+cp visualizacoes/05-logica/resolucao/README.md docs/visualizacoes/05-logica/resolucao/README.md
 rm -rf docs/visualizacoes/06-lpo-inferencia
 mkdir -p docs/visualizacoes/06-lpo-inferencia/unificacao docs/visualizacoes/06-lpo-inferencia/inferencia
 cp visualizacoes/06-lpo-inferencia/unificacao/README.md docs/visualizacoes/06-lpo-inferencia/unificacao/README.md
