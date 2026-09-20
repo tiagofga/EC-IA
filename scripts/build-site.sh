@@ -71,6 +71,8 @@ copy_if_exists "aulas/04-busca/EC_IA_004_Busca_Parte1.pdf" "docs/downloads/aulas
 copy_if_exists "aulas/04-busca/EC_IA_004_Busca_Parte2.pdf" "docs/downloads/aulas/EC_IA_004_Busca_Parte2.pdf"
 copy_if_exists "aulas/05-logica/EC_IA_005_Logica_Parte1.pdf" "docs/downloads/aulas/EC_IA_005_Logica_Parte1.pdf"
 copy_if_exists "aulas/05-logica/EC_IA_005_Logica_Parte2.pdf" "docs/downloads/aulas/EC_IA_005_Logica_Parte2.pdf"
+copy_if_exists "aulas/06-lpo-inferencia/EC_IA_006_LPO_Parte_01.pdf" "docs/downloads/aulas/EC_IA_006_LPO_Parte_01.pdf"
+copy_if_exists "aulas/06-lpo-inferencia/EC_IA_006_LPO_Parte_02.pdf" "docs/downloads/aulas/EC_IA_006_LPO_Parte_02.pdf"
 
 copy_if_exists "atividades/01-introducao/lista-01/EC_IA_001_Introducao_Atividades.pdf" "docs/downloads/atividades/EC_IA_001_Introducao_Atividades.pdf"
 copy_if_exists "atividades/02-agentes/lista-02/EC_IA_002_Agentes_Atividades.pdf" "docs/downloads/atividades/EC_IA_002_Agentes_Atividades.pdf"
