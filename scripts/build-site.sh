@@ -11,7 +11,8 @@ for guide in \
   02-agentes \
   03-conhecimento \
   04-busca \
-  05-logica
+  05-logica \
+  06-lpo-inferencia
  do
   rm -rf "docs/estudos-guiados/$guide"
   cp -R "estudos-guiados/$guide" "docs/estudos-guiados/$guide"
@@ -24,15 +25,17 @@ for note in \
   02-agentes \
   03-conhecimento \
   04-busca \
-  05-logica
+  05-logica \
+  06-lpo-inferencia
  do
   rm -rf "docs/notas/$note"
   cp -R "notas/$note" "docs/notas/$note"
 done
 
 # A Aula 05 possui pseudocódigos conceituais próprios de lógica.
-rm -rf docs/pseudocodigos/05-logica
+rm -rf docs/pseudocodigos/05-logica docs/pseudocodigos/06-lpo-inferencia
 cp -R pseudoalgoritmos/05-logica docs/pseudocodigos/05-logica
+cp -R pseudoalgoritmos/06-lpo-inferencia docs/pseudocodigos/06-lpo-inferencia
 
 # Para a validação do MkDocs, publique apenas o README da visualização.
 # O laboratório HTML completo é copiado para site/ após o build, evitando
@@ -40,6 +43,10 @@ cp -R pseudoalgoritmos/05-logica docs/pseudocodigos/05-logica
 rm -rf docs/visualizacoes/05-logica
 mkdir -p docs/visualizacoes/05-logica/wumpus
 cp visualizacoes/05-logica/wumpus/README.md docs/visualizacoes/05-logica/wumpus/README.md
+rm -rf docs/visualizacoes/06-lpo-inferencia
+mkdir -p docs/visualizacoes/06-lpo-inferencia/unificacao docs/visualizacoes/06-lpo-inferencia/inferencia
+cp visualizacoes/06-lpo-inferencia/unificacao/README.md docs/visualizacoes/06-lpo-inferencia/unificacao/README.md
+cp visualizacoes/06-lpo-inferencia/inferencia/README.md docs/visualizacoes/06-lpo-inferencia/inferencia/README.md
 
 # Os simulados são mantidos em simulados/ como fonte pública e sincronizados
 # para o diretório do MkDocs. Apenas enunciados são publicados; gabaritos
@@ -81,5 +88,7 @@ rm -rf site/visualizacoes/04-busca
 cp -R visualizacoes/04-busca site/visualizacoes/04-busca
 rm -rf site/visualizacoes/05-logica
 cp -R visualizacoes/05-logica site/visualizacoes/05-logica
+rm -rf site/visualizacoes/06-lpo-inferencia
+cp -R visualizacoes/06-lpo-inferencia site/visualizacoes/06-lpo-inferencia
 
 echo "Site gerado em: $ROOT_DIR/site"
