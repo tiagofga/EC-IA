@@ -8,6 +8,7 @@ O histórico de commits segue Conventional Commits.
 
 ### Added
 
+- PDFs públicos da Aula 06 em duas partes: Representação, Sintaxe e Semântica; e Inferência em LPO;
 - nota visual da Aula 06 - Lógica de Primeira Ordem e Inferência;
 - Estudo Guiado 06 com exercícios sobre termos, quantificadores, substituição, unificação e encadeamento;
 - pseudocódigos conceituais de unificação, encadeamento direto e encadeamento reverso;
@@ -17,11 +18,11 @@ O histórico de commits segue Conventional Commits.
 ### Changed
 
 - índices de Notas, Estudos Guiados e Visualizações atualizados para incluir os materiais complementares da Aula 06;
-- script de build atualizado para sincronizar os materiais da Aula 06 sem publicar PDFs da aula nesta etapa.
+- script de build atualizado para sincronizar os materiais da Aula 06 e publicar os dois PDFs na área de downloads;
+- página de Aulas, página inicial e README atualizados para incluir a Aula 06.
 
 ### Notes
 
-- os PDFs da Aula 06 serão incorporados separadamente pelo fluxo de publicação das aulas;
 - a Aula 06 mantém continuidade com o bloco de lógica e prepara o estudo de Prolog.
 
 ## [0.7.0] - 2026-09-09
