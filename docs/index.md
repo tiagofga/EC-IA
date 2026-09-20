@@ -21,7 +21,7 @@ Se você está acompanhando a disciplina durante o semestre, use esta sequência
 
 ## Conteúdo publicado
 
-Os PDFs públicos das aulas estão disponíveis da Aula 00 à Aula 05. As atividades correspondentes às Aulas 01 a 04 também estão publicadas. As Aulas 01 a 05 possuem notas visuais e estudos guiados. Há ainda três simulados públicos para revisão integrada das Aulas 01 a 04, sem gabaritos ou soluções de referência.
+Os PDFs públicos das aulas estão disponíveis da Aula 00 à Aula 06. As atividades correspondentes às Aulas 01 a 04 também estão publicadas. As Aulas 01 a 06 possuem notas visuais e estudos guiados. Há ainda três simulados públicos para revisão integrada das Aulas 01 a 04, sem gabaritos ou soluções de referência.
 
 | Aula | Tema | Recursos principais |
 |---|---|---|
@@ -31,6 +31,7 @@ Os PDFs públicos das aulas estão disponíveis da Aula 00 à Aula 05. As ativid
 | 03 | Representação do Conhecimento e Solução de Problemas | aula, nota visual, atividade, estudo guiado e fundamentos de busca |
 | 04 | Estruturas e Estratégias de Busca | duas partes da aula, nota visual, atividade, estudo guiado, pseudocódigos, visualizações e Trabalho 01 |
 | 05 | Lógica e Raciocínio em IA | duas partes da aula, nota visual, estudo guiado, pseudocódigos de lógica e Mundo do Wumpus interativo |
+| 06 | Lógica de Primeira Ordem e Inferência | duas partes da aula, nota visual, estudo guiado, pseudocódigos e visualizações de unificação e inferência |
 
 ## Aula 05 - Lógica e Raciocínio em IA
 
@@ -46,6 +47,18 @@ O Mundo do Wumpus funciona como fio condutor para conectar percepção, `TELL`, 
 [Abrir a Nota Visual 05](notas/05-logica/README.md)
 
 [Abrir o Estudo Guiado 05](estudos-guiados/05-logica/README.md)
+
+[Abrir as Visualizações](visualizacoes/)
+
+## Aula 06 - Lógica de Primeira Ordem e Inferência
+
+A Aula 06 está organizada em duas partes: **Representação, Sintaxe e Semântica** e **Inferência em LPO**. O material complementar acompanha o percurso da aula, com ênfase em quantificadores, substituição, unificação, encadeamento direto e reverso, retrocesso e resolução.
+
+[Abrir a Aula 06](aulas/)
+
+[Abrir a Nota Visual 06](notas/06-lpo-inferencia/README.md)
+
+[Abrir o Estudo Guiado 06](estudos-guiados/06-lpo-inferencia/README.md)
 
 [Abrir as Visualizações](visualizacoes/)
 
@@ -65,7 +78,7 @@ A recomendação é resolvê-los em sequência e, inicialmente, sem consulta. O 
 
 ## Visualizações
 
-A Aula 04 possui um visualizador de estratégias de busca baseado em **traces pré-calculados**. A Aula 05 acrescenta o mini laboratório interativo do Mundo do Wumpus para acompanhar percepção, representação e inferência.
+A Aula 04 possui um visualizador de estratégias de busca baseado em **traces pré-calculados**. A Aula 05 acrescenta o mini laboratório interativo do Mundo do Wumpus. A Aula 06 adiciona visualizações passo a passo para **unificação** e para comparação entre **encadeamento direto e reverso**.
 
 As visualizações compartilham a mesma identidade visual: azul como cor principal; verde para solução/sucesso; amarelo para atenção ou fronteira; vermelho para estados críticos; violeta para diferenciações específicas. A interface foi pensada para funcionar em desktop, tablet e celular.
 
