@@ -42,6 +42,34 @@ percepção -> TELL -> KB -> inferência -> ASK -> ação
 
 <a href="05-logica/wumpus/" class="btn">Abrir Mundo do Wumpus</a>
 
+### Modelos e consequência lógica
+
+Explore mundos possíveis, destaque os modelos da KB, identifique contraexemplos e verifique visualmente quando `KB ⊨ α`.
+
+<a href="05-logica/modelos/" class="btn">Abrir Modelos e Consequência Lógica</a>
+
+### Resolução proposicional
+
+Acompanhe uma prova por refutação desde a negação da consulta e a FNC até os resolventes e, quando aplicável, a cláusula vazia `□`.
+
+<a href="05-logica/resolucao/" class="btn">Abrir Resolução Proposicional</a>
+
+## Aula 06 - Lógica de Primeira Ordem e Inferência
+
+A Aula 06 acrescenta duas visualizações complementares.
+
+### Unificação
+
+Acompanhe comparação de predicados e aridade, pareamento de argumentos, construção da substituição, sucesso ou falha e o MGU quando existir.
+
+<a href="06-lpo-inferencia/unificacao/" class="btn">Abrir visualização de Unificação</a>
+
+### Encadeamento e inferência
+
+Compare **encadeamento direto**, orientado pelos dados, e **encadeamento reverso**, orientado pela meta, usando a mesma base de conhecimento.
+
+<a href="06-lpo-inferencia/inferencia/" class="btn">Abrir visualização de Inferência em LPO</a>
+
 ## Como estudar com as visualizações
 
 Para Busca, tente prever o próximo estado antes de avançar e compare ordem de expansão, custos e heurísticas.
@@ -51,6 +79,8 @@ No Wumpus, compare sempre três níveis:
 1. o que o agente **percebe**;
 2. o que foi **registrado na KB**;
 3. o que foi **inferido** a partir dessas sentenças.
+
+Em Modelos, procure primeiro os mundos que satisfazem a KB e só então verifique a consulta. Em Resolução, acompanhe quais literais complementares são eliminados a cada passo.
 
 ## Integridade acadêmica
 

@@ -46,12 +46,13 @@ A proposta não é apenas disponibilizar arquivos, mas organizar um percurso de 
 | 03 | Representação do Conhecimento e Solução de Problemas |
 | 04 | Estruturas e Estratégias de Busca |
 | 05 | Lógica e Raciocínio em IA |
+| 06 | Lógica de Primeira Ordem e Inferência |
 
-Os PDFs públicos das Aulas 00 a 05 e das Atividades 01 a 04 já fazem parte do repositório.
+Os PDFs públicos das Aulas 00 a 06 e das Atividades 01 a 04 já fazem parte do repositório.
 
 ## Notas visuais
 
-As Aulas 01 a 05 possuem notas públicas em Markdown concebidas como **mapas mentais e guias de estudo**. Elas incluem:
+As Aulas 01 a 06 possuem notas públicas em Markdown concebidas como **mapas mentais e guias de estudo**. Elas incluem:
 
 - figuras de síntese visual;
 - mapas conceituais e fluxos Mermaid coloridos;
@@ -61,7 +62,7 @@ As Aulas 01 a 05 possuem notas públicas em Markdown concebidas como **mapas men
 - erros conceituais frequentes;
 - checklists de revisão.
 
-A Aula 05 acrescenta uma síntese específica sobre agentes baseados em conhecimento, `TELL`, `ASK`, Mundo do Wumpus, modelos, consequência lógica e resolução.
+A Aula 05 acrescenta uma síntese específica sobre agentes baseados em conhecimento, `TELL`, `ASK`, Mundo do Wumpus, modelos, consequência lógica e resolução. A Aula 06 amplia esse percurso com LPO, quantificadores, substituição, unificação, encadeamento e resolução em LPO.
 
 ## Aula 05 - Lógica e Raciocínio em IA
 
@@ -77,7 +78,9 @@ O Mundo do Wumpus funciona como fio condutor. O material complementar da aula in
 - pseudocódigo de agente baseado em conhecimento;
 - pseudocódigo de verificação de modelos;
 - pseudocódigo de resolução proposicional por refutação;
-- visualização interativa do Mundo do Wumpus.
+- visualização interativa do Mundo do Wumpus;
+- visualização de modelos e consequência lógica;
+- visualização de resolução proposicional por refutação.
 
 A visualização destaca explicitamente o ciclo:
 
@@ -132,11 +135,17 @@ A Aula 04 possui visualizações interativas baseadas em **traces pré-calculado
 
 **Importante:** o visualizador público da Aula 04 não implementa os algoritmos. Ele apenas reproduz traces previamente gerados.
 
-### Aula 05 - Mundo do Wumpus
+### Aula 05 - Lógica proposicional e Mundo do Wumpus
 
 A Aula 05 possui um mini laboratório interativo que permite controlar o agente, observar percepções, acompanhar `TELL`, inferências e uma consulta didática de `ASK`, além de alternar entre modo aluno e modo professor.
 
 A interface registra visualmente as percepções de **brisa**, **fedor** e **brilho** nas casas visitadas, diferencia casas seguras e perigos possíveis e encerra a partida em condições explícitas de sucesso ou falha.
+
+Duas visualizações adicionais completam a Parte II: **Modelos e consequência lógica**, para explorar mundos possíveis, modelos da KB, contraexemplos, validade e satisfatibilidade; e **Resolução proposicional**, para acompanhar FNC, resolventes e prova por refutação.
+
+### Aula 06 - LPO e Inferência
+
+A Aula 06 possui duas visualizações interativas: uma dedicada à **unificação**, com construção passo a passo do UMG e casos de falha, e outra dedicada à **inferência**, comparando encadeamento direto e reverso sobre o caso West, incluindo substituições, fatos derivados, submetas e retrocesso conceitual.
 
 ## Organização do repositório
 
@@ -149,13 +158,15 @@ EC-IA/
 │   ├── 02-agentes/
 │   ├── 03-conhecimento/
 │   ├── 04-busca/
-│   └── 05-logica/
+│   ├── 05-logica/
+│   └── 06-lpo-inferencia/
 ├── notas/
 │   ├── 01-introducao/
 │   ├── 02-agentes/
 │   ├── 03-conhecimento/
 │   ├── 04-busca/
-│   └── 05-logica/
+│   ├── 05-logica/
+│   └── 06-lpo-inferencia/
 ├── atividades/
 │   ├── 01-introducao/lista-01/
 │   ├── 02-agentes/lista-02/
@@ -169,9 +180,14 @@ EC-IA/
 │   └── simulado-03.md
 ├── visualizacoes/
 │   ├── 04-busca/
-│   └── 05-logica/wumpus/
+│   ├── 05-logica/
+│   │   ├── wumpus/
+│   │   ├── modelos/
+│   │   └── resolucao/
+│   └── 06-lpo-inferencia/
 ├── pseudoalgoritmos/
-│   └── 05-logica/
+│   ├── 05-logica/
+│   └── 06-lpo-inferencia/
 ├── trabalhos/
 │   └── 01-busca/
 └── docs/

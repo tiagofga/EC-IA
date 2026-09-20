@@ -11,7 +11,8 @@ for guide in \
   02-agentes \
   03-conhecimento \
   04-busca \
-  05-logica
+  05-logica \
+  06-lpo-inferencia
  do
   rm -rf "docs/estudos-guiados/$guide"
   cp -R "estudos-guiados/$guide" "docs/estudos-guiados/$guide"
@@ -24,22 +25,30 @@ for note in \
   02-agentes \
   03-conhecimento \
   04-busca \
-  05-logica
+  05-logica \
+  06-lpo-inferencia
  do
   rm -rf "docs/notas/$note"
   cp -R "notas/$note" "docs/notas/$note"
 done
 
 # A Aula 05 possui pseudocódigos conceituais próprios de lógica.
-rm -rf docs/pseudocodigos/05-logica
+rm -rf docs/pseudocodigos/05-logica docs/pseudocodigos/06-lpo-inferencia
 cp -R pseudoalgoritmos/05-logica docs/pseudocodigos/05-logica
+cp -R pseudoalgoritmos/06-lpo-inferencia docs/pseudocodigos/06-lpo-inferencia
 
 # Para a validação do MkDocs, publique apenas o README da visualização.
 # O laboratório HTML completo é copiado para site/ após o build, evitando
 # conflito entre README.md e index.html no mesmo caminho.
 rm -rf docs/visualizacoes/05-logica
-mkdir -p docs/visualizacoes/05-logica/wumpus
+mkdir -p docs/visualizacoes/05-logica/wumpus docs/visualizacoes/05-logica/modelos docs/visualizacoes/05-logica/resolucao
 cp visualizacoes/05-logica/wumpus/README.md docs/visualizacoes/05-logica/wumpus/README.md
+cp visualizacoes/05-logica/modelos/README.md docs/visualizacoes/05-logica/modelos/README.md
+cp visualizacoes/05-logica/resolucao/README.md docs/visualizacoes/05-logica/resolucao/README.md
+rm -rf docs/visualizacoes/06-lpo-inferencia
+mkdir -p docs/visualizacoes/06-lpo-inferencia/unificacao docs/visualizacoes/06-lpo-inferencia/inferencia
+cp visualizacoes/06-lpo-inferencia/unificacao/README.md docs/visualizacoes/06-lpo-inferencia/unificacao/README.md
+cp visualizacoes/06-lpo-inferencia/inferencia/README.md docs/visualizacoes/06-lpo-inferencia/inferencia/README.md
 
 # Os simulados são mantidos em simulados/ como fonte pública e sincronizados
 # para o diretório do MkDocs. Apenas enunciados são publicados; gabaritos
@@ -64,6 +73,8 @@ copy_if_exists "aulas/04-busca/EC_IA_004_Busca_Parte1.pdf" "docs/downloads/aulas
 copy_if_exists "aulas/04-busca/EC_IA_004_Busca_Parte2.pdf" "docs/downloads/aulas/EC_IA_004_Busca_Parte2.pdf"
 copy_if_exists "aulas/05-logica/EC_IA_005_Logica_Parte1.pdf" "docs/downloads/aulas/EC_IA_005_Logica_Parte1.pdf"
 copy_if_exists "aulas/05-logica/EC_IA_005_Logica_Parte2.pdf" "docs/downloads/aulas/EC_IA_005_Logica_Parte2.pdf"
+copy_if_exists "aulas/06-lpo-inferencia/EC_IA_006_LPO_Parte_01.pdf" "docs/downloads/aulas/EC_IA_006_LPO_Parte_01.pdf"
+copy_if_exists "aulas/06-lpo-inferencia/EC_IA_006_LPO_Parte_02.pdf" "docs/downloads/aulas/EC_IA_006_LPO_Parte_02.pdf"
 
 copy_if_exists "atividades/01-introducao/lista-01/EC_IA_001_Introducao_Atividades.pdf" "docs/downloads/atividades/EC_IA_001_Introducao_Atividades.pdf"
 copy_if_exists "atividades/02-agentes/lista-02/EC_IA_002_Agentes_Atividades.pdf" "docs/downloads/atividades/EC_IA_002_Agentes_Atividades.pdf"
@@ -81,5 +92,7 @@ rm -rf site/visualizacoes/04-busca
 cp -R visualizacoes/04-busca site/visualizacoes/04-busca
 rm -rf site/visualizacoes/05-logica
 cp -R visualizacoes/05-logica site/visualizacoes/05-logica
+rm -rf site/visualizacoes/06-lpo-inferencia
+cp -R visualizacoes/06-lpo-inferencia site/visualizacoes/06-lpo-inferencia
 
 echo "Site gerado em: $ROOT_DIR/site"
