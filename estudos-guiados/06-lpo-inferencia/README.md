@@ -78,7 +78,17 @@ Humano(x) → Mortal(x)
 ∃y ∀x Conhece(x,y)
 ```
 
-## 7. Substituição
+## 7. Instanciação universal e existencial
+
+Explique, com suas palavras, a diferença entre IU e IE. Em seguida, instancie:
+
+```text
+∀x (King(x) → Person(x))
+```
+
+para `John`, e explique por que uma instanciação existencial deve introduzir uma constante nova.
+
+## 8. Substituição
 
 Aplique `θ = {x/Socrates}` em:
 
@@ -94,7 +104,7 @@ Conhece(x,y)
 
 Explique por que uma substituição precisa ser consistente.
 
-## 8. Unificação
+## 9. Unificação
 
 Determine se os pares unificam. Quando possível, apresente uma substituição.
 
@@ -104,11 +114,17 @@ Determine se os pares unificam. Quando possível, apresente uma substituição.
 4. `P(x,x)` e `P(Ada,Turing)`
 5. `P(x,y)` e `P(y,x)`
 
-## 9. MGU
+## 10. UMG
 
 Explique por que o unificador mais geral é preferível a uma substituição mais específica que também funcione.
 
-## 10. Modus Ponens Generalizado
+## 11. Padronização à parte e teste de ocorrência
+
+1. Por que duas regras diferentes podem reutilizar o mesmo nome de variável sem representar a mesma variável lógica?
+2. O que a padronização à parte evita?
+3. Por que `P(x)` e `P(f(x))` devem falhar no teste de ocorrência?
+
+## 12. Modus Ponens Generalizado
 
 Considere:
 
@@ -130,7 +146,11 @@ Agora repita para:
 2. Pai(Ada,Bia)
 ```
 
-## 11. Encadeamento direto
+## 13. Cláusulas definidas e caso West
+
+Explique por que cláusulas definidas são adequadas para encadeamento. Depois, usando o caso West apresentado na aula, identifique quais fatos precisam sustentar a conclusão `Criminal(West)`.
+
+## 14. Encadeamento direto
 
 Considere a KB:
 
@@ -145,7 +165,7 @@ Liste os fatos novos que podem ser adicionados por encadeamento direto.
 
 Depois responda: quando o procedimento pode parar?
 
-## 12. Encadeamento reverso
+## 15. Encadeamento reverso
 
 Usando a mesma KB, tente provar:
 
@@ -163,7 +183,7 @@ meta
 → fato conhecido
 ```
 
-## 13. Comparação
+## 16. Retrocesso e comparação
 
 | Critério | Encadeamento direto | Encadeamento reverso |
 |---|---|---|
@@ -173,7 +193,13 @@ meta
 | pode explorar informação irrelevante? |  |  |
 | relação com consultas |  |  |
 
-## 14. Wumpus em LPO
+Explique como o **retrocesso (backtracking)** aparece quando uma submeta pode ser provada por mais de uma regra ou fato.
+
+## 17. Resolução em LPO
+
+Organize conceitualmente as etapas: negar a consulta, converter para FNC, padronizar variáveis, Skolemizar existenciais, unificar literais complementares e aplicar resolução. Explique o significado da cláusula vazia.
+
+## 18. Wumpus em LPO
 
 Proponha uma representação em LPO para:
 
@@ -183,7 +209,7 @@ Proponha uma representação em LPO para:
 
 Explique por que a LPO evita repetir uma regra diferente para cada coordenada.
 
-## 15. Use as visualizações
+## 19. Use as visualizações
 
 Na visualização de **unificação**, registre:
 
@@ -194,7 +220,7 @@ Na visualização de **unificação**, registre:
 
 Na visualização de **inferência**, compare uma execução orientada por dados com uma orientada por meta e descreva a diferença na ordem das decisões.
 
-## 16. Erros conceituais a evitar
+## 20. Erros conceituais a evitar
 
 Explique por que cada afirmação está errada ou incompleta:
 
@@ -211,8 +237,13 @@ Explique por que cada afirmação está errada ou incompleta:
 - [ ] Identifico escopo e variáveis livres/ligadas.
 - [ ] Aplico substituições.
 - [ ] Testo unificações simples.
-- [ ] Entendo o significado de MGU.
+- [ ] Entendo o significado de UMG/MGU.
+- [ ] Diferencio IU e IE.
+- [ ] Reconheço padronização à parte e teste de ocorrência.
+- [ ] Entendo cláusulas definidas e o caso West.
+- [ ] Explico o papel do retrocesso.
 - [ ] Aplico o Modus Ponens Generalizado.
 - [ ] Diferencio encadeamento direto e reverso.
 - [ ] Relaciono a inferência em LPO com busca.
+- [ ] Descrevo conceitualmente FNC, Skolemização e resolução em LPO.
 - [ ] Entendo por que este conteúdo prepara o estudo de Prolog.
