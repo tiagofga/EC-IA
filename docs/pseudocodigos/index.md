@@ -277,6 +277,16 @@ retornar o melhor indivíduo encontrado
 
 **Observe:** o AG trabalha com uma população de soluções, não com um único estado corrente.
 
+## Aula 06 - Lógica de Primeira Ordem e Inferência
+
+Os procedimentos centrais da Aula 06 estão organizados em arquivos próprios:
+
+- [Unificação](06-lpo-inferencia/unificacao.md) - constrói uma substituição compatível e busca o MGU;
+- [Encadeamento direto](06-lpo-inferencia/encadeamento-direto.md) - parte dos fatos e deriva novas consequências;
+- [Encadeamento reverso](06-lpo-inferencia/encadeamento-reverso.md) - parte da consulta e transforma a meta em submetas.
+
+A ideia central é perceber que a **unificação** funciona como mecanismo de compatibilização entre padrões, enquanto os **encadeamentos** definem estratégias distintas para explorar o espaço de inferências.
+
 ## Como estudar esta seção
 
 Para cada pseudocódigo, tente identificar:
