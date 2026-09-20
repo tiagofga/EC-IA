@@ -1,1 +1,50 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>EC-IA | Inferência em LPO</title><link rel="stylesheet" href="style.css"></head><body><main><h1>Inferência em LPO</h1><p>Compare encadeamento direto e reverso.</p><div class="controls"><button data-mode="direto">Encadeamento direto</button><button data-mode="reverso">Encadeamento reverso</button><button id="next">Próximo passo</button><button id="reset">Reiniciar</button></div><section><h2>Estratégia</h2><p id="mode"></p></section><section><h2>Rastro</h2><ol id="trace"></ol></section><section><h2>Estado atual</h2><pre id="state"></pre></section></main><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>EC-IA | Inferência em LPO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div><span class="eyebrow">EC-IA · Aula 06</span><h1>Inferência em LPO · Caso West</h1><p>Compare encadeamento direto e reverso sobre a mesma base de conhecimento.</p></div>
+</header>
+<main>
+  <section class="panel controls">
+    <button data-mode="direto" class="mode active">Encadeamento direto</button>
+    <button data-mode="reverso" class="mode">Encadeamento reverso</button>
+    <span class="spacer"></span>
+    <button id="next">Próximo passo</button>
+    <button id="reset" class="secondary">Reiniciar</button>
+  </section>
+
+  <section class="grid">
+    <article class="panel">
+      <h2>Base de conhecimento</h2>
+      <ul class="facts">
+        <li>American(West)</li><li>Missile(M1)</li><li>Owns(Nono,M1)</li>
+        <li>Sells(West,M1,Nono)</li><li>Enemy(Nono,America)</li>
+      </ul>
+      <div class="query">Consulta: <strong>Criminal(West)</strong></div>
+    </article>
+    <article class="panel">
+      <h2>Estratégia atual</h2>
+      <div id="strategy" class="strategy"></div>
+      <pre id="state">Aguardando execução.</pre>
+    </article>
+  </section>
+
+  <section class="panel">
+    <h2>Rastro de prova</h2>
+    <div id="trace" class="trace"></div>
+  </section>
+
+  <section class="panel note">
+    <h2>Conexão com busca</h2>
+    <p>No direto, o espaço cresce a partir dos fatos. No reverso, a consulta é decomposta em submetas; quando existem alternativas, o retrocesso pode retornar ao último ponto de escolha.</p>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
