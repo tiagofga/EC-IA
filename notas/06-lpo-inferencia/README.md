@@ -137,7 +137,16 @@ Em vez de criar uma regra para cada casa, podemos representar relações de form
 
 Uma única regra passa a representar muitos casos particulares.
 
-## 6. Substituição
+## 6. Instanciação e proposicionalização
+
+A Parte II começa mostrando como sentenças quantificadas podem ser especializadas.
+
+- **Instanciação Universal (IU):** obtém uma instância de uma sentença universal por substituição adequada.
+- **Instanciação Existencial (IE):** introduz uma nova constante para representar algum objeto que satisfaz a sentença existencial.
+
+Uma possibilidade é proposicionalizar a KB gerando instâncias sem variáveis e então aplicar inferência proposicional. O problema é que isso pode gerar muitas instâncias irrelevantes e, com funções, termos de profundidade crescente.
+
+## 7. Substituição
 
 Uma substituição associa variáveis a termos.
 
@@ -157,7 +166,7 @@ obtemos:
 Humano(Socrates) → Mortal(Socrates)
 ```
 
-## 7. Unificação
+## 8. Unificação
 
 A unificação responde:
 
@@ -185,11 +194,13 @@ Conhece(Tiago, Turing)
 
 quando `Ada` e `Turing` são constantes distintas na mesma posição.
 
-## 8. MGU
+## 9. UMG
 
-O **Most General Unifier (MGU)** é o unificador que satisfaz as expressões preservando o máximo de generalidade.
+O **Unificador Mais Geral (UMG)**, também chamado *Most General Unifier (MGU)*, satisfaz as expressões impondo o mínimo de restrições necessário.
 
-## 9. Modus Ponens Generalizado
+Antes de unificar regras diferentes, pode ser necessário **padronizar variáveis à parte** (*standardize apart*). A unificação também deve rejeitar associações como `x = f(x)` pelo **teste de ocorrência** (*occurs check*).
+
+## 10. Modus Ponens Generalizado
 
 ```text
 Humano(x) → Mortal(x)
@@ -216,7 +227,13 @@ flowchart LR
     S --> C["Conclusão instanciada"]
 ```
 
-## 10. Encadeamento direto
+## 11. Cláusulas definidas e caso West
+
+Cláusulas definidas têm exatamente um literal positivo e podem ser escritas como fatos ou regras. Elas sustentam os mecanismos de encadeamento trabalhados na aula.
+
+O **caso West** é o exemplo condutor da Parte II: fatos sobre `American(West)`, `Missile(M1)`, `Sells(West,M1,Nono)` e `Enemy(Nono,America)` são combinados com regras para demonstrar `Criminal(West)`.
+
+## 12. Encadeamento direto
 
 É orientado pelos dados:
 
@@ -228,7 +245,7 @@ fatos conhecidos
 → repetir
 ```
 
-## 11. Encadeamento reverso
+## 13. Encadeamento reverso
 
 É orientado pela meta:
 
@@ -239,9 +256,9 @@ consulta
 → tentar provar as submetas
 ```
 
-Essa ideia prepara diretamente o estudo de Prolog.
+Essa ideia prepara diretamente o estudo de Prolog. Quando há múltiplas alternativas de prova, o procedimento pode usar **retrocesso (backtracking)**, retornando ao último ponto de escolha após uma falha.
 
-## 12. Comparação
+## 14. Comparação
 
 | Aspecto | Encadeamento direto | Encadeamento reverso |
 |---|---|---|
@@ -251,7 +268,7 @@ Essa ideia prepara diretamente o estudo de Prolog.
 | risco típico | inferências irrelevantes | ciclos/repetição de metas |
 | relação com Prolog | indireta | direta |
 
-## 13. Inferência como busca
+## 15. Inferência como busca
 
 ```mermaid
 flowchart LR
@@ -263,7 +280,13 @@ flowchart LR
 
 No encadeamento reverso, cada estado pode ser entendido como um conjunto de submetas ainda não provadas.
 
-## 14. Erros conceituais frequentes
+## 16. Resolução em LPO
+
+Como fechamento, a aula apresenta a resolução por refutação em LPO: negar a consulta, converter para FNC, padronizar variáveis, eliminar existenciais por **Skolemização**, unificar literais complementares e aplicar resolução até obter, quando possível, a cláusula vazia.
+
+O foco da aula permanece em unificação e encadeamento; resolução aparece como fechamento e ponte conceitual.
+
+## 17. Erros conceituais frequentes
 
 > **Erro 1:** `∀` significa "existe um". Não. `∀` e `∃` têm semânticas distintas.
 
@@ -302,10 +325,16 @@ LPO e Inferência
 - [ ] Identifico variáveis livres e ligadas.
 - [ ] Aplico substituições.
 - [ ] Verifico unificações simples.
-- [ ] Entendo o papel do MGU.
+- [ ] Entendo o papel do UMG/MGU.
+- [ ] Diferencio IU e IE.
+- [ ] Entendo por que proposicionalizar toda a KB pode ser inviável.
+- [ ] Reconheço padronização à parte e teste de ocorrência.
+- [ ] Entendo o papel de cláusulas definidas e do caso West.
+- [ ] Relaciono encadeamento reverso com retrocesso.
 - [ ] Explico o Modus Ponens Generalizado.
 - [ ] Diferencio encadeamento direto e reverso.
 - [ ] Relaciono inferência em LPO com busca.
+- [ ] Entendo a ideia de FNC, Skolemização e resolução em LPO.
 - [ ] Entendo por que esse conteúdo prepara Prolog.
 
 **Próximo passo:** faça o [Estudo Guiado 06](../../estudos-guiados/06-lpo-inferencia/README.md), explore as visualizações de [Unificação](../../visualizacoes/06-lpo-inferencia/unificacao/README.md) e [Inferência em LPO](../../visualizacoes/06-lpo-inferencia/inferencia/README.md), e revise os pseudocódigos da Aula 06.
