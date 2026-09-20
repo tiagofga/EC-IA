@@ -42,6 +42,22 @@ percepção -> TELL -> KB -> inferência -> ASK -> ação
 
 <a href="05-logica/wumpus/" class="btn">Abrir Mundo do Wumpus</a>
 
+## Aula 06 - Lógica de Primeira Ordem e Inferência
+
+A Aula 06 acrescenta duas visualizações complementares.
+
+### Unificação
+
+Acompanhe comparação de predicados e aridade, pareamento de argumentos, construção da substituição, sucesso ou falha e o MGU quando existir.
+
+<a href="06-lpo-inferencia/unificacao/" class="btn">Abrir visualização de Unificação</a>
+
+### Encadeamento e inferência
+
+Compare **encadeamento direto**, orientado pelos dados, e **encadeamento reverso**, orientado pela meta, usando a mesma base de conhecimento.
+
+<a href="06-lpo-inferencia/inferencia/" class="btn">Abrir visualização de Inferência em LPO</a>
+
 ## Como estudar com as visualizações
 
 Para Busca, tente prever o próximo estado antes de avançar e compare ordem de expansão, custos e heurísticas.
