@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>EC-IA | Modelos e Consequência Lógica</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div>
+    <span class="eyebrow">EC-IA · Aula 05</span>
+    <h1>Modelos e Consequência Lógica</h1>
+    <p>Explore mundos possíveis e verifique visualmente quando <strong>KB ⊨ α</strong>.</p>
+  </div>
+</header>
+<main>
+  <section class="panel controls">
+    <label for="example">Exemplo</label>
+    <select id="example"></select>
+    <button id="evaluate">Avaliar todos</button>
+    <button id="reset" class="secondary">Reiniciar</button>
+  </section>
+
+  <section class="grid">
+    <article class="panel">
+      <h2>Problema</h2>
+      <div class="logic-box"><span>KB</span><code id="kb"></code></div>
+      <div class="logic-box"><span>Consulta α</span><code id="query"></code></div>
+      <div id="verdict" class="verdict neutral">Avalie os mundos possíveis.</div>
+    </article>
+    <article class="panel">
+      <h2>Leitura conceitual</h2>
+      <p id="explanation"></p>
+      <div class="legend">
+        <span><i class="dot model"></i> modelo da KB</span>
+        <span><i class="dot counter"></i> contraexemplo</span>
+      </div>
+    </article>
+  </section>
+
+  <section class="panel">
+    <h2>Mundos possíveis</h2>
+    <div class="table-wrap">
+      <table>
+        <thead id="thead"></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://tiagofga.github.io/EC-IA/notas/06-lpo-inferencia/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Aula 06 - Lógica de Primeira Ordem e Inferência - EC-IA</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/extra.css" rel="stylesheet" />
+        <link href="../../assets/theme.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Aula 06 - L\u00f3gica de Primeira Ordem e Infer\u00eancia";
+        var mkdocs_page_input_path = "notas/06-lpo-inferencia/README.md";
+        var mkdocs_page_url = "/EC-IA/notas/06-lpo-inferencia/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> EC-IA
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Início</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../planos/">Plano didático</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../aulas/">Aulas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Notas visuais</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../estudos-guiados/">Estudos guiados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../atividades/">Atividades</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../simulados/">Simulados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../visualizacoes/">Visualizações</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../pseudocodigos/">Pseudocódigos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../trabalhos/">Trabalhos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://github.com/tiagofga/EC-IA">Repositório no GitHub</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">EC-IA</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Aula 06 - Lógica de Primeira Ordem e Inferência</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/tiagofga/EC-IA/edit/master/docs/notas/06-lpo-inferencia/README.md">Edit on tiagofga/EC-IA</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="aula-06-logica-de-primeira-ordem-e-inferencia">Aula 06 - Lógica de Primeira Ordem e Inferência</h1>
+<blockquote>
+<p><strong>Guia visual de revisão.</strong> Esta nota dá continuidade à Aula 05. O foco agora é ampliar a capacidade de representação da lógica proposicional e tornar explícitos os mecanismos de inferência usados com variáveis, quantificadores, substituições e unificação.</p>
+</blockquote>
+<h2 id="nota-visual-da-aula">Nota visual da aula</h2>
+<p><img alt="Nota visual da Aula 06 - Lógica de Primeira Ordem e Inferência" src="nota-visual-aula-06.svg" /></p>
+<h2 id="visao-em-30-segundos">Visão em 30 segundos</h2>
+<table>
+<thead>
+<tr>
+<th>Pergunta</th>
+<th>Ideia-chave</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Por que a lógica proposicional não basta?</td>
+<td>Porque não representa bem objetos, relações e regras gerais sem enumerar muitos símbolos.</td>
+</tr>
+<tr>
+<td>O que a LPO acrescenta?</td>
+<td>Constantes, variáveis, funções, predicados e quantificadores.</td>
+</tr>
+<tr>
+<td>O que faz <code>∀</code>?</td>
+<td>Expressa que uma sentença vale para todos os objetos do domínio.</td>
+</tr>
+<tr>
+<td>O que faz <code>∃</code>?</td>
+<td>Expressa que existe ao menos um objeto que satisfaz a sentença.</td>
+</tr>
+<tr>
+<td>O que é substituição?</td>
+<td>Aplicação sistemática de termos a variáveis.</td>
+</tr>
+<tr>
+<td>O que é unificação?</td>
+<td>Procura uma substituição que torne duas expressões compatíveis.</td>
+</tr>
+<tr>
+<td>O que é MGU?</td>
+<td>O unificador mais geral, sem restrições desnecessárias.</td>
+</tr>
+<tr>
+<td>Como inferir em LPO?</td>
+<td>Instanciando sentenças, unificando padrões e aplicando regras de inferência.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mapa-mental">Mapa mental</h2>
+<pre><code class="language-mermaid">mindmap
+  root((LPO e Inferência))
+    Representação
+      Constantes
+      Variáveis
+      Funções
+      Predicados
+      Termos
+    Quantificação
+      Universal
+      Existencial
+      Escopo
+      Variáveis livres e ligadas
+    Inferência
+      Substituição
+      Unificação
+      MGU
+      Modus Ponens Generalizado
+    Estratégias
+      Encadeamento direto
+      Encadeamento reverso
+      Resolução em LPO
+    Continuidade
+      Agentes baseados em conhecimento
+      Mundo do Wumpus
+      Próximo passo: Prolog
+</code></pre>
+<h2 id="1-pergunta-central">1. Pergunta central</h2>
+<blockquote>
+<p><strong>Como representar e inferir conhecimento sobre classes de objetos e relações sem enumerar proposições para cada caso?</strong></p>
+</blockquote>
+<p>Na lógica proposicional, poderíamos ter:</p>
+<pre><code class="language-text">Humano_Socrates
+Mortal_Socrates
+Humano_Platao
+Mortal_Platao
+</code></pre>
+<p>Na LPO:</p>
+<pre><code class="language-text">Humano(Socrates)
+∀x Humano(x) → Mortal(x)
+</code></pre>
+<p>e então inferimos:</p>
+<pre><code class="language-text">Mortal(Socrates)
+</code></pre>
+<h2 id="2-vocabulario-da-lpo">2. Vocabulário da LPO</h2>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Papel</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>constante</td>
+<td>identifica um objeto específico</td>
+<td><code>Socrates</code>, <code>A11</code></td>
+</tr>
+<tr>
+<td>variável</td>
+<td>representa um objeto arbitrário</td>
+<td><code>x</code>, <code>y</code></td>
+</tr>
+<tr>
+<td>função</td>
+<td>produz um termo</td>
+<td><code>PaiDe(x)</code></td>
+</tr>
+<tr>
+<td>predicado</td>
+<td>expressa propriedade ou relação</td>
+<td><code>Humano(x)</code>, <code>Adjacente(x,y)</code></td>
+</tr>
+<tr>
+<td>termo</td>
+<td>designa um objeto</td>
+<td>constante, variável ou função</td>
+</tr>
+<tr>
+<td>sentença</td>
+<td>fórmula sem variáveis livres</td>
+<td><code>∀x Humano(x) → Mortal(x)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-quantificadores">3. Quantificadores</h2>
+<h3 id="universal">Universal</h3>
+<pre><code class="language-text">∀x Humano(x) → Mortal(x)
+</code></pre>
+<p>Leitura: para todo <code>x</code>, se <code>x</code> é humano, então <code>x</code> é mortal.</p>
+<h3 id="existencial">Existencial</h3>
+<pre><code class="language-text">∃x Professor(x) ∧ PesquisaIA(x)
+</code></pre>
+<p>Leitura: existe ao menos um objeto que é professor e pesquisa IA.</p>
+<blockquote>
+<p><strong>Atenção:</strong> trocar <code>→</code> por <code>∧</code> em sentenças universais altera profundamente o significado.</p>
+</blockquote>
+<h2 id="4-escopo-e-variaveis">4. Escopo e variáveis</h2>
+<p>Em:</p>
+<pre><code class="language-text">∀x (Humano(x) → Mortal(x))
+</code></pre>
+<p><code>x</code> está ligada ao quantificador.</p>
+<p>Em:</p>
+<pre><code class="language-text">Humano(x) → Mortal(x)
+</code></pre>
+<p><code>x</code> está livre.</p>
+<p>Uma sentença completa não possui variáveis livres.</p>
+<h2 id="5-do-wumpus-proposicional-para-lpo">5. Do Wumpus proposicional para LPO</h2>
+<p>Em vez de criar uma regra para cada casa, podemos representar relações de forma geral:</p>
+<pre><code class="language-text">∀x ∀y (Adjacente(x,y) ∧ Poco(y)) → Brisa(x)
+</code></pre>
+<p>Uma única regra passa a representar muitos casos particulares.</p>
+<h2 id="6-instanciacao-e-proposicionalizacao">6. Instanciação e proposicionalização</h2>
+<p>A Parte II começa mostrando como sentenças quantificadas podem ser especializadas.</p>
+<ul>
+<li><strong>Instanciação Universal (IU):</strong> obtém uma instância de uma sentença universal por substituição adequada.</li>
+<li><strong>Instanciação Existencial (IE):</strong> introduz uma nova constante para representar algum objeto que satisfaz a sentença existencial.</li>
+</ul>
+<p>Uma possibilidade é proposicionalizar a KB gerando instâncias sem variáveis e então aplicar inferência proposicional. O problema é que isso pode gerar muitas instâncias irrelevantes e, com funções, termos de profundidade crescente.</p>
+<h2 id="7-substituicao">7. Substituição</h2>
+<p>Uma substituição associa variáveis a termos.</p>
+<pre><code class="language-text">θ = {x/Socrates}
+</code></pre>
+<p>Aplicando-a a:</p>
+<pre><code class="language-text">Humano(x) → Mortal(x)
+</code></pre>
+<p>obtemos:</p>
+<pre><code class="language-text">Humano(Socrates) → Mortal(Socrates)
+</code></pre>
+<h2 id="8-unificacao">8. Unificação</h2>
+<p>A unificação responde:</p>
+<blockquote>
+<p><strong>Que substituição torna duas expressões iguais?</strong></p>
+</blockquote>
+<p>Exemplo:</p>
+<pre><code class="language-text">Conhece(x, Ada)
+Conhece(Tiago, y)
+</code></pre>
+<p>Uma substituição possível:</p>
+<pre><code class="language-text">{x/Tiago, y/Ada}
+</code></pre>
+<p>Falha exemplo:</p>
+<pre><code class="language-text">Conhece(x, Ada)
+Conhece(Tiago, Turing)
+</code></pre>
+<p>quando <code>Ada</code> e <code>Turing</code> são constantes distintas na mesma posição.</p>
+<h2 id="9-umg">9. UMG</h2>
+<p>O <strong>Unificador Mais Geral (UMG)</strong>, também chamado <em>Most General Unifier (MGU)</em>, satisfaz as expressões impondo o mínimo de restrições necessário.</p>
+<p>Antes de unificar regras diferentes, pode ser necessário <strong>padronizar variáveis à parte</strong> (<em>standardize apart</em>). A unificação também deve rejeitar associações como <code>x = f(x)</code> pelo <strong>teste de ocorrência</strong> (<em>occurs check</em>).</p>
+<h2 id="10-modus-ponens-generalizado">10. Modus Ponens Generalizado</h2>
+<pre><code class="language-text">Humano(x) → Mortal(x)
+Humano(Socrates)
+</code></pre>
+<p>A unificação encontra:</p>
+<pre><code class="language-text">{x/Socrates}
+</code></pre>
+<p>e permite concluir:</p>
+<pre><code class="language-text">Mortal(Socrates)
+</code></pre>
+<pre><code class="language-mermaid">flowchart LR
+    R[&quot;Regra com variáveis&quot;] --&gt; U[&quot;Unificação&quot;]
+    F[&quot;Fato&quot;] --&gt; U
+    U --&gt; S[&quot;Substituição θ&quot;]
+    S --&gt; C[&quot;Conclusão instanciada&quot;]
+</code></pre>
+<h2 id="11-clausulas-definidas-e-caso-west">11. Cláusulas definidas e caso West</h2>
+<p>Cláusulas definidas têm exatamente um literal positivo e podem ser escritas como fatos ou regras. Elas sustentam os mecanismos de encadeamento trabalhados na aula.</p>
+<p>O <strong>caso West</strong> é o exemplo condutor da Parte II: fatos sobre <code>American(West)</code>, <code>Missile(M1)</code>, <code>Sells(West,M1,Nono)</code> e <code>Enemy(Nono,America)</code> são combinados com regras para demonstrar <code>Criminal(West)</code>.</p>
+<h2 id="12-encadeamento-direto">12. Encadeamento direto</h2>
+<p>É orientado pelos dados:</p>
+<pre><code class="language-text">fatos conhecidos
+→ localizar regras aplicáveis
+→ unificar premissas
+→ gerar novos fatos
+→ repetir
+</code></pre>
+<h2 id="13-encadeamento-reverso">13. Encadeamento reverso</h2>
+<p>É orientado pela meta:</p>
+<pre><code class="language-text">consulta
+→ localizar regra que conclua a meta
+→ transformar premissas em submetas
+→ tentar provar as submetas
+</code></pre>
+<p>Essa ideia prepara diretamente o estudo de Prolog. Quando há múltiplas alternativas de prova, o procedimento pode usar <strong>retrocesso (backtracking)</strong>, retornando ao último ponto de escolha após uma falha.</p>
+<h2 id="14-comparacao">14. Comparação</h2>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Encadeamento direto</th>
+<th>Encadeamento reverso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>orientação</td>
+<td>dados</td>
+<td>meta</td>
+</tr>
+<tr>
+<td>início</td>
+<td>fatos conhecidos</td>
+<td>consulta</td>
+</tr>
+<tr>
+<td>expansão</td>
+<td>consequências</td>
+<td>submetas</td>
+</tr>
+<tr>
+<td>risco típico</td>
+<td>inferências irrelevantes</td>
+<td>ciclos/repetição de metas</td>
+</tr>
+<tr>
+<td>relação com Prolog</td>
+<td>indireta</td>
+<td>direta</td>
+</tr>
+</tbody>
+</table>
+<h2 id="15-inferencia-como-busca">15. Inferência como busca</h2>
+<pre><code class="language-mermaid">flowchart LR
+    K[&quot;KB atual&quot;] --&gt; R[&quot;Regra aplicável&quot;]
+    R --&gt; U[&quot;Unificação&quot;]
+    U --&gt; N[&quot;Nova sentença ou submeta&quot;]
+    N --&gt; K2[&quot;Novo estado lógico&quot;]
+</code></pre>
+<p>No encadeamento reverso, cada estado pode ser entendido como um conjunto de submetas ainda não provadas.</p>
+<h2 id="16-resolucao-em-lpo">16. Resolução em LPO</h2>
+<p>Como fechamento, a aula apresenta a resolução por refutação em LPO: negar a consulta, converter para FNC, padronizar variáveis, eliminar existenciais por <strong>Skolemização</strong>, unificar literais complementares e aplicar resolução até obter, quando possível, a cláusula vazia.</p>
+<p>O foco da aula permanece em unificação e encadeamento; resolução aparece como fechamento e ponte conceitual.</p>
+<h2 id="17-erros-conceituais-frequentes">17. Erros conceituais frequentes</h2>
+<blockquote>
+<p><strong>Erro 1:</strong> <code>∀</code> significa "existe um". Não. <code>∀</code> e <code>∃</code> têm semânticas distintas.</p>
+<p><strong>Erro 2:</strong> unificar é substituir qualquer variável por qualquer termo. Não. A substituição precisa ser consistente.</p>
+<p><strong>Erro 3:</strong> toda unificação tem sucesso. Não. Estruturas ou constantes incompatíveis produzem falha.</p>
+<p><strong>Erro 4:</strong> encadeamento direto e reverso percorrem o mesmo caminho. Não. Eles exploram o espaço de inferências de maneiras distintas.</p>
+</blockquote>
+<h2 id="revisao-de-1-minuto">Revisão de 1 minuto</h2>
+<pre><code class="language-text">LPO e Inferência
+├── representação
+│   ├── constantes
+│   ├── variáveis
+│   ├── funções
+│   └── predicados
+├── quantificadores
+│   ├── ∀ universal
+│   └── ∃ existencial
+├── mecanismos
+│   ├── substituição
+│   ├── unificação
+│   └── MGU
+└── inferência
+    ├── Modus Ponens Generalizado
+    ├── encadeamento direto
+    └── encadeamento reverso
+</code></pre>
+<h2 id="checklist">Checklist</h2>
+<ul>
+<li>[ ] Diferencio constante, variável, função e predicado.</li>
+<li>[ ] Interpreto <code>∀</code> e <code>∃</code>.</li>
+<li>[ ] Identifico variáveis livres e ligadas.</li>
+<li>[ ] Aplico substituições.</li>
+<li>[ ] Verifico unificações simples.</li>
+<li>[ ] Entendo o papel do UMG/MGU.</li>
+<li>[ ] Diferencio IU e IE.</li>
+<li>[ ] Entendo por que proposicionalizar toda a KB pode ser inviável.</li>
+<li>[ ] Reconheço padronização à parte e teste de ocorrência.</li>
+<li>[ ] Entendo o papel de cláusulas definidas e do caso West.</li>
+<li>[ ] Relaciono encadeamento reverso com retrocesso.</li>
+<li>[ ] Explico o Modus Ponens Generalizado.</li>
+<li>[ ] Diferencio encadeamento direto e reverso.</li>
+<li>[ ] Relaciono inferência em LPO com busca.</li>
+<li>[ ] Entendo a ideia de FNC, Skolemização e resolução em LPO.</li>
+<li>[ ] Entendo por que esse conteúdo prepara Prolog.</li>
+</ul>
+<p><strong>Próximo passo:</strong> faça o <a href="../../estudos-guiados/06-lpo-inferencia/">Estudo Guiado 06</a>, explore as visualizações de <a href="../../visualizacoes/06-lpo-inferencia/unificacao/">Unificação</a> e <a href="../../visualizacoes/06-lpo-inferencia/inferencia/">Inferência em LPO</a>, e revise os pseudocódigos da Aula 06.</p>
+<p><strong>Referência principal:</strong> Russell &amp; Norvig, capítulos sobre Lógica de Primeira Ordem e inferência em LPO.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/tiagofga/EC-IA" class="fa fa-code-fork" style="color: #fcfcfc"> tiagofga/EC-IA</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../assets/theme-toggle.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+      <script src="../../assets/mermaid-init.js"></script>
+      <script src="../../assets/downloads.js"></script>
+      <script src="../../assets/vercel-analytics.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

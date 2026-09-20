@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://tiagofga.github.io/EC-IA/estudos-guiados/06-lpo-inferencia/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Estudo Guiado 06 - Lógica de Primeira Ordem e Inferência - EC-IA</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/extra.css" rel="stylesheet" />
+        <link href="../../assets/theme.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Estudo Guiado 06 - L\u00f3gica de Primeira Ordem e Infer\u00eancia";
+        var mkdocs_page_input_path = "estudos-guiados/06-lpo-inferencia/README.md";
+        var mkdocs_page_url = "/EC-IA/estudos-guiados/06-lpo-inferencia/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> EC-IA
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Início</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../planos/">Plano didático</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../aulas/">Aulas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../notas/">Notas visuais</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Estudos guiados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../atividades/">Atividades</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../simulados/">Simulados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../visualizacoes/">Visualizações</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../pseudocodigos/">Pseudocódigos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../trabalhos/">Trabalhos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://github.com/tiagofga/EC-IA">Repositório no GitHub</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">EC-IA</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Estudo Guiado 06 - Lógica de Primeira Ordem e Inferência</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/tiagofga/EC-IA/edit/master/docs/estudos-guiados/06-lpo-inferencia/README.md">Edit on tiagofga/EC-IA</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="estudo-guiado-06-logica-de-primeira-ordem-e-inferencia">Estudo Guiado 06 - Lógica de Primeira Ordem e Inferência</h1>
+<h2 id="objetivo">Objetivo</h2>
+<p>Ao concluir este estudo, você deve ser capaz de representar conhecimento em Lógica de Primeira Ordem (LPO), interpretar quantificadores, aplicar substituições, verificar unificações e explicar como encadeamento direto e reverso produzem inferências.</p>
+<h2 id="1-pre-requisitos">1. Pré-requisitos</h2>
+<p>Antes de começar, confirme que você consegue explicar:</p>
+<ul>
+<li>sintaxe e semântica;</li>
+<li>modelos e consequência lógica;</li>
+<li>base de conhecimento;</li>
+<li>inferência;</li>
+<li>lógica proposicional;</li>
+<li>resolução por refutação.</li>
+</ul>
+<h2 id="2-pergunta-central">2. Pergunta central</h2>
+<blockquote>
+<p><strong>Como representar regras gerais sobre objetos e relações e usá-las para responder consultas específicas?</strong></p>
+</blockquote>
+<h2 id="3-da-logica-proposicional-para-lpo">3. Da lógica proposicional para LPO</h2>
+<p>Considere:</p>
+<pre><code class="language-text">Humano_Socrates
+Mortal_Socrates
+Humano_Platao
+Mortal_Platao
+</code></pre>
+<p>Reescreva esse conhecimento usando predicados, constantes e uma regra universal.</p>
+<p>Depois responda:</p>
+<ol>
+<li>O que foi generalizado?</li>
+<li>Qual informação estrutural aparece na LPO?</li>
+<li>Por que essa representação escala melhor?</li>
+</ol>
+<h2 id="4-componentes-da-linguagem">4. Componentes da linguagem</h2>
+<p>Em cada expressão, identifique constantes, variáveis, funções e predicados:</p>
+<pre><code class="language-text">Humano(Socrates)
+Conhece(x, Ada)
+PaiDe(x)
+MaiorQue(Idade(x), 18)
+</code></pre>
+<h2 id="5-quantificadores">5. Quantificadores</h2>
+<p>Explique a diferença semântica entre:</p>
+<pre><code class="language-text">∀x Humano(x) → Mortal(x)
+∃x Humano(x) ∧ Professor(x)
+</code></pre>
+<p>Compare também:</p>
+<pre><code class="language-text">∀x (Professor(x) → Pesquisa(x))
+∀x (Professor(x) ∧ Pesquisa(x))
+</code></pre>
+<p>Por que não são equivalentes?</p>
+<h2 id="6-escopo-e-variaveis">6. Escopo e variáveis</h2>
+<p>Indique quais variáveis estão livres ou ligadas:</p>
+<pre><code class="language-text">∀x Humano(x)
+Humano(x) → Mortal(x)
+∀x Conhece(x,y)
+∃y ∀x Conhece(x,y)
+</code></pre>
+<h2 id="7-instanciacao-universal-e-existencial">7. Instanciação universal e existencial</h2>
+<p>Explique, com suas palavras, a diferença entre IU e IE. Em seguida, instancie:</p>
+<pre><code class="language-text">∀x (King(x) → Person(x))
+</code></pre>
+<p>para <code>John</code>, e explique por que uma instanciação existencial deve introduzir uma constante nova.</p>
+<h2 id="8-substituicao">8. Substituição</h2>
+<p>Aplique <code>θ = {x/Socrates}</code> em:</p>
+<pre><code class="language-text">Humano(x) → Mortal(x)
+</code></pre>
+<p>Aplique <code>θ = {x/Ada, y/Turing}</code> em:</p>
+<pre><code class="language-text">Conhece(x,y)
+</code></pre>
+<p>Explique por que uma substituição precisa ser consistente.</p>
+<h2 id="9-unificacao">9. Unificação</h2>
+<p>Determine se os pares unificam. Quando possível, apresente uma substituição.</p>
+<ol>
+<li><code>Humano(x)</code> e <code>Humano(Socrates)</code></li>
+<li><code>Conhece(x,Ada)</code> e <code>Conhece(Tiago,y)</code></li>
+<li><code>Conhece(x,Ada)</code> e <code>Conhece(Tiago,Turing)</code></li>
+<li><code>P(x,x)</code> e <code>P(Ada,Turing)</code></li>
+<li><code>P(x,y)</code> e <code>P(y,x)</code></li>
+</ol>
+<h2 id="10-umg">10. UMG</h2>
+<p>Explique por que o unificador mais geral é preferível a uma substituição mais específica que também funcione.</p>
+<h2 id="11-padronizacao-a-parte-e-teste-de-ocorrencia">11. Padronização à parte e teste de ocorrência</h2>
+<ol>
+<li>Por que duas regras diferentes podem reutilizar o mesmo nome de variável sem representar a mesma variável lógica?</li>
+<li>O que a padronização à parte evita?</li>
+<li>Por que <code>P(x)</code> e <code>P(f(x))</code> devem falhar no teste de ocorrência?</li>
+</ol>
+<h2 id="12-modus-ponens-generalizado">12. Modus Ponens Generalizado</h2>
+<p>Considere:</p>
+<pre><code class="language-text">1. ∀x Humano(x) → Mortal(x)
+2. Humano(Socrates)
+</code></pre>
+<p>Responda:</p>
+<ol>
+<li>Qual regra será instanciada?</li>
+<li>Qual substituição é necessária?</li>
+<li>Qual conclusão é produzida?</li>
+</ol>
+<p>Agora repita para:</p>
+<pre><code class="language-text">1. ∀x ∀y (Pai(x,y) → Ancestral(x,y))
+2. Pai(Ada,Bia)
+</code></pre>
+<h2 id="13-clausulas-definidas-e-caso-west">13. Cláusulas definidas e caso West</h2>
+<p>Explique por que cláusulas definidas são adequadas para encadeamento. Depois, usando o caso West apresentado na aula, identifique quais fatos precisam sustentar a conclusão <code>Criminal(West)</code>.</p>
+<h2 id="14-encadeamento-direto">14. Encadeamento direto</h2>
+<p>Considere a KB:</p>
+<pre><code class="language-text">Humano(Socrates)
+Humano(Platao)
+∀x Humano(x) → Mortal(x)
+∀x Mortal(x) → PrecisaRespirar(x)
+</code></pre>
+<p>Liste os fatos novos que podem ser adicionados por encadeamento direto.</p>
+<p>Depois responda: quando o procedimento pode parar?</p>
+<h2 id="15-encadeamento-reverso">15. Encadeamento reverso</h2>
+<p>Usando a mesma KB, tente provar:</p>
+<pre><code class="language-text">PrecisaRespirar(Socrates)
+</code></pre>
+<p>Mostre a sequência:</p>
+<pre><code class="language-text">meta
+→ regra que conclui a meta
+→ submeta
+→ nova regra
+→ fato conhecido
+</code></pre>
+<h2 id="16-retrocesso-e-comparacao">16. Retrocesso e comparação</h2>
+<table>
+<thead>
+<tr>
+<th>Critério</th>
+<th>Encadeamento direto</th>
+<th>Encadeamento reverso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>começa por</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>orientação</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>produz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>pode explorar informação irrelevante?</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>relação com consultas</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Explique como o <strong>retrocesso (backtracking)</strong> aparece quando uma submeta pode ser provada por mais de uma regra ou fato.</p>
+<h2 id="17-resolucao-em-lpo">17. Resolução em LPO</h2>
+<p>Organize conceitualmente as etapas: negar a consulta, converter para FNC, padronizar variáveis, Skolemizar existenciais, unificar literais complementares e aplicar resolução. Explique o significado da cláusula vazia.</p>
+<h2 id="18-wumpus-em-lpo">18. Wumpus em LPO</h2>
+<p>Proponha uma representação em LPO para:</p>
+<ul>
+<li>casas podem ser adjacentes;</li>
+<li>se existe poço em uma casa adjacente, há brisa;</li>
+<li>uma casa sem poço e sem Wumpus é segura.</li>
+</ul>
+<p>Explique por que a LPO evita repetir uma regra diferente para cada coordenada.</p>
+<h2 id="19-use-as-visualizacoes">19. Use as visualizações</h2>
+<p>Na visualização de <strong>unificação</strong>, registre:</p>
+<ul>
+<li>expressões de entrada;</li>
+<li>substituição construída;</li>
+<li>ponto de sucesso ou falha;</li>
+<li>MGU resultante quando existir.</li>
+</ul>
+<p>Na visualização de <strong>inferência</strong>, compare uma execução orientada por dados com uma orientada por meta e descreva a diferença na ordem das decisões.</p>
+<h2 id="20-erros-conceituais-a-evitar">20. Erros conceituais a evitar</h2>
+<p>Explique por que cada afirmação está errada ou incompleta:</p>
+<ul>
+<li>"Toda variável precisa ser substituída por uma constante.";</li>
+<li>"Se dois predicados têm o mesmo nome, sempre unificam.";</li>
+<li>"O quantificador existencial prova qual objeto existe.";</li>
+<li>"Encadeamento reverso começa pelos fatos.";</li>
+<li>"Unificação e inferência são a mesma operação."</li>
+</ul>
+<h2 id="autoavaliacao">Autoavaliação</h2>
+<ul>
+<li>[ ] Diferencio constantes, variáveis, funções e predicados.</li>
+<li>[ ] Interpreto quantificadores universal e existencial.</li>
+<li>[ ] Identifico escopo e variáveis livres/ligadas.</li>
+<li>[ ] Aplico substituições.</li>
+<li>[ ] Testo unificações simples.</li>
+<li>[ ] Entendo o significado de UMG/MGU.</li>
+<li>[ ] Diferencio IU e IE.</li>
+<li>[ ] Reconheço padronização à parte e teste de ocorrência.</li>
+<li>[ ] Entendo cláusulas definidas e o caso West.</li>
+<li>[ ] Explico o papel do retrocesso.</li>
+<li>[ ] Aplico o Modus Ponens Generalizado.</li>
+<li>[ ] Diferencio encadeamento direto e reverso.</li>
+<li>[ ] Relaciono a inferência em LPO com busca.</li>
+<li>[ ] Descrevo conceitualmente FNC, Skolemização e resolução em LPO.</li>
+<li>[ ] Entendo por que este conteúdo prepara o estudo de Prolog.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/tiagofga/EC-IA" class="fa fa-code-fork" style="color: #fcfcfc"> tiagofga/EC-IA</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../assets/theme-toggle.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+      <script src="../../assets/mermaid-init.js"></script>
+      <script src="../../assets/downloads.js"></script>
+      <script src="../../assets/vercel-analytics.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
