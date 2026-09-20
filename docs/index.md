@@ -30,7 +30,7 @@ Os PDFs públicos das aulas estão disponíveis da Aula 00 à Aula 06. As ativid
 | 02 | Agentes Inteligentes | aula, nota visual, atividade e estudo guiado |
 | 03 | Representação do Conhecimento e Solução de Problemas | aula, nota visual, atividade, estudo guiado e fundamentos de busca |
 | 04 | Estruturas e Estratégias de Busca | duas partes da aula, nota visual, atividade, estudo guiado, pseudocódigos, visualizações e Trabalho 01 |
-| 05 | Lógica e Raciocínio em IA | duas partes da aula, nota visual, estudo guiado, pseudocódigos de lógica e Mundo do Wumpus interativo |
+| 05 | Lógica e Raciocínio em IA | duas partes da aula, nota visual, estudo guiado, pseudocódigos e visualizações de Wumpus, modelos e resolução |
 | 06 | Lógica de Primeira Ordem e Inferência | duas partes da aula, nota visual, estudo guiado, pseudocódigos e visualizações de unificação e inferência |
 
 ## Aula 05 - Lógica e Raciocínio em IA
@@ -40,7 +40,7 @@ A Aula 05 está organizada em duas partes:
 - **Parte I - Representação, Conhecimento e Agentes Baseados em Conhecimento**;
 - **Parte II - Lógica Proposicional**.
 
-O Mundo do Wumpus funciona como fio condutor para conectar percepção, `TELL`, base de conhecimento, inferência, `ASK` e ação. A visualização interativa permite observar essa sequência e alternar entre a visão limitada do agente e o mundo completo.
+O Mundo do Wumpus funciona como fio condutor para conectar percepção, `TELL`, base de conhecimento, inferência, `ASK` e ação. A aula também possui visualizações próprias para **modelos e consequência lógica** e para **resolução proposicional por refutação**, completando os principais mecanismos da Parte II.
 
 [Abrir a Aula 05](aulas/)
 
@@ -78,7 +78,7 @@ A recomendação é resolvê-los em sequência e, inicialmente, sem consulta. O 
 
 ## Visualizações
 
-A Aula 04 possui um visualizador de estratégias de busca baseado em **traces pré-calculados**. A Aula 05 acrescenta o mini laboratório interativo do Mundo do Wumpus. A Aula 06 adiciona visualizações passo a passo para **unificação** e para comparação entre **encadeamento direto e reverso**.
+A Aula 04 possui um visualizador de estratégias de busca baseado em **traces pré-calculados**. A Aula 05 possui três visualizações complementares: **Mundo do Wumpus**, **modelos e consequência lógica** e **resolução proposicional**. A Aula 06 adiciona visualizações passo a passo para **unificação** e para comparação entre **encadeamento direto e reverso**.
 
 As visualizações compartilham a mesma identidade visual: azul como cor principal; verde para solução/sucesso; amarelo para atenção ou fronteira; vermelho para estados críticos; violeta para diferenciações específicas. A interface foi pensada para funcionar em desktop, tablet e celular.
 
