@@ -7,6 +7,8 @@ Esta seção reúne procedimentos conceituais usados na inferência em Lógica d
 - [Unificação](unificacao.md)
 - [Encadeamento direto](encadeamento-direto.md)
 - [Encadeamento reverso](encadeamento-reverso.md)
+- [Retrocesso (backtracking)](retrocesso.md)
+- [Resolução em LPO](resolucao-lpo.md)
 
 ## Como estudar
 
