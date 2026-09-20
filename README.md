@@ -78,7 +78,9 @@ O Mundo do Wumpus funciona como fio condutor. O material complementar da aula in
 - pseudocódigo de agente baseado em conhecimento;
 - pseudocódigo de verificação de modelos;
 - pseudocódigo de resolução proposicional por refutação;
-- visualização interativa do Mundo do Wumpus.
+- visualização interativa do Mundo do Wumpus;
+- visualização de modelos e consequência lógica;
+- visualização de resolução proposicional por refutação.
 
 A visualização destaca explicitamente o ciclo:
 
@@ -133,11 +135,13 @@ A Aula 04 possui visualizações interativas baseadas em **traces pré-calculado
 
 **Importante:** o visualizador público da Aula 04 não implementa os algoritmos. Ele apenas reproduz traces previamente gerados.
 
-### Aula 05 - Mundo do Wumpus
+### Aula 05 - Lógica proposicional e Mundo do Wumpus
 
 A Aula 05 possui um mini laboratório interativo que permite controlar o agente, observar percepções, acompanhar `TELL`, inferências e uma consulta didática de `ASK`, além de alternar entre modo aluno e modo professor.
 
 A interface registra visualmente as percepções de **brisa**, **fedor** e **brilho** nas casas visitadas, diferencia casas seguras e perigos possíveis e encerra a partida em condições explícitas de sucesso ou falha.
+
+Duas visualizações adicionais completam a Parte II: **Modelos e consequência lógica**, para explorar mundos possíveis, modelos da KB, contraexemplos, validade e satisfatibilidade; e **Resolução proposicional**, para acompanhar FNC, resolventes e prova por refutação.
 
 ### Aula 06 - LPO e Inferência
 
@@ -176,7 +180,10 @@ EC-IA/
 │   └── simulado-03.md
 ├── visualizacoes/
 │   ├── 04-busca/
-│   ├── 05-logica/wumpus/
+│   ├── 05-logica/
+│   │   ├── wumpus/
+│   │   ├── modelos/
+│   │   └── resolucao/
 │   └── 06-lpo-inferencia/
 ├── pseudoalgoritmos/
 │   ├── 05-logica/
