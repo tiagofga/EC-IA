@@ -70,6 +70,14 @@ Compare **encadeamento direto**, orientado pelos dados, e **encadeamento reverso
 
 <a href="06-lpo-inferencia/inferencia/" class="btn">Abrir visualização de Inferência em LPO</a>
 
+## Aula 07 - Prolog
+
+### Resolução de metas e retrocesso
+
+Acompanhe uma consulta passo a passo: seleção de cláusulas, unificação, geração de submetas, sucesso, falha e retrocesso. Os cenários também explicitam a relação entre a árvore de prova e busca em profundidade.
+
+<a href="07-prolog/resolucao-metas/" class="btn">Abrir visualização de Prolog</a>
+
 ## Como estudar com as visualizações
 
 Para Busca, tente prever o próximo estado antes de avançar e compare ordem de expansão, custos e heurísticas.
@@ -80,7 +88,7 @@ No Wumpus, compare sempre três níveis:
 2. o que foi **registrado na KB**;
 3. o que foi **inferido** a partir dessas sentenças.
 
-Em Modelos, procure primeiro os mundos que satisfazem a KB e só então verifique a consulta. Em Resolução, acompanhe quais literais complementares são eliminados a cada passo.
+Em Modelos, procure primeiro os mundos que satisfazem a KB e só então verifique a consulta. Em Resolução, acompanhe quais literais complementares são eliminados a cada passo. Em Prolog, tente prever a próxima cláusula e as novas submetas antes de avançar a execução.
 
 ## Integridade acadêmica
 
