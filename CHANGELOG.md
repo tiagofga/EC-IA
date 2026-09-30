@@ -13,6 +13,9 @@ O histórico de commits segue Conventional Commits.
 - README público da Aula 06 atualizado;
 - README público da Aula 07;
 - README público da Lista 05;
+- nota visual e Estudo Guiado 07 para Prolog;
+- pseudocódigos conceituais de resolução de metas, retrocesso e recursão em Prolog;
+- visualização interativa de resolução de metas, árvore de prova e retrocesso para a Aula 07;
 - PDFs públicos da Aula 06 em duas partes: Representação, Sintaxe e Semântica; e Inferência em LPO;
 - nota visual da Aula 06 - Lógica de Primeira Ordem e Inferência;
 - Estudo Guiado 06 com exercícios sobre termos, quantificadores, substituição, unificação e encadeamento;
@@ -28,6 +31,9 @@ O histórico de commits segue Conventional Commits.
 - páginas de Aulas e Atividades atualizadas para publicar a Aula 07 e a Lista 05;
 - script de build atualizado para incluir os downloads da Aula 07 e da Lista 05;
 - README e página inicial atualizados para refletir o percurso Aula 05 -> Aula 06 -> Aula 07;
+- página inicial simplificada para manter o padrão de catálogo, evitando blocos extensos específicos para cada aula;
+- índices de Notas, Estudos Guiados, Visualizações e Pseudocódigos atualizados para incluir a Aula 07;
+- script de build atualizado para sincronizar notas, estudo guiado, pseudocódigos e visualização da Aula 07;
 - índices de Notas, Estudos Guiados e Visualizações atualizados para incluir os materiais complementares da Aula 06;
 - script de build atualizado para sincronizar os materiais da Aula 06 e publicar os dois PDFs na área de downloads;
 - página de Aulas, página inicial e README atualizados para incluir a Aula 06;
