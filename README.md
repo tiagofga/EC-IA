@@ -53,7 +53,7 @@ Os PDFs públicos das Aulas 00 a 07 e das Atividades 01 a 05 já fazem parte do 
 
 ## Notas visuais
 
-As Aulas 01 a 06 possuem notas públicas em Markdown concebidas como **mapas mentais e guias de estudo**. Elas incluem:
+As Aulas 01 a 07 possuem notas públicas em Markdown concebidas como **mapas mentais e guias de estudo**. Elas incluem:
 
 - figuras de síntese visual;
 - mapas conceituais e fluxos Mermaid coloridos;
@@ -97,6 +97,8 @@ A Aula 07 dá continuidade direta à Aula 06. O conteúdo trabalha programação
 
 Um exemplo de alcançabilidade em grafos relaciona a execução do Prolog com busca em profundidade. O material também inclui aritmética, estruturas e listas como conteúdo complementar.
 
+O conjunto público da Aula 07 inclui nota visual, estudo guiado, pseudocódigos conceituais de resolução de metas, retrocesso e recursão, além de uma visualização interativa de resolução de metas e árvore de prova.
+
 A Lista 05 consolida as Aulas 05, 06 e 07, ligando representação formal, inferência e programação lógica.
 
 ## Simulados
@@ -120,7 +122,7 @@ Consulte `trabalhos/01-busca/README.md` antes de iniciar.
 
 ## Estudos guiados
 
-Os estudos guiados das Aulas 01 a 05 foram preparados para revisão ativa. Eles incluem objetivos de aprendizagem, conceitos essenciais, perguntas de verificação, aplicações, erros conceituais a evitar e autoavaliação.
+Os estudos guiados das Aulas 01 a 07 foram preparados para revisão ativa. Eles incluem objetivos de aprendizagem, conceitos essenciais, perguntas de verificação, aplicações, erros conceituais a evitar e autoavaliação.
 
 A recomendação é tentar responder às perguntas **antes** de consultar novamente os slides ou as notas.
 
@@ -176,7 +178,8 @@ EC-IA/
 │   ├── 03-conhecimento/
 │   ├── 04-busca/
 │   ├── 05-logica/
-│   └── 06-lpo-inferencia/
+│   ├── 06-lpo-inferencia/
+│   └── 07-prolog/
 ├── atividades/
 │   ├── 01-introducao/lista-01/
 │   ├── 02-agentes/lista-02/
@@ -198,7 +201,8 @@ EC-IA/
 │   └── 06-lpo-inferencia/
 ├── pseudoalgoritmos/
 │   ├── 05-logica/
-│   └── 06-lpo-inferencia/
+│   ├── 06-lpo-inferencia/
+│   └── 07-prolog/
 ├── trabalhos/
 │   └── 01-busca/
 └── docs/
