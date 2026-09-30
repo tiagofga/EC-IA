@@ -37,4 +37,4 @@ As notas não substituem os slides nem repetem integralmente a aula. Elas têm t
 - **orientação visual** - mostrar como os conceitos se conectam;
 - **revisão** - permitir retomada rápida antes de atividades, provas e trabalhos.
 
-Para aprofundar ou verificar sua compreensão, use também os [Estudos guiados](../estudos-guiados/).
+Para aprofundar ou verificar sua compreensão, use também os [Estudos guiados](../estudos-guiados/index.md).
