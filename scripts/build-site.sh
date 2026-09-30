@@ -12,7 +12,8 @@ for guide in \
   03-conhecimento \
   04-busca \
   05-logica \
-  06-lpo-inferencia
+  06-lpo-inferencia \
+  07-prolog
  do
   rm -rf "docs/estudos-guiados/$guide"
   cp -R "estudos-guiados/$guide" "docs/estudos-guiados/$guide"
@@ -26,16 +27,18 @@ for note in \
   03-conhecimento \
   04-busca \
   05-logica \
-  06-lpo-inferencia
+  06-lpo-inferencia \
+  07-prolog
  do
   rm -rf "docs/notas/$note"
   cp -R "notas/$note" "docs/notas/$note"
 done
 
 # A Aula 05 possui pseudocódigos conceituais próprios de lógica.
-rm -rf docs/pseudocodigos/05-logica docs/pseudocodigos/06-lpo-inferencia
+rm -rf docs/pseudocodigos/05-logica docs/pseudocodigos/06-lpo-inferencia docs/pseudocodigos/07-prolog
 cp -R pseudoalgoritmos/05-logica docs/pseudocodigos/05-logica
 cp -R pseudoalgoritmos/06-lpo-inferencia docs/pseudocodigos/06-lpo-inferencia
+cp -R pseudoalgoritmos/07-prolog docs/pseudocodigos/07-prolog
 
 # Para a validação do MkDocs, publique apenas o README da visualização.
 # O laboratório HTML completo é copiado para site/ após o build, evitando
@@ -49,6 +52,9 @@ rm -rf docs/visualizacoes/06-lpo-inferencia
 mkdir -p docs/visualizacoes/06-lpo-inferencia/unificacao docs/visualizacoes/06-lpo-inferencia/inferencia
 cp visualizacoes/06-lpo-inferencia/unificacao/README.md docs/visualizacoes/06-lpo-inferencia/unificacao/README.md
 cp visualizacoes/06-lpo-inferencia/inferencia/README.md docs/visualizacoes/06-lpo-inferencia/inferencia/README.md
+rm -rf docs/visualizacoes/07-prolog
+mkdir -p docs/visualizacoes/07-prolog/resolucao-metas
+cp visualizacoes/07-prolog/resolucao-metas/README.md docs/visualizacoes/07-prolog/resolucao-metas/README.md
 
 # Os simulados são mantidos em simulados/ como fonte pública e sincronizados
 # para o diretório do MkDocs. Apenas enunciados são publicados; gabaritos
@@ -96,5 +102,7 @@ rm -rf site/visualizacoes/05-logica
 cp -R visualizacoes/05-logica site/visualizacoes/05-logica
 rm -rf site/visualizacoes/06-lpo-inferencia
 cp -R visualizacoes/06-lpo-inferencia site/visualizacoes/06-lpo-inferencia
+rm -rf site/visualizacoes/07-prolog
+cp -R visualizacoes/07-prolog site/visualizacoes/07-prolog
 
 echo "Site gerado em: $ROOT_DIR/site"
