@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>EC-IA | Prolog - Resolução de Metas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div><span class="eyebrow">EC-IA · Aula 07</span><h1>Prolog · Resolução de metas</h1><p>Acompanhe unificação, submetas, árvore de prova e retrocesso passo a passo.</p></div>
+</header>
+<main>
+  <section class="panel controls">
+    <label for="scenario">Cenário</label>
+    <select id="scenario">
+      <option value="ancestral">Ancestral - sucesso direto e recursivo</option>
+      <option value="retrocesso">Retrocesso - primeira alternativa falha</option>
+    </select>
+    <span class="spacer"></span>
+    <button id="next">Próximo passo</button>
+    <button id="reset" class="secondary">Reiniciar</button>
+  </section>
+
+  <section class="grid">
+    <article class="panel">
+      <h2>Programa</h2>
+      <pre id="program"></pre>
+    </article>
+    <article class="panel">
+      <h2>Estado da prova</h2>
+      <div class="row"><span>Meta atual</span><strong id="goal">-</strong></div>
+      <div class="row"><span>Cláusula</span><strong id="clause">-</strong></div>
+      <div class="row"><span>Substituição</span><strong id="subst">-</strong></div>
+      <div class="row"><span>Submetas</span><strong id="subgoals">-</strong></div>
+    </article>
+  </section>
+
+  <section class="panel">
+    <h2>Rastro de execução</h2>
+    <div id="trace" class="trace"></div>
+  </section>
+
+  <section class="panel note">
+    <h2>Conexão com busca</h2>
+    <p>Cada cláusula compatível abre uma alternativa. O Prolog aprofunda uma alternativa e, se ela falhar, retorna ao ponto de escolha mais recente para tentar outra.</p>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
