@@ -38,15 +38,15 @@ Os PDFs públicos das aulas estão disponíveis da Aula 00 à Aula 07. As ativid
 
 As Aulas 05, 06 e 07 formam uma sequência integrada: representação do conhecimento e Lógica Proposicional, Lógica de Primeira Ordem e inferência, e Prolog como linguagem de programação lógica.
 
-[Acessar as aulas](aulas/)
+[Acessar as aulas](aulas/index.md)
 
-[Acessar as atividades](atividades/)
+[Acessar as atividades](atividades/index.md)
 
 ## Notas visuais
 
 As notas funcionam como mapas mentais e guias de revisão. Elas incluem diagramas Mermaid, tabelas comparativas, fluxos conceituais, alertas de erros frequentes e checklists.
 
-[Abrir as Notas visuais](notas/)
+[Abrir as Notas visuais](notas/index.md)
 
 ## Simulados
 
@@ -54,7 +54,7 @@ Estão disponíveis três simulados para revisão integrada das Aulas 01 a 04. E
 
 A recomendação é resolvê-los em sequência e, inicialmente, sem consulta. O Simulado 03 utiliza um grafo didático inspirado em cidades brasileiras e apresenta a identificação das siglas das cidades utilizadas. Os gabaritos permanecem fora do site público.
 
-[Acessar os Simulados](simulados/)
+[Acessar os Simulados](simulados/index.md)
 
 ## Visualizações
 
@@ -62,7 +62,7 @@ A Aula 04 possui um visualizador de estratégias de busca baseado em **traces pr
 
 As visualizações compartilham a mesma identidade visual: azul como cor principal; verde para solução/sucesso; amarelo para atenção ou fronteira; vermelho para estados críticos; violeta para diferenciações específicas. A interface foi pensada para funcionar em desktop, tablet e celular.
 
-[Abrir a seção de visualizações](visualizacoes/)
+[Abrir a seção de visualizações](visualizacoes/index.md)
 
 ## Trabalho 01 - Busca
 
@@ -73,7 +73,7 @@ O primeiro trabalho prático utiliza diretamente os conteúdos da Aula 04.
 - **Valor:** 20,0 pontos;
 - **Modalidade:** individual ou em dupla.
 
-[Acessar o Trabalho 01](trabalhos/)
+[Acessar o Trabalho 01](trabalhos/index.md)
 
 ## Versão pública
 
