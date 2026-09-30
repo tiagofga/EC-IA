@@ -1,1 +1,75 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700"><style>text{font-family:Arial,sans-serif;fill:#172033}.title{font-size:34px;font-weight:700;fill:#0e4aa8}.sub{font-size:20px}.h{font-size:22px;font-weight:700;fill:#fff}.b{font-size:18px}.box{rx:18;ry:18;stroke:#cbd5e1;stroke-width:2;fill:#fff}.blue{fill:#0e4aa8}.green{fill:#167c3b}.amber{fill:#9a6500}.arrow{stroke:#64748b;stroke-width:4;marker-end:url(#a)}</style><defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#64748b"/></marker></defs><text x="60" y="60" class="title">Aula 07 - Prolog</text><text x="60" y="95" class="sub">Programação lógica, unificação, busca e retrocesso</text><rect x="60" y="145" width="250" height="120" class="box"/><rect x="60" y="145" width="250" height="42" rx="18" class="blue"/><text x="85" y="174" class="h">Base de conhecimento</text><text x="85" y="220" class="b">Fatos + regras</text><text x="85" y="248" class="b">relações declarativas</text><rect x="475" y="145" width="250" height="120" class="box"/><rect x="475" y="145" width="250" height="42" rx="18" class="blue"/><text x="500" y="174" class="h">Consulta</text><text x="500" y="220" class="b">Meta a provar</text><text x="500" y="248" class="b">variáveis e respostas</text><rect x="890" y="145" width="250" height="120" class="box"/><rect x="890" y="145" width="250" height="42" rx="18" class="green"/><text x="915" y="174" class="h">Resposta</text><text x="915" y="220" class="b">Sucesso / falha</text><text x="915" y="248" class="b">substituições</text><line x1="310" y1="205" x2="465" y2="205" class="arrow"/><line x1="725" y1="205" x2="880" y2="205" class="arrow"/><rect x="260" y="350" width="280" height="150" class="box"/><rect x="260" y="350" width="280" height="42" rx="18" class="amber"/><text x="285" y="379" class="h">Mecanismo</text><text x="285" y="428" class="b">1. selecionar cláusula</text><text x="285" y="458" class="b">2. unificar</text><text x="285" y="488" class="b">3. gerar submetas</text><rect x="660" y="350" width="280" height="150" class="box"/><rect x="660" y="350" width="280" height="42" rx="18" class="green"/><text x="685" y="379" class="h">Controle da busca</text><text x="685" y="428" class="b">aprofundar alternativas</text><text x="685" y="458" class="b">retroceder na falha</text><text x="685" y="488" class="b">buscar outras soluções</text><line x1="540" y1="425" x2="650" y2="425" class="arrow"/><text x="60" y="600" class="title" style="font-size:25px">Conexão central</text><text x="60" y="642" class="b">LPO + unificação + encadeamento reverso + busca em profundidade → execução de programas Prolog</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500">
+<style>
+.title{font:700 38px Arial,sans-serif;fill:#fff}.sub{font:600 18px Arial,sans-serif;fill:#e7efff}
+.h{font:700 25px Arial,sans-serif;fill:#0e4aa8}.b{font:18px Arial,sans-serif;fill:#172033}
+.small{font:16px Arial,sans-serif;fill:#51607b}.flow{font:700 17px Arial,sans-serif;fill:#172033}
+.box{stroke:#0e4aa8;stroke-width:3;rx:16;ry:16}.arrow{stroke:#0e4aa8;stroke-width:5;fill:none;marker-end:url(#a)}
+</style>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#0e4aa8"/></marker></defs>
+
+<rect x="30" y="30" width="1140" height="110" rx="22" fill="#0e4aa8"/>
+<text x="55" y="78" class="title">Aula 07 - Prolog</text>
+<text x="55" y="112" class="sub">Programação lógica, unificação, resolução de metas, retrocesso e recursão</text>
+<text x="45" y="180" class="flow">Fio condutor: como fatos e regras se transformam em uma busca executável por uma prova?</text>
+
+<rect class="box" x="45" y="215" width="530" height="245" fill="#eef5ff"/>
+<text x="65" y="250" class="h">1. Programa lógico</text>
+<text x="70" y="292" class="b">• Fatos representam conhecimento explícito.</text>
+<text x="70" y="327" class="b">• Regras descrevem relações condicionais.</text>
+<text x="70" y="362" class="b">• Consultas expressam metas a provar.</text>
+<text x="70" y="397" class="b">• Variáveis permitem obter substituições.</text>
+
+<rect class="box" x="625" y="215" width="530" height="245" fill="#fff8ea"/>
+<text x="645" y="250" class="h">2. Termos e unificação</text>
+<text x="650" y="292" class="b">• Átomos, números, variáveis e estruturas.</text>
+<text x="650" y="327" class="b">• = tenta unificar termos.</text>
+<text x="650" y="362" class="b">• Unificação não é atribuição imperativa.</text>
+<text x="650" y="397" class="b">• Substituições precisam ser consistentes.</text>
+<path class="arrow" d="M575 338 L615 338"/>
+
+<rect class="box" x="45" y="500" width="530" height="245" fill="#eefcf2"/>
+<text x="65" y="535" class="h">3. Resolução de metas</text>
+<text x="70" y="577" class="b">• Selecionar uma cláusula compatível.</text>
+<text x="70" y="612" class="b">• Unificar a cabeça com a meta atual.</text>
+<text x="70" y="647" class="b">• Transformar o corpo em novas submetas.</text>
+<text x="70" y="682" class="b">• Propagar as substituições obtidas.</text>
+
+<rect class="box" x="625" y="500" width="530" height="245" fill="#eef5ff"/>
+<text x="645" y="535" class="h">4. Retrocesso</text>
+<text x="650" y="577" class="b">• Falha retorna ao último ponto de escolha.</text>
+<text x="650" y="612" class="b">• Outra cláusula ou fato pode ser tentado.</text>
+<text x="650" y="647" class="b">• ; solicita outras soluções possíveis.</text>
+<text x="650" y="682" class="b">• Sem alternativas restantes, ocorre falha.</text>
+<path class="arrow" d="M575 623 L615 623"/>
+
+<rect class="box" x="45" y="785" width="530" height="245" fill="#fff8ea"/>
+<text x="65" y="820" class="h">5. Recursão</text>
+<text x="70" y="862" class="b">• Relações podem ser definidas recursivamente.</text>
+<text x="70" y="897" class="b">• Caso base encerra a expansão.</text>
+<text x="70" y="932" class="b">• Caso recursivo cria novas metas.</text>
+<text x="70" y="967" class="b">• Ordem das regras afeta a execução.</text>
+
+<rect class="box" x="625" y="785" width="530" height="245" fill="#eefcf2"/>
+<text x="645" y="820" class="h">6. Prolog como busca</text>
+<text x="650" y="862" class="b">• A meta define o problema corrente.</text>
+<text x="650" y="897" class="b">• Regras compatíveis formam alternativas.</text>
+<text x="650" y="932" class="b">• A execução aprofunda um ramo.</text>
+<text x="650" y="967" class="b">• Retrocesso conecta Prolog à DFS.</text>
+<path class="arrow" d="M575 908 L615 908"/>
+
+<rect x="45" y="1070" width="1110" height="180" rx="18" fill="#f7faff" stroke="#0e4aa8" stroke-width="3"/>
+<text x="70" y="1110" class="h">Ciclo operacional da consulta</text>
+<rect class="box" x="70" y="1150" width="180" height="58" fill="#fff"/><text x="112" y="1186" class="flow">Consulta</text>
+<rect class="box" x="300" y="1150" width="180" height="58" fill="#fff"/><text x="323" y="1186" class="flow">Selecionar regra</text>
+<rect class="box" x="530" y="1150" width="180" height="58" fill="#fff"/><text x="572" y="1186" class="flow">Unificar</text>
+<rect class="box" x="760" y="1150" width="180" height="58" fill="#fff"/><text x="794" y="1186" class="flow">Submetas</text>
+<rect class="box" x="990" y="1150" width="130" height="58" fill="#fff"/><text x="1012" y="1186" class="flow">Resposta</text>
+<path class="arrow" d="M250 1179 L290 1179"/><path class="arrow" d="M480 1179 L520 1179"/><path class="arrow" d="M710 1179 L750 1179"/><path class="arrow" d="M940 1179 L980 1179"/>
+
+<rect x="45" y="1290" width="1110" height="150" rx="18" fill="#fff" stroke="#9aa6bc" stroke-width="2"/>
+<text x="70" y="1328" class="h">Checklist</text>
+<text x="75" y="1365" class="b">□ Distingo fatos, regras e consultas.  □ Aplico unificação e acompanho submetas.</text>
+<text x="75" y="1400" class="b">□ Explico retrocesso e recursão.  □ Relaciono resolução de metas com DFS.</text>
+
+<text x="50" y="1480" class="small">Conexão didática: LPO + unificação + encadeamento reverso + busca em profundidade → Prolog.</text>
+</svg>
