@@ -259,4 +259,4 @@ Explique por que cada afirmação está errada ou incompleta:
 - [ ] Interpreto termos compostos e listas.
 - [ ] Consigo explicar por que a ordem operacional importa.
 
-Depois desta revisão, resolva as questões de Prolog da [Lista 05](../../atividades/05-logica-lpo-prolog/README.md).
+Depois desta revisão, resolva as questões de Prolog da [Lista 05](../../atividades/).
