@@ -47,8 +47,9 @@ A proposta não é apenas disponibilizar arquivos, mas organizar um percurso de 
 | 04 | Estruturas e Estratégias de Busca |
 | 05 | Lógica e Raciocínio em IA |
 | 06 | Lógica de Primeira Ordem e Inferência |
+| 07 | Prolog - Programação Lógica, Unificação e Busca |
 
-Os PDFs públicos das Aulas 00 a 06 e das Atividades 01 a 04 já fazem parte do repositório.
+Os PDFs públicos das Aulas 00 a 07 e das Atividades 01 a 05 já fazem parte do repositório. A Lista 05 integra Lógica Proposicional, Lógica de Primeira Ordem, Inferência em LPO e Prolog.
 
 ## Notas visuais
 
@@ -62,7 +63,7 @@ As Aulas 01 a 06 possuem notas públicas em Markdown concebidas como **mapas men
 - erros conceituais frequentes;
 - checklists de revisão.
 
-A Aula 05 acrescenta uma síntese específica sobre agentes baseados em conhecimento, `TELL`, `ASK`, Mundo do Wumpus, modelos, consequência lógica e resolução. A Aula 06 amplia esse percurso com LPO, quantificadores, substituição, unificação, encadeamento e resolução em LPO.
+A Aula 05 acrescenta uma síntese específica sobre agentes baseados em conhecimento, `TELL`, `ASK`, Mundo do Wumpus, modelos, consequência lógica e resolução. A Aula 06 amplia esse percurso com LPO, quantificadores, substituição, unificação, encadeamento e resolução em LPO. A Aula 07 transforma esses mecanismos em programação executável com Prolog, enfatizando fatos, regras, consultas, resolução de metas, retrocesso e recursão.
 
 ## Aula 05 - Lógica e Raciocínio em IA
 
@@ -89,6 +90,14 @@ percepção -> TELL -> KB -> inferência -> ASK -> ação
 ```
 
 A numeração da Aula 05 segue a organização didática da disciplina. Nas listas e referências bibliográficas, esse conteúdo se relaciona principalmente ao Capítulo 7 de Russell & Norvig.
+
+## Aula 07 - Prolog
+
+A Aula 07 dá continuidade direta à Aula 06. O conteúdo trabalha programação lógica com fatos, regras, consultas, variáveis, unificação, resolução de metas, encadeamento reverso, retrocesso e recursão.
+
+Um exemplo de alcançabilidade em grafos relaciona a execução do Prolog com busca em profundidade. O material também inclui aritmética, estruturas e listas como conteúdo complementar.
+
+A Lista 05 consolida as Aulas 05, 06 e 07, ligando representação formal, inferência e programação lógica.
 
 ## Simulados
 
@@ -159,7 +168,8 @@ EC-IA/
 │   ├── 03-conhecimento/
 │   ├── 04-busca/
 │   ├── 05-logica/
-│   └── 06-lpo-inferencia/
+│   ├── 06-lpo-inferencia/
+│   └── 07-prolog/
 ├── notas/
 │   ├── 01-introducao/
 │   ├── 02-agentes/
@@ -171,7 +181,8 @@ EC-IA/
 │   ├── 01-introducao/lista-01/
 │   ├── 02-agentes/lista-02/
 │   ├── 03-conhecimento/lista-03/
-│   └── 04-busca/lista-04/
+│   ├── 04-busca/lista-04/
+│   └── 05-logica-lpo-prolog/
 ├── estudos-guiados/
 ├── simulados/
 │   ├── index.md
@@ -208,7 +219,7 @@ Modelos LaTeX explicitamente destinados aos estudantes, como o modelo SBC do Tra
 
 ## Versão de referência
 
-A versão pública de referência é a **`v0.7.0`**.
+A versão pública de referência permanece **`v0.7.0`** até a próxima release. As alterações da Aula 06 atualizada, Aula 07 e Lista 05 estão registradas em `[Unreleased]`.
 
 Principais marcos desta versão:
 
