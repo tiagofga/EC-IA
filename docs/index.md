@@ -34,44 +34,13 @@ Os PDFs públicos das aulas estão disponíveis da Aula 00 à Aula 07. As ativid
 | 06 | Lógica de Primeira Ordem e Inferência | duas partes da aula, nota visual, estudo guiado, pseudocódigos e visualizações de unificação e inferência |
 | 07 | Prolog - Programação Lógica, Unificação e Busca | aula e integração com a Lista 05 |
 
-## Aula 05 - Lógica e Raciocínio em IA
+## Bloco atual - Lógica, Inferência e Prolog
 
-A Aula 05 está organizada em duas partes:
+As Aulas 05, 06 e 07 formam uma sequência integrada: representação do conhecimento e Lógica Proposicional, Lógica de Primeira Ordem e inferência, e Prolog como linguagem de programação lógica.
 
-- **Parte I - Representação, Conhecimento e Agentes Baseados em Conhecimento**;
-- **Parte II - Lógica Proposicional**.
+[Acessar as aulas](aulas/)
 
-O Mundo do Wumpus funciona como fio condutor para conectar percepção, `TELL`, base de conhecimento, inferência, `ASK` e ação. A aula também possui visualizações próprias para **modelos e consequência lógica** e para **resolução proposicional por refutação**, completando os principais mecanismos da Parte II.
-
-[Abrir a Aula 05](aulas/)
-
-[Abrir a Nota Visual 05](notas/05-logica/README.md)
-
-[Abrir o Estudo Guiado 05](estudos-guiados/05-logica/README.md)
-
-[Abrir as Visualizações](visualizacoes/)
-
-## Aula 06 - Lógica de Primeira Ordem e Inferência
-
-A Aula 06 está organizada em duas partes: **Representação, Sintaxe e Semântica** e **Inferência em LPO**. O material complementar acompanha o percurso da aula, com ênfase em quantificadores, substituição, unificação, encadeamento direto e reverso, retrocesso e resolução.
-
-[Abrir a Aula 06](aulas/)
-
-[Abrir a Nota Visual 06](notas/06-lpo-inferencia/README.md)
-
-[Abrir o Estudo Guiado 06](estudos-guiados/06-lpo-inferencia/README.md)
-
-[Abrir as Visualizações](visualizacoes/)
-
-## Aula 07 - Prolog
-
-A Aula 07 transforma em execução os mecanismos estudados anteriormente em LPO. O conteúdo trabalha fatos, regras, consultas, variáveis, unificação, resolução de metas, encadeamento reverso, retrocesso e recursão.
-
-A conexão com busca aparece em um exemplo de alcançabilidade em grafos, relacionando o comportamento operacional do Prolog com busca em profundidade.
-
-[Abrir a Aula 07](aulas/)
-
-[Abrir a Lista 05](atividades/)
+[Acessar as atividades](atividades/)
 
 ## Notas visuais
 
