@@ -75,11 +75,13 @@ copy_if_exists "aulas/05-logica/EC_IA_005_Logica_Parte1.pdf" "docs/downloads/aul
 copy_if_exists "aulas/05-logica/EC_IA_005_Logica_Parte2.pdf" "docs/downloads/aulas/EC_IA_005_Logica_Parte2.pdf"
 copy_if_exists "aulas/06-lpo-inferencia/EC_IA_006_LPO_Parte_01.pdf" "docs/downloads/aulas/EC_IA_006_LPO_Parte_01.pdf"
 copy_if_exists "aulas/06-lpo-inferencia/EC_IA_006_LPO_Parte_02.pdf" "docs/downloads/aulas/EC_IA_006_LPO_Parte_02.pdf"
+copy_if_exists "aulas/07-prolog/EC_IA_007_Prolog.pdf" "docs/downloads/aulas/EC_IA_007_Prolog.pdf"
 
 copy_if_exists "atividades/01-introducao/lista-01/EC_IA_001_Introducao_Atividades.pdf" "docs/downloads/atividades/EC_IA_001_Introducao_Atividades.pdf"
 copy_if_exists "atividades/02-agentes/lista-02/EC_IA_002_Agentes_Atividades.pdf" "docs/downloads/atividades/EC_IA_002_Agentes_Atividades.pdf"
 copy_if_exists "atividades/03-conhecimento/lista-03/EC_IA_003_Conhecimento_Atividades.pdf" "docs/downloads/atividades/EC_IA_003_Conhecimento_Atividades.pdf"
 copy_if_exists "atividades/04-busca/lista-04/EC_IA_004_Busca_Atividades.pdf" "docs/downloads/atividades/EC_IA_004_Busca_Atividades.pdf"
+copy_if_exists "atividades/05-logica-lpo-prolog/EC_IA_005_Lógica_Atividades.pdf" "docs/downloads/atividades/EC_IA_005_Logica_Atividades.pdf"
 
 copy_if_exists "trabalhos/01-busca/EC_IA_Trabalho_01_2026.pdf" "docs/downloads/trabalhos/EC_IA_Trabalho_01_2026.pdf"
 copy_if_exists "planos/2026-2/plano-didatico.md" "docs/downloads/planos/plano-didatico-2026-2.md"
