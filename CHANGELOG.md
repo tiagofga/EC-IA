@@ -8,6 +8,11 @@ O histórico de commits segue Conventional Commits.
 
 ### Added
 
+- Aula 07 - Prolog: Programação Lógica, Unificação e Busca;
+- Lista 05 integrando Lógica Proposicional, LPO, Inferência em LPO e Prolog, com entrega em 30/10/2026;
+- README público da Aula 06 atualizado;
+- README público da Aula 07;
+- README público da Lista 05;
 - PDFs públicos da Aula 06 em duas partes: Representação, Sintaxe e Semântica; e Inferência em LPO;
 - nota visual da Aula 06 - Lógica de Primeira Ordem e Inferência;
 - Estudo Guiado 06 com exercícios sobre termos, quantificadores, substituição, unificação e encadeamento;
@@ -19,6 +24,10 @@ O histórico de commits segue Conventional Commits.
 
 ### Changed
 
+- Aula 06 - Parte II atualizada com exploração passo a passo de encadeamento direto, encadeamento reverso e retrocesso;
+- páginas de Aulas e Atividades atualizadas para publicar a Aula 07 e a Lista 05;
+- script de build atualizado para incluir os downloads da Aula 07 e da Lista 05;
+- README e página inicial atualizados para refletir o percurso Aula 05 -> Aula 06 -> Aula 07;
 - índices de Notas, Estudos Guiados e Visualizações atualizados para incluir os materiais complementares da Aula 06;
 - script de build atualizado para sincronizar os materiais da Aula 06 e publicar os dois PDFs na área de downloads;
 - página de Aulas, página inicial e README atualizados para incluir a Aula 06;
@@ -26,7 +35,9 @@ O histórico de commits segue Conventional Commits.
 
 ### Notes
 
-- a Aula 06 mantém continuidade com o bloco de lógica e prepara o estudo de Prolog.
+- a Aula 06 mantém continuidade com o bloco de lógica e prepara o estudo de Prolog;
+- a Aula 07 concretiza os mecanismos de unificação, encadeamento reverso e retrocesso em uma linguagem executável;
+- a Lista 05 funciona como atividade integrada de consolidação das Aulas 05, 06 e 07.
 
 ## [0.7.0] - 2026-09-09
 
