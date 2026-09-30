@@ -21,7 +21,7 @@ Se você está acompanhando a disciplina durante o semestre, use esta sequência
 
 ## Conteúdo publicado
 
-Os PDFs públicos das aulas estão disponíveis da Aula 00 à Aula 07. As atividades correspondentes às Aulas 01 a 05 também estão publicadas. As Aulas 01 a 06 possuem notas visuais e estudos guiados, e a Aula 07 introduz Prolog como continuidade prática do bloco de lógica. Há ainda três simulados públicos para revisão integrada das Aulas 01 a 04, sem gabaritos ou soluções de referência.
+Os PDFs públicos das aulas estão disponíveis da Aula 00 à Aula 07. As atividades correspondentes às Aulas 01 a 05 também estão publicadas. As Aulas 01 a 07 possuem notas visuais e estudos guiados. A Aula 07 introduz Prolog como continuidade prática do bloco de lógica e acrescenta pseudocódigos e uma visualização de resolução de metas. Há ainda três simulados públicos para revisão integrada das Aulas 01 a 04, sem gabaritos ou soluções de referência.
 
 | Aula | Tema | Recursos principais |
 |---|---|---|
@@ -32,7 +32,7 @@ Os PDFs públicos das aulas estão disponíveis da Aula 00 à Aula 07. As ativid
 | 04 | Estruturas e Estratégias de Busca | duas partes da aula, nota visual, atividade, estudo guiado, pseudocódigos, visualizações e Trabalho 01 |
 | 05 | Lógica e Raciocínio em IA | duas partes da aula, nota visual, estudo guiado, pseudocódigos e visualizações de Wumpus, modelos e resolução |
 | 06 | Lógica de Primeira Ordem e Inferência | duas partes da aula, nota visual, estudo guiado, pseudocódigos e visualizações de unificação e inferência |
-| 07 | Prolog - Programação Lógica, Unificação e Busca | aula e integração com a Lista 05 |
+| 07 | Prolog - Programação Lógica, Unificação e Busca | aula, nota visual, estudo guiado, Lista 05, pseudocódigos e visualização de resolução de metas |
 
 ## Bloco atual - Lógica, Inferência e Prolog
 
