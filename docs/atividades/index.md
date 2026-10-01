@@ -10,6 +10,13 @@ Esta seção reúne as atividades públicas destinadas aos estudantes.
 | 02 | Agentes Inteligentes | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/atividades/02-agentes) | <span data-download="../downloads/atividades/EC_IA_002_Agentes_Atividades.pdf">Verificando PDF...</span> |
 | 03 | Representação do Conhecimento e Solução de Problemas | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/atividades/03-conhecimento) | <span data-download="../downloads/atividades/EC_IA_003_Conhecimento_Atividades.pdf">Verificando PDF...</span> |
 | 04 | Estratégias de Busca | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/atividades/04-busca) | <span data-download="../downloads/atividades/EC_IA_004_Busca_Atividades.pdf">Verificando PDF...</span> |
+| 05 | Lógica Proposicional, LPO, Inferência em LPO e Prolog | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/atividades/05-logica-lpo-prolog) | <span data-download="../downloads/atividades/EC_IA_005_Logica_Atividades.pdf">Verificando PDF...</span> |
+
+## Lista 05
+
+A Lista 05 consolida o bloco formado pelas Aulas 05, 06 e 07. Os exercícios avançam de Lógica Proposicional para Lógica de Primeira Ordem, mecanismos de inferência e, ao final, programação lógica em Prolog.
+
+**Data de entrega:** 30/10/2026.
 
 ## Como usar as atividades
 

@@ -12,7 +12,8 @@ for guide in \
   03-conhecimento \
   04-busca \
   05-logica \
-  06-lpo-inferencia
+  06-lpo-inferencia \
+  07-prolog
  do
   rm -rf "docs/estudos-guiados/$guide"
   cp -R "estudos-guiados/$guide" "docs/estudos-guiados/$guide"
@@ -26,16 +27,18 @@ for note in \
   03-conhecimento \
   04-busca \
   05-logica \
-  06-lpo-inferencia
+  06-lpo-inferencia \
+  07-prolog
  do
   rm -rf "docs/notas/$note"
   cp -R "notas/$note" "docs/notas/$note"
 done
 
 # A Aula 05 possui pseudocódigos conceituais próprios de lógica.
-rm -rf docs/pseudocodigos/05-logica docs/pseudocodigos/06-lpo-inferencia
+rm -rf docs/pseudocodigos/05-logica docs/pseudocodigos/06-lpo-inferencia docs/pseudocodigos/07-prolog
 cp -R pseudoalgoritmos/05-logica docs/pseudocodigos/05-logica
 cp -R pseudoalgoritmos/06-lpo-inferencia docs/pseudocodigos/06-lpo-inferencia
+cp -R pseudoalgoritmos/07-prolog docs/pseudocodigos/07-prolog
 
 # Para a validação do MkDocs, publique apenas o README da visualização.
 # O laboratório HTML completo é copiado para site/ após o build, evitando
@@ -49,6 +52,9 @@ rm -rf docs/visualizacoes/06-lpo-inferencia
 mkdir -p docs/visualizacoes/06-lpo-inferencia/unificacao docs/visualizacoes/06-lpo-inferencia/inferencia
 cp visualizacoes/06-lpo-inferencia/unificacao/README.md docs/visualizacoes/06-lpo-inferencia/unificacao/README.md
 cp visualizacoes/06-lpo-inferencia/inferencia/README.md docs/visualizacoes/06-lpo-inferencia/inferencia/README.md
+rm -rf docs/visualizacoes/07-prolog
+mkdir -p docs/visualizacoes/07-prolog/resolucao-metas
+cp visualizacoes/07-prolog/resolucao-metas/README.md docs/visualizacoes/07-prolog/resolucao-metas/README.md
 
 # Os simulados são mantidos em simulados/ como fonte pública e sincronizados
 # para o diretório do MkDocs. Apenas enunciados são publicados; gabaritos
@@ -75,11 +81,13 @@ copy_if_exists "aulas/05-logica/EC_IA_005_Logica_Parte1.pdf" "docs/downloads/aul
 copy_if_exists "aulas/05-logica/EC_IA_005_Logica_Parte2.pdf" "docs/downloads/aulas/EC_IA_005_Logica_Parte2.pdf"
 copy_if_exists "aulas/06-lpo-inferencia/EC_IA_006_LPO_Parte_01.pdf" "docs/downloads/aulas/EC_IA_006_LPO_Parte_01.pdf"
 copy_if_exists "aulas/06-lpo-inferencia/EC_IA_006_LPO_Parte_02.pdf" "docs/downloads/aulas/EC_IA_006_LPO_Parte_02.pdf"
+copy_if_exists "aulas/07-prolog/EC_IA_007_Prolog.pdf" "docs/downloads/aulas/EC_IA_007_Prolog.pdf"
 
 copy_if_exists "atividades/01-introducao/lista-01/EC_IA_001_Introducao_Atividades.pdf" "docs/downloads/atividades/EC_IA_001_Introducao_Atividades.pdf"
 copy_if_exists "atividades/02-agentes/lista-02/EC_IA_002_Agentes_Atividades.pdf" "docs/downloads/atividades/EC_IA_002_Agentes_Atividades.pdf"
 copy_if_exists "atividades/03-conhecimento/lista-03/EC_IA_003_Conhecimento_Atividades.pdf" "docs/downloads/atividades/EC_IA_003_Conhecimento_Atividades.pdf"
 copy_if_exists "atividades/04-busca/lista-04/EC_IA_004_Busca_Atividades.pdf" "docs/downloads/atividades/EC_IA_004_Busca_Atividades.pdf"
+copy_if_exists "atividades/05-logica-lpo-prolog/EC_IA_005_Lógica_Atividades.pdf" "docs/downloads/atividades/EC_IA_005_Logica_Atividades.pdf"
 
 copy_if_exists "trabalhos/01-busca/EC_IA_Trabalho_01_2026.pdf" "docs/downloads/trabalhos/EC_IA_Trabalho_01_2026.pdf"
 copy_if_exists "planos/2026-2/plano-didatico.md" "docs/downloads/planos/plano-didatico-2026-2.md"
@@ -94,5 +102,7 @@ rm -rf site/visualizacoes/05-logica
 cp -R visualizacoes/05-logica site/visualizacoes/05-logica
 rm -rf site/visualizacoes/06-lpo-inferencia
 cp -R visualizacoes/06-lpo-inferencia site/visualizacoes/06-lpo-inferencia
+rm -rf site/visualizacoes/07-prolog
+cp -R visualizacoes/07-prolog site/visualizacoes/07-prolog
 
 echo "Site gerado em: $ROOT_DIR/site"

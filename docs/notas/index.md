@@ -18,6 +18,7 @@ Aula → Nota visual → Estudo guiado → Atividade → Revisão
 | 04 | Estruturas e Estratégias de Busca | BFS, DFS, UCS, Gulosa, A*, busca local e ambientes complexos | [Abrir nota](04-busca/README.md) |
 | 05 | Lógica e Raciocínio em IA | TELL/ASK, KB, Wumpus, sintaxe, semântica, modelos, consequência lógica e resolução | [Abrir nota](05-logica/README.md) |
 | 06 | Lógica de Primeira Ordem e Inferência | termos, predicados, quantificadores, substituição, unificação e encadeamento | [Abrir nota](06-lpo-inferencia/README.md) |
+| 07 | Prolog | fatos, regras, consultas, unificação, retrocesso, recursão e relação com DFS | [Abrir nota](07-prolog/README.md) |
 
 ## Como usar
 
@@ -36,4 +37,4 @@ As notas não substituem os slides nem repetem integralmente a aula. Elas têm t
 - **orientação visual** - mostrar como os conceitos se conectam;
 - **revisão** - permitir retomada rápida antes de atividades, provas e trabalhos.
 
-Para aprofundar ou verificar sua compreensão, use também os [Estudos guiados](../estudos-guiados/).
+Para aprofundar ou verificar sua compreensão, use também os [Estudos guiados](../estudos-guiados/index.md).

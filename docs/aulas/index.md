@@ -16,6 +16,7 @@ Os materiais públicos estão organizados por aula. A recomendação é revisar 
 | 05 | Lógica e Raciocínio em IA - Parte II: Lógica Proposicional | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/aulas/05-logica) | <span data-download="../downloads/aulas/EC_IA_005_Logica_Parte2.pdf">Verificando PDF...</span> |
 | 06 | Lógica de Primeira Ordem - Parte I: Representação, Sintaxe e Semântica | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/aulas/06-lpo-inferencia) | <span data-download="../downloads/aulas/EC_IA_006_LPO_Parte_01.pdf">Verificando PDF...</span> |
 | 06 | Lógica de Primeira Ordem - Parte II: Inferência em LPO | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/aulas/06-lpo-inferencia) | <span data-download="../downloads/aulas/EC_IA_006_LPO_Parte_02.pdf">Verificando PDF...</span> |
+| 07 | Prolog - Programação Lógica, Unificação e Busca | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/aulas/07-prolog) | <span data-download="../downloads/aulas/EC_IA_007_Prolog.pdf">Verificando PDF...</span> |
 
 ## Organização da Aula 04
 
@@ -37,7 +38,13 @@ A Parte I amplia a representação proposicional para a Lógica de Primeira Orde
 
 A Parte II trabalha os mecanismos de inferência: instanciação universal e existencial, substituição, Modus Ponens Generalizado, unificação, UMG, padronização à parte, teste de ocorrência, cláusulas definidas, encadeamento direto e reverso, retrocesso e uma introdução à resolução em LPO e à Skolemização.
 
-O caso West é usado como exemplo condutor para comparar encadeamento direto e reverso, e a aula termina fazendo a ponte para Prolog.
+O caso West é usado como exemplo condutor para comparar encadeamento direto e reverso. A versão atualizada da Parte II detalha a exploração passo a passo da base de conhecimento e encerra fazendo a ponte para Prolog.
+
+## Organização da Aula 07
+
+A Aula 07 transforma os mecanismos estudados em LPO em um modelo de programação executável. O conteúdo trabalha fatos, regras, consultas, variáveis, unificação, resolução de metas, encadeamento reverso, retrocesso e recursão.
+
+Um exemplo de alcançabilidade em grafos conecta a execução do Prolog com busca em profundidade. A aula também inclui material complementar sobre aritmética, estruturas e listas.
 
 ## Sequência recomendada
 

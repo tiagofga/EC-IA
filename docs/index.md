@@ -21,7 +21,7 @@ Se você está acompanhando a disciplina durante o semestre, use esta sequência
 
 ## Conteúdo publicado
 
-Os PDFs públicos das aulas estão disponíveis da Aula 00 à Aula 06. As atividades correspondentes às Aulas 01 a 04 também estão publicadas. As Aulas 01 a 06 possuem notas visuais e estudos guiados. Há ainda três simulados públicos para revisão integrada das Aulas 01 a 04, sem gabaritos ou soluções de referência.
+Os PDFs públicos das aulas estão disponíveis da Aula 00 à Aula 07. As atividades correspondentes às Aulas 01 a 05 também estão publicadas. As Aulas 01 a 07 possuem notas visuais e estudos guiados. A Aula 07 introduz Prolog como continuidade prática do bloco de lógica e acrescenta pseudocódigos e uma visualização de resolução de metas. Há ainda três simulados públicos para revisão integrada das Aulas 01 a 04, sem gabaritos ou soluções de referência.
 
 | Aula | Tema | Recursos principais |
 |---|---|---|
@@ -32,41 +32,21 @@ Os PDFs públicos das aulas estão disponíveis da Aula 00 à Aula 06. As ativid
 | 04 | Estruturas e Estratégias de Busca | duas partes da aula, nota visual, atividade, estudo guiado, pseudocódigos, visualizações e Trabalho 01 |
 | 05 | Lógica e Raciocínio em IA | duas partes da aula, nota visual, estudo guiado, pseudocódigos e visualizações de Wumpus, modelos e resolução |
 | 06 | Lógica de Primeira Ordem e Inferência | duas partes da aula, nota visual, estudo guiado, pseudocódigos e visualizações de unificação e inferência |
+| 07 | Prolog - Programação Lógica, Unificação e Busca | aula, nota visual, estudo guiado, Lista 05, pseudocódigos e visualização de resolução de metas |
 
-## Aula 05 - Lógica e Raciocínio em IA
+## Bloco atual - Lógica, Inferência e Prolog
 
-A Aula 05 está organizada em duas partes:
+As Aulas 05, 06 e 07 formam uma sequência integrada: representação do conhecimento e Lógica Proposicional, Lógica de Primeira Ordem e inferência, e Prolog como linguagem de programação lógica.
 
-- **Parte I - Representação, Conhecimento e Agentes Baseados em Conhecimento**;
-- **Parte II - Lógica Proposicional**.
+[Acessar as aulas](aulas/index.md)
 
-O Mundo do Wumpus funciona como fio condutor para conectar percepção, `TELL`, base de conhecimento, inferência, `ASK` e ação. A aula também possui visualizações próprias para **modelos e consequência lógica** e para **resolução proposicional por refutação**, completando os principais mecanismos da Parte II.
-
-[Abrir a Aula 05](aulas/)
-
-[Abrir a Nota Visual 05](notas/05-logica/README.md)
-
-[Abrir o Estudo Guiado 05](estudos-guiados/05-logica/README.md)
-
-[Abrir as Visualizações](visualizacoes/)
-
-## Aula 06 - Lógica de Primeira Ordem e Inferência
-
-A Aula 06 está organizada em duas partes: **Representação, Sintaxe e Semântica** e **Inferência em LPO**. O material complementar acompanha o percurso da aula, com ênfase em quantificadores, substituição, unificação, encadeamento direto e reverso, retrocesso e resolução.
-
-[Abrir a Aula 06](aulas/)
-
-[Abrir a Nota Visual 06](notas/06-lpo-inferencia/README.md)
-
-[Abrir o Estudo Guiado 06](estudos-guiados/06-lpo-inferencia/README.md)
-
-[Abrir as Visualizações](visualizacoes/)
+[Acessar as atividades](atividades/index.md)
 
 ## Notas visuais
 
 As notas funcionam como mapas mentais e guias de revisão. Elas incluem diagramas Mermaid, tabelas comparativas, fluxos conceituais, alertas de erros frequentes e checklists.
 
-[Abrir as Notas visuais](notas/)
+[Abrir as Notas visuais](notas/index.md)
 
 ## Simulados
 
@@ -74,7 +54,7 @@ Estão disponíveis três simulados para revisão integrada das Aulas 01 a 04. E
 
 A recomendação é resolvê-los em sequência e, inicialmente, sem consulta. O Simulado 03 utiliza um grafo didático inspirado em cidades brasileiras e apresenta a identificação das siglas das cidades utilizadas. Os gabaritos permanecem fora do site público.
 
-[Acessar os Simulados](simulados/)
+[Acessar os Simulados](simulados/index.md)
 
 ## Visualizações
 
@@ -82,7 +62,7 @@ A Aula 04 possui um visualizador de estratégias de busca baseado em **traces pr
 
 As visualizações compartilham a mesma identidade visual: azul como cor principal; verde para solução/sucesso; amarelo para atenção ou fronteira; vermelho para estados críticos; violeta para diferenciações específicas. A interface foi pensada para funcionar em desktop, tablet e celular.
 
-[Abrir a seção de visualizações](visualizacoes/)
+[Abrir a seção de visualizações](visualizacoes/index.md)
 
 ## Trabalho 01 - Busca
 
@@ -93,7 +73,7 @@ O primeiro trabalho prático utiliza diretamente os conteúdos da Aula 04.
 - **Valor:** 20,0 pontos;
 - **Modalidade:** individual ou em dupla.
 
-[Acessar o Trabalho 01](trabalhos/)
+[Acessar o Trabalho 01](trabalhos/index.md)
 
 ## Versão pública
 
