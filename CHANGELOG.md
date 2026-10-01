@@ -15,7 +15,8 @@ O histórico de commits segue Conventional Commits.
 - README público da Lista 05;
 - nota visual e Estudo Guiado 07 para Prolog;
 - pseudocódigos conceituais de resolução de metas, retrocesso e recursão em Prolog;
-- visualização interativa de resolução de metas, árvore de prova e retrocesso para a Aula 07;
+- visualização interativa de resolução de metas, árvore de prova, retrocesso e alcançabilidade em grafos para a Aula 07;
+- materiais complementares sobre negação por falha, listas recursivas e distinções entre `=`, `is`, `==` e `=:=`;
 - PDFs públicos da Aula 06 em duas partes: Representação, Sintaxe e Semântica; e Inferência em LPO;
 - nota visual da Aula 06 - Lógica de Primeira Ordem e Inferência;
 - Estudo Guiado 06 com exercícios sobre termos, quantificadores, substituição, unificação e encadeamento;
