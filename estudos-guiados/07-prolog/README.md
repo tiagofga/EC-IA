@@ -176,17 +176,37 @@ Explique por que a ordem de fatos e regras pode alterar:
 - o custo da execução;
 - a possibilidade de não término.
 
-## 13. Aritmética
+## 13. Falha, desigualdade e negação por falha
 
-Explique a diferença entre:
+Explique por que uma consulta que retorna `false` não constitui, por si só, uma prova de negação clássica.
 
-    X = 2 + 3
+Considere:
 
-e uma avaliação numérica da expressão `2 + 3`.
+    tem_filho(X) :- progenitor(X,_).
+    sem_filho(X) :- pessoa(X), \+ tem_filho(X).
 
-Por que unificação e cálculo não devem ser confundidos?
+Responda:
 
-## 14. Estruturas
+1. o que significa operacionalmente `\+ tem_filho(X)`?
+2. por que é recomendável que `X` esteja adequadamente instanciado antes desse teste?
+3. qual a diferença entre `\+` e negação clássica?
+
+Explique também o papel de `X \= Y` na regra de irmãos.
+
+## 14. Aritmética e comparações
+
+Compare:
+
+    X = 1 + 2
+    X is 1 + 2
+    1 + 2 == 1 + 2
+    1 + 2 =:= 3
+
+Para cada expressão, indique se ocorre unificação, avaliação aritmética, identidade de termos ou comparação numérica.
+
+Por que `X = 1+2` não produz automaticamente `X = 3`?
+
+## 15. Estruturas
 
 Considere:
 
@@ -195,7 +215,7 @@ Considere:
 
 Explique como termos compostos permitem representar dados estruturados.
 
-## 15. Listas
+## 16. Listas
 
 Analise conceitualmente:
 
@@ -204,7 +224,22 @@ Analise conceitualmente:
 
 Explique o papel de cabeça e cauda e por que essa decomposição combina naturalmente com recursão.
 
-## 16. Integração com a Aula 06
+Acrescente implementações conceituais para:
+
+- `pertence/2`;
+- `ultimo/2`;
+- `tamanho/2`;
+- `concatena/3`.
+
+Indique quais delas exigem avaliação aritmética.
+
+## 17. Não terminação e ordem operacional
+
+Construa ou analise um exemplo em que uma regra recursiva seja escolhida antes de um caso base adequado e provoque não terminação.
+
+Explique por que a ordem das cláusulas e das submetas pode alterar o comportamento operacional sem necessariamente alterar a intenção declarativa.
+
+## 18. Integração com a Aula 06
 
 Complete o fluxo:
 
@@ -222,7 +257,7 @@ Complete o fluxo:
 
 Explique por que `encadeamento reverso` é a resposta esperada para a lacuna.
 
-## 17. Use a visualização
+## 19. Use a visualização
 
 Na visualização de resolução de metas:
 
@@ -231,9 +266,10 @@ Na visualização de resolução de metas:
 3. registre a substituição gerada por unificação;
 4. acompanhe as submetas;
 5. force uma alternativa que exija retrocesso;
-6. compare a árvore de prova com DFS.
+6. compare a árvore de prova com DFS;
+7. execute também o cenário de alcançabilidade em grafo e identifique o ramo explorado e o ponto de retrocesso.
 
-## 18. Erros conceituais a evitar
+## 20. Erros conceituais a evitar
 
 Explique por que cada afirmação está errada ou incompleta:
 
@@ -243,6 +279,9 @@ Explique por que cada afirmação está errada ou incompleta:
 - "Recursão e retrocesso são a mesma coisa."
 - "A ordem das cláusulas não importa em Prolog."
 - "Unificação sempre produz uma resposta."
+- "Se uma consulta falha, sua negação clássica foi provada."
+- "`X \= Y` e `\+ (X = Y)` podem ser usados sem considerar instanciação e contexto."
+- "`=`, `is`, `==` e `=:=` são apenas formas diferentes de escrever a mesma comparação."
 
 ## Autoavaliação
 
@@ -255,8 +294,11 @@ Explique por que cada afirmação está errada ou incompleta:
 - [ ] Relaciono Prolog com encadeamento reverso.
 - [ ] Relaciono Prolog com DFS.
 - [ ] Entendo recursão.
-- [ ] Diferencio unificação de aritmética.
+- [ ] Diferencio falha operacional de negação clássica.
+- [ ] Entendo negação por falha e desigualdade por não unificação.
+- [ ] Diferencio `=`, `is`, `==` e `=:=`.
 - [ ] Interpreto termos compostos e listas.
-- [ ] Consigo explicar por que a ordem operacional importa.
+- [ ] Implemento conceitualmente operações recursivas sobre listas.
+- [ ] Consigo explicar por que a ordem operacional pode causar não terminação.
 
 Depois desta revisão, resolva as questões de Prolog da [Lista 05](../../atividades/).
