@@ -58,7 +58,7 @@ A recomendação é resolvê-los em sequência e, inicialmente, sem consulta. O 
 
 ## Visualizações
 
-A Aula 04 possui um visualizador de estratégias de busca baseado em **traces pré-calculados**. A Aula 05 possui três visualizações complementares: **Mundo do Wumpus**, **modelos e consequência lógica** e **resolução proposicional**. A Aula 06 adiciona visualizações passo a passo para **unificação** e para comparação entre **encadeamento direto e reverso**.
+A Aula 04 possui um visualizador de estratégias de busca baseado em **traces pré-calculados**. A Aula 05 possui três visualizações complementares: **Mundo do Wumpus**, **modelos e consequência lógica** e **resolução proposicional**. A Aula 06 adiciona visualizações passo a passo para **unificação** e para comparação entre **encadeamento direto e reverso**. A Aula 07 acrescenta uma visualização de **resolução de metas, retrocesso e alcançabilidade em grafos**, conectando Prolog com busca em profundidade.
 
 As visualizações compartilham a mesma identidade visual: azul como cor principal; verde para solução/sucesso; amarelo para atenção ou fronteira; vermelho para estados críticos; violeta para diferenciações específicas. A interface foi pensada para funcionar em desktop, tablet e celular.
 
@@ -77,9 +77,9 @@ O primeiro trabalho prático utiliza diretamente os conteúdos da Aula 04.
 
 ## Versão pública
 
-A versão pública de referência é **v0.7.0**.
+A versão pública de referência é **v0.9.0**.
 
-Esta versão consolida a Aula 05, seus materiais complementares, o laboratório interativo do Mundo do Wumpus e a harmonização visual do site e das visualizações.
+Esta versão consolida a atualização da Aula 06 - Parte II, a Aula 07 - Prolog, a Lista 05 e seus materiais complementares de estudo, pseudocódigos e visualização interativa.
 
 ## Sobre este material
 
