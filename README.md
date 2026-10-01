@@ -91,13 +91,21 @@ percepção -> TELL -> KB -> inferência -> ASK -> ação
 
 A numeração da Aula 05 segue a organização didática da disciplina. Nas listas e referências bibliográficas, esse conteúdo se relaciona principalmente ao Capítulo 7 de Russell & Norvig.
 
+## Aula 06 - Lógica de Primeira Ordem e Inferência
+
+A Aula 06 amplia o bloco de lógica para representar objetos, relações e regras gerais com Lógica de Primeira Ordem. O material é organizado em duas partes: representação, sintaxe e semântica; e inferência em LPO.
+
+O conjunto público inclui nota visual, estudo guiado, pseudocódigos de unificação, encadeamento direto, encadeamento reverso, retrocesso e resolução em LPO, além de visualizações interativas de unificação e inferência.
+
+A versão atualizada da Parte II detalha a exploração da base de conhecimento passo a passo e prepara diretamente a transição para Prolog.
+
 ## Aula 07 - Prolog
 
 A Aula 07 dá continuidade direta à Aula 06. O conteúdo trabalha programação lógica com fatos, regras, consultas, variáveis, unificação, resolução de metas, encadeamento reverso, retrocesso e recursão.
 
 Um exemplo de alcançabilidade em grafos relaciona a execução do Prolog com busca em profundidade. O material também inclui aritmética, estruturas e listas como conteúdo complementar.
 
-O conjunto público da Aula 07 inclui nota visual, estudo guiado, pseudocódigos conceituais de resolução de metas, retrocesso e recursão, além de uma visualização interativa de resolução de metas e árvore de prova.
+O conjunto público da Aula 07 inclui nota visual, estudo guiado, pseudocódigos conceituais de resolução de metas, retrocesso, recursão, listas recursivas e negação por falha, além de uma visualização interativa de resolução de metas, árvore de prova, retrocesso e alcançabilidade em grafos.
 
 A Lista 05 consolida as Aulas 05, 06 e 07, ligando representação formal, inferência e programação lógica.
 
@@ -198,7 +206,9 @@ EC-IA/
 │   │   ├── wumpus/
 │   │   ├── modelos/
 │   │   └── resolucao/
-│   └── 06-lpo-inferencia/
+│   ├── 06-lpo-inferencia/
+│   └── 07-prolog/
+│       └── resolucao-metas/
 ├── pseudoalgoritmos/
 │   ├── 05-logica/
 │   ├── 06-lpo-inferencia/
@@ -223,19 +233,22 @@ Modelos LaTeX explicitamente destinados aos estudantes, como o modelo SBC do Tra
 
 ## Versão de referência
 
-A versão pública de referência permanece **`v0.7.0`** até a próxima release. As alterações da Aula 06 atualizada, Aula 07 e Lista 05 estão registradas em `[Unreleased]`.
+A versão pública de referência é **`v0.9.0`**.
 
 Principais marcos desta versão:
 
-- publicação da Aula 05 - Lógica e Raciocínio em IA em duas partes;
-- nota visual e Estudo Guiado 05;
-- pseudocódigos de agente baseado em conhecimento, verificação de modelos e resolução proposicional;
-- laboratório interativo do Mundo do Wumpus;
-- harmonização visual do site e dos visualizadores das Aulas 04 e 05;
-- reorganização da navegação principal conforme o percurso recomendado de estudo.
+- atualização da Aula 06 - Parte II, com exploração passo a passo de encadeamento direto, encadeamento reverso e retrocesso;
+- publicação da Aula 07 - Prolog;
+- publicação da Lista 05, integrando Lógica Proposicional, LPO, Inferência em LPO e Prolog;
+- nota visual e Estudo Guiado 07;
+- pseudocódigos conceituais de resolução de metas, retrocesso, recursão, listas recursivas e negação por falha;
+- visualização interativa de Prolog com árvore de prova, retrocesso e alcançabilidade em grafos;
+- revisão da página inicial e dos índices públicos do site.
 
 Marcos anteriores:
 
+- `v0.8.0` - Aula 06 de LPO e Inferência, nota visual, estudo guiado, pseudocódigos e novas visualizações de lógica;
+- `v0.7.0` - Aula 05, lógica, Mundo do Wumpus e refinamentos de interface;
 - `v0.6.0` - três simulados progressivos e consolidação da revisão para a Prova I;
 - `v0.5.1` - figuras de síntese, Mermaid colorido e suporte a modo claro/escuro;
 - `v0.5.0` - introdução das notas visuais;
