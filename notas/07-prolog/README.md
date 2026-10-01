@@ -143,11 +143,60 @@ A execução pode ser interpretada como uma árvore de prova: regras compatívei
 
 Mesmo em uma linguagem declarativa, a execução possui uma leitura operacional. A ordem das cláusulas e a ordem das metas podem alterar desempenho, ordem das respostas e término.
 
-## 12. Aritmética, estruturas e listas
+## 12. Falha, desigualdade e negação por falha
 
-Aritmética exige distinguir **unificação** de **avaliação numérica**. Termos compostos e listas ampliam a representação de estruturas e permitem relações recursivas mais expressivas.
+Quando uma consulta falha, o Prolog informa que **não encontrou uma prova com o programa disponível**. Isso não equivale automaticamente a demonstrar a negação clássica da consulta.
 
-## 13. Conexões com as aulas anteriores
+O operador `\+` implementa **negação como falha (negation as failure)**:
+
+    sem_filho(X) :- pessoa(X), \+ tem_filho(X).
+
+A meta `\+ G` tem sucesso quando `G` não pode ser provada no contexto corrente.
+
+Já `X \= Y` tem sucesso quando os termos não podem ser unificados. Esse operador aparece, por exemplo, ao formalizar irmãos distintos:
+
+    irmaos(X,Y) :-
+        progenitor(P,X),
+        progenitor(P,Y),
+        X \= Y.
+
+> **Cuidado:** `\+` é um mecanismo operacional e não deve ser confundido com a negação clássica da LPO.
+
+## 13. Aritmética, identidade e comparação numérica
+
+Prolog distingue operações que parecem semelhantes:
+
+    X = 1 + 2.      % unifica X com o termo 1+2
+    X is 1 + 2.     % avalia a expressão e produz X = 3
+    1 + 2 == 1 + 2. % testa identidade de termos
+    1 + 2 =:= 3.    % avalia e compara valores numéricos
+
+Portanto:
+
+- `=` tenta unificar;
+- `is` avalia a expressão aritmética à direita;
+- `==` testa identidade entre termos sem instanciar variáveis;
+- `=:=` compara valores numéricos após avaliação.
+
+## 14. Estruturas e listas
+
+Termos compostos permitem representar dados estruturados, como `ponto(3,4)` ou `data(22,setembro,2026)`.
+
+Listas são estruturas recursivas:
+
+    []
+    [a,b,c]
+    [Cabeca|Cauda]
+
+Essa decomposição permite definições como:
+
+    pertence(X,[X|_]).
+    pertence(X,[_|Cauda]) :-
+        pertence(X,Cauda).
+
+Também aparecem no material complementar `ultimo/2`, `tamanho/2` e `concatena/3`, reforçando a ligação entre recursão, unificação e processamento de listas.
+
+## 15. Conexões com as aulas anteriores
 
 ```mermaid
 flowchart LR
@@ -159,7 +208,7 @@ flowchart LR
     A4[Aula 04: DFS] --> A7
 ```
 
-## 14. Erros conceituais frequentes
+## 16. Erros conceituais frequentes
 
 > **Erro 1:** `=` é atribuição. Não. Em Prolog, o operador tenta unificar termos.
 
@@ -168,6 +217,10 @@ flowchart LR
 > **Erro 3:** a ordem nunca importa em uma linguagem declarativa. A leitura declarativa descreve relações, mas a execução possui uma ordem operacional.
 
 > **Erro 4:** retrocesso e recursão são a mesma coisa. Não. Recursão define uma relação em termos dela mesma; retrocesso explora alternativas.
+
+> **Erro 5:** `false` prova a negação clássica da consulta. Não. Indica que o mecanismo não encontrou uma prova com o programa disponível.
+
+> **Erro 6:** `=`, `is`, `==` e `=:=` são equivalentes. Não. Eles realizam operações diferentes sobre termos e expressões numéricas.
 
 ## Revisão de 1 minuto
 
@@ -188,7 +241,11 @@ flowchart LR
 - [ ] Relaciono Prolog com encadeamento reverso.
 - [ ] Relaciono a execução de Prolog com DFS.
 - [ ] Reconheço o papel da recursão.
-- [ ] Diferencio unificação de avaliação aritmética.
-- [ ] Entendo por que a ordem das cláusulas e metas pode afetar a execução.
+- [ ] Diferencio falha operacional de falsidade clássica.
+- [ ] Entendo negação por falha com `\+`.
+- [ ] Sei quando usar `\=`.
+- [ ] Diferencio `=`, `is`, `==` e `=:=`.
+- [ ] Interpreto listas por cabeça e cauda.
+- [ ] Entendo por que a ordem das cláusulas e metas pode afetar a execução e o término.
 
 **Próximo passo:** faça o [Estudo Guiado 07](../../estudos-guiados/07-prolog/README.md), explore a [visualização de resolução de metas](../../visualizacoes/07-prolog/resolucao-metas/README.md) e resolva as questões de Prolog da [Lista 05](../../atividades/).
