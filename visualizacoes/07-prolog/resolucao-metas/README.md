@@ -9,11 +9,12 @@ Visualização interativa para acompanhar como uma consulta é transformada em s
 - observar substituições produzidas por unificação;
 - identificar pontos de escolha;
 - observar o retrocesso após falha;
-- relacionar a execução com busca em profundidade.
+- relacionar a execução com busca em profundidade;
+- explorar alcançabilidade em grafos como exemplo integrador.
 
 ## Como usar
 
-1. escolha um dos cenários;
+1. escolha um dos cenários, incluindo o caso de alcançabilidade em grafo;
 2. avance passo a passo;
 3. observe a meta corrente, a cláusula selecionada e a substituição;
 4. acompanhe a pilha de submetas;
