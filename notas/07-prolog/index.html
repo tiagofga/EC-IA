@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://tiagofga.github.io/EC-IA/notas/07-prolog/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Aula 07 - Prolog - EC-IA</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/extra.css" rel="stylesheet" />
+        <link href="../../assets/theme.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Aula 07 - Prolog";
+        var mkdocs_page_input_path = "notas/07-prolog/README.md";
+        var mkdocs_page_url = "/EC-IA/notas/07-prolog/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> EC-IA
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Início</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../planos/">Plano didático</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../aulas/">Aulas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Notas visuais</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../estudos-guiados/">Estudos guiados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../atividades/">Atividades</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../simulados/">Simulados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../visualizacoes/">Visualizações</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../pseudocodigos/">Pseudocódigos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../trabalhos/">Trabalhos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://github.com/tiagofga/EC-IA">Repositório no GitHub</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">EC-IA</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Aula 07 - Prolog</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/tiagofga/EC-IA/edit/master/docs/notas/07-prolog/README.md">Edit on tiagofga/EC-IA</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="aula-07-prolog">Aula 07 - Prolog</h1>
+<blockquote>
+<p><strong>Guia visual de revisão.</strong> Esta nota fecha o bloco iniciado com Lógica Proposicional e Lógica de Primeira Ordem. O foco agora é compreender como fatos, regras, unificação, busca e retrocesso formam o modelo de execução de um programa Prolog.</p>
+</blockquote>
+<h2 id="nota-visual-da-aula">Nota visual da aula</h2>
+<p><img alt="Nota visual da Aula 07 - Prolog" src="nota-visual-aula-07.svg" /></p>
+<h2 id="visao-em-30-segundos">Visão em 30 segundos</h2>
+<table>
+<thead>
+<tr>
+<th>Pergunta</th>
+<th>Ideia-chave</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O que é Prolog?</td>
+<td>Uma linguagem de programação lógica baseada em fatos, regras e consultas.</td>
+</tr>
+<tr>
+<td>O que um programa descreve?</td>
+<td>Relações que devem ser verdadeiras, em vez de uma sequência imperativa de comandos.</td>
+</tr>
+<tr>
+<td>Como uma consulta é respondida?</td>
+<td>Por busca de uma prova usando seleção de cláusulas, unificação e retrocesso.</td>
+</tr>
+<tr>
+<td>O que faz a unificação?</td>
+<td>Compatibiliza a meta atual com fatos ou cabeças de regras.</td>
+</tr>
+<tr>
+<td>O que faz o retrocesso?</td>
+<td>Retorna ao último ponto de escolha quando uma alternativa falha ou outra solução é solicitada.</td>
+</tr>
+<tr>
+<td>Onde aparece busca?</td>
+<td>A resolução de metas pode ser vista como exploração em profundidade de uma árvore de prova.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mapa-mental">Mapa mental</h2>
+<pre><code class="language-mermaid">mindmap
+  root((Prolog))
+    Programa
+      Fatos
+      Regras
+      Consultas
+      Variáveis
+    Execução
+      Meta
+      Unificação
+      Submetas
+      Retrocesso
+    Controle
+      Ordem das cláusulas
+      Ordem das metas
+      Recursão
+    Conexões
+      LPO
+      Encadeamento reverso
+      Busca em profundidade
+    Complementos
+      Aritmética
+      Estruturas
+      Listas
+</code></pre>
+<h2 id="1-pergunta-central">1. Pergunta central</h2>
+<blockquote>
+<p><strong>O que muda quando fatos, regras e mecanismos de inferência passam a constituir um programa executável?</strong></p>
+</blockquote>
+<p>Na Aula 06, unificação e encadeamento reverso eram mecanismos de inferência. Em Prolog, eles passam a fazer parte do próprio modelo operacional da linguagem.</p>
+<h2 id="2-programacao-declarativa">2. Programação declarativa</h2>
+<p>Em uma linguagem imperativa, normalmente descrevemos <strong>como</strong> executar operações. Em Prolog, descrevemos <strong>relações</strong> por meio de fatos e regras e formulamos consultas que o mecanismo de execução tenta provar.</p>
+<pre><code>base de conhecimento (fatos + regras)
+                +
+             consulta
+                ↓
+            unificação
+                ↓
+         busca por uma prova
+                ↓
+             resposta
+</code></pre>
+<h2 id="3-fatos-regras-e-consultas">3. Fatos, regras e consultas</h2>
+<p>Fato:</p>
+<pre><code>progenitor(ana, bruno).
+</code></pre>
+<p>Regra:</p>
+<pre><code>avo(X, Z) :-
+    progenitor(X, Y),
+    progenitor(Y, Z).
+</code></pre>
+<p>Consulta:</p>
+<pre><code>?- progenitor(bruno, X).
+</code></pre>
+<p>Uma variável transforma a consulta em uma busca por substituições que tornam a meta verdadeira.</p>
+<h2 id="4-termos-e-variaveis">4. Termos e variáveis</h2>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>átomo</td>
+<td><code>ana</code>, <code>azul</code>, <code>no_centro</code></td>
+</tr>
+<tr>
+<td>número</td>
+<td><code>3</code>, <code>4.5</code></td>
+</tr>
+<tr>
+<td>variável</td>
+<td><code>X</code>, <code>Pessoa</code>, <code>Resultado</code></td>
+</tr>
+<tr>
+<td>termo composto</td>
+<td><code>ponto(2,4)</code>, <code>progenitor(ana,bruno)</code></td>
+</tr>
+</tbody>
+</table>
+<p>Variáveis começam com letra maiúscula ou sublinhado. Átomos normalmente começam com letra minúscula.</p>
+<h2 id="5-unificacao-em-prolog">5. Unificação em Prolog</h2>
+<p>O operador <code>=</code> tenta unificar termos; ele não representa atribuição imperativa.</p>
+<pre><code>?- pessoa(X, 20) = pessoa(carla, Idade).
+X = carla,
+Idade = 20.
+</code></pre>
+<p>A unificação exige compatibilidade estrutural e consistência das substituições.</p>
+<h2 id="6-consultas-multiplas-solucoes-e-retrocesso">6. Consultas, múltiplas soluções e retrocesso</h2>
+<p>Com fatos como <code>progenitor(bruno, clara).</code> e <code>progenitor(bruno, diego).</code>, a consulta <code>?- progenitor(bruno, X).</code> pode retornar duas substituições. O ponto e vírgula solicita outra solução e o Prolog retrocede ao último ponto de escolha.</p>
+<h2 id="7-regras-e-submetas">7. Regras e submetas</h2>
+<p>Uma regra pode decompor uma meta em outras metas. Para provar <code>avo(bruno, eva)</code>, por exemplo, o sistema precisa satisfazer as duas chamadas a <code>progenitor/2</code> com substituições consistentes.</p>
+<h2 id="8-como-prolog-tenta-provar-uma-meta">8. Como Prolog tenta provar uma meta</h2>
+<pre><code class="language-mermaid">flowchart TD
+    Q[Consulta ou meta] --&gt; C[Selecionar cláusula compatível]
+    C --&gt; U[Unificar]
+    U --&gt; S[Gerar submetas]
+    S --&gt; P{Todas as submetas foram provadas?}
+    P --&gt;|sim| R[Retornar substituição ou sucesso]
+    P --&gt;|não| B[Retroceder ao último ponto de escolha]
+    B --&gt; C
+</code></pre>
+<h2 id="9-recursao">9. Recursão</h2>
+<p>Relações transitivas podem ser expressas recursivamente:</p>
+<pre><code>maior_que(X, Y) :- maior(X, Y).
+maior_que(X, Y) :- maior(X, Z), maior_que(Z, Y).
+</code></pre>
+<p>A segunda regra permite construir cadeias de relações intermediárias.</p>
+<h2 id="10-prolog-e-busca-em-profundidade">10. Prolog e busca em profundidade</h2>
+<p>A execução pode ser interpretada como uma árvore de prova: regras compatíveis geram alternativas, o corpo gera submetas, o sistema aprofunda uma alternativa e, em caso de falha, retorna ao último ponto de escolha. Essa estrutura conecta Prolog à Busca em Profundidade (DFS).</p>
+<h2 id="11-ordem-importa">11. Ordem importa</h2>
+<p>Mesmo em uma linguagem declarativa, a execução possui uma leitura operacional. A ordem das cláusulas e a ordem das metas podem alterar desempenho, ordem das respostas e término.</p>
+<h2 id="12-falha-desigualdade-e-negacao-por-falha">12. Falha, desigualdade e negação por falha</h2>
+<p>Quando uma consulta falha, o Prolog informa que <strong>não encontrou uma prova com o programa disponível</strong>. Isso não equivale automaticamente a demonstrar a negação clássica da consulta.</p>
+<p>O operador <code>\+</code> implementa <strong>negação como falha (negation as failure)</strong>:</p>
+<pre><code>sem_filho(X) :- pessoa(X), \+ tem_filho(X).
+</code></pre>
+<p>A meta <code>\+ G</code> tem sucesso quando <code>G</code> não pode ser provada no contexto corrente.</p>
+<p>Já <code>X \= Y</code> tem sucesso quando os termos não podem ser unificados. Esse operador aparece, por exemplo, ao formalizar irmãos distintos:</p>
+<pre><code>irmaos(X,Y) :-
+    progenitor(P,X),
+    progenitor(P,Y),
+    X \= Y.
+</code></pre>
+<blockquote>
+<p><strong>Cuidado:</strong> <code>\+</code> é um mecanismo operacional e não deve ser confundido com a negação clássica da LPO.</p>
+</blockquote>
+<h2 id="13-aritmetica-identidade-e-comparacao-numerica">13. Aritmética, identidade e comparação numérica</h2>
+<p>Prolog distingue operações que parecem semelhantes:</p>
+<pre><code>X = 1 + 2.      % unifica X com o termo 1+2
+X is 1 + 2.     % avalia a expressão e produz X = 3
+1 + 2 == 1 + 2. % testa identidade de termos
+1 + 2 =:= 3.    % avalia e compara valores numéricos
+</code></pre>
+<p>Portanto:</p>
+<ul>
+<li><code>=</code> tenta unificar;</li>
+<li><code>is</code> avalia a expressão aritmética à direita;</li>
+<li><code>==</code> testa identidade entre termos sem instanciar variáveis;</li>
+<li><code>=:=</code> compara valores numéricos após avaliação.</li>
+</ul>
+<h2 id="14-estruturas-e-listas">14. Estruturas e listas</h2>
+<p>Termos compostos permitem representar dados estruturados, como <code>ponto(3,4)</code> ou <code>data(22,setembro,2026)</code>.</p>
+<p>Listas são estruturas recursivas:</p>
+<pre><code>[]
+[a,b,c]
+[Cabeca|Cauda]
+</code></pre>
+<p>Essa decomposição permite definições como:</p>
+<pre><code>pertence(X,[X|_]).
+pertence(X,[_|Cauda]) :-
+    pertence(X,Cauda).
+</code></pre>
+<p>Também aparecem no material complementar <code>ultimo/2</code>, <code>tamanho/2</code> e <code>concatena/3</code>, reforçando a ligação entre recursão, unificação e processamento de listas.</p>
+<h2 id="15-conexoes-com-as-aulas-anteriores">15. Conexões com as aulas anteriores</h2>
+<pre><code class="language-mermaid">flowchart LR
+    A5[Aula 05: lógica e conhecimento] --&gt; A6[Aula 06: LPO e inferência]
+    A6 --&gt; U[Unificação]
+    A6 --&gt; BC[Encadeamento reverso]
+    U --&gt; A7[Aula 07: Prolog]
+    BC --&gt; A7
+    A4[Aula 04: DFS] --&gt; A7
+</code></pre>
+<h2 id="16-erros-conceituais-frequentes">16. Erros conceituais frequentes</h2>
+<blockquote>
+<p><strong>Erro 1:</strong> <code>=</code> é atribuição. Não. Em Prolog, o operador tenta unificar termos.</p>
+<p><strong>Erro 2:</strong> <code>false</code> significa que a afirmação é impossível no mundo real. Não. Significa que a meta não pôde ser provada com o programa corrente.</p>
+<p><strong>Erro 3:</strong> a ordem nunca importa em uma linguagem declarativa. A leitura declarativa descreve relações, mas a execução possui uma ordem operacional.</p>
+<p><strong>Erro 4:</strong> retrocesso e recursão são a mesma coisa. Não. Recursão define uma relação em termos dela mesma; retrocesso explora alternativas.</p>
+<p><strong>Erro 5:</strong> <code>false</code> prova a negação clássica da consulta. Não. Indica que o mecanismo não encontrou uma prova com o programa disponível.</p>
+<p><strong>Erro 6:</strong> <code>=</code>, <code>is</code>, <code>==</code> e <code>=:=</code> são equivalentes. Não. Eles realizam operações diferentes sobre termos e expressões numéricas.</p>
+</blockquote>
+<h2 id="revisao-de-1-minuto">Revisão de 1 minuto</h2>
+<pre><code>Prolog
+├── conhecimento: fatos e regras
+├── consulta: meta e variáveis
+├── execução: unificação, submetas, DFS e retrocesso
+└── programação: recursão, aritmética, estruturas e listas
+</code></pre>
+<h2 id="checklist">Checklist</h2>
+<ul>
+<li>[ ] Diferencio fatos, regras e consultas.</li>
+<li>[ ] Identifico átomos, variáveis e termos compostos.</li>
+<li>[ ] Entendo <code>=</code> como unificação.</li>
+<li>[ ] Consigo prever respostas de consultas simples.</li>
+<li>[ ] Entendo o papel do ponto e vírgula e do retrocesso.</li>
+<li>[ ] Explico como uma regra transforma uma meta em submetas.</li>
+<li>[ ] Relaciono Prolog com encadeamento reverso.</li>
+<li>[ ] Relaciono a execução de Prolog com DFS.</li>
+<li>[ ] Reconheço o papel da recursão.</li>
+<li>[ ] Diferencio falha operacional de falsidade clássica.</li>
+<li>[ ] Entendo negação por falha com <code>\+</code>.</li>
+<li>[ ] Sei quando usar <code>\=</code>.</li>
+<li>[ ] Diferencio <code>=</code>, <code>is</code>, <code>==</code> e <code>=:=</code>.</li>
+<li>[ ] Interpreto listas por cabeça e cauda.</li>
+<li>[ ] Entendo por que a ordem das cláusulas e metas pode afetar a execução e o término.</li>
+</ul>
+<p><strong>Próximo passo:</strong> faça o <a href="../../estudos-guiados/07-prolog/">Estudo Guiado 07</a>, explore a <a href="../../visualizacoes/07-prolog/resolucao-metas/">visualização de resolução de metas</a> e resolva as questões de Prolog da <a href="../../atividades/">Lista 05</a>.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/tiagofga/EC-IA" class="fa fa-code-fork" style="color: #fcfcfc"> tiagofga/EC-IA</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../assets/theme-toggle.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+      <script src="../../assets/mermaid-init.js"></script>
+      <script src="../../assets/downloads.js"></script>
+      <script src="../../assets/vercel-analytics.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

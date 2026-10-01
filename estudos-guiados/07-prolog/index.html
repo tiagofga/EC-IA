@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://tiagofga.github.io/EC-IA/estudos-guiados/07-prolog/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Estudo Guiado 07 - Prolog - EC-IA</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/extra.css" rel="stylesheet" />
+        <link href="../../assets/theme.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Estudo Guiado 07 - Prolog";
+        var mkdocs_page_input_path = "estudos-guiados/07-prolog/README.md";
+        var mkdocs_page_url = "/EC-IA/estudos-guiados/07-prolog/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> EC-IA
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Início</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../planos/">Plano didático</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../aulas/">Aulas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../notas/">Notas visuais</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Estudos guiados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../atividades/">Atividades</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../simulados/">Simulados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../visualizacoes/">Visualizações</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../pseudocodigos/">Pseudocódigos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../trabalhos/">Trabalhos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://github.com/tiagofga/EC-IA">Repositório no GitHub</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">EC-IA</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Estudo Guiado 07 - Prolog</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/tiagofga/EC-IA/edit/master/docs/estudos-guiados/07-prolog/README.md">Edit on tiagofga/EC-IA</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="estudo-guiado-07-prolog">Estudo Guiado 07 - Prolog</h1>
+<p>Use este roteiro depois da Aula 07 e da nota visual. Tente responder primeiro sem executar os programas; depois confirme no SWI-Prolog.</p>
+<h2 id="objetivos">Objetivos</h2>
+<p>Ao final da revisão, você deve conseguir:</p>
+<ul>
+<li>distinguir fatos, regras e consultas;</li>
+<li>identificar átomos, variáveis e termos compostos;</li>
+<li>prever o resultado de consultas simples e com variáveis;</li>
+<li>aplicar unificação;</li>
+<li>explicar resolução de metas e retrocesso;</li>
+<li>relacionar Prolog com encadeamento reverso e busca em profundidade;</li>
+<li>reconhecer o papel da recursão;</li>
+<li>diferenciar unificação de avaliação aritmética;</li>
+<li>interpretar estruturas e listas.</li>
+</ul>
+<h2 id="1-da-lpo-para-prolog">1. Da LPO para Prolog</h2>
+<p>Explique a relação entre os conceitos abaixo:</p>
+<pre><code>fato em uma base de conhecimento
+regra lógica
+consulta / meta
+unificação
+encadeamento reverso
+retrocesso
+</code></pre>
+<p>Quais deles já apareciam na Aula 06? O que muda quando passam a fazer parte de uma linguagem executável?</p>
+<h2 id="2-fatos">2. Fatos</h2>
+<p>Considere:</p>
+<pre><code>progenitor(ana, bruno).
+progenitor(bruno, clara).
+progenitor(bruno, diego).
+</code></pre>
+<p>Responda antes de executar:</p>
+<ol>
+<li><code>?- progenitor(ana, bruno).</code></li>
+<li><code>?- progenitor(ana, clara).</code></li>
+<li><code>?- progenitor(bruno, X).</code></li>
+<li><code>?- progenitor(X, clara).</code></li>
+</ol>
+<p>Para cada consulta, indique se a resposta é <code>true</code>, <code>false</code> ou uma substituição.</p>
+<h2 id="3-termos-e-variaveis">3. Termos e variáveis</h2>
+<p>Classifique cada elemento:</p>
+<ul>
+<li><code>ana</code></li>
+<li><code>X</code></li>
+<li><code>20</code></li>
+<li><code>ponto(2,4)</code></li>
+<li><code>progenitor(ana,bruno)</code></li>
+</ul>
+<p>Explique por que <code>X</code> e <code>x</code> não representam o mesmo tipo de termo em Prolog.</p>
+<h2 id="4-regras">4. Regras</h2>
+<p>Considere:</p>
+<pre><code>avo(X, Z) :-
+    progenitor(X, Y),
+    progenitor(Y, Z).
+</code></pre>
+<p>Responda:</p>
+<ol>
+<li>qual é a cabeça da regra?</li>
+<li>quais são as submetas?</li>
+<li>qual papel a variável <code>Y</code> desempenha?</li>
+<li>como a regra pode provar <code>avo(ana, clara)</code>?</li>
+</ol>
+<h2 id="5-unificacao">5. Unificação</h2>
+<p>Determine se há unificação e, quando houver, indique a substituição:</p>
+<ol>
+<li><code>pessoa(X,20)</code> e <code>pessoa(ana,Y)</code></li>
+<li><code>ponto(X,2)</code> e <code>ponto(3,4)</code></li>
+<li><code>f(X,g(Y))</code> e <code>f(a,g(b))</code></li>
+<li><code>progenitor(X,X)</code> e <code>progenitor(ana,bruno)</code></li>
+</ol>
+<p>Depois confirme usando o operador <code>=</code> no Prolog.</p>
+<h2 id="6-multiplas-respostas-e-retrocesso">6. Múltiplas respostas e retrocesso</h2>
+<p>Considere:</p>
+<pre><code>progenitor(bruno, clara).
+progenitor(bruno, diego).
+</code></pre>
+<p>Para:</p>
+<pre><code>?- progenitor(bruno, X).
+</code></pre>
+<p>explique:</p>
+<ul>
+<li>qual é a primeira resposta;</li>
+<li>o que o ponto e vírgula solicita;</li>
+<li>onde ocorre o retrocesso;</li>
+<li>por que <code>false</code> aparece depois de todas as alternativas.</li>
+</ul>
+<h2 id="7-relacoes-inversas">7. Relações inversas</h2>
+<p>Escreva uma regra para:</p>
+<pre><code>filho(Filho, Progenitor)
+</code></pre>
+<p>usando apenas <code>progenitor/2</code>.</p>
+<p>Depois escreva consultas para:</p>
+<ul>
+<li>verificar se <code>bruno</code> é filho de <code>ana</code>;</li>
+<li>encontrar todos os filhos de <code>bruno</code>.</li>
+</ul>
+<h2 id="8-irmaos-e-restricoes">8. Irmãos e restrições</h2>
+<p>Escreva uma regra para <code>irmaos(X,Y)</code> usando um progenitor em comum.</p>
+<p>Explique por que é necessário impedir <code>X = Y</code> se a intenção é representar pessoas distintas.</p>
+<h2 id="9-recursao">9. Recursão</h2>
+<p>Considere:</p>
+<pre><code>maior(urso, lobo).
+maior(lobo, raposa).
+maior(raposa, coelho).
+
+maior_que(X, Y) :- maior(X, Y).
+maior_que(X, Y) :- maior(X, Z), maior_que(Z, Y).
+</code></pre>
+<p>Sem executar, responda:</p>
+<ol>
+<li><code>?- maior_que(urso, raposa).</code></li>
+<li><code>?- maior_que(raposa, urso).</code></li>
+<li><code>?- maior_que(urso, X).</code></li>
+</ol>
+<p>Mostre a cadeia de regras usada para demonstrar que o urso é maior que o coelho.</p>
+<h2 id="10-arvore-de-prova">10. Árvore de prova</h2>
+<p>Para a consulta:</p>
+<pre><code>?- maior_que(urso, coelho).
+</code></pre>
+<p>desenhe uma árvore de prova simples indicando:</p>
+<ul>
+<li>meta inicial;</li>
+<li>cláusula selecionada;</li>
+<li>novas submetas;</li>
+<li>escolhas alternativas;</li>
+<li>ponto em que ocorre sucesso.</li>
+</ul>
+<h2 id="11-prolog-e-dfs">11. Prolog e DFS</h2>
+<p>Explique a analogia entre:</p>
+<table>
+<thead>
+<tr>
+<th>Prolog</th>
+<th>Busca</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>meta</td>
+<td>estado/problema atual</td>
+</tr>
+<tr>
+<td>cláusula aplicável</td>
+<td>operador/ação</td>
+</tr>
+<tr>
+<td>submeta</td>
+<td>novo estado</td>
+</tr>
+<tr>
+<td>escolha alternativa</td>
+<td>ramo</td>
+</tr>
+<tr>
+<td>retrocesso</td>
+<td>retorno na DFS</td>
+</tr>
+</tbody>
+</table>
+<p>Em que sentido a analogia ajuda? Em que sentido Prolog não é simplesmente 'DFS genérica'?</p>
+<h2 id="12-ordem-das-clausulas">12. Ordem das cláusulas</h2>
+<p>Explique por que a ordem de fatos e regras pode alterar:</p>
+<ul>
+<li>a ordem das respostas;</li>
+<li>o custo da execução;</li>
+<li>a possibilidade de não término.</li>
+</ul>
+<h2 id="13-falha-desigualdade-e-negacao-por-falha">13. Falha, desigualdade e negação por falha</h2>
+<p>Explique por que uma consulta que retorna <code>false</code> não constitui, por si só, uma prova de negação clássica.</p>
+<p>Considere:</p>
+<pre><code>tem_filho(X) :- progenitor(X,_).
+sem_filho(X) :- pessoa(X), \+ tem_filho(X).
+</code></pre>
+<p>Responda:</p>
+<ol>
+<li>o que significa operacionalmente <code>\+ tem_filho(X)</code>?</li>
+<li>por que é recomendável que <code>X</code> esteja adequadamente instanciado antes desse teste?</li>
+<li>qual a diferença entre <code>\+</code> e negação clássica?</li>
+</ol>
+<p>Explique também o papel de <code>X \= Y</code> na regra de irmãos.</p>
+<h2 id="14-aritmetica-e-comparacoes">14. Aritmética e comparações</h2>
+<p>Compare:</p>
+<pre><code>X = 1 + 2
+X is 1 + 2
+1 + 2 == 1 + 2
+1 + 2 =:= 3
+</code></pre>
+<p>Para cada expressão, indique se ocorre unificação, avaliação aritmética, identidade de termos ou comparação numérica.</p>
+<p>Por que <code>X = 1+2</code> não produz automaticamente <code>X = 3</code>?</p>
+<h2 id="15-estruturas">15. Estruturas</h2>
+<p>Considere:</p>
+<pre><code>ponto(2,4)
+aluno(tiago, engenharia_computacao)
+</code></pre>
+<p>Explique como termos compostos permitem representar dados estruturados.</p>
+<h2 id="16-listas">16. Listas</h2>
+<p>Analise conceitualmente:</p>
+<pre><code>[a,b,c]
+[H|T]
+</code></pre>
+<p>Explique o papel de cabeça e cauda e por que essa decomposição combina naturalmente com recursão.</p>
+<p>Acrescente implementações conceituais para:</p>
+<ul>
+<li><code>pertence/2</code>;</li>
+<li><code>ultimo/2</code>;</li>
+<li><code>tamanho/2</code>;</li>
+<li><code>concatena/3</code>.</li>
+</ul>
+<p>Indique quais delas exigem avaliação aritmética.</p>
+<h2 id="17-nao-terminacao-e-ordem-operacional">17. Não terminação e ordem operacional</h2>
+<p>Construa ou analise um exemplo em que uma regra recursiva seja escolhida antes de um caso base adequado e provoque não terminação.</p>
+<p>Explique por que a ordem das cláusulas e das submetas pode alterar o comportamento operacional sem necessariamente alterar a intenção declarativa.</p>
+<h2 id="18-integracao-com-a-aula-06">18. Integração com a Aula 06</h2>
+<p>Complete o fluxo:</p>
+<pre><code>LPO
+  ↓
+cláusulas / regras
+  ↓
+unificação
+  ↓
+__________________
+  ↓
+retrocesso
+  ↓
+respostas da consulta
+</code></pre>
+<p>Explique por que <code>encadeamento reverso</code> é a resposta esperada para a lacuna.</p>
+<h2 id="19-use-a-visualizacao">19. Use a visualização</h2>
+<p>Na visualização de resolução de metas:</p>
+<ol>
+<li>execute a consulta passo a passo;</li>
+<li>identifique a cláusula selecionada;</li>
+<li>registre a substituição gerada por unificação;</li>
+<li>acompanhe as submetas;</li>
+<li>force uma alternativa que exija retrocesso;</li>
+<li>compare a árvore de prova com DFS;</li>
+<li>execute também o cenário de alcançabilidade em grafo e identifique o ramo explorado e o ponto de retrocesso.</li>
+</ol>
+<h2 id="20-erros-conceituais-a-evitar">20. Erros conceituais a evitar</h2>
+<p>Explique por que cada afirmação está errada ou incompleta:</p>
+<ul>
+<li>"<code>=</code> significa atribuição."</li>
+<li>"Se Prolog responde <code>false</code>, a afirmação é impossível no mundo real."</li>
+<li>"Uma regra é executada de cima para baixo como uma sequência imperativa comum."</li>
+<li>"Recursão e retrocesso são a mesma coisa."</li>
+<li>"A ordem das cláusulas não importa em Prolog."</li>
+<li>"Unificação sempre produz uma resposta."</li>
+<li>"Se uma consulta falha, sua negação clássica foi provada."</li>
+<li>"<code>X \= Y</code> e <code>\+ (X = Y)</code> podem ser usados sem considerar instanciação e contexto."</li>
+<li>"<code>=</code>, <code>is</code>, <code>==</code> e <code>=:=</code> são apenas formas diferentes de escrever a mesma comparação."</li>
+</ul>
+<h2 id="autoavaliacao">Autoavaliação</h2>
+<ul>
+<li>[ ] Diferencio fatos, regras e consultas.</li>
+<li>[ ] Identifico termos e variáveis.</li>
+<li>[ ] Prevejo consultas simples e com variáveis.</li>
+<li>[ ] Aplico unificação.</li>
+<li>[ ] Entendo o papel do retrocesso.</li>
+<li>[ ] Consigo acompanhar uma árvore de prova.</li>
+<li>[ ] Relaciono Prolog com encadeamento reverso.</li>
+<li>[ ] Relaciono Prolog com DFS.</li>
+<li>[ ] Entendo recursão.</li>
+<li>[ ] Diferencio falha operacional de negação clássica.</li>
+<li>[ ] Entendo negação por falha e desigualdade por não unificação.</li>
+<li>[ ] Diferencio <code>=</code>, <code>is</code>, <code>==</code> e <code>=:=</code>.</li>
+<li>[ ] Interpreto termos compostos e listas.</li>
+<li>[ ] Implemento conceitualmente operações recursivas sobre listas.</li>
+<li>[ ] Consigo explicar por que a ordem operacional pode causar não terminação.</li>
+</ul>
+<p>Depois desta revisão, resolva as questões de Prolog da <a href="../../atividades/">Lista 05</a>.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/tiagofga/EC-IA" class="fa fa-code-fork" style="color: #fcfcfc"> tiagofga/EC-IA</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../assets/theme-toggle.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+      <script src="../../assets/mermaid-init.js"></script>
+      <script src="../../assets/downloads.js"></script>
+      <script src="../../assets/vercel-analytics.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

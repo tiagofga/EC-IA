@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://tiagofga.github.io/EC-IA/simulados/simulado-03/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Simulado 03 - EC-IA</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/extra.css" rel="stylesheet" />
+        <link href="../../assets/theme.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Simulado 03";
+        var mkdocs_page_input_path = "simulados/simulado-03.md";
+        var mkdocs_page_url = "/EC-IA/simulados/simulado-03/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> EC-IA
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Início</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../planos/">Plano didático</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../aulas/">Aulas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../notas/">Notas visuais</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../estudos-guiados/">Estudos guiados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../atividades/">Atividades</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Simulados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../visualizacoes/">Visualizações</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../pseudocodigos/">Pseudocódigos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../trabalhos/">Trabalhos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://github.com/tiagofga/EC-IA">Repositório no GitHub</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">EC-IA</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Simulado 03</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/tiagofga/EC-IA/edit/master/docs/simulados/simulado-03.md">Edit on tiagofga/EC-IA</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="simulado-03">Simulado 03</h1>
+<blockquote>
+<p><strong>Orientações:</strong> resolva como se fosse a prova real: sem consulta, em até 100 minutos. A interpretação faz parte da avaliação. Nas buscas, o teste de objetivo ocorre quando o nó é selecionado para expansão. Em empates, use ordem alfabética.</p>
+</blockquote>
+<h2 id="1-conceitos-integrados">1. Conceitos integrados</h2>
+<p>Explique, de forma concisa e integrada, os conceitos de <strong>Inteligência Artificial</strong>, <strong>agente</strong>, <strong>racionalidade</strong> e <strong>medida de desempenho</strong>.</p>
+<p>Em seguida, diferencie "agir racionalmente" de "agir como um humano" usando um exemplo.</p>
+<h2 id="2-agente-e-ambiente">2. Agente e ambiente</h2>
+<p>Um drone de inspeção de linhas de transmissão deve percorrer uma rota, registrar imagens, detectar situações de risco e retornar à base com energia suficiente.</p>
+<ol>
+<li>Desenvolva um PEAS com pelo menos 3 itens por componente.</li>
+<li>Classifique o ambiente em pelo menos quatro dimensões estudadas.</li>
+<li>Indique uma arquitetura de agente adequada e justifique.</li>
+</ol>
+<h2 id="3-formulacao-de-problema">3. Formulação de problema</h2>
+<p>Um sistema deve organizar quatro caixas A, B, C e D em três posições de armazenamento. Apenas a caixa do topo de uma pilha pode ser movida, e cada movimento transfere uma caixa para o topo de outra pilha. O objetivo é atingir uma configuração final especificada.</p>
+<p>Formule o problema com precisão suficiente para implementação:</p>
+<ul>
+<li>estado inicial;</li>
+<li>representação dos estados;</li>
+<li>ações;</li>
+<li>função sucessora;</li>
+<li>teste de objetivo;</li>
+<li>custo.</li>
+</ul>
+<p>Diferencie, no contexto desse problema, <strong>estado</strong>, <strong>nó</strong> e <strong>árvore de busca</strong>.</p>
+<h2 id="4-comparacao-das-estrategias">4. Comparação das estratégias</h2>
+<p>Compare <strong>BFS, DFS, UCS, Busca Gulosa e A</strong>* quanto ao critério de seleção da fronteira. Para cada uma, indique quando seria uma escolha razoável.</p>
+<p>Inclua as condições relevantes para discutir otimalidade de BFS, UCS e A*.</p>
+<h2 id="5-busca-nao-informada">5. Busca não informada</h2>
+<p>Considere o grafo abaixo, com <strong>S</strong> como estado inicial e <strong>G</strong> como objetivo. Custos estão nas arestas.</p>
+<pre><code class="language-mermaid">graph LR
+    S((S)) ---|1| A((A))
+    S ---|2| B((B))
+    A ---|7| C((C))
+    A ---|4| D((D))
+    B ---|2| D
+    B ---|3| E((E))
+    C ---|2| G((G))
+    D ---|3| G
+    E ---|2| G
+</code></pre>
+<p>Execute <strong>BFS, DFS e UCS</strong>, registrando:</p>
+<ul>
+<li>ordem de expansão;</li>
+<li>caminho encontrado;</li>
+<li>custo.</li>
+</ul>
+<p>Em seguida, explique por que "primeiro caminho encontrado" e "caminho de menor custo" não são conceitos equivalentes.</p>
+<h2 id="6-mapa-do-brasil-busca-informada">6. Mapa do Brasil - busca informada</h2>
+<p>O grafo a seguir é um modelo didático inspirado em cidades brasileiras. Os custos das arestas foram definidos para o exercício e <strong>não representam distâncias rodoviárias oficiais</strong>. O objetivo é sair de <strong>Divinópolis (DVL)</strong> e chegar a <strong>Brasília (BSB)</strong>.</p>
+<p>As siglas usadas no grafo correspondem às seguintes cidades:</p>
+<table>
+<thead>
+<tr>
+<th>Sigla</th>
+<th>Cidade</th>
+<th>UF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DVL</td>
+<td>Divinópolis</td>
+<td>MG</td>
+</tr>
+<tr>
+<td>BH</td>
+<td>Belo Horizonte</td>
+<td>MG</td>
+</tr>
+<tr>
+<td>UDI</td>
+<td>Uberlândia</td>
+<td>MG</td>
+</tr>
+<tr>
+<td>RP</td>
+<td>Ribeirão Preto</td>
+<td>SP</td>
+</tr>
+<tr>
+<td>GYN</td>
+<td>Goiânia</td>
+<td>GO</td>
+</tr>
+<tr>
+<td>SP</td>
+<td>São Paulo</td>
+<td>SP</td>
+</tr>
+<tr>
+<td>RIO</td>
+<td>Rio de Janeiro</td>
+<td>RJ</td>
+</tr>
+<tr>
+<td>BSB</td>
+<td>Brasília</td>
+<td>DF</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-mermaid">graph LR
+    DVL((DVL)) ---|120| BH((BH))
+    DVL ---|530| UDI((UDI))
+    DVL ---|390| RP((RP))
+    DVL ---|550| SP((SP))
+    DVL ---|480| RIO((RIO))
+    BH ---|740| BSB((BSB))
+    UDI ---|420| BSB
+    UDI ---|340| GYN((GYN))
+    RP ---|280| UDI
+    RP ---|540| BH
+    SP ---|315| RP
+    RIO ---|440| BH
+    GYN ---|210| BSB
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Cidade</th>
+<th style="text-align: right;">DVL</th>
+<th style="text-align: right;">BH</th>
+<th style="text-align: right;">UDI</th>
+<th style="text-align: right;">RP</th>
+<th style="text-align: right;">GYN</th>
+<th style="text-align: right;">SP</th>
+<th style="text-align: right;">RIO</th>
+<th style="text-align: right;">BSB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>h(n)</code> até BSB</td>
+<td style="text-align: right;">670</td>
+<td style="text-align: right;">620</td>
+<td style="text-align: right;">350</td>
+<td style="text-align: right;">520</td>
+<td style="text-align: right;">170</td>
+<td style="text-align: right;">870</td>
+<td style="text-align: right;">930</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+<p>Execute, passo a passo, <strong>Busca Gulosa</strong> e <strong>A</strong>*. Para cada expansão, registre o nó atual e os valores de prioridade relevantes. Informe o caminho e o custo final.</p>
+<p>Por fim, responda: a heurística fornecida parece admissível e consistente em relação aos custos do grafo? Justifique pelo menos com dois exemplos de arestas.</p>
+<blockquote>
+<p><strong>Autoavaliação:</strong> antes de consultar novamente o material, indique quais questões você deixaria incompletas se esta fosse uma avaliação.</p>
+</blockquote>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/tiagofga/EC-IA" class="fa fa-code-fork" style="color: #fcfcfc"> tiagofga/EC-IA</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../assets/theme-toggle.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+      <script src="../../assets/mermaid-init.js"></script>
+      <script src="../../assets/downloads.js"></script>
+      <script src="../../assets/vercel-analytics.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

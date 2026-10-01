@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EC-IA - Visualização de Métodos de Busca</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div>
+      <span class="eyebrow">EC-IA · Aula 04</span>
+      <h1>Métodos de busca em Inteligência Artificial</h1>
+      <p>
+        Visualização didática baseada em <strong>traces pré-calculados</strong>.
+        A página representa estados já produzidos e não contém implementações
+        executáveis dos algoritmos apresentados.
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <section class="controls card">
+      <div class="algorithm-control">
+        <label for="algorithm">Estratégia</label>
+        <select id="algorithm">
+          <optgroup label="Busca não informada">
+            <option value="bfs">Busca em Largura - BFS</option>
+            <option value="dfs">Busca em Profundidade - DFS</option>
+            <option value="ucs">Custo Uniforme - UCS</option>
+          </optgroup>
+          <optgroup label="Busca informada">
+            <option value="greedy">Busca Gulosa - Greedy Search</option>
+            <option value="astar">A*</option>
+            <option value="beam">Beam Search</option>
+          </optgroup>
+          <optgroup label="Busca local / otimização">
+            <option value="hill">Hill Climbing</option>
+            <option value="annealing">Simulated Annealing</option>
+            <option value="genetic">Algoritmo Genético - AG</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div class="buttons">
+        <button id="prev">Anterior</button>
+        <button id="next">Próximo</button>
+        <button id="reset">Reiniciar</button>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card visualization-card">
+        <div class="section-title">
+          <div>
+            <span id="family" class="badge"></span>
+            <h2 id="algorithm-name"></h2>
+          </div>
+          <span id="step-counter" class="step-counter"></span>
+        </div>
+
+        <p id="rule" class="muted"></p>
+
+        <div id="graph-view" class="viz-view">
+          <svg id="graph" viewBox="0 0 680 340" role="img" aria-label="Grafo do exemplo"></svg>
+          <div class="legend">
+            <span><i class="dot current"></i> atual</span>
+            <span><i class="dot beam"></i> feixe</span>
+            <span><i class="dot frontier"></i> fronteira</span>
+            <span><i class="dot explored"></i> explorado</span>
+            <span><i class="dot solution"></i> solução</span>
+          </div>
+        </div>
+
+        <div id="queens-view" class="viz-view hidden">
+          <div class="boards">
+            <section class="board-panel">
+              <h3>Estado atual</h3>
+              <div id="queen-current" class="chessboard" aria-label="Tabuleiro do estado atual"></div>
+              <p id="queen-current-label" class="board-caption"></p>
+            </section>
+            <section id="candidate-panel" class="board-panel">
+              <h3>Vizinho considerado</h3>
+              <div id="queen-candidate" class="chessboard" aria-label="Tabuleiro do vizinho considerado"></div>
+              <p id="queen-candidate-label" class="board-caption"></p>
+            </section>
+          </div>
+          <p class="board-help">
+            Representação: uma rainha por coluna. A função <strong>h</strong> indica
+            o número de pares de rainhas em conflito; portanto, <strong>h=0</strong>
+            corresponde a uma solução.
+          </p>
+        </div>
+
+        <div id="population-view" class="viz-view hidden">
+          <div id="population" class="population"></div>
+          <p class="board-help">
+            Cada mini-tabuleiro representa um indivíduo. A página mostra apenas
+            snapshots da população, não os operadores de seleção, cruzamento ou mutação.
+          </p>
+        </div>
+      </article>
+
+      <aside class="card state-card">
+        <h2>Estado do trace</h2>
+        <dl id="state-details"></dl>
+
+        <div id="scores-wrap">
+          <h3>Valores registrados</h3>
+          <div id="scores"></div>
+        </div>
+
+        <div class="note">
+          <strong>Leitura do passo</strong>
+          <p id="note"></p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="card focus">
+      <h2>O que observar</h2>
+      <p id="focus"></p>
+    </section>
+
+    <section class="card integrity">
+      <h2>Integridade acadêmica</h2>
+      <p>
+        O navegador apenas lê sequências de estados previamente produzidas e as
+        representa graficamente. Ele não escolhe o próximo nó, não calcula prioridades,
+        não gera vizinhos, não executa operadores evolutivos e não implementa BFS, DFS,
+        UCS, Busca Gulosa, A*, Beam Search, Hill Climbing, Simulated Annealing ou
+        Algoritmo Genético. Assim, a visualização permite discutir o comportamento dos
+        métodos sem publicar uma solução reutilizável diretamente no trabalho.
+      </p>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

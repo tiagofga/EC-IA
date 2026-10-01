@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://tiagofga.github.io/EC-IA/notas/05-logica/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Aula 05 - Lógica e Raciocínio em IA - EC-IA</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/extra.css" rel="stylesheet" />
+        <link href="../../assets/theme.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Aula 05 - L\u00f3gica e Racioc\u00ednio em IA";
+        var mkdocs_page_input_path = "notas/05-logica/README.md";
+        var mkdocs_page_url = "/EC-IA/notas/05-logica/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> EC-IA
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Início</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../planos/">Plano didático</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../aulas/">Aulas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Notas visuais</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../estudos-guiados/">Estudos guiados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../atividades/">Atividades</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../simulados/">Simulados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../visualizacoes/">Visualizações</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../pseudocodigos/">Pseudocódigos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../trabalhos/">Trabalhos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://github.com/tiagofga/EC-IA">Repositório no GitHub</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">EC-IA</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Aula 05 - Lógica e Raciocínio em IA</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/tiagofga/EC-IA/edit/master/docs/notas/05-logica/README.md">Edit on tiagofga/EC-IA</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="aula-05-logica-e-raciocinio-em-ia">Aula 05 - Lógica e Raciocínio em IA</h1>
+<blockquote>
+<p><strong>Guia visual de revisão.</strong> Use esta nota depois da aula para reorganizar os conceitos antes do estudo guiado e da atividade. O objetivo não é substituir os slides, mas transformar o conteúdo em um mapa de relações, mantendo o mesmo padrão das notas anteriores.</p>
+</blockquote>
+<h2 id="nota-visual-da-aula">Nota visual da aula</h2>
+<p><img alt="Nota visual da Aula 05 - Lógica e Raciocínio em IA" src="nota-visual-aula-05.svg" /></p>
+<p><em>Síntese visual dos principais conceitos da Aula 05. Use a figura para uma primeira revisão e, em seguida, percorra as seções abaixo para aprofundar cada conceito.</em></p>
+<h2 id="visao-em-30-segundos">Visão em 30 segundos</h2>
+<table>
+<thead>
+<tr>
+<th>Pergunta</th>
+<th>Ideia-chave</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O que faz um agente baseado em conhecimento?</td>
+<td>Mantém uma base de conhecimento e usa inferência para decidir como agir.</td>
+</tr>
+<tr>
+<td>O que faz <code>TELL</code>?</td>
+<td>Insere na KB uma sentença que representa uma percepção, fato ou ação.</td>
+</tr>
+<tr>
+<td>O que faz <code>ASK</code>?</td>
+<td>Consulta o que pode ser concluído a partir da KB.</td>
+</tr>
+<tr>
+<td>Qual é o papel do Mundo do Wumpus?</td>
+<td>Tornar visível a passagem de percepção para representação, inferência e ação.</td>
+</tr>
+<tr>
+<td>O que é um modelo?</td>
+<td>Uma interpretação possível dos símbolos da linguagem.</td>
+</tr>
+<tr>
+<td>O que significa <code>KB ⊨ α</code>?</td>
+<td>Toda interpretação que satisfaz a KB também satisfaz <code>α</code>.</td>
+</tr>
+<tr>
+<td>Como provar uma conclusão?</td>
+<td>Por verificação de modelos ou por regras de inferência, como resolução.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mapa-mental-da-aula">Mapa mental da aula</h2>
+<pre><code class="language-mermaid">mindmap
+  root((Lógica e Raciocínio em IA))
+    Agente baseado em conhecimento
+      Base de conhecimento
+      TELL
+      ASK
+      Máquina de inferência
+    Representação
+      Sintaxe
+      Semântica
+      Sentenças
+      Modelos
+    Mundo do Wumpus
+      Brisa
+      Fedor
+      Brilho
+      Casas seguras
+    Lógica proposicional
+      Símbolos
+      Conectivos
+      Tabelas verdade
+      Validade
+      Satisfatibilidade
+    Inferência
+      Consequência lógica
+      Verificação de modelos
+      FNC
+      Resolução
+</code></pre>
+<h2 id="1-a-pergunta-central-da-aula">1. A pergunta central da aula</h2>
+<p>A Aula 05 responde à seguinte pergunta:</p>
+<blockquote>
+<p><strong>Como um agente pode representar conhecimento sobre o mundo e usá-lo para inferir novas informações antes de agir?</strong></p>
+</blockquote>
+<p>O Mundo do Wumpus funciona como fio condutor porque permite observar toda a cadeia de raciocínio do agente.</p>
+<pre><code class="language-mermaid">flowchart LR
+    P[&quot;Percepção&quot;] --&gt; T[&quot;TELL&quot;]
+    T --&gt; K[&quot;Base de conhecimento&quot;]
+    K --&gt; I[&quot;Inferência&quot;]
+    I --&gt; Q[&quot;ASK&quot;]
+    Q --&gt; A[&quot;Ação&quot;]
+    A --&gt; P
+</code></pre>
+<h2 id="2-retomando-tell-e-ask">2. Retomando <code>TELL</code> e <code>ASK</code></h2>
+<p><code>TELL</code> e <code>ASK</code> já aparecem na discussão de agentes baseados em conhecimento. Nesta aula, a ideia é aprofundar <strong>o que existe dentro da KB</strong> e <strong>como uma consulta pode ser respondida por inferência</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Operação</th>
+<th>Papel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TELL(KB, sentença)</code></td>
+<td>acrescenta conhecimento novo à KB</td>
+</tr>
+<tr>
+<td><code>ASK(KB, consulta)</code></td>
+<td>pergunta o que pode ser concluído a partir da KB</td>
+</tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="language-text">Percepção em [1,1]: sem brisa e sem fedor
+TELL(KB, não há brisa em [1,1])
+TELL(KB, não há fedor em [1,1])
+ASK(KB, &quot;há uma casa segura adjacente?&quot;)
+</code></pre>
+<blockquote>
+<p><strong>Ponto de atenção:</strong> <code>ASK</code> não significa apenas recuperar algo que já estava explicitamente armazenado. A resposta pode depender de inferência.</p>
+</blockquote>
+<h2 id="3-base-de-conhecimento-e-maquina-de-inferencia">3. Base de conhecimento e máquina de inferência</h2>
+<p>Uma base de conhecimento contém sentenças em uma linguagem formal. A máquina de inferência usa essas sentenças para produzir novas conclusões.</p>
+<pre><code class="language-mermaid">flowchart LR
+    S[&quot;Sensores&quot;] --&gt; T[&quot;TELL&quot;]
+    T --&gt; K[&quot;Base de conhecimento&quot;]
+    K --&gt; M[&quot;Máquina de inferência&quot;]
+    M --&gt; Q[&quot;ASK&quot;]
+    Q --&gt; A[&quot;Atuadores&quot;]
+</code></pre>
+<h3 id="tres-niveis-de-descricao">Três níveis de descrição</h3>
+<table>
+<thead>
+<tr>
+<th>Nível</th>
+<th>O que observamos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>conhecimento</td>
+<td>o agente "sabe" algo sobre o ambiente</td>
+</tr>
+<tr>
+<td>lógico</td>
+<td>esse conhecimento é expresso como sentenças</td>
+</tr>
+<tr>
+<td>implementação</td>
+<td>um programa manipula representações simbólicas</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-mundo-do-wumpus-como-exemplo-central">4. Mundo do Wumpus como exemplo central</h2>
+<p>No Mundo do Wumpus, o agente recebe sinais locais e precisa inferir perigos que não consegue observar diretamente.</p>
+<table>
+<thead>
+<tr>
+<th>Percepção</th>
+<th>Significado local</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Breeze</code></td>
+<td>existe poço em alguma casa adjacente</td>
+</tr>
+<tr>
+<td><code>Stench</code></td>
+<td>existe Wumpus em alguma casa adjacente</td>
+</tr>
+<tr>
+<td><code>Glitter</code></td>
+<td>o ouro está na casa atual</td>
+</tr>
+<tr>
+<td><code>Bump</code></td>
+<td>houve colisão com a parede</td>
+</tr>
+<tr>
+<td><code>Scream</code></td>
+<td>o Wumpus foi atingido</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-mermaid">flowchart TD
+    B[&quot;Sem brisa na casa inicial&quot;] --&gt; NP[&quot;Não há poço nas casas adjacentes&quot;]
+    S[&quot;Sem fedor na casa inicial&quot;] --&gt; NW[&quot;Não há Wumpus nas casas adjacentes&quot;]
+    NP --&gt; SAFE[&quot;Casas adjacentes são seguras&quot;]
+    NW --&gt; SAFE
+</code></pre>
+<blockquote>
+<p><strong>Percepção não é o mesmo que inferência.</strong> O agente percebe a ausência de brisa. A conclusão de que uma casa adjacente é segura é uma consequência lógica.</p>
+</blockquote>
+<h2 id="5-sintaxe-e-semantica">5. Sintaxe e semântica</h2>
+<p>A distinção entre sintaxe e semântica é central.</p>
+<table>
+<thead>
+<tr>
+<th>Conceito</th>
+<th>Pergunta associada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sintaxe</td>
+<td>como escrever a sentença?</td>
+</tr>
+<tr>
+<td>Semântica</td>
+<td>quando essa sentença é verdadeira?</td>
+</tr>
+</tbody>
+</table>
+<p>Exemplo proposicional:</p>
+<pre><code class="language-text">B11 &lt;-&gt; (P12 ou P21)
+</code></pre>
+<ul>
+<li><strong>Sintaxe:</strong> a expressão precisa seguir as regras da linguagem.</li>
+<li><strong>Semântica:</strong> precisamos definir em quais interpretações a sentença é verdadeira.</li>
+</ul>
+<h2 id="6-modelos-e-mundos-possiveis">6. Modelos e mundos possíveis</h2>
+<p>Um modelo é uma interpretação possível para os símbolos de uma linguagem.</p>
+<pre><code class="language-mermaid">flowchart LR
+    K[&quot;KB&quot;] --&gt; M1[&quot;Modelo 1&quot;]
+    K --&gt; M2[&quot;Modelo 2&quot;]
+    K --&gt; M3[&quot;Modelo 3&quot;]
+    M1 --&gt; V[&quot;A consulta é verdadeira?&quot;]
+    M2 --&gt; V
+    M3 --&gt; V
+</code></pre>
+<p>A KB restringe os mundos possíveis. Quanto mais conhecimento consistente é acrescentado, menos modelos permanecem compatíveis.</p>
+<h2 id="7-consequencia-logica">7. Consequência lógica</h2>
+<p>A notação:</p>
+<pre><code class="language-text">KB ⊨ α
+</code></pre>
+<p>significa que <code>α</code> é verdadeira em <strong>todos os modelos</strong> em que a KB é verdadeira.</p>
+<pre><code class="language-mermaid">flowchart TD
+    K[&quot;Modelos que satisfazem a KB&quot;] --&gt; Q{&quot;A conclusão é verdadeira em todos?&quot;}
+    Q --&gt;|sim| E[&quot;KB implica a conclusão&quot;]
+    Q --&gt;|não| C[&quot;Existe um contraexemplo&quot;]
+</code></pre>
+<blockquote>
+<p><strong>Erro comum:</strong> encontrar um único modelo em que a conclusão é verdadeira não basta para demonstrar consequência lógica.</p>
+</blockquote>
+<h2 id="8-logica-proposicional">8. Lógica proposicional</h2>
+<p>A lógica proposicional trabalha com símbolos atômicos e conectivos.</p>
+<table>
+<thead>
+<tr>
+<th>Símbolo</th>
+<th>Leitura</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>¬p</code></td>
+<td>não <code>p</code></td>
+</tr>
+<tr>
+<td><code>p ∧ q</code></td>
+<td><code>p</code> e <code>q</code></td>
+</tr>
+<tr>
+<td><code>p ∨ q</code></td>
+<td><code>p</code> ou <code>q</code></td>
+</tr>
+<tr>
+<td><code>p ⇒ q</code></td>
+<td>se <code>p</code>, então <code>q</code></td>
+</tr>
+<tr>
+<td><code>p ⇔ q</code></td>
+<td><code>p</code> se e somente se <code>q</code></td>
+</tr>
+</tbody>
+</table>
+<p>Precedência usual:</p>
+<pre><code class="language-text">¬  &gt;  ∧  &gt;  ∨  &gt;  ⇒  &gt;  ⇔
+</code></pre>
+<h2 id="9-validade-satisfatibilidade-e-equivalencia">9. Validade, satisfatibilidade e equivalência</h2>
+<table>
+<thead>
+<tr>
+<th>Conceito</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>satisfatível</td>
+<td>existe ao menos um modelo que torna a sentença verdadeira</td>
+</tr>
+<tr>
+<td>insatisfatível</td>
+<td>não existe modelo que torne a sentença verdadeira</td>
+</tr>
+<tr>
+<td>válida</td>
+<td>a sentença é verdadeira em todos os modelos</td>
+</tr>
+<tr>
+<td>equivalente</td>
+<td>duas sentenças possuem os mesmos modelos</td>
+</tr>
+</tbody>
+</table>
+<h2 id="10-verificacao-de-modelos">10. Verificação de modelos</h2>
+<p>A forma mais direta de verificar uma consequência lógica é enumerar modelos.</p>
+<pre><code class="language-mermaid">flowchart TD
+    S[&quot;Identificar símbolos&quot;] --&gt; E[&quot;Enumerar modelos&quot;]
+    E --&gt; F[&quot;Filtrar os modelos que satisfazem a KB&quot;]
+    F --&gt; T{&quot;A consulta é verdadeira em todos?&quot;}
+    T --&gt;|sim| Y[&quot;Consequência lógica&quot;]
+    T --&gt;|não| N[&quot;Não é consequência lógica&quot;]
+</code></pre>
+<p>Com <code>n</code> símbolos proposicionais existem <code>2^n</code> interpretações possíveis. Por isso, o custo cresce rapidamente.</p>
+<h2 id="11-prova-como-busca-no-espaco-de-inferencias">11. Prova como busca no espaço de inferências</h2>
+<p>Também podemos produzir uma prova como uma sequência de sentenças derivadas.</p>
+<pre><code class="language-mermaid">flowchart LR
+    K[&quot;Sentenças da KB&quot;] --&gt; R[&quot;Regras de inferência&quot;]
+    R --&gt; D[&quot;Novas sentenças&quot;]
+    D --&gt; G[&quot;Conclusão desejada&quot;]
+</code></pre>
+<p>Essa visão conecta a Aula 05 ao conteúdo anterior de busca: o estado inicial contém a KB e as ações correspondem às regras de inferência aplicáveis.</p>
+<h2 id="12-forma-normal-conjuntiva-e-resolucao">12. Forma Normal Conjuntiva e resolução</h2>
+<p>Na resolução por refutação:</p>
+<ol>
+<li>acrescentamos a negação da consulta à KB;</li>
+<li>convertemos as sentenças para FNC;</li>
+<li>aplicamos a regra de resolução;</li>
+<li>se obtivermos a cláusula vazia, chegamos a uma contradição e a conclusão foi provada.</li>
+</ol>
+<pre><code class="language-mermaid">flowchart TD
+    A[&quot;KB mais a negação da consulta&quot;] --&gt; B[&quot;Converter para FNC&quot;]
+    B --&gt; C[&quot;Aplicar resolução&quot;]
+    C --&gt; D{&quot;Cláusula vazia?&quot;}
+    D --&gt;|sim| E[&quot;Conclusão provada&quot;]
+    D --&gt;|não| F[&quot;Continuar enquanto surgirem cláusulas novas&quot;]
+</code></pre>
+<h2 id="13-conexoes-com-as-aulas-anteriores">13. Conexões com as aulas anteriores</h2>
+<pre><code class="language-mermaid">flowchart LR
+    A1[&quot;Agentes&quot;] --&gt; A5[&quot;Agente baseado em conhecimento&quot;]
+    A3[&quot;Representação&quot;] --&gt; A5
+    A4[&quot;Busca&quot;] --&gt; P[&quot;Prova como busca&quot;]
+    A5 --&gt; LPO[&quot;Próximo passo: Lógica de Primeira Ordem&quot;]
+</code></pre>
+<ul>
+<li><strong>Agentes:</strong> percepção, ação e racionalidade reaparecem no agente lógico.</li>
+<li><strong>Representação:</strong> agora a representação ganha sintaxe e semântica formais.</li>
+<li><strong>Busca:</strong> uma prova pode ser vista como busca em um espaço de inferências.</li>
+<li><strong>Próxima etapa:</strong> a Lógica de Primeira Ordem amplia o poder de representação.</li>
+</ul>
+<h2 id="14-erros-conceituais-frequentes">14. Erros conceituais frequentes</h2>
+<blockquote>
+<p><strong>Erro 1:</strong> perceber é o mesmo que concluir. Não. Percepções alimentam a KB; inferências produzem conclusões.</p>
+<p><strong>Erro 2:</strong> modelo e mundo real são sinônimos. Não. Um modelo é uma interpretação formal possível.</p>
+<p><strong>Erro 3:</strong> se <code>ASK</code> retorna algo, o agente observou diretamente aquilo. Não. A resposta pode ter sido inferida.</p>
+<p><strong>Erro 4:</strong> validade e satisfatibilidade significam a mesma coisa. Não. Validade exige verdade em todos os modelos; satisfatibilidade exige ao menos um.</p>
+</blockquote>
+<h2 id="revisao-de-1-minuto">Revisão de 1 minuto</h2>
+<pre><code class="language-text">Lógica e Raciocínio em IA
+├── agente baseado em conhecimento
+│   ├── TELL
+│   ├── ASK
+│   ├── KB
+│   └── máquina de inferência
+├── representação formal
+│   ├── sintaxe
+│   ├── semântica
+│   └── modelos
+├── Mundo do Wumpus
+│   ├── percepções locais
+│   └── inferências sobre segurança e perigo
+├── lógica proposicional
+│   ├── conectivos
+│   ├── tabelas-verdade
+│   ├── validade
+│   └── satisfatibilidade
+└── inferência
+    ├── consequência lógica
+    ├── verificação de modelos
+    ├── FNC
+    └── resolução
+</code></pre>
+<h2 id="checklist">Checklist</h2>
+<ul>
+<li>[ ] Consigo explicar o papel de <code>TELL</code> e <code>ASK</code>.</li>
+<li>[ ] Diferencio percepção, representação e inferência.</li>
+<li>[ ] Consigo interpretar as percepções do Mundo do Wumpus.</li>
+<li>[ ] Sei distinguir sintaxe e semântica.</li>
+<li>[ ] Entendo o que é um modelo.</li>
+<li>[ ] Consigo explicar o significado de <code>KB ⊨ α</code>.</li>
+<li>[ ] Diferencio validade, satisfatibilidade e equivalência.</li>
+<li>[ ] Entendo por que a verificação de modelos cresce exponencialmente.</li>
+<li>[ ] Consigo descrever a resolução por refutação.</li>
+</ul>
+<p><strong>Próximo passo:</strong> faça o <a href="../../estudos-guiados/05-logica/">Estudo Guiado 05</a>, explore o <a href="../../visualizacoes/05-logica/wumpus/">Mundo do Wumpus</a> e revise os pseudocódigos da Aula 05.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/tiagofga/EC-IA" class="fa fa-code-fork" style="color: #fcfcfc"> tiagofga/EC-IA</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../assets/theme-toggle.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+      <script src="../../assets/mermaid-init.js"></script>
+      <script src="../../assets/downloads.js"></script>
+      <script src="../../assets/vercel-analytics.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
