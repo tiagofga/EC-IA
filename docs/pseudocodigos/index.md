@@ -295,7 +295,9 @@ Os procedimentos operacionais da Aula 07 estão organizados em arquivos próprio
 
 - [Resolução de metas](07-prolog/resolucao-de-metas.md) - transforma consultas em submetas e busca uma prova;
 - [Retrocesso e alternativas](07-prolog/retrocesso-e-alternativas.md) - retorna ao último ponto de escolha e tenta outro ramo;
-- [Recursão](07-prolog/recursao.md) - descreve relações recursivas e sua conexão com exploração em profundidade.
+- [Recursão](07-prolog/recursao.md) - descreve relações recursivas e sua conexão com exploração em profundidade;
+- [Listas recursivas](07-prolog/listas-recursivas.md) - mostra cabeça/cauda, pertencimento, último elemento e tamanho;
+- [Negação por falha](07-prolog/negacao-por-falha.md) - diferencia falha operacional de negação clássica.
 
 A Aula 07 reutiliza a unificação estudada na Aula 06 e mostra como esses mecanismos aparecem na execução de uma linguagem lógica.
 
