@@ -47,7 +47,7 @@
 <text x="70" y="862" class="b">• Relações podem ser definidas recursivamente.</text>
 <text x="70" y="897" class="b">• Caso base encerra a expansão.</text>
 <text x="70" y="932" class="b">• Caso recursivo cria novas metas.</text>
-<text x="70" y="967" class="b">• Ordem das regras afeta a execução.</text>
+<text x="70" y="967" class="b">• Ordem das regras afeta execução e término.</text>
 
 <rect class="box" x="625" y="785" width="530" height="245" fill="#eefcf2"/>
 <text x="645" y="820" class="h">6. Prolog como busca</text>
@@ -69,7 +69,7 @@
 <rect x="45" y="1290" width="1110" height="150" rx="18" fill="#fff" stroke="#9aa6bc" stroke-width="2"/>
 <text x="70" y="1328" class="h">Checklist</text>
 <text x="75" y="1365" class="b">□ Distingo fatos, regras e consultas.  □ Aplico unificação e acompanho submetas.</text>
-<text x="75" y="1400" class="b">□ Explico retrocesso e recursão.  □ Relaciono resolução de metas com DFS.</text>
+<text x="75" y="1400" class="b">□ Distingo falha/negação e =/is.  □ Relaciono resolução de metas com DFS.</text>
 
 <text x="50" y="1480" class="small">Conexão didática: LPO + unificação + encadeamento reverso + busca em profundidade → Prolog.</text>
 </svg>
