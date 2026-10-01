@@ -7,6 +7,8 @@ Esta seção descreve os mecanismos operacionais usados para compreender a execu
 - [Resolução de metas](resolucao-de-metas.md)
 - [Retrocesso e busca de alternativas](retrocesso-e-alternativas.md)
 - [Recursão e relações transitivas](recursao.md)
+- [Listas recursivas](listas-recursivas.md)
+- [Negação por falha](negacao-por-falha.md)
 
 ## Relação com as aulas anteriores
 
