@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>EC-IA | Unificação em LPO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div>
+    <span class="eyebrow">EC-IA · Aula 06</span>
+    <h1>Unificação em LPO</h1>
+    <p>Construa o UMG passo a passo e identifique por que uma tentativa pode falhar.</p>
+  </div>
+</header>
+<main>
+  <section class="panel controls">
+    <label for="ex">Exemplo</label>
+    <select id="ex"></select>
+    <div class="actions">
+      <button id="next">Próximo passo</button>
+      <button id="reset" class="secondary">Reiniciar</button>
+    </div>
+  </section>
+
+  <section class="grid">
+    <article class="panel">
+      <h2>Expressões</h2>
+      <div class="expression" id="left"></div>
+      <div class="vs">UNIFY</div>
+      <div class="expression" id="right"></div>
+    </article>
+
+    <article class="panel">
+      <h2>Substituição atual</h2>
+      <pre id="subst">{ }</pre>
+      <div id="status" class="status neutral">Aguardando o primeiro passo.</div>
+    </article>
+  </section>
+
+  <section class="panel">
+    <h2>Rastro de unificação</h2>
+    <ol id="trace" class="trace"></ol>
+  </section>
+
+  <section class="panel note">
+    <h2>O que observar</h2>
+    <p>Compare símbolo do predicado, aridade e argumentos. Variáveis podem receber termos, mas constantes incompatíveis, estruturas diferentes e o teste de ocorrência podem causar falha.</p>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

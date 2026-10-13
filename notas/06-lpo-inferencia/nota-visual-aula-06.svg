@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500">
+<style>.title{font:700 38px Arial;fill:#fff}.sub{font:600 18px Arial;fill:#e7efff}.h{font:700 25px Arial;fill:#0e4aa8}.b{font:18px Arial;fill:#172033}.small{font:16px Arial;fill:#51607b}.flow{font:700 17px Arial;fill:#172033}.box{stroke:#0e4aa8;stroke-width:3;rx:16;ry:16}.arrow{stroke:#0e4aa8;stroke-width:5;fill:none;marker-end:url(#a)}</style>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#0e4aa8"/></marker></defs>
+<rect x="30" y="30" width="1140" height="110" rx="22" fill="#0e4aa8"/>
+<text x="55" y="78" class="title">Aula 06 - Lógica de Primeira Ordem e Inferência</text>
+<text x="55" y="112" class="sub">Objetos, relações, quantificadores, substituição, unificação e encadeamento</text>
+<text x="45" y="180" class="flow">Fio condutor: como generalizar conhecimento e responder consultas sem enumerar todos os casos?</text>
+<rect class="box" x="45" y="215" width="530" height="245" fill="#eef5ff"/>
+<text x="65" y="250" class="h">1. Vocabulário da LPO</text><text x="70" y="292" class="b">• Constantes identificam objetos.</text><text x="70" y="327" class="b">• Variáveis representam objetos arbitrários.</text><text x="70" y="362" class="b">• Funções produzem termos.</text><text x="70" y="397" class="b">• Predicados expressam propriedades/relações.</text>
+<rect class="box" x="625" y="215" width="530" height="245" fill="#fff8ea"/>
+<text x="645" y="250" class="h">2. Quantificação</text><text x="650" y="292" class="b">• ∀ x: vale para todo objeto.</text><text x="650" y="327" class="b">• ∃ x: existe ao menos um objeto.</text><text x="650" y="362" class="b">• Escopo define onde o quantificador atua.</text><text x="650" y="397" class="b">• Variáveis podem ser livres ou ligadas.</text><path class="arrow" d="M575 338 L615 338"/>
+<rect class="box" x="45" y="500" width="530" height="245" fill="#eefcf2"/>
+<text x="65" y="535" class="h">3. Substituição e unificação</text><text x="70" y="577" class="b">• θ associa variáveis a termos.</text><text x="70" y="612" class="b">• Unificar = tornar expressões compatíveis.</text><text x="70" y="647" class="b">• MGU mantém a solução mais geral.</text><text x="70" y="682" class="b">• Nem toda tentativa de unificação tem sucesso.</text>
+<rect class="box" x="625" y="500" width="530" height="245" fill="#eef5ff"/>
+<text x="645" y="535" class="h">4. Inferência</text><text x="650" y="577" class="b">• Regra + fatos + unificação.</text><text x="650" y="612" class="b">• Modus Ponens Generalizado.</text><text x="650" y="647" class="b">• Geração de conclusões instanciadas.</text><text x="650" y="682" class="b">• Inferência pode ser vista como busca.</text><path class="arrow" d="M575 623 L615 623"/>
+<rect class="box" x="45" y="785" width="530" height="245" fill="#fff8ea"/>
+<text x="65" y="820" class="h">5. Encadeamento direto</text><text x="70" y="862" class="b">• Orientado pelos dados.</text><text x="70" y="897" class="b">• Parte dos fatos conhecidos.</text><text x="70" y="932" class="b">• Aplica regras compatíveis.</text><text x="70" y="967" class="b">• Acrescenta novas consequências à KB.</text>
+<rect class="box" x="625" y="785" width="530" height="245" fill="#eefcf2"/>
+<text x="645" y="820" class="h">6. Encadeamento reverso</text><text x="650" y="862" class="b">• Orientado pela meta.</text><text x="650" y="897" class="b">• Parte da consulta.</text><text x="650" y="932" class="b">• Transforma premissas em submetas.</text><text x="650" y="967" class="b">• Prepara diretamente o raciocínio em Prolog.</text><path class="arrow" d="M575 908 L615 908"/>
+<rect x="45" y="1070" width="1110" height="180" rx="18" fill="#f7faff" stroke="#0e4aa8" stroke-width="3"/>
+<text x="70" y="1110" class="h">Ciclo de inferência em LPO</text>
+<rect class="box" x="70" y="1150" width="180" height="58" fill="#fff"/><text x="118" y="1186" class="flow">Fatos / meta</text>
+<rect class="box" x="300" y="1150" width="180" height="58" fill="#fff"/><text x="335" y="1186" class="flow">Selecionar regra</text>
+<rect class="box" x="530" y="1150" width="180" height="58" fill="#fff"/><text x="572" y="1186" class="flow">Unificar</text>
+<rect class="box" x="760" y="1150" width="180" height="58" fill="#fff"/><text x="790" y="1186" class="flow">Aplicar θ</text>
+<rect class="box" x="990" y="1150" width="130" height="58" fill="#fff"/><text x="1012" y="1186" class="flow">Inferir</text>
+<path class="arrow" d="M250 1179 L290 1179"/><path class="arrow" d="M480 1179 L520 1179"/><path class="arrow" d="M710 1179 L750 1179"/><path class="arrow" d="M940 1179 L980 1179"/>
+<rect x="45" y="1290" width="1110" height="150" rx="18" fill="#fff" stroke="#9aa6bc" stroke-width="2"/>
+<text x="70" y="1328" class="h">Checklist</text><text x="75" y="1365" class="b">□ Interpreto ∀ e ∃.  □ Distingo termos e predicados.  □ Aplico substituições e unificação.</text><text x="75" y="1400" class="b">□ Explico MGU.  □ Diferencio encadeamento direto e reverso.  □ Relaciono LPO com Prolog.</text>
+<text x="50" y="1480" class="small">Relação bibliográfica: Lógica de Primeira Ordem e inferência em LPO em Russell &amp; Norvig.</text>
+</svg>

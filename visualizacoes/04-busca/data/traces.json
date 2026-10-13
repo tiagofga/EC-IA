@@ -1,0 +1,605 @@
+{
+  "bfs": {
+    "name": "Busca em Largura (BFS)",
+    "family": "Busca não informada",
+    "rule": "Seleciona o nó de menor profundidade, usando uma fronteira FIFO.",
+    "steps": [
+      {
+        "current": "S",
+        "frontier": [
+          "S"
+        ],
+        "explored": [],
+        "path": [
+          "S"
+        ],
+        "note": "Estado inicial."
+      },
+      {
+        "current": "S",
+        "frontier": [
+          "A",
+          "B"
+        ],
+        "explored": [
+          "S"
+        ],
+        "path": [
+          "S"
+        ],
+        "note": "S é expandido; A e B entram na fronteira."
+      },
+      {
+        "current": "A",
+        "frontier": [
+          "B",
+          "C",
+          "D"
+        ],
+        "explored": [
+          "S",
+          "A"
+        ],
+        "path": [
+          "S",
+          "A"
+        ],
+        "note": "A é expandido antes de B porque entrou primeiro."
+      },
+      {
+        "current": "B",
+        "frontier": [
+          "C",
+          "D"
+        ],
+        "explored": [
+          "S",
+          "A",
+          "B"
+        ],
+        "path": [
+          "S",
+          "B"
+        ],
+        "note": "B é expandido; D já estava representado na fronteira."
+      },
+      {
+        "current": "C",
+        "frontier": [
+          "D",
+          "G"
+        ],
+        "explored": [
+          "S",
+          "A",
+          "B",
+          "C"
+        ],
+        "path": [
+          "S",
+          "A",
+          "C"
+        ],
+        "note": "C gera G."
+      },
+      {
+        "current": "D",
+        "frontier": [
+          "G"
+        ],
+        "explored": [
+          "S",
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "path": [
+          "S",
+          "A",
+          "D"
+        ],
+        "note": "D é expandido antes de G."
+      },
+      {
+        "current": "G",
+        "frontier": [],
+        "explored": [
+          "S",
+          "A",
+          "B",
+          "C",
+          "D",
+          "G"
+        ],
+        "path": [
+          "S",
+          "A",
+          "C",
+          "G"
+        ],
+        "solution": [
+          "S",
+          "A",
+          "C",
+          "G"
+        ],
+        "note": "Meta encontrada."
+      }
+    ]
+  },
+  "dfs": {
+    "name": "Busca em Profundidade (DFS)",
+    "family": "Busca não informada",
+    "rule": "Seleciona o nó mais profundo segundo a ordem definida no trace.",
+    "steps": [
+      {
+        "current": "S",
+        "frontier": [
+          "S"
+        ],
+        "explored": [],
+        "path": [
+          "S"
+        ],
+        "note": "Estado inicial."
+      },
+      {
+        "current": "S",
+        "frontier": [
+          "A",
+          "B"
+        ],
+        "explored": [
+          "S"
+        ],
+        "path": [
+          "S"
+        ],
+        "note": "O trace escolhe A como primeiro ramo."
+      },
+      {
+        "current": "A",
+        "frontier": [
+          "C",
+          "D",
+          "B"
+        ],
+        "explored": [
+          "S",
+          "A"
+        ],
+        "path": [
+          "S",
+          "A"
+        ],
+        "note": "Aprofundamento pelo ramo de A."
+      },
+      {
+        "current": "C",
+        "frontier": [
+          "G",
+          "D",
+          "B"
+        ],
+        "explored": [
+          "S",
+          "A",
+          "C"
+        ],
+        "path": [
+          "S",
+          "A",
+          "C"
+        ],
+        "note": "C é escolhido antes de retornar aos demais ramos."
+      },
+      {
+        "current": "G",
+        "frontier": [
+          "D",
+          "B"
+        ],
+        "explored": [
+          "S",
+          "A",
+          "C",
+          "G"
+        ],
+        "path": [
+          "S",
+          "A",
+          "C",
+          "G"
+        ],
+        "solution": [
+          "S",
+          "A",
+          "C",
+          "G"
+        ],
+        "note": "Meta encontrada."
+      }
+    ]
+  },
+  "ucs": {
+    "name": "Busca de Custo Uniforme (UCS)",
+    "family": "Busca não informada",
+    "rule": "Seleciona o nó com menor custo acumulado g(n).",
+    "steps": [
+      {
+        "current": "S",
+        "frontier": [
+          "S"
+        ],
+        "explored": [],
+        "scores": {
+          "S": "g=0"
+        },
+        "path": [
+          "S"
+        ],
+        "note": "Estado inicial."
+      },
+      {
+        "current": "S",
+        "frontier": [
+          "A",
+          "B"
+        ],
+        "explored": [
+          "S"
+        ],
+        "scores": {
+          "A": "g=2",
+          "B": "g=5"
+        },
+        "path": [
+          "S"
+        ],
+        "note": "A tem menor custo acumulado."
+      },
+      {
+        "current": "A",
+        "frontier": [
+          "C",
+          "B",
+          "D"
+        ],
+        "explored": [
+          "S",
+          "A"
+        ],
+        "scores": {
+          "C": "g=4",
+          "B": "g=5",
+          "D": "g=6"
+        },
+        "path": [
+          "S",
+          "A"
+        ],
+        "note": "C passa a ser a alternativa mais barata."
+      },
+      {
+        "current": "C",
+        "frontier": [
+          "B",
+          "D",
+          "G"
+        ],
+        "explored": [
+          "S",
+          "A",
+          "C"
+        ],
+        "scores": {
+          "B": "g=5",
+          "D": "g=6",
+          "G": "g=9"
+        },
+        "path": [
+          "S",
+          "A",
+          "C"
+        ],
+        "note": "O objetivo existe na fronteira, mas ainda não é o mais barato."
+      },
+      {
+        "current": "B",
+        "frontier": [
+          "D",
+          "G"
+        ],
+        "explored": [
+          "S",
+          "A",
+          "C",
+          "B"
+        ],
+        "scores": {
+          "D": "g=6",
+          "G": "g=9"
+        },
+        "path": [
+          "S",
+          "B"
+        ],
+        "note": "B é expandido antes de D e G."
+      },
+      {
+        "current": "D",
+        "frontier": [
+          "G"
+        ],
+        "explored": [
+          "S",
+          "A",
+          "C",
+          "B",
+          "D"
+        ],
+        "scores": {
+          "G": "g=8"
+        },
+        "path": [
+          "S",
+          "A",
+          "D"
+        ],
+        "note": "D produz um caminho para G de custo 8."
+      },
+      {
+        "current": "G",
+        "frontier": [],
+        "explored": [
+          "S",
+          "A",
+          "C",
+          "B",
+          "D",
+          "G"
+        ],
+        "scores": {
+          "G": "g=8"
+        },
+        "path": [
+          "S",
+          "A",
+          "D",
+          "G"
+        ],
+        "solution": [
+          "S",
+          "A",
+          "D",
+          "G"
+        ],
+        "note": "Meta removida da fronteira com custo mínimo conhecido."
+      }
+    ]
+  },
+  "greedy": {
+    "name": "Busca Gulosa",
+    "family": "Busca informada",
+    "rule": "Seleciona o nó com menor heurística h(n).",
+    "steps": [
+      {
+        "current": "S",
+        "frontier": [
+          "S"
+        ],
+        "explored": [],
+        "scores": {
+          "S": "h=6"
+        },
+        "path": [
+          "S"
+        ],
+        "note": "Estado inicial."
+      },
+      {
+        "current": "S",
+        "frontier": [
+          "B",
+          "A"
+        ],
+        "explored": [
+          "S"
+        ],
+        "scores": {
+          "B": "h=3",
+          "A": "h=5"
+        },
+        "path": [
+          "S"
+        ],
+        "note": "B parece mais próximo da meta segundo h."
+      },
+      {
+        "current": "B",
+        "frontier": [
+          "D",
+          "A"
+        ],
+        "explored": [
+          "S",
+          "B"
+        ],
+        "scores": {
+          "D": "h=1",
+          "A": "h=5"
+        },
+        "path": [
+          "S",
+          "B"
+        ],
+        "note": "D tem a menor estimativa heurística."
+      },
+      {
+        "current": "D",
+        "frontier": [
+          "G",
+          "A"
+        ],
+        "explored": [
+          "S",
+          "B",
+          "D"
+        ],
+        "scores": {
+          "G": "h=0",
+          "A": "h=5"
+        },
+        "path": [
+          "S",
+          "B",
+          "D"
+        ],
+        "note": "G possui h=0."
+      },
+      {
+        "current": "G",
+        "frontier": [
+          "A"
+        ],
+        "explored": [
+          "S",
+          "B",
+          "D",
+          "G"
+        ],
+        "scores": {
+          "G": "h=0"
+        },
+        "path": [
+          "S",
+          "B",
+          "D",
+          "G"
+        ],
+        "solution": [
+          "S",
+          "B",
+          "D",
+          "G"
+        ],
+        "note": "Meta encontrada. A busca gulosa não considera diretamente o custo já pago."
+      }
+    ]
+  },
+  "astar": {
+    "name": "A*",
+    "family": "Busca informada",
+    "rule": "Seleciona o nó com menor f(n)=g(n)+h(n).",
+    "steps": [
+      {
+        "current": "S",
+        "frontier": [
+          "S"
+        ],
+        "explored": [],
+        "scores": {
+          "S": "g=0, h=6, f=6"
+        },
+        "path": [
+          "S"
+        ],
+        "note": "Estado inicial."
+      },
+      {
+        "current": "S",
+        "frontier": [
+          "A",
+          "B"
+        ],
+        "explored": [
+          "S"
+        ],
+        "scores": {
+          "A": "g=2, h=5, f=7",
+          "B": "g=5, h=3, f=8"
+        },
+        "path": [
+          "S"
+        ],
+        "note": "A possui o menor f."
+      },
+      {
+        "current": "A",
+        "frontier": [
+          "D",
+          "C",
+          "B"
+        ],
+        "explored": [
+          "S",
+          "A"
+        ],
+        "scores": {
+          "D": "g=6, h=1, f=7",
+          "C": "g=4, h=4, f=8",
+          "B": "g=5, h=3, f=8"
+        },
+        "path": [
+          "S",
+          "A"
+        ],
+        "note": "D passa a ser o nó mais promissor."
+      },
+      {
+        "current": "D",
+        "frontier": [
+          "G",
+          "C",
+          "B"
+        ],
+        "explored": [
+          "S",
+          "A",
+          "D"
+        ],
+        "scores": {
+          "G": "g=8, h=0, f=8",
+          "C": "g=4, h=4, f=8",
+          "B": "g=5, h=3, f=8"
+        },
+        "path": [
+          "S",
+          "A",
+          "D"
+        ],
+        "note": "G entra na fronteira com f=8."
+      },
+      {
+        "current": "G",
+        "frontier": [
+          "C",
+          "B"
+        ],
+        "explored": [
+          "S",
+          "A",
+          "D",
+          "G"
+        ],
+        "scores": {
+          "G": "g=8, h=0, f=8"
+        },
+        "path": [
+          "S",
+          "A",
+          "D",
+          "G"
+        ],
+        "solution": [
+          "S",
+          "A",
+          "D",
+          "G"
+        ],
+        "note": "Meta selecionada. O trace mostra a combinação entre custo acumulado e heurística."
+      }
+    ]
+  }
+}
