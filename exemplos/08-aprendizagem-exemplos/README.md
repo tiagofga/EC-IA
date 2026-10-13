@@ -20,7 +20,7 @@ python -c "import numpy, pandas, matplotlib, sklearn; print('Pacotes OK')"
 
 - `arvore_decisao_csv.py`
 
-Os exemplos de Titanic exigem `train.csv` da competição [Titanic no Kaggle](https://www.kaggle.com/competitions/titanic/data). O CSV não está incluído neste repositório. Os demais scripts podem utilizar conjuntos de dados incluídos no scikit-learn, conforme cada implementação.
+O script utiliza dados em CSV; confira no código qual arquivo de entrada é esperado e coloque-o no caminho indicado. Dados de terceiros não estão incluídos automaticamente no repositório.
 
 Execute a partir da pasta de trabalho que contenha os dados necessários, por exemplo:
 
