@@ -4,7 +4,7 @@ Todas as mudanças relevantes deste projeto serão registradas neste arquivo.
 
 O histórico de commits segue Conventional Commits.
 
-## [0.10.0] - 2026-10-13
+## [Unreleased] - preparação da v0.10.0
 
 ### Added
 
@@ -20,10 +20,6 @@ O histórico de commits segue Conventional Commits.
 ### Planned
 
 - Trabalho 2 na versão v0.11.0; não incluído nesta publicação.
-
-## [Unreleased]
-
-Nenhuma alteração registrada após a preparação da versão 0.9.0.
 
 ## [0.9.0] - 2026-09-30
 
