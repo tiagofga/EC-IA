@@ -10,6 +10,7 @@ O histórico de commits segue Conventional Commits.
 
 - Enunciado oficial em PDF e guia público do Trabalho 02 - Aprendizado de Máquina e Computação Natural.
 - Catálogo de exemplos Python integrado ao menu lateral e à página inicial.
+- Documentação dos exemplos CSV e indicação explícita dos arquivos e colunas a adaptar.
 
 ### Changed
 
