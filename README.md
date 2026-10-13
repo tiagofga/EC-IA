@@ -17,7 +17,8 @@ Para cada assunto, a sequência recomendada é:
 5. resolver os simulados de forma progressiva e, inicialmente, sem consulta;
 6. usar as visualizações para acompanhar algoritmos e mecanismos de raciocínio;
 7. consultar pseudocódigos para revisar estruturas e procedimentos específicos;
-8. desenvolver os trabalhos práticos somente após revisar os requisitos e critérios de entrega.
+8. consultar os [exemplos Python](exemplos/README.md) para acompanhar as implementações didáticas;
+9. desenvolver os trabalhos práticos somente após revisar os requisitos e critérios de entrega.
 
 A proposta não é apenas disponibilizar arquivos, mas organizar um percurso de estudo que possa ser retomado antes de atividades e avaliações.
 
