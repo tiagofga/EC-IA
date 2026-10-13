@@ -48,4 +48,4 @@ Os exemplos das Aulas 08-11 utilizam `numpy`, `pandas`, `matplotlib` e `scikit-l
 python3 -m pip install numpy pandas matplotlib scikit-learn
 ```
 
-Consulte também os [exemplos e instruções no repositório](https://github.com/tiagofga/EC-IA/tree/feat/aulas-08-11-aprendizado-supervisionado/exemplos). O uso de ambiente virtual é opcional e fica a critério do estudante.
+Consulte também os [exemplos e instruções no repositório](https://github.com/tiagofga/EC-IA/tree/main/exemplos). O uso de ambiente virtual é opcional e fica a critério do estudante.
