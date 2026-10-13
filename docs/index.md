@@ -48,7 +48,7 @@ As Aulas 04, 05 e 06 possuem dois PDFs. Consulte o [catálogo completo](aulas/in
 - **Aula 10 - SVM e PCA:** [PDF](downloads/aulas/EC_IA_010_SVM.pdf) · [Nota visual](notas/10-svm/README.md) · [Estudo guiado](estudos-guiados/10-svm/README.md)
 - **Aula 11 - Atividade Integradora: DT, KNN e SVM:** [PDF](downloads/aulas/EC_IA_011_Atividade_Comparacao.pdf) · [Nota visual](notas/11-atividade-comparacao/README.md) · [Estudo guiado](estudos-guiados/11-atividade-comparacao/README.md)
 
-[Todos os PDFs](aulas/index.md) · [Exemplos Python](https://github.com/tiagofga/EC-IA/tree/feat/aulas-08-11-aprendizado-supervisionado/exemplos) · [Visualizações interativas](visualizacoes/index.md)
+[Todos os PDFs](aulas/index.md) · [Exemplos Python](https://github.com/tiagofga/EC-IA/tree/main/exemplos) · [Visualizações interativas](visualizacoes/index.md)
 
 ## Notas visuais
 
@@ -83,12 +83,7 @@ O primeiro trabalho prático utiliza diretamente os conteúdos da Aula 04.
 
 [Acessar o Trabalho 01](trabalhos/index.md)
 
-## Versão pública
-
-A versão **v0.10.0** está em preparação nesta branch; o Trabalho 2 está reservado para a **v0.11.0**.
-
-A v0.10.0 reúne as Aulas 08 a 11, exemplos Python, notas visuais, estudos guiados, pseudocódigos e visualizações. As Aulas 05 a 07 permanecem disponíveis com os materiais anteriores.
 
 ## Sobre este material
 
-O repositório contém apenas a parte pública da disciplina. Gabaritos, testes e mapas ocultos, soluções de referência ainda não liberadas e materiais internos de avaliação não são publicados.
+Os materiais disponibilizados nesta página destinam-se ao estudo e às atividades da disciplina.
