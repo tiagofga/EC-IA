@@ -2,7 +2,7 @@
 
 Material público da disciplina de **Inteligência Artificial** do Curso de Engenharia de Computação do **CEFET-MG, campus Divinópolis**.
 
-Esta página organiza os materiais de estudo e avaliação da disciplina. Use o menu lateral para acessar plano didático, aulas, notas visuais, estudos guiados, atividades, simulados, visualizações, pseudocódigos e trabalhos.
+Esta página organiza os materiais de estudo e avaliação da disciplina. Use o menu lateral para acessar plano didático, aulas, notas visuais, estudos guiados, atividades, simulados, visualizações, pseudocódigos, exemplos Python e trabalhos.
 
 > **Repositório público do projeto:** [github.com/tiagofga/EC-IA](https://github.com/tiagofga/EC-IA)
 
@@ -17,7 +17,8 @@ Se você está acompanhando a disciplina durante o semestre, use esta sequência
 5. **Simulados** - faça uma revisão integrada e treine a resolução sob limite de tempo;
 6. **Visualizações** - acompanhe passo a passo algoritmos e mecanismos de raciocínio;
 7. **Pseudocódigos** - revise estruturas e procedimentos específicos;
-8. **Trabalhos** - consulte enunciado, código-base e regras de entrega das avaliações práticas.
+8. **Exemplos Python** - explore implementações didáticas das aulas;
+9. **Trabalhos** - consulte enunciado, código-base e regras de entrega das avaliações práticas.
 
 ## Conteúdo publicado
 
@@ -72,6 +73,12 @@ As visualizações compartilham a mesma identidade visual: azul como cor princip
 
 [Abrir a seção de visualizações](visualizacoes/index.md)
 
+## Exemplos Python
+
+Os scripts públicos das Aulas 08-11 ajudam a explorar preparação de dados, DT, KNN, SVM, PCA e métricas de avaliação.
+
+[Consultar exemplos Python](exemplos/index.md)
+
 ## Trabalho 01 - Busca
 
 O primeiro trabalho prático utiliza diretamente os conteúdos da Aula 04.
@@ -83,6 +90,12 @@ O primeiro trabalho prático utiliza diretamente os conteúdos da Aula 04.
 
 [Acessar o Trabalho 01](trabalhos/index.md)
 
+
+## Trabalho 02 - Aprendizado de Máquina e Computação Natural
+
+O Trabalho 02 compara cinco classificadores em uma base UCI/Kaggle e três métodos de computação natural sobre um único problema de otimização. Entrega em 03/12/2026.
+
+[Consultar o Trabalho 02](trabalhos/index.md)
 
 ## Sobre este material
 

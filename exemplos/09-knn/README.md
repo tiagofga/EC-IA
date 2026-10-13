@@ -21,7 +21,7 @@ python -c "import numpy, pandas, matplotlib, sklearn; print('Pacotes OK')"
 - `titanic_arvore.py`
 - `knn_csv.py`
 
-Os exemplos de Titanic exigem `train.csv` da competição [Titanic no Kaggle](https://www.kaggle.com/competitions/titanic/data). O CSV não está incluído neste repositório. Os demais scripts podem utilizar conjuntos de dados incluídos no scikit-learn, conforme cada implementação.
+O arquivo `titanic_arvore.py` utiliza `train.csv` da [competição Titanic no Kaggle](https://www.kaggle.com/competitions/titanic/data); esse arquivo não é distribuído no repositório. Já `knn_csv.py` é um **modelo didático para adaptação**: substitua `seu_dataset.csv`, os nomes das colunas de entrada e `target` pelos dados reais. A seleção de `k` depende de uma quantidade suficiente de amostras em cada fold da validação cruzada.
 
 Execute a partir da pasta de trabalho que contenha os dados necessários, por exemplo:
 

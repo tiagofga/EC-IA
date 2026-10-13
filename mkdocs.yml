@@ -31,5 +31,6 @@ nav:
   - Simulados: simulados/index.md
   - Visualizações: visualizacoes/index.md
   - Pseudocódigos: pseudocodigos/index.md
+  - Exemplos Python: exemplos/index.md
   - Trabalhos: trabalhos/index.md
   - Repositório no GitHub: https://github.com/tiagofga/EC-IA

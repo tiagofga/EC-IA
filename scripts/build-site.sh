@@ -90,6 +90,7 @@ copy_if_exists "atividades/04-busca/lista-04/EC_IA_004_Busca_Atividades.pdf" "do
 copy_if_exists "atividades/05-logica-lpo-prolog/EC_IA_005_Lógica_Atividades.pdf" "docs/downloads/atividades/EC_IA_005_Logica_Atividades.pdf"
 
 copy_if_exists "trabalhos/01-busca/EC_IA_Trabalho_01_2026.pdf" "docs/downloads/trabalhos/EC_IA_Trabalho_01_2026.pdf"
+copy_if_exists "trabalhos/02-aprendizagem-computacao-natural/EC_IA_Trabalho_02_2026.pdf" "docs/downloads/trabalhos/EC_IA_Trabalho_02_2026.pdf"
 copy_if_exists "planos/2026-2/plano-didatico.md" "docs/downloads/planos/plano-didatico-2026-2.md"
 copy_if_exists "planos/2026-2/Plano_Didatico_IA_G1.pdf" "docs/downloads/planos/Plano_Didatico_IA_G1.pdf"
 copy_if_exists "planos/2026-2/Plano_Didatico_IA_G2.pdf" "docs/downloads/planos/Plano_Didatico_IA_G2.pdf"
