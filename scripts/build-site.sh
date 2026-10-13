@@ -91,7 +91,8 @@ copy_if_exists "atividades/05-logica-lpo-prolog/EC_IA_005_Lógica_Atividades.pdf
 
 copy_if_exists "trabalhos/01-busca/EC_IA_Trabalho_01_2026.pdf" "docs/downloads/trabalhos/EC_IA_Trabalho_01_2026.pdf"
 copy_if_exists "planos/2026-2/plano-didatico.md" "docs/downloads/planos/plano-didatico-2026-2.md"
-copy_if_exists "planos/2026-2/Plano_Didatico_IA_2026_2.pdf" "docs/downloads/planos/Plano_Didatico_IA_2026_2.pdf"
+copy_if_exists "planos/2026-2/Plano_Didatico_IA_G1.pdf" "docs/downloads/planos/Plano_Didatico_IA_G1.pdf"
+copy_if_exists "planos/2026-2/Plano_Didatico_IA_G2.pdf" "docs/downloads/planos/Plano_Didatico_IA_G2.pdf"
 
 # EC-IA 0.10.0 BEGIN
 for unit in 08-aprendizagem-exemplos 09-knn 10-svm 11-atividade-comparacao; do
