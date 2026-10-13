@@ -2,7 +2,7 @@
 
 Material público da disciplina de **Inteligência Artificial** do Curso de Engenharia de Computação do **CEFET-MG, campus Divinópolis**.
 
-Esta página organiza os materiais de estudo e avaliação da disciplina. Use o menu lateral para acessar plano didático, aulas, notas visuais, estudos guiados, atividades, simulados, visualizações, pseudocódigos e trabalhos.
+Esta página organiza os materiais de estudo e avaliação da disciplina. Use o menu lateral para acessar plano didático, aulas, notas visuais, estudos guiados, atividades, simulados, visualizações, pseudocódigos, exemplos Python e trabalhos.
 
 > **Repositório público do projeto:** [github.com/tiagofga/EC-IA](https://github.com/tiagofga/EC-IA)
 
@@ -17,7 +17,8 @@ Se você está acompanhando a disciplina durante o semestre, use esta sequência
 5. **Simulados** - faça uma revisão integrada e treine a resolução sob limite de tempo;
 6. **Visualizações** - acompanhe passo a passo algoritmos e mecanismos de raciocínio;
 7. **Pseudocódigos** - revise estruturas e procedimentos específicos;
-8. **Trabalhos** - consulte enunciado, código-base e regras de entrega das avaliações práticas.
+8. **Exemplos Python** - explore implementações didáticas das aulas;
+9. **Trabalhos** - consulte enunciado, código-base e regras de entrega das avaliações práticas.
 
 ## Conteúdo publicado
 
