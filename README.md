@@ -48,12 +48,16 @@ A proposta não é apenas disponibilizar arquivos, mas organizar um percurso de 
 | 05 | Lógica e Raciocínio em IA |
 | 06 | Lógica de Primeira Ordem e Inferência |
 | 07 | Prolog - Programação Lógica, Unificação e Busca |
+| 08 | Aprendizagem com Exemplos e Árvores de Decisão |
+| 09 | K-Nearest Neighbors e Preparação de Dados |
+| 10 | Support Vector Machines e PCA |
+| 11 | Atividade Integradora - DT, KNN e SVM |
 
-Os PDFs públicos das Aulas 00 a 07 e das Atividades 01 a 05 já fazem parte do repositório. A Lista 05 integra Lógica Proposicional, Lógica de Primeira Ordem, Inferência em LPO e Prolog.
+Os PDFs públicos das Aulas 00 a 11 e das Atividades 01 a 05 fazem parte desta branch. A Lista 05 integra Lógica Proposicional, Lógica de Primeira Ordem, Inferência em LPO e Prolog.
 
 ## Notas visuais
 
-As Aulas 01 a 07 possuem notas públicas em Markdown concebidas como **mapas mentais e guias de estudo**. Elas incluem:
+As Aulas 01 a 11 possuem notas públicas em Markdown concebidas como **mapas mentais e guias de estudo**. Elas incluem:
 
 - figuras de síntese visual;
 - mapas conceituais e fluxos Mermaid coloridos;
@@ -130,7 +134,7 @@ Consulte `trabalhos/01-busca/README.md` antes de iniciar.
 
 ## Estudos guiados
 
-Os estudos guiados das Aulas 01 a 07 foram preparados para revisão ativa. Eles incluem objetivos de aprendizagem, conceitos essenciais, perguntas de verificação, aplicações, erros conceituais a evitar e autoavaliação.
+Os estudos guiados das Aulas 01 a 11 foram preparados para revisão ativa. Eles incluem objetivos de aprendizagem, conceitos essenciais, perguntas de verificação, aplicações, erros conceituais a evitar e autoavaliação.
 
 A recomendação é tentar responder às perguntas **antes** de consultar novamente os slides ou as notas.
 
@@ -233,7 +237,7 @@ Modelos LaTeX explicitamente destinados aos estudantes, como o modelo SBC do Tra
 
 ## Versão de referência
 
-A versão pública de referência é **`v0.9.0`**.
+A **`v0.10.0`** está sendo preparada nesta branch. O Trabalho 2 será publicado na **`v0.11.0`**.
 
 Principais marcos desta versão:
 
