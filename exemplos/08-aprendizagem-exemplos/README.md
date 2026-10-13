@@ -20,7 +20,7 @@ python -c "import numpy, pandas, matplotlib, sklearn; print('Pacotes OK')"
 
 - `arvore_decisao_csv.py`
 
-O script utiliza dados em CSV; confira no código qual arquivo de entrada é esperado e coloque-o no caminho indicado. Dados de terceiros não estão incluídos automaticamente no repositório.
+O arquivo `arvore_decisao_csv.py` é um **modelo didático para adaptação**. Antes de executar, substitua `seu_dataset.csv`, as colunas ilustrativas `coluna1`, `coluna2`, `coluna3`, o atributo `target` e os nomes das classes pelos dados reais escolhidos. O repositório não fornece esse CSV.
 
 Execute a partir da pasta de trabalho que contenha os dados necessários, por exemplo:
 
