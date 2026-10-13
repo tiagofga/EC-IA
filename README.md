@@ -4,7 +4,7 @@ Material público da disciplina de **Inteligência Artificial** do Curso de Enge
 
 > **Página da disciplina:** https://tiagofga.github.io/EC-IA/
 
-Este repositório reúne materiais de apoio às aulas, notas visuais, atividades, estudos guiados, simulados, trabalhos, pseudocódigos conceituais e visualizações didáticas. O conteúdo é organizado progressivamente ao longo do semestre.
+Este repositório reúne materiais de apoio às aulas, notas visuais, atividades, estudos guiados, simulados, trabalhos, exemplos Python, pseudocódigos conceituais e visualizações didáticas. O conteúdo é organizado progressivamente ao longo do semestre.
 
 ## Como usar este repositório
 
@@ -33,6 +33,7 @@ A proposta não é apenas disponibilizar arquivos, mas organizar um percurso de 
 | `simulados/` | simulados públicos para revisão integrada, sem gabaritos |
 | `visualizacoes/` | visualizações interativas para acompanhar execuções e raciocínio |
 | `pseudoalgoritmos/` | descrições conceituais dos algoritmos e procedimentos estudados |
+| `exemplos/` | scripts Python para revisão e experimentação dos métodos estudados |
 | `trabalhos/` | enunciados, código-base e recursos públicos dos trabalhos práticos |
 | `docs/` | páginas utilizadas na publicação do site |
 
@@ -53,7 +54,7 @@ A proposta não é apenas disponibilizar arquivos, mas organizar um percurso de 
 | 10 | Support Vector Machines e PCA |
 | 11 | Atividade Integradora - DT, KNN e SVM |
 
-Os PDFs públicos das Aulas 00 a 11 e das Atividades 01 a 05 fazem parte desta branch. A Lista 05 integra Lógica Proposicional, Lógica de Primeira Ordem, Inferência em LPO e Prolog.
+Os PDFs públicos das Aulas 00 a 11 e das Atividades 01 a 05 estão disponíveis no repositório. A Lista 05 integra Lógica Proposicional, Lógica de Primeira Ordem, Inferência em LPO e Prolog.
 
 ## Notas visuais
 
@@ -118,6 +119,12 @@ A Lista 05 consolida as Aulas 05, 06 e 07, ligando representação formal, infer
 A seção `simulados/` reúne três simulados públicos para revisão integrada das Aulas 01 a 04. O conjunto trabalha conceitos fundamentais de IA, agentes inteligentes, PEAS, representação e formulação de problemas, BFS, DFS, UCS, heurísticas, Busca Gulosa e A*.
 
 Os simulados foram organizados em progressão: revisão conceitual e execução, análise e comparação, e uma resolução integrada em condições próximas às de uma avaliação. O Simulado 03 inclui uma questão de busca informada em um grafo didático inspirado em cidades brasileiras, com identificação explícita das siglas utilizadas. Os gabaritos e soluções de referência não são publicados.
+
+## Trabalho 02 - Aprendizado de Máquina e Computação Natural
+
+O [Trabalho 02](trabalhos/02-aprendizagem-computacao-natural/README.md) integra aprendizado supervisionado e computação natural, com entrega em 03/12/2026. A Parte 1 compara Árvore de Decisão, KNN, SVM, Random Forest e AdaBoost sobre uma base UCI/Kaggle; a Parte 2 compara implementações próprias de AG, PSO ou ACO e CLONALG no mesmo problema de otimização.
+
+O [catálogo de exemplos Python](https://tiagofga.github.io/EC-IA/exemplos/) reúne recursos de apoio. O enunciado oficial prevalece sobre qualquer resumo.
 
 ## Trabalho 01 - Busca
 
