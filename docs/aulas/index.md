@@ -18,52 +18,31 @@ Os materiais públicos estão organizados por aula. A recomendação é revisar 
 | 06 | Lógica de Primeira Ordem - Parte II: Inferência em LPO | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/aulas/06-lpo-inferencia) | <span data-download="../downloads/aulas/EC_IA_006_LPO_Parte_02.pdf">Verificando PDF...</span> |
 | 07 | Prolog - Programação Lógica, Unificação e Busca | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/aulas/07-prolog) | <span data-download="../downloads/aulas/EC_IA_007_Prolog.pdf">Verificando PDF...</span> |
 
-## Organização da Aula 04
-
-A Parte I cobre busca não informada e informada, incluindo BFS, Custo Uniforme, DFS, aprofundamento iterativo, heurísticas, Busca Gulosa e A*.
-
-A Parte II amplia a discussão para busca local e ambientes complexos, incluindo Hill Climbing, Simulated Annealing, Busca em Feixe Local, Algoritmos Genéticos, busca não determinística, estados de crença e busca online.
-
-## Organização da Aula 05
-
-A Parte I introduz agentes baseados em conhecimento, base de conhecimento, TELL/ASK, representação, sintaxe, semântica, modelos, mundos possíveis e consequência lógica, usando o Mundo do Wumpus como fio condutor.
-
-A Parte II formaliza a Lógica Proposicional: conectivos, tabelas-verdade, representação proposicional do Wumpus, verificação de modelos, equivalência, validade, satisfazibilidade, Forma Normal Conjuntiva e resolução.
-
-A numeração da Aula 05 segue a organização didática da disciplina. Nas listas e referências ao Russell & Norvig, esses conteúdos se relacionam principalmente ao Capítulo 7 do livro.
-
-## Organização da Aula 06
-
-A Parte I amplia a representação proposicional para a Lógica de Primeira Ordem, cobrindo objetos, constantes, variáveis, predicados, funções, termos, sintaxe, semântica, interpretações, quantificadores, escopo, igualdade e tradução da linguagem natural para LPO.
-
-A Parte II trabalha os mecanismos de inferência: instanciação universal e existencial, substituição, Modus Ponens Generalizado, unificação, UMG, padronização à parte, teste de ocorrência, cláusulas definidas, encadeamento direto e reverso, retrocesso e uma introdução à resolução em LPO e à Skolemização.
-
-O caso West é usado como exemplo condutor para comparar encadeamento direto e reverso. A versão atualizada da Parte II detalha a exploração passo a passo da base de conhecimento e encerra fazendo a ponte para Prolog.
-
-## Organização da Aula 07
-
-A Aula 07 transforma os mecanismos estudados em LPO em um modelo de programação executável. O conteúdo trabalha fatos, regras, consultas, variáveis, unificação, resolução de metas, encadeamento reverso, retrocesso e recursão.
-
-Um exemplo de alcançabilidade em grafos conecta a execução do Prolog com busca em profundidade. A aula também inclui material complementar sobre aritmética, estruturas e listas.
-
-## Sequência recomendada
-
-Para cada aula:
-
-1. revise o conteúdo apresentado em sala;
-2. consulte as notas complementares quando necessário;
-3. faça o estudo guiado;
-4. resolva a atividade correspondente;
-5. retorne ao material para corrigir dúvidas conceituais.
-
-Na Aula 04, use também as visualizações interativas para comparar os algoritmos passo a passo.
-
-
-## Aulas 08 a 11 - Aprendizagem supervisionada
-
-| Aula | Tema | Material | PDF |
-|---|---|---|---|
 | 08 | Aprendizagem com Exemplos | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/aulas/08-aprendizagem-exemplos) | <span data-download="../downloads/aulas/EC_IA_008_Aprendizagem_Exemplos.pdf">Verificando PDF...</span> |
 | 09 | K-Nearest Neighbors | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/aulas/09-knn) | <span data-download="../downloads/aulas/EC_IA_009_KNN.pdf">Verificando PDF...</span> |
 | 10 | Support Vector Machines e PCA | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/aulas/10-svm) | <span data-download="../downloads/aulas/EC_IA_010_SVM.pdf">Verificando PDF...</span> |
 | 11 | Atividade Integradora: DT, KNN e SVM | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/aulas/11-atividade-comparacao) | <span data-download="../downloads/aulas/EC_IA_011_Atividade_Comparacao.pdf">Verificando PDF...</span> |
+
+## Organização dos conteúdos
+
+As aulas seguem uma progressão que relaciona representação de problemas, raciocínio e aprendizagem a mecanismos computacionais de solução.
+
+| Bloco | Aulas | Conteúdo |
+|---|---|---|
+| Fundamentos de IA | 00-03 | Introdução, agentes inteligentes e formulação de problemas |
+| Busca e otimização | 04 | Busca não informada, informada e local |
+| Conhecimento e raciocínio | 05-07 | Lógica Proposicional, LPO, inferência e Prolog |
+| Aprendizagem de máquina | 08-10 | Aprendizagem supervisionada, Árvores de Decisão, KNN, SVM e PCA |
+| Consolidação | 11 | Comparação experimental entre classificadores |
+
+As aulas com mais de uma parte possuem PDFs separados na tabela. Os detalhes conceituais estão nos próprios materiais, nas notas visuais e nos estudos guiados.
+
+## Sequência recomendada
+
+1. Consulte o PDF da aula e seus exemplos.
+2. Revise os principais conceitos nas [notas visuais](../notas/index.md).
+3. Faça o [estudo guiado](../estudos-guiados/index.md).
+4. Explore os [pseudocódigos](../pseudocodigos/index.md) e as [visualizações](../visualizacoes/index.md) disponíveis.
+5. Retome os exercícios e atividades para consolidar a aprendizagem.
+
+Os exemplos Python das Aulas 08-11 utilizam, entre outros pacotes, `numpy`, `pandas`, `matplotlib` e `scikit-learn`. Consulte os READMEs dos exemplos para instruções de instalação, sem exigência de ambiente virtual.
