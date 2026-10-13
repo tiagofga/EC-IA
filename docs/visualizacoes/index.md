@@ -1,105 +1,112 @@
 # Visualizações
 
-As visualizações foram preparadas para ajudar na compreensão do **comportamento dos algoritmos e dos mecanismos de raciocínio**, e não apenas do resultado final.
+Os laboratórios permitem explorar conceitos por meio de controles e representações gráficas. **Antes de interagir, formule uma previsão; depois compare o resultado com a sua hipótese.** Eles complementam os slides e não substituem treinamento ou avaliação experimental de modelos.
 
 ## Aula 04 - Estratégias de Busca
 
-### Busca não informada
+<div class="ecia-lab-grid">
+<article class="ecia-lab-card">
+<h3>Exploração e heurísticas</h3>
+<p>Compare BFS, DFS, UCS, Busca Gulosa, A* e Beam Search observando fronteira, custos e escolhas.</p>
+<a class="ecia-lab-link" href="04-busca/">Abrir visualização ↗</a>
+</article>
+<article class="ecia-lab-card">
+<h3>Busca local e evolucionária</h3>
+<p>Observe Hill Climbing, Simulated Annealing e Algoritmos Genéticos em traces didáticos pré-calculados.</p>
+<a class="ecia-lab-link" href="04-busca/">Abrir visualização ↗</a>
+</article>
+</div>
 
-- **Busca em Largura - BFS** - observe a exploração por níveis e a organização da fronteira;
-- **Busca em Profundidade - DFS** - observe o aprofundamento por um ramo antes do retorno;
-- **Busca de Custo Uniforme - UCS** - acompanhe o custo acumulado `g(n)`.
+## Aula 05 - Lógica e Mundo do Wumpus
 
-### Busca informada
+<div class="ecia-lab-grid">
+<article class="ecia-lab-card">
+<h3>Mundo do Wumpus</h3>
+<p>Investigue percepções, TELL, base de conhecimento, inferência e ASK.</p>
+<a class="ecia-lab-link" href="05-logica/wumpus/">Abrir visualização ↗</a>
+</article>
+<article class="ecia-lab-card">
+<h3>Modelos e consequência lógica</h3>
+<p>Explore modelos da base de conhecimento, contraexemplos e consequência lógica.</p>
+<a class="ecia-lab-link" href="05-logica/modelos/">Abrir visualização ↗</a>
+</article>
+<article class="ecia-lab-card">
+<h3>Resolução proposicional</h3>
+<p>Acompanhe uma prova por refutação com cláusulas e resolventes.</p>
+<a class="ecia-lab-link" href="05-logica/resolucao/">Abrir visualização ↗</a>
+</article>
+</div>
 
-- **Busca Gulosa - Greedy Search** - acompanhe a heurística `h(n)`;
-- **A*** - compare `g(n)`, `h(n)` e `f(n) = g(n) + h(n)`;
-- **Beam Search** - observe como somente os `k` candidatos mais promissores permanecem no feixe.
+## Aula 06 - LPO e Inferência
 
-### Busca local e evolucionária
-
-- **Hill Climbing** - observe a melhora local e o ponto em que o algoritmo pode ficar preso;
-- **Simulated Annealing** - observe quando uma piora pode ser aceita para escapar de regiões locais;
-- **Algoritmo Genético - AG** - acompanhe snapshots da evolução da população ao longo das gerações.
-
-<a href="04-busca/" class="btn">Abrir visualização interativa da Aula 04</a>
-
-## Aula 05 - Mundo do Wumpus
-
-A visualização da Aula 05 funciona como um mini laboratório de lógica. O estudante controla o agente em um tabuleiro 4x4 e acompanha, simultaneamente:
-
-- percepções locais: brisa, fedor, brilho, colisão e grito;
-- sentenças acrescentadas à base de conhecimento por `TELL`;
-- inferências sobre casas seguras, possíveis poços e possível Wumpus;
-- uma sugestão de ação apresentada como resultado de `ASK`;
-- alternância entre **modo aluno** e **modo professor**, revelando ou ocultando o mundo real.
-
-O objetivo é tornar visível o ciclo:
-
-```text
-percepção -> TELL -> KB -> inferência -> ASK -> ação
-```
-
-<a href="05-logica/wumpus/" class="btn">Abrir Mundo do Wumpus</a>
-
-### Modelos e consequência lógica
-
-Explore mundos possíveis, destaque os modelos da KB, identifique contraexemplos e verifique visualmente quando `KB ⊨ α`.
-
-<a href="05-logica/modelos/" class="btn">Abrir Modelos e Consequência Lógica</a>
-
-### Resolução proposicional
-
-Acompanhe uma prova por refutação desde a negação da consulta e a FNC até os resolventes e, quando aplicável, a cláusula vazia `□`.
-
-<a href="05-logica/resolucao/" class="btn">Abrir Resolução Proposicional</a>
-
-## Aula 06 - Lógica de Primeira Ordem e Inferência
-
-A Aula 06 acrescenta duas visualizações complementares.
-
-### Unificação
-
-Acompanhe comparação de predicados e aridade, pareamento de argumentos, construção da substituição, sucesso ou falha e o MGU quando existir.
-
-<a href="06-lpo-inferencia/unificacao/" class="btn">Abrir visualização de Unificação</a>
-
-### Encadeamento e inferência
-
-Compare **encadeamento direto**, orientado pelos dados, e **encadeamento reverso**, orientado pela meta, usando a mesma base de conhecimento.
-
-<a href="06-lpo-inferencia/inferencia/" class="btn">Abrir visualização de Inferência em LPO</a>
+<div class="ecia-lab-grid">
+<article class="ecia-lab-card">
+<h3>Unificação</h3>
+<p>Construa substituições e acompanhe casos de sucesso e falha.</p>
+<a class="ecia-lab-link" href="06-lpo-inferencia/unificacao/">Abrir visualização ↗</a>
+</article>
+<article class="ecia-lab-card">
+<h3>Encadeamento direto e reverso</h3>
+<p>Compare a inferência orientada por dados e por metas no mesmo exemplo.</p>
+<a class="ecia-lab-link" href="06-lpo-inferencia/inferencia/">Abrir visualização ↗</a>
+</article>
+</div>
 
 ## Aula 07 - Prolog
 
-### Resolução de metas e retrocesso
+<div class="ecia-lab-grid">
+<article class="ecia-lab-card">
+<h3>Resolução de metas</h3>
+<p>Acompanhe seleção de cláusulas, unificação, submetas e retrocesso.</p>
+<a class="ecia-lab-link" href="07-prolog/resolucao-metas/">Abrir visualização ↗</a>
+</article>
+</div>
 
-Acompanhe uma consulta passo a passo: seleção de cláusulas, unificação, geração de submetas, sucesso, falha e retrocesso. Os cenários também explicitam a relação entre a árvore de prova e busca em profundidade.
+## Aula 08 - Árvores de Decisão
 
-<a href="07-prolog/resolucao-metas/" class="btn">Abrir visualização de Prolog</a>
+<div class="ecia-lab-grid">
+<article class="ecia-lab-card">
+<h3>Entropia e Gini</h3>
+<p>Altere a proporção entre classes e observe como mudam as medidas de impureza.</p>
+<a class="ecia-lab-link" href="08-aprendizagem-exemplos/">Abrir visualização ↗</a>
+</article>
+</div>
 
-## Como estudar com as visualizações
+## Aula 09 - KNN
 
-Para Busca, tente prever o próximo estado antes de avançar e compare ordem de expansão, custos e heurísticas.
+<div class="ecia-lab-grid">
+<article class="ecia-lab-card">
+<h3>Vizinhos e votação</h3>
+<p>Varie k e acompanhe os vizinhos selecionados e a classe predita.</p>
+<a class="ecia-lab-link" href="09-knn/">Abrir visualização ↗</a>
+</article>
+</div>
 
-No Wumpus, compare sempre três níveis:
+## Aula 10 - SVM
 
-1. o que o agente **percebe**;
-2. o que foi **registrado na KB**;
-3. o que foi **inferido** a partir dessas sentenças.
+<div class="ecia-lab-grid">
+<article class="ecia-lab-card">
+<h3>Kernel RBF</h3>
+<p>Observe como γ modifica o alcance da influência de um exemplo.</p>
+<a class="ecia-lab-link" href="10-svm/">Abrir visualização ↗</a>
+</article>
+</div>
 
-Em Modelos, procure primeiro os mundos que satisfazem a KB e só então verifique a consulta. Em Resolução, acompanhe quais literais complementares são eliminados a cada passo. Em Prolog, tente prever a próxima cláusula e as novas submetas antes de avançar a execução.
+## Aula 11 - Comparação de modelos
 
-## Integridade acadêmica
+<div class="ecia-lab-grid">
+<article class="ecia-lab-card">
+<h3>Métricas de classificação</h3>
+<p>Modifique TP, TN, FP e FN para analisar acurácia, precisão, recall e F1.</p>
+<a class="ecia-lab-link" href="11-atividade-comparacao/">Abrir visualização ↗</a>
+</article>
+</div>
 
-A visualização pública da Aula 04 continua baseada em **traces pré-calculados** e não disponibiliza implementações reutilizáveis dos algoritmos exigidos nas avaliações.
+## Como usar
 
-A visualização do Wumpus é uma demonstração didática independente das implementações cobradas no Trabalho 01 e serve para explorar os conceitos de representação e inferência da Aula 05.
+1. Leia a pergunta ou o cenário apresentado.
+2. Altere um parâmetro por vez e observe o resultado.
+3. Registre o que mudou e explique a relação com a teoria.
+4. Compare com os pseudocódigos, exemplos Python e estudos guiados da aula.
 
-
-## Aulas 08 a 11 - Aprendizagem
-
-- [Aula 08 - Aprendizagem com Exemplos](08-aprendizagem-exemplos/)
-- [Aula 09 - K-Nearest Neighbors](09-knn/)
-- [Aula 10 - Support Vector Machines e PCA](10-svm/)
-- [Aula 11 - Atividade Integradora: DT, KNN e SVM](11-atividade-comparacao/)
+**Observação:** o visualizador de Busca reproduz traces didáticos pré-calculados. As visualizações de aprendizagem ilustram os conceitos, mas não treinam modelos em tempo real.
