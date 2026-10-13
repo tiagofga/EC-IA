@@ -8,7 +8,7 @@ O histórico de commits segue Conventional Commits.
 
 ### Added
 
-- Enunciado e guia público do Trabalho 02 - Aprendizado de Máquina e Computação Natural.
+- Enunciado oficial em PDF e guia público do Trabalho 02 - Aprendizado de Máquina e Computação Natural.
 - Catálogo de exemplos Python integrado ao menu lateral e à página inicial.
 
 ### Changed
@@ -27,10 +27,6 @@ O histórico de commits segue Conventional Commits.
 ### Changed
 
 - Navegação, catálogo e sincronização do site para as Aulas 08 a 11.
-
-### Planned
-
-- Trabalho 2 na versão v0.11.0; não incluído nesta publicação.
 
 ## [0.9.0] - 2026-09-30
 
