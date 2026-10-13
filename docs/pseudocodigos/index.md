@@ -301,6 +301,12 @@ Os procedimentos operacionais da Aula 07 estão organizados em arquivos próprio
 
 A Aula 07 reutiliza a unificação estudada na Aula 06 e mostra como esses mecanismos aparecem na execução de uma linguagem lógica.
 
+## Aulas 08 a 10 - Aprendizagem
+
+- [Aula 08 - Aprendizagem com Exemplos](08-aprendizagem-exemplos/README.md)
+- [Aula 09 - K-Nearest Neighbors](09-knn/README.md)
+- [Aula 10 - Support Vector Machines e PCA](10-svm/README.md)
+
 ## Como estudar esta seção
 
 Para cada pseudocódigo, tente identificar:
@@ -312,10 +318,3 @@ Para cada pseudocódigo, tente identificar:
 5. que informação diferencia esse método dos demais.
 
 Os pseudocódigos são intencionalmente independentes de linguagem de programação e não constituem soluções prontas para as atividades da disciplina.
-
-
-## Aulas 08 a 10 - Aprendizagem
-
-- [Aula 08 - Aprendizagem com Exemplos](08-aprendizagem-exemplos/README.md)
-- [Aula 09 - K-Nearest Neighbors](09-knn/README.md)
-- [Aula 10 - Support Vector Machines e PCA](10-svm/README.md)
