@@ -57,3 +57,13 @@ Para cada aula:
 5. retorne ao material para corrigir dúvidas conceituais.
 
 Na Aula 04, use também as visualizações interativas para comparar os algoritmos passo a passo.
+
+
+## Aulas 08 a 11 - Aprendizagem supervisionada
+
+| Aula | Tema | Material | PDF |
+|---|---|---|---|
+| 08 | Aprendizagem com Exemplos | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/aulas/08-aprendizagem-exemplos) | <span data-download="../downloads/aulas/EC_IA_008_Aprendizagem_Exemplos.pdf">Verificando PDF...</span> |
+| 09 | K-Nearest Neighbors | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/aulas/09-knn) | <span data-download="../downloads/aulas/EC_IA_009_KNN.pdf">Verificando PDF...</span> |
+| 10 | Support Vector Machines e PCA | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/aulas/10-svm) | <span data-download="../downloads/aulas/EC_IA_010_SVM.pdf">Verificando PDF...</span> |
+| 11 | Atividade Integradora: DT, KNN e SVM | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/aulas/11-atividade-comparacao) | <span data-download="../downloads/aulas/EC_IA_011_Atividade_Comparacao.pdf">Verificando PDF...</span> |

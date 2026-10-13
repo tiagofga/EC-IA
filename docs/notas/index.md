@@ -38,3 +38,11 @@ As notas não substituem os slides nem repetem integralmente a aula. Elas têm t
 - **revisão** - permitir retomada rápida antes de atividades, provas e trabalhos.
 
 Para aprofundar ou verificar sua compreensão, use também os [Estudos guiados](../estudos-guiados/index.md).
+
+
+## Aulas 08 a 11
+
+- [Aula 08 - Aprendizagem com Exemplos](08-aprendizagem-exemplos/README.md)
+- [Aula 09 - K-Nearest Neighbors](09-knn/README.md)
+- [Aula 10 - Support Vector Machines e PCA](10-svm/README.md)
+- [Aula 11 - Atividade Integradora: DT, KNN e SVM](11-atividade-comparacao/README.md)

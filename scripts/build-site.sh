@@ -93,6 +93,29 @@ copy_if_exists "trabalhos/01-busca/EC_IA_Trabalho_01_2026.pdf" "docs/downloads/t
 copy_if_exists "planos/2026-2/plano-didatico.md" "docs/downloads/planos/plano-didatico-2026-2.md"
 copy_if_exists "planos/2026-2/Plano_Didatico_IA_2026_2.pdf" "docs/downloads/planos/Plano_Didatico_IA_2026_2.pdf"
 
+# EC-IA 0.10.0 BEGIN
+for unit in 08-aprendizagem-exemplos 09-knn 10-svm 11-atividade-comparacao; do
+  rm -rf "docs/notas/$unit" "docs/estudos-guiados/$unit"
+  cp -R "notas/$unit" "docs/notas/$unit"
+  cp -R "estudos-guiados/$unit" "docs/estudos-guiados/$unit"
+done
+for unit in 08-aprendizagem-exemplos 09-knn 10-svm; do
+  rm -rf "docs/pseudocodigos/$unit"
+  cp -R "pseudoalgoritmos/$unit" "docs/pseudocodigos/$unit"
+done
+for unit in 08-aprendizagem-exemplos 09-knn 10-svm 11-atividade-comparacao; do
+  mkdir -p "docs/visualizacoes/$unit"
+  cp "visualizacoes/$unit/README.md" "docs/visualizacoes/$unit/README.md"
+done
+for spec in \
+  '08-aprendizagem-exemplos:EC_IA_008_Aprendizagem_Exemplos.pdf' \
+  '09-knn:EC_IA_009_KNN.pdf' \
+  '10-svm:EC_IA_010_SVM.pdf' \
+  '11-atividade-comparacao:EC_IA_011_Atividade_Comparacao.pdf'; do
+  unit="${spec%%:*}"; name="${spec#*:}"
+  copy_if_exists "aulas/$unit/$name" "docs/downloads/aulas/$name"
+done
+# EC-IA 0.10.0 END
 mkdocs build --strict
 
 mkdir -p site/visualizacoes
@@ -104,5 +127,10 @@ rm -rf site/visualizacoes/06-lpo-inferencia
 cp -R visualizacoes/06-lpo-inferencia site/visualizacoes/06-lpo-inferencia
 rm -rf site/visualizacoes/07-prolog
 cp -R visualizacoes/07-prolog site/visualizacoes/07-prolog
+
+for unit in 08-aprendizagem-exemplos 09-knn 10-svm 11-atividade-comparacao; do
+  mkdir -p "site/visualizacoes/$unit"
+  cp "visualizacoes/$unit/index.html" "site/visualizacoes/$unit/index.html"
+done
 
 echo "Site gerado em: $ROOT_DIR/site"

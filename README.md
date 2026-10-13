@@ -268,3 +268,13 @@ docs(repo): improve student navigation
 style(site): unify public material visual identity
 chore(release): prepare v0.7.0
 ```
+
+
+## Aulas 08 a 11 - Aprendizagem supervisionada
+
+- Aula 08 - [Aprendizagem com Exemplos](aulas/08-aprendizagem-exemplos/README.md)
+- Aula 09 - [K-Nearest Neighbors](aulas/09-knn/README.md)
+- Aula 10 - [Support Vector Machines e PCA](aulas/10-svm/README.md)
+- Aula 11 - [Atividade Integradora: DT, KNN e SVM](aulas/11-atividade-comparacao/README.md)
+
+Os códigos públicos estão em `exemplos/`; instale as dependências com `python -m pip install numpy pandas matplotlib scikit-learn`. A versão v0.10.0 encerra as Aulas 08-11; o Trabalho 2 será incluído somente na v0.11.0.

@@ -312,3 +312,10 @@ Para cada pseudocódigo, tente identificar:
 5. que informação diferencia esse método dos demais.
 
 Os pseudocódigos são intencionalmente independentes de linguagem de programação e não constituem soluções prontas para as atividades da disciplina.
+
+
+## Aulas 08 a 10 - Aprendizagem
+
+- [Aula 08 - Aprendizagem com Exemplos](08-aprendizagem-exemplos/README.md)
+- [Aula 09 - K-Nearest Neighbors](09-knn/README.md)
+- [Aula 10 - Support Vector Machines e PCA](10-svm/README.md)

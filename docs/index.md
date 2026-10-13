@@ -84,3 +84,8 @@ Esta versão consolida a atualização da Aula 06 - Parte II, a Aula 07 - Prolog
 ## Sobre este material
 
 O repositório contém apenas a parte pública da disciplina. Gabaritos, testes e mapas ocultos, soluções de referência ainda não liberadas e materiais internos de avaliação não são publicados.
+
+
+## Bloco de aprendizagem supervisionada - Aulas 08 a 11
+
+Aula 08: Aprendizagem e Árvores de Decisão; Aula 09: KNN e preparação de dados; Aula 10: SVM, kernels e PCA; Aula 11: comparação de classificadores. Consulte [as aulas](aulas/index.md), [os exemplos Python](https://github.com/tiagofga/EC-IA/tree/main/exemplos) e as visualizações. O Trabalho 2 está reservado para a futura versão v0.11.0.
