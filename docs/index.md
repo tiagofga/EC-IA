@@ -21,30 +21,38 @@ Se você está acompanhando a disciplina durante o semestre, use esta sequência
 
 ## Conteúdo publicado
 
-Os PDFs públicos das aulas estão disponíveis da Aula 00 à Aula 11, incluindo aprendizagem com exemplos, KNN, SVM com PCA e uma atividade de comparação entre classificadores. As Aulas 08 a 11 também possuem notas visuais, estudos guiados e visualizações; os exemplos Python acompanham o bloco de aprendizagem supervisionada. As atividades das Aulas 01 a 05 e três simulados públicos de revisão também estão disponíveis.
+O material público está organizado da Aula 00 à Aula 11. Os links abaixo conduzem diretamente às aulas e aos recursos de estudo, incluindo os fundamentos apresentados nas Aulas 01 a 03.
 
-| Aula | Tema | Recursos principais |
+### Fundamentos de Inteligência Artificial - Aulas 00 a 03
+
+| Aula | Conteúdo | Materiais |
 |---|---|---|
-| 00 | Visão Geral da Disciplina | aula e plano didático |
-| 01 | Introdução à Inteligência Artificial | aula, nota visual, atividade e estudo guiado |
-| 02 | Agentes Inteligentes | aula, nota visual, atividade e estudo guiado |
-| 03 | Representação do Conhecimento e Solução de Problemas | aula, nota visual, atividade, estudo guiado e fundamentos de busca |
-| 04 | Estruturas e Estratégias de Busca | duas partes da aula, nota visual, atividade, estudo guiado, pseudocódigos, visualizações e Trabalho 01 |
-| 05 | Lógica e Raciocínio em IA | duas partes da aula, nota visual, estudo guiado, pseudocódigos e visualizações de Wumpus, modelos e resolução |
-| 06 | Lógica de Primeira Ordem e Inferência | duas partes da aula, nota visual, estudo guiado, pseudocódigos e visualizações de unificação e inferência |
-| 07 | Prolog - Programação Lógica, Unificação e Busca | aula, nota visual, estudo guiado, Lista 05, pseudocódigos e visualização de resolução de metas |
-| 08 | Aprendizagem com Exemplos, Classificação, Regressão e Árvores de Decisão | aula, nota visual, estudo guiado, pseudocódigo e exemplos Python |
-| 09 | K-Nearest Neighbors e Preparação de Dados | aula, nota visual, estudo guiado, pseudocódigos e exemplos Python |
-| 10 | SVM, Kernels e PCA | aula, nota visual, estudo guiado, pseudocódigos e exemplos Python |
-| 11 | Atividade Integradora - Comparação entre DT, KNN e SVM | aula, nota visual, estudo guiado e exemplo Python |
+| 00 | Visão Geral da Disciplina | [PDF da aula](aulas/index.md) |
+| 01 | Introdução à Inteligência Artificial | [PDF](aulas/index.md) · [Nota visual](notas/01-introducao/README.md) · [Estudo guiado](estudos-guiados/01-introducao/README.md) |
+| 02 | Agentes Inteligentes | [PDF](aulas/index.md) · [Nota visual](notas/02-agentes/README.md) · [Estudo guiado](estudos-guiados/02-agentes/README.md) |
+| 03 | Representação do Conhecimento e Solução de Problemas | [PDF](aulas/index.md) · [Nota visual](notas/03-conhecimento/README.md) · [Estudo guiado](estudos-guiados/03-conhecimento/README.md) |
 
-## Sequência didática - Lógica e Aprendizagem
+As listas de exercícios correspondentes podem ser acessadas pela página de [Atividades](atividades/index.md).
 
-As Aulas 05-07 integram representação, lógica, inferência e programação em Prolog. As Aulas 08-11 dão continuidade com aprendizagem a partir de exemplos, preparação de dados, DT, KNN, SVM, PCA e avaliação comparativa de classificadores.
+### Busca, conhecimento e programação lógica - Aulas 04 a 07
 
-[Acessar as aulas](aulas/index.md)
+| Aula | Conteúdo | Acesso |
+|---|---|---|
+| 04 | Estratégias de Busca | [Materiais da aula](aulas/index.md) · [Nota](notas/04-busca/README.md) · [Estudo](estudos-guiados/04-busca/README.md) |
+| 05 | Lógica e Raciocínio | [Materiais da aula](aulas/index.md) · [Nota](notas/05-logica/README.md) · [Estudo](estudos-guiados/05-logica/README.md) |
+| 06 | LPO e Inferência | [Materiais da aula](aulas/index.md) · [Nota](notas/06-lpo-inferencia/README.md) · [Estudo](estudos-guiados/06-lpo-inferencia/README.md) |
+| 07 | Prolog | [Materiais da aula](aulas/index.md) · [Nota](notas/07-prolog/README.md) · [Estudo](estudos-guiados/07-prolog/README.md) |
 
-[Acessar as atividades](atividades/index.md)
+### Aprendizagem de Máquina - Aulas 08 a 11
+
+| Aula | Conteúdo | Acesso |
+|---|---|---|
+| 08 | Aprendizagem com Exemplos e Árvores de Decisão | [PDF](aulas/index.md) · [Nota](notas/08-aprendizagem-exemplos/README.md) · [Estudo](estudos-guiados/08-aprendizagem-exemplos/README.md) |
+| 09 | KNN e Preparação de Dados | [PDF](aulas/index.md) · [Nota](notas/09-knn/README.md) · [Estudo](estudos-guiados/09-knn/README.md) |
+| 10 | SVM e PCA | [PDF](aulas/index.md) · [Nota](notas/10-svm/README.md) · [Estudo](estudos-guiados/10-svm/README.md) |
+| 11 | Atividade Integradora: DT, KNN e SVM | [PDF](aulas/index.md) · [Nota](notas/11-atividade-comparacao/README.md) · [Estudo](estudos-guiados/11-atividade-comparacao/README.md) |
+
+[Todos os PDFs das aulas](aulas/index.md) · [Exemplos Python no GitHub](https://github.com/tiagofga/EC-IA/tree/feat/aulas-08-11-aprendizado-supervisionado/exemplos) · [Visualizações interativas](visualizacoes/index.md)
 
 ## Notas visuais
 
@@ -83,13 +91,8 @@ O primeiro trabalho prático utiliza diretamente os conteúdos da Aula 04.
 
 A versão **v0.10.0** está em preparação nesta branch; o Trabalho 2 está reservado para a **v0.11.0**.
 
-Esta versão consolida a atualização da Aula 06 - Parte II, a Aula 07 - Prolog, a Lista 05 e seus materiais complementares de estudo, pseudocódigos e visualização interativa.
+A v0.10.0 reúne as Aulas 08 a 11, exemplos Python, notas visuais, estudos guiados, pseudocódigos e visualizações. As Aulas 05 a 07 permanecem disponíveis com os materiais anteriores.
 
 ## Sobre este material
 
 O repositório contém apenas a parte pública da disciplina. Gabaritos, testes e mapas ocultos, soluções de referência ainda não liberadas e materiais internos de avaliação não são publicados.
-
-
-## Bloco de aprendizagem supervisionada - Aulas 08 a 11
-
-Aula 08: Aprendizagem e Árvores de Decisão; Aula 09: KNN e preparação de dados; Aula 10: SVM, kernels e PCA; Aula 11: comparação de classificadores. Consulte [as aulas](aulas/index.md), [os exemplos Python](https://github.com/tiagofga/EC-IA/tree/main/exemplos) e as visualizações. O Trabalho 2 está reservado para a futura versão v0.11.0.
