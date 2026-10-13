@@ -10,19 +10,27 @@ Aula → Nota visual → Estudo guiado → Atividade → Revisão
 
 ## Notas disponíveis
 
-| Aula | Tema | Foco da nota | Acesso |
-|---|---|---|---|
-| 01 | Introdução à Inteligência Artificial | definições, perspectivas, capacidades, simbólico x sub-simbólico, racionalidade | [Abrir nota](01-introducao/README.md) |
-| 02 | Agentes Inteligentes | percepção-ação, racionalidade, PEAS, ambientes e arquiteturas de agentes | [Abrir nota](02-agentes/README.md) |
-| 03 | Representação do Conhecimento e Solução de Problemas | representação, abstração, formulação, estados, nós, árvore e fronteira | [Abrir nota](03-conhecimento/README.md) |
-| 04 | Estruturas e Estratégias de Busca | BFS, DFS, UCS, Gulosa, A*, busca local e ambientes complexos | [Abrir nota](04-busca/README.md) |
-| 05 | Lógica e Raciocínio em IA | TELL/ASK, KB, Wumpus, sintaxe, semântica, modelos, consequência lógica e resolução | [Abrir nota](05-logica/README.md) |
-| 06 | Lógica de Primeira Ordem e Inferência | termos, predicados, quantificadores, substituição, unificação e encadeamento | [Abrir nota](06-lpo-inferencia/README.md) |
-| 07 | Prolog | fatos, regras, consultas, unificação, retrocesso, recursão e relação com DFS | [Abrir nota](07-prolog/README.md) |
-| 08 | Aprendizagem com Exemplos | classificação, regressão, generalização, entropia e Gini | [Abrir nota](08-aprendizagem-exemplos/README.md) |
-| 09 | KNN | preparação de dados, distâncias, padronização e validação cruzada | [Abrir nota](09-knn/README.md) |
-| 10 | SVM e PCA | margens, kernels, RBF, regularização e componentes principais | [Abrir nota](10-svm/README.md) |
-| 11 | Comparação entre DT, KNN e SVM | métricas, matriz de confusão e comparação controlada | [Abrir nota](11-atividade-comparacao/README.md) |
+Selecione a nota correspondente à aula. Os links dão acesso direto aos mapas conceituais, às sínteses e aos exercícios de revisão.
+
+### Fundamentos de Inteligência Artificial
+
+- **Aula 01 - Introdução à IA:** [Abrir nota](./01-introducao/README.md) — Conceitos, racionalidade e abordagens da IA.
+- **Aula 02 - Agentes Inteligentes:** [Abrir nota](./02-agentes/README.md) — Percepções, PEAS e arquiteturas de agentes.
+- **Aula 03 - Conhecimento e Solução de Problemas:** [Abrir nota](./03-conhecimento/README.md) — Estados, representação e formulação de problemas.
+
+### Busca, lógica e raciocínio
+
+- **Aula 04 - Estratégias de Busca:** [Abrir nota](./04-busca/README.md) — BFS, DFS, UCS, Gulosa, A* e busca local.
+- **Aula 05 - Lógica e Raciocínio:** [Abrir nota](./05-logica/README.md) — Wumpus, modelos, consequência lógica e resolução.
+- **Aula 06 - LPO e Inferência:** [Abrir nota](./06-lpo-inferencia/README.md) — Quantificadores, unificação e encadeamento.
+- **Aula 07 - Prolog:** [Abrir nota](./07-prolog/README.md) — Consultas, unificação, retrocesso e recursão.
+
+### Aprendizagem e avaliação de modelos
+
+- **Aula 08 - Aprendizagem com Exemplos:** [Abrir nota](./08-aprendizagem-exemplos/README.md) — Classificação, regressão, entropia e Gini.
+- **Aula 09 - KNN:** [Abrir nota](./09-knn/README.md) — Distância, preparação de dados e validação cruzada.
+- **Aula 10 - SVM e PCA:** [Abrir nota](./10-svm/README.md) — Margens, kernels, RBF e componentes principais.
+- **Aula 11 - Comparação DT, KNN e SVM:** [Abrir nota](./11-atividade-comparacao/README.md) — Métricas, matriz de confusão e comparação experimental.
 
 ## Como usar
 
