@@ -26,11 +26,11 @@ O material público está organizado da Aula 00 à Aula 11. Os links abaixo cond
 ### Fundamentos de Inteligência Artificial - Aulas 00 a 03
 
 | Aula | Conteúdo | Materiais |
-|---|---|---|
-| 00 | Visão Geral da Disciplina | [PDF da aula](aulas/index.md) |
-| 01 | Introdução à Inteligência Artificial | [PDF](aulas/index.md) · [Nota visual](notas/01-introducao/README.md) · [Estudo guiado](estudos-guiados/01-introducao/README.md) |
-| 02 | Agentes Inteligentes | [PDF](aulas/index.md) · [Nota visual](notas/02-agentes/README.md) · [Estudo guiado](estudos-guiados/02-agentes/README.md) |
-| 03 | Representação do Conhecimento e Solução de Problemas | [PDF](aulas/index.md) · [Nota visual](notas/03-conhecimento/README.md) · [Estudo guiado](estudos-guiados/03-conhecimento/README.md) |
+|:---:|---|---|
+| 00 | Visão Geral da Disciplina | [PDF](downloads/aulas/EC_IA_000_Visao_Geral.pdf) |
+| 01 | Introdução à Inteligência Artificial | [PDF](downloads/aulas/EC_IA_001_Introducao.pdf) · [Nota visual](notas/01-introducao/README.md) · [Estudo guiado](estudos-guiados/01-introducao/README.md) |
+| 02 | Agentes Inteligentes | [PDF](downloads/aulas/EC_IA_002_Agentes.pdf) · [Nota visual](notas/02-agentes/README.md) · [Estudo guiado](estudos-guiados/02-agentes/README.md) |
+| 03 | Representação do Conhecimento e Solução de Problemas | [PDF](downloads/aulas/EC_IA_003_Conhecimento.pdf) · [Nota visual](notas/03-conhecimento/README.md) · [Estudo guiado](estudos-guiados/03-conhecimento/README.md) |
 
 As listas de exercícios correspondentes podem ser acessadas pela página de [Atividades](atividades/index.md).
 
@@ -38,19 +38,19 @@ As listas de exercícios correspondentes podem ser acessadas pela página de [At
 
 | Aula | Conteúdo | Acesso |
 |---|---|---|
-| 04 | Estratégias de Busca | [Materiais da aula](aulas/index.md) · [Nota](notas/04-busca/README.md) · [Estudo](estudos-guiados/04-busca/README.md) |
-| 05 | Lógica e Raciocínio | [Materiais da aula](aulas/index.md) · [Nota](notas/05-logica/README.md) · [Estudo](estudos-guiados/05-logica/README.md) |
-| 06 | LPO e Inferência | [Materiais da aula](aulas/index.md) · [Nota](notas/06-lpo-inferencia/README.md) · [Estudo](estudos-guiados/06-lpo-inferencia/README.md) |
-| 07 | Prolog | [Materiais da aula](aulas/index.md) · [Nota](notas/07-prolog/README.md) · [Estudo](estudos-guiados/07-prolog/README.md) |
+| 04 | Estratégias de Busca | [PDF](downloads/aulas/EC_IA_004_Busca_Parte1.pdf) · [Nota](notas/04-busca/README.md) · [Estudo](estudos-guiados/04-busca/README.md) |
+| 05 | Lógica e Raciocínio | [PDF](downloads/aulas/EC_IA_005_Logica_Parte1.pdf) · [Nota](notas/05-logica/README.md) · [Estudo](estudos-guiados/05-logica/README.md) |
+| 06 | LPO e Inferência | [PDF](downloads/aulas/EC_IA_006_LPO_Parte_01.pdf) · [Nota](notas/06-lpo-inferencia/README.md) · [Estudo](estudos-guiados/06-lpo-inferencia/README.md) |
+| 07 | Prolog | [PDF](downloads/aulas/EC_IA_007_Prolog.pdf) · [Nota](notas/07-prolog/README.md) · [Estudo](estudos-guiados/07-prolog/README.md) |
 
 ### Aprendizagem de Máquina - Aulas 08 a 11
 
 | Aula | Conteúdo | Acesso |
 |---|---|---|
-| 08 | Aprendizagem com Exemplos e Árvores de Decisão | [PDF](aulas/index.md) · [Nota](notas/08-aprendizagem-exemplos/README.md) · [Estudo](estudos-guiados/08-aprendizagem-exemplos/README.md) |
-| 09 | KNN e Preparação de Dados | [PDF](aulas/index.md) · [Nota](notas/09-knn/README.md) · [Estudo](estudos-guiados/09-knn/README.md) |
-| 10 | SVM e PCA | [PDF](aulas/index.md) · [Nota](notas/10-svm/README.md) · [Estudo](estudos-guiados/10-svm/README.md) |
-| 11 | Atividade Integradora: DT, KNN e SVM | [PDF](aulas/index.md) · [Nota](notas/11-atividade-comparacao/README.md) · [Estudo](estudos-guiados/11-atividade-comparacao/README.md) |
+| 08 | Aprendizagem com Exemplos e Árvores de Decisão | [PDF](downloads/aulas/EC_IA_008_Aprendizagem_Exemplos.pdf) · [Nota](notas/08-aprendizagem-exemplos/README.md) · [Estudo](estudos-guiados/08-aprendizagem-exemplos/README.md) |
+| 09 | KNN e Preparação de Dados | [PDF](downloads/aulas/EC_IA_009_KNN.pdf) · [Nota](notas/09-knn/README.md) · [Estudo](estudos-guiados/09-knn/README.md) |
+| 10 | SVM e PCA | [PDF](downloads/aulas/EC_IA_010_SVM.pdf) · [Nota](notas/10-svm/README.md) · [Estudo](estudos-guiados/10-svm/README.md) |
+| 11 | Atividade Integradora: DT, KNN e SVM | [PDF](downloads/aulas/EC_IA_011_Atividade_Comparacao.pdf) · [Nota](notas/11-atividade-comparacao/README.md) · [Estudo](estudos-guiados/11-atividade-comparacao/README.md) |
 
 [Todos os PDFs das aulas](aulas/index.md) · [Exemplos Python no GitHub](https://github.com/tiagofga/EC-IA/tree/feat/aulas-08-11-aprendizado-supervisionado/exemplos) · [Visualizações interativas](visualizacoes/index.md)
 
