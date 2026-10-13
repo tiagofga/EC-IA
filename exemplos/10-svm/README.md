@@ -21,7 +21,7 @@ python -c "import numpy, pandas, matplotlib, sklearn; print('Pacotes OK')"
 - `svm_iris.py`
 - `svm_pca_iris.py`
 
-Os exemplos de Titanic exigem `train.csv` da competição [Titanic no Kaggle](https://www.kaggle.com/competitions/titanic/data). O CSV não está incluído neste repositório. Os demais scripts podem utilizar conjuntos de dados incluídos no scikit-learn, conforme cada implementação.
+Estes scripts utilizam conjuntos de dados disponibilizados pelo scikit-learn ou preparados no próprio código. Consulte o script para conferir as entradas e saídas.
 
 Execute a partir da pasta de trabalho que contenha os dados necessários, por exemplo:
 
