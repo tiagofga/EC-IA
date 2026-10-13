@@ -19,6 +19,10 @@ Aula → Nota visual → Estudo guiado → Atividade → Revisão
 | 05 | Lógica e Raciocínio em IA | TELL/ASK, KB, Wumpus, sintaxe, semântica, modelos, consequência lógica e resolução | [Abrir nota](05-logica/README.md) |
 | 06 | Lógica de Primeira Ordem e Inferência | termos, predicados, quantificadores, substituição, unificação e encadeamento | [Abrir nota](06-lpo-inferencia/README.md) |
 | 07 | Prolog | fatos, regras, consultas, unificação, retrocesso, recursão e relação com DFS | [Abrir nota](07-prolog/README.md) |
+| 08 | Aprendizagem com Exemplos | classificação, regressão, generalização, entropia e Gini | [Abrir nota](08-aprendizagem-exemplos/README.md) |
+| 09 | KNN | preparação de dados, distâncias, padronização e validação cruzada | [Abrir nota](09-knn/README.md) |
+| 10 | SVM e PCA | margens, kernels, RBF, regularização e componentes principais | [Abrir nota](10-svm/README.md) |
+| 11 | Comparação entre DT, KNN e SVM | métricas, matriz de confusão e comparação controlada | [Abrir nota](11-atividade-comparacao/README.md) |
 
 ## Como usar
 
@@ -38,11 +42,3 @@ As notas não substituem os slides nem repetem integralmente a aula. Elas têm t
 - **revisão** - permitir retomada rápida antes de atividades, provas e trabalhos.
 
 Para aprofundar ou verificar sua compreensão, use também os [Estudos guiados](../estudos-guiados/index.md).
-
-
-## Aulas 08 a 11
-
-- [Aula 08 - Aprendizagem com Exemplos](08-aprendizagem-exemplos/README.md)
-- [Aula 09 - K-Nearest Neighbors](09-knn/README.md)
-- [Aula 10 - Support Vector Machines e PCA](10-svm/README.md)
-- [Aula 11 - Atividade Integradora: DT, KNN e SVM](11-atividade-comparacao/README.md)
