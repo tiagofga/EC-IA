@@ -4,7 +4,6 @@ Esta seção reúne os trabalhos práticos da disciplina. Os trabalhos são aval
 
 ## Trabalho 01 - Busca
 
-**Versão pública:** `v0.4.0`  
 **Valor:** 20,0 pontos  
 **Modalidade:** individual ou em dupla  
 **Linguagem:** Python
@@ -40,7 +39,7 @@ O segundo problema utiliza as 8 Rainhas e exige:
 
 ### Materiais públicos
 
-A versão `v0.4.0` consolida os materiais públicos do Trabalho 01. Estão disponíveis:
+Estão disponíveis:
 
 - [Abrir a pasta do Trabalho 01 no GitHub](https://github.com/tiagofga/EC-IA/tree/main/trabalhos/01-busca)
 - <span data-download="../downloads/trabalhos/EC_IA_Trabalho_01_2026.pdf" data-label="Baixar enunciado em PDF">Verificando PDF...</span>

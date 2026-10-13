@@ -17,8 +17,6 @@ O planejamento público da disciplina para **2026/2** está disponível nesta se
 - [Baixar versão pública em Markdown](../downloads/planos/plano-didatico-2026-2.md)
 - [Consultar arquivo-fonte público no GitHub](https://github.com/tiagofga/EC-IA/blob/main/planos/2026-2/plano-didatico.md)
 
-O PDF é tratado como material estático do repositório. Quando o arquivo `planos/2026-2/Plano_Didatico_IA_2026_2.pdf` estiver publicado, o site passa a disponibilizá-lo automaticamente. Isso evita dependências binárias durante o deploy na Vercel e mantém o mesmo comportamento no GitHub Pages.
-
 ## Observação
 
 O plano didático apresenta a organização prevista para o semestre. Ajustes de datas ou atividades realizados ao longo da oferta devem ser acompanhados pelos canais oficiais da disciplina.

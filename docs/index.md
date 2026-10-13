@@ -21,26 +21,34 @@ Se você está acompanhando a disciplina durante o semestre, use esta sequência
 
 ## Conteúdo publicado
 
-Os PDFs públicos das aulas estão disponíveis da Aula 00 à Aula 07. As atividades correspondentes às Aulas 01 a 05 também estão publicadas. As Aulas 01 a 07 possuem notas visuais e estudos guiados. A Aula 07 introduz Prolog como continuidade prática do bloco de lógica e acrescenta pseudocódigos e uma visualização de resolução de metas. Há ainda três simulados públicos para revisão integrada das Aulas 01 a 04, sem gabaritos ou soluções de referência.
+O material público está organizado da Aula 00 à Aula 11. Os links abaixo conduzem diretamente às aulas e aos recursos de estudo, incluindo os fundamentos apresentados nas Aulas 01 a 03.
 
-| Aula | Tema | Recursos principais |
-|---|---|---|
-| 00 | Visão Geral da Disciplina | aula e plano didático |
-| 01 | Introdução à Inteligência Artificial | aula, nota visual, atividade e estudo guiado |
-| 02 | Agentes Inteligentes | aula, nota visual, atividade e estudo guiado |
-| 03 | Representação do Conhecimento e Solução de Problemas | aula, nota visual, atividade, estudo guiado e fundamentos de busca |
-| 04 | Estruturas e Estratégias de Busca | duas partes da aula, nota visual, atividade, estudo guiado, pseudocódigos, visualizações e Trabalho 01 |
-| 05 | Lógica e Raciocínio em IA | duas partes da aula, nota visual, estudo guiado, pseudocódigos e visualizações de Wumpus, modelos e resolução |
-| 06 | Lógica de Primeira Ordem e Inferência | duas partes da aula, nota visual, estudo guiado, pseudocódigos e visualizações de unificação e inferência |
-| 07 | Prolog - Programação Lógica, Unificação e Busca | aula, nota visual, estudo guiado, Lista 05, pseudocódigos e visualização de resolução de metas |
+### Fundamentos de Inteligência Artificial - Aulas 00 a 03
 
-## Bloco atual - Lógica, Inferência e Prolog
+- **Aula 00 - Visão Geral da Disciplina:** [PDF](downloads/aulas/EC_IA_000_Visao_Geral.pdf)
+- **Aula 01 - Introdução à Inteligência Artificial:** [PDF](downloads/aulas/EC_IA_001_Introducao.pdf) · [Nota visual](notas/01-introducao/README.md) · [Estudo guiado](estudos-guiados/01-introducao/README.md)
+- **Aula 02 - Agentes Inteligentes:** [PDF](downloads/aulas/EC_IA_002_Agentes.pdf) · [Nota visual](notas/02-agentes/README.md) · [Estudo guiado](estudos-guiados/02-agentes/README.md)
+- **Aula 03 - Representação do Conhecimento e Solução de Problemas:** [PDF](downloads/aulas/EC_IA_003_Conhecimento.pdf) · [Nota visual](notas/03-conhecimento/README.md) · [Estudo guiado](estudos-guiados/03-conhecimento/README.md)
 
-As Aulas 05, 06 e 07 formam uma sequência integrada: representação do conhecimento e Lógica Proposicional, Lógica de Primeira Ordem e inferência, e Prolog como linguagem de programação lógica.
+As atividades correspondentes estão na página de [Atividades](atividades/index.md).
 
-[Acessar as aulas](aulas/index.md)
+### Busca, conhecimento e programação lógica - Aulas 04 a 07
 
-[Acessar as atividades](atividades/index.md)
+- **Aula 04 - Estratégias de Busca:** [PDF](downloads/aulas/EC_IA_004_Busca_Parte1.pdf) · [Nota visual](notas/04-busca/README.md) · [Estudo guiado](estudos-guiados/04-busca/README.md)
+- **Aula 05 - Lógica e Raciocínio:** [PDF](downloads/aulas/EC_IA_005_Logica_Parte1.pdf) · [Nota visual](notas/05-logica/README.md) · [Estudo guiado](estudos-guiados/05-logica/README.md)
+- **Aula 06 - LPO e Inferência:** [PDF](downloads/aulas/EC_IA_006_LPO_Parte_01.pdf) · [Nota visual](notas/06-lpo-inferencia/README.md) · [Estudo guiado](estudos-guiados/06-lpo-inferencia/README.md)
+- **Aula 07 - Prolog:** [PDF](downloads/aulas/EC_IA_007_Prolog.pdf) · [Nota visual](notas/07-prolog/README.md) · [Estudo guiado](estudos-guiados/07-prolog/README.md)
+
+As Aulas 04, 05 e 06 possuem dois PDFs. Consulte o [catálogo completo](aulas/index.md) para acessar ambas as partes.
+
+### Aprendizagem de Máquina - Aulas 08 a 11
+
+- **Aula 08 - Aprendizagem com Exemplos e Árvores de Decisão:** [PDF](downloads/aulas/EC_IA_008_Aprendizagem_Exemplos.pdf) · [Nota visual](notas/08-aprendizagem-exemplos/README.md) · [Estudo guiado](estudos-guiados/08-aprendizagem-exemplos/README.md)
+- **Aula 09 - KNN e Preparação de Dados:** [PDF](downloads/aulas/EC_IA_009_KNN.pdf) · [Nota visual](notas/09-knn/README.md) · [Estudo guiado](estudos-guiados/09-knn/README.md)
+- **Aula 10 - SVM e PCA:** [PDF](downloads/aulas/EC_IA_010_SVM.pdf) · [Nota visual](notas/10-svm/README.md) · [Estudo guiado](estudos-guiados/10-svm/README.md)
+- **Aula 11 - Atividade Integradora: DT, KNN e SVM:** [PDF](downloads/aulas/EC_IA_011_Atividade_Comparacao.pdf) · [Nota visual](notas/11-atividade-comparacao/README.md) · [Estudo guiado](estudos-guiados/11-atividade-comparacao/README.md)
+
+[Todos os PDFs](aulas/index.md) · [Exemplos Python](https://github.com/tiagofga/EC-IA/tree/main/exemplos) · [Visualizações interativas](visualizacoes/index.md)
 
 ## Notas visuais
 
@@ -75,12 +83,7 @@ O primeiro trabalho prático utiliza diretamente os conteúdos da Aula 04.
 
 [Acessar o Trabalho 01](trabalhos/index.md)
 
-## Versão pública
-
-A versão pública de referência é **v0.9.0**.
-
-Esta versão consolida a atualização da Aula 06 - Parte II, a Aula 07 - Prolog, a Lista 05 e seus materiais complementares de estudo, pseudocódigos e visualização interativa.
 
 ## Sobre este material
 
-O repositório contém apenas a parte pública da disciplina. Gabaritos, testes e mapas ocultos, soluções de referência ainda não liberadas e materiais internos de avaliação não são publicados.
+Os materiais disponibilizados nesta página destinam-se ao estudo e às atividades da disciplina.

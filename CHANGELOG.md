@@ -4,9 +4,22 @@ Todas as mudanças relevantes deste projeto serão registradas neste arquivo.
 
 O histórico de commits segue Conventional Commits.
 
-## [Unreleased]
+## [Unreleased] - preparação da v0.10.0
 
-Nenhuma alteração registrada após a preparação da versão 0.9.0.
+### Added
+
+- Aulas 08 a 11: aprendizagem com exemplos e árvores, KNN, SVM/PCA e comparação DT/KNN/SVM.
+- Notas visuais, estudos guiados e visualizações interativas das Aulas 08 a 11.
+- Pseudocódigos conceituais das Aulas 08 a 10.
+- Seis exemplos públicos em Python e dependências documentadas (NumPy, pandas, Matplotlib e scikit-learn).
+
+### Changed
+
+- Navegação, catálogo e sincronização do site para as Aulas 08 a 11.
+
+### Planned
+
+- Trabalho 2 na versão v0.11.0; não incluído nesta publicação.
 
 ## [0.9.0] - 2026-09-30
 

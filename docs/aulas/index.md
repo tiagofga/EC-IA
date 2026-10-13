@@ -1,59 +1,51 @@
 # Aulas
 
-Os materiais públicos estão organizados por aula. A recomendação é revisar cada tema junto com o estudo guiado e a atividade correspondente.
+Os materiais públicos estão organizados em sequência didática. Selecione o PDF desejado e utilize as notas visuais, estudos guiados e visualizações para aprofundar os conteúdos.
 
 ## Materiais e downloads
 
-| Aula | Tema | Material público | Download |
-|---|---|---|---|
-| 00 | Visão Geral da Disciplina | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/aulas/00-visao-geral) | <span data-download="../downloads/aulas/EC_IA_000_Visao_Geral.pdf">Verificando PDF...</span> |
-| 01 | Introdução à Inteligência Artificial | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/aulas/01-introducao) | <span data-download="../downloads/aulas/EC_IA_001_Introducao.pdf">Verificando PDF...</span> |
-| 02 | Agentes Inteligentes | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/aulas/02-agentes) | <span data-download="../downloads/aulas/EC_IA_002_Agentes.pdf">Verificando PDF...</span> |
-| 03 | Representação do Conhecimento e Solução de Problemas | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/aulas/03-conhecimento) | <span data-download="../downloads/aulas/EC_IA_003_Conhecimento.pdf">Verificando PDF...</span> |
-| 04 | Estruturas e Estratégias de Busca - Parte I | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/aulas/04-busca) | <span data-download="../downloads/aulas/EC_IA_004_Busca_Parte1.pdf">Verificando PDF...</span> |
-| 04 | Estruturas e Estratégias de Busca - Parte II | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/aulas/04-busca) | <span data-download="../downloads/aulas/EC_IA_004_Busca_Parte2.pdf">Verificando PDF...</span> |
-| 05 | Lógica e Raciocínio em IA - Parte I: Representação, Conhecimento e Agentes Baseados em Conhecimento | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/aulas/05-logica) | <span data-download="../downloads/aulas/EC_IA_005_Logica_Parte1.pdf">Verificando PDF...</span> |
-| 05 | Lógica e Raciocínio em IA - Parte II: Lógica Proposicional | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/aulas/05-logica) | <span data-download="../downloads/aulas/EC_IA_005_Logica_Parte2.pdf">Verificando PDF...</span> |
-| 06 | Lógica de Primeira Ordem - Parte I: Representação, Sintaxe e Semântica | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/aulas/06-lpo-inferencia) | <span data-download="../downloads/aulas/EC_IA_006_LPO_Parte_01.pdf">Verificando PDF...</span> |
-| 06 | Lógica de Primeira Ordem - Parte II: Inferência em LPO | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/aulas/06-lpo-inferencia) | <span data-download="../downloads/aulas/EC_IA_006_LPO_Parte_02.pdf">Verificando PDF...</span> |
-| 07 | Prolog - Programação Lógica, Unificação e Busca | [Abrir pasta](https://github.com/tiagofga/EC-IA/tree/main/aulas/07-prolog) | <span data-download="../downloads/aulas/EC_IA_007_Prolog.pdf">Verificando PDF...</span> |
+| Aula | Tema | PDF |
+|:---:|---|---|
+| 00 | Visão Geral da Disciplina | <span data-download="../downloads/aulas/EC_IA_000_Visao_Geral.pdf">Verificando PDF...</span> |
+| 01 | Introdução à Inteligência Artificial | <span data-download="../downloads/aulas/EC_IA_001_Introducao.pdf">Verificando PDF...</span> |
+| 02 | Agentes Inteligentes | <span data-download="../downloads/aulas/EC_IA_002_Agentes.pdf">Verificando PDF...</span> |
+| 03 | Representação do Conhecimento e Solução de Problemas | <span data-download="../downloads/aulas/EC_IA_003_Conhecimento.pdf">Verificando PDF...</span> |
+| 04 | Busca - Parte I: Estratégias não informadas e informadas | <span data-download="../downloads/aulas/EC_IA_004_Busca_Parte1.pdf">Verificando PDF...</span> |
+| 04 | Busca - Parte II: Busca local e ambientes complexos | <span data-download="../downloads/aulas/EC_IA_004_Busca_Parte2.pdf">Verificando PDF...</span> |
+| 05 | Lógica - Parte I: Conhecimento e agentes | <span data-download="../downloads/aulas/EC_IA_005_Logica_Parte1.pdf">Verificando PDF...</span> |
+| 05 | Lógica - Parte II: Lógica Proposicional | <span data-download="../downloads/aulas/EC_IA_005_Logica_Parte2.pdf">Verificando PDF...</span> |
+| 06 | LPO - Parte I: Sintaxe e semântica | <span data-download="../downloads/aulas/EC_IA_006_LPO_Parte_01.pdf">Verificando PDF...</span> |
+| 06 | LPO - Parte II: Inferência | <span data-download="../downloads/aulas/EC_IA_006_LPO_Parte_02.pdf">Verificando PDF...</span> |
+| 07 | Prolog: Programação lógica, unificação e busca | <span data-download="../downloads/aulas/EC_IA_007_Prolog.pdf">Verificando PDF...</span> |
+| 08 | Aprendizagem com Exemplos e Árvores de Decisão | <span data-download="../downloads/aulas/EC_IA_008_Aprendizagem_Exemplos.pdf">Verificando PDF...</span> |
+| 09 | K-Nearest Neighbors e Preparação de Dados | <span data-download="../downloads/aulas/EC_IA_009_KNN.pdf">Verificando PDF...</span> |
+| 10 | Support Vector Machines e PCA | <span data-download="../downloads/aulas/EC_IA_010_SVM.pdf">Verificando PDF...</span> |
+| 11 | Atividade Integradora: DT, KNN e SVM | <span data-download="../downloads/aulas/EC_IA_011_Atividade_Comparacao.pdf">Verificando PDF...</span> |
 
-## Organização da Aula 04
+As Aulas 04, 05 e 06 possuem duas partes, cada uma com seu próprio PDF.
 
-A Parte I cobre busca não informada e informada, incluindo BFS, Custo Uniforme, DFS, aprofundamento iterativo, heurísticas, Busca Gulosa e A*.
+## Organização dos conteúdos
 
-A Parte II amplia a discussão para busca local e ambientes complexos, incluindo Hill Climbing, Simulated Annealing, Busca em Feixe Local, Algoritmos Genéticos, busca não determinística, estados de crença e busca online.
-
-## Organização da Aula 05
-
-A Parte I introduz agentes baseados em conhecimento, base de conhecimento, TELL/ASK, representação, sintaxe, semântica, modelos, mundos possíveis e consequência lógica, usando o Mundo do Wumpus como fio condutor.
-
-A Parte II formaliza a Lógica Proposicional: conectivos, tabelas-verdade, representação proposicional do Wumpus, verificação de modelos, equivalência, validade, satisfazibilidade, Forma Normal Conjuntiva e resolução.
-
-A numeração da Aula 05 segue a organização didática da disciplina. Nas listas e referências ao Russell & Norvig, esses conteúdos se relacionam principalmente ao Capítulo 7 do livro.
-
-## Organização da Aula 06
-
-A Parte I amplia a representação proposicional para a Lógica de Primeira Ordem, cobrindo objetos, constantes, variáveis, predicados, funções, termos, sintaxe, semântica, interpretações, quantificadores, escopo, igualdade e tradução da linguagem natural para LPO.
-
-A Parte II trabalha os mecanismos de inferência: instanciação universal e existencial, substituição, Modus Ponens Generalizado, unificação, UMG, padronização à parte, teste de ocorrência, cláusulas definidas, encadeamento direto e reverso, retrocesso e uma introdução à resolução em LPO e à Skolemização.
-
-O caso West é usado como exemplo condutor para comparar encadeamento direto e reverso. A versão atualizada da Parte II detalha a exploração passo a passo da base de conhecimento e encerra fazendo a ponte para Prolog.
-
-## Organização da Aula 07
-
-A Aula 07 transforma os mecanismos estudados em LPO em um modelo de programação executável. O conteúdo trabalha fatos, regras, consultas, variáveis, unificação, resolução de metas, encadeamento reverso, retrocesso e recursão.
-
-Um exemplo de alcançabilidade em grafos conecta a execução do Prolog com busca em profundidade. A aula também inclui material complementar sobre aritmética, estruturas e listas.
+- **Fundamentos de IA (00-03):** introdução, agentes inteligentes e formulação de problemas.
+- **Busca e otimização (04):** estratégias não informadas, informadas e busca local.
+- **Conhecimento e raciocínio (05-07):** Lógica Proposicional, LPO, inferência e Prolog.
+- **Aprendizagem de máquina (08-10):** classificação, regressão, Árvores de Decisão, KNN, SVM e PCA.
+- **Consolidação (11):** comparação experimental entre DT, KNN e SVM.
 
 ## Sequência recomendada
 
-Para cada aula:
+1. Consulte o PDF da aula e seus exemplos.
+2. Revise os principais conceitos nas [notas visuais](../notas/index.md).
+3. Faça o [estudo guiado](../estudos-guiados/index.md).
+4. Explore os [pseudocódigos](../pseudocodigos/index.md) e as [visualizações](../visualizacoes/index.md) disponíveis.
+5. Retome os exercícios e atividades para consolidar a aprendizagem.
 
-1. revise o conteúdo apresentado em sala;
-2. consulte as notas complementares quando necessário;
-3. faça o estudo guiado;
-4. resolva a atividade correspondente;
-5. retorne ao material para corrigir dúvidas conceituais.
+## Exemplos Python
 
-Na Aula 04, use também as visualizações interativas para comparar os algoritmos passo a passo.
+Os exemplos das Aulas 08-11 utilizam `numpy`, `pandas`, `matplotlib` e `scikit-learn`. Para instalar os pacotes necessários:
+
+```bash
+python3 -m pip install numpy pandas matplotlib scikit-learn
+```
+
+Consulte também os [exemplos e instruções no repositório](https://github.com/tiagofga/EC-IA/tree/main/exemplos). O uso de ambiente virtual é opcional e fica a critério do estudante.

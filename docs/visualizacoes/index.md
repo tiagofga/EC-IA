@@ -95,3 +95,11 @@ Em Modelos, procure primeiro os mundos que satisfazem a KB e só então verifiqu
 A visualização pública da Aula 04 continua baseada em **traces pré-calculados** e não disponibiliza implementações reutilizáveis dos algoritmos exigidos nas avaliações.
 
 A visualização do Wumpus é uma demonstração didática independente das implementações cobradas no Trabalho 01 e serve para explorar os conceitos de representação e inferência da Aula 05.
+
+
+## Aulas 08 a 11 - Aprendizagem
+
+- [Aula 08 - Aprendizagem com Exemplos](08-aprendizagem-exemplos/)
+- [Aula 09 - K-Nearest Neighbors](09-knn/)
+- [Aula 10 - Support Vector Machines e PCA](10-svm/)
+- [Aula 11 - Atividade Integradora: DT, KNN e SVM](11-atividade-comparacao/)
