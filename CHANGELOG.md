@@ -4,7 +4,18 @@ Todas as mudanças relevantes deste projeto serão registradas neste arquivo.
 
 O histórico de commits segue Conventional Commits.
 
-## [Unreleased] - preparação da v0.10.0
+## [Unreleased] - preparação da v0.11.0
+
+### Added
+
+- Enunciado e guia público do Trabalho 02 - Aprendizado de Máquina e Computação Natural.
+- Catálogo de exemplos Python integrado ao menu lateral e à página inicial.
+
+### Changed
+
+- Página de Trabalhos e script de build preparados para disponibilizar o PDF do Trabalho 02.
+
+## [0.10.0] - 2026-10-13
 
 ### Added
 
