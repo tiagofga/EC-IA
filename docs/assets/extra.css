@@ -136,3 +136,14 @@
     max-width: 1380px;
   }
 }
+
+/* Cartões de acesso aos laboratórios: navegação consistente em ambos os temas. */
+.rst-content .ecia-lab-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr)); gap:1rem; margin:1rem 0 2rem; }
+.rst-content .ecia-lab-card { border:1px solid #cad6e0; border-radius:12px; padding:1.1rem; background:#fff; display:flex; flex-direction:column; align-items:flex-start; }
+.rst-content .ecia-lab-card h3 { margin:0 0 .45rem; font-size:1.08rem; }
+.rst-content .ecia-lab-card p { margin:0 0 1rem; flex:1; line-height:1.5; }
+.rst-content a.ecia-lab-link, html[data-theme="dark"] .rst-content a.ecia-lab-link,
+.rst-content a.ecia-lab-link:visited, html[data-theme="dark"] .rst-content a.ecia-lab-link:visited { display:inline-flex; align-items:center; justify-content:center; box-sizing:border-box; min-height:44px; width:100%; padding:.65rem .9rem; background:#176b42; color:#fff !important; font-weight:700; border-radius:7px; text-decoration:none; text-align:center; }
+.rst-content a.ecia-lab-link:hover, html[data-theme="dark"] .rst-content a.ecia-lab-link:hover { background:#115332; color:#fff !important; }
+.rst-content a.ecia-lab-link:focus-visible { outline:3px solid #efb54e; outline-offset:3px; }
+html[data-theme="dark"] .rst-content .ecia-lab-card { background:#1b2530; border-color:#3e5161; }
