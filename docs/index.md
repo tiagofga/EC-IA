@@ -21,7 +21,7 @@ Se você está acompanhando a disciplina durante o semestre, use esta sequência
 
 ## Conteúdo publicado
 
-Os PDFs públicos das aulas estão disponíveis da Aula 00 à Aula 07. As atividades correspondentes às Aulas 01 a 05 também estão publicadas. As Aulas 01 a 07 possuem notas visuais e estudos guiados. A Aula 07 introduz Prolog como continuidade prática do bloco de lógica e acrescenta pseudocódigos e uma visualização de resolução de metas. Há ainda três simulados públicos para revisão integrada das Aulas 01 a 04, sem gabaritos ou soluções de referência.
+Os PDFs públicos das aulas estão disponíveis da Aula 00 à Aula 11, incluindo aprendizagem com exemplos, KNN, SVM com PCA e uma atividade de comparação entre classificadores. As Aulas 08 a 11 também possuem notas visuais, estudos guiados e visualizações; os exemplos Python acompanham o bloco de aprendizagem supervisionada. As atividades das Aulas 01 a 05 e três simulados públicos de revisão também estão disponíveis.
 
 | Aula | Tema | Recursos principais |
 |---|---|---|
@@ -33,10 +33,14 @@ Os PDFs públicos das aulas estão disponíveis da Aula 00 à Aula 07. As ativid
 | 05 | Lógica e Raciocínio em IA | duas partes da aula, nota visual, estudo guiado, pseudocódigos e visualizações de Wumpus, modelos e resolução |
 | 06 | Lógica de Primeira Ordem e Inferência | duas partes da aula, nota visual, estudo guiado, pseudocódigos e visualizações de unificação e inferência |
 | 07 | Prolog - Programação Lógica, Unificação e Busca | aula, nota visual, estudo guiado, Lista 05, pseudocódigos e visualização de resolução de metas |
+| 08 | Aprendizagem com Exemplos, Classificação, Regressão e Árvores de Decisão | aula, nota visual, estudo guiado, pseudocódigo e exemplos Python |
+| 09 | K-Nearest Neighbors e Preparação de Dados | aula, nota visual, estudo guiado, pseudocódigos e exemplos Python |
+| 10 | SVM, Kernels e PCA | aula, nota visual, estudo guiado, pseudocódigos e exemplos Python |
+| 11 | Atividade Integradora - Comparação entre DT, KNN e SVM | aula, nota visual, estudo guiado e exemplo Python |
 
-## Bloco atual - Lógica, Inferência e Prolog
+## Sequência didática - Lógica e Aprendizagem
 
-As Aulas 05, 06 e 07 formam uma sequência integrada: representação do conhecimento e Lógica Proposicional, Lógica de Primeira Ordem e inferência, e Prolog como linguagem de programação lógica.
+As Aulas 05-07 integram representação, lógica, inferência e programação em Prolog. As Aulas 08-11 dão continuidade com aprendizagem a partir de exemplos, preparação de dados, DT, KNN, SVM, PCA e avaliação comparativa de classificadores.
 
 [Acessar as aulas](aulas/index.md)
 
@@ -77,7 +81,7 @@ O primeiro trabalho prático utiliza diretamente os conteúdos da Aula 04.
 
 ## Versão pública
 
-A versão pública de referência é **v0.9.0**.
+A versão **v0.10.0** está em preparação nesta branch; o Trabalho 2 está reservado para a **v0.11.0**.
 
 Esta versão consolida a atualização da Aula 06 - Parte II, a Aula 07 - Prolog, a Lista 05 e seus materiais complementares de estudo, pseudocódigos e visualização interativa.
 
