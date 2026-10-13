@@ -54,3 +54,21 @@ O desenvolvimento deve permanecer em repositório Git **privado até o encerrame
 - Entrega final: tag `entrega-final`.
 
 A versão marcada pela tag correspondente será utilizada na avaliação. Consulte sempre o enunciado oficial para regras completas.
+
+## Trabalho 02 - Aprendizado de Máquina e Computação Natural
+
+**Entrega:** 03/12/2026 · **Valor:** 20,0 pontos.
+
+O trabalho compreende três partes:
+
+1. **Aprendizado supervisionado (8,0 pontos):** escolha de uma base UCI/Kaggle, análise exploratória, preparação dos dados e comparação entre Árvore de Decisão, KNN, SVM, Random Forest e AdaBoost.
+2. **Computação Natural (8,0 pontos):** escolha de um dos 50 problemas oficiais, com implementação própria de AG, PSO ou ACO e CLONALG (ou alternativa imune aprovada), sob a mesma formulação.
+3. **Comparação, documentação e entrega (4,0 pontos):** protocolo experimental, relatório e reprodutibilidade.
+
+### Materiais do Trabalho 02
+
+- <span data-download="../downloads/trabalhos/EC_IA_Trabalho_02_2026.pdf" data-label="Baixar enunciado do Trabalho 02 (PDF)">Verificando PDF...</span>
+- [Orientações resumidas no GitHub](https://github.com/tiagofga/EC-IA/tree/main/trabalhos/02-aprendizagem-computacao-natural)
+- [Exemplos Python de aprendizagem supervisionada](../exemplos/index.md)
+
+O PDF contém a lista dos 50 problemas de otimização e orientações de adaptação dos três métodos. O enunciado oficial prevalece sobre os resumos desta página. Não são disponibilizadas implementações dos métodos de computação natural exigidos.
