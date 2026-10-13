@@ -46,7 +46,7 @@ Estão disponíveis:
 
 Na pasta do trabalho estão disponíveis o código-base, mapa público, testes iniciais, instruções para o relatório, modelo SBC e declaração de uso de IA. O enunciado oficial prevalece sobre qualquer resumo apresentado na documentação do site.
 
-## Entrega e versionamento
+## Instruções de entrega do Trabalho 01
 
 O desenvolvimento deve permanecer em repositório Git **privado até o encerramento da correção**, com acesso concedido ao professor.
 
@@ -59,7 +59,7 @@ A versão marcada pela tag correspondente será utilizada na avaliação. Consul
 
 **Entrega:** 03/12/2026 · **Valor:** 20,0 pontos.
 
-O trabalho compreende três partes:
+O enunciado oficial estabelece os requisitos completos. O trabalho compreende três partes:
 
 1. **Aprendizado supervisionado (8,0 pontos):** escolha de uma base UCI/Kaggle, análise exploratória, preparação dos dados e comparação entre Árvore de Decisão, KNN, SVM, Random Forest e AdaBoost.
 2. **Computação Natural (8,0 pontos):** escolha de um dos 50 problemas oficiais, com implementação própria de AG, PSO ou ACO e CLONALG (ou alternativa imune aprovada), sob a mesma formulação.
