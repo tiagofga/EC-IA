@@ -4,7 +4,40 @@ Todas as mudanças relevantes deste projeto serão registradas neste arquivo.
 
 O histórico de commits segue Conventional Commits.
 
-## [Unreleased] - preparação da v0.11.0
+## [Unreleased]
+
+Nenhuma alteração ainda documentada após a versão 0.12.0.
+
+## [0.12.0] - 2026-11-02
+
+### Added
+
+- Aulas 12 e 13: materiais teóricos e práticos de Algoritmos Genéticos e Inteligência de Enxames.
+- Notas visuais, estudos guiados e pseudocódigos conceituais de AG, ACO, PSO e BPSO.
+- Laboratórios interativos de AG e enxames com parâmetros, sementes, rastreamento de estados, avaliações e convergência.
+- Visualizações aprofundadas de Árvore de Decisão e SVM, com construção/treinamento por etapas e parâmetros configuráveis.
+- Seções distintas de simulados para Prova 1 e Prova 2; simulados da Prova 2 (Aulas 05 a 12) anunciados para publicação futura.
+
+### Changed
+
+- Reinicialização dos laboratórios de DT, KNN, SVM, AG, ACO e BPSO; filtragem dos controles por método no laboratório de enxames.
+- Layout responsivo dos catálogos de Atividades e Trabalhos.
+- Pseudocódigos das Aulas 02 a 04 separados por procedimento, com navegação organizada por aula.
+- Catálogos de Aulas, Exemplos Python, Notas, Estudos Guiados, Visualizações e Pseudocódigos atualizados até a Aula 13.
+- Navegação e links de retorno dos laboratórios; publicação dos materiais via MkDocs/Vercel.
+
+### Fixed
+
+- Links relativos inválidos que interrompiam a compilação estrita do MkDocs.
+- Links de retorno ao catálogo de visualizações.
+
+### Notes
+
+- Os scripts de ACO e BPSO da prática mantêm trechos `TODO` para implementação.
+- Os simulados da Prova 2 ainda não foram publicados; gabaritos e soluções privadas permanecem fora do repositório.
+
+## [0.11.0] - 2026-10-13
+
 
 ### Added
 
