@@ -69,7 +69,7 @@ Um candidato do TSP representa a ordem em que as cidades são visitadas.
 
 ## Prática com Python
 
-Consulte [`ag_imagem_4x4.py`](../../exemplos/12-algoritmos-geneticos/ag_imagem_4x4.py) **após** resolver os exercícios. O script é uma solução de referência liberada após a prática.
+Consulte [`ag_imagem_4x4.py`](https://github.com/tiagofga/EC-IA/blob/main/exemplos/12-algoritmos-geneticos/ag_imagem_4x4.py) **após** resolver os exercícios. O script é uma solução de referência liberada após a prática.
 
 ```bash
 python ag_imagem_4x4.py --seed 42 --testes --sem-grafico
@@ -92,4 +92,4 @@ Se um algoritmo encontra a imagem-alvo rapidamente, isso o torna adequado para q
 - [ ] Registro parâmetros e sementes sem tirar conclusões universais.
 - [ ] Relaciono a evolução por operadores ao compartilhamento de informação da Aula 13.
 
-[Slides da Aula 12](../../aulas/12-algoritmos-geneticos/README.md) · [Nota visual 12](../../notas/12-algoritmos-geneticos/README.md)
+[Slides da Aula 12](https://github.com/tiagofga/EC-IA/tree/main/aulas/12-algoritmos-geneticos) · [Nota visual 12](../../notas/12-algoritmos-geneticos/README.md)
