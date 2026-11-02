@@ -6,6 +6,8 @@ Material público da disciplina de **Inteligência Artificial** do Curso de Enge
 
 Este repositório reúne materiais de apoio às aulas, notas visuais, atividades, estudos guiados, simulados, trabalhos, exemplos Python, pseudocódigos conceituais e visualizações didáticas. O conteúdo é organizado progressivamente ao longo do semestre.
 
+**[Roadmap de desenvolvimento](https://tiagofga.github.io/EC-IA/roadmap/):** próximas etapas das Aulas 14 e 15 e simulados da Prova 2.
+
 ## Como usar este repositório
 
 Para cada assunto, a sequência recomendada é:

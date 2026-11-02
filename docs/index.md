@@ -6,6 +6,8 @@ Esta página organiza os materiais de estudo e avaliação da disciplina. Use o 
 
 > **Repositório público do projeto:** [github.com/tiagofga/EC-IA](https://github.com/tiagofga/EC-IA)
 
+**[Roadmap do EC-IA](roadmap.md):** acompanhe as Aulas 14 e 15, suas práticas, os materiais complementares e os simulados da Prova 2.
+
 ## Por onde começar
 
 Se você está acompanhando a disciplina durante o semestre, use esta sequência:
@@ -22,7 +24,7 @@ Se você está acompanhando a disciplina durante o semestre, use esta sequência
 
 ## Conteúdo publicado
 
-O material público está organizado da Aula 00 à Aula 13. As Aulas 12 e 13 disponibilizam PDFs teóricos e práticos e respectivos códigos de apoio, ainda sem notas ou estudos guiados específicos. Os links abaixo conduzem diretamente às aulas e aos recursos de estudo, incluindo os fundamentos apresentados nas Aulas 01 a 03.
+O material público está organizado da Aula 00 à Aula 13. As Aulas 12 e 13 disponibilizam PDFs teóricos e práticos e respectivos códigos de apoio, com notas visuais e estudos guiados específicos. Os links abaixo conduzem diretamente às aulas e aos recursos de estudo, incluindo os fundamentos apresentados nas Aulas 01 a 03.
 
 ### Fundamentos de Inteligência Artificial - Aulas 00 a 03
 
