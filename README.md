@@ -54,8 +54,10 @@ A proposta não é apenas disponibilizar arquivos, mas organizar um percurso de 
 | 09 | K-Nearest Neighbors e Preparação de Dados |
 | 10 | Support Vector Machines e PCA |
 | 11 | Atividade Integradora - DT, KNN e SVM |
+| 12 | Algoritmos Genéticos |
+| 13 | Inteligência de Enxames |
 
-Os PDFs públicos das Aulas 00 a 11 e das Atividades 01 a 05 estão disponíveis no repositório. A Lista 05 integra Lógica Proposicional, Lógica de Primeira Ordem, Inferência em LPO e Prolog.
+Os PDFs públicos das Aulas 00 a 13 e das Atividades 01 a 05 estão disponíveis no repositório. As Aulas 12 e 13 incluem teoria e prática; o código de ACO e BPSO permanece incompleto, com exercícios TODO. A Lista 05 integra Lógica Proposicional, Lógica de Primeira Ordem, Inferência em LPO e Prolog.
 
 ## Notas visuais
 
