@@ -4,6 +4,7 @@ Material público da disciplina de Inteligência Artificial do CEFET-MG, campus 
 
 - [Slides teóricos em PDF](./EC_IA_012_AG_Teoria.pdf)
 - [Prática guiada em PDF](./EC_IA_012_AG_Pratica.pdf)
+- [Laboratório interativo](../../visualizacoes/12-algoritmos-geneticos/README.md)
 - [Pseudocódigos](../../pseudoalgoritmos/12-algoritmos-geneticos/README.md)
 - [Estudo guiado](../../estudos-guiados/12-algoritmos-geneticos/README.md)
 - [Nota visual](../../notas/12-algoritmos-geneticos/README.md)
