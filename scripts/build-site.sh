@@ -129,6 +129,13 @@ for spec in \
   copy_if_exists "aulas/$unit/$name" "docs/downloads/aulas/$name"
 done
 
+
+# Notas visuais das Aulas 12 e 13.
+for unit in 12-algoritmos-geneticos 13-inteligencia-enxames; do
+  rm -rf "docs/notas/$unit"
+  cp -R "notas/$unit" "docs/notas/$unit"
+done
+
 mkdocs build --strict
 
 mkdir -p site/visualizacoes
