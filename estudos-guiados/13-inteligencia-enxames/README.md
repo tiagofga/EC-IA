@@ -85,7 +85,7 @@ Considere a imagem-alvo:
 
 ## Prática com Python
 
-Abra o [código-base da Aula 13](../../exemplos/13-inteligencia-enxames/README.md) e identifique a função de cada arquivo:
+Abra o [código-base da Aula 13](https://github.com/tiagofga/EC-IA/tree/main/exemplos/13-inteligencia-enxames) e identifique a função de cada arquivo:
 
 - `problem.py`: alvo binário comum e fitness;
 - `aco.py`: probabilidades, construção de soluções e atualização de feromônios;
@@ -115,4 +115,4 @@ Um método compartilha conhecimento por depósitos em trilhas; outro, por melhor
 - [ ] Explico por que resultados de uma única execução não estabelecem superioridade.
 - [ ] Relaciono as estratégias de AG e enxames sem confundir seus operadores.
 
-[Slides da Aula 13](../../aulas/13-inteligencia-enxames/README.md) · [Nota visual 13](../../notas/13-inteligencia-enxames/README.md)
+[Slides da Aula 13](https://github.com/tiagofga/EC-IA/tree/main/aulas/13-inteligencia-enxames) · [Nota visual 13](../../notas/13-inteligencia-enxames/README.md)
