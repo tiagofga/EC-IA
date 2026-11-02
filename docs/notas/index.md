@@ -32,6 +32,12 @@ Selecione a nota correspondente à aula. Os links dão acesso direto aos mapas c
 - **Aula 10 - SVM e PCA:** [Abrir nota](./10-svm/README.md) — Margens, kernels, RBF e componentes principais.
 - **Aula 11 - Comparação DT, KNN e SVM:** [Abrir nota](./11-atividade-comparacao/README.md) — Métricas, matriz de confusão e comparação experimental.
 
+
+### Computação natural
+
+- **Aula 12 - Algoritmos Genéticos:** [Abrir nota](./12-algoritmos-geneticos/README.md) - Representação, seleção, recombinação, mutação e elitismo.
+- **Aula 13 - Inteligência de Enxames:** [Abrir nota](./13-inteligencia-enxames/README.md) - ACO, feromônios, PSO, BPSO e comparação experimental.
+
 ## Como usar
 
 1. Faça uma leitura rápida do mapa mental no início da nota.

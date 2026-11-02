@@ -102,6 +102,22 @@ Os laboratórios permitem explorar conceitos por meio de controles e representa�
 </article>
 </div>
 
+
+## Aulas 12 e 13 - Computação natural
+
+<div class="ecia-lab-grid">
+<article class="ecia-lab-card">
+<h3>Algoritmos Genéticos</h3>
+<p>Execute gerações no problema binário 4 × 4; acompanhe população, elitismo, fitness e curva de avaliações, alterando parâmetros e semente.</p>
+<a class="ecia-lab-link" href="12-algoritmos-geneticos/">Abrir laboratório AG ↗</a>
+</article>
+<article class="ecia-lab-card">
+<h3>ACO e BPSO</h3>
+<p>Explore feromônios, atualização de velocidades, memórias e convergência no mesmo alvo binário da Aula 12.</p>
+<a class="ecia-lab-link" href="13-inteligencia-enxames/">Abrir laboratório de enxames ↗</a>
+</article>
+</div>
+
 ## Como usar
 
 1. Leia a pergunta ou o cenário apresentado.

@@ -19,4 +19,5 @@ repetir enquanto T for suficiente:
 retornar o melhor estado encontrado
 ```
 
-A possibilidade de aceitar algumas pioras permite escapar de ótimos locais, principalmente nas fases iniciais da busca.
+**Observe:** aceitar algumas pioras permite escapar de regiões locais no início da busca.
+

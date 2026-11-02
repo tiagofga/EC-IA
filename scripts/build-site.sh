@@ -129,6 +129,39 @@ for spec in \
   copy_if_exists "aulas/$unit/$name" "docs/downloads/aulas/$name"
 done
 
+
+# Pseudocódigos das Aulas 02 a 04: diretórios próprios, no padrão da Aula 06.
+for unit in 02-agentes 03-conhecimento 04-busca; do
+  rm -rf "docs/pseudocodigos/$unit"
+  cp -R "pseudoalgoritmos/$unit" "docs/pseudocodigos/$unit"
+done
+
+# Pseudocódigos conceituais das Aulas 12 e 13.
+for unit in 12-algoritmos-geneticos 13-inteligencia-enxames; do
+  rm -rf "docs/pseudocodigos/$unit"
+  cp -R "pseudoalgoritmos/$unit" "docs/pseudocodigos/$unit"
+done
+
+# Estudos guiados das Aulas 12 e 13.
+for unit in 12-algoritmos-geneticos 13-inteligencia-enxames; do
+  rm -rf "docs/estudos-guiados/$unit"
+  cp -R "estudos-guiados/$unit" "docs/estudos-guiados/$unit"
+done
+
+# Notas visuais das Aulas 12 e 13.
+for unit in 12-algoritmos-geneticos 13-inteligencia-enxames; do
+  rm -rf "docs/notas/$unit"
+  cp -R "notas/$unit" "docs/notas/$unit"
+done
+
+# Laboratórios das Aulas 12 e 13: o README entra no MkDocs, e o HTML
+# independente é publicado depois do build, como nas aulas anteriores.
+for unit in 12-algoritmos-geneticos 13-inteligencia-enxames; do
+  rm -rf "docs/visualizacoes/$unit"
+  mkdir -p "docs/visualizacoes/$unit"
+  cp "visualizacoes/$unit/README.md" "docs/visualizacoes/$unit/README.md"
+done
+
 mkdocs build --strict
 
 mkdir -p site/visualizacoes
@@ -142,6 +175,11 @@ rm -rf site/visualizacoes/07-prolog
 cp -R visualizacoes/07-prolog site/visualizacoes/07-prolog
 
 for unit in 08-aprendizagem-exemplos 09-knn 10-svm 11-atividade-comparacao; do
+  mkdir -p "site/visualizacoes/$unit"
+  cp "visualizacoes/$unit/index.html" "site/visualizacoes/$unit/index.html"
+done
+
+for unit in 12-algoritmos-geneticos 13-inteligencia-enxames; do
   mkdir -p "site/visualizacoes/$unit"
   cp "visualizacoes/$unit/index.html" "site/visualizacoes/$unit/index.html"
 done

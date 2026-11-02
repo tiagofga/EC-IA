@@ -14,4 +14,5 @@ repetir até atingir o critério de parada:
 retornar o melhor indivíduo encontrado
 ```
 
-O Algoritmo Genético trabalha com uma população de soluções e utiliza mecanismos inspirados em evolução para explorar diferentes regiões do espaço de busca.
+**Observe:** o AG trabalha com uma população de soluções, não com um único estado corrente.
+

@@ -1,13 +1,9 @@
 # A*
 
-Função de avaliação:
-
 ```text
-f(n) = g(n) + h(n)
-```
-
-```text
-inicializar a fronteira com o nó inicial
+inicializar a fronteira como fila de prioridade
+atribuir g(inicial) = 0
+calcular f(inicial) = g(inicial) + h(inicial)
 
 enquanto a fronteira não estiver vazia:
     remover o nó com menor f(n)
@@ -18,7 +14,12 @@ enquanto a fronteira não estiver vazia:
     para cada sucessor:
         calcular novo g(n)
         calcular f(n) = g(n) + h(n)
-        atualizar a melhor alternativa conhecida quando necessário
+
+        se a nova alternativa for melhor:
+            atualizar o nó na fronteira
 
 retornar falha
 ```
+
+**Observe:** A* combina custo acumulado e estimativa heurística.
+
