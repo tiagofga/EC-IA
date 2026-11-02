@@ -130,6 +130,12 @@ for spec in \
 done
 
 
+# Pseudocódigos das Aulas 02 a 04: diretórios próprios, no padrão da Aula 06.
+for unit in 02-agentes 03-conhecimento 04-busca; do
+  rm -rf "docs/pseudocodigos/$unit"
+  cp -R "pseudoalgoritmos/$unit" "docs/pseudocodigos/$unit"
+done
+
 # Pseudocódigos conceituais das Aulas 12 e 13.
 for unit in 12-algoritmos-geneticos 13-inteligencia-enxames; do
   rm -rf "docs/pseudocodigos/$unit"
