@@ -85,6 +85,6 @@ Explique por que a escolha do cromossomo precede a escolha do crossover. Depois 
 - [ ] Reconheço os limites de conclusões baseadas em uma única execução.
 - [ ] Consigo explicar como a Aula 13 compartilha informação sem crossover.
 
-[Slides da Aula 12](../../aulas/12-algoritmos-geneticos/README.md) · [Exemplo Python pós-aula](../../exemplos/12-algoritmos-geneticos/README.md)
+[Estudo guiado](../../estudos-guiados/12-algoritmos-geneticos/README.md) · [Slides da Aula 12](../../aulas/12-algoritmos-geneticos/README.md) · [Exemplo Python pós-aula](../../exemplos/12-algoritmos-geneticos/README.md)
 
 **Próxima conexão:** ACO e PSO também utilizam múltiplos candidatos, mas orientam a busca por feromônios ou memórias individuais e coletivas, não pela mesma sequência de operadores genéticos.
