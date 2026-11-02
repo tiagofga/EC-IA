@@ -118,6 +118,17 @@ for spec in \
   copy_if_exists "aulas/$unit/$name" "docs/downloads/aulas/$name"
 done
 # EC-IA 0.10.0 END
+
+# Aulas 12 e 13: PDFs teóricos e práticos, sem fontes privadas.
+for spec in \
+  '12-algoritmos-geneticos:EC_IA_012_AG_Teoria.pdf' \
+  '12-algoritmos-geneticos:EC_IA_012_AG_Pratica.pdf' \
+  '13-inteligencia-enxames:EC_IA_013_Enxames_Teoria.pdf' \
+  '13-inteligencia-enxames:EC_IA_013_Enxames_Pratica.pdf'; do
+  unit="${spec%%:*}"; name="${spec#*:}"
+  copy_if_exists "aulas/$unit/$name" "docs/downloads/aulas/$name"
+done
+
 mkdocs build --strict
 
 mkdir -p site/visualizacoes
