@@ -36,7 +36,7 @@ Nenhuma alteração ainda documentada após a versão 0.12.0.
 - Os scripts de ACO e BPSO da prática mantêm trechos `TODO` para implementação.
 - Os simulados da Prova 2 ainda não foram publicados; gabaritos e soluções privadas permanecem fora do repositório.
 
-## [0.11.0] - 2026-10-13
+## [0.11.0]
 
 
 ### Added
