@@ -4,6 +4,7 @@ Material público da disciplina de Inteligência Artificial do CEFET-MG, campus 
 
 - [Slides teóricos em PDF](./EC_IA_013_Enxames_Teoria.pdf)
 - [Prática guiada em PDF](./EC_IA_013_Enxames_Pratica.pdf)
+- [Estudo guiado](../../estudos-guiados/13-inteligencia-enxames/README.md)
 - [Nota visual](../../notas/13-inteligencia-enxames/README.md)
 - [Código-base da prática em Python](../../exemplos/13-inteligencia-enxames/README.md)
 
