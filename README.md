@@ -61,7 +61,7 @@ Os PDFs públicos das Aulas 00 a 13 e das Atividades 01 a 05 estão disponíveis
 
 ## Notas visuais
 
-As Aulas 01 a 11 possuem notas públicas em Markdown concebidas como **mapas mentais e guias de estudo**. Elas incluem:
+As Aulas 01 a 13 possuem notas públicas em Markdown concebidas como **mapas mentais e guias de estudo**. Elas incluem:
 
 - figuras de síntese visual;
 - mapas conceituais e fluxos Mermaid coloridos;
@@ -119,7 +119,7 @@ A Lista 05 consolida as Aulas 05, 06 e 07, ligando representação formal, infer
 
 ## Simulados
 
-A seção `simulados/` reúne três simulados públicos para revisão integrada das Aulas 01 a 04. O conjunto trabalha conceitos fundamentais de IA, agentes inteligentes, PEAS, representação e formulação de problemas, BFS, DFS, UCS, heurísticas, Busca Gulosa e A*.
+A seção `simulados/` está organizada por avaliação: a **Prova 1** reúne três simulados públicos das Aulas 01 a 04, enquanto os simulados da **Prova 2**, referentes às Aulas 05 a 12, serão disponibilizados em breve. O conjunto trabalha conceitos fundamentais de IA, agentes inteligentes, PEAS, representação e formulação de problemas, BFS, DFS, UCS, heurísticas, Busca Gulosa e A*.
 
 Os simulados foram organizados em progressão: revisão conceitual e execução, análise e comparação, e uma resolução integrada em condições próximas às de uma avaliação. O Simulado 03 inclui uma questão de busca informada em um grafo didático inspirado em cidades brasileiras, com identificação explícita das siglas utilizadas. Os gabaritos e soluções de referência não são publicados.
 
@@ -144,7 +144,7 @@ Consulte `trabalhos/01-busca/README.md` antes de iniciar.
 
 ## Estudos guiados
 
-Os estudos guiados das Aulas 01 a 11 foram preparados para revisão ativa. Eles incluem objetivos de aprendizagem, conceitos essenciais, perguntas de verificação, aplicações, erros conceituais a evitar e autoavaliação.
+Os estudos guiados das Aulas 01 a 13 foram preparados para revisão ativa. Eles incluem objetivos de aprendizagem, conceitos essenciais, perguntas de verificação, aplicações, erros conceituais a evitar e autoavaliação.
 
 A recomendação é tentar responder às perguntas **antes** de consultar novamente os slides ou as notas.
 
