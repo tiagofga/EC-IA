@@ -111,6 +111,6 @@ Explique uma escolha de rota em ACO, a evaporação seguida de depósito e a dif
 - [ ] Distingo comparação por avaliações de comparação por iterações.
 - [ ] Consigo relacionar AG, ACO e BPSO ao Trabalho 02 sem reutilizar operadores incompatíveis.
 
-[Slides da Aula 13](../../aulas/13-inteligencia-enxames/README.md) · [Código-base da prática com TODOs](../../exemplos/13-inteligencia-enxames/README.md)
+[Estudo guiado](../../estudos-guiados/13-inteligencia-enxames/README.md) · [Slides da Aula 13](../../aulas/13-inteligencia-enxames/README.md) · [Código-base da prática com TODOs](../../exemplos/13-inteligencia-enxames/README.md)
 
 **Próxima conexão:** aprofundar as decisões de representação e avaliação de AG, ACO e PSO no Trabalho 02; notas e estudos guiados não fornecem as soluções dos checkpoints de código.
