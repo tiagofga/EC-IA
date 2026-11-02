@@ -47,10 +47,10 @@ As Aulas 04, 05, 06, 12 e 13 possuem dois PDFs cada. Nas Aulas 12 e 13, os arqui
 
 ## Exemplos Python
 
-Os exemplos das Aulas 08-11 utilizam `numpy`, `pandas`, `matplotlib` e `scikit-learn`. Para instalar os pacotes necessários:
+Os exemplos Python das **Aulas 08 a 13** abrangem aprendizagem supervisionada, comparação de modelos, Algoritmos Genéticos e código-base de ACO/BPSO. As dependências variam conforme o exemplo. Para preparar o ambiente dos exemplos de aprendizagem supervisionada:
 
 ```bash
 python3 -m pip install numpy pandas matplotlib scikit-learn
 ```
 
-Consulte também os [exemplos e instruções no repositório](https://github.com/tiagofga/EC-IA/tree/main/exemplos). O uso de ambiente virtual é opcional e fica a critério do estudante.
+Para as Aulas 12 e 13, o exemplo de AG usa Python e `matplotlib` para gráficos; os códigos de ACO e BPSO são exercícios com `TODO` e precisam ser completados para executar a comparação. Consulte também os [exemplos e instruções no repositório](https://github.com/tiagofga/EC-IA/tree/main/exemplos). O uso de ambiente virtual é opcional e fica a critério do estudante.

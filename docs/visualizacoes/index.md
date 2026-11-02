@@ -67,7 +67,7 @@ Os laboratórios permitem explorar conceitos por meio de controles e representa�
 <div class="ecia-lab-grid">
 <article class="ecia-lab-card">
 <h3>Entropia e Gini</h3>
-<p>Altere a proporção entre classes e observe como mudam as medidas de impureza.</p>
+<p>Construa uma Árvore de Decisão passo a passo, calcule Gini ou entropia, altere profundidade e observe as partições.</p>
 <a class="ecia-lab-link" href="08-aprendizagem-exemplos/">Abrir visualização ↗</a>
 </article>
 </div>
@@ -87,7 +87,7 @@ Os laboratórios permitem explorar conceitos por meio de controles e representa�
 <div class="ecia-lab-grid">
 <article class="ecia-lab-card">
 <h3>Kernel RBF</h3>
-<p>Observe como γ modifica o alcance da influência de um exemplo.</p>
+<p>Treine uma SVM didática, visualize fronteira, margens e vetores de suporte e compare C, γ e kernels.</p>
 <a class="ecia-lab-link" href="10-svm/">Abrir visualização ↗</a>
 </article>
 </div>
@@ -108,7 +108,7 @@ Os laboratórios permitem explorar conceitos por meio de controles e representa�
 <div class="ecia-lab-grid">
 <article class="ecia-lab-card">
 <h3>Algoritmos Genéticos</h3>
-<p>Execute gerações no problema binário 4 × 4; acompanhe população, elitismo, fitness e curva de avaliações, alterando parâmetros e semente.</p>
+<p>Acompanhe seleção, crossover, mutações, elitismo, diversidade e evolução do fitness no problema 4 × 4.</p>
 <a class="ecia-lab-link" href="12-algoritmos-geneticos/">Abrir laboratório AG ↗</a>
 </article>
 <article class="ecia-lab-card">

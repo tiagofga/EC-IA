@@ -37,12 +37,6 @@ Esta seção reúne as atividades públicas destinadas aos estudantes.
 </article>
 </div>
 
-## Lista 05
-
-A Lista 05 consolida o bloco formado pelas Aulas 05, 06 e 07. Os exercícios avançam de Lógica Proposicional para Lógica de Primeira Ordem, mecanismos de inferência e, ao final, programação lógica em Prolog.
-
-**Data de entrega:** 30/10/2026.
-
 ## Como usar as atividades
 
 Antes de começar uma lista, revise a aula e tente responder ao estudo guiado correspondente. Durante a resolução:
