@@ -16,6 +16,18 @@ Material conceitual, independente de linguagem de programação, para apoiar a r
 | Busca local | Simulated Annealing | aceita algumas pioras conforme a temperatura |
 | Busca local/evolucionária | Algoritmo Genético | seleção, cruzamento e mutação sobre uma população |
 
+## Algoritmos por procedimento
+
+- [BFS](bfs.md)
+- [DFS](dfs.md)
+- [UCS](ucs.md)
+- [Busca Gulosa](greedy.md)
+- [A*](a-estrela.md)
+- [Beam Search](beam-search.md)
+- [Hill Climbing](hill-climbing.md)
+- [Simulated Annealing](simulated-annealing.md)
+- [Algoritmo Genético](algoritmo-genetico.md)
+
 ## Como usar
 
 Use os pseudocódigos para identificar:
