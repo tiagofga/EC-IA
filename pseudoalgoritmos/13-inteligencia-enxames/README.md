@@ -6,4 +6,4 @@
 
 Os pseudocódigos sistematizam a sequência apresentada nos slides. **Não substituem os exercícios com TODO em Python**: os arquivos `aco.py` e `bpso.py` continuam incompletos.
 
-[Slides](../../aulas/13-inteligencia-enxames/README.md) · [Nota visual](../../notas/13-inteligencia-enxames/README.md) · [Estudo guiado](../../estudos-guiados/13-inteligencia-enxames/README.md)
+[Slides](https://github.com/tiagofga/EC-IA/tree/main/aulas/13-inteligencia-enxames) · [Nota visual](../../notas/13-inteligencia-enxames/README.md) · [Estudo guiado](../../estudos-guiados/13-inteligencia-enxames/README.md)
