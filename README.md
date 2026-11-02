@@ -61,7 +61,7 @@ Os PDFs públicos das Aulas 00 a 13 e das Atividades 01 a 05 estão disponíveis
 
 ## Notas visuais
 
-As Aulas 01 a 11 possuem notas públicas em Markdown concebidas como **mapas mentais e guias de estudo**. Elas incluem:
+As Aulas 01 a 13 possuem notas públicas em Markdown concebidas como **mapas mentais e guias de estudo**. Elas incluem:
 
 - figuras de síntese visual;
 - mapas conceituais e fluxos Mermaid coloridos;
@@ -119,7 +119,7 @@ A Lista 05 consolida as Aulas 05, 06 e 07, ligando representação formal, infer
 
 ## Simulados
 
-A seção `simulados/` reúne três simulados públicos para revisão integrada das Aulas 01 a 04. O conjunto trabalha conceitos fundamentais de IA, agentes inteligentes, PEAS, representação e formulação de problemas, BFS, DFS, UCS, heurísticas, Busca Gulosa e A*.
+A seção `simulados/` está organizada por avaliação: a **Prova 1** reúne três simulados públicos das Aulas 01 a 04, enquanto os simulados da **Prova 2**, referentes às Aulas 05 a 12, serão disponibilizados em breve. O conjunto trabalha conceitos fundamentais de IA, agentes inteligentes, PEAS, representação e formulação de problemas, BFS, DFS, UCS, heurísticas, Busca Gulosa e A*.
 
 Os simulados foram organizados em progressão: revisão conceitual e execução, análise e comparação, e uma resolução integrada em condições próximas às de uma avaliação. O Simulado 03 inclui uma questão de busca informada em um grafo didático inspirado em cidades brasileiras, com identificação explícita das siglas utilizadas. Os gabaritos e soluções de referência não são publicados.
 
@@ -144,7 +144,7 @@ Consulte `trabalhos/01-busca/README.md` antes de iniciar.
 
 ## Estudos guiados
 
-Os estudos guiados das Aulas 01 a 11 foram preparados para revisão ativa. Eles incluem objetivos de aprendizagem, conceitos essenciais, perguntas de verificação, aplicações, erros conceituais a evitar e autoavaliação.
+Os estudos guiados das Aulas 01 a 13 foram preparados para revisão ativa. Eles incluem objetivos de aprendizagem, conceitos essenciais, perguntas de verificação, aplicações, erros conceituais a evitar e autoavaliação.
 
 A recomendação é tentar responder às perguntas **antes** de consultar novamente os slides ou as notas.
 
@@ -247,26 +247,11 @@ Modelos LaTeX explicitamente destinados aos estudantes, como o modelo SBC do Tra
 
 ## Versão de referência
 
-A **`v0.10.0`** está sendo preparada nesta branch. O Trabalho 2 será publicado na **`v0.11.0`**.
+A próxima versão consolidada será **v0.12.0**, após revisão e integração desta atualização documental na branch `main`.
 
-Principais marcos desta versão:
+Este marco compreende as Aulas 00 a 13, o Trabalho 02, notas visuais, estudos guiados, pseudocódigos, simulados separados por avaliação e laboratórios interativos de DT, KNN, SVM, AG, ACO e BPSO. As práticas de ACO/BPSO preservam os trechos `TODO`.
 
-- atualização da Aula 06 - Parte II, com exploração passo a passo de encadeamento direto, encadeamento reverso e retrocesso;
-- publicação da Aula 07 - Prolog;
-- publicação da Lista 05, integrando Lógica Proposicional, LPO, Inferência em LPO e Prolog;
-- nota visual e Estudo Guiado 07;
-- pseudocódigos conceituais de resolução de metas, retrocesso, recursão, listas recursivas e negação por falha;
-- visualização interativa de Prolog com árvore de prova, retrocesso e alcançabilidade em grafos;
-- revisão da página inicial e dos índices públicos do site.
-
-Marcos anteriores:
-
-- `v0.8.0` - Aula 06 de LPO e Inferência, nota visual, estudo guiado, pseudocódigos e novas visualizações de lógica;
-- `v0.7.0` - Aula 05, lógica, Mundo do Wumpus e refinamentos de interface;
-- `v0.6.0` - três simulados progressivos e consolidação da revisão para a Prova I;
-- `v0.5.1` - figuras de síntese, Mermaid colorido e suporte a modo claro/escuro;
-- `v0.5.0` - introdução das notas visuais;
-- `v0.4.0` - consolidação do Trabalho 01 - Busca.
+As versões anteriores são documentadas no [CHANGELOG.md](CHANGELOG.md). Os simulados da Prova 2 (Aulas 05 a 12) serão publicados futuramente.
 
 ## Desenvolvimento do repositório
 
@@ -284,11 +269,11 @@ chore(release): prepare v0.7.0
 ```
 
 
-## Aulas 08 a 11 - Aprendizagem supervisionada
+## Aulas 08 a 13 - Aprendizagem e Computação Natural
 
 - Aula 08 - [Aprendizagem com Exemplos](aulas/08-aprendizagem-exemplos/README.md)
 - Aula 09 - [K-Nearest Neighbors](aulas/09-knn/README.md)
 - Aula 10 - [Support Vector Machines e PCA](aulas/10-svm/README.md)
 - Aula 11 - [Atividade Integradora: DT, KNN e SVM](aulas/11-atividade-comparacao/README.md)
 
-Os códigos públicos estão em `exemplos/`; instale as dependências com `python -m pip install numpy pandas matplotlib scikit-learn`. A versão v0.10.0 encerra as Aulas 08-11; o Trabalho 2 será incluído somente na v0.11.0.
+Os códigos públicos estão em `exemplos/`; instale as dependências com `python -m pip install numpy pandas matplotlib scikit-learn`. As Aulas 12 e 13 incluem aplicações de AG e enxames; o código de AG é completo e os roteiros de ACO/BPSO mantêm atividades TODO.
