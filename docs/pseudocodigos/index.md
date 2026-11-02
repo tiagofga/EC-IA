@@ -4,6 +4,13 @@ Esta seção reúne versões **conceituais** dos pseudocódigos apresentados nas
 
 > Use os pseudocódigos em conjunto com os slides, os estudos guiados e, quando disponível, as visualizações interativas.
 
+## Aulas 12 e 13 - Computação natural
+
+- **Aula 12 - Algoritmos Genéticos:** [AG geracional e operadores binários](12-algoritmos-geneticos/README.md).
+- **Aula 13 - Inteligência de Enxames:** [Ant System, ACO binário, PSO e BPSO](13-inteligencia-enxames/README.md).
+
+Os documentos apresentam algoritmos conceituais. Os códigos Python da prática de Enxames continuam com TODOs para implementação pelos estudantes.
+
 ## Aula 02 - Agentes Inteligentes
 
 Nos slides da Aula 02 aparecem três estruturas que efetivamente podem ser representadas como pseudocódigo. Os demais tipos de agentes são apresentados como arquiteturas conceituais.
