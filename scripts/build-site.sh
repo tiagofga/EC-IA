@@ -130,6 +130,12 @@ for spec in \
 done
 
 
+# Pseudocódigos conceituais das Aulas 12 e 13.
+for unit in 12-algoritmos-geneticos 13-inteligencia-enxames; do
+  rm -rf "docs/pseudocodigos/$unit"
+  cp -R "pseudoalgoritmos/$unit" "docs/pseudocodigos/$unit"
+done
+
 # Estudos guiados das Aulas 12 e 13.
 for unit in 12-algoritmos-geneticos 13-inteligencia-enxames; do
   rm -rf "docs/estudos-guiados/$unit"
