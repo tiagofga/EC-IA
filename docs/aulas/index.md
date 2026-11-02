@@ -21,8 +21,12 @@ Os materiais públicos estão organizados em sequência didática. Selecione o P
 | 09 | K-Nearest Neighbors e Preparação de Dados | <span data-download="../downloads/aulas/EC_IA_009_KNN.pdf">Verificando PDF...</span> |
 | 10 | Support Vector Machines e PCA | <span data-download="../downloads/aulas/EC_IA_010_SVM.pdf">Verificando PDF...</span> |
 | 11 | Atividade Integradora: DT, KNN e SVM | <span data-download="../downloads/aulas/EC_IA_011_Atividade_Comparacao.pdf">Verificando PDF...</span> |
+| 12 | Algoritmos Genéticos - Teoria | <span data-download="../downloads/aulas/EC_IA_012_AG_Teoria.pdf">Verificando PDF...</span> |
+| 12 | Algoritmos Genéticos - Prática | <span data-download="../downloads/aulas/EC_IA_012_AG_Pratica.pdf">Verificando PDF...</span> |
+| 13 | Inteligência de Enxames - Teoria | <span data-download="../downloads/aulas/EC_IA_013_Enxames_Teoria.pdf">Verificando PDF...</span> |
+| 13 | Inteligência de Enxames - Prática | <span data-download="../downloads/aulas/EC_IA_013_Enxames_Pratica.pdf">Verificando PDF...</span> |
 
-As Aulas 04, 05 e 06 possuem duas partes, cada uma com seu próprio PDF.
+As Aulas 04, 05, 06, 12 e 13 possuem dois PDFs cada. Nas Aulas 12 e 13, os arquivos correspondem a teoria e prática.
 
 ## Organização dos conteúdos
 
@@ -31,6 +35,7 @@ As Aulas 04, 05 e 06 possuem duas partes, cada uma com seu próprio PDF.
 - **Conhecimento e raciocínio (05-07):** Lógica Proposicional, LPO, inferência e Prolog.
 - **Aprendizagem de máquina (08-10):** classificação, regressão, Árvores de Decisão, KNN, SVM e PCA.
 - **Consolidação (11):** comparação experimental entre DT, KNN e SVM.
+- **Computação natural (12-13):** Algoritmos Genéticos, ACO e PSO, com prática de representação binária 4 × 4.
 
 ## Sequência recomendada
 

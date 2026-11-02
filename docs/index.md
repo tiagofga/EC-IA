@@ -22,7 +22,7 @@ Se você está acompanhando a disciplina durante o semestre, use esta sequência
 
 ## Conteúdo publicado
 
-O material público está organizado da Aula 00 à Aula 11. Os links abaixo conduzem diretamente às aulas e aos recursos de estudo, incluindo os fundamentos apresentados nas Aulas 01 a 03.
+O material público está organizado da Aula 00 à Aula 13. As Aulas 12 e 13 disponibilizam PDFs teóricos e práticos e respectivos códigos de apoio, ainda sem notas ou estudos guiados específicos. Os links abaixo conduzem diretamente às aulas e aos recursos de estudo, incluindo os fundamentos apresentados nas Aulas 01 a 03.
 
 ### Fundamentos de Inteligência Artificial - Aulas 00 a 03
 
@@ -48,6 +48,11 @@ As Aulas 04, 05 e 06 possuem dois PDFs. Consulte o [catálogo completo](aulas/in
 - **Aula 09 - KNN e Preparação de Dados:** [PDF](downloads/aulas/EC_IA_009_KNN.pdf) · [Nota visual](notas/09-knn/README.md) · [Estudo guiado](estudos-guiados/09-knn/README.md)
 - **Aula 10 - SVM e PCA:** [PDF](downloads/aulas/EC_IA_010_SVM.pdf) · [Nota visual](notas/10-svm/README.md) · [Estudo guiado](estudos-guiados/10-svm/README.md)
 - **Aula 11 - Atividade Integradora: DT, KNN e SVM:** [PDF](downloads/aulas/EC_IA_011_Atividade_Comparacao.pdf) · [Nota visual](notas/11-atividade-comparacao/README.md) · [Estudo guiado](estudos-guiados/11-atividade-comparacao/README.md)
+
+### Computação Natural - Aulas 12 e 13
+
+- **Aula 12 - Algoritmos Genéticos:** [Teoria](downloads/aulas/EC_IA_012_AG_Teoria.pdf) · [Prática](downloads/aulas/EC_IA_012_AG_Pratica.pdf) · [Código Python](exemplos/index.md)
+- **Aula 13 - Inteligência de Enxames:** [Teoria](downloads/aulas/EC_IA_013_Enxames_Teoria.pdf) · [Prática](downloads/aulas/EC_IA_013_Enxames_Pratica.pdf) · [Código-base com TODOs](exemplos/index.md)
 
 [Todos os PDFs](aulas/index.md) · [Exemplos Python](https://github.com/tiagofga/EC-IA/tree/main/exemplos) · [Visualizações interativas](visualizacoes/index.md)
 
@@ -75,7 +80,7 @@ As visualizações compartilham a mesma identidade visual: azul como cor princip
 
 ## Exemplos Python
 
-Os scripts públicos das Aulas 08-11 ajudam a explorar preparação de dados, DT, KNN, SVM, PCA e métricas de avaliação.
+Os scripts públicos das Aulas 08-11 exploram DT, KNN, SVM, PCA e métricas. A Aula 12 inclui um AG de referência após a prática; a Aula 13 oferece ACO e BPSO com TODOs, sem soluções finais.
 
 [Consultar exemplos Python](exemplos/index.md)
 
