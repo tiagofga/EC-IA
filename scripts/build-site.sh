@@ -130,6 +130,12 @@ for spec in \
 done
 
 
+# Estudos guiados das Aulas 12 e 13.
+for unit in 12-algoritmos-geneticos 13-inteligencia-enxames; do
+  rm -rf "docs/estudos-guiados/$unit"
+  cp -R "estudos-guiados/$unit" "docs/estudos-guiados/$unit"
+done
+
 # Notas visuais das Aulas 12 e 13.
 for unit in 12-algoritmos-geneticos 13-inteligencia-enxames; do
   rm -rf "docs/notas/$unit"
