@@ -14,4 +14,5 @@ repetir:
         retornar o estado atual
 ```
 
-O método pode parar em um ótimo local ou em um platô, mesmo quando ainda existe uma solução global melhor.
+**Observe:** o método pode parar em ótimos locais ou platôs.
+
