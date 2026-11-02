@@ -24,6 +24,7 @@ extra_javascript:
 nav:
   - Início: index.md
   - Plano didático: planos/index.md
+  - Roadmap: roadmap.md
   - Aulas: aulas/index.md
   - Notas visuais: notas/index.md
   - Estudos guiados: estudos-guiados/index.md
