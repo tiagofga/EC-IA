@@ -17,8 +17,21 @@ A publicação dos materiais já consolidados pode ser consultada nas [aulas](au
 | Aula 15 - Teoria | Métodos Ensemble: Bagging, Random Forest, Boosting e AdaBoost; relação com DT, KNN e SVM | Planejada | PDF teórico com conceitos, exemplos e comparações |
 | Aula 15 - Prática | Experimentos reprodutíveis de classificação e comparação de modelos individuais e ensembles | Planejada | PDF prático, exemplos Python e análise de métricas |
 | Simulados - Prova 2 | Revisão integrada das Aulas **05 a 12**, conforme o escopo definido para a avaliação | A disponibilizar | Enunciados revisados e publicados na [seção de simulados](simulados/index.md) |
+| Revisão das notas 08 a 11 | Reconstruir mapas conceituais específicos de DT, KNN, SVM/PCA e comparação de modelos; ampliar exemplos resolvidos e questões de interpretação | Planejada | Cada nota apresenta mecanismo próprio, exemplo progressivo, ligação com Python, limitações e revisão ativa |
+| Refinamento das notas 12 e 13 | Aprimorar diagramas de AG, ACO e PSO/BPSO, preservando exemplos numéricos, fórmulas e conteúdos corretos já publicados | Planejado | Diagramas legíveis e fiéis às etapas dos algoritmos, com conexões explícitas às práticas |
+| Padrão das notas futuras | Adotar critérios editoriais e pedagógicos das notas revisadas nas Aulas 14 e 15 | Planejado | Revisão comparativa com material aprovado antes da publicação |
 | Materiais complementares | Notas visuais, estudos guiados, pseudocódigos e visualizações das Aulas 14 e 15, quando pertinentes | Planejados | Material integrado ao site, com navegação revisada |
 | Consolidação | Revisão dos links, acessibilidade, exercícios, exemplos e build estrito antes de nova versão | Planejada | PR aprovado, CI/deployment validado e changelog atualizado |
+
+## Qualidade das notas visuais
+
+A revisão das notas das Aulas 08 a 13 é uma etapa de **aprimoramento** dos materiais já publicados, sem alteração automática dos slides ou das avaliações.
+
+1. **Aulas 08 a 11:** substituir fluxogramas genéricos por representações específicas dos algoritmos e aprofundar o raciocínio de cada método.
+2. **Aulas 12 e 13:** preservar o conteúdo técnico e os exemplos resolvidos, aprimorando a comunicação visual e a relação entre os mecanismos.
+3. **Aulas 14 e 15:** utilizar o padrão revisado como referência para novas notas, mantendo continuidade com as anteriores.
+
+Critérios de revisão: pergunta central, mapa conceitual próprio, exemplos progressivos com decisões justificadas, fórmulas quando pertinentes, relação com implementação, limitações, perguntas de interpretação, síntese e conexão com a aula seguinte. A revisão deve verificar legibilidade, acessibilidade e coerência com os materiais canônicos aprovados.
 
 ## Sequência pedagógica
 
@@ -32,6 +45,9 @@ flowchart TD
   F --> G["Próxima versão do EC-IA"]
   A --> H["Simulados da Prova 2 - Aulas 05 a 12"]
   H --> F
+  A --> I["Revisar notas 08 a 11"]
+  I --> J["Refinar notas 12 e 13"]
+  J --> F
 ```
 
 As etapas de simulados e materiais complementares podem avançar em paralelo às aulas, sem alterar o escopo definido para a Prova 2.
