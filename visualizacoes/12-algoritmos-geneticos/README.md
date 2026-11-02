@@ -1,3 +1,3 @@
 # Laboratório - Algoritmos Genéticos
 
-Visualização interativa com semente, população, seleção por torneio, crossover, mutação, elitismo, fitness e curva de avaliações. O modo ACO/BPSO permite comparação no mesmo problema. Simulação didática no navegador.
+Execução reprodutível de AG binário com seleção por torneio, crossover de um ponto, mutação por gene e elitismo configurável. Permite inspecionar torneios, pontos de crossover, genes mutados, indivíduos, diversidade, fitness e avaliações por geração.
