@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>EC-IA | Resolução Proposicional</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div>
+    <span class="eyebrow">EC-IA · Aula 05</span>
+    <h1>Resolução Proposicional</h1>
+    <p>Acompanhe a prova por refutação até a cláusula vazia.</p>
+  </div>
+</header>
+<main>
+  <section class="panel controls">
+    <label for="example">Exemplo</label>
+    <select id="example"></select>
+    <button id="next">Próximo passo</button>
+    <button id="reset" class="secondary">Reiniciar</button>
+  </section>
+
+  <section class="grid">
+    <article class="panel">
+      <h2>Problema</h2>
+      <div class="logic"><strong>KB</strong><pre id="kb"></pre></div>
+      <div class="logic"><strong>Consulta α</strong><pre id="query"></pre></div>
+    </article>
+    <article class="panel">
+      <h2>Estado da prova</h2>
+      <div id="status" class="status neutral">Aguardando o primeiro passo.</div>
+      <pre id="current"></pre>
+    </article>
+  </section>
+
+  <section class="panel">
+    <h2>Derivação</h2>
+    <div id="trace" class="trace"></div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://tiagofga.github.io/EC-IA/notas/12-algoritmos-geneticos/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Nota visual 12 - Algoritmos Genéticos - EC-IA</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/extra.css" rel="stylesheet" />
+        <link href="../../assets/theme.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Nota visual 12 - Algoritmos Gen\u00e9ticos";
+        var mkdocs_page_input_path = "notas/12-algoritmos-geneticos/README.md";
+        var mkdocs_page_url = "/EC-IA/notas/12-algoritmos-geneticos/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> EC-IA
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Início</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../planos/">Plano didático</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../roadmap/">Roadmap</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../aulas/">Aulas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Notas visuais</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../estudos-guiados/">Estudos guiados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../atividades/">Atividades</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../simulados/">Simulados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../visualizacoes/">Visualizações</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../pseudocodigos/">Pseudocódigos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../exemplos/">Exemplos Python</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../trabalhos/">Trabalhos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://github.com/tiagofga/EC-IA">Repositório no GitHub</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">EC-IA</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Nota visual 12 - Algoritmos Genéticos</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/tiagofga/EC-IA/edit/master/docs/notas/12-algoritmos-geneticos/README.md">Edit on tiagofga/EC-IA</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="nota-visual-12-algoritmos-geneticos">Nota visual 12 - Algoritmos Genéticos</h1>
+<p><img alt="Mapa de síntese" src="nota-visual-aula-12.svg" /></p>
+<h2 id="mapa-conceitual">Mapa conceitual</h2>
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;Problema e restrições&quot;] --&gt; B[&quot;Representação dos indivíduos&quot;]
+  B --&gt; C[&quot;População inicial&quot;]
+  C --&gt; D[&quot;Avaliação por fitness&quot;]
+  D --&gt; E[&quot;Seleção de pais&quot;]
+  E --&gt; F[&quot;Crossover e mutação&quot;]
+  F --&gt; G[&quot;Nova geração e elitismo&quot;]
+  G --&gt; D
+  D --&gt; H{&quot;Critério de parada?&quot;}
+  H --&gt;|sim| I[&quot;Melhor solução conhecida&quot;]
+  H --&gt;|não| E
+  classDef base fill:#e9eafb,stroke:#2435a0,color:#17215e;
+  classDef action fill:#e1f2f0,stroke:#20766c,color:#12463f;
+  classDef end fill:#e8f5e9,stroke:#2c7a40,color:#154923;
+  class A,B,C,D,H base;
+  class E,F,G action;
+  class I end;
+</code></pre>
+<h2 id="conceitos-em-sequencia">Conceitos em sequência</h2>
+<ol>
+<li><strong>Da busca local à busca populacional:</strong> em vez de modificar somente uma solução corrente, o AG mantém uma população de candidatos. Isso amplia as possibilidades de exploração, mas não elimina a convergência prematura.</li>
+<li><strong>Representação e validade:</strong> um cromossomo codifica uma solução; genes representam componentes. Codificações binárias, reais e por permutação exigem operadores compatíveis com suas restrições.</li>
+<li><strong>Função objetivo e fitness:</strong> a função objetivo expressa o problema; a aptidão estabelece como comparar candidatos no mecanismo de seleção. Em minimização, não se deve tratar automaticamente um custo maior como uma aptidão melhor.</li>
+<li><strong>Seleção:</strong> roleta amostra pais conforme aptidões não negativas normalizadas; torneio escolhe o melhor entre participantes sorteados. Selecionar não é garantir o melhor indivíduo global.</li>
+<li><strong>Crossover e mutação:</strong> recombinação de um ou mais pontos e mutação por gene introduzem variações. Um descendente pode melhorar, piorar ou manter a aptidão; a codificação determina o operador apropriado.</li>
+<li><strong>Elitismo, parada e experimentação:</strong> preservar a elite evita perder o melhor candidato conhecido. Sementes, parâmetros, tamanho da população e orçamento de avaliações influenciam os resultados; uma execução não demonstra superioridade.</li>
+</ol>
+<h2 id="mapa-de-decisoes-representacao-e-operadores">Mapa de decisões: representação e operadores</h2>
+<table>
+<thead>
+<tr>
+<th>Representação</th>
+<th>Exemplo de candidato</th>
+<th>Atenção ao operador</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Binária</td>
+<td><code>0110 1001 1001 0110</code></td>
+<td>Crossover de um ponto e inversão de bits mantêm a codificação binária.</td>
+</tr>
+<tr>
+<td>Real</td>
+<td><code>[0.2, -1.7, 3.0]</code></td>
+<td>Respeitar limites e significado das variáveis.</td>
+</tr>
+<tr>
+<td>Permutação</td>
+<td><code>[A, C, B, D]</code></td>
+<td>Crossover binário direto pode repetir cidades e omitir outras; exigir operador específico ou reparação.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="o-ciclo-de-ag-na-pratica-imagem-4-4">O ciclo de AG na prática: imagem 4 × 4</h2>
+<p>O alvo da prática é <code>0110 / 1001 / 1001 / 0110</code>, com <strong>16 genes binários</strong>. Cada bit vale 0 (branco) ou 1 (preto), e o fitness conta coincidências com o alvo:</p>
+<pre><code class="language-text">Alvo            Candidato
+0110            0110
+1001            1010
+1001            1001
+0110            0110
+</code></pre>
+<p>Esse candidato difere em duas posições e obtém <strong>fitness 14/16</strong>. A seleção por torneio, o crossover de um ponto, a mutação por bit e o elitismo atuam sobre esse mesmo objetivo didático. Não se trata de um problema que necessite de AG para obter solução exata: o interesse é observar seus mecanismos.</p>
+<h2 id="da-imagem-ao-tsp">Da imagem ao TSP</h2>
+<p>No TSP, um cromossomo codifica uma <strong>permutação</strong> de cidades e a função objetivo minimiza o custo do circuito. A estrutura do problema muda, portanto os operadores usados na imagem binária não devem ser transferidos sem adaptação. A etapa fundamental continua sendo escolher representação, função objetivo, restrições e operadores coerentes.</p>
+<h2 id="revisao-de-30-segundos">Revisão de 30 segundos</h2>
+<p>AG evolui uma população de soluções candidatas. A avaliação atribui qualidade; a seleção favorece pais; crossover e mutação criam descendentes; elitismo preserva bons candidatos. A representação e as restrições condicionam todos esses mecanismos.</p>
+<h2 id="erros-conceituais-frequentes">Erros conceituais frequentes</h2>
+<ul>
+<li>Afirmar que populações garantem o ótimo global ou eliminam estagnação.</li>
+<li>Confundir <strong>maximização de fitness</strong> com <strong>minimização do custo original</strong> sem transformação apropriada.</li>
+<li>Tratar crossover e mutação como operadores que necessariamente melhoram a solução.</li>
+<li>Usar crossover de bits em permutações do TSP sem garantir visitas válidas.</li>
+<li>Concluir que um parâmetro é melhor a partir de uma única execução.</li>
+</ul>
+<h2 id="revisao-de-1-minuto">Revisão de 1 minuto</h2>
+<p>Explique por que a escolha do cromossomo precede a escolha do crossover. Depois descreva uma geração completa e justifique por que, na imagem 4 × 4, o melhor fitness deve ser avaliado com o mesmo alvo e múltiplas sementes ao comparar configurações.</p>
+<h2 id="checklist">Checklist</h2>
+<ul>
+<li>[ ] Distingo solução, cromossomo, gene, população e geração.</li>
+<li>[ ] Sei relacionar objetivo, custo e fitness.</li>
+<li>[ ] Consigo executar seleção por torneio e interpretar seleção por roleta.</li>
+<li>[ ] Sei mostrar crossover, mutação por bit e elitismo em um exemplo binário.</li>
+<li>[ ] Identifico quando uma representação exige operadores específicos.</li>
+<li>[ ] Reconheço os limites de conclusões baseadas em uma única execução.</li>
+<li>[ ] Consigo explicar como a Aula 13 compartilha informação sem crossover.</li>
+</ul>
+<p><a href="../../estudos-guiados/12-algoritmos-geneticos/">Estudo guiado</a> · <a href="https://github.com/tiagofga/EC-IA/tree/main/aulas/12-algoritmos-geneticos">Slides da Aula 12</a> · <a href="https://github.com/tiagofga/EC-IA/tree/main/exemplos/12-algoritmos-geneticos">Exemplo Python pós-aula</a></p>
+<p><strong>Próxima conexão:</strong> ACO e PSO também utilizam múltiplos candidatos, mas orientam a busca por feromônios ou memórias individuais e coletivas, não pela mesma sequência de operadores genéticos.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/tiagofga/EC-IA" class="fa fa-code-fork" style="color: #fcfcfc"> tiagofga/EC-IA</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../assets/theme-toggle.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+      <script src="../../assets/mermaid-init.js"></script>
+      <script src="../../assets/downloads.js"></script>
+      <script src="../../assets/vercel-analytics.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

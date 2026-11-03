@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://tiagofga.github.io/EC-IA/estudos-guiados/12-algoritmos-geneticos/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Estudo Guiado 12 - Algoritmos Genéticos - EC-IA</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/extra.css" rel="stylesheet" />
+        <link href="../../assets/theme.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Estudo Guiado 12 - Algoritmos Gen\u00e9ticos";
+        var mkdocs_page_input_path = "estudos-guiados/12-algoritmos-geneticos/README.md";
+        var mkdocs_page_url = "/EC-IA/estudos-guiados/12-algoritmos-geneticos/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> EC-IA
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Início</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../planos/">Plano didático</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../roadmap/">Roadmap</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../aulas/">Aulas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../notas/">Notas visuais</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Estudos guiados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../atividades/">Atividades</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../simulados/">Simulados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../visualizacoes/">Visualizações</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../pseudocodigos/">Pseudocódigos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../exemplos/">Exemplos Python</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../trabalhos/">Trabalhos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://github.com/tiagofga/EC-IA">Repositório no GitHub</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">EC-IA</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Estudo Guiado 12 - Algoritmos Genéticos</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/tiagofga/EC-IA/edit/master/docs/estudos-guiados/12-algoritmos-geneticos/README.md">Edit on tiagofga/EC-IA</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="estudo-guiado-12-algoritmos-geneticos">Estudo Guiado 12 - Algoritmos Genéticos</h1>
+<p>Resolva as questões <strong>antes</strong> de consultar os slides e a nota visual. Registre hipóteses e cálculos; utilize o código de referência apenas após tentar a resolução.</p>
+<h2 id="objetivos-de-aprendizagem">Objetivos de aprendizagem</h2>
+<ul>
+<li><strong>Representação:</strong> identificar indivíduo, gene, cromossomo, população e restrições; distinguir codificações binárias, reais e por permutação.</li>
+<li><strong>Avaliação:</strong> diferenciar objetivo de minimização e aptidão usada pela seleção.</li>
+<li><strong>Seleção:</strong> aplicar roleta e torneio, interpretando suas probabilidades e pressão seletiva.</li>
+<li><strong>Operadores:</strong> executar crossover de um ponto, mutação por gene e preservação por elitismo.</li>
+<li><strong>Ciclo:</strong> descrever inicialização, avaliação, seleção, reprodução, nova geração e parada.</li>
+<li><strong>Experimentação:</strong> analisar parâmetros, sementes, diversidade e limites de comparação por execução isolada.</li>
+</ul>
+<h2 id="questoes-de-interpretacao">Questões de interpretação</h2>
+<ol>
+<li>Em que sentido o AG amplia a busca local? Ter uma população garante o ótimo global?</li>
+<li>Qual a diferença entre um indivíduo, seu cromossomo e sua aptidão? Como essa distinção aparece no TSP?</li>
+<li>Por que a representação deve ser definida antes de escolher crossover e mutação? Dê um exemplo de operador inválido para permutações.</li>
+<li>Um problema pede minimizar o custo de uma rota. Por que usar diretamente o custo como peso de uma roleta de <strong>maximização</strong> pode inverter a preferência desejada?</li>
+<li>Compare seleção por roleta e por torneio. Por que o melhor candidato da população pode não ser selecionado?</li>
+<li>Como elitismo de um indivíduo afeta o melhor fitness observado entre gerações? Por que isso não garante diversidade?</li>
+<li>Qual a diferença entre probabilidade de mutação <strong>por gene</strong> e <strong>por indivíduo</strong>?</li>
+<li>Quais variáveis experimentais devem ser controladas para comparar duas taxas de mutação sem atribuir diferenças ao acaso?</li>
+</ol>
+<h2 id="exercicio-1-roleta-e-torneio">Exercício 1 - Roleta e torneio</h2>
+<p>Uma população possui aptidões não negativas: A = 1, B = 2, C = 3 e D = 4.</p>
+<ol>
+<li>Calcule as probabilidades da roleta e os intervalos acumulados na ordem A, B, C, D.</li>
+<li>Com sorteio uniforme r = 0,52, indique o indivíduo selecionado e justifique pelo intervalo.</li>
+<li>Num torneio entre A, C e D, quem vence? O resultado depende da aptidão de B?</li>
+<li>Se o tamanho do torneio aumenta sob as mesmas condições de amostragem, qual tendência se espera para a pressão seletiva?</li>
+</ol>
+<h2 id="exercicio-2-operadores-binarios">Exercício 2 - Operadores binários</h2>
+<p>Considere P1 = <code>110|010</code> e P2 = <code>001|111</code>; o símbolo <code>|</code> indica o ponto de corte.</p>
+<ol>
+<li>Produza dois filhos por crossover de um ponto.</li>
+<li>Inverta o bit da posição 2 (contagem a partir de 1, da esquerda para a direita) do primeiro filho.</li>
+<li>A mutação necessariamente melhorou a solução? Qual informação falta?</li>
+<li>Para 16 genes com probabilidade de mutação independente p = 0,10, calcule o <strong>número esperado</strong> de bits mutados; explique por que esse não é o número garantido.</li>
+</ol>
+<h2 id="exercicio-3-pratica-da-imagem-binaria-4-4">Exercício 3 - Prática da imagem binária 4 × 4</h2>
+<p>A imagem-alvo da aula é:</p>
+<pre><code class="language-text">0110
+1001
+1001
+0110
+</code></pre>
+<ol>
+<li>Escreva sua codificação linear de 16 bits.</li>
+<li>Calcule o fitness do candidato <code>0110 / 1010 / 1001 / 0110</code>, considerando coincidências de bits.</li>
+<li>Indique o fitness máximo e o mínimo possível e construa um exemplo que atinja cada extremo.</li>
+<li>Descreva as verificações mínimas para garantir que uma população de 20 indivíduos permaneça válida após crossover, mutação e elitismo.</li>
+<li>Uma nova geração contém a elite e pares de filhos; como evitar ultrapassar o tamanho da população quando ele é ímpar?</li>
+<li>Compare qualitativamente taxas de mutação de 0,01 e 0,20: o que observaria nas curvas? Por que não concluiria antecipadamente qual é melhor?</li>
+</ol>
+<h2 id="exercicio-4-transferencia-para-o-tsp">Exercício 4 - Transferência para o TSP</h2>
+<p>Um candidato do TSP representa a ordem em que as cidades são visitadas.</p>
+<ol>
+<li>Explique a diferença entre a aptidão binária da imagem e o custo de uma rota fechada.</li>
+<li>Mostre como um crossover de um ponto, copiado diretamente da codificação binária, pode gerar uma permutação inválida.</li>
+<li>Proponha uma estratégia geral para garantir descendentes válidos, sem precisar programá-la.</li>
+<li>Indique o que deve permanecer igual se duas implementações de AG forem comparadas experimentalmente.</li>
+</ol>
+<h2 id="pratica-com-python">Prática com Python</h2>
+<p>Consulte <a href="https://github.com/tiagofga/EC-IA/blob/main/exemplos/12-algoritmos-geneticos/ag_imagem_4x4.py"><code>ag_imagem_4x4.py</code></a> <strong>após</strong> resolver os exercícios. O script é uma solução de referência liberada após a prática.</p>
+<pre><code class="language-bash">python ag_imagem_4x4.py --seed 42 --testes --sem-grafico
+python ag_imagem_4x4.py --seed 42 --mutacao 0.20 --sem-grafico
+</code></pre>
+<p>Registre para cada execução a semente, taxa de mutação, melhor fitness e geração de parada. Repita com sementes 0, 1 e 42, mantendo a mesma imagem e demais parâmetros. A comparação com três sementes é exploratória, não uma demonstração estatística de superioridade.</p>
+<h2 id="discussao">Discussão</h2>
+<p>Se um algoritmo encontra a imagem-alvo rapidamente, isso o torna adequado para qualquer problema de otimização? Relacione dificuldade da instância, codificação, função objetivo e orçamento de avaliações.</p>
+<h2 id="autoavaliacao">Autoavaliação</h2>
+<ul>
+<li>[ ] Identifico entradas, saídas e restrições do problema.</li>
+<li>[ ] Calculo probabilidades de roleta e resolvo torneios.</li>
+<li>[ ] Executo crossover e mutação binária manualmente.</li>
+<li>[ ] Explico por que elitismo preserva o melhor candidato conhecido.</li>
+<li>[ ] Reconheço operadores incompatíveis com permutações.</li>
+<li>[ ] Registro parâmetros e sementes sem tirar conclusões universais.</li>
+<li>[ ] Relaciono a evolução por operadores ao compartilhamento de informação da Aula 13.</li>
+</ul>
+<p><a href="https://github.com/tiagofga/EC-IA/tree/main/aulas/12-algoritmos-geneticos">Slides da Aula 12</a> · <a href="../../notas/12-algoritmos-geneticos/">Nota visual 12</a></p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/tiagofga/EC-IA" class="fa fa-code-fork" style="color: #fcfcfc"> tiagofga/EC-IA</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../assets/theme-toggle.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+      <script src="../../assets/mermaid-init.js"></script>
+      <script src="../../assets/downloads.js"></script>
+      <script src="../../assets/vercel-analytics.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://tiagofga.github.io/EC-IA/notas/13-inteligencia-enxames/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Nota visual 13 - Inteligência de Enxames - EC-IA</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/extra.css" rel="stylesheet" />
+        <link href="../../assets/theme.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Nota visual 13 - Intelig\u00eancia de Enxames";
+        var mkdocs_page_input_path = "notas/13-inteligencia-enxames/README.md";
+        var mkdocs_page_url = "/EC-IA/notas/13-inteligencia-enxames/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> EC-IA
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Início</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../planos/">Plano didático</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../roadmap/">Roadmap</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../aulas/">Aulas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Notas visuais</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../estudos-guiados/">Estudos guiados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../atividades/">Atividades</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../simulados/">Simulados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../visualizacoes/">Visualizações</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../pseudocodigos/">Pseudocódigos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../exemplos/">Exemplos Python</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../trabalhos/">Trabalhos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://github.com/tiagofga/EC-IA">Repositório no GitHub</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">EC-IA</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Nota visual 13 - Inteligência de Enxames</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/tiagofga/EC-IA/edit/master/docs/notas/13-inteligencia-enxames/README.md">Edit on tiagofga/EC-IA</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="nota-visual-13-inteligencia-de-enxames">Nota visual 13 - Inteligência de Enxames</h1>
+<p><img alt="Mapa de síntese" src="nota-visual-aula-13.svg" /></p>
+<h2 id="mapa-conceitual">Mapa conceitual</h2>
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;Problema e função objetivo&quot;] --&gt; B{&quot;Representação&quot;}
+  B --&gt; C[&quot;ACO: construção por escolhas&quot;]
+  B --&gt; D[&quot;PSO: partículas e velocidades&quot;]
+  C --&gt; E[&quot;Feromônio + informação heurística&quot;]
+  E --&gt; F[&quot;Amostragem de alternativas admissíveis&quot;]
+  F --&gt; G[&quot;Avaliar e atualizar trilhas&quot;]
+  G --&gt; C
+  D --&gt; H[&quot;pbest e gbest&quot;]
+  H --&gt; I[&quot;Atualizar velocidade e posição&quot;]
+  I --&gt; J[&quot;Avaliar e atualizar memórias&quot;]
+  J --&gt; D
+  G --&gt; K[&quot;Comparar qualidade por avaliações&quot;]
+  J --&gt; K
+  classDef base fill:#e9eafb,stroke:#2435a0,color:#17215e;
+  classDef aco fill:#fff0d7,stroke:#ad7321,color:#71460c;
+  classDef pso fill:#e1f2f0,stroke:#20766c,color:#12463f;
+  class A,B,K base;
+  class C,E,F,G aco;
+  class D,H,I,J pso;
+</code></pre>
+<h2 id="conceitos-em-sequencia">Conceitos em sequência</h2>
+<ol>
+<li><strong>Inteligência coletiva:</strong> regras locais e troca explícita ou implícita de informações podem produzir comportamento global coordenado. Inspiração biológica não é reprodução fiel da natureza nem garantia de ótimo.</li>
+<li><strong>ACO:</strong> cada formiga constrói uma solução; feromônios registram experiência coletiva. No TSP, as escolhas incidem sobre cidades ainda admissíveis e podem usar informação heurística de distância.</li>
+<li><strong>Transição probabilística:</strong> a chance de escolher uma aresta admissível é proporcional a <code>τ^α η^β</code>. Feromônio e heurística têm influências distintas; a próxima cidade é <strong>amostrada</strong>, não necessariamente a mais provável.</li>
+<li><strong>Evaporação e reforço:</strong> o Ant System reduz todas as trilhas por <code>(1 − ρ)</code> e deposita <code>Q/L</code> nas utilizadas pelas formigas. Evaporação e reforço ajustam a memória coletiva; não impedem sozinhos estagnação.</li>
+<li><strong>PSO:</strong> partículas têm posições e velocidades; a atualização combina inércia, atração pelo melhor individual (<code>pbest</code>) e pelo melhor coletivo (<code>gbest</code>). O PSO clássico opera naturalmente com variáveis contínuas.</li>
+<li><strong>Adaptação binária e avaliação:</strong> para a imagem de 16 bits, ACO usa feromônios para duas escolhas por bit e BPSO transforma velocidades reais em probabilidades por sigmoide. A comparação exige o mesmo alvo, a mesma função objetivo e orçamento equivalente de avaliações.</li>
+</ol>
+<h2 id="aco-no-tsp-regra-de-decisao">ACO no TSP: regra de decisão</h2>
+<p>Com <code>η_ij = 1/d_ij</code> para distâncias positivas e conjunto de cidades admissíveis <code>N_i</code>, a probabilidade de transição é:</p>
+<pre><code class="language-text">P(i → j) = [τ_ij^α · η_ij^β] / Σ[k em N_i] [τ_ik^α · η_ik^β]
+</code></pre>
+<p>No exemplo da aula, os pesos são 0,25 (B), 0,125 (C) e 0,04 (D); a soma é 0,415. As probabilidades são aproximadamente <strong>60,24%</strong>, <strong>30,12%</strong> e <strong>9,64%</strong>. Com sorteio <code>r = 0,75</code> e ordem B, C, D, a cidade sorteada é <strong>C</strong>, embora B seja a mais provável.</p>
+<p>No Ant System apresentado, as rotas são construídas e avaliadas antes da atualização dos feromônios. Para cada aresta:</p>
+<pre><code class="language-text">τ_ij ← (1 − ρ) τ_ij + Σ[formigas que usaram (i,j)] Q / L_k
+</code></pre>
+<h2 id="pso-movimento-guiado-por-memoria">PSO: movimento guiado por memória</h2>
+<pre><code class="language-text">v_i ← w · v_i + c₁ · r₁ · (pbest_i − x_i) + c₂ · r₂ · (gbest_i − x_i)
+x_i ← x_i + v_i                 (PSO contínuo)
+</code></pre>
+<ul>
+<li><strong>Inércia (<code>w</code>):</strong> mantém influência da velocidade anterior.</li>
+<li><strong>Componente cognitiva (<code>c₁</code>):</strong> atração pelo melhor resultado da própria partícula.</li>
+<li><strong>Componente social (<code>c₂</code>):</strong> atração pelo melhor resultado compartilhado.</li>
+<li><strong>Aleatoriedade (<code>r₁</code>, <code>r₂</code>):</strong> modula a atualização.</li>
+</ul>
+<p>Na adaptação <strong>BPSO</strong>, não se utiliza a atualização contínua <code>x ← x + v</code> para os bits. Em vez disso, a velocidade determina a probabilidade de bit 1:</p>
+<pre><code class="language-text">S(v) = 1 / (1 + exp(−v))
+x_i = 1 se u &lt; S(v_i), senão 0; u ~ U(0,1)
+</code></pre>
+<p>Quando <code>v = 0</code>, a probabilidade é 50%; velocidades positivas elevam a probabilidade de 1 e negativas a reduzem.</p>
+<h2 id="comparacao-mesmo-problema-mecanismos-diferentes">Comparação: mesmo problema, mecanismos diferentes</h2>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>AG</th>
+<th>ACO</th>
+<th>PSO / BPSO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Informação compartilhada</td>
+<td>Indivíduos selecionados como pais</td>
+<td>Feromônios das escolhas realizadas</td>
+<td>Melhores posições individuais e coletivas</td>
+</tr>
+<tr>
+<td>Geração de candidatos</td>
+<td>Crossover e mutação</td>
+<td>Construção probabilística</td>
+<td>Atualização de velocidade e posição</td>
+</tr>
+<tr>
+<td>Representação na prática</td>
+<td>Cromossomo binário de 16 bits</td>
+<td>Duas trilhas por pixel (0 e 1)</td>
+<td>Posição binária e velocidade real</td>
+</tr>
+<tr>
+<td>Risco relevante</td>
+<td>Perda de diversidade</td>
+<td>Estagnação por reforço excessivo</td>
+<td>Convergência prematura e sensibilidade aos parâmetros</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Observação:</strong> o ACO binário da prática usa apenas feromônio por bit, sem o termo de distância do TSP. Sua avaliação é <strong>global</strong>: um candidato com fitness 14 reforça todas as escolhas que fez, inclusive eventuais bits incorretos. Não há identificação individual de quais pixels receberam acerto.</p>
+<h2 id="revisao-de-30-segundos">Revisão de 30 segundos</h2>
+<p>ACO compartilha preferências por feromônios e constrói soluções por amostragem; PSO move candidatos conforme inércia, memória própria e informação social. Ambos exigem representação compatível, parâmetros controlados e avaliação cuidadosa.</p>
+<h2 id="erros-conceituais-frequentes">Erros conceituais frequentes</h2>
+<ul>
+<li>Afirmar que ACO sempre escolhe a aresta de maior probabilidade.</li>
+<li>Confundir <code>ρ</code> (fração evaporada) com fator de retenção.</li>
+<li>Supor que o reforço de ACO binário identifica quais bits estão corretos.</li>
+<li>Interpretar velocidade no BPSO como deslocamento geométrico de um bit.</li>
+<li>Comparar métodos apenas por número de iterações, ignorando avaliações do fitness.</li>
+<li>Inferir superioridade geral a partir de uma execução em um problema de 16 bits.</li>
+</ul>
+<h2 id="revisao-de-1-minuto">Revisão de 1 minuto</h2>
+<p>Explique uma escolha de rota em ACO, a evaporação seguida de depósito e a diferença entre <code>pbest</code> e <code>gbest</code>. Em seguida, descreva por que a prática converte PSO em BPSO para usar exatamente a representação binária da Aula 12.</p>
+<h2 id="checklist">Checklist</h2>
+<ul>
+<li>[ ] Diferencio inteligência de enxames e operadores de AG.</li>
+<li>[ ] Calculo uma probabilidade de transição com feromônio e heurística.</li>
+<li>[ ] Aplico evaporação e soma de depósitos de feromônio.</li>
+<li>[ ] Identifico os papéis de <code>w</code>, <code>c₁</code>, <code>c₂</code>, <code>pbest</code> e <code>gbest</code>.</li>
+<li>[ ] Explico o papel da sigmoide na atualização binária.</li>
+<li>[ ] Distingo comparação por avaliações de comparação por iterações.</li>
+<li>[ ] Consigo relacionar AG, ACO e BPSO ao Trabalho 02 sem reutilizar operadores incompatíveis.</li>
+</ul>
+<p><a href="../../estudos-guiados/13-inteligencia-enxames/">Estudo guiado</a> · <a href="https://github.com/tiagofga/EC-IA/tree/main/aulas/13-inteligencia-enxames">Slides da Aula 13</a> · <a href="https://github.com/tiagofga/EC-IA/tree/main/exemplos/13-inteligencia-enxames">Código-base da prática com TODOs</a></p>
+<p><strong>Próxima conexão:</strong> aprofundar as decisões de representação e avaliação de AG, ACO e PSO no Trabalho 02; notas e estudos guiados não fornecem as soluções dos checkpoints de código.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/tiagofga/EC-IA" class="fa fa-code-fork" style="color: #fcfcfc"> tiagofga/EC-IA</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../assets/theme-toggle.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+      <script src="../../assets/mermaid-init.js"></script>
+      <script src="../../assets/downloads.js"></script>
+      <script src="../../assets/vercel-analytics.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
