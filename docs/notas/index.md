@@ -14,23 +14,23 @@ Selecione a nota correspondente à aula. Os links dão acesso direto aos mapas c
 
 ### Fundamentos de Inteligência Artificial
 
-- **Aula 01 - Introdução à IA:** [Abrir nota](./01-introducao/README.md) — Conceitos, racionalidade e abordagens da IA.
-- **Aula 02 - Agentes Inteligentes:** [Abrir nota](./02-agentes/README.md) — Percepções, PEAS e arquiteturas de agentes.
-- **Aula 03 - Conhecimento e Solução de Problemas:** [Abrir nota](./03-conhecimento/README.md) — Estados, representação e formulação de problemas.
+- **Aula 01 - Introdução à IA:** [Abrir nota](./01-introducao/README.md): Conceitos, racionalidade e abordagens da IA.
+- **Aula 02 - Agentes Inteligentes:** [Abrir nota](./02-agentes/README.md): Percepções, PEAS e arquiteturas de agentes.
+- **Aula 03 - Conhecimento e Solução de Problemas:** [Abrir nota](./03-conhecimento/README.md): Estados, representação e formulação de problemas.
 
 ### Busca, lógica e raciocínio
 
-- **Aula 04 - Estratégias de Busca:** [Abrir nota](./04-busca/README.md) — BFS, DFS, UCS, Gulosa, A* e busca local.
-- **Aula 05 - Lógica e Raciocínio:** [Abrir nota](./05-logica/README.md) — Wumpus, modelos, consequência lógica e resolução.
-- **Aula 06 - LPO e Inferência:** [Abrir nota](./06-lpo-inferencia/README.md) — Quantificadores, unificação e encadeamento.
-- **Aula 07 - Prolog:** [Abrir nota](./07-prolog/README.md) — Consultas, unificação, retrocesso e recursão.
+- **Aula 04 - Estratégias de Busca:** [Abrir nota](./04-busca/README.md): BFS, DFS, UCS, Gulosa, A* e busca local.
+- **Aula 05 - Lógica e Raciocínio:** [Abrir nota](./05-logica/README.md): Wumpus, modelos, consequência lógica e resolução.
+- **Aula 06 - LPO e Inferência:** [Abrir nota](./06-lpo-inferencia/README.md): Quantificadores, unificação e encadeamento.
+- **Aula 07 - Prolog:** [Abrir nota](./07-prolog/README.md): Consultas, unificação, retrocesso e recursão.
 
 ### Aprendizagem e avaliação de modelos
 
-- **Aula 08 - Aprendizagem com Exemplos:** [Abrir nota](./08-aprendizagem-exemplos/README.md) — Classificação, regressão, entropia e Gini.
-- **Aula 09 - KNN:** [Abrir nota](./09-knn/README.md) — Distância, preparação de dados e validação cruzada.
-- **Aula 10 - SVM e PCA:** [Abrir nota](./10-svm/README.md) — Margens, kernels, RBF e componentes principais.
-- **Aula 11 - Comparação DT, KNN e SVM:** [Abrir nota](./11-atividade-comparacao/README.md) — Métricas, matriz de confusão e comparação experimental.
+- **Aula 08 - Aprendizagem com Exemplos:** [Abrir nota](./08-aprendizagem-exemplos/README.md): Classificação, regressão, entropia e Gini.
+- **Aula 09 - KNN:** [Abrir nota](./09-knn/README.md): Distância, preparação de dados e validação cruzada.
+- **Aula 10 - SVM e PCA:** [Abrir nota](./10-svm/README.md): Margens, kernels, RBF e componentes principais.
+- **Aula 11 - Comparação DT, KNN e SVM:** [Abrir nota](./11-atividade-comparacao/README.md): Métricas, matriz de confusão e comparação experimental.
 
 
 ### Computação natural
