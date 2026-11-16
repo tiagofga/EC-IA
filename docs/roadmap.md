@@ -30,7 +30,7 @@ Os recursos marcados como integrados à atualização estão preparados para rev
 | Notas 08 a 11 | Integradas à atualização | Diagramas específicos de DT, KNN, SVM/PCA e comparação; exemplos numéricos e revisão ativa |
 | Notas 12 e 13 | Integradas à atualização | Refinamento dos diagramas de AG, ACO e BPSO, preservando os conceitos e exemplos |
 | README principal | Integrado à atualização | Catálogo completo, percurso didático e disponibilidade dos recursos |
-| Visualizações 14 e 15 | Integradas à atualização | NSA, CLONALG e mecanismos ensemble com parâmetros, estados e decisões interpretáveis |
+| Visualizações 14 e 15 | Integradas à atualização | NSA, CLONALG e mecanismos ensemble com parâmetros, estados e decisões interpretáveis; comparação integrada de AG, ACO, BPSO e CLONALG com orçamento comum |
 | Exemplos Python 14 e 15 | Integrados à atualização | Códigos das práticas, instruções de execução, dependências, sementes e testes |
 | Simulados - Prova 2 | A disponibilizar | Revisão integrada das Aulas **05 a 12**, conforme o escopo definido para a avaliação; enunciados sem gabaritos |
 | Consolidação | Planejada | Revisão de links, acessibilidade, exemplos, build estrito, PR e validação de publicação |

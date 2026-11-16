@@ -35,6 +35,8 @@ O escopo acima inclui os materiais preparados na branch de atualização, cuja p
 | Exemplos Python | Integrados e testados | Integrados e testados |
 | Visualizações interativas | NSA e CLONALG | Voting, Bagging, Random Forest, AdaBoost, Gradient Boosting, Stacking e diversidade |
 
+O laboratório integrado de otimização permite comparar AG, ACO, BPSO e CLONALG no mesmo problema e com orçamento comum de avaliações.
+
 Também foram revisadas as notas visuais das Aulas 08 a 13 e atualizados o README, o CHANGELOG e o roadmap.
 
 ## Validação e próximos passos

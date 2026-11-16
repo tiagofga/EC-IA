@@ -112,9 +112,9 @@ Os laboratórios permitem explorar conceitos por meio de controles e representa�
 <a class="ecia-lab-link" href="12-algoritmos-geneticos/">Abrir laboratório AG ↗</a>
 </article>
 <article class="ecia-lab-card">
-<h3>ACO e BPSO</h3>
-<p>Explore feromônios, atualização de velocidades, memórias e convergência no mesmo alvo binário da Aula 12.</p>
-<a class="ecia-lab-link" href="13-inteligencia-enxames/">Abrir laboratório de enxames ↗</a>
+<h3>Laboratório integrado: AG, ACO, BPSO e CLONALG</h3>
+<p>Compare os quatro métodos no mesmo alvo binário 4 × 4, com orçamento comum de avaliações, parâmetros específicos e estados internos.</p>
+<a class="ecia-lab-link" href="13-inteligencia-enxames/">Abrir laboratório integrado ↗</a>
 </article>
 <article class="ecia-lab-card">
 <h3>Sistemas Imunológicos Artificiais</h3>

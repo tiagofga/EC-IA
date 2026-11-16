@@ -66,7 +66,7 @@ As Aulas 04, 05, 06 e 12 a 15 possuem dois PDFs. Nas Aulas 12 a 15, os arquivos 
 
 As notas das Aulas 08 a 15 apresentam diagramas específicos dos mecanismos estudados, exemplos interpretáveis, erros frequentes e conexões entre teoria e prática. As Aulas 14 e 15 incluem estudos guiados, pseudocódigos, exemplos Python e laboratórios interativos.
 
-Os visualizadores de busca da Aula 04 reproduzem traces pré-calculados; os laboratórios de lógica, Prolog, aprendizagem supervisionada e computação natural permitem acompanhar os mecanismos específicos de cada método. Os códigos de ACO e BPSO incluem etapas TODO para os estudantes completarem.
+Os visualizadores de busca da Aula 04 reproduzem traces pré-calculados; os laboratórios de lógica, Prolog, aprendizagem supervisionada e computação natural permitem acompanhar os mecanismos específicos de cada método. O laboratório integrado de otimização reúne AG, ACO, BPSO e CLONALG com orçamento comum de avaliações. Os códigos de ACO e BPSO incluem etapas TODO para os estudantes completarem.
 
 ## Avaliações e trabalhos
 

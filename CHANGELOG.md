@@ -6,6 +6,8 @@ O histórico de commits segue Conventional Commits.
 
 ## [Unreleased]
 
+- Laboratório integrado de otimização: CLONALG junto a AG, ACO e BPSO, com orçamento comum de avaliações e estados internos específicos.
+
 ### Added
 
 - Aulas 14 e 15: PDFs teóricos e práticos de Sistemas Imunológicos Artificiais e Algoritmos Ensemble.
