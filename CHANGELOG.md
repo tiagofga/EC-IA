@@ -17,6 +17,7 @@ O histórico de commits segue Conventional Commits.
 
 ### Changed
 
+- Cópias geradas pelo MkDocs não são mais versionadas; o build preserva a árvore de trabalho limpa e os materiais originais permanecem como fonte única.
 - Laboratório integrado de otimização: CLONALG junto a AG, ACO e BPSO, com orçamento comum de avaliações e estados internos específicos.
 - Padronização da documentação e sincronização dos materiais públicos com as cópias utilizadas pelo MkDocs.
 

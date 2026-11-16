@@ -16,14 +16,21 @@
 **/solutions/**
 
 # Ambiente local
-site/
 .DS_Store
 .vscode/
 .idea/
 
+# Ambientes virtuais e cache Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
 # Artefatos gerados pelo build do MkDocs
-docs/downloads/
-docs/notas/01-introducao/
-docs/notas/02-agentes/
-docs/notas/03-conhecimento/
-docs/notas/04-busca/
+/site/
+/docs/downloads/
+/docs/notas/[0-9][0-9]-*/
+/docs/estudos-guiados/[0-9][0-9]-*/
+/docs/pseudocodigos/[0-9][0-9]-*/
+/docs/visualizacoes/[0-9][0-9]-*/
+/docs/simulados/

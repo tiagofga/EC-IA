@@ -248,4 +248,4 @@ flowchart LR
 - [ ] Interpreto listas por cabeça e cauda.
 - [ ] Entendo por que a ordem das cláusulas e metas pode afetar a execução e o término.
 
-**Próximo passo:** faça o [Estudo Guiado 07](../../estudos-guiados/07-prolog/README.md), explore a [visualização de resolução de metas](../../visualizacoes/07-prolog/resolucao-metas/README.md) e resolva as questões de Prolog da [Lista 05](../../atividades/).
+**Próximo passo:** faça o [Estudo Guiado 07](../../estudos-guiados/07-prolog/README.md), explore a [visualização de resolução de metas](../../visualizacoes/07-prolog/resolucao-metas/README.md) e resolva as questões de Prolog da [Lista 05](../../atividades/05-logica-lpo-prolog/README.md).
