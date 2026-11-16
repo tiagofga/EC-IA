@@ -146,8 +146,8 @@ for unit in 12-algoritmos-geneticos 13-inteligencia-enxames; do
   cp -R "pseudoalgoritmos/$unit" "docs/pseudocodigos/$unit"
 done
 
-# Estudos guiados das Aulas 12 e 13.
-for unit in 12-algoritmos-geneticos 13-inteligencia-enxames; do
+# Estudos guiados das Aulas 12 a 15.
+for unit in 12-algoritmos-geneticos 13-inteligencia-enxames 14-sistemas-imunologicos 15-ensemble; do
   rm -rf "docs/estudos-guiados/$unit"
   cp -R "estudos-guiados/$unit" "docs/estudos-guiados/$unit"
 done

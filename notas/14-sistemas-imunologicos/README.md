@@ -80,7 +80,7 @@ pₘ(a) = pmin + (pmax - pmin) · (1 - a)
 
 Por exemplo, com n = 3 e β = 2, os três selecionados geram 6, 3 e 2 clones. Com pmin = 0,02 e pmax = 0,30, uma afinidade 0,8 produz pₘ = 0,076; afinidade 0,2 produz pₘ = 0,244. São probabilidades, não números garantidos de bits invertidos.
 
-As regras são variantes didáticas, não fórmulas universais de CLONALG. Clonar mais também aumenta o custo de avaliação.
+As regras são variantes didáticas, não fórmulas universais de CLONALG. A prática usa arredondamento para cima (ceil) na clonagem e afinidade fitness/16 para a imagem binária; a teoria ilustra arredondamento para baixo. Clonar mais também aumenta o custo de avaliação.
 
 ## Exemplo: seleção de itens
 
@@ -136,6 +136,6 @@ Explique por que o NSA rejeita um detector próximo de um padrão normal. Depois
 - [ ] Calculo fitness com penalização e respeito às restrições.
 - [ ] Comparo AG, ACO, BPSO e CLONALG por avaliações e sementes.
 
-[Slides da Aula 14](https://github.com/tiagofga/EC-IA/tree/main/aulas/14-sistemas-imunologicos)
+[Estudo guiado](../../estudos-guiados/14-sistemas-imunologicos/README.md) · [Slides da Aula 14](https://github.com/tiagofga/EC-IA/tree/main/aulas/14-sistemas-imunologicos)
 
 **Próxima conexão:** enquanto as metaheurísticas combinam mecanismos de busca sobre candidatos, os métodos ensemble combinam predições de modelos de aprendizagem para melhorar a generalização.

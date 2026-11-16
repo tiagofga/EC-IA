@@ -58,7 +58,7 @@ As Aulas 04, 05, 06 e 12 a 15 possuem dois PDFs. Nas Aulas 12 a 15, os arquivos 
 | Recurso | Disponibilidade | Finalidade |
 |---|---|---|
 | [Notas visuais](https://tiagofga.github.io/EC-IA/notas/) | Aulas 01 a 15 | Mapas conceituais, exemplos, fórmulas contextualizadas, sínteses e checklists |
-| [Estudos guiados](https://tiagofga.github.io/EC-IA/estudos-guiados/) | Aulas 01 a 13 | Perguntas, revisão ativa e autoavaliação |
+| [Estudos guiados](https://tiagofga.github.io/EC-IA/estudos-guiados/) | Aulas 01 a 15 | Perguntas, revisão ativa e autoavaliação |
 | [Visualizações](https://tiagofga.github.io/EC-IA/visualizacoes/) | Conforme o catálogo | Acompanhamento de algoritmos e mecanismos de raciocínio |
 | [Pseudocódigos](https://tiagofga.github.io/EC-IA/pseudocodigos/) | Conforme o catálogo | Estruturas e procedimentos conceituais |
 | [Exemplos Python](exemplos/README.md) | Aulas 08 a 13 | Implementação e experimentação |

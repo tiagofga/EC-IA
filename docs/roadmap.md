@@ -20,7 +20,8 @@ A publicação dos materiais já consolidados pode ser consultada nas [aulas](au
 | Revisão das notas 08 a 11 | Reconstruir mapas conceituais específicos de DT, KNN, SVM/PCA e comparação de modelos; ampliar exemplos resolvidos e questões de interpretação | Integrada | Cada nota apresenta mecanismo próprio, exemplo progressivo, limitações e revisão ativa |
 | Refinamento das notas 12 e 13 | Aprimorar diagramas de AG, ACO e PSO/BPSO, preservando exemplos numéricos, fórmulas e conteúdos corretos já publicados | Integrado | Diagramas legíveis e fiéis às etapas dos algoritmos, com conexões explícitas às práticas |
 | Notas visuais 14 e 15 | Adotar critérios editoriais e pedagógicos das notas revisadas | Integradas | Revisão comparativa com material aprovado |
-| Materiais complementares | Estudos guiados, pseudocódigos, visualizações e exemplos Python das Aulas 14 e 15, quando pertinentes | Planejados | Material integrado ao site, com navegação revisada |
+| Estudos guiados 14 e 15 | Questões de interpretação, exercícios numéricos, prática e conexão com o Trabalho 02 | Integrados | Roteiros de revisão ativa, sem gabaritos |
+| Materiais complementares | Pseudocódigos, visualizações e exemplos Python das Aulas 14 e 15, quando pertinentes | Planejados | Material integrado ao site, com navegação revisada |
 | Consolidação | Revisão dos links, acessibilidade, exercícios, exemplos e build estrito antes de nova versão | Planejada | PR aprovado, CI/deployment validado e changelog atualizado |
 
 ## Qualidade das notas visuais
