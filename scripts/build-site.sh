@@ -140,27 +140,27 @@ for unit in 02-agentes 03-conhecimento 04-busca; do
   cp -R "pseudoalgoritmos/$unit" "docs/pseudocodigos/$unit"
 done
 
-# Pseudocódigos conceituais das Aulas 12 e 13.
-for unit in 12-algoritmos-geneticos 13-inteligencia-enxames; do
+# Pseudocódigos conceituais das Aulas 12 a 15.
+for unit in 12-algoritmos-geneticos 13-inteligencia-enxames 14-sistemas-imunologicos 15-ensemble; do
   rm -rf "docs/pseudocodigos/$unit"
   cp -R "pseudoalgoritmos/$unit" "docs/pseudocodigos/$unit"
 done
 
-# Estudos guiados das Aulas 12 e 13.
-for unit in 12-algoritmos-geneticos 13-inteligencia-enxames; do
+# Estudos guiados das Aulas 12 a 15.
+for unit in 12-algoritmos-geneticos 13-inteligencia-enxames 14-sistemas-imunologicos 15-ensemble; do
   rm -rf "docs/estudos-guiados/$unit"
   cp -R "estudos-guiados/$unit" "docs/estudos-guiados/$unit"
 done
 
-# Notas visuais das Aulas 12 e 13.
-for unit in 12-algoritmos-geneticos 13-inteligencia-enxames; do
+# Notas visuais das Aulas 12 a 15.
+for unit in 12-algoritmos-geneticos 13-inteligencia-enxames 14-sistemas-imunologicos 15-ensemble; do
   rm -rf "docs/notas/$unit"
   cp -R "notas/$unit" "docs/notas/$unit"
 done
 
-# Laboratórios das Aulas 12 e 13: o README entra no MkDocs, e o HTML
+# Laboratórios das Aulas 12 a 15: o README entra no MkDocs, e o HTML
 # independente é publicado depois do build, como nas aulas anteriores.
-for unit in 12-algoritmos-geneticos 13-inteligencia-enxames; do
+for unit in 12-algoritmos-geneticos 13-inteligencia-enxames 14-sistemas-imunologicos 15-ensemble; do
   rm -rf "docs/visualizacoes/$unit"
   mkdir -p "docs/visualizacoes/$unit"
   cp "visualizacoes/$unit/README.md" "docs/visualizacoes/$unit/README.md"
@@ -183,7 +183,7 @@ for unit in 08-aprendizagem-exemplos 09-knn 10-svm 11-atividade-comparacao; do
   cp "visualizacoes/$unit/index.html" "site/visualizacoes/$unit/index.html"
 done
 
-for unit in 12-algoritmos-geneticos 13-inteligencia-enxames; do
+for unit in 12-algoritmos-geneticos 13-inteligencia-enxames 14-sistemas-imunologicos 15-ensemble; do
   mkdir -p "site/visualizacoes/$unit"
   cp "visualizacoes/$unit/index.html" "site/visualizacoes/$unit/index.html"
 done

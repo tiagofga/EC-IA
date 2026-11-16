@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>EC-IA | Laboratório de Algoritmos Ensemble</title>
+  <style>
+    :root{font-family:system-ui,Arial,sans-serif;color:#1b2c43;background:#f3f6fb}*{box-sizing:border-box}body{margin:0;line-height:1.5}
+    .wrap{max-width:1180px;margin:auto;padding:16px}header{background:#293b9d;color:white;border-radius:12px;padding:20px}h1{margin:0;font-size:1.65rem}h2{font-size:1.13rem;margin-top:0}h3{font-size:1rem}
+    .layout{display:grid;grid-template-columns:265px minmax(0,1fr);gap:16px;margin-top:16px}.panel{background:white;border:1px solid #cbd6e4;border-radius:12px;padding:16px;margin-bottom:14px;min-width:0}
+    label{display:block;font-weight:600;margin:12px 0}input,select{display:block;width:100%;padding:8px;border:1px solid #8296b3;border-radius:6px;font:inherit}
+    button{border:1px solid #293b9d;color:white;background:#293b9d;border-radius:7px;padding:9px 13px;cursor:pointer;margin:3px;font:inherit}button.alt{color:#293b9d;background:white}button:disabled{opacity:.45;cursor:default}
+    button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #d7a32c;outline-offset:2px}.row{display:flex;flex-wrap:wrap;gap:12px}
+    .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:8px;margin:12px 0}.metric{background:#eef2ff;border-radius:8px;padding:10px}.metric b{display:block;font-size:1.3rem}
+    svg{display:block;width:100%;height:auto;border:1px solid #cbd5e1;border-radius:8px;background:#fff}table{border-collapse:collapse;width:100%;font-size:.9rem}td,th{padding:7px;border-bottom:1px solid #dfe5ef;text-align:left;white-space:nowrap}.scroll{overflow-x:auto}
+    .small{color:#53647d;font-size:.9rem}.notice{border-left:4px solid #c68d20;background:#fff4df;padding:10px;border-radius:5px}.good{color:#17664b;font-weight:700}.bad{color:#aa3a32;font-weight:700}
+    .bar{height:24px;background:#eef1f8;position:relative;border-radius:5px;overflow:hidden;min-width:120px}.bar span{display:block;height:100%;background:#293b9d}.bar i{position:absolute;inset:0;display:grid;place-items:center;font-style:normal;color:#17215e;font-weight:700;text-shadow:0 0 3px white,0 0 4px white,0 0 5px white}
+    a{color:#1d55a5}[hidden]{display:none!important}@media(max-width:750px){.layout{grid-template-columns:1fr}h1{font-size:1.35rem}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header><h1>EC-IA • Laboratório de Algoritmos Ensemble</h1><p>Compare regras de combinação, reamostragem, correções sequenciais e predições fora do fold.</p></header>
+  <main class="layout">
+    <aside class="panel">
+      <h2>Experimento</h2>
+      <label>Método<select id="method"><option value="voting">Voting - hard e soft</option><option value="diversity">Diversidade e variância</option><option value="bagging">Bagging</option><option value="forest">Random Forest</option><option value="ada">AdaBoost binário</option><option value="gradient">Gradient Boosting</option><option value="stacking">Stacking</option></select></label>
+      <div data-mode="diversity">
+        <label>Número de preditores M<input id="modelsCount" type="number" min="1" max="100" value="10"></label>
+        <label>Correlação comum ρ<input id="rho" type="number" min="0" max="1" step=".05" value=".5"></label>
+        <label>Variância individual σ²<input id="variance" type="number" min=".1" max="10" step=".1" value="1"></label>
+      </div>
+      <div data-mode="voting">
+        <p class="small">Probabilidade da classe 1 e peso de cada preditor; P(0) = 1 − P(1).</p>
+        <label>DT - P(1)<input id="p0" type="number" min="0" max="1" step=".01" value=".51"></label>
+        <label>DT - peso<input id="w0" type="number" min="0" max="10" step=".1" value="1"></label>
+        <label>KNN - P(1)<input id="p1" type="number" min="0" max="1" step=".01" value=".52"></label>
+        <label>KNN - peso<input id="w1" type="number" min="0" max="10" step=".1" value="1"></label>
+        <label>SVM - P(1)<input id="p2" type="number" min="0" max="1" step=".01" value=".05"></label>
+        <label>SVM - peso<input id="w2" type="number" min="0" max="10" step=".1" value="1"></label>
+      </div>
+      <div data-mode="bagging forest stacking"><label>Seed<input id="seed" type="number" min="0" max="4294967295" value="42"></label></div>
+      <div data-mode="bagging forest"><label>Número de árvores<input id="trees" type="number" min="1" max="20" value="5"></label><label>Profundidade máxima<input id="depth" type="number" min="1" max="4" value="2"></label></div>
+      <div data-mode="forest"><label>Atributos candidatos por nó<select id="features"><option value="1">1</option><option value="2">2 (todos)</option></select></label></div>
+      <div data-mode="ada gradient"><label>Número de etapas<input id="rounds" type="number" min="1" max="20" value="6"></label></div>
+      <div data-mode="gradient"><label>Taxa de aprendizagem η<input id="eta" type="number" min=".05" max="1" step=".05" value=".5"></label></div>
+      <div data-mode="stacking"><p class="small">Três folds estratificados. Bases didáticas: árvore rasa, KNN e centroide mais próximo. Metaestimador: regressão logística.</p></div>
+      <button id="run">Reiniciar treinamento</button><button class="alt" id="reset">Restaurar parâmetros</button>
+      <p class="small">Alterações são aplicadas ao reiniciar. A consulta pode ser movida durante a inspeção de uma etapa.</p>
+      <p id="formError" role="alert" class="bad"></p>
+    </aside>
+    <section>
+      <div class="panel"><h2>Execução passo a passo</h2><p id="step" aria-live="polite"></p><div><button class="alt" id="previous">Anterior</button><button id="next">Próximo</button><button class="alt" id="end">Última etapa</button></div><div id="metrics" class="metrics"></div></div>
+      <div class="panel">
+        <h2 id="visualTitle">Visualização</h2>
+        <div id="queryControls" hidden class="row">
+          <label style="flex:1;min-width:130px">Consulta x₁: <output id="q1value"></output><input id="q1" type="range" min="0" max="10" step=".1" value="5.5"></label>
+          <label style="flex:1;min-width:130px">Consulta x₂: <output id="q2value"></output><input id="q2" type="range" min="0" max="10" step=".1" value="6"></label>
+        </div>
+        <div id="visual" class="scroll"></div><p id="prediction" aria-live="polite"></p>
+      </div>
+      <div class="panel"><h2 id="detailTitle">Estado interno</h2><div id="details" class="scroll"></div></div>
+      <div class="panel"><h2>Para discutir</h2><p id="question"></p><p class="notice">Conjuntos pequenos e modelos didáticos em JavaScript, com estados calculados. Não são resultados do Breast Cancer Wisconsin nem substituem a validação experimental da prática Python.</p></div>
+    </section>
+  </main>
+  <p><a href="../">Voltar ao catálogo de visualizações</a></p>
+</div>
+<script>
+"use strict";
+const $=id=>document.getElementById(id);
+const defaults={p0:.51,w0:1,p1:.52,w1:1,p2:.05,w2:1,seed:42,trees:5,depth:2,features:1,rounds:6,eta:.5,modelsCount:10,rho:.5,variance:1};
+const data=[
+  {x:[1.2,1.8],y:0},{x:[2.0,4.0],y:0},{x:[2.8,7.5],y:0},{x:[3.5,2.5],y:0},
+  {x:[4.3,5.4],y:1},{x:[5.0,2.0],y:0},{x:[5.8,7.3],y:1},{x:[6.6,3.6],y:1},
+  {x:[7.0,8.4],y:1},{x:[8.2,5.8],y:1},{x:[8.6,1.5],y:0},{x:[9.0,8.0],y:1}
+].map((d,i)=>({...d,id:i+1}));
+const regression=[2,3,2,5,7,6,9,10].map((y,x)=>({x,y}));
+let frames=[],pos=0,active=null;
+const fmt=(v,n=3)=>Number(v).toLocaleString("pt-BR",{minimumFractionDigits:n,maximumFractionDigits:n});
+const mean=x=>x.reduce((a,b)=>a+b,0)/x.length;
+const pred=p=>p>.5?1:0; // empate determinístico pela menor classe
+const decision=p=>Math.abs(p-.5)<1e-10?"0 (empate)":String(pred(p));
+const sigmoid=x=>1/(1+Math.exp(-x));
+function random(seed){
+  let s=seed>>>0;
+  return ()=>{s=(s+0x6D2B79F5)>>>0;let t=Math.imul(s^s>>>15,1|s);t^=t+Math.imul(t^t>>>7,61|t);return ((t^t>>>14)>>>0)/4294967296;};
+}
+function shuffled(a,rng){const x=a.slice();for(let i=x.length-1;i>0;i--){const j=Math.floor(rng()*(i+1));[x[i],x[j]]=[x[j],x[i]];}return x;}
+function getSettings(){
+  const mode=$("method").value,c={mode};
+  for(const [id,v] of Object.entries(defaults)){
+    const el=$(id);if(el.closest("[data-mode]")?.hidden){c[id]=v;continue;}
+    if(!el.checkValidity()||el.value==="")throw Error("Verifique o parâmetro: "+el.parentElement.textContent.trim());
+    c[id]=Number(el.value);
+  }
+  if(mode==="voting"&&c.w0+c.w1+c.w2<=0)throw Error("A soma dos pesos deve ser positiva.");
+  return c;
+}
+function runVoting(c){
+  const p=[c.p0,c.p1,c.p2],w=[c.w0,c.w1,c.w2],names=["DT","KNN","SVM"],out=[];
+  let hard=[0,0],soft=[0,0],sum=0;
+  out.push({stage:"Inicializar a agregação",p,w,names,used:0,hard:hard.slice(),soft:soft.slice(),sum});
+  for(let i=0;i<3;i++){
+    hard[pred(p[i])]+=w[i];soft[0]+=w[i]*(1-p[i]);soft[1]+=w[i]*p[i];sum+=w[i];
+    out.push({stage:"Incorporar "+names[i],p,w,names,used:i+1,hard:hard.slice(),soft:soft.slice(),sum});
+  }
+  return out;
+}
+function runDiversity(c){
+  return Array.from({length:c.modelsCount},(_,i)=>({stage:"Agregação de "+(i+1)+" preditores",m:i+1,value:c.variance*(c.rho+(1-c.rho)/(i+1))}));
+}
+function weightedProb(rows,weights){
+  const sum=weights.reduce((a,b)=>a+b,0);
+  return sum?rows.reduce((a,d,i)=>a+d.y*weights[i],0)/sum:0;
+}
+function gini(p){return 2*p*(1-p);}
+function grow(rows,depth,q,rng){
+  const p=mean(rows.map(d=>d.y)),node={p,n:rows.length};
+  if(depth===0||p===0||p===1||rows.length<2)return node;
+  const attrs=shuffled([0,1],rng).slice(0,q);
+  let best=null;
+  for(const j of attrs){
+    const vals=[...new Set(rows.map(d=>d.x[j]))].sort((a,b)=>a-b);
+    for(let k=1;k<vals.length;k++){
+      const t=(vals[k-1]+vals[k])/2,left=rows.filter(d=>d.x[j]<=t),right=rows.filter(d=>d.x[j]>t);
+      const loss=(left.length*gini(mean(left.map(d=>d.y)))+right.length*gini(mean(right.map(d=>d.y))))/rows.length;
+      if(!best||loss<best.loss-1e-12)best={j,t,left,right,loss};
+    }
+  }
+  if(!best||best.loss>=gini(p)-1e-12)return {...node,attrs};
+  return {...node,attrs,j:best.j,t:best.t,gain:gini(p)-best.loss,left:grow(best.left,depth-1,q,rng),right:grow(best.right,depth-1,q,rng)};
+}
+function treeProb(t,x){return t.j===undefined?t.p:treeProb(x[t.j]<=t.t?t.left:t.right,x);}
+function rootText(t){return t.j===undefined?"Folha":("x"+(t.j+1)+" ≤ "+fmt(t.t,2));}
+function forestProb(trees,x){return trees.length?mean(trees.map(t=>treeProb(t.tree,x))):.5;}
+function runForest(c){
+  const rng=random(c.seed),q=c.mode==="forest"?c.features:2,trees=[],out=[{stage:"Treino original; nenhum estimador ajustado",trees:[]}];
+  for(let i=0;i<c.trees;i++){
+    const sample=Array.from({length:data.length},()=>data[Math.floor(rng()*data.length)]);
+    const ids=sample.map(d=>d.id),tree=grow(sample,c.depth,q,rng),oob=data.filter(d=>!ids.includes(d.id)).map(d=>d.id);
+    trees.push({tree,ids,oob});
+    out.push({stage:"Árvore "+(i+1)+" - bootstrap e divisões por Gini",trees:trees.slice()});
+  }
+  return out;
+}
+function bestStump(weights){
+  let best=null;
+  for(const j of [0,1]){
+    const vals=[...new Set(data.map(d=>d.x[j]))].sort((a,b)=>a-b);
+    const cuts=[-1,...vals.slice(1).map((v,k)=>(v+vals[k])/2),11];
+    for(const t of cuts)for(const polarity of [-1,1]){
+      const predict=x=>(x[j]<=t?-1:1)*polarity;
+      const error=data.reduce((s,d,i)=>s+(predict(d.x)!==(2*d.y-1)?weights[i]:0),0);
+      if(!best||error<best.error-1e-12)best={j,t,polarity,error,predict};
+    }
+  }
+  return best;
+}
+function adaScore(models,x){return models.reduce((s,m)=>s+m.alpha*m.stump.predict(x),0);}
+function runAda(c){
+  let weights=data.map(()=>1/data.length),models=[],out=[{stage:"Pesos iniciais iguais",weights:weights.slice(),models:[],before:null}];
+  for(let t=1;t<=c.rounds;t++){
+    const stump=bestStump(weights),error=stump.error;
+    if(error>=.5-1e-12){out.push({...out.at(-1),stage:"Parada: estimador sem vantagem sobre o acaso",attemptError:error});break;}
+    if(error<=1e-12){
+      const perfect={stump,alpha:Infinity};
+      out.push({stage:"Parada: estimador com erro ponderado zero",weights:weights.slice(),before:weights.slice(),models:[perfect],stump,error,alpha:Infinity,perfect:true});break;
+    }
+    const alpha=.5*Math.log((1-error)/error),before=weights.slice();
+    weights=weights.map((w,i)=>w*Math.exp(-alpha*(2*data[i].y-1)*stump.predict(data[i].x)));
+    const z=weights.reduce((a,b)=>a+b,0);weights=weights.map(w=>w/z);
+    models.push({stump,alpha});out.push({stage:"Estimador "+t+" - reponderação dos exemplos",weights:weights.slice(),before,models:models.slice(),stump,error,alpha});
+  }
+  return out;
+}
+function regressionStump(residuals){
+  let best=null;
+  for(let t=.5;t<regression.length-1;t++){
+    const left=residuals.slice(0,Math.floor(t)+1),right=residuals.slice(Math.floor(t)+1),a=mean(left),b=mean(right);
+    const mse=mean(residuals.map((v,i)=>(v-(i<=t?a:b))**2));
+    if(!best||mse<best.mse-1e-12)best={t,a,b,mse};
+  }
+  return best;
+}
+function runGradient(c){
+  const initial=mean(regression.map(d=>d.y)),out=[];
+  let f=regression.map(()=>initial);
+  const mse=values=>mean(regression.map((d,i)=>(d.y-values[i])**2));
+  out.push({stage:"F₀: média dos valores de treino",f:f.slice(),mse:mse(f),t:0});
+  for(let t=1;t<=c.rounds;t++){
+    const before=f.slice(),residuals=regression.map((d,i)=>d.y-before[i]),stump=regressionStump(residuals);
+    const h=regression.map(d=>d.x<=stump.t?stump.a:stump.b);
+    f=before.map((v,i)=>v+c.eta*h[i]);out.push({stage:"Etapa "+t+" - ajustar resíduos e aplicar η",f:f.slice(),before,residuals,h,stump,mse:mse(f),t});
+  }
+  return out;
+}
+function baseModels(rows){
+  const tree=grow(rows,2,2,random(123));
+  const sq=(a,b)=>a.reduce((s,v,i)=>s+(v-b[i])**2,0);
+  const centroids=[0,1].map(y=>[0,1].map(j=>mean(rows.filter(d=>d.y===y).map(d=>d.x[j]))));
+  return [
+    x=>treeProb(tree,x),
+    x=>mean(rows.slice().sort((a,b)=>sq(a.x,x)-sq(b.x,x)).slice(0,3).map(d=>d.y)),
+    x=>{const a=sq(centroids[0],x),b=sq(centroids[1],x);return a+b?a/(a+b):.5;}
+  ];
+}
+function logisticTrain(z,y){
+  let w=[0,0,0,0];
+  for(let t=0;t<400;t++){
+    const grad=[0,0,0,0];
+    for(let i=0;i<z.length;i++){
+      const v=[1,...z[i]],p=sigmoid(v.reduce((s,x,j)=>s+x*w[j],0));
+      for(let j=0;j<4;j++)grad[j]+=(p-y[i])*v[j]/z.length;
+    }
+    w=w.map((v,j)=>v-.5*grad[j]);
+  }
+  return w;
+}
+function metaProb(w,z){return sigmoid(w[0]+z.reduce((s,v,i)=>s+v*w[i+1],0));}
+function runStacking(c){
+  const rng=random(c.seed),folds=[[],[],[]];
+  for(const y of [0,1])shuffled(data.filter(d=>d.y===y),rng).forEach((d,i)=>folds[i%3].push(d.id));
+  const z=Array(data.length).fill(null),out=[{stage:"Dividir treino em três folds estratificados",folds,z:z.slice(),k:-1}];
+  for(let k=0;k<folds.length;k++){
+    const train=data.filter(d=>!folds[k].includes(d.id)),bases=baseModels(train);
+    for(const id of folds[k])z[id-1]=bases.map(h=>h(data[id-1].x));
+    out.push({stage:"Fold "+(k+1)+" - bases ajustadas nos demais folds",folds,z:z.slice(),k});
+  }
+  const w=logisticTrain(z,data.map(d=>d.y));
+  out.push({stage:"Ajustar regressão logística sobre matriz OOF",folds,z:z.slice(),k:-1,w});
+  const bases=baseModels(data);
+  out.push({stage:"Reajustar bases em todo o treino; inferência pronta",folds,z:z.slice(),k:-1,w,bases});
+  return out;
+}
+function table(headers,rows){return "<table><thead><tr>"+headers.map(h=>"<th>"+h+"</th>").join("")+"</tr></thead><tbody>"+rows.map(r=>"<tr>"+r.map(v=>"<td>"+v+"</td>").join("")+"</tr>").join("")+"</tbody></table>";}
+function metrics(items){$("metrics").innerHTML=items.map(([k,v])=>'<div class="metric">'+k+"<b>"+v+"</b></div>").join("");}
+function bar(p){return '<div class="bar"><span style="width:'+Math.max(0,Math.min(100,p*100))+'%"></span><i>'+fmt(p*100,1)+'%</i></div>';}
+function query(){return [Number($("q1").value),Number($("q2").value)];}
+function scatter(predict,q,weights=null,tree=null,holdout=[]){
+  const x=v=>45+v*47,y=v=>375-v*34;
+  let s='<svg viewBox="0 0 560 410" role="img" aria-label="Pontos de treino, regiões de decisão e consulta">';
+  if(predict)for(let a=0;a<20;a++)for(let b=0;b<20;b++){
+    const cls=predict([(a+.5)/2,(b+.5)/2]);
+    s+='<rect x="'+x(a/2)+'" y="'+y((b+1)/2)+'" width="23.7" height="17.2" fill="'+(cls?"#fae9cd":"#dbefeb")+'"/>';
+  }
+  s+='<path d="M45 35 V375 H515" stroke="#8296b3" stroke-width="2" fill="none"/>';
+  for(let i=0;i<=10;i+=2)s+='<text x="'+x(i)+'" y="392" font-size="12" text-anchor="middle">'+i+'</text><text x="32" y="'+(y(i)+4)+'" font-size="12" text-anchor="end">'+i+'</text>';
+  s+='<text x="525" y="392" font-size="13">x₁</text><text x="20" y="25" font-size="13">x₂</text>';
+  if(tree&&tree.j!==undefined){const a=tree.j===0?'<line x1="'+x(tree.t)+'" x2="'+x(tree.t)+'" y1="35" y2="375"':'<line x1="45" x2="515" y1="'+y(tree.t)+'" y2="'+y(tree.t)+'"';s+=a+' stroke="#8058ad" stroke-width="2" stroke-dasharray="5 4"/>';}
+  data.forEach((d,i)=>{const r=weights?5+18*Math.sqrt(weights[i]):8;
+    s+='<circle cx="'+x(d.x[0])+'" cy="'+y(d.x[1])+'" r="'+r+'" fill="'+(d.y?"#ad7321":"#20766c")+'" stroke="'+(holdout.includes(d.id)?"#8058ad":"white")+'" stroke-width="'+(holdout.includes(d.id)?4:2)+'"><title>Amostra '+d.id+', classe '+d.y+'</title></circle><text x="'+(x(d.x[0])+r+2)+'" y="'+(y(d.x[1])-r-2)+'" font-size="12">'+d.id+'</text>';
+  });
+  s+='<circle cx="'+x(q[0])+'" cy="'+y(q[1])+'" r="10" fill="#293b9d" stroke="white" stroke-width="3"/><text x="'+(x(q[0])+12)+'" y="'+(y(q[1])+4)+'" font-size="13" fill="#293b9d" font-weight="bold">q</text></svg>';
+  return s+'<p class="small">Verde: classe 0 · laranja: classe 1 · azul: consulta. Contorno violeta: fold reservado; linha violeta: divisão do último estimador, quando aplicável.</p>';
+}
+function renderVoting(f){
+  $("visualTitle").textContent="Contribuição dos modelos";
+  $("visual").innerHTML=table(["Modelo","P(0)","P(1)","Voto","Peso","Estado"],f.names.map((n,i)=>[n,fmt(1-f.p[i],2),bar(f.p[i]),pred(f.p[i]),fmt(f.w[i],1),i<f.used?"Incorporado":"Aguardando"]));
+  const h=f.sum?f.hard[1]/f.sum:null,s=f.sum?f.soft[1]/f.sum:null;
+  metrics([["Modelos incorporados",f.used+"/3"],["Hard voting",h===null?"—":decision(h)],["Soft voting",s===null?"—":decision(s)]]);
+  $("prediction").textContent=f.sum?"Hard: classe "+decision(h)+" | Soft: classe "+decision(s)+(f.used<3?" (resultado parcial).":"."):"Nenhum peso positivo incorporado.";
+  $("detailTitle").textContent="Soma dos pesos e média de probabilidades";
+  $("details").innerHTML=table(["Classe","Soma de votos","Soma ponderada","Probabilidade média"],[0,1].map(k=>[k,fmt(f.hard[k],2),fmt(f.soft[k],3),f.sum?bar(f.soft[k]/f.sum):"—"]));
+  $("question").textContent="Modifique o peso da SVM. Em qual ponto a classe escolhida pelo hard voting ou soft voting muda? A regra de desempate é pela menor classe.";
+}
+function renderDiversity(f,c){
+  const x=m=>45+(m-1)/Math.max(1,c.modelsCount-1)*460,y=v=>265-v/c.variance*225;
+  const path=frames.map(g=>x(g.m)+","+y(g.value)).join(" ");
+  const independent=frames.map(g=>x(g.m)+","+y(c.variance/g.m)).join(" ");
+  $("visualTitle").textContent="Variância da média versus número de preditores";
+  $("visual").innerHTML='<svg viewBox="0 0 560 310" role="img" aria-label="Variância da média e comparação com preditores independentes"><path d="M45 35 V265 H505" stroke="#8296b3" stroke-width="2" fill="none"/><text x="8" y="43" font-size="12">'+fmt(c.variance,1)+'</text><text x="31" y="270" font-size="12">0</text><text x="45" y="284" font-size="12">1</text><text x="505" y="284" text-anchor="end" font-size="12">'+c.modelsCount+'</text><polyline points="'+independent+'" stroke="#20766c" stroke-width="2" fill="none" stroke-dasharray="5 4"/><polyline points="'+path+'" stroke="#293b9d" stroke-width="3" fill="none"/><circle cx="'+x(f.m)+'" cy="'+y(f.value)+'" r="6" fill="#ad7321"/><text x="505" y="302" text-anchor="end" font-size="12">Número de preditores M</text></svg><p class="small">Azul: correlação escolhida · verde tracejado: ρ = 0 · laranja: etapa atual.</p>';
+  metrics([["Preditores",f.m+"/"+c.modelsCount],["Variância média",fmt(f.value)],["Redução relativa",fmt((1-f.value/c.variance)*100,1)+"%"]]);
+  $("prediction").textContent="Var(h̄) = σ² · [ρ + (1 − ρ)/M] = "+fmt(f.value)+".";
+  $("detailTitle").textContent="Hipóteses da expressão";
+  $("details").innerHTML=table(["Símbolo","Significado","Valor"],[["σ²","Variância individual comum",fmt(c.variance)],["ρ","Correlação comum entre preditores",fmt(c.rho)],["M","Número de preditores agregados",f.m],["σ²ρ","Limite quando M cresce",fmt(c.variance*c.rho)]])+"<p>O domínio desta simulação é 0 ≤ ρ ≤ 1. A expressão pressupõe variâncias iguais e correlação comum; não é fórmula de acurácia.</p>";
+  $("question").textContent="Compare ρ = 0, 0,5 e 1, mantendo σ². Em qual situação aumentar M deixa de reduzir a variância?";
+}
+function treeRows(t,where="Raiz"){
+  const attrs=t.attrs?.map(j=>"x"+(j+1)).join(", ")||"—";
+  const row=[where,t.n,fmt(t.p),attrs,rootText(t),t.gain===undefined?"—":fmt(t.gain)];
+  return t.j===undefined?[row]:[row,...treeRows(t.left,where+" → E"),...treeRows(t.right,where+" → D")];
+}
+function renderForest(f,c,q){
+  const trees=f.trees,last=trees.at(-1),p=forestProb(trees,q);
+  const out=data.map(d=>({id:d.id,y:d.y,eligible:trees.filter(t=>t.oob.includes(d.id))}));
+  const covered=out.filter(d=>d.eligible.length),correct=covered.filter(d=>pred(forestProb(d.eligible,data[d.id-1].x))===d.y).length;
+  metrics([["Árvores",trees.length+"/"+c.trees],["Classe consulta",trees.length?decision(p):"—"],["Cobertura OOB",covered.length+"/"+data.length],["Acurácia OOB",covered.length?fmt(correct/covered.length*100,1)+"%":"—"]]);
+  $("visualTitle").textContent="Regiões de decisão do conjunto";
+  $("visual").innerHTML=scatter(trees.length?x=>pred(forestProb(trees,x)):null,q,null,last?.tree);
+  $("prediction").textContent=trees.length?"P(1) média = "+fmt(p)+"; classe "+decision(p)+".":"Nenhuma árvore ajustada.";
+  $("detailTitle").textContent="Amostras bootstrap e decisões na raiz";
+  $("details").innerHTML=(trees.length?table(["Árvore","Índices bootstrap","OOB","Atributos na raiz","Divisão na raiz","P(1 | q)"],trees.map((t,i)=>[i+1,t.ids.join(", "),t.oob.join(", ")||"—",t.tree.attrs?.map(j=>"x"+(j+1)).join(", ")||"—",rootText(t.tree),fmt(treeProb(t.tree,q))]))+"<h3>Nós da última árvore</h3>"+table(["Caminho","Amostras","P(1)","Atributos sorteados","Divisão","Redução de Gini"],treeRows(last.tree)):"<p>O treino de cada árvore será feito em uma amostra com reposição.</p>")+"<h3>Predições out-of-bag</h3>"+table(["Exemplo","Classe real","Árvores elegíveis","Classe OOB"],out.map(d=>[d.id,d.y,d.eligible.length,d.eligible.length?decision(forestProb(d.eligible,data[d.id-1].x)):"Sem cobertura"]));
+  $("question").textContent=c.mode==="forest"?"Altere os atributos candidatos por nó de 1 para 2, mantendo a seed. Como o sorteio afeta as divisões e a diversidade?":"Compare amostras de duas árvores. Quais exemplos foram repetidos ou omitidos? Por que a predição OOB não usa todas as árvores?";
+}
+function renderAda(f,q){
+  const score=f.models.length?adaScore(f.models,q):null;
+  metrics([["Estimadores",f.models.length],["Erro ponderado",f.error===undefined?"—":fmt(f.error)],["Peso α",f.alpha===undefined?"—":Number.isFinite(f.alpha)?fmt(f.alpha):"Parada"],["Classe consulta",score===null?"—":score>0?"1":"0"]]);
+  $("visualTitle").textContent="Pesos das amostras e decisão combinada";
+  $("visual").innerHTML=scatter(f.models.length?x=>Number(adaScore(f.models,x)>0):null,q,f.weights,f.stump);
+  $("prediction").textContent=score===null?"Nenhum estimador ajustado.":(Number.isFinite(score)?"Soma α · h(q) = "+fmt(score)+".":"Estimador perfeito no treino dominante.")+" Classe "+(score>0?"1":"0")+".";
+  $("detailTitle").textContent="Erro, atualização e normalização";
+  $("details").innerHTML=(f.stump?"<p>Último stump: x"+(f.stump.j+1)+" ≤ "+fmt(f.stump.t,2)+"; sinal da classe à esquerda: "+(-f.stump.polarity)+".</p>":"<p>Pesos uniformes antes do primeiro ajuste.</p>")+table(["Exemplo","Classe","Predição do último","Peso anterior","Peso atual"],data.map((d,i)=>[d.id,d.y,f.stump?(f.stump.predict(d.x)+1)/2:"—",fmt(f.before?f.before[i]:f.weights[i],4),bar(f.weights[i])]))+(f.perfect?"<p>Erro zero: parada antecipada, sem calcular logaritmo infinito.</p>":"");
+  $("question").textContent="Identifique os pontos classificados incorretamente pelo último stump. O peso relativo subiu? Por que dar muita importância a ruído pode prejudicar a generalização?";
+}
+function regressionPlot(f){
+  const x=i=>48+i*64,y=v=>280-v*23;
+  let s='<svg viewBox="0 0 560 320" role="img" aria-label="Valores reais e predições acumuladas do Gradient Boosting"><path d="M48 25 V280 H510" stroke="#8296b3" stroke-width="2" fill="none"/>';
+  for(let i=0;i<=10;i+=2)s+='<text x="30" y="'+(y(i)+4)+'" text-anchor="end" font-size="12">'+i+'</text><line x1="48" x2="510" y1="'+y(i)+'" y2="'+y(i)+'" stroke="#dce3f0"/>';
+  regression.forEach((d,i)=>{s+='<line x1="'+x(i)+'" x2="'+x(i)+'" y1="'+y(d.y)+'" y2="'+y(f.f[i])+'" stroke="#ad7321" stroke-dasharray="4 4"/><circle cx="'+x(i)+'" cy="'+y(d.y)+'" r="5" fill="#ad7321"/><text x="'+x(i)+'" y="298" font-size="12" text-anchor="middle">'+i+'</text>';});
+  s+='<polyline points="'+f.f.map((v,i)=>x(i)+","+y(v)).join(" ")+'" stroke="#293b9d" stroke-width="3" fill="none"/>'+f.f.map((v,i)=>'<circle cx="'+x(i)+'" cy="'+y(v)+'" r="4" fill="#293b9d"/>').join("")+'</svg>';
+  return s+"<p class='small'>Laranja: valores reais · azul: predições acumuladas · segmentos tracejados: diferenças restantes.</p>";
+}
+function renderGradient(f,c){
+  metrics([["Etapa",f.t+"/"+c.rounds],["MSE no treino",fmt(f.mse)],["Taxa η",fmt(c.eta,2)]]);
+  $("visualTitle").textContent="Predições e resíduos";
+  $("visual").innerHTML=regressionPlot(f);
+  $("prediction").textContent=f.stump?"Stump ajustado aos resíduos: x ≤ "+fmt(f.stump.t,1)+" → "+fmt(f.stump.a)+"; demais → "+fmt(f.stump.b)+".":"Preditor inicial constante: média de y.";
+  $("detailTitle").textContent="Atualização Fₜ = Fₜ₋₁ + η · hₜ";
+  $("details").innerHTML=table(["x","Valor real","F anterior","Resíduo","hₜ(x)","F atual"],regression.map((d,i)=>[d.x,d.y,f.before?fmt(f.before[i]):"—",f.residuals?fmt(f.residuals[i]):"—",f.h?fmt(f.h[i]):"—",fmt(f.f[i])]));
+  $("question").textContent="Compare η = 0,1 com η = 1, usando o mesmo número de etapas. O erro no treino é evidência suficiente de generalização? Em classificação, a perda não precisa ser quadrática.";
+}
+function renderStacking(f,q){
+  const p=f.bases?f.bases.map(h=>h(q)):null,final=p?metaProb(f.w,p):null;
+  metrics([["Linhas OOF",f.z.filter(Boolean).length+"/"+data.length],["Fold atual",f.k<0?"—":f.k+1],["Metaestimador",f.w?"Ajustado":"Aguardando"],["Classe consulta",final===null?"—":decision(final)]]);
+  $("visualTitle").textContent="Treino, folds e inferência";
+  $("visual").innerHTML=scatter(f.bases?x=>pred(metaProb(f.w,f.bases.map(h=>h(x)))):null,q,null,null,f.k<0?[]:f.folds[f.k]);
+  $("prediction").textContent=p?"Bases reajustadas: árvore "+fmt(p[0])+" · KNN "+fmt(p[1])+" · centroide "+fmt(p[2])+" | P(1) meta = "+fmt(final)+".":f.k>=0?"Fold "+(f.k+1)+" reservado para predições OOF, nunca para ajustar estas bases.":"A inferência ficará disponível depois do reajuste das bases.";
+  $("detailTitle").textContent="Matriz de características fora do fold";
+  $("details").innerHTML="<p>"+f.folds.map((ids,i)=>"Fold "+(i+1)+": "+ids.join(", ")).join(" | ")+"</p>"+table(["Exemplo","Fold","Classe","Árvore P(1)","KNN P(1)","Centroide - escore"],data.map((d,i)=>[d.id,f.folds.findIndex(ids=>ids.includes(d.id))+1,d.y,...(f.z[i]?f.z[i].map(v=>fmt(v)):["—","—","—"])]))+(f.w?"<p><b>Coeficientes do metaestimador:</b> intercepto "+fmt(f.w[0])+"; árvore "+fmt(f.w[1])+"; KNN "+fmt(f.w[2])+"; centroide "+fmt(f.w[3])+".</p>":"");
+  $("question").textContent="Por que a linha de um exemplo deve ser produzida por um modelo que não o viu? Compare as características OOF com as predições de uma nova consulta. O centroide usa escore de distância, não probabilidade calibrada.";
+}
+function render(){
+  if(!frames.length)return;const f=frames[pos],c=active,q=query();
+  $("step").textContent=(pos+1)+"/"+frames.length+" | "+f.stage;
+  $("previous").disabled=pos===0;$("next").disabled=pos===frames.length-1;$("end").disabled=pos===frames.length-1;
+  $("queryControls").hidden=["voting","gradient","diversity"].includes(c.mode);$("q1value").textContent=fmt(q[0],1);$("q2value").textContent=fmt(q[1],1);
+  if(c.mode==="voting")renderVoting(f);else if(c.mode==="diversity")renderDiversity(f,c);else if(c.mode==="bagging"||c.mode==="forest")renderForest(f,c,q);else if(c.mode==="ada")renderAda(f,q);else if(c.mode==="gradient")renderGradient(f,c);else renderStacking(f,q);
+}
+function filter(){const mode=$("method").value;document.querySelectorAll("[data-mode]").forEach(e=>e.hidden=!e.dataset.mode.split(" ").includes(mode));}
+function refresh(){
+  filter();
+  try{
+    const c=getSettings(),runs={voting:runVoting,diversity:runDiversity,bagging:runForest,forest:runForest,ada:runAda,gradient:runGradient,stacking:runStacking};
+    frames=runs[c.mode](c);active=c;pos=0;$("formError").textContent="";render();
+  }catch(e){$("formError").textContent=e.message;}
+}
+$("method").onchange=refresh;$("run").onclick=refresh;
+$("reset").onclick=()=>{for(const [k,v] of Object.entries(defaults))$(k).value=v;$("q1").value=5.5;$("q2").value=6;refresh();};
+$("previous").onclick=()=>{if(pos>0)pos--;render();};$("next").onclick=()=>{if(pos<frames.length-1)pos++;render();};$("end").onclick=()=>{pos=frames.length-1;render();};$("q1").oninput=render;$("q2").oninput=render;
+refresh();
+</script>
+</body>
+</html>

@@ -9,10 +9,20 @@ O histórico de commits segue Conventional Commits.
 ### Added
 
 - Aulas 14 e 15: PDFs teóricos e práticos de Sistemas Imunológicos Artificiais e Algoritmos Ensemble.
+- Notas visuais das Aulas 14 e 15, com mapas conceituais, diagramas, exemplos numéricos e revisão ativa.
+- Estudos guiados das Aulas 14 e 15, com questões de interpretação, exercícios progressivos e experimentos articulados ao Trabalho 02.
+- Pseudocódigos de NSA, CLONALG, Voting, Bagging, Random Forest, AdaBoost, Gradient Boosting, Stacking e avaliação experimental de ensembles.
+- Exemplos Python executáveis de NSA, CLONALG e comparação de ensembles, com dependências, documentação e testes da prática de sistemas imunológicos.
+- Laboratórios interativos das Aulas 14 e 15: NSA por raio e correspondência binária, CLONALG, Voting, Bagging, Random Forest, AdaBoost, Gradient Boosting e Stacking, com controles específicos e inspeção por etapas.
 
 ### Changed
 
+- Laboratório integrado de otimização: CLONALG junto a AG, ACO e BPSO, com orçamento comum de avaliações e estados internos específicos.
+- Padronização da documentação e sincronização dos materiais públicos com as cópias utilizadas pelo MkDocs.
+
 - Catálogo de aulas, página inicial, documentação e build do site atualizados para disponibilizar os quatro PDFs.
+- Revisão das notas visuais das Aulas 08 a 11 e refinamento dos diagramas das Aulas 12 e 13.
+- Reorganização do README principal em percurso didático, recursos disponíveis, avaliações e desenvolvimento.
 
 ## [0.12.0] - 2026-11-02
 

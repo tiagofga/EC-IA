@@ -4,6 +4,11 @@ Material público da disciplina de Inteligência Artificial do CEFET-MG, campus 
 
 - [Slides teóricos em PDF](./EC_IA_014_Imunes_Teoria.pdf)
 - [Prática guiada em PDF](./EC_IA_014_Imunes_Pratica.pdf)
+- [Nota visual](../../notas/14-sistemas-imunologicos/README.md)
+- [Estudo guiado](../../estudos-guiados/14-sistemas-imunologicos/README.md)
+- [Pseudocódigos](../../pseudoalgoritmos/14-sistemas-imunologicos/README.md)
+- [Código Python](../../exemplos/14-sistemas-imunologicos/README.md)
+- [Laboratório interativo](../../visualizacoes/14-sistemas-imunologicos/README.md)
 
 ## Percurso
 

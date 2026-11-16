@@ -4,6 +4,11 @@ Material público da disciplina de Inteligência Artificial do CEFET-MG, campus 
 
 - [Slides teóricos em PDF](./EC_IA_015_Ensemble_Teoria.pdf)
 - [Prática guiada em PDF](./EC_IA_015_Ensemble_Pratica.pdf)
+- [Nota visual](../../notas/15-ensemble/README.md)
+- [Estudo guiado](../../estudos-guiados/15-ensemble/README.md)
+- [Pseudocódigos](../../pseudoalgoritmos/15-ensemble/README.md)
+- [Código Python](../../exemplos/15-ensemble/README.md)
+- [Laboratório interativo](../../visualizacoes/15-ensemble/README.md)
 
 ## Percurso
 

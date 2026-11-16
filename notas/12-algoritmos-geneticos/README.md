@@ -2,6 +2,8 @@
 
 ![Mapa de síntese](nota-visual-aula-12.svg)
 
+**Questão central:** como gerar novos candidatos mantendo soluções promissoras e diversidade?
+
 ## Mapa conceitual
 
 ```mermaid

@@ -13,8 +13,9 @@ Os estudos guiados organizam a revisão das aulas da disciplina em uma sequênci
 - [Aula 09 - K-Nearest Neighbors](09-knn/README.md)
 - [Aula 10 - Support Vector Machines e PCA](10-svm/README.md)
 - [Aula 11 - Atividade Integradora: DT, KNN e SVM](11-atividade-comparacao/README.md)
-
 - [Aula 12 - Algoritmos Genéticos](12-algoritmos-geneticos/README.md)
 - [Aula 13 - Inteligência de Enxames](13-inteligencia-enxames/README.md)
+- [Aula 14 - Sistemas Imunológicos Artificiais](14-sistemas-imunologicos/README.md)
+- [Aula 15 - Algoritmos Ensemble](15-ensemble/README.md)
 
 A recomendação é usar cada estudo guiado depois dos slides e de uma primeira leitura da nota visual correspondente. Os simulados permanecem como uma camada separada de revisão integrada.

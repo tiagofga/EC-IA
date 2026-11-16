@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="520" viewBox="0 0 920 520" role="img">
+<title>Aula 15 - Algoritmos Ensemble</title>
+<desc>Diversidade, combinação e generalização</desc>
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="#52617e"/></marker></defs>
+<rect x="0" y="0" width="920" height="520" rx="0" fill="white" stroke="none" stroke-width="2"/>
+<rect x="0" y="0" width="920" height="65" rx="0" fill="#2435a0" stroke="none" stroke-width="2"/>
+<text x="24" y="42" font-family="Arial,sans-serif" font-size="25" fill="white" text-anchor="start" font-weight="700">Aula 15 - Algoritmos Ensemble</text>
+<text x="460" y="96" font-family="Arial,sans-serif" font-size="17" fill="#17215e" text-anchor="middle" font-weight="400">Diversidade, combinação e generalização</text>
+<text x="460" y="126" font-family="Arial,sans-serif" font-size="19" fill="#2435a0" text-anchor="middle" font-weight="700">Quatro mecanismos, uma predição</text>
+<rect x="25" y="150" width="195" height="80" rx="10" fill="#e1f2f0" stroke="#20766c" stroke-width="2"/>
+<text x="122.5" y="190.0" font-family="Arial,sans-serif" font-size="18" fill="#20766c" text-anchor="middle" font-weight="700">Voting</text>
+<text x="122.5" y="212.0" font-family="Arial,sans-serif" font-size="15" fill="#20766c" text-anchor="middle" font-weight="400">Modelos distintos</text>
+<rect x="250" y="150" width="195" height="80" rx="10" fill="#e1f2f0" stroke="#20766c" stroke-width="2"/>
+<text x="347.5" y="190.0" font-family="Arial,sans-serif" font-size="18" fill="#20766c" text-anchor="middle" font-weight="700">Bagging / RF</text>
+<text x="347.5" y="212.0" font-family="Arial,sans-serif" font-size="15" fill="#20766c" text-anchor="middle" font-weight="400">Bootstrap + atributos</text>
+<rect x="475" y="150" width="195" height="80" rx="10" fill="#fff0d7" stroke="#ad7321" stroke-width="2"/>
+<text x="572.5" y="190.0" font-family="Arial,sans-serif" font-size="18" fill="#ad7321" text-anchor="middle" font-weight="700">Boosting</text>
+<text x="572.5" y="212.0" font-family="Arial,sans-serif" font-size="15" fill="#ad7321" text-anchor="middle" font-weight="400">Correções sucessivas</text>
+<rect x="700" y="150" width="195" height="80" rx="10" fill="#fff0d7" stroke="#ad7321" stroke-width="2"/>
+<text x="797.5" y="190.0" font-family="Arial,sans-serif" font-size="18" fill="#ad7321" text-anchor="middle" font-weight="700">Stacking</text>
+<text x="797.5" y="212.0" font-family="Arial,sans-serif" font-size="15" fill="#ad7321" text-anchor="middle" font-weight="400">Predições OOF</text>
+<line x1="122" y1="230" x2="122" y2="285" stroke="#2435a0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="26" y="285" width="192" height="58" rx="10" fill="#edf0fa" stroke="#2435a0" stroke-width="2"/>
+<text x="122.0" y="320.0" font-family="Arial,sans-serif" font-size="18" fill="#2435a0" text-anchor="middle" font-weight="700">Voto / média</text>
+<line x1="122" y1="343" x2="460" y2="405" stroke="#2435a0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<line x1="347" y1="230" x2="347" y2="285" stroke="#2435a0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="251" y="285" width="192" height="58" rx="10" fill="#edf0fa" stroke="#2435a0" stroke-width="2"/>
+<text x="347.0" y="320.0" font-family="Arial,sans-serif" font-size="18" fill="#2435a0" text-anchor="middle" font-weight="700">Agregação</text>
+<line x1="347" y1="343" x2="460" y2="405" stroke="#2435a0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<line x1="572" y1="230" x2="572" y2="285" stroke="#2435a0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="476" y="285" width="192" height="58" rx="10" fill="#edf0fa" stroke="#2435a0" stroke-width="2"/>
+<text x="572.0" y="320.0" font-family="Arial,sans-serif" font-size="18" fill="#2435a0" text-anchor="middle" font-weight="700">Soma</text>
+<line x1="572" y1="343" x2="460" y2="405" stroke="#2435a0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<line x1="797" y1="230" x2="797" y2="285" stroke="#2435a0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="701" y="285" width="192" height="58" rx="10" fill="#edf0fa" stroke="#2435a0" stroke-width="2"/>
+<text x="797.0" y="320.0" font-family="Arial,sans-serif" font-size="18" fill="#2435a0" text-anchor="middle" font-weight="700">Metaestimador</text>
+<line x1="797" y1="343" x2="460" y2="405" stroke="#2435a0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="285" y="405" width="350" height="55" rx="10" fill="#e1f2f0" stroke="#20766c" stroke-width="2"/>
+<text x="460.0" y="438.5" font-family="Arial,sans-serif" font-size="18" fill="#20766c" text-anchor="middle" font-weight="700">Predição e avaliação</text>
+<text x="460" y="493" font-family="Arial,sans-serif" font-size="18" fill="#2435a0" text-anchor="middle" font-weight="700">Mesmo protocolo, folds comuns, teste isolado</text>
+</svg>

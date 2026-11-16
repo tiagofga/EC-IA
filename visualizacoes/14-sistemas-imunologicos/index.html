@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>EC-IA | Laboratório de Sistemas Imunológicos</title>
+  <style>
+    :root{font-family:system-ui,Arial,sans-serif;color:#1b2c43;background:#f3f6fb}
+    *{box-sizing:border-box}body{margin:0;line-height:1.5}.wrap{max-width:1180px;margin:auto;padding:16px}
+    header{background:#293b9d;color:white;border-radius:12px;padding:20px}h1{margin:0;font-size:1.65rem}h2{font-size:1.13rem;margin-top:0}h3{font-size:1rem}
+    .layout{display:grid;grid-template-columns:265px minmax(0,1fr);gap:16px;margin-top:16px}.panel{background:white;border:1px solid #cbd6e4;border-radius:12px;padding:16px;margin-bottom:14px;min-width:0}
+    label{display:block;font-weight:600;margin:12px 0}input,select{display:block;width:100%;padding:8px;border:1px solid #8296b3;border-radius:6px;font:inherit}
+    button{border:1px solid #293b9d;color:white;background:#293b9d;border-radius:7px;padding:9px 13px;cursor:pointer;margin:3px;font:inherit}button.alt{color:#293b9d;background:white}button:disabled{opacity:.45;cursor:default}
+    button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #d7a32c;outline-offset:2px}.row{display:flex;flex-wrap:wrap;gap:18px}
+    .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin:12px 0}.metric{background:#eef2ff;border-radius:8px;padding:10px}.metric b{display:block;font-size:1.3rem}
+    .pix{display:grid;grid-template-columns:repeat(4,30px);gap:3px;width:max-content;background:#cbd5e1;padding:4px}.cell{width:30px;height:30px;background:#fff}.cell.black{background:#142950}.cell.error{outline:3px solid #e3a51e;outline-offset:-4px}
+    svg{display:block;width:100%;height:auto;border:1px solid #cbd5e1;border-radius:8px;background:#fff}table{border-collapse:collapse;width:100%;font-size:.9rem}td,th{padding:7px;border-bottom:1px solid #dfe5ef;text-align:left;white-space:nowrap}.scroll{overflow-x:auto}
+    .small{color:#53647d;font-size:.9rem}.notice{border-left:4px solid #c68d20;background:#fff4df;padding:10px;border-radius:5px}.good{color:#17664b;font-weight:700}.bad{color:#aa3a32;font-weight:700}
+    a{color:#1d55a5}[hidden]{display:none!important}@media(max-width:750px){.layout{grid-template-columns:1fr}h1{font-size:1.35rem}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header><h1>EC-IA • Laboratório de Sistemas Imunológicos Artificiais</h1><p>Observe tolerância, cobertura e reconhecimento no NSA; acompanhe clonagem, hipermutação e diversidade no CLONALG.</p></header>
+  <main class="layout">
+    <aside class="panel">
+      <h2>Experimento</h2>
+      <label>Método<select id="method"><option value="radius">NSA - raio fixo</option><option value="binary">NSA - cadeias binárias</option><option value="clonal">CLONALG - imagem 4 × 4</option></select></label>
+      <label>Seed<input id="seed" type="number" min="0" max="4294967295" value="42"></label>
+      <div data-mode="radius"><label>Raio de reconhecimento<input id="radius" type="number" min=".2" max="4" step=".1" value="1"></label></div>
+      <div data-mode="binary"><label>Janela contígua r<input id="window" type="number" min="1" max="8" value="4"></label></div>
+      <div data-mode="radius binary">
+        <label>Detectores desejados<input id="detectors" type="number" min="1" max="24" value="8"></label>
+        <label>Máximo de tentativas<input id="attempts" type="number" min="1" max="200" value="60"></label>
+      </div>
+      <div data-mode="clonal">
+        <label>População<input id="size" type="number" min="4" max="40" value="20"></label>
+        <label>Selecionados<input id="selected" type="number" min="1" max="40" value="5"></label>
+        <label>Fator β de clonagem<input id="beta" type="number" min=".1" max="3" step=".1" value="1"></label>
+        <label>Mutação mínima por bit (%)<input id="pmin" type="number" min="0" max="100" value="2"></label>
+        <label>Mutação máxima por bit (%)<input id="pmax" type="number" min="0" max="100" value="35"></label>
+        <label>Renovação (indivíduos)<input id="renew" type="number" min="0" max="39" value="2"></label>
+        <label>Orçamento de avaliações<input id="budget" type="number" min="4" max="1500" value="1000"></label>
+      </div>
+      <button id="run">Reiniciar treinamento</button><button class="alt" id="reset">Restaurar parâmetros</button>
+      <p class="small">Alterações são aplicadas ao reiniciar. A seed reproduz a simulação em JavaScript; a sequência aleatória não precisa coincidir com a do Python.</p>
+      <p id="formError" role="alert" class="bad"></p>
+    </aside>
+    <section>
+      <div class="panel">
+        <h2>Execução passo a passo</h2>
+        <p id="step" aria-live="polite"></p>
+        <div><button class="alt" id="previous">Anterior</button><button id="next">Próximo</button><button class="alt" id="end">Última etapa</button></div>
+        <div class="metrics" id="metrics"></div>
+      </div>
+      <div class="panel" id="nsaPanel">
+        <h2>Regiões reconhecidas e consulta</h2>
+        <div id="radiusQuery"><label>Posição da consulta x: <output id="queryValue">7,5</output><input id="query" type="range" min="0" max="10" step=".1" value="7.5"></label></div>
+        <div id="binaryQuery" hidden><label>Cadeia consultada<input id="queryBits" value="10101111" maxlength="8" pattern="[01]{8}" inputmode="numeric"></label></div>
+        <div id="nsaView"></div>
+        <p id="decision" aria-live="polite"></p><p class="notice">Sem ativação não significa normalidade: pode existir uma região que nenhum detector cobre.</p>
+      </div>
+      <div class="panel" id="clonalPanel" hidden>
+        <h2>Imagem-alvo e melhor candidato acumulado</h2>
+        <div class="row"><div><h3>Alvo</h3><div class="pix" id="target"></div></div><div><h3>Melhor conhecido</h3><div class="pix" id="best"></div><p class="small">Contorno amarelo: bit incorreto.</p></div></div>
+        <h3>Convergência por avaliação</h3><svg id="chart" viewBox="0 0 760 220" role="img" aria-label="Melhor fitness acumulado por avaliação"></svg>
+      </div>
+      <div class="panel"><h2 id="detailTitle">Estado interno</h2><div class="scroll" id="details"></div></div>
+      <div class="panel"><h2>Para discutir</h2><p id="question"></p></div>
+    </section>
+  </main>
+  <p><a href="../13-inteligencia-enxames/">Comparar AG, ACO, BPSO e CLONALG</a> · <a href="../">Voltar ao catálogo de visualizações</a></p>
+</div>
+<script>
+"use strict";
+const $ = id => document.getElementById(id);
+const target = Array.from("0110100110010110",Number);
+const own = ["00000000","00000001","00010000","00100000"];
+const defaults = {seed:42,radius:1,window:4,detectors:8,attempts:60,size:20,selected:5,beta:1,pmin:2,pmax:35,renew:2,budget:1000};
+let frames = [], pos = 0, active = null;
+function random(seed){
+  let s = seed >>> 0;
+  return () => {s = (s + 0x6D2B79F5) >>> 0;let t = Math.imul(s ^ s >>> 15,1 | s);t ^= t + Math.imul(t ^ t >>> 7,61 | t);return ((t ^ t >>> 14) >>> 0)/4294967296;};
+}
+const fmt = (v,n=2) => Number(v).toLocaleString("pt-BR",{minimumFractionDigits:n,maximumFractionDigits:n});
+const clone = x => x.slice();
+const fit = x => x.reduce((sum,v,i)=>sum + Number(v===target[i]),0);
+function getSettings(){
+  const mode = $("method").value, c = {mode};
+  for(const [id,v] of Object.entries(defaults)){
+    const el = $(id);
+    if(el.closest("[data-mode]")?.hidden) {c[id]=v;continue;}
+    if(!el.checkValidity()||el.value==="") throw Error("Verifique o parâmetro: "+el.parentElement.textContent.trim());
+    c[id]=Number(el.value);
+  }
+  if(mode==="clonal"&&(c.selected>c.size||c.renew>=c.size||c.budget<c.size||c.pmin>c.pmax)) throw Error("Selecionados ≤ população, renovação < população, orçamento ≥ população e pmin ≤ pmax.");
+  return c;
+}
+function matching(a,b,r){
+  const windows=[];
+  for(let i=0;i<=a.length-r;i++) if(a.slice(i,i+r)===b.slice(i,i+r)) windows.push(i+1);
+  return windows;
+}
+function runNSA(c){
+  const rng=random(c.seed), binary=c.mode==="binary", normal=binary?own:[2,3], d=[], out=[];
+  const recognizes=(a,b)=>binary?matching(a,b,c.window).length>0:Math.abs(a-b)<=c.radius+1e-9;
+  out.push({stage:"Padrões próprios e conjunto vazio",attempt:0,d:[],candidate:null,reason:"Nenhum detector foi gerado ainda."});
+  for(let i=1;i<=c.attempts&&d.length<c.detectors;i++){
+    const candidate=binary?Math.floor(rng()*256).toString(2).padStart(8,"0"):Math.floor(rng()*101)/10;
+    const conflicts=normal.filter(s=>recognizes(candidate,s));
+    const duplicate=d.includes(candidate), accepted=!conflicts.length&&!duplicate;
+    if(accepted) d.push(candidate);
+    out.push({stage:accepted?"Candidato aceito":duplicate?"Candidato repetido":"Candidato rejeitado",attempt:i,d:clone(d),candidate,conflicts,accepted,reason:accepted?"Não reconhece nenhum padrão próprio.":duplicate?"Detector já presente no conjunto.":"Reconhece pelo menos um padrão próprio."});
+  }
+  out.push({...out.at(-1),stage:d.length===c.detectors?"Formação concluída: quantidade atingida":"Formação concluída: limite de tentativas atingido",candidate:null,reason:"Consulte uma nova entrada e examine a cobertura."});
+  return out;
+}
+function runClonal(c){
+  const rng=random(c.seed), history=[], out=[];
+  let score=-1,best=null,evaluations=0,g=0;
+  function assess(bits){
+    const f=fit(bits);evaluations++;
+    if(f>score){score=f;best=clone(bits);}
+    history.push([evaluations,score]);
+    return {bits:clone(bits),f};
+  }
+  const candidate=()=>Array.from({length:16},()=>Number(rng()<.5));
+  const sorted=p=>p.slice().sort((a,b)=>b.f-a.f);
+  let pop=Array.from({length:c.size},()=>assess(candidate()));
+  function frame(stage,parents=[],example=null,renewed=0,clones=0){
+    out.push({stage,g,score,best:clone(best),evaluations,hist:history.slice(),pop:sorted(pop),parents,example,renewed,clones});
+  }
+  frame("População inicial avaliada");
+  while(evaluations<c.budget&&score<16){
+    g++;
+    const selected=sorted(pop).slice(0,c.selected), pool=pop.slice(), parents=[];
+    let example=null, clones=0, renewed=0;
+    for(let i=0;i<selected.length;i++){
+      const parent=selected[i], affinity=parent.f/16, requested=Math.ceil(c.beta*c.selected/(i+1)), pm=(c.pmin+(c.pmax-c.pmin)*(1-affinity))/100;
+      let performed=0;
+      for(let j=0;j<requested&&evaluations<c.budget;j++){
+        const bits=parent.bits.map(b=>rng()<pm?1-b:b), item=assess(bits);
+        pool.push(item);performed++;clones++;
+        if(!example) example={parent:parent.bits.join(""),clone:bits.join(""),before:parent.f,after:item.f,changes:bits.filter((b,k)=>b!==parent.bits[k]).length};
+      }
+      parents.push({rank:i+1,fitness:parent.f,affinity,pm,requested,performed});
+    }
+    pop=sorted(pool).slice(0,c.size-c.renew);
+    for(let j=0;j<c.renew&&evaluations<c.budget;j++){pop.push(assess(candidate()));renewed++;}
+    frame("Geração "+g+" - seleção, clonagem, hipermutação e renovação",parents,example,renewed,clones);
+  }
+  return out;
+}
+function table(headers,rows){
+  return "<table><thead><tr>"+headers.map(h=>"<th>"+h+"</th>").join("")+"</tr></thead><tbody>"+rows.map(row=>"<tr>"+row.map(v=>"<td>"+v+"</td>").join("")+"</tr>").join("")+"</tbody></table>";
+}
+function metrics(items){$("metrics").innerHTML=items.map(([k,v])=>'<div class="metric">'+k+"<b>"+v+"</b></div>").join("");}
+function grid(node,bits,compare){
+  node.replaceChildren();
+  bits.forEach((b,i)=>{const d=document.createElement("span");d.className="cell"+(b?" black":"")+(compare&&b!==target[i]?" error":"");d.title="Bit "+(i+1)+": "+b;node.append(d);});
+}
+function plot(history){
+  const max=Math.max(1,history.at(-1)[0]), x=v=>42+v/max*690,y=v=>185-v*10;
+  $("chart").innerHTML='<path d="M42 15 V185 H732" stroke="#8296b3" stroke-width="2" fill="none"/>'+[0,4,8,12,16].map(v=>'<text x="10" y="'+(y(v)+4)+'" font-size="12">'+v+'</text>').join("")+'<polyline points="'+history.map(([a,b])=>x(a)+","+y(b)).join(" ")+'" fill="none" stroke="#20766c" stroke-width="3"/><text x="520" y="208" font-size="12">Avaliações (até '+max+')</text>';
+}
+function coverageRadius(d,r){
+  const intervals=d.map(v=>[Math.max(0,v-r),Math.min(10,v+r)]).sort((a,b)=>a[0]-b[0]);
+  let total=0,end=-1;
+  for(const [a,b] of intervals){if(a>end){total+=b-a;end=b;}else if(b>end){total+=b-end;end=b;}}
+  return 100*total/10;
+}
+function svgRadius(d,r,q,candidate){
+  const x=v=>35+v*69;
+  const band=(v,y,color)=>'<rect x="'+x(Math.max(0,v-r))+'" y="'+y+'" width="'+(x(Math.min(10,v+r))-x(Math.max(0,v-r)))+'" height="24" rx="4" fill="'+color+'" opacity=".65"/>';
+  let s='<svg viewBox="0 0 760 218" role="img" aria-label="Reta numérica com regiões próximas aos padrões próprios e detectores aceitos"><text x="35" y="22" font-size="15" fill="#293b9d">Padrões próprios S = {2,3}</text>';
+  s+=[2,3].map(v=>band(v,32,"#92a5e0")).join("")+[2,3].map(v=>'<circle cx="'+x(v)+'" cy="44" r="5" fill="#293b9d"/>').join("");
+  s+='<text x="35" y="82" font-size="15" fill="#20766c">União das regiões dos detectores</text>'+d.map(v=>band(v,92,"#75c6ac")).join("")+d.map(v=>'<circle cx="'+x(v)+'" cy="104" r="4" fill="#20766c"/>').join("");
+  s+='<line x1="35" y1="151" x2="725" y2="151" stroke="#53647d" stroke-width="2"/>';
+  for(let i=0;i<=10;i++)s+='<line x1="'+x(i)+'" y1="146" x2="'+x(i)+'" y2="157" stroke="#53647d"/><text x="'+x(i)+'" y="174" font-size="12" text-anchor="middle">'+i+'</text>';
+  s+='<line x1="'+x(q)+'" y1="29" x2="'+x(q)+'" y2="151" stroke="#ad7321" stroke-dasharray="5 4" stroke-width="2"/><circle cx="'+x(q)+'" cy="151" r="7" fill="#ad7321"/><text x="'+x(q)+'" y="198" text-anchor="middle" font-size="13">x</text>';
+  if(candidate!==null) s+='<circle cx="'+x(candidate)+'" cy="132" r="6" fill="#a33e37"><title>Candidato atual</title></circle>';
+  return s+"</svg>";
+}
+function renderNSA(f,c){
+  const binary=c.mode==="binary", d=f.d;
+  $("radiusQuery").hidden=binary;$("binaryQuery").hidden=!binary;
+  const coverage=binary?100*Array.from({length:256},(_,i)=>i.toString(2).padStart(8,"0")).filter(v=>d.some(a=>matching(a,v,c.window).length)).length/256:coverageRadius(d,c.radius);
+  metrics([["Detectores",d.length+"/"+c.detectors],["Tentativas",f.attempt+"/"+c.attempts],["Cobertura do domínio",fmt(coverage,1)+"%"]]);
+  const q=binary?$("queryBits").value.trim():Number($("query").value);
+  $("queryValue").textContent=fmt(Number($("query").value),1);
+  if(binary&&!/^[01]{8}$/.test(q)){
+    $("decision").textContent="Digite exatamente oito bits (0 ou 1).";$("nsaView").innerHTML="<p>Padrões próprios: "+own.join(" · ")+"</p>"; 
+  }else if(binary){
+    const hits=d.filter(a=>matching(a,q,c.window).length);
+    $("nsaView").innerHTML="<p><b>Padrões próprios:</b> "+own.map(x=>"<code>"+x+"</code>").join(" · ")+"</p>"+table(["Detector","Janelas reconhecidas na consulta"],d.map(a=>["<code>"+a+"</code>",matching(a,q,c.window).join(", ")||"Nenhuma"]));
+    $("decision").textContent=hits.length?"Possível anomalia: "+hits.length+" detectores ativados.":"Não detectada por nenhum detector.";
+  }else{
+    $("nsaView").innerHTML=svgRadius(d,c.radius,q,f.candidate);
+    const hits=d.filter(a=>Math.abs(a-q)<=c.radius+1e-9);
+    $("decision").textContent=hits.length?"Possível anomalia: detectores "+hits.map(v=>fmt(v,1)).join(", ")+" reconhecem a consulta.":"Não detectada por nenhum detector.";
+  }
+  $("detailTitle").textContent="Decisão de formação";
+  $("details").innerHTML="<p>"+f.reason+"</p>"+(f.candidate===null?"":table(["Candidato","Padrões próprios reconhecidos","Decisão"],[[binary?f.candidate:fmt(f.candidate,1),f.conflicts.map(v=>binary?v:fmt(v,1)).join(", ")||"Nenhum",f.accepted?"Aceito":"Descartado"]]))+"<p><b>Detectores aceitos:</b> "+(d.map(v=>binary?v:fmt(v,1)).join(" · ")||"Nenhum")+"</p>";
+  $("question").textContent="Altere o raio ou a janela, mantendo a seed. O que muda na aceitação de detectores, na cobertura e na quantidade de tentativas?";
+}
+function renderClonal(f){
+  metrics([["Melhor fitness",f.score+"/16"],["Avaliações",f.evaluations+"/"+active.budget],["Geração",f.g],["Diversidade",new Set(f.pop.map(v=>v.bits.join(""))).size+" / "+f.pop.length]]);
+  grid($("target"),target,false);grid($("best"),f.best,true);plot(f.hist);
+  $("detailTitle").textContent="Ranking, clonagem e população";
+  const rows=f.parents.map(p=>[p.rank,p.fitness,fmt(p.affinity,3),fmt(p.pm*100,2)+"%",p.requested,p.performed]);
+  $("details").innerHTML=(rows.length?table(["Ranking","Fitness","Afinidade","pₘ por bit","Clones previstos","Clones avaliados"],rows)+"<p>Clones avaliados: "+f.clones+" · renovados: "+f.renewed+"</p>":"<p>População inicial; nenhuma clonagem ainda.</p>")+(f.example?"<p><b>Primeiro clone:</b> <code>"+f.example.parent+"</code> → <code>"+f.example.clone+"</code> · "+f.example.changes+" bits alterados · fitness "+f.example.before+" → "+f.example.after+"</p>":"")+"<h3>População resultante</h3>"+table(["Candidato","Bits","Fitness"],f.pop.map((p,i)=>[i+1,"<code>"+p.bits.join("")+"</code>",p.f]));
+  $("question").textContent="Aumente β ou a mutação máxima, com a mesma seed. Como isso afeta o número de avaliações, a diversidade e a evolução do melhor fitness?";
+}
+function render(){
+  if(!frames.length)return;
+  const f=frames[pos], clonal=active.mode==="clonal";
+  $("step").textContent=(pos+1)+"/"+frames.length+" | "+f.stage;
+  $("previous").disabled=pos===0;$("next").disabled=pos===frames.length-1;$("end").disabled=pos===frames.length-1;
+  $("nsaPanel").hidden=clonal;$("clonalPanel").hidden=!clonal;
+  if(clonal)renderClonal(f);else renderNSA(f,active);
+}
+function filter(){const mode=$("method").value;document.querySelectorAll("[data-mode]").forEach(e=>e.hidden=!e.dataset.mode.split(" ").includes(mode));}
+function refresh(){
+  filter();
+  try{const c=getSettings();frames=c.mode==="clonal"?runClonal(c):runNSA(c);active=c;pos=0;$("formError").textContent="";render();}
+  catch(e){$("formError").textContent=e.message;}
+}
+$("method").onchange=refresh;$("run").onclick=refresh;
+$("reset").onclick=()=>{for(const [k,v] of Object.entries(defaults))$(k).value=v;$("query").value=7.5;$("queryBits").value="10101111";refresh();};
+$("previous").onclick=()=>{if(pos>0)pos--;render();};
+$("next").onclick=()=>{if(pos<frames.length-1)pos++;render();};
+$("end").onclick=()=>{pos=frames.length-1;render();};
+$("query").oninput=render;$("queryBits").oninput=render;refresh();
+</script>
+</body>
+</html>

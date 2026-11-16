@@ -103,7 +103,7 @@ Os laboratórios permitem explorar conceitos por meio de controles e representa�
 </div>
 
 
-## Aulas 12 e 13 - Computação natural
+## Aulas 12 a 14 - Computação natural
 
 <div class="ecia-lab-grid">
 <article class="ecia-lab-card">
@@ -112,9 +112,24 @@ Os laboratórios permitem explorar conceitos por meio de controles e representa�
 <a class="ecia-lab-link" href="12-algoritmos-geneticos/">Abrir laboratório AG ↗</a>
 </article>
 <article class="ecia-lab-card">
-<h3>ACO e BPSO</h3>
-<p>Explore feromônios, atualização de velocidades, memórias e convergência no mesmo alvo binário da Aula 12.</p>
-<a class="ecia-lab-link" href="13-inteligencia-enxames/">Abrir laboratório de enxames ↗</a>
+<h3>Laboratório integrado: AG, ACO, BPSO e CLONALG</h3>
+<p>Compare os quatro métodos no mesmo alvo binário 4 × 4, com orçamento comum de avaliações, parâmetros específicos e estados internos.</p>
+<a class="ecia-lab-link" href="13-inteligencia-enxames/">Abrir laboratório integrado ↗</a>
+</article>
+<article class="ecia-lab-card">
+<h3>Sistemas Imunológicos Artificiais</h3>
+<p>Investigue tolerância e cobertura no NSA, seleção, clonagem, hipermutação e convergência no CLONALG.</p>
+<a class="ecia-lab-link" href="14-sistemas-imunologicos/">Abrir laboratório imunológico ↗</a>
+</article>
+</div>
+
+## Aula 15 - Algoritmos Ensemble
+
+<div class="ecia-lab-grid">
+<article class="ecia-lab-card">
+<h3>Voting, Bagging, Random Forest, Boosting e Stacking</h3>
+<p>Explore diversidade e variância, votos e probabilidades, bootstrap e OOB, correções sequenciais, regiões de decisão e predições OOF.</p>
+<a class="ecia-lab-link" href="15-ensemble/">Abrir laboratório de ensembles ↗</a>
 </article>
 </div>
 
@@ -125,4 +140,4 @@ Os laboratórios permitem explorar conceitos por meio de controles e representa�
 3. Registre o que mudou e explique a relação com a teoria.
 4. Compare com os pseudocódigos, exemplos Python e estudos guiados da aula.
 
-**Observação:** o visualizador de Busca reproduz traces didáticos pré-calculados. As visualizações de aprendizagem ilustram os conceitos, mas não treinam modelos em tempo real.
+**Observação:** o visualizador de Busca reproduz traces didáticos pré-calculados. Os demais laboratórios podem calcular estados ou ajustar modelos didáticos no navegador; não substituem experimentos com as bases reais e os códigos Python das práticas.
