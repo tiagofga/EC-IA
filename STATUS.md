@@ -4,9 +4,9 @@
 
 ## Versão consolidada
 
-`v0.12.0`: materiais públicos das Aulas 00 a 13.
+[v0.13.0](https://github.com/tiagofga/EC-IA/releases/tag/v0.13.0): materiais públicos das Aulas 00 a 15, publicada em 16/11/2026.
 
-Os PDFs e materiais complementares das Aulas 14 e 15 já estão integrados à branch `main`, assim como a refatoração do build. A release consolidada de referência permanece v0.12.0. Os três simulados da Prova 2 estão preparados para revisão nesta atualização.
+Os materiais complementares das Aulas 14 e 15, a refatoração do build e os três simulados da Prova 2 foram integrados à `main` e incluídos na release.
 
 ## Conteúdo público organizado
 
@@ -20,18 +20,18 @@ Os PDFs e materiais complementares das Aulas 14 e 15 já estão integrados à br
 | Visualizações | Busca, lógica, Prolog, aprendizagem supervisionada, computação natural e ensembles |
 | Exemplos Python | Aulas 08 a 15 |
 | Trabalhos | Trabalho 01 e Trabalho 02 |
-| Simulados | Prova 1: três simulados; Prova 2: três simulados preparados (Aulas 05 a 12) |
+| Simulados | Prova 1: três simulados; Prova 2: três simulados (Aulas 05 a 12) |
 
-O escopo acima inclui os materiais preparados na branch de atualização, cuja publicação depende da revisão e integração.
+Os materiais acima integram a release v0.13.0.
 
 ## Atualização das Aulas 14 e 15
 
 | Recurso | Aula 14 - Sistemas Imunológicos | Aula 15 - Ensemble |
 |---|---|---|
 | Teoria e prática | Integradas à main | Integradas à main |
-| Notas visuais | Preparadas | Preparadas |
-| Estudos guiados | Preparados | Preparados |
-| Pseudocódigos | Preparados | Preparados |
+| Notas visuais | Integradas à main | Integradas à main |
+| Estudos guiados | Integrados à main | Integrados à main |
+| Pseudocódigos | Integrados à main | Integrados à main |
 | Exemplos Python | Integrados e testados | Integrados e testados |
 | Visualizações interativas | NSA e CLONALG | Voting, Bagging, Random Forest, AdaBoost, Gradient Boosting, Stacking e diversidade |
 
@@ -45,12 +45,12 @@ Também foram revisadas as notas visuais das Aulas 08 a 13 e atualizados o READM
 - [x] Preparação dos materiais complementares.
 - [x] Build estrito do site e testes da lógica dos novos laboratórios.
 - [x] Padronização documental e sincronização das cópias do MkDocs.
-- [ ] Revisão pedagógica e inspeção visual no navegador.
+- [ ] Revisão pedagógica contínua e inspeção visual dos laboratórios no navegador.
 - [x] Integração dos materiais complementares à main.
 - [x] Refatoração do build para não versionar cópias geradas.
-- [ ] Consolidação da próxima release.
+- [x] Publicação da release v0.13.0.
 - [x] Elaboração dos três simulados da Prova 2, em etapa independente.
-- [ ] Revisão dos simulados e publicação após integração.
+- [x] Integração dos simulados à main e inclusão na release.
 
 ## Materiais restritos
 

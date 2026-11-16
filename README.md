@@ -128,7 +128,7 @@ Modelos LaTeX explicitamente fornecidos aos estudantes podem ser publicados.
 
 ## Desenvolvimento e versões
 
-A versão consolidada de referência é **v0.12.0**. A versão seguinte incluirá as novas aulas e a revisão dos materiais complementares após validação e integração na branch `main`.
+A versão estável mais recente é [**v0.13.0**](https://github.com/tiagofga/EC-IA/releases/tag/v0.13.0), publicada em 16/11/2026, que consolida as Aulas 00 a 15, os seis simulados e a refatoração do build. A branch `main` pode incluir ajustes posteriores à release.
 
 As alterações são desenvolvidas em branches próprias, revisadas por Pull Request e registradas no [CHANGELOG](CHANGELOG.md). O histórico segue Conventional Commits. Consulte o [CONTRIBUTING](CONTRIBUTING.md) e o roadmap.
 
