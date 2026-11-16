@@ -6,6 +6,8 @@ O histórico de commits segue Conventional Commits.
 
 ## [Unreleased]
 
+## [0.13.0] - 2026-11-16
+
 ### Added
 
 - Três simulados da Prova 2 (Aulas 05 a 12), com questões inéditas, cálculos e justificativas conceituais, sem gabaritos públicos.
@@ -21,10 +23,13 @@ O histórico de commits segue Conventional Commits.
 - Cópias geradas pelo MkDocs não são mais versionadas; o build preserva a árvore de trabalho limpa e os materiais originais permanecem como fonte única.
 - Laboratório integrado de otimização: CLONALG junto a AG, ACO e BPSO, com orçamento comum de avaliações e estados internos específicos.
 - Padronização da documentação e sincronização dos materiais públicos com as cópias utilizadas pelo MkDocs.
-
 - Catálogo de aulas, página inicial, documentação e build do site atualizados para disponibilizar os quatro PDFs.
 - Revisão das notas visuais das Aulas 08 a 11 e refinamento dos diagramas das Aulas 12 e 13.
 - Reorganização do README principal em percurso didático, recursos disponíveis, avaliações e desenvolvimento.
+
+### Fixed
+
+- Links da Lista 05 nas notas e no estudo guiado da Aula 07, com resolução adequada durante o build.
 
 ## [0.12.0] - 2026-11-02
 
