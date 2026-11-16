@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://tiagofga.github.io/EC-IA/notas/14-sistemas-imunologicos/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Nota visual 14 - Sistemas Imunológicos Artificiais - EC-IA</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/extra.css" rel="stylesheet" />
+        <link href="../../assets/theme.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Nota visual 14 - Sistemas Imunol\u00f3gicos Artificiais";
+        var mkdocs_page_input_path = "notas/14-sistemas-imunologicos/README.md";
+        var mkdocs_page_url = "/EC-IA/notas/14-sistemas-imunologicos/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> EC-IA
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Início</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../planos/">Plano didático</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../roadmap/">Roadmap</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../aulas/">Aulas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Notas visuais</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../estudos-guiados/">Estudos guiados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../atividades/">Atividades</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../simulados/">Simulados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../visualizacoes/">Visualizações</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../pseudocodigos/">Pseudocódigos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../exemplos/">Exemplos Python</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../trabalhos/">Trabalhos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://github.com/tiagofga/EC-IA">Repositório no GitHub</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">EC-IA</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Nota visual 14 - Sistemas Imunológicos Artificiais</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/tiagofga/EC-IA/edit/master/docs/notas/14-sistemas-imunologicos/README.md">Edit on tiagofga/EC-IA</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="nota-visual-14-sistemas-imunologicos-artificiais">Nota visual 14 - Sistemas Imunológicos Artificiais</h1>
+<p><img alt="Mapa de síntese: seleção negativa e seleção clonal" src="nota-visual-aula-14.svg" /></p>
+<p><strong>Questão central:</strong> como reconhecer padrões desconhecidos e explorar boas soluções sem perder diversidade?</p>
+<h2 id="mapa-conceitual">Mapa conceitual</h2>
+<pre><code class="language-mermaid">flowchart TD
+  A[&quot;Inspiração imunológica&quot;] --&gt; B{&quot;Qual é o objetivo?&quot;}
+  B --&gt;|detectar anomalias| C[&quot;NSA: padrões normais S&quot;]
+  B --&gt;|otimizar soluções| D[&quot;CLONALG: população e fitness&quot;]
+  C --&gt; E[&quot;Gerar candidatos a detector&quot;]
+  E --&gt; F{&quot;Reconhece algum normal?&quot;}
+  F --&gt;|sim| E
+  F --&gt;|não| G[&quot;Aceitar detector&quot;]
+  G --&gt; H[&quot;Testar novas entradas&quot;]
+  D --&gt; I[&quot;Selecionar e clonar&quot;]
+  I --&gt; J[&quot;Hipermutar e avaliar&quot;]
+  J --&gt; K[&quot;Selecionar, preservar e renovar&quot;]
+  K --&gt; D
+  classDef base fill:#e9eafb,stroke:#2435a0,color:#17215e;
+  classDef det fill:#fff0d7,stroke:#ad7321,color:#71460c;
+  classDef opt fill:#e1f2f0,stroke:#20766c,color:#12463f;
+  class A,B base;
+  class C,E,F,G,H det;
+  class D,I,J,K opt;
+</code></pre>
+<h2 id="conceitos-em-sequencia">Conceitos em sequência</h2>
+<ol>
+<li><strong>Abstração biológica:</strong> reconhecimento, seleção, diversidade e memória inspiram algoritmos; não reproduzem integralmente o sistema imunológico.</li>
+<li><strong>Seleção Negativa (NSA):</strong> aprende uma coleção de detectores que não reconhecem os padrões normais conhecidos. Na aplicação, uma entrada que ativa algum detector é sinalizada como possível anomalia.</li>
+<li><strong>Cobertura:</strong> a escolha de distância, limiar, quantidade de detectores e amostras normais define as regiões reconhecidas. Ausência de ativação não comprova normalidade.</li>
+<li><strong>Seleção Clonal (CLONALG):</strong> mantém candidatos avaliados por afinidade. Seleciona soluções promissoras, cria clones e aplica hipermutação antes de reavaliar.</li>
+<li><strong>Exploração e intensificação:</strong> candidatos de alta afinidade podem receber mais clones e menores taxas de mutação; candidatos de menor afinidade podem sofrer perturbações maiores. Renovação ajuda a preservar diversidade.</li>
+<li><strong>Comparação:</strong> NSA e CLONALG têm objetivos distintos; na prática de otimização, compare CLONALG com AG, ACO e BPSO usando representação e avaliação comuns.</li>
+</ol>
+<h2 id="nsa-duas-etapas-duas-decisoes">NSA: duas etapas, duas decisões</h2>
+<table>
+<thead>
+<tr>
+<th>Etapa</th>
+<th>Regra na variante de raio fixo</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Formação</td>
+<td>Rejeitar candidato d se existir normal s com dist(d,s) ≤ r</td>
+<td>Detectores tolerantes aos padrões conhecidos</td>
+</tr>
+<tr>
+<td>Aplicação</td>
+<td>Sinalizar x se existir detector d com dist(d,x) ≤ r</td>
+<td>Possível anomalia</td>
+</tr>
+</tbody>
+</table>
+<p>No exemplo da aula, o espaço é [0,10], os padrões normais são S = {2,3} e o raio r = 1.</p>
+<table>
+<thead>
+<tr>
+<th>Candidato</th>
+<th style="text-align: right;">Distância ao normal mais próximo</th>
+<th>Decisão</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2,6</td>
+<td style="text-align: right;">0,4</td>
+<td>Rejeitar</td>
+</tr>
+<tr>
+<td>5,5</td>
+<td style="text-align: right;">2,5</td>
+<td>Aceitar</td>
+</tr>
+<tr>
+<td>8,0</td>
+<td style="text-align: right;">5,0</td>
+<td>Aceitar</td>
+</tr>
+</tbody>
+</table>
+<p>Com D = {5,5; 8}, as regiões cobertas pelos detectores são [4,5; 6,5] e [7; 9]. O ponto 7,5 é sinalizado porque sua distância ao detector 8 é 0,5. Já o ponto 0 não é sinalizado, embora esteja distante dos padrões normais. Há regiões sem cobertura.</p>
+<p><strong>Interpretação dos parâmetros:</strong> aumentar r amplia a área reconhecida por cada detector, mas também pode dificultar a formação de detectores tolerantes ao próprio. Em muitas dimensões, cobertura e custo tornam-se especialmente relevantes. Distâncias dependem da escala dos atributos.</p>
+<h2 id="clonalg-como-a-qualidade-orienta-a-busca">CLONALG: como a qualidade orienta a busca</h2>
+<p>Afinidade é uma medida de qualidade coerente com o objetivo. Para maximização, uma normalização possível é:</p>
+<pre><code class="language-text">aᵢ = (fᵢ - fmin) / (fmax - fmin), se fmax &gt; fmin
+</code></pre>
+<p>Quando todos os valores forem iguais, deve-se definir explicitamente uma política para evitar divisão por zero. Na minimização, inverta o sentido da qualidade.</p>
+<p>Na variante apresentada na teoria, selecione n candidatos ordenados por afinidade e produza:</p>
+<pre><code class="language-text">Nᵢ = max(1, floor(β · n / i))
+pₘ(a) = pmin + (pmax - pmin) · (1 - a)
+</code></pre>
+<ul>
+<li>i é a posição no ranking (1 é o melhor); β controla a intensidade da clonagem.</li>
+<li>Nᵢ é a quantidade de clones do candidato i.</li>
+<li>a ∈ [0,1] é sua afinidade normalizada.</li>
+<li>pmin e pmax limitam a probabilidade de mutação por gene na variante binária.</li>
+</ul>
+<p>Por exemplo, com n = 3 e β = 2, os três selecionados geram 6, 3 e 2 clones. Com pmin = 0,02 e pmax = 0,30, uma afinidade 0,8 produz pₘ = 0,076; afinidade 0,2 produz pₘ = 0,244. São probabilidades, não números garantidos de bits invertidos.</p>
+<p>As regras são variantes didáticas, não fórmulas universais de CLONALG. A prática usa arredondamento para cima (ceil) na clonagem e afinidade fitness/16 para a imagem binária; a teoria ilustra arredondamento para baixo. Clonar mais também aumenta o custo de avaliação.</p>
+<h2 id="exemplo-selecao-de-itens">Exemplo: seleção de itens</h2>
+<p>Capacidade C = 7; pesos (2,3,4,5), valores (3,4,5,8), nos itens A, B, C e D. Com penalização λ = 10:</p>
+<pre><code class="language-text">f(x) = Σ vᵢ xᵢ - λ · max(0, Σ wᵢ xᵢ - C)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Candidato</th>
+<th style="text-align: right;">Peso</th>
+<th style="text-align: right;">Valor bruto</th>
+<th style="text-align: right;">Fitness</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1001</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr>
+<td>0110</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr>
+<td>1100</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr>
+<td>0011</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">-7</td>
+</tr>
+</tbody>
+</table>
+<p>Uma possível hipermutação de 1100 é 1100 → 1000 → 1001. O clone passa de fitness 7 para 11. Entretanto, uma mutação também pode piorar o candidato ou violar restrições. A seleção posterior e a preservação do melhor conhecido evitam perder a melhor solução encontrada.</p>
+<h2 id="comparacao-mesmo-problema-mecanismos-diferentes">Comparação: mesmo problema, mecanismos diferentes</h2>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Informação que orienta a busca</th>
+<th>Geração de candidatos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AG</td>
+<td>Fitness dos pais</td>
+<td>Crossover e mutação</td>
+</tr>
+<tr>
+<td>ACO</td>
+<td>Feromônios e, quando aplicável, heurística</td>
+<td>Construção por amostragem</td>
+</tr>
+<tr>
+<td>BPSO</td>
+<td>pbest, gbest e velocidade</td>
+<td>Atualização probabilística dos bits</td>
+</tr>
+<tr>
+<td>CLONALG</td>
+<td>Afinidade, ranking e memória</td>
+<td>Clonagem, hipermutação e renovação</td>
+</tr>
+</tbody>
+</table>
+<p>Na imagem de 16 bits da prática, o fitness conta coincidências com o alvo. Para o Trabalho 02, preserve objetivo, restrições e representação compatível e compare pelo orçamento de avaliações, múltiplas sementes e qualidade das soluções, não apenas pelo número de gerações.</p>
+<h2 id="revisao-de-30-segundos">Revisão de 30 segundos</h2>
+<p>NSA constrói detectores tolerantes aos padrões normais; CLONALG explora soluções por seleção, clonagem, hipermutação e renovação. A inspiração é compartilhada, mas os problemas resolvidos e os critérios de avaliação são diferentes.</p>
+<h2 id="erros-conceituais-frequentes">Erros conceituais frequentes</h2>
+<ul>
+<li>Tratar ausência de ativação no NSA como prova de normalidade.</li>
+<li>Confundir raio do detector com afinidade de uma solução de otimização.</li>
+<li>Supor que a hipermutação sempre melhora o fitness.</li>
+<li>Aplicar operadores binários diretamente a permutações sem respeitar restrições.</li>
+<li>Contabilizar somente gerações, ignorando avaliações de clones e novos candidatos.</li>
+<li>Concluir superioridade geral a partir de uma execução.</li>
+</ul>
+<h2 id="revisao-de-1-minuto">Revisão de 1 minuto</h2>
+<p>Explique por que o NSA rejeita um detector próximo de um padrão normal. Depois descreva como ranking, quantidade de clones, taxa de mutação e renovação afetam exploração e custo em CLONALG.</p>
+<h2 id="checklist">Checklist</h2>
+<ul>
+<li>[ ] Distingo detecção de anomalias e otimização.</li>
+<li>[ ] Aplico a regra de formação e ativação de detectores.</li>
+<li>[ ] Reconheço regiões sem cobertura.</li>
+<li>[ ] Interpreto afinidade, ranking e taxa de hipermutação.</li>
+<li>[ ] Calculo fitness com penalização e respeito às restrições.</li>
+<li>[ ] Comparo AG, ACO, BPSO e CLONALG por avaliações e sementes.</li>
+</ul>
+<p><a href="../../estudos-guiados/14-sistemas-imunologicos/">Estudo guiado</a> · <a href="../../visualizacoes/14-sistemas-imunologicos/">Laboratório</a> · <a href="https://github.com/tiagofga/EC-IA/tree/main/aulas/14-sistemas-imunologicos">Slides da Aula 14</a> · <a href="https://github.com/tiagofga/EC-IA/tree/main/exemplos/14-sistemas-imunologicos">Código Python</a></p>
+<p><strong>Próxima conexão:</strong> enquanto as metaheurísticas combinam mecanismos de busca sobre candidatos, os métodos ensemble combinam predições de modelos de aprendizagem para melhorar a generalização.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/tiagofga/EC-IA" class="fa fa-code-fork" style="color: #fcfcfc"> tiagofga/EC-IA</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../assets/theme-toggle.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+      <script src="../../assets/mermaid-init.js"></script>
+      <script src="../../assets/downloads.js"></script>
+      <script src="../../assets/vercel-analytics.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

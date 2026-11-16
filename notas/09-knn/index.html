@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://tiagofga.github.io/EC-IA/notas/09-knn/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Nota visual 09 - K-Nearest Neighbors (KNN) - EC-IA</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/extra.css" rel="stylesheet" />
+        <link href="../../assets/theme.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Nota visual 09 - K-Nearest Neighbors (KNN)";
+        var mkdocs_page_input_path = "notas/09-knn/README.md";
+        var mkdocs_page_url = "/EC-IA/notas/09-knn/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> EC-IA
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Início</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../planos/">Plano didático</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../roadmap/">Roadmap</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../aulas/">Aulas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Notas visuais</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../estudos-guiados/">Estudos guiados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../atividades/">Atividades</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../simulados/">Simulados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../visualizacoes/">Visualizações</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../pseudocodigos/">Pseudocódigos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../exemplos/">Exemplos Python</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../trabalhos/">Trabalhos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://github.com/tiagofga/EC-IA">Repositório no GitHub</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">EC-IA</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Nota visual 09 - K-Nearest Neighbors (KNN)</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/tiagofga/EC-IA/edit/master/docs/notas/09-knn/README.md">Edit on tiagofga/EC-IA</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="nota-visual-09-k-nearest-neighbors-knn">Nota visual 09 - K-Nearest Neighbors (KNN)</h1>
+<p><img alt="Mapa de síntese" src="nota-visual-aula-09.svg" /></p>
+<p><strong>Questão central:</strong> quais exemplos são semelhantes e como a representação muda essa decisão?</p>
+<h2 id="mapa-conceitual">Mapa conceitual</h2>
+<pre><code class="language-mermaid">flowchart TD
+  A[&quot;Treino e nova entrada&quot;] --&gt; B[&quot;Imputar, codificar e escalar&quot;]
+  B --&gt; C[&quot;Calcular distâncias&quot;]
+  C --&gt; D[&quot;Ordenar exemplos&quot;]
+  D --&gt; E[&quot;Selecionar k vizinhos&quot;]
+  E --&gt; F[&quot;Votação de classes&quot;]
+  F --&gt; G[&quot;Predição&quot;]
+  classDef base fill:#e9eafb,stroke:#2435a0,color:#17215e;
+  class A,B,C,D,E,F,G base;
+</code></pre>
+<h2 id="conceitos-em-sequencia">Conceitos em sequência</h2>
+<ol>
+<li><strong>Preparação dos dados:</strong> Titanic train.csv; atributos Pclass, Sex, Age, SibSp, Parch, Fare e Embarked; alvo Survived.</li>
+<li><strong>Ausências e outliers:</strong> Imputação de mediana/moda segundo a coluna; outlier não é automaticamente erro.</li>
+<li><strong>Codificação:</strong> OneHotEncoder para categorias nominais; ColumnTransformer e Pipeline evitam inconsistências.</li>
+<li><strong>Evitar vazamento:</strong> Treino/teste antes de aprender mediana, escala e parâmetros da transformação.</li>
+<li><strong>KNN:</strong> Distância aos exemplos de treino, ordenação, k vizinhos e voto majoritário.</li>
+<li><strong>Escala e seleção de k:</strong> StandardScaler e validação cruzada k-fold; escolher k sem consultar conjunto de teste.</li>
+</ol>
+<h2 id="distancia-e-escolha-de-k">Distância e escolha de k</h2>
+<pre><code class="language-text">d(x,z) = sqrt(Σ (xⱼ - zⱼ)²)
+</code></pre>
+<p>x e z são vetores de atributos e j percorre suas dimensões. Com consulta q=(2,2), os exemplos abaixo produzem:</p>
+<table>
+<thead>
+<tr>
+<th>Exemplo</th>
+<th>Coordenadas</th>
+<th>Classe</th>
+<th style="text-align: right;">Distância a q</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>(2,3)</td>
+<td>0</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>B</td>
+<td>(4,2)</td>
+<td>1</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td>C</td>
+<td>(2,5)</td>
+<td>1</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td>D</td>
+<td>(6,2)</td>
+<td>0</td>
+<td style="text-align: right;">4</td>
+</tr>
+</tbody>
+</table>
+<p>k=1 prevê 0; k=3 prevê 1 por maioria. A escolha de k altera a suavidade da fronteira: valores pequenos são sensíveis a ruído, valores grandes podem apagar estruturas locais. Em regressão, agrega-se o valor dos vizinhos, não seus rótulos.</p>
+<h2 id="por-que-preparar-os-atributos">Por que preparar os atributos?</h2>
+<p>Se idade variar 10 unidades e tarifa variar 100, a segunda diferença domina a distância euclidiana bruta, mesmo que isso seja apenas efeito de escala. Para uma variável numérica, padronize usando z=(x-μ)/σ, com μ e σ estimados no treino. Categorias nominais exigem codificação apropriada, não uma ordem numérica arbitrária.</p>
+<table>
+<thead>
+<tr>
+<th>Atributo no Titanic</th>
+<th>Preparação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Age, Fare</td>
+<td>Imputação e padronização conforme estratégia</td>
+</tr>
+<tr>
+<td>Pclass, SibSp, Parch</td>
+<td>Considerar significado ordinal/numérico</td>
+</tr>
+<tr>
+<td>Sex, Embarked</td>
+<td>Codificação de categorias e tratamento de ausências</td>
+</tr>
+<tr>
+<td>Survived</td>
+<td>Alvo, não atributo de entrada</td>
+</tr>
+</tbody>
+</table>
+<h2 id="validacao-cruzada">Validação cruzada</h2>
+<p>Para testar k=1,3,5 (ou outros valores), compare as médias das métricas sobre os mesmos folds do treino. Em cada fold, a imputação, codificação e escala são ajustadas somente à parte de treinamento. <code>Pipeline</code> e <code>ColumnTransformer</code> mantêm esse isolamento. Escolha k pelo desempenho de validação, não pelo teste; o teste reservado só avalia a configuração final.</p>
+<h2 id="revisao-de-30-segundos">Revisão de 30 segundos</h2>
+<p>KNN armazena exemplos e decide por proximidade. Escala, codificação, métrica de distância e k determinam quais vizinhos influenciam a predição.</p>
+<h2 id="erros-conceituais-frequentes">Erros conceituais frequentes</h2>
+<ul>
+<li>Usar o teste para escolher parâmetros ou transformações.</li>
+<li>Tratar acurácia como critério universal de qualidade.</li>
+<li>Escolher k observando o teste ou padronizar antes de separar os dados.</li>
+<li>Supor que distância pequena garante classe correta.</li>
+</ul>
+<h2 id="revisao-de-1-minuto">Revisão de 1 minuto</h2>
+<p>Ordene os quatro vizinhos do exemplo, compare k=1 e k=3 e explique como multiplicar uma dimensão por 100 pode alterar a ordem.</p>
+<h2 id="checklist">Checklist</h2>
+<ul>
+<li>[ ] Calculo distância e voto de vizinhos.</li>
+<li>[ ] Distingo treinamento, validação e teste.</li>
+<li>[ ] Identifico transformações numéricas e categóricas.</li>
+<li>[ ] Escolho k por validação cruzada sem vazamento.</li>
+</ul>
+<p><a href="../../estudos-guiados/09-knn/">Estudo guiado</a></p>
+<p><strong>Próxima conexão:</strong> SVM aprende uma fronteira de decisão, em vez de consultar vizinhos a cada predição.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/tiagofga/EC-IA" class="fa fa-code-fork" style="color: #fcfcfc"> tiagofga/EC-IA</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../assets/theme-toggle.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+      <script src="../../assets/mermaid-init.js"></script>
+      <script src="../../assets/downloads.js"></script>
+      <script src="../../assets/vercel-analytics.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

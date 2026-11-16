@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://tiagofga.github.io/EC-IA/estudos-guiados/14-sistemas-imunologicos/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Estudo Guiado 14 - Sistemas Imunológicos Artificiais - EC-IA</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/extra.css" rel="stylesheet" />
+        <link href="../../assets/theme.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Estudo Guiado 14 - Sistemas Imunol\u00f3gicos Artificiais";
+        var mkdocs_page_input_path = "estudos-guiados/14-sistemas-imunologicos/README.md";
+        var mkdocs_page_url = "/EC-IA/estudos-guiados/14-sistemas-imunologicos/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> EC-IA
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Início</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../planos/">Plano didático</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../roadmap/">Roadmap</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../aulas/">Aulas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../notas/">Notas visuais</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Estudos guiados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../atividades/">Atividades</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../simulados/">Simulados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../visualizacoes/">Visualizações</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../pseudocodigos/">Pseudocódigos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../exemplos/">Exemplos Python</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../trabalhos/">Trabalhos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://github.com/tiagofga/EC-IA">Repositório no GitHub</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">EC-IA</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Estudo Guiado 14 - Sistemas Imunológicos Artificiais</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/tiagofga/EC-IA/edit/master/docs/estudos-guiados/14-sistemas-imunologicos/README.md">Edit on tiagofga/EC-IA</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="estudo-guiado-14-sistemas-imunologicos-artificiais">Estudo Guiado 14 - Sistemas Imunológicos Artificiais</h1>
+<p>Resolva as questões <strong>antes</strong> de consultar novamente os slides e a nota visual. Registre os cálculos, as hipóteses e as justificativas. Utilize o código da prática depois de formular suas respostas.</p>
+<h2 id="objetivos-de-aprendizagem">Objetivos de aprendizagem</h2>
+<ul>
+<li><strong>Inspiração imunológica:</strong> distinguir o sistema biológico de suas abstrações computacionais e reconhecer os objetivos de NSA e CLONALG.</li>
+<li><strong>Seleção negativa:</strong> interpretar padrões próprios, detectores, limiar de reconhecimento, tolerância e cobertura.</li>
+<li><strong>Seleção clonal:</strong> relacionar fitness, afinidade, ordenação, clonagem, hipermutação e renovação.</li>
+<li><strong>Representação:</strong> formular problemas binários, reais ou por permutação com operadores compatíveis.</li>
+<li><strong>Experimentação:</strong> comparar AG, ACO, BPSO e CLONALG sob o mesmo objetivo e orçamento de avaliações.</li>
+</ul>
+<h2 id="questoes-de-interpretacao">Questões de interpretação</h2>
+<ol>
+<li>Por que Sistemas Imunológicos Artificiais não são uma simulação fiel do sistema imune?</li>
+<li>Diferencie os objetivos de NSA e CLONALG. Em qual deles é necessário estabelecer uma função objetivo de otimização?</li>
+<li>Por que o NSA rejeita detectores que reconhecem padrões próprios conhecidos?</li>
+<li>Uma amostra que não ativa nenhum detector pode ser declarada normal? Explique.</li>
+<li>Como a escala dos atributos e a escolha da distância afetam a geração e a utilização dos detectores?</li>
+<li>Diferencie fitness e afinidade normalizada no CLONALG. Como tratar um objetivo de minimização?</li>
+<li>Por que candidatos de alta afinidade podem receber mais clones e menor probabilidade de hipermutação?</li>
+<li>Qual é a diferença entre manter a elite e renovar uma parte da população?</li>
+<li>Por que a quantidade de avaliações pode ser diferente entre duas gerações com fatores de clonagem diferentes?</li>
+</ol>
+<h2 id="exercicio-1-formacao-e-ativacao-de-detectores">Exercício 1 - Formação e ativação de detectores</h2>
+<p>Considere o espaço X = [0,12], os padrões normais S = {3,4,9} e a distância absoluta, com raio de reconhecimento r = 1.</p>
+<table>
+<thead>
+<tr>
+<th>Candidato a detector</th>
+<th style="text-align: right;">Posição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td style="text-align: right;">2,5</td>
+</tr>
+<tr>
+<td>B</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr>
+<td>C</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr>
+<td>D</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr>
+<td>E</td>
+<td style="text-align: right;">11,5</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Calcule a menor distância de cada candidato a um padrão normal.</li>
+<li>Identifique os detectores aceitos pela regra de rejeição dist(d,s) ≤ r.</li>
+<li>Desenhe na reta numérica as regiões reconhecidas pelos detectores aceitos, limitadas ao domínio X.</li>
+<li>Determine se as entradas 0, 5,5, 8, 10,5 e 12 ativam algum detector.</li>
+<li>Identifique uma região sem cobertura que esteja distante dos padrões de S. Por que esse caso evidencia uma limitação?</li>
+<li>Explique o efeito possível de aumentar o raio sem aumentar a quantidade de detectores.</li>
+</ol>
+<h2 id="exercicio-2-reconhecimento-binario-no-nsa">Exercício 2 - Reconhecimento binário no NSA</h2>
+<p>A implementação complementar utiliza cadeias de 8 bits e reconhecimento por r posições consecutivas iguais, na mesma janela, com r = 4.</p>
+<p>Considere os padrões próprios <code>00000000</code> e <code>00010000</code>, e os candidatos <code>11000011</code>, <code>11111111</code> e <code>01010101</code>.</p>
+<ol>
+<li>Compare cada candidato com os padrões próprios, indicando as janelas de quatro bits que coincidem, se houver.</li>
+<li>Determine quais candidatos podem ser aceitos como detectores.</li>
+<li>Para cada detector aceito, avalie seu reconhecimento das amostras <code>10101111</code> e <code>01000100</code>.</li>
+<li>Diferencie essa regra da distância de Hamming, que conta posições diferentes independentemente de serem consecutivas.</li>
+<li>Explique por que um detector com essa representação não pode ser empregado diretamente em medições contínuas sem adaptação.</li>
+</ol>
+<h2 id="exercicio-3-clonagem-e-hipermutacao">Exercício 3 - Clonagem e hipermutação</h2>
+<p>Considere quatro candidatos selecionados, ordenados por fitness, em uma tarefa de maximização com máximo conhecido igual a 16:</p>
+<table>
+<thead>
+<tr>
+<th>Candidato</th>
+<th style="text-align: right;">Fitness</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td style="text-align: right;">15</td>
+</tr>
+<tr>
+<td>B</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr>
+<td>C</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr>
+<td>D</td>
+<td style="text-align: right;">5</td>
+</tr>
+</tbody>
+</table>
+<p>A variante teórica utiliza:</p>
+<pre><code class="language-text">Nᵢ = max(1, floor(β · n / i))
+pₘ(a) = pmin + (pmax - pmin) · (1 - a)
+</code></pre>
+<p>Na prática, a clonagem utiliza o arredondamento para cima (<code>ceil</code>), e a afinidade é fitness/16.</p>
+<ol>
+<li>Calcule a afinidade de cada candidato usando a regra da prática.</li>
+<li>Com β = 1,5 e n = 4, determine o número de clones pela regra teórica e pela regra da implementação.</li>
+<li>Compare o total de avaliações de clones nas duas variantes. Por que a regra precisa estar documentada?</li>
+<li>Com pmin = 0,02 e pmax = 0,35, calcule a probabilidade de inversão por bit para cada candidato.</li>
+<li>Determine o número esperado de inversões em um clone de 16 bits de A e de D. Esse valor é garantido em uma execução?</li>
+<li>Discuta o que pode ocorrer se os clones forem gerados sem mutação ou se todas as taxas forem excessivamente altas.</li>
+</ol>
+<h2 id="exercicio-4-otimizacao-com-restricoes">Exercício 4 - Otimização com restrições</h2>
+<p>Selecione itens sob capacidade máxima C = 8:</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th style="text-align: right;">A</th>
+<th style="text-align: right;">B</th>
+<th style="text-align: right;">C</th>
+<th style="text-align: right;">D</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Peso</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr>
+<td>Valor</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">10</td>
+</tr>
+</tbody>
+</table>
+<p>Utilize a codificação binária na ordem A, B, C, D e a função de maximização:</p>
+<pre><code class="language-text">f(x) = Σ vᵢ xᵢ - λ · max(0, Σ wᵢ xᵢ - C)
+</code></pre>
+<ol>
+<li>Com λ = 8, calcule peso, valor e fitness dos candidatos <code>1001</code>, <code>0110</code>, <code>1100</code> e <code>0011</code>.</li>
+<li>Ordene os candidatos por fitness.</li>
+<li>Inverta o terceiro bit de <code>1100</code>, avalie o clone e discuta sua viabilidade.</li>
+<li>Explique por que aumentar o valor bruto não basta para determinar uma solução aceitável.</li>
+<li>Proponha uma regra de reparo e compare-a conceitualmente com penalização. O que deveria permanecer igual em uma comparação entre métodos?</li>
+</ol>
+<h2 id="exercicio-5-integracao-da-computacao-natural">Exercício 5 - Integração da computação natural</h2>
+<p>Retome a imagem comum das Aulas 12, 13 e 14:</p>
+<pre><code class="language-text">0110
+1001
+1001
+0110
+</code></pre>
+<ol>
+<li>Represente a imagem como um candidato de 16 bits e calcule o fitness de <code>0110 / 1001 / 1011 / 0010</code>.</li>
+<li>Explique como AG, ACO, BPSO e CLONALG gerariam novos candidatos nesse mesmo espaço.</li>
+<li>Em CLONALG, quais etapas precisam contabilizar avaliações da função objetivo?</li>
+<li>Proponha uma tabela experimental para múltiplas sementes e orçamento de 1000 avaliações, incluindo melhor fitness, avaliações efetivas e ocorrência do ótimo.</li>
+<li>Se um método encontra o ótimo antes dos demais, que informações adicionais são necessárias para sustentar uma conclusão?</li>
+</ol>
+<h2 id="pratica-com-python">Prática com Python</h2>
+<p>Utilize os <a href="https://github.com/tiagofga/EC-IA/tree/main/exemplos/14-sistemas-imunologicos">arquivos da prática da Aula 14</a>. Identifique as funções de <code>clonalg.py</code>, <code>nsa.py</code> e <code>testes.py</code> antes de executar.</p>
+<pre><code class="language-bash">python testes.py
+python clonalg.py --seed 42 --avaliacoes 1000 --csv base.csv
+python clonalg.py --seed 42 --avaliacoes 1000 --beta 2.0 --csv clones.csv
+python clonalg.py --seed 42 --avaliacoes 1000 --p-max 0.60 --csv mutacao.csv
+python nsa.py
+</code></pre>
+<ul>
+<li>Altere um parâmetro por vez, mantendo a semente para a comparação inicial.</li>
+<li>Registre melhor fitness, avaliações utilizadas e histórico acumulado. Compare os resultados por avaliação, não apenas por geração.</li>
+<li>Repita as configurações com sementes 0, 1 e 42; registre todas, sem selecionar a melhor semente.</li>
+<li>No NSA, identifique quais padrões são sinalizados e quais permanecem sem ativação. Não interprete ausência de sinal como normalidade comprovada.</li>
+</ul>
+<h2 id="discussao">Discussão</h2>
+<p>No Trabalho 02, o problema de otimização é o mesmo para AG, ACO ou PSO e CLONALG. Quais operadores e estruturas devem mudar quando a solução é uma permutação ou vetor real? Explique como preservar restrições, função objetivo, interpretação da afinidade e orçamento experimental.</p>
+<h2 id="autoavaliacao">Autoavaliação</h2>
+<ul>
+<li>[ ] Distingo seleção negativa e seleção clonal.</li>
+<li>[ ] Calculo distância, aceitação e ativação de detectores.</li>
+<li>[ ] Interpreto cobertura e regiões não reconhecidas.</li>
+<li>[ ] Calculo afinidade, quantidade de clones e probabilidade de hipermutação.</li>
+<li>[ ] Distingo as variantes teórica e prática de clonagem.</li>
+<li>[ ] Avalio soluções com restrições e penalização.</li>
+<li>[ ] Comparo metaheurísticas com orçamento, sementes e objetivo comuns.</li>
+<li>[ ] Justifico a adaptação de CLONALG ao Trabalho 02.</li>
+</ul>
+<p><a href="https://github.com/tiagofga/EC-IA/tree/main/aulas/14-sistemas-imunologicos">Slides da Aula 14</a> · <a href="../../notas/14-sistemas-imunologicos/">Nota visual 14</a> · <a href="../../visualizacoes/14-sistemas-imunologicos/">Laboratório</a></p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/tiagofga/EC-IA" class="fa fa-code-fork" style="color: #fcfcfc"> tiagofga/EC-IA</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../assets/theme-toggle.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+      <script src="../../assets/mermaid-init.js"></script>
+      <script src="../../assets/downloads.js"></script>
+      <script src="../../assets/vercel-analytics.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

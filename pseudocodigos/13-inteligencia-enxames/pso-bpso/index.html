@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://tiagofga.github.io/EC-IA/pseudocodigos/13-inteligencia-enxames/pso-bpso/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>PSO contínuo e BPSO binário - EC-IA</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/extra.css" rel="stylesheet" />
+        <link href="../../../assets/theme.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "PSO cont\u00ednuo e BPSO bin\u00e1rio";
+        var mkdocs_page_input_path = "pseudocodigos/13-inteligencia-enxames/pso-bpso.md";
+        var mkdocs_page_url = "/EC-IA/pseudocodigos/13-inteligencia-enxames/pso-bpso/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> EC-IA
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Início</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../planos/">Plano didático</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../roadmap/">Roadmap</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../aulas/">Aulas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../notas/">Notas visuais</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../estudos-guiados/">Estudos guiados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../atividades/">Atividades</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../simulados/">Simulados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../visualizacoes/">Visualizações</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../">Pseudocódigos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../exemplos/">Exemplos Python</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../trabalhos/">Trabalhos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://github.com/tiagofga/EC-IA">Repositório no GitHub</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">EC-IA</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">PSO contínuo e BPSO binário</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/tiagofga/EC-IA/edit/master/docs/pseudocodigos/13-inteligencia-enxames/pso-bpso.md">Edit on tiagofga/EC-IA</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="pso-continuo-e-bpso-binario">PSO contínuo e BPSO binário</h1>
+<p>No PSO contínuo, cada partícula guarda posição <code>x</code>, velocidade <code>v</code>, melhor posição própria <code>pbest</code> e melhor posição coletiva <code>gbest</code>.</p>
+<h2 id="pso-continuo">PSO contínuo</h2>
+<pre><code class="language-text">Algoritmo PSO_CONTINUO(f, m, T, w, c1, c2)
+  inicializar posições e velocidades das m partículas
+  avaliar as posições iniciais
+  pbest ← posições iniciais
+  gbest ← melhor pbest
+  para t ← 1 até T faça
+    para cada partícula k e dimensão i faça
+      r1, r2 ← sorteios uniformes independentes em [0,1)
+      v[k,i] ← w×v[k,i] + c1×r1×(pbest[k,i]−x[k,i])
+                          + c2×r2×(gbest[i]−x[k,i])
+      x[k,i] ← x[k,i] + v[k,i]
+    fim para
+    avaliar novas posições e atualizar pbest e gbest
+  fim para
+  retornar gbest
+FimAlgoritmo
+</code></pre>
+<h2 id="bpso-para-16-bits">BPSO para 16 bits</h2>
+<p>A velocidade continua real; a posição é amostrada como bit, e não calculada por deslocamento geométrico.</p>
+<pre><code class="language-text">Algoritmo BPSO_BINARIO(alvo, m, T, w, c1, c2)
+  inicializar m posições binárias de 16 bits
+  inicializar velocidades reais
+  avaliar posições, definir pbest e gbest
+  registrar avaliações iniciais e melhor fitness acumulado
+  para t ← 2 até T faça
+    para cada partícula k faça
+      para i ← 1 até 16 faça
+        r1, r2 ← sorteios uniformes independentes em [0,1)
+        v[k,i] ← w×v[k,i] + c1×r1×(pbest[k,i]−x[k,i])
+                            + c2×r2×(gbest[i]−x[k,i])
+        v[k,i] ← LIMITAR(v[k,i], −6, 6)
+        prob1 ← 1/(1+exp(−v[k,i]))
+        x[k,i] ← 1 se SORTEAR_UNIFORME(0,1) &lt; prob1, senão 0
+      fim para
+      avaliar x[k]
+      se x[k] supera pbest[k] então pbest[k] ← COPIAR(x[k])
+      se x[k] supera gbest então gbest ← COPIAR(x[k])
+      registrar avaliação e melhor fitness acumulado
+    fim para
+  fim para
+  retornar gbest e histórico
+FimAlgoritmo
+</code></pre>
+<p><strong>Observe:</strong> a inicialização já consome m avaliações. Com m=20 e T=30, o total é 600 avaliações, incluindo as posições iniciais. A convenção de contagem deve ser mantida ao comparar ACO e BPSO. O limite de velocidade <code>[-6,6]</code> é o utilizado no código-base da prática, e não uma propriedade universal do método.</p>
+<p>Os algoritmos acima são descrição conceitual. Os <code>TODO</code> de <code>bpso.py</code> permanecem destinados aos estudantes.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/tiagofga/EC-IA" class="fa fa-code-fork" style="color: #fcfcfc"> tiagofga/EC-IA</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../assets/theme-toggle.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+      <script src="../../../assets/mermaid-init.js"></script>
+      <script src="../../../assets/downloads.js"></script>
+      <script src="../../../assets/vercel-analytics.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

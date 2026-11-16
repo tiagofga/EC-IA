@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://tiagofga.github.io/EC-IA/pseudocodigos/14-sistemas-imunologicos/clonalg/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>CLONALG - Seleção Clonal para otimização - EC-IA</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/extra.css" rel="stylesheet" />
+        <link href="../../../assets/theme.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "CLONALG - Sele\u00e7\u00e3o Clonal para otimiza\u00e7\u00e3o";
+        var mkdocs_page_input_path = "pseudocodigos/14-sistemas-imunologicos/clonalg.md";
+        var mkdocs_page_url = "/EC-IA/pseudocodigos/14-sistemas-imunologicos/clonalg/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> EC-IA
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Início</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../planos/">Plano didático</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../roadmap/">Roadmap</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../aulas/">Aulas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../notas/">Notas visuais</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../estudos-guiados/">Estudos guiados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../atividades/">Atividades</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../simulados/">Simulados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../visualizacoes/">Visualizações</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../">Pseudocódigos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../exemplos/">Exemplos Python</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../trabalhos/">Trabalhos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://github.com/tiagofga/EC-IA">Repositório no GitHub</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">EC-IA</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">CLONALG - Seleção Clonal para otimização</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/tiagofga/EC-IA/edit/master/docs/pseudocodigos/14-sistemas-imunologicos/clonalg.md">Edit on tiagofga/EC-IA</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="clonalg-selecao-clonal-para-otimizacao">CLONALG - Seleção Clonal para otimização</h1>
+<p><strong>Entrada:</strong> objetivo f de maximização, representação, tamanho N, número n de selecionados, fator β, taxas pmin e pmax, quantidade R de renovações e orçamento B de avaliações.<br />
+<strong>Saída:</strong> melhor candidato conhecido, fitness e histórico de melhor fitness por avaliação.</p>
+<h2 id="ciclo-de-selecao-clonal">Ciclo de seleção clonal</h2>
+<pre><code class="language-text">Algoritmo CLONALG(f, N, n, β, pmin, pmax, R, B)
+  requer 1 ≤ n ≤ N, 0 ≤ R &lt; N e B ≥ N
+  P ← INICIALIZAR_POPULACAO(N)
+  melhor ← vazio
+  avaliações ← 0
+  para cada c em P faça
+    avaliar c
+    avaliações ← avaliações + 1
+    atualizar melhor se vazio ou se c for superior
+    registrar (avaliações, fitness(melhor))
+  fim para
+  enquanto avaliações &lt; B e não ATINGIU_PARADA(melhor) faça
+    E ← n melhores de P, ordenados por fitness
+    Q ← COPIAR(P)
+    para i ← 1 até |E| faça
+      a ← AFINIDADE(E[i])
+      quantidade ← QUANTIDADE_CLONES(β, n, i)
+      pm ← pmin + (pmax - pmin) × (1 - a)
+      para j ← 1 até quantidade faça
+        se avaliações = B então interromper
+        c ← HIPERMUTAR(COPIAR(E[i]), pm)
+        avaliar c
+        avaliações ← avaliações + 1
+        inserir c em Q
+        atualizar melhor se c for superior
+        registrar (avaliações, fitness(melhor))
+      fim para
+    fim para
+    P ← N - R melhores de Q
+    para j ← 1 até R faça
+      se avaliações = B então interromper
+      c ← GERAR_CANDIDATO_VALIDO()
+      avaliar c
+      avaliações ← avaliações + 1
+      inserir c em P
+      atualizar melhor se c for superior
+      registrar (avaliações, fitness(melhor))
+    fim para
+  fim enquanto
+  retornar melhor, fitness(melhor), histórico
+FimAlgoritmo
+</code></pre>
+<h2 id="hipermutacao-de-candidato-binario">Hipermutação de candidato binário</h2>
+<pre><code class="language-text">Algoritmo HIPERMUTAR_BINARIO(c, pm)
+  para i ← 1 até |c| faça
+    u ← SORTEAR_UNIFORME(0,1)
+    se u &lt; pm então
+      c[i] ← 1 - c[i]
+    fim se
+  fim para
+  retornar c
+FimAlgoritmo
+</code></pre>
+<h2 id="variantes-da-teoria-e-da-pratica">Variantes da teoria e da prática</h2>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Variante teórica</th>
+<th>Prática de 16 bits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clonagem por ranking</td>
+<td>max(1, floor(βn/i))</td>
+<td>ceil(βn/i), β &gt; 0</td>
+</tr>
+<tr>
+<td>Afinidade</td>
+<td>Normalização coerente com o objetivo</td>
+<td>Fitness/16</td>
+</tr>
+<tr>
+<td>Mutação</td>
+<td>Dependente da afinidade, adequada à representação</td>
+<td>Inversão independente por bit</td>
+</tr>
+<tr>
+<td>Parada</td>
+<td>Gerações ou critério definido</td>
+<td>Orçamento de avaliações e condição do melhor</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Invariantes:</strong> afinidade em [0,1]; taxas válidas; melhor fitness acumulado não diminui; cada chamada ao objetivo consome uma avaliação. A população pode terminar incompleta quando se esgota o orçamento durante a renovação. O teste do ótimo no início de cada geração permite concluir a geração corrente, conforme a prática.</p>
+<p><strong>Atenção:</strong> o registro deve atualizar o melhor após cada avaliação, inclusive na inicialização. Em permutações ou variáveis reais, substitua a mutação binária por operador compatível. Defina a validade, restrições e a afinidade antes de adaptar ao Trabalho 02.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/tiagofga/EC-IA" class="fa fa-code-fork" style="color: #fcfcfc"> tiagofga/EC-IA</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../assets/theme-toggle.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+      <script src="../../../assets/mermaid-init.js"></script>
+      <script src="../../../assets/downloads.js"></script>
+      <script src="../../../assets/vercel-analytics.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

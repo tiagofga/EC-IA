@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://tiagofga.github.io/EC-IA/notas/15-ensemble/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Nota visual 15 - Algoritmos Ensemble - EC-IA</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/extra.css" rel="stylesheet" />
+        <link href="../../assets/theme.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Nota visual 15 - Algoritmos Ensemble";
+        var mkdocs_page_input_path = "notas/15-ensemble/README.md";
+        var mkdocs_page_url = "/EC-IA/notas/15-ensemble/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> EC-IA
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Início</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../planos/">Plano didático</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../roadmap/">Roadmap</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../aulas/">Aulas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Notas visuais</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../estudos-guiados/">Estudos guiados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../atividades/">Atividades</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../simulados/">Simulados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../visualizacoes/">Visualizações</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../pseudocodigos/">Pseudocódigos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../exemplos/">Exemplos Python</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../trabalhos/">Trabalhos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://github.com/tiagofga/EC-IA">Repositório no GitHub</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">EC-IA</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Nota visual 15 - Algoritmos Ensemble</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/tiagofga/EC-IA/edit/master/docs/notas/15-ensemble/README.md">Edit on tiagofga/EC-IA</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="nota-visual-15-algoritmos-ensemble">Nota visual 15 - Algoritmos Ensemble</h1>
+<p><img alt="Mapa de síntese: mecanismos de combinação de modelos" src="nota-visual-aula-15.svg" /></p>
+<p><strong>Questão central:</strong> por que combinar modelos pode melhorar a generalização e quando isso não acontece?</p>
+<h2 id="mapa-conceitual">Mapa conceitual</h2>
+<pre><code class="language-mermaid">flowchart TD
+  A[&quot;Dados de treinamento&quot;] --&gt; B{&quot;Como produzir diversidade?&quot;}
+  B --&gt; C[&quot;Voting: modelos distintos&quot;]
+  B --&gt; D[&quot;Bagging/RF: amostras e atributos&quot;]
+  B --&gt; E[&quot;Boosting: etapas sequenciais&quot;]
+  B --&gt; F[&quot;Stacking: predições OOF&quot;]
+  C --&gt; G[&quot;Voto ou média ponderada&quot;]
+  D --&gt; H[&quot;Agregação de estimadores&quot;]
+  E --&gt; I[&quot;Soma de contribuições&quot;]
+  F --&gt; J[&quot;Metaestimador treinado&quot;]
+  G --&gt; K[&quot;Predição e avaliação&quot;]
+  H --&gt; K
+  I --&gt; K
+  J --&gt; K
+  classDef base fill:#e9eafb,stroke:#2435a0,color:#17215e;
+  classDef independent fill:#e1f2f0,stroke:#20766c,color:#12463f;
+  classDef sequential fill:#fff0d7,stroke:#ad7321,color:#71460c;
+  class A,B,K base;
+  class C,D,G,H independent;
+  class E,F,I,J sequential;
+</code></pre>
+<h2 id="conceitos-em-sequencia">Conceitos em sequência</h2>
+<ol>
+<li><strong>Modelos individuais:</strong> DT, KNN e SVM apresentam diferentes hipóteses, sensibilidades e padrões de erro.</li>
+<li><strong>Diversidade:</strong> modelos que erram sempre juntos oferecem pouca vantagem ao serem combinados. Diversidade sem qualidade individual também não garante melhoria.</li>
+<li><strong>Voting:</strong> agrega classes ou probabilidades de estimadores ajustados separadamente.</li>
+<li><strong>Bagging e Random Forest:</strong> treinam estimadores sobre amostras bootstrap; Random Forest também sorteia atributos candidatos em cada divisão.</li>
+<li><strong>Boosting:</strong> constrói estimadores de forma sequencial, direcionando os próximos ajustes aos erros ou à perda acumulada.</li>
+<li><strong>Stacking:</strong> aprende a combinação com um metaestimador treinado sobre predições fora dos folds (OOF).</li>
+</ol>
+<h2 id="diversidade-vies-e-variancia">Diversidade, viés e variância</h2>
+<p>Viés é o erro sistemático associado às hipóteses de um modelo. Variância descreve sua sensibilidade a mudanças nos dados de treinamento. Para M preditores numéricos com mesma variância σ² e correlação comum ρ:</p>
+<pre><code class="language-text">Var(h̄) = σ² · [ρ + (1 - ρ)/M]
+</code></pre>
+<p>h̄ é a média dos preditores, M é a quantidade de modelos e ρ mede a correlação entre suas saídas aleatórias. Com M = 10 e σ² = 1:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Correlação ρ</th>
+<th style="text-align: right;">Variância da média</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0,10</td>
+</tr>
+<tr>
+<td style="text-align: right;">0,5</td>
+<td style="text-align: right;">0,55</td>
+</tr>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1,00</td>
+</tr>
+</tbody>
+</table>
+<p>O ganho diminui quando os preditores são fortemente correlacionados. A equação trata a variância da média sob hipóteses específicas; não representa diretamente a acurácia de um classificador.</p>
+<h2 id="voting-votos-nao-sao-probabilidades">Voting: votos não são probabilidades</h2>
+<p>Hard voting escolhe a classe com maior soma de votos. Soft voting escolhe a classe com maior média ponderada de probabilidades.</p>
+<pre><code class="language-text">Hard: ŷ = argmax_c Σ wₘ · 1[hₘ(x) = c]
+Soft: ŷ = argmax_c (Σ wₘ · pₘ(c|x)) / Σ wₘ
+</code></pre>
+<p>hₘ(x) é a classe prevista pelo modelo m; pₘ(c|x) é sua probabilidade estimada para a classe c; wₘ é um peso não negativo, com soma positiva. A função indicadora vale 1 quando o modelo vota na classe c.</p>
+<table>
+<thead>
+<tr>
+<th>Modelo</th>
+<th style="text-align: right;">P(0)</th>
+<th style="text-align: right;">P(1)</th>
+<th style="text-align: right;">Voto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DT</td>
+<td style="text-align: right;">0,49</td>
+<td style="text-align: right;">0,51</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>KNN</td>
+<td style="text-align: right;">0,48</td>
+<td style="text-align: right;">0,52</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>SVM</td>
+<td style="text-align: right;">0,95</td>
+<td style="text-align: right;">0,05</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+<p>Com pesos iguais, hard voting escolhe 1 por dois votos contra um. Soft voting escolhe 0, pois P(1) = 0,36 e P(0) = 0,64. Probabilidades precisam estar alinhadas às classes e ter qualidade de calibração adequada; empates exigem regra definida.</p>
+<h2 id="bagging-e-random-forest-duas-fontes-de-diversidade">Bagging e Random Forest: duas fontes de diversidade</h2>
+<table>
+<thead>
+<tr>
+<th>Procedimento</th>
+<th>Bagging de árvores</th>
+<th>Random Forest clássica</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Treino de cada árvore</td>
+<td>Amostra bootstrap</td>
+<td>Amostra bootstrap</td>
+</tr>
+<tr>
+<td>Atributos disponíveis em cada nó</td>
+<td>Todos</td>
+<td>Subconjunto sorteado</td>
+</tr>
+<tr>
+<td>Combinação</td>
+<td>Agregar predições</td>
+<td>Agregar predições</td>
+</tr>
+</tbody>
+</table>
+<p>Bootstrap sorteia n exemplos com reposição a partir de n exemplos de treino. Para índices [1,2,3,4,5], uma amostra possível é [1,1,3,5,3]. Os exemplos 2 e 4 ficaram fora da amostra (out-of-bag, OOB).</p>
+<pre><code class="language-text">P(exemplo ausente) = (1 - 1/n)^n → 1/e ≈ 0,368
+</code></pre>
+<p>A aproximação de 36,8% vale para n grande, com n sorteios independentes e reposição. OOB usa modelos que não treinaram com aquele exemplo; não substitui automaticamente avaliação externa.</p>
+<p>Na Random Forest, max_features controla os atributos considerados por divisão, max_depth limita complexidade e n_estimators controla a quantidade de árvores. Aumentar árvores eleva custo e pode produzir ganhos marginais.</p>
+<h2 id="boosting-corrigir-o-modelo-em-etapas">Boosting: corrigir o modelo em etapas</h2>
+<h3 id="adaboost-binario">AdaBoost binário</h3>
+<p>Com rótulos yᵢ e predições hₜ(xᵢ) em {-1,+1} e pesos normalizados wᵢ:</p>
+<pre><code class="language-text">εₜ = Σ wᵢ · 1[yᵢ ≠ hₜ(xᵢ)]
+αₜ = 0,5 · ln((1 - εₜ)/εₜ)
+wᵢ' ∝ wᵢ · exp(-αₜ · yᵢ · hₜ(xᵢ))
+H(x) = sign(Σ αₜ · hₜ(x))
+</code></pre>
+<p>εₜ é o erro ponderado; αₜ representa a contribuição do estimador; os novos pesos são normalizados. No caso binário clássico, um estimador útil tem erro inferior a 0,5; erros extremos exigem tratamento próprio.</p>
+<p>Exemplo da aula: quatro pesos iguais a 0,25 e apenas o último exemplo incorreto. Temos ε = 0,25 e α ≈ 0,5493. Após normalização:</p>
+<table>
+<thead>
+<tr>
+<th>Exemplo</th>
+<th style="text-align: right;">Peso inicial</th>
+<th style="text-align: right;">Peso atualizado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1, 2 e 3 (cada)</td>
+<td style="text-align: right;">0,25</td>
+<td style="text-align: right;">0,1667</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">0,25</td>
+<td style="text-align: right;">0,50</td>
+</tr>
+</tbody>
+</table>
+<p>O exemplo incorreto ganha importância relativa. Isso pode ajudar em casos difíceis, mas também amplificar ruídos.</p>
+<h3 id="gradient-boosting">Gradient Boosting</h3>
+<pre><code class="language-text">Fₜ(x) = Fₜ₋₁(x) + η · hₜ(x)
+</code></pre>
+<p>Fₜ₋₁ é a predição acumulada, hₜ é o novo estimador ajustado à direção de redução da perda e η é a taxa de aprendizagem. Para perda quadrática, o gradiente negativo é o resíduo y - F.</p>
+<table>
+<thead>
+<tr>
+<th>Exemplo</th>
+<th style="text-align: right;">Real</th>
+<th style="text-align: right;">F₀</th>
+<th style="text-align: right;">Resíduo</th>
+<th style="text-align: right;">F₁ com η = 0,5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td>B</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr>
+<td>C</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+</tr>
+</tbody>
+</table>
+<p>Se o estimador reproduz os resíduos, o MSE passa de 8/3 para 2/3 neste exemplo didático. Em classificação, a direção da correção depende da perda escolhida, como log-loss.</p>
+<h2 id="stacking-o-metaestimador-precisa-de-predicoes-honestas">Stacking: o metaestimador precisa de predições honestas</h2>
+<pre><code class="language-mermaid">flowchart TD
+  A[&quot;Treino externo: três folds&quot;] --&gt; B[&quot;Base treinada nos folds 2 e 3&quot;]
+  A --&gt; C[&quot;Base treinada nos folds 1 e 3&quot;]
+  A --&gt; D[&quot;Base treinada nos folds 1 e 2&quot;]
+  B --&gt; E[&quot;Predições fold 1&quot;]
+  C --&gt; F[&quot;Predições fold 2&quot;]
+  D --&gt; G[&quot;Predições fold 3&quot;]
+  E --&gt; H[&quot;Matriz de predições OOF&quot;]
+  F --&gt; H
+  G --&gt; H
+  H --&gt; I[&quot;Ajustar metaestimador&quot;]
+</code></pre>
+<p>Cada coluna ou conjunto de colunas da matriz OOF corresponde às predições de um modelo base. Cada linha é produzida sem ajustar aquele modelo ao exemplo correspondente. Para inferência, os modelos base são reajustados em todo o treino; suas predições para uma nova entrada alimentam o metaestimador. O teste externo permanece isolado.</p>
+<h2 id="qual-metodo-escolher">Qual método escolher?</h2>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Principal mecanismo</th>
+<th>Atenção</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Voting</td>
+<td>Regra fixa de combinação</td>
+<td>Diversidade e calibração</td>
+</tr>
+<tr>
+<td>Bagging</td>
+<td>Reamostragem e agregação</td>
+<td>Variância e custo</td>
+</tr>
+<tr>
+<td>Random Forest</td>
+<td>Bagging + atributos aleatórios</td>
+<td>Complexidade e diversidade das árvores</td>
+</tr>
+<tr>
+<td>AdaBoost</td>
+<td>Reponderação de exemplos</td>
+<td>Ruídos e erros difíceis</td>
+</tr>
+<tr>
+<td>Gradient Boosting</td>
+<td>Correção sequencial da perda</td>
+<td>Taxa de aprendizagem e sobreajuste</td>
+</tr>
+<tr>
+<td>Stacking</td>
+<td>Combinação aprendida</td>
+<td>Vazamento de dados e custo da validação</td>
+</tr>
+</tbody>
+</table>
+<h2 id="conexao-com-a-pratica-e-trabalho-02">Conexão com a prática e Trabalho 02</h2>
+<p>Compare DT, KNN e SVM com os sete ensembles da prática usando os mesmos cinco folds estratificados no treino. Registre média e desvio-padrão de F1, demais métricas e tempo de treinamento. Transformações que aprendem parâmetros devem ser ajustadas dentro de cada fold. No stacking, a validação interna gera OOF somente no treino do fold externo. Preserve o teste final até que modelos e hiperparâmetros estejam definidos.</p>
+<p>As sementes e divisões devem ser controladas; não selecione a seed que produz o melhor valor. No Trabalho 02, justifique a escolha do ensemble com evidência experimental, não apenas por sua complexidade.</p>
+<h2 id="revisao-de-30-segundos">Revisão de 30 segundos</h2>
+<p>Voting combina saídas por uma regra; bagging reduz variabilidade pela reamostragem; Random Forest acrescenta diversidade de atributos; boosting corrige a perda em etapas; stacking aprende a combinação por predições OOF.</p>
+<h2 id="erros-conceituais-frequentes">Erros conceituais frequentes</h2>
+<ul>
+<li>Confundir voting de classes com média de probabilidades.</li>
+<li>Afirmar que mais modelos sempre aumentam a acurácia.</li>
+<li>Confundir bootstrap com divisão sem reposição.</li>
+<li>Tratar Random Forest como simples votação de árvores idênticas.</li>
+<li>Interpretar qualquer boosting como reponderação de exemplos.</li>
+<li>Treinar o metaestimador sobre predições dos mesmos exemplos usados no ajuste dos modelos base.</li>
+<li>Escolher parâmetros usando o teste final.</li>
+</ul>
+<h2 id="revisao-de-1-minuto">Revisão de 1 minuto</h2>
+<p>Explique por que hard e soft voting podem discordar. Compare a geração paralelizável de estimadores em bagging com a construção sequencial em boosting e justifique o uso de OOF no stacking.</p>
+<h2 id="checklist">Checklist</h2>
+<ul>
+<li>[ ] Diferencio viés, variância e diversidade.</li>
+<li>[ ] Interpreto ρ, σ² e M na variância da média.</li>
+<li>[ ] Calculo hard e soft voting.</li>
+<li>[ ] Identifico amostras bootstrap, OOB e atributos sorteados.</li>
+<li>[ ] Interpreto ε, α e os pesos de AdaBoost.</li>
+<li>[ ] Calculo uma atualização simples de Gradient Boosting.</li>
+<li>[ ] Explico stacking com OOF sem vazamento.</li>
+<li>[ ] Comparo modelos com as mesmas divisões e métricas.</li>
+</ul>
+<p><a href="../../estudos-guiados/15-ensemble/">Estudo guiado</a> · <a href="../../visualizacoes/15-ensemble/">Laboratório</a> · <a href="https://github.com/tiagofga/EC-IA/tree/main/aulas/15-ensemble">Slides da Aula 15</a> · <a href="https://github.com/tiagofga/EC-IA/tree/main/exemplos/15-ensemble">Código Python</a></p>
+<p><strong>Próxima conexão:</strong> consolidar os resultados da aprendizagem supervisionada e da computação natural no Trabalho 02, respeitando as diferenças entre avaliação de modelos e otimização de soluções.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/tiagofga/EC-IA" class="fa fa-code-fork" style="color: #fcfcfc"> tiagofga/EC-IA</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../assets/theme-toggle.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+      <script src="../../assets/mermaid-init.js"></script>
+      <script src="../../assets/downloads.js"></script>
+      <script src="../../assets/vercel-analytics.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

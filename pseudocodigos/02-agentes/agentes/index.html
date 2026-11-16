@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://tiagofga.github.io/EC-IA/pseudocodigos/02-agentes/agentes/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Agentes baseados em tabela e regras - EC-IA</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/extra.css" rel="stylesheet" />
+        <link href="../../../assets/theme.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Agentes baseados em tabela e regras";
+        var mkdocs_page_input_path = "pseudocodigos/02-agentes/agentes.md";
+        var mkdocs_page_url = "/EC-IA/pseudocodigos/02-agentes/agentes/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> EC-IA
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Início</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../planos/">Plano didático</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../roadmap/">Roadmap</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../aulas/">Aulas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../notas/">Notas visuais</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../estudos-guiados/">Estudos guiados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../atividades/">Atividades</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../simulados/">Simulados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../visualizacoes/">Visualizações</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../">Pseudocódigos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../exemplos/">Exemplos Python</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../trabalhos/">Trabalhos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://github.com/tiagofga/EC-IA">Repositório no GitHub</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">EC-IA</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Agentes baseados em tabela e regras</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/tiagofga/EC-IA/edit/master/docs/pseudocodigos/02-agentes/agentes.md">Edit on tiagofga/EC-IA</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="agentes-baseados-em-tabela-e-regras">Agentes baseados em tabela e regras</h1>
+<p>Nos slides da Aula 02 aparecem três estruturas que efetivamente podem ser representadas como pseudocódigo. Os demais tipos de agentes são apresentados como arquiteturas conceituais.</p>
+<h3 id="agente-baseado-em-tabela">Agente baseado em tabela</h3>
+<pre><code class="language-text">receber uma nova percepção
+adicionar a percepção à sequência perceptiva
+consultar na tabela a ação correspondente à sequência perceptiva
+retornar a ação encontrada
+</code></pre>
+<p><strong>Ideia central:</strong> a função do agente é representada por uma tabela que associa sequências perceptivas a ações. A abordagem é simples, mas não escala para ambientes grandes.</p>
+<h3 id="agente-reativo-simples">Agente reativo simples</h3>
+<pre><code class="language-text">receber a percepção atual
+interpretar a percepção como um estado
+selecionar a regra condição-ação compatível com o estado
+retornar a ação indicada pela regra
+</code></pre>
+<p><strong>Ideia central:</strong> a decisão depende apenas da percepção atual. Não existe memória explícita do passado.</p>
+<h3 id="agente-reativo-baseado-em-modelo">Agente reativo baseado em modelo</h3>
+<pre><code class="language-text">receber a percepção atual
+atualizar o estado interno usando:
+    estado interno anterior
+    percepção atual
+    modelo de evolução do ambiente
+    informação sobre a ação anterior
+
+selecionar a regra condição-ação compatível com o estado interno
+retornar a ação indicada pela regra
+</code></pre>
+<p><strong>Ideia central:</strong> o agente mantém um estado interno para representar aspectos do ambiente que não são diretamente observáveis na percepção corrente.</p>
+<h3 id="o-que-nao-foi-convertido-em-pseudocodigo">O que não foi convertido em pseudocódigo</h3>
+<p>A Aula 02 também apresenta:</p>
+<ul>
+<li>agente orientado por metas;</li>
+<li>agente orientado por utilidade;</li>
+<li>agente de aprendizagem.</li>
+</ul>
+<p>Nos slides, esses modelos aparecem como <strong>diagramas de arquitetura</strong>, e não como pseudocódigos. Por isso, esta seção preserva a forma original do conteúdo e não cria algoritmos que não foram apresentados em aula.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/tiagofga/EC-IA" class="fa fa-code-fork" style="color: #fcfcfc"> tiagofga/EC-IA</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../assets/theme-toggle.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+      <script src="../../../assets/mermaid-init.js"></script>
+      <script src="../../../assets/downloads.js"></script>
+      <script src="../../../assets/vercel-analytics.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

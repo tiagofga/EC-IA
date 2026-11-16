@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500">
+  <style>
+    .title{font:700 38px Arial,sans-serif;fill:#fff}.sub{font:600 18px Arial,sans-serif;fill:#e7efff}
+    .h{font:700 25px Arial,sans-serif;fill:#0e4aa8}.b{font:18px Arial,sans-serif;fill:#172033}
+    .small{font:16px Arial,sans-serif;fill:#51607b}.flow{font:700 17px Arial,sans-serif;fill:#172033}
+    .box{stroke:#0e4aa8;stroke-width:3;rx:16;ry:16}.arrow{stroke:#0e4aa8;stroke-width:5;fill:none;marker-end:url(#a)}
+  </style>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#0e4aa8"/></marker></defs>
+  <rect x="30" y="30" width="1140" height="110" rx="22" fill="#0e4aa8"/>
+  <text x="55" y="78" class="title">Aula 05 - Lógica e Raciocínio em IA</text>
+  <text x="55" y="112" class="sub">Representação, conhecimento, agentes baseados em conhecimento e lógica proposicional</text>
+  <text x="45" y="180" class="flow">Fio condutor: como um agente representa conhecimento, faz inferências e decide como agir?</text>
+
+  <rect class="box" x="45" y="215" width="530" height="250" fill="#eef5ff"/>
+  <text x="65" y="250" class="h">1. Agente baseado em conhecimento</text>
+  <text x="70" y="290" class="b">• TELL insere sentenças na KB.</text>
+  <text x="70" y="325" class="b">• ASK consulta o que pode ser concluído.</text>
+  <text x="70" y="360" class="b">• A máquina de inferência produz conclusões.</text>
+  <text x="70" y="395" class="b">• A ação pode resultar de inferência.</text>
+
+  <rect class="box" x="625" y="215" width="530" height="250" fill="#fff8ea"/>
+  <text x="645" y="250" class="h">2. Mundo do Wumpus</text>
+  <text x="650" y="290" class="b">• Brisa sugere poços adjacentes.</text>
+  <text x="650" y="325" class="b">• Fedor sugere Wumpus adjacente.</text>
+  <text x="650" y="360" class="b">• Ausências permitem inferir casas seguras.</text>
+  <text x="650" y="395" class="b">• Percepção ≠ conclusão lógica.</text>
+  <path class="arrow" d="M575 340 L615 340"/>
+
+  <rect class="box" x="45" y="505" width="530" height="250" fill="#eefcf2"/>
+  <text x="65" y="540" class="h">3. Representação formal</text>
+  <text x="70" y="580" class="b">• Sintaxe: como a sentença é escrita.</text>
+  <text x="70" y="615" class="b">• Semântica: quando a sentença é verdadeira.</text>
+  <text x="70" y="650" class="b">• Ex.: B₁,₁ ↔ (P₁,₂ ∨ P₂,₁).</text>
+  <text x="70" y="685" class="b">• Modelos são interpretações possíveis.</text>
+
+  <rect class="box" x="625" y="505" width="530" height="250" fill="#eef5ff"/>
+  <text x="645" y="540" class="h">4. Consequência lógica</text>
+  <text x="650" y="580" class="b">• KB ⊨ α: α é verdadeira em todos os</text>
+  <text x="680" y="610" class="b">modelos que satisfazem a KB.</text>
+  <text x="650" y="650" class="b">• Model checking enumera modelos.</text>
+  <text x="650" y="685" class="b">• Um contraexemplo refuta a consequência.</text>
+  <path class="arrow" d="M575 630 L615 630"/>
+
+  <rect class="box" x="45" y="795" width="530" height="250" fill="#fff8ea"/>
+  <text x="65" y="830" class="h">5. Lógica proposicional</text>
+  <text x="70" y="870" class="b">• Símbolos e conectivos.</text>
+  <text x="70" y="905" class="b">• Precedência e tabelas-verdade.</text>
+  <text x="70" y="940" class="b">• Validade, satisfatibilidade e equivalência.</text>
+
+  <rect class="box" x="625" y="795" width="530" height="250" fill="#eefcf2"/>
+  <text x="645" y="830" class="h">6. Prova e resolução</text>
+  <text x="650" y="870" class="b">• Semântica: verificar modelos.</text>
+  <text x="650" y="905" class="b">• Sintática: aplicar regras de inferência.</text>
+  <text x="650" y="940" class="b">• Refutação: KB ∧ ¬α → FNC → □.</text>
+  <path class="arrow" d="M575 920 L615 920"/>
+
+  <rect x="45" y="1090" width="1110" height="170" rx="18" fill="#f7faff" stroke="#0e4aa8" stroke-width="3"/>
+  <text x="70" y="1130" class="h">Ciclo operacional</text>
+  <g>
+    <rect class="box" x="85" y="1170" width="160" height="55" fill="#fff"/><text x="122" y="1204" class="flow">Percepção</text>
+    <rect class="box" x="290" y="1170" width="160" height="55" fill="#fff"/><text x="325" y="1204" class="flow">TELL na KB</text>
+    <rect class="box" x="495" y="1170" width="160" height="55" fill="#fff"/><text x="535" y="1204" class="flow">Inferência</text>
+    <rect class="box" x="700" y="1170" width="160" height="55" fill="#fff"/><text x="757" y="1204" class="flow">ASK</text>
+    <rect class="box" x="905" y="1170" width="160" height="55" fill="#fff"/><text x="960" y="1204" class="flow">Ação</text>
+    <path class="arrow" d="M245 1198 L280 1198"/><path class="arrow" d="M450 1198 L485 1198"/><path class="arrow" d="M655 1198 L690 1198"/><path class="arrow" d="M860 1198 L895 1198"/>
+  </g>
+
+  <rect x="45" y="1300" width="1110" height="150" rx="18" fill="#fff" stroke="#9aa6bc" stroke-width="2"/>
+  <text x="70" y="1338" class="h">Checklist</text>
+  <text x="75" y="1375" class="b">□ Diferencio percepção, conhecimento e inferência.  □ Explico TELL/ASK e KB ⊨ α.</text>
+  <text x="75" y="1410" class="b">□ Entendo modelos e model checking.  □ Descrevo a resolução por refutação.</text>
+  <text x="50" y="1480" class="small">Relação bibliográfica: conteúdos associados principalmente ao Capítulo 7 de Russell &amp; Norvig.</text>
+</svg>
