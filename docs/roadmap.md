@@ -38,6 +38,17 @@ Os recursos das Aulas 14 e 15 e os três simulados da Prova 2 foram integrados �
 | Tag e release | Publicadas | v0.13.0, em 16/11/2026 |
 | Manutenção pedagógica | Contínua | Revisão dos materiais, inspeção dos laboratórios e ajustes conforme necessidades didáticas |
 
+## Conteúdos extras planejados
+
+Os tópicos abaixo complementam a formação, após o conteúdo regular das Aulas 00 a 15. São opcionais e independentes da Prova 2 e do Trabalho 02; a oferta depende do tempo disponível no semestre.
+
+| Ordem | Conteúdo | Situação | Escopo |
+|---:|---|---|---|
+| 1 | Aprendizagem não supervisionada - K-means | Planejado | Agrupamento, centroides, distância, escolha de k, inicialização e limitações; teoria e implementação em Python |
+| 2 | Introdução à aprendizagem por reforço | Planejado | Agente, ambiente, estados, ações, recompensas, política, exploração e aproveitamento; abordagem conceitual, sem implementação prevista |
+
+O primeiro extra conecta a aprendizagem supervisionada ao agrupamento de dados sem rótulos, com um exemplo prático de K-means. O segundo retoma os conceitos de agentes e tomada de decisão para apresentar a aprendizagem a partir de interações e recompensas. Não se pretende aprofundar métodos avançados de aprendizagem por reforço nesta etapa.
+
 ## Qualidade das notas visuais
 
 A revisão das notas das Aulas 08 a 13 foi uma etapa de **aprimoramento** dos materiais já publicados, sem alteração automática dos slides ou das avaliações.
@@ -62,12 +73,15 @@ flowchart TD
   H --> I["Tag e release v0.13.0"]
   A --> J["Simulados Prova 2 - Aulas 05 a 12"]
   J --> I
+  I --> K["Extra: K-means (teoria e implementação)"]
+  K --> L["Extra: aprendizagem por reforço (conceitual)"]
   classDef done fill:#e1f2f0,stroke:#20766c,color:#12463f;
   classDef pending fill:#fff0d7,stroke:#ad7321,color:#71460c;
   class A,B,C,D,E,F,G,H,I,J done;
+  class K,L pending;
 ```
 
-Verde indica etapas concluídas. Os simulados seguem uma trilha independente, sem alterar o escopo definido para a Prova 2.
+Verde indica etapas concluídas; amarelo indica conteúdos extras planejados. Os simulados seguem uma trilha independente, sem alterar o escopo definido para a Prova 2.
 
 ## Diretrizes de publicação
 
