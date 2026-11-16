@@ -140,3 +140,11 @@ bash scripts/build-site.sh
 ```
 
 O script sincroniza os materiais públicos com o MkDocs e executa a compilação em modo estrito.
+
+Os materiais originais ficam em `notas/`, `estudos-guiados/`, `pseudoalgoritmos/`, `visualizacoes/` e `simulados/`. As cópias desses materiais em `docs/`, os downloads e o diretório `site/` são gerados pelo build e não são versionados. Os catálogos, páginas e arquivos de identidade visual mantidos diretamente em `docs/` continuam versionados. Edite sempre as fontes originais.
+
+Para testar localmente após a compilação:
+
+```bash
+python3 -m http.server 8800 --directory site
+```
