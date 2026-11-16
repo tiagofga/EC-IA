@@ -34,6 +34,13 @@ for note in \
   cp -R "notas/$note" "docs/notas/$note"
 done
 
+# No repositório, a Lista 05 aponta para o README da atividade. No site,
+# o mesmo link aponta para o PDF publicado, sem modificar as fontes.
+for page in docs/notas/07-prolog/README.md docs/estudos-guiados/07-prolog/README.md; do
+  sed -i.bak 's|../../atividades/05-logica-lpo-prolog/README.md|../../downloads/atividades/EC_IA_005_Logica_Atividades.pdf|g' "$page"
+  rm "$page.bak"
+done
+
 # A Aula 05 possui pseudocódigos conceituais próprios de lógica.
 rm -rf docs/pseudocodigos/05-logica docs/pseudocodigos/06-lpo-inferencia docs/pseudocodigos/07-prolog
 cp -R pseudoalgoritmos/05-logica docs/pseudocodigos/05-logica

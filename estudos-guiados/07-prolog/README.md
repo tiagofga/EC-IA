@@ -301,4 +301,4 @@ Explique por que cada afirmação está errada ou incompleta:
 - [ ] Implemento conceitualmente operações recursivas sobre listas.
 - [ ] Consigo explicar por que a ordem operacional pode causar não terminação.
 
-Depois desta revisão, resolva as questões de Prolog da [Lista 05](../../atividades/).
+Depois desta revisão, resolva as questões de Prolog da [Lista 05](../../atividades/05-logica-lpo-prolog/README.md).
