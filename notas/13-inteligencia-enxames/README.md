@@ -2,6 +2,8 @@
 
 ![Mapa de síntese](nota-visual-aula-13.svg)
 
+**Questão central:** como a informação compartilhada orienta a busca sem recombinação de pais?
+
 ## Mapa conceitual
 
 ```mermaid
@@ -113,4 +115,4 @@ Explique uma escolha de rota em ACO, a evaporação seguida de depósito e a dif
 
 [Estudo guiado](../../estudos-guiados/13-inteligencia-enxames/README.md) · [Slides da Aula 13](https://github.com/tiagofga/EC-IA/tree/main/aulas/13-inteligencia-enxames) · [Código-base da prática com TODOs](https://github.com/tiagofga/EC-IA/tree/main/exemplos/13-inteligencia-enxames)
 
-**Próxima conexão:** aprofundar as decisões de representação e avaliação de AG, ACO e PSO no Trabalho 02; notas e estudos guiados não fornecem as soluções dos checkpoints de código.
+**Próxima conexão:** na Aula 14, CLONALG explora soluções por clonagem e hipermutação, preservando a representação e o objetivo da prática para comparação.

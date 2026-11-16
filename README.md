@@ -2,286 +2,139 @@
 
 Material público da disciplina de **Inteligência Artificial** do Curso de Engenharia de Computação do **CEFET-MG, campus Divinópolis**.
 
-> **Página da disciplina:** https://tiagofga.github.io/EC-IA/
+**Professor:** Tiago Alves de Oliveira
 
-Este repositório reúne materiais de apoio às aulas, notas visuais, atividades, estudos guiados, simulados, trabalhos, exemplos Python, pseudocódigos conceituais e visualizações didáticas. O conteúdo é organizado progressivamente ao longo do semestre.
+- [Site da disciplina](https://tiagofga.github.io/EC-IA/)
+- [Roadmap de desenvolvimento](https://tiagofga.github.io/EC-IA/roadmap/)
+- [Histórico de versões](CHANGELOG.md)
 
-**[Roadmap de desenvolvimento](https://tiagofga.github.io/EC-IA/roadmap/):** próximas etapas das Aulas 14 e 15 e simulados da Prova 2.
+O conteúdo é organizado progressivamente, dos fundamentos de IA aos métodos de aprendizagem supervisionada, computação natural e ensembles.
 
-## Como usar este repositório
+## Como estudar
 
-Para cada assunto, a sequência recomendada é:
+1. Consulte os slides teóricos e práticos.
+2. Revise os conceitos com a nota visual da aula.
+3. Responda ao estudo guiado antes de consultar novamente os slides.
+4. Explore pseudocódigos, visualizações e exemplos Python disponíveis.
+5. Resolva as atividades e os simulados.
+6. Consulte os enunciados oficiais dos trabalhos e seus critérios de entrega.
 
-1. revisar o conteúdo apresentado na aula;
-2. consultar a nota visual correspondente para reorganizar os conceitos;
-3. realizar o estudo guiado;
-4. resolver a atividade proposta;
-5. resolver os simulados de forma progressiva e, inicialmente, sem consulta;
-6. usar as visualizações para acompanhar algoritmos e mecanismos de raciocínio;
-7. consultar pseudocódigos para revisar estruturas e procedimentos específicos;
-8. consultar os [exemplos Python](exemplos/README.md) para acompanhar as implementações didáticas;
-9. desenvolver os trabalhos práticos somente após revisar os requisitos e critérios de entrega.
+## Aulas
 
-A proposta não é apenas disponibilizar arquivos, mas organizar um percurso de estudo que possa ser retomado antes de atividades e avaliações.
+| Aula | Tema | Material |
+|:---:|---|---|
+| 00 | Visão Geral da Disciplina | [Acessar](aulas/00-visao-geral/) |
+| 01 | Introdução à Inteligência Artificial | [Acessar](aulas/01-introducao/) |
+| 02 | Agentes Inteligentes | [Acessar](aulas/02-agentes/) |
+| 03 | Representação do Conhecimento e Solução de Problemas | [Acessar](aulas/03-conhecimento/) |
+| 04 | Estruturas e Estratégias de Busca | [Acessar](aulas/04-busca/) |
+| 05 | Lógica e Raciocínio em IA | [Acessar](aulas/05-logica/) |
+| 06 | Lógica de Primeira Ordem e Inferência | [Acessar](aulas/06-lpo-inferencia/) |
+| 07 | Prolog - Programação Lógica, Unificação e Busca | [Acessar](aulas/07-prolog/) |
+| 08 | Aprendizagem com Exemplos e Árvores de Decisão | [Acessar](aulas/08-aprendizagem-exemplos/) |
+| 09 | K-Nearest Neighbors e Preparação de Dados | [Acessar](aulas/09-knn/) |
+| 10 | Support Vector Machines e PCA | [Acessar](aulas/10-svm/) |
+| 11 | Atividade Integradora - DT, KNN e SVM | [Acessar](aulas/11-atividade-comparacao/) |
+| 12 | Algoritmos Genéticos | [Acessar](aulas/12-algoritmos-geneticos/) |
+| 13 | Inteligência de Enxames | [Acessar](aulas/13-inteligencia-enxames/) |
+| 14 | Sistemas Imunológicos Artificiais | [Acessar](aulas/14-sistemas-imunologicos/) |
+| 15 | Algoritmos Ensemble | [Acessar](aulas/15-ensemble/) |
 
-## Conteúdo disponível
+As Aulas 04, 05, 06 e 12 a 15 possuem dois PDFs. Nas Aulas 12 a 15, os arquivos correspondem a teoria e prática.
 
-| Seção | O que você encontra |
-|---|---|
-| `planos/` | plano didático e organização da disciplina |
-| `aulas/` | materiais públicos organizados por aula |
-| `notas/` | mapas mentais e guias visuais de revisão |
-| `estudos-guiados/` | roteiros de revisão e autoavaliação |
-| `atividades/` | listas destinadas aos estudantes |
-| `simulados/` | simulados públicos para revisão integrada, sem gabaritos |
-| `visualizacoes/` | visualizações interativas para acompanhar execuções e raciocínio |
-| `pseudoalgoritmos/` | descrições conceituais dos algoritmos e procedimentos estudados |
-| `exemplos/` | scripts Python para revisão e experimentação dos métodos estudados |
-| `trabalhos/` | enunciados, código-base e recursos públicos dos trabalhos práticos |
-| `docs/` | páginas utilizadas na publicação do site |
+### Percurso didático
 
-### Aulas organizadas
+| Bloco | Aulas | Conteúdos centrais |
+|---|:---:|---|
+| Fundamentos | 00-03 | IA, agentes, estados e representação de problemas |
+| Busca | 04 | BFS, DFS, UCS, Gulosa, A*, busca local e otimização |
+| Representação e raciocínio | 05-07 | Lógica proposicional, Wumpus, LPO, inferência e Prolog |
+| Aprendizagem supervisionada | 08-11 | DT, KNN, SVM, PCA e avaliação de modelos |
+| Computação natural | 12-14 | AG, ACO, PSO/BPSO, NSA e CLONALG |
+| Ensembles | 15 | Voting, Bagging, Random Forest, Boosting e Stacking |
 
-| Aula | Tema |
-|---|---|
-| 00 | Visão Geral da Disciplina |
-| 01 | Introdução à Inteligência Artificial |
-| 02 | Agentes Inteligentes |
-| 03 | Representação do Conhecimento e Solução de Problemas |
-| 04 | Estruturas e Estratégias de Busca |
-| 05 | Lógica e Raciocínio em IA |
-| 06 | Lógica de Primeira Ordem e Inferência |
-| 07 | Prolog - Programação Lógica, Unificação e Busca |
-| 08 | Aprendizagem com Exemplos e Árvores de Decisão |
-| 09 | K-Nearest Neighbors e Preparação de Dados |
-| 10 | Support Vector Machines e PCA |
-| 11 | Atividade Integradora - DT, KNN e SVM |
-| 12 | Algoritmos Genéticos |
-| 13 | Inteligência de Enxames |
-| 14 | Sistemas Imunológicos Artificiais |
-| 15 | Algoritmos Ensemble |
+## Materiais complementares
 
-Os PDFs públicos das Aulas 00 a 15 e das Atividades 01 a 05 estão disponíveis no repositório. As Aulas 12 a 15 incluem teoria e prática; o código de ACO e BPSO permanece incompleto, com exercícios TODO. Os materiais complementares das Aulas 14 e 15 serão integrados posteriormente. A Lista 05 integra Lógica Proposicional, Lógica de Primeira Ordem, Inferência em LPO e Prolog.
+| Recurso | Disponibilidade | Finalidade |
+|---|---|---|
+| [Notas visuais](https://tiagofga.github.io/EC-IA/notas/) | Aulas 01 a 15 | Mapas conceituais, exemplos, fórmulas contextualizadas, sínteses e checklists |
+| [Estudos guiados](https://tiagofga.github.io/EC-IA/estudos-guiados/) | Aulas 01 a 13 | Perguntas, revisão ativa e autoavaliação |
+| [Visualizações](https://tiagofga.github.io/EC-IA/visualizacoes/) | Conforme o catálogo | Acompanhamento de algoritmos e mecanismos de raciocínio |
+| [Pseudocódigos](https://tiagofga.github.io/EC-IA/pseudocodigos/) | Conforme o catálogo | Estruturas e procedimentos conceituais |
+| [Exemplos Python](exemplos/README.md) | Aulas 08 a 13 | Implementação e experimentação |
+| [Atividades](https://tiagofga.github.io/EC-IA/atividades/) | Listas 01 a 05 | Exercícios para consolidação |
 
-## Notas visuais
+As notas das Aulas 08 a 15 apresentam diagramas específicos dos mecanismos estudados, exemplos interpretáveis, erros frequentes e conexões entre teoria e prática. Os demais recursos das Aulas 14 e 15 serão integrados progressivamente, conforme o roadmap.
 
-As Aulas 01 a 13 possuem notas públicas em Markdown concebidas como **mapas mentais e guias de estudo**. Elas incluem:
+Os visualizadores de busca da Aula 04 reproduzem traces pré-calculados; os laboratórios de lógica, Prolog, aprendizagem supervisionada e computação natural permitem acompanhar os mecanismos específicos de cada método. Os códigos de ACO e BPSO incluem etapas TODO para os estudantes completarem.
 
-- figuras de síntese visual;
-- mapas conceituais e fluxos Mermaid coloridos;
-- tabelas comparativas;
-- resumos de 30 segundos e de 1 minuto;
-- conexões entre aulas;
-- erros conceituais frequentes;
-- checklists de revisão.
+## Avaliações e trabalhos
 
-A Aula 05 acrescenta uma síntese específica sobre agentes baseados em conhecimento, `TELL`, `ASK`, Mundo do Wumpus, modelos, consequência lógica e resolução. A Aula 06 amplia esse percurso com LPO, quantificadores, substituição, unificação, encadeamento e resolução em LPO. A Aula 07 transforma esses mecanismos em programação executável com Prolog, enfatizando fatos, regras, consultas, resolução de metas, retrocesso e recursão.
+### Simulados
 
-## Aula 05 - Lógica e Raciocínio em IA
+- **Prova 1:** três simulados públicos referentes às Aulas 01 a 04.
+- **Prova 2:** simulados referentes às Aulas 05 a 12, a disponibilizar.
 
-A Aula 05 é organizada em duas partes:
+Consulte o [catálogo de simulados](https://tiagofga.github.io/EC-IA/simulados/). Gabaritos e soluções de referência não são publicados.
 
-- **Parte I - Representação, Conhecimento e Agentes Baseados em Conhecimento**;
-- **Parte II - Lógica Proposicional**.
+### Trabalhos práticos
 
-O Mundo do Wumpus funciona como fio condutor. O material complementar da aula inclui:
+| Trabalho | Escopo | Entrega |
+|---|---|---|
+| [01 - Busca](trabalhos/01-busca/README.md) | Busca em grade ponderada e busca local no problema das 8 Rainhas | Parte 1: 08/10/2026; Parte 2: 15/10/2026 |
+| [02 - Aprendizado de Máquina e Computação Natural](trabalhos/02-aprendizagem-computacao-natural/README.md) | Comparação experimental de DT, KNN, SVM, Random Forest e AdaBoost; otimização com AG, PSO ou ACO e CLONALG | 03/12/2026 |
 
-- nota visual;
-- estudo guiado;
-- pseudocódigo de agente baseado em conhecimento;
-- pseudocódigo de verificação de modelos;
-- pseudocódigo de resolução proposicional por refutação;
-- visualização interativa do Mundo do Wumpus;
-- visualização de modelos e consequência lógica;
-- visualização de resolução proposicional por refutação.
-
-A visualização destaca explicitamente o ciclo:
-
-```text
-percepção -> TELL -> KB -> inferência -> ASK -> ação
-```
-
-A numeração da Aula 05 segue a organização didática da disciplina. Nas listas e referências bibliográficas, esse conteúdo se relaciona principalmente ao Capítulo 7 de Russell & Norvig.
-
-## Aula 06 - Lógica de Primeira Ordem e Inferência
-
-A Aula 06 amplia o bloco de lógica para representar objetos, relações e regras gerais com Lógica de Primeira Ordem. O material é organizado em duas partes: representação, sintaxe e semântica; e inferência em LPO.
-
-O conjunto público inclui nota visual, estudo guiado, pseudocódigos de unificação, encadeamento direto, encadeamento reverso, retrocesso e resolução em LPO, além de visualizações interativas de unificação e inferência.
-
-A versão atualizada da Parte II detalha a exploração da base de conhecimento passo a passo e prepara diretamente a transição para Prolog.
-
-## Aula 07 - Prolog
-
-A Aula 07 dá continuidade direta à Aula 06. O conteúdo trabalha programação lógica com fatos, regras, consultas, variáveis, unificação, resolução de metas, encadeamento reverso, retrocesso e recursão.
-
-Um exemplo de alcançabilidade em grafos relaciona a execução do Prolog com busca em profundidade. O material também inclui aritmética, estruturas e listas como conteúdo complementar.
-
-O conjunto público da Aula 07 inclui nota visual, estudo guiado, pseudocódigos conceituais de resolução de metas, retrocesso, recursão, listas recursivas e negação por falha, além de uma visualização interativa de resolução de metas, árvore de prova, retrocesso e alcançabilidade em grafos.
-
-A Lista 05 consolida as Aulas 05, 06 e 07, ligando representação formal, inferência e programação lógica.
-
-## Simulados
-
-A seção `simulados/` está organizada por avaliação: a **Prova 1** reúne três simulados públicos das Aulas 01 a 04, enquanto os simulados da **Prova 2**, referentes às Aulas 05 a 12, serão disponibilizados em breve. O conjunto trabalha conceitos fundamentais de IA, agentes inteligentes, PEAS, representação e formulação de problemas, BFS, DFS, UCS, heurísticas, Busca Gulosa e A*.
-
-Os simulados foram organizados em progressão: revisão conceitual e execução, análise e comparação, e uma resolução integrada em condições próximas às de uma avaliação. O Simulado 03 inclui uma questão de busca informada em um grafo didático inspirado em cidades brasileiras, com identificação explícita das siglas utilizadas. Os gabaritos e soluções de referência não são publicados.
-
-## Trabalho 02 - Aprendizado de Máquina e Computação Natural
-
-O [Trabalho 02](trabalhos/02-aprendizagem-computacao-natural/README.md) integra aprendizado supervisionado e computação natural, com entrega em 03/12/2026. A Parte 1 compara Árvore de Decisão, KNN, SVM, Random Forest e AdaBoost sobre uma base UCI/Kaggle; a Parte 2 compara implementações próprias de AG, PSO ou ACO e CLONALG no mesmo problema de otimização.
-
-O [catálogo de exemplos Python](https://tiagofga.github.io/EC-IA/exemplos/) reúne recursos de apoio. O enunciado oficial prevalece sobre qualquer resumo.
-
-## Trabalho 01 - Busca
-
-O Trabalho 01 integra os conteúdos da Aula 04 em duas etapas:
-
-- **Parte 1 - Busca não informada e informada:** BFS, DFS, UCS, Busca Gulosa e A* em uma grade ponderada, com entrega em **08/10/2026**;
-- **Parte 2 - Busca local:** Hill Climbing e Random-Restart Hill Climbing no problema das 8 Rainhas, com entrega final em **15/10/2026**.
-
-O trabalho vale **20,0 pontos** e pode ser desenvolvido individualmente ou em dupla. O código-base público contém apenas infraestrutura, testes iniciais e funções deliberadamente incompletas.
-
-A versão `v0.4.0` consolidou oficialmente o Trabalho 01 no repositório, incluindo o enunciado em PDF, o código-base e os recursos públicos organizados em `trabalhos/01-busca/`.
-
-Consulte `trabalhos/01-busca/README.md` antes de iniciar.
-
-## Estudos guiados
-
-Os estudos guiados das Aulas 01 a 13 foram preparados para revisão ativa. Eles incluem objetivos de aprendizagem, conceitos essenciais, perguntas de verificação, aplicações, erros conceituais a evitar e autoavaliação.
-
-A recomendação é tentar responder às perguntas **antes** de consultar novamente os slides ou as notas.
-
-## Visualizações
-
-As visualizações seguem uma identidade visual comum: azul institucional como cor principal, verde para sucesso/solução, amarelo para atenção/fronteira, vermelho para estado crítico e violeta para diferenciações específicas. A interface prioriza legibilidade, responsividade e distinção visual entre estado, ação, inferência e resultado.
-
-### Aula 04 - Busca
-
-A Aula 04 possui visualizações interativas baseadas em **traces pré-calculados** para:
-
-- Busca em Largura - BFS;
-- Busca em Profundidade - DFS;
-- Busca de Custo Uniforme - UCS;
-- Busca Gulosa - Greedy Search;
-- A*;
-- Beam Search;
-- Hill Climbing;
-- Simulated Annealing;
-- Algoritmo Genético - AG.
-
-**Importante:** o visualizador público da Aula 04 não implementa os algoritmos. Ele apenas reproduz traces previamente gerados.
-
-### Aula 05 - Lógica proposicional e Mundo do Wumpus
-
-A Aula 05 possui um mini laboratório interativo que permite controlar o agente, observar percepções, acompanhar `TELL`, inferências e uma consulta didática de `ASK`, além de alternar entre modo aluno e modo professor.
-
-A interface registra visualmente as percepções de **brisa**, **fedor** e **brilho** nas casas visitadas, diferencia casas seguras e perigos possíveis e encerra a partida em condições explícitas de sucesso ou falha.
-
-Duas visualizações adicionais completam a Parte II: **Modelos e consequência lógica**, para explorar mundos possíveis, modelos da KB, contraexemplos, validade e satisfatibilidade; e **Resolução proposicional**, para acompanhar FNC, resolventes e prova por refutação.
-
-### Aula 06 - LPO e Inferência
-
-A Aula 06 possui duas visualizações interativas: uma dedicada à **unificação**, com construção passo a passo do UMG e casos de falha, e outra dedicada à **inferência**, comparando encadeamento direto e reverso sobre o caso West, incluindo substituições, fatos derivados, submetas e retrocesso conceitual.
+Os enunciados oficiais prevalecem sobre qualquer resumo. Consulte o código-base e as instruções de entrega de cada trabalho.
 
 ## Organização do repositório
 
 ```text
 EC-IA/
-├── planos/
-├── aulas/
-│   ├── 00-visao-geral/
-│   ├── 01-introducao/
-│   ├── 02-agentes/
-│   ├── 03-conhecimento/
-│   ├── 04-busca/
-│   ├── 05-logica/
-│   ├── 06-lpo-inferencia/
-│   └── 07-prolog/
-├── notas/
-│   ├── 01-introducao/
-│   ├── 02-agentes/
-│   ├── 03-conhecimento/
-│   ├── 04-busca/
-│   ├── 05-logica/
-│   ├── 06-lpo-inferencia/
-│   └── 07-prolog/
-├── atividades/
-│   ├── 01-introducao/lista-01/
-│   ├── 02-agentes/lista-02/
-│   ├── 03-conhecimento/lista-03/
-│   ├── 04-busca/lista-04/
-│   └── 05-logica-lpo-prolog/
-├── estudos-guiados/
-├── simulados/
-│   ├── index.md
-│   ├── simulado-01.md
-│   ├── simulado-02.md
-│   └── simulado-03.md
-├── visualizacoes/
-│   ├── 04-busca/
-│   ├── 05-logica/
-│   │   ├── wumpus/
-│   │   ├── modelos/
-│   │   └── resolucao/
-│   ├── 06-lpo-inferencia/
-│   └── 07-prolog/
-│       └── resolucao-metas/
-├── pseudoalgoritmos/
-│   ├── 05-logica/
-│   ├── 06-lpo-inferencia/
-│   └── 07-prolog/
-├── trabalhos/
-│   └── 01-busca/
-└── docs/
+├── planos/             # Plano didático
+├── aulas/              # PDFs e READMEs por aula
+├── notas/              # Mapas, sínteses e revisão
+├── estudos-guiados/     # Roteiros de estudo
+├── atividades/         # Listas de exercícios
+├── simulados/          # Preparação para avaliações
+├── visualizacoes/      # Laboratórios e visualizadores
+├── pseudoalgoritmos/   # Pseudocódigos conceituais
+├── exemplos/           # Scripts Python
+├── trabalhos/          # Enunciados e código-base
+├── docs/               # Páginas do site
+├── scripts/            # Automação do build
+├── mkdocs.yml
+└── CHANGELOG.md
 ```
 
-## O que não é publicado aqui
+Para executar os exemplos de aprendizagem supervisionada, consulte as instruções de cada código. Dependências comuns:
 
-Para preservar a organização da disciplina e a integridade das avaliações, permanecem restritos ao docente:
+```bash
+python -m pip install numpy pandas matplotlib scikit-learn
+```
 
-- fontes LaTeX utilizadas para gerar aulas e enunciados;
-- gabaritos;
-- soluções de referência ainda não liberadas;
+## Política de publicação
+
+O repositório contém material público destinado aos estudantes. Permanecem restritos ao docente:
+
+- fontes LaTeX privadas de aulas e avaliações;
+- gabaritos e soluções de referência ainda não liberadas;
 - testes e mapas ocultos;
 - geradores privados de traces;
 - materiais internos de avaliação.
 
-Modelos LaTeX explicitamente destinados aos estudantes, como o modelo SBC do Trabalho 01, podem ser publicados.
+Modelos LaTeX explicitamente fornecidos aos estudantes podem ser publicados.
 
-## Versão de referência
+## Desenvolvimento e versões
 
-A versão consolidada de referência é **v0.12.0**. A próxima versão será definida após revisão e integração dos novos materiais na branch `main`.
+A versão consolidada de referência é **v0.12.0**. A versão seguinte incluirá as novas aulas e a revisão dos materiais complementares após validação e integração na branch `main`.
 
-Este marco compreende as Aulas 00 a 13, o Trabalho 02, notas visuais, estudos guiados, pseudocódigos, simulados separados por avaliação e laboratórios interativos de DT, KNN, SVM, AG, ACO e BPSO. As práticas de ACO/BPSO preservam os trechos `TODO`.
+As alterações são desenvolvidas em branches próprias, revisadas por Pull Request e registradas no [CHANGELOG](CHANGELOG.md). O histórico segue Conventional Commits. Consulte o [CONTRIBUTING](CONTRIBUTING.md) e o roadmap.
 
-As versões anteriores são documentadas no [CHANGELOG.md](CHANGELOG.md). Os simulados da Prova 2 (Aulas 05 a 12) serão publicados futuramente.
+Para gerar o site localmente:
 
-## Desenvolvimento do repositório
-
-O histórico utiliza **Conventional Commits**. Exemplos:
-
-```text
-feat(busca): add local search visualization
-feat(aula-05): add Wumpus logic lab
-fix(pages): correct visualization path
-content(trabalho-01): add search assignment starter
-docs(notas): add aula 05 visual review guide
-docs(repo): improve student navigation
-style(site): unify public material visual identity
-chore(release): prepare v0.7.0
+```bash
+python -m pip install -r requirements.txt
+bash scripts/build-site.sh
 ```
 
-
-## Aulas 08 a 15 - Aprendizagem e Computação Natural
-
-- Aula 08 - [Aprendizagem com Exemplos](aulas/08-aprendizagem-exemplos/README.md)
-- Aula 09 - [K-Nearest Neighbors](aulas/09-knn/README.md)
-- Aula 10 - [Support Vector Machines e PCA](aulas/10-svm/README.md)
-- Aula 11 - [Atividade Integradora: DT, KNN e SVM](aulas/11-atividade-comparacao/README.md)
-- Aula 12 - [Algoritmos Genéticos](aulas/12-algoritmos-geneticos/README.md)
-- Aula 13 - [Inteligência de Enxames](aulas/13-inteligencia-enxames/README.md)
-- Aula 14 - [Sistemas Imunológicos Artificiais](aulas/14-sistemas-imunologicos/README.md)
-- Aula 15 - [Algoritmos Ensemble](aulas/15-ensemble/README.md)
-
-Os códigos públicos estão em `exemplos/`; instale as dependências com `python -m pip install numpy pandas matplotlib scikit-learn`. As Aulas 12 e 13 incluem aplicações de AG e enxames; o código de AG é completo e os roteiros de ACO/BPSO mantêm atividades TODO.
+O script sincroniza os materiais públicos com o MkDocs e executa a compilação em modo estrito.

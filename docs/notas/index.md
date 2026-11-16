@@ -37,6 +37,11 @@ Selecione a nota correspondente à aula. Os links dão acesso direto aos mapas c
 
 - **Aula 12 - Algoritmos Genéticos:** [Abrir nota](./12-algoritmos-geneticos/README.md) - Representação, seleção, recombinação, mutação e elitismo.
 - **Aula 13 - Inteligência de Enxames:** [Abrir nota](./13-inteligencia-enxames/README.md) - ACO, feromônios, PSO, BPSO e comparação experimental.
+- **Aula 14 - Sistemas Imunológicos Artificiais:** [Abrir nota](./14-sistemas-imunologicos/README.md) - NSA, cobertura, afinidade, seleção clonal e hipermutação.
+
+### Métodos Ensemble
+
+- **Aula 15 - Algoritmos Ensemble:** [Abrir nota](./15-ensemble/README.md) - Diversidade, Voting, Bagging, Random Forest, Boosting, Stacking e avaliação.
 
 ## Como usar
 

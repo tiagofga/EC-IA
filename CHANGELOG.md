@@ -9,10 +9,13 @@ O histórico de commits segue Conventional Commits.
 ### Added
 
 - Aulas 14 e 15: PDFs teóricos e práticos de Sistemas Imunológicos Artificiais e Algoritmos Ensemble.
+- Notas visuais das Aulas 14 e 15, com mapas conceituais, diagramas, exemplos numéricos e revisão ativa.
 
 ### Changed
 
 - Catálogo de aulas, página inicial, documentação e build do site atualizados para disponibilizar os quatro PDFs.
+- Revisão das notas visuais das Aulas 08 a 11 e refinamento dos diagramas das Aulas 12 e 13.
+- Reorganização do README principal em percurso didático, recursos disponíveis, avaliações e desenvolvimento.
 
 ## [0.12.0] - 2026-11-02
 
