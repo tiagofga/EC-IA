@@ -6,8 +6,6 @@ O histórico de commits segue Conventional Commits.
 
 ## [Unreleased]
 
-- Laboratório integrado de otimização: CLONALG junto a AG, ACO e BPSO, com orçamento comum de avaliações e estados internos específicos.
-
 ### Added
 
 - Aulas 14 e 15: PDFs teóricos e práticos de Sistemas Imunológicos Artificiais e Algoritmos Ensemble.
@@ -18,6 +16,9 @@ O histórico de commits segue Conventional Commits.
 - Laboratórios interativos das Aulas 14 e 15: NSA por raio e correspondência binária, CLONALG, Voting, Bagging, Random Forest, AdaBoost, Gradient Boosting e Stacking, com controles específicos e inspeção por etapas.
 
 ### Changed
+
+- Laboratório integrado de otimização: CLONALG junto a AG, ACO e BPSO, com orçamento comum de avaliações e estados internos específicos.
+- Padronização da documentação e sincronização dos materiais públicos com as cópias utilizadas pelo MkDocs.
 
 - Catálogo de aulas, página inicial, documentação e build do site atualizados para disponibilizar os quatro PDFs.
 - Revisão das notas visuais das Aulas 08 a 11 e refinamento dos diagramas das Aulas 12 e 13.

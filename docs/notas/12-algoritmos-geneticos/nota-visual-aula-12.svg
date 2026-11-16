@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="520" viewBox="0 0 920 520" role="img">
+<title>Aula 12 - Algoritmos Genéticos</title>
+<desc>Ciclo evolutivo com seleção e variação</desc>
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="#52617e"/></marker></defs>
+<rect x="0" y="0" width="920" height="520" rx="0" fill="white" stroke="none" stroke-width="2"/>
+<rect x="0" y="0" width="920" height="65" rx="0" fill="#2435a0" stroke="none" stroke-width="2"/>
+<text x="24" y="42" font-family="Arial,sans-serif" font-size="25" fill="white" text-anchor="start" font-weight="700">Aula 12 - Algoritmos Genéticos</text>
+<text x="460" y="96" font-family="Arial,sans-serif" font-size="17" fill="#17215e" text-anchor="middle" font-weight="400">Ciclo evolutivo com seleção e variação</text>
+<rect x="30" y="145" width="250" height="68" rx="10" fill="#edf0fa" stroke="#2435a0" stroke-width="2"/>
+<text x="155.0" y="179.0" font-family="Arial,sans-serif" font-size="18" fill="#2435a0" text-anchor="middle" font-weight="700">População</text>
+<text x="155.0" y="201.0" font-family="Arial,sans-serif" font-size="15" fill="#2435a0" text-anchor="middle" font-weight="400">Fitness de cada candidato</text>
+<rect x="335" y="145" width="250" height="68" rx="10" fill="#edf0fa" stroke="#2435a0" stroke-width="2"/>
+<text x="460.0" y="179.0" font-family="Arial,sans-serif" font-size="18" fill="#2435a0" text-anchor="middle" font-weight="700">Selecionar pais</text>
+<text x="460.0" y="201.0" font-family="Arial,sans-serif" font-size="15" fill="#2435a0" text-anchor="middle" font-weight="400">Torneio ou roleta</text>
+<rect x="640" y="145" width="250" height="68" rx="10" fill="#e1f2f0" stroke="#20766c" stroke-width="2"/>
+<text x="765.0" y="179.0" font-family="Arial,sans-serif" font-size="18" fill="#20766c" text-anchor="middle" font-weight="700">Recombinar e mutar</text>
+<text x="765.0" y="201.0" font-family="Arial,sans-serif" font-size="15" fill="#20766c" text-anchor="middle" font-weight="400">Novos candidatos</text>
+<line x1="280" y1="179" x2="335" y2="179" stroke="#2435a0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<line x1="585" y1="179" x2="640" y2="179" stroke="#2435a0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<line x1="765" y1="213" x2="765" y2="260" stroke="#2435a0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="640" y="260" width="250" height="68" rx="10" fill="#e1f2f0" stroke="#20766c" stroke-width="2"/>
+<text x="765.0" y="294.0" font-family="Arial,sans-serif" font-size="18" fill="#20766c" text-anchor="middle" font-weight="700">Avaliar descendentes</text>
+<text x="765.0" y="316.0" font-family="Arial,sans-serif" font-size="15" fill="#20766c" text-anchor="middle" font-weight="400">Preservar elite</text>
+<line x1="640" y1="294" x2="280" y2="294" stroke="#2435a0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="30" y="260" width="250" height="68" rx="10" fill="#edf0fa" stroke="#2435a0" stroke-width="2"/>
+<text x="155.0" y="294.0" font-family="Arial,sans-serif" font-size="18" fill="#2435a0" text-anchor="middle" font-weight="700">Nova população</text>
+<text x="155.0" y="316.0" font-family="Arial,sans-serif" font-size="15" fill="#2435a0" text-anchor="middle" font-weight="400">Repetir até a parada</text>
+<line x1="155" y1="260" x2="155" y2="213" stroke="#2435a0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="190" y="375" font-family="Arial,sans-serif" font-size="17" fill="#2435a0" text-anchor="middle" font-weight="700">Pai 1</text>
+<text x="730" y="375" font-family="Arial,sans-serif" font-size="17" fill="#2435a0" text-anchor="middle" font-weight="700">Pai 2</text>
+<text x="190" y="404" font-family="Arial,sans-serif" font-size="24" fill="#17215e" text-anchor="middle" font-weight="400">0110 | 1001</text>
+<text x="730" y="404" font-family="Arial,sans-serif" font-size="24" fill="#17215e" text-anchor="middle" font-weight="400">1001 | 0110</text>
+<line x1="250" y1="410" x2="400" y2="445" stroke="#2435a0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<line x1="670" y1="410" x2="520" y2="445" stroke="#2435a0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="325" y="440" width="270" height="52" rx="10" fill="#e1f2f0" stroke="#20766c" stroke-width="2"/>
+<text x="460.0" y="466.0" font-family="Arial,sans-serif" font-size="18" fill="#20766c" text-anchor="middle" font-weight="700">0110 | 0110</text>
+<text x="460.0" y="488.0" font-family="Arial,sans-serif" font-size="15" fill="#20766c" text-anchor="middle" font-weight="400">Descendente ilustrativo</text>
+</svg>

@@ -1,3 +1,3 @@
-# Entropia e Gini
+# Laboratório - Árvores de Decisão
 
-Visualização interativa da Aula 08; altere os controles, formule uma previsão e compare com o resultado. Demonstração conceitual, não é implementação de treinamento do modelo.
+Construção recursiva interativa sobre dados bidimensionais, com cálculo de Gini ou entropia, escolha do limiar com maior ganho, profundidade máxima, tamanho mínimo de divisão e inspeção da árvore por etapas. A qualidade indicada refere-se aos dados de treinamento didáticos, não à generalização.

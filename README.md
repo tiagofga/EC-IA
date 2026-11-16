@@ -7,6 +7,7 @@ Material público da disciplina de **Inteligência Artificial** do Curso de Enge
 - [Site da disciplina](https://tiagofga.github.io/EC-IA/)
 - [Roadmap de desenvolvimento](https://tiagofga.github.io/EC-IA/roadmap/)
 - [Histórico de versões](CHANGELOG.md)
+- [Estado do repositório](STATUS.md)
 
 O conteúdo é organizado progressivamente, dos fundamentos de IA aos métodos de aprendizagem supervisionada, computação natural e ensembles.
 
@@ -103,7 +104,8 @@ EC-IA/
 ├── docs/               # Páginas do site
 ├── scripts/            # Automação do build
 ├── mkdocs.yml
-└── CHANGELOG.md
+├── CHANGELOG.md
+└── STATUS.md
 ```
 
 Para executar os exemplos de aprendizagem supervisionada, consulte as instruções de cada código. Dependências comuns:

@@ -1,3 +1,3 @@
-# Kernel RBF: influência de gamma
+# Laboratório - Support Vector Machines
 
-Visualização interativa da Aula 10; altere os controles, formule uma previsão e compare com o resultado. Demonstração conceitual, não é implementação de treinamento do modelo.
+Treinamento interativo de SVM binária por uma variante didática de SMO. Inclui fronteira, margens, vetores de suporte, comparação entre kernel linear e RBF, parâmetros C e gamma, histórico de iterações e erros de treinamento. Não substitui a implementação completa do SVC.

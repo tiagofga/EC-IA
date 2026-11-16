@@ -53,8 +53,8 @@ As Aulas 04, 05 e 06 possuem dois PDFs. Consulte o [catálogo completo](aulas/in
 
 ### Computação Natural - Aulas 12 a 14
 
-- **Aula 12 - Algoritmos Genéticos:** [Teoria](downloads/aulas/EC_IA_012_AG_Teoria.pdf) · [Prática](downloads/aulas/EC_IA_012_AG_Pratica.pdf) · [Código Python](exemplos/index.md)
-- **Aula 13 - Inteligência de Enxames:** [Teoria](downloads/aulas/EC_IA_013_Enxames_Teoria.pdf) · [Prática](downloads/aulas/EC_IA_013_Enxames_Pratica.pdf) · [Código-base com TODOs](exemplos/index.md)
+- **Aula 12 - Algoritmos Genéticos:** [Teoria](downloads/aulas/EC_IA_012_AG_Teoria.pdf) · [Prática](downloads/aulas/EC_IA_012_AG_Pratica.pdf) · [Nota visual](notas/12-algoritmos-geneticos/README.md) · [Estudo guiado](estudos-guiados/12-algoritmos-geneticos/README.md) · [Pseudocódigos](pseudocodigos/12-algoritmos-geneticos/README.md) · [Código Python](exemplos/index.md) · [Laboratório](visualizacoes/12-algoritmos-geneticos/README.md)
+- **Aula 13 - Inteligência de Enxames:** [Teoria](downloads/aulas/EC_IA_013_Enxames_Teoria.pdf) · [Prática](downloads/aulas/EC_IA_013_Enxames_Pratica.pdf) · [Nota visual](notas/13-inteligencia-enxames/README.md) · [Estudo guiado](estudos-guiados/13-inteligencia-enxames/README.md) · [Pseudocódigos](pseudocodigos/13-inteligencia-enxames/README.md) · [Código-base com TODOs](exemplos/index.md) · [Laboratório](visualizacoes/13-inteligencia-enxames/README.md)
 - **Aula 14 - Sistemas Imunológicos Artificiais:** [Teoria](downloads/aulas/EC_IA_014_Imunes_Teoria.pdf) · [Prática](downloads/aulas/EC_IA_014_Imunes_Pratica.pdf) · [Nota visual](notas/14-sistemas-imunologicos/README.md) · [Estudo guiado](estudos-guiados/14-sistemas-imunologicos/README.md) · [Pseudocódigos](pseudocodigos/14-sistemas-imunologicos/README.md) · [Código Python](https://github.com/tiagofga/EC-IA/tree/main/exemplos/14-sistemas-imunologicos) · [Laboratório](visualizacoes/14-sistemas-imunologicos/README.md)
 
 ### Métodos Ensemble - Aula 15
@@ -62,6 +62,7 @@ As Aulas 04, 05 e 06 possuem dois PDFs. Consulte o [catálogo completo](aulas/in
 - **Aula 15 - Algoritmos Ensemble:** [Teoria](downloads/aulas/EC_IA_015_Ensemble_Teoria.pdf) · [Prática](downloads/aulas/EC_IA_015_Ensemble_Pratica.pdf) · [Nota visual](notas/15-ensemble/README.md) · [Estudo guiado](estudos-guiados/15-ensemble/README.md) · [Pseudocódigos](pseudocodigos/15-ensemble/README.md) · [Código Python](https://github.com/tiagofga/EC-IA/tree/main/exemplos/15-ensemble) · [Laboratório](visualizacoes/15-ensemble/README.md)
 
 [Todos os PDFs](aulas/index.md) · [Exemplos Python](https://github.com/tiagofga/EC-IA/tree/main/exemplos) · [Visualizações interativas](visualizacoes/index.md)
+
 
 ## Notas visuais
 
@@ -71,7 +72,7 @@ As notas funcionam como mapas mentais e guias de revisão. Elas incluem diagrama
 
 ## Simulados
 
-Estão disponíveis três simulados para revisão integrada das Aulas 01 a 04. Eles cobrem fundamentos de IA, agentes inteligentes, PEAS, representação e formulação de problemas, BFS, DFS, Busca de Custo Uniforme, heurísticas, Busca Gulosa e A*.
+Estão disponíveis três simulados da Prova 1 para revisão integrada das Aulas 01 a 04. Os simulados da Prova 2, referentes às Aulas 05 a 12, serão disponibilizados posteriormente. Eles cobrem fundamentos de IA, agentes inteligentes, PEAS, representação e formulação de problemas, BFS, DFS, Busca de Custo Uniforme, heurísticas, Busca Gulosa e A*.
 
 A recomendação é resolvê-los em sequência e, inicialmente, sem consulta. O Simulado 03 utiliza um grafo didático inspirado em cidades brasileiras e apresenta a identificação das siglas das cidades utilizadas. Os gabaritos permanecem fora do site público.
 
@@ -81,13 +82,15 @@ A recomendação é resolvê-los em sequência e, inicialmente, sem consulta. O 
 
 A Aula 04 possui um visualizador de estratégias de busca baseado em **traces pré-calculados**. A Aula 05 possui três visualizações complementares: **Mundo do Wumpus**, **modelos e consequência lógica** e **resolução proposicional**. A Aula 06 adiciona visualizações passo a passo para **unificação** e para comparação entre **encadeamento direto e reverso**. A Aula 07 acrescenta uma visualização de **resolução de metas, retrocesso e alcançabilidade em grafos**, conectando Prolog com busca em profundidade.
 
+As Aulas 08 a 11 exploram árvores de decisão, KNN, SVM e métricas. O laboratório integrado de otimização reúne AG, ACO, BPSO e CLONALG no mesmo problema binário 4 × 4, com orçamento comum de avaliações. A Aula 14 inclui um laboratório de NSA e CLONALG; a Aula 15 explora Voting, Bagging, Random Forest, AdaBoost, Gradient Boosting, Stacking e diversidade.
+
 As visualizações compartilham a mesma identidade visual: azul como cor principal; verde para solução/sucesso; amarelo para atenção ou fronteira; vermelho para estados críticos; violeta para diferenciações específicas. A interface foi pensada para funcionar em desktop, tablet e celular.
 
 [Abrir a seção de visualizações](visualizacoes/index.md)
 
 ## Exemplos Python
 
-Os scripts públicos das Aulas 08-11 exploram DT, KNN, SVM, PCA e métricas. A Aula 12 inclui um AG de referência após a prática; a Aula 13 oferece ACO e BPSO com TODOs, sem soluções finais.
+Os scripts públicos das Aulas 08-11 exploram DT, KNN, SVM, PCA e métricas. A Aula 12 inclui um AG de referência após a prática; a Aula 13 oferece ACO e BPSO com TODOs, sem soluções finais. A Aula 14 inclui exemplos executáveis de NSA e CLONALG; a Aula 15 apresenta a comparação experimental de ensembles.
 
 [Consultar exemplos Python](exemplos/index.md)
 

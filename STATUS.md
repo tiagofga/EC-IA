@@ -44,6 +44,7 @@ Também foram revisadas as notas visuais das Aulas 08 a 13 e atualizados o READM
 - [x] Integração dos PDFs das Aulas 14 e 15 à main.
 - [x] Preparação dos materiais complementares.
 - [x] Build estrito do site e testes da lógica dos novos laboratórios.
+- [x] Padronização documental e sincronização das cópias do MkDocs.
 - [ ] Revisão pedagógica e inspeção visual no navegador.
 - [ ] Pull Request, integração à main e validação da publicação.
 - [ ] Criação da próxima tag e release.
