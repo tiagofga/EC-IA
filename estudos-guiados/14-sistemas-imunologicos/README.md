@@ -120,7 +120,7 @@ Retome a imagem comum das Aulas 12, 13 e 14:
 
 ## Prática com Python
 
-Utilize os arquivos da prática da Aula 14 fornecidos pelo professor. Identifique as funções de `clonalg.py`, `nsa.py` e `testes.py` antes de executar.
+Utilize os [arquivos da prática da Aula 14](https://github.com/tiagofga/EC-IA/tree/main/exemplos/14-sistemas-imunologicos). Identifique as funções de `clonalg.py`, `nsa.py` e `testes.py` antes de executar.
 
 ```bash
 python testes.py

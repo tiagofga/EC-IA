@@ -12,6 +12,7 @@ O histórico de commits segue Conventional Commits.
 - Notas visuais das Aulas 14 e 15, com mapas conceituais, diagramas, exemplos numéricos e revisão ativa.
 - Estudos guiados das Aulas 14 e 15, com questões de interpretação, exercícios progressivos e experimentos articulados ao Trabalho 02.
 - Pseudocódigos de NSA, CLONALG, Voting, Bagging, Random Forest, AdaBoost, Gradient Boosting, Stacking e avaliação experimental de ensembles.
+- Exemplos Python executáveis de NSA, CLONALG e comparação de ensembles, com dependências, documentação e testes da prática de sistemas imunológicos.
 
 ### Changed
 

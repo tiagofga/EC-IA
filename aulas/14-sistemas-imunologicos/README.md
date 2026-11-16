@@ -7,6 +7,7 @@ Material público da disciplina de Inteligência Artificial do CEFET-MG, campus 
 - [Nota visual](../../notas/14-sistemas-imunologicos/README.md)
 - [Estudo guiado](../../estudos-guiados/14-sistemas-imunologicos/README.md)
 - [Pseudocódigos](../../pseudoalgoritmos/14-sistemas-imunologicos/README.md)
+- [Código Python](../../exemplos/14-sistemas-imunologicos/README.md)
 
 ## Percurso
 

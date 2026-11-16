@@ -7,6 +7,7 @@ Material público da disciplina de Inteligência Artificial do CEFET-MG, campus 
 - [Nota visual](../../notas/15-ensemble/README.md)
 - [Estudo guiado](../../estudos-guiados/15-ensemble/README.md)
 - [Pseudocódigos](../../pseudoalgoritmos/15-ensemble/README.md)
+- [Código Python](../../exemplos/15-ensemble/README.md)
 
 ## Percurso
 

@@ -61,10 +61,10 @@ As Aulas 04, 05, 06 e 12 a 15 possuem dois PDFs. Nas Aulas 12 a 15, os arquivos 
 | [Estudos guiados](https://tiagofga.github.io/EC-IA/estudos-guiados/) | Aulas 01 a 15 | Perguntas, revisão ativa e autoavaliação |
 | [Visualizações](https://tiagofga.github.io/EC-IA/visualizacoes/) | Conforme o catálogo | Acompanhamento de algoritmos e mecanismos de raciocínio |
 | [Pseudocódigos](https://tiagofga.github.io/EC-IA/pseudocodigos/) | Conforme o catálogo | Estruturas e procedimentos conceituais |
-| [Exemplos Python](exemplos/README.md) | Aulas 08 a 13 | Implementação e experimentação |
+| [Exemplos Python](exemplos/README.md) | Aulas 08 a 15 | Implementação e experimentação |
 | [Atividades](https://tiagofga.github.io/EC-IA/atividades/) | Listas 01 a 05 | Exercícios para consolidação |
 
-As notas das Aulas 08 a 15 apresentam diagramas específicos dos mecanismos estudados, exemplos interpretáveis, erros frequentes e conexões entre teoria e prática. As Aulas 14 e 15 já incluem estudos guiados e pseudocódigos; visualizações e exemplos Python serão integrados progressivamente, conforme o roadmap.
+As notas das Aulas 08 a 15 apresentam diagramas específicos dos mecanismos estudados, exemplos interpretáveis, erros frequentes e conexões entre teoria e prática. As Aulas 14 e 15 já incluem estudos guiados, pseudocódigos e exemplos Python; as visualizações serão integradas conforme o roadmap.
 
 Os visualizadores de busca da Aula 04 reproduzem traces pré-calculados; os laboratórios de lógica, Prolog, aprendizagem supervisionada e computação natural permitem acompanhar os mecanismos específicos de cada método. Os códigos de ACO e BPSO incluem etapas TODO para os estudantes completarem.
 

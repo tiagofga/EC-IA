@@ -19,7 +19,7 @@ Os PDFs de teoria e prática foram integrados à branch principal. Os materiais 
 | Estudos guiados | Integrados à atualização | Integrados à atualização |
 | Pseudocódigos | Integrados à atualização | Integrados à atualização |
 | Visualizações | Planejadas | Planejadas |
-| Exemplos Python | A integrar e testar | A integrar e testar |
+| Exemplos Python | Integrados e testados | Integrados e testados |
 
 Os recursos marcados como integrados à atualização estão preparados para revisão no próximo PR. A disponibilidade no site de produção depende da integração e publicação.
 
@@ -31,7 +31,7 @@ Os recursos marcados como integrados à atualização estão preparados para rev
 | Notas 12 e 13 | Integradas à atualização | Refinamento dos diagramas de AG, ACO e BPSO, preservando os conceitos e exemplos |
 | README principal | Integrado à atualização | Catálogo completo, percurso didático e disponibilidade dos recursos |
 | Visualizações 14 e 15 | Planejadas | NSA, CLONALG e mecanismos ensemble com parâmetros, estados e decisões interpretáveis |
-| Exemplos Python 14 e 15 | Planejados | Códigos das práticas, instruções de execução, dependências, sementes e testes |
+| Exemplos Python 14 e 15 | Integrados à atualização | Códigos das práticas, instruções de execução, dependências, sementes e testes |
 | Simulados - Prova 2 | A disponibilizar | Revisão integrada das Aulas **05 a 12**, conforme o escopo definido para a avaliação; enunciados sem gabaritos |
 | Consolidação | Planejada | Revisão de links, acessibilidade, exemplos, build estrito, PR e validação de publicação |
 | Tag e release | Planejadas | Publicação da versão após consolidação na main e revisão do changelog |
@@ -54,15 +54,15 @@ flowchart TD
   B --> C["Notas 08 a 15 e README"]
   C --> D["Estudos guiados 14 e 15"]
   D --> E["Pseudocódigos 14 e 15"]
-  E --> F["Visualizações"]
-  F --> G["Exemplos Python"]
+  E --> F["Exemplos Python"]
+  F --> G["Visualizações"]
   G --> H["PR e validação"]
   H --> I["Tag e release"]
   A --> J["Simulados Prova 2 - Aulas 05 a 12"]
   classDef done fill:#e1f2f0,stroke:#20766c,color:#12463f;
   classDef pending fill:#fff0d7,stroke:#ad7321,color:#71460c;
-  class A,B,C,D,E done;
-  class F,G,H,I,J pending;
+  class A,B,C,D,E,F done;
+  class G,H,I,J pending;
 ```
 
 Verde indica etapas integradas; amarelo indica etapas pendentes. Os simulados seguem uma trilha independente, sem alterar o escopo definido para a Prova 2.

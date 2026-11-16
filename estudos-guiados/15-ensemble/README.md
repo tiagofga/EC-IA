@@ -134,7 +134,7 @@ Um conjunto de treinamento contém seis exemplos, divididos em três folds:
 
 ## Prática com Python
 
-Utilize o programa `ensemble.py` e o arquivo `requirements.txt` fornecidos na prática da Aula 15. A base Breast Cancer Wisconsin é carregada pelo scikit-learn, com maligno representado pela classe positiva 1.
+Utilize o programa `ensemble.py` e o arquivo `requirements.txt` disponíveis nos [arquivos da prática da Aula 15](https://github.com/tiagofga/EC-IA/tree/main/exemplos/15-ensemble). A base Breast Cancer Wisconsin é carregada pelo scikit-learn, com maligno representado pela classe positiva 1.
 
 ```bash
 python -m pip install -r requirements.txt
