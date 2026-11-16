@@ -58,8 +58,10 @@ A proposta não é apenas disponibilizar arquivos, mas organizar um percurso de 
 | 11 | Atividade Integradora - DT, KNN e SVM |
 | 12 | Algoritmos Genéticos |
 | 13 | Inteligência de Enxames |
+| 14 | Sistemas Imunológicos Artificiais |
+| 15 | Algoritmos Ensemble |
 
-Os PDFs públicos das Aulas 00 a 13 e das Atividades 01 a 05 estão disponíveis no repositório. As Aulas 12 e 13 incluem teoria e prática; o código de ACO e BPSO permanece incompleto, com exercícios TODO. A Lista 05 integra Lógica Proposicional, Lógica de Primeira Ordem, Inferência em LPO e Prolog.
+Os PDFs públicos das Aulas 00 a 15 e das Atividades 01 a 05 estão disponíveis no repositório. As Aulas 12 a 15 incluem teoria e prática; o código de ACO e BPSO permanece incompleto, com exercícios TODO. Os materiais complementares das Aulas 14 e 15 serão integrados posteriormente. A Lista 05 integra Lógica Proposicional, Lógica de Primeira Ordem, Inferência em LPO e Prolog.
 
 ## Notas visuais
 
@@ -249,7 +251,7 @@ Modelos LaTeX explicitamente destinados aos estudantes, como o modelo SBC do Tra
 
 ## Versão de referência
 
-A próxima versão consolidada será **v0.12.0**, após revisão e integração desta atualização documental na branch `main`.
+A versão consolidada de referência é **v0.12.0**. A próxima versão será definida após revisão e integração dos novos materiais na branch `main`.
 
 Este marco compreende as Aulas 00 a 13, o Trabalho 02, notas visuais, estudos guiados, pseudocódigos, simulados separados por avaliação e laboratórios interativos de DT, KNN, SVM, AG, ACO e BPSO. As práticas de ACO/BPSO preservam os trechos `TODO`.
 
@@ -271,11 +273,15 @@ chore(release): prepare v0.7.0
 ```
 
 
-## Aulas 08 a 13 - Aprendizagem e Computação Natural
+## Aulas 08 a 15 - Aprendizagem e Computação Natural
 
 - Aula 08 - [Aprendizagem com Exemplos](aulas/08-aprendizagem-exemplos/README.md)
 - Aula 09 - [K-Nearest Neighbors](aulas/09-knn/README.md)
 - Aula 10 - [Support Vector Machines e PCA](aulas/10-svm/README.md)
 - Aula 11 - [Atividade Integradora: DT, KNN e SVM](aulas/11-atividade-comparacao/README.md)
+- Aula 12 - [Algoritmos Genéticos](aulas/12-algoritmos-geneticos/README.md)
+- Aula 13 - [Inteligência de Enxames](aulas/13-inteligencia-enxames/README.md)
+- Aula 14 - [Sistemas Imunológicos Artificiais](aulas/14-sistemas-imunologicos/README.md)
+- Aula 15 - [Algoritmos Ensemble](aulas/15-ensemble/README.md)
 
 Os códigos públicos estão em `exemplos/`; instale as dependências com `python -m pip install numpy pandas matplotlib scikit-learn`. As Aulas 12 e 13 incluem aplicações de AG e enxames; o código de AG é completo e os roteiros de ACO/BPSO mantêm atividades TODO.

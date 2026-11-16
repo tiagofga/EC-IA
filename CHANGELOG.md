@@ -6,7 +6,13 @@ O histórico de commits segue Conventional Commits.
 
 ## [Unreleased]
 
-Nenhuma alteração ainda documentada após a versão 0.12.0.
+### Added
+
+- Aulas 14 e 15: PDFs teóricos e práticos de Sistemas Imunológicos Artificiais e Algoritmos Ensemble.
+
+### Changed
+
+- Catálogo de aulas, página inicial, documentação e build do site atualizados para disponibilizar os quatro PDFs.
 
 ## [0.12.0] - 2026-11-02
 
