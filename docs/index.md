@@ -24,7 +24,7 @@ Se você está acompanhando a disciplina durante o semestre, use esta sequência
 
 ## Conteúdo publicado
 
-O material público está organizado da Aula 00 à Aula 13. As Aulas 12 e 13 disponibilizam PDFs teóricos e práticos e respectivos códigos de apoio, com notas visuais e estudos guiados específicos. Os links abaixo conduzem diretamente às aulas e aos recursos de estudo, incluindo os fundamentos apresentados nas Aulas 01 a 03.
+O material público está organizado da Aula 00 à Aula 15. As Aulas 12 a 15 disponibilizam PDFs teóricos e práticos. Os materiais complementares das Aulas 14 e 15 serão integrados posteriormente. Os links abaixo conduzem diretamente às aulas e aos recursos de estudo disponíveis.
 
 ### Fundamentos de Inteligência Artificial - Aulas 00 a 03
 
@@ -51,10 +51,15 @@ As Aulas 04, 05 e 06 possuem dois PDFs. Consulte o [catálogo completo](aulas/in
 - **Aula 10 - SVM e PCA:** [PDF](downloads/aulas/EC_IA_010_SVM.pdf) · [Nota visual](notas/10-svm/README.md) · [Estudo guiado](estudos-guiados/10-svm/README.md)
 - **Aula 11 - Atividade Integradora: DT, KNN e SVM:** [PDF](downloads/aulas/EC_IA_011_Atividade_Comparacao.pdf) · [Nota visual](notas/11-atividade-comparacao/README.md) · [Estudo guiado](estudos-guiados/11-atividade-comparacao/README.md)
 
-### Computação Natural - Aulas 12 e 13
+### Computação Natural - Aulas 12 a 14
 
 - **Aula 12 - Algoritmos Genéticos:** [Teoria](downloads/aulas/EC_IA_012_AG_Teoria.pdf) · [Prática](downloads/aulas/EC_IA_012_AG_Pratica.pdf) · [Código Python](exemplos/index.md)
 - **Aula 13 - Inteligência de Enxames:** [Teoria](downloads/aulas/EC_IA_013_Enxames_Teoria.pdf) · [Prática](downloads/aulas/EC_IA_013_Enxames_Pratica.pdf) · [Código-base com TODOs](exemplos/index.md)
+- **Aula 14 - Sistemas Imunológicos Artificiais:** [Teoria](downloads/aulas/EC_IA_014_Imunes_Teoria.pdf) · [Prática](downloads/aulas/EC_IA_014_Imunes_Pratica.pdf)
+
+### Métodos Ensemble - Aula 15
+
+- **Aula 15 - Algoritmos Ensemble:** [Teoria](downloads/aulas/EC_IA_015_Ensemble_Teoria.pdf) · [Prática](downloads/aulas/EC_IA_015_Ensemble_Pratica.pdf)
 
 [Todos os PDFs](aulas/index.md) · [Exemplos Python](https://github.com/tiagofga/EC-IA/tree/main/exemplos) · [Visualizações interativas](visualizacoes/index.md)
 

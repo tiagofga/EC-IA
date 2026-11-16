@@ -25,8 +25,12 @@ Os materiais públicos estão organizados em sequência didática. Selecione o P
 | 12 | Algoritmos Genéticos - Prática | <span data-download="../downloads/aulas/EC_IA_012_AG_Pratica.pdf">Verificando PDF...</span> |
 | 13 | Inteligência de Enxames - Teoria | <span data-download="../downloads/aulas/EC_IA_013_Enxames_Teoria.pdf">Verificando PDF...</span> |
 | 13 | Inteligência de Enxames - Prática | <span data-download="../downloads/aulas/EC_IA_013_Enxames_Pratica.pdf">Verificando PDF...</span> |
+| 14 | Sistemas Imunológicos Artificiais - Teoria | <span data-download="../downloads/aulas/EC_IA_014_Imunes_Teoria.pdf">Verificando PDF...</span> |
+| 14 | Sistemas Imunológicos Artificiais - Prática | <span data-download="../downloads/aulas/EC_IA_014_Imunes_Pratica.pdf">Verificando PDF...</span> |
+| 15 | Algoritmos Ensemble - Teoria | <span data-download="../downloads/aulas/EC_IA_015_Ensemble_Teoria.pdf">Verificando PDF...</span> |
+| 15 | Algoritmos Ensemble - Prática | <span data-download="../downloads/aulas/EC_IA_015_Ensemble_Pratica.pdf">Verificando PDF...</span> |
 
-As Aulas 04, 05, 06, 12 e 13 possuem dois PDFs cada. Nas Aulas 12 e 13, os arquivos correspondem a teoria e prática.
+As Aulas 04, 05, 06 e 12 a 15 possuem dois PDFs cada. Nas Aulas 12 a 15, os arquivos correspondem a teoria e prática.
 
 ## Organização dos conteúdos
 
@@ -35,7 +39,8 @@ As Aulas 04, 05, 06, 12 e 13 possuem dois PDFs cada. Nas Aulas 12 e 13, os arqui
 - **Conhecimento e raciocínio (05-07):** Lógica Proposicional, LPO, inferência e Prolog.
 - **Aprendizagem de máquina (08-10):** classificação, regressão, Árvores de Decisão, KNN, SVM e PCA.
 - **Consolidação (11):** comparação experimental entre DT, KNN e SVM.
-- **Computação natural (12-13):** Algoritmos Genéticos, ACO e PSO, com prática de representação binária 4 × 4.
+- **Computação natural (12-14):** Algoritmos Genéticos, ACO, PSO, NSA e CLONALG, com prática de representação binária 4 × 4.
+- **Métodos ensemble (15):** Voting, Bagging, Random Forest, Boosting e Stacking.
 
 ## Sequência recomendada
 
