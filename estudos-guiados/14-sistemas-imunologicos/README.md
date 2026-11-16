@@ -150,4 +150,4 @@ No Trabalho 02, o problema de otimização é o mesmo para AG, ACO ou PSO e CLON
 - [ ] Comparo metaheurísticas com orçamento, sementes e objetivo comuns.
 - [ ] Justifico a adaptação de CLONALG ao Trabalho 02.
 
-[Slides da Aula 14](https://github.com/tiagofga/EC-IA/tree/main/aulas/14-sistemas-imunologicos) · [Nota visual 14](../../notas/14-sistemas-imunologicos/README.md)
+[Slides da Aula 14](https://github.com/tiagofga/EC-IA/tree/main/aulas/14-sistemas-imunologicos) · [Nota visual 14](../../notas/14-sistemas-imunologicos/README.md) · [Laboratório](../../visualizacoes/14-sistemas-imunologicos/README.md)

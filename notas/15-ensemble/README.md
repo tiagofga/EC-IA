@@ -197,6 +197,6 @@ Explique por que hard e soft voting podem discordar. Compare a geração paralel
 - [ ] Explico stacking com OOF sem vazamento.
 - [ ] Comparo modelos com as mesmas divisões e métricas.
 
-[Estudo guiado](../../estudos-guiados/15-ensemble/README.md) · [Slides da Aula 15](https://github.com/tiagofga/EC-IA/tree/main/aulas/15-ensemble) · [Código Python](https://github.com/tiagofga/EC-IA/tree/main/exemplos/15-ensemble)
+[Estudo guiado](../../estudos-guiados/15-ensemble/README.md) · [Laboratório](../../visualizacoes/15-ensemble/README.md) · [Slides da Aula 15](https://github.com/tiagofga/EC-IA/tree/main/aulas/15-ensemble) · [Código Python](https://github.com/tiagofga/EC-IA/tree/main/exemplos/15-ensemble)
 
 **Próxima conexão:** consolidar os resultados da aprendizagem supervisionada e da computação natural no Trabalho 02, respeitando as diferenças entre avaliação de modelos e otimização de soluções.

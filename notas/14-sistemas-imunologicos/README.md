@@ -136,6 +136,6 @@ Explique por que o NSA rejeita um detector próximo de um padrão normal. Depois
 - [ ] Calculo fitness com penalização e respeito às restrições.
 - [ ] Comparo AG, ACO, BPSO e CLONALG por avaliações e sementes.
 
-[Estudo guiado](../../estudos-guiados/14-sistemas-imunologicos/README.md) · [Slides da Aula 14](https://github.com/tiagofga/EC-IA/tree/main/aulas/14-sistemas-imunologicos) · [Código Python](https://github.com/tiagofga/EC-IA/tree/main/exemplos/14-sistemas-imunologicos)
+[Estudo guiado](../../estudos-guiados/14-sistemas-imunologicos/README.md) · [Laboratório](../../visualizacoes/14-sistemas-imunologicos/README.md) · [Slides da Aula 14](https://github.com/tiagofga/EC-IA/tree/main/aulas/14-sistemas-imunologicos) · [Código Python](https://github.com/tiagofga/EC-IA/tree/main/exemplos/14-sistemas-imunologicos)
 
 **Próxima conexão:** enquanto as metaheurísticas combinam mecanismos de busca sobre candidatos, os métodos ensemble combinam predições de modelos de aprendizagem para melhorar a generalização.

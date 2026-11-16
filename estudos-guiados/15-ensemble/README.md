@@ -166,4 +166,4 @@ No Trabalho 02, a classificação deve utilizar a mesma base para os modelos ind
 - [ ] Comparo modelos por métricas, dispersão e custo.
 - [ ] Mantenho o conjunto de teste isolado até finalizar as escolhas.
 
-[Slides da Aula 15](https://github.com/tiagofga/EC-IA/tree/main/aulas/15-ensemble) · [Nota visual 15](../../notas/15-ensemble/README.md)
+[Slides da Aula 15](https://github.com/tiagofga/EC-IA/tree/main/aulas/15-ensemble) · [Nota visual 15](../../notas/15-ensemble/README.md) · [Laboratório](../../visualizacoes/15-ensemble/README.md)
