@@ -1,5 +1,7 @@
 # Simulados - Prova 2
 
+> **Atenção:** estes materiais são simulados de revisão, com oito questões para ampliar a prática dos conteúdos. A Prova 2 oficial terá apenas **cinco questões**. O formato, a distribuição de pontos e os enunciados dos simulados não correspondem necessariamente aos da avaliação oficial.
+
 Os três simulados abordam as **Aulas 05 a 12**. Cada um contém oito questões, com valor de referência de 20 pontos e tempo sugerido de 100 minutos.
 
 - [Simulado 01](simulado-01.md)

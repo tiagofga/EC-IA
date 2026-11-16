@@ -1,5 +1,7 @@
 # Simulado 02 - Prova 2
 
+> **Atenção:** estes materiais são simulados de revisão, com oito questões para ampliar a prática dos conteúdos. A Prova 2 oficial terá apenas **cinco questões**. O formato, a distribuição de pontos e os enunciados dos simulados não correspondem necessariamente aos da avaliação oficial.
+
 > **Orientações:** Aulas 05 a 12. Tempo sugerido: 100 minutos. Valor de referência: 20 pontos. Resolva sem consulta, registre cálculos e justifique decisões. Arredonde resultados decimais a três casas, quando necessário.
 
 ## 1. Modelos e inferência (3,0 pontos)
