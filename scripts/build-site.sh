@@ -140,8 +140,8 @@ for unit in 02-agentes 03-conhecimento 04-busca; do
   cp -R "pseudoalgoritmos/$unit" "docs/pseudocodigos/$unit"
 done
 
-# Pseudocódigos conceituais das Aulas 12 e 13.
-for unit in 12-algoritmos-geneticos 13-inteligencia-enxames; do
+# Pseudocódigos conceituais das Aulas 12 a 15.
+for unit in 12-algoritmos-geneticos 13-inteligencia-enxames 14-sistemas-imunologicos 15-ensemble; do
   rm -rf "docs/pseudocodigos/$unit"
   cp -R "pseudoalgoritmos/$unit" "docs/pseudocodigos/$unit"
 done

@@ -24,6 +24,11 @@ Esta seção reúne algoritmos conceituais organizados por aula, com arquivos pr
 
 - **Aula 12 - Algoritmos Genéticos:** [AG geracional e operadores binários](12-algoritmos-geneticos/README.md).
 - **Aula 13 - Inteligência de Enxames:** [Ant System, ACO binário, PSO e BPSO](13-inteligencia-enxames/README.md).
+- **Aula 14 - Sistemas Imunológicos Artificiais:** [NSA e CLONALG](14-sistemas-imunologicos/README.md).
+
+## Métodos Ensemble
+
+- **Aula 15 - Algoritmos Ensemble:** [Voting, Bagging, Random Forest, AdaBoost, Gradient Boosting, Stacking e avaliação experimental](15-ensemble/README.md).
 
 ## Como estudar
 
