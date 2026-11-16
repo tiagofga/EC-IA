@@ -1,6 +1,6 @@
 # Simulados
 
-Os simulados estão organizados por avaliação. A Prova 1 cobre as Aulas 01 a 04; a Prova 2 abrangerá as Aulas 05 a 12, com simulados a serem disponibilizados em breve.
+Os simulados estão organizados por avaliação. A Prova 1 cobre as Aulas 01 a 04; a Prova 2 cobre as Aulas 05 a 12.
 
 ## Prova 1
 
@@ -8,6 +8,6 @@ Os simulados estão organizados por avaliação. A Prova 1 cobre as Aulas 01 a 0
 
 ## Prova 2
 
-[Consultar a página da Prova 2](prova-02/README.md): os simulados das Aulas 05 a 12 serão disponibilizados em breve.
+[Consultar os simulados da Prova 2](prova-02/README.md): três simulados referentes às Aulas 05 a 12.
 
 Resolva primeiro sem consultar as aulas e revise as respostas após a tentativa. Gabaritos e soluções de referência não integram o material público.

@@ -74,7 +74,7 @@ Os visualizadores de busca da Aula 04 reproduzem traces pré-calculados; os labo
 ### Simulados
 
 - **Prova 1:** três simulados públicos referentes às Aulas 01 a 04.
-- **Prova 2:** simulados referentes às Aulas 05 a 12, a disponibilizar.
+- **Prova 2:** três simulados referentes às Aulas 05 a 12, com questões conceituais e numéricas.
 
 Consulte o [catálogo de simulados](https://tiagofga.github.io/EC-IA/simulados/). Gabaritos e soluções de referência não são publicados.
 

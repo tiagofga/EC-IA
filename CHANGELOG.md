@@ -8,6 +8,7 @@ O histórico de commits segue Conventional Commits.
 
 ### Added
 
+- Três simulados da Prova 2 (Aulas 05 a 12), com questões inéditas, cálculos e justificativas conceituais, sem gabaritos públicos.
 - Aulas 14 e 15: PDFs teóricos e práticos de Sistemas Imunológicos Artificiais e Algoritmos Ensemble.
 - Notas visuais das Aulas 14 e 15, com mapas conceituais, diagramas, exemplos numéricos e revisão ativa.
 - Estudos guiados das Aulas 14 e 15, com questões de interpretação, exercícios progressivos e experimentos articulados ao Trabalho 02.

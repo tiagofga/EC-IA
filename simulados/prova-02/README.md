@@ -1,9 +1,19 @@
 # Simulados - Prova 2
 
-**Disponibilização em breve.**
+> **Atenção:** estes materiais são simulados de revisão, com oito questões para ampliar a prática dos conteúdos. A Prova 2 oficial terá apenas **cinco questões**. O formato, a distribuição de pontos e os enunciados dos simulados não correspondem necessariamente aos da avaliação oficial.
 
-Os simulados da **Prova 2** abrangerão os conteúdos das **Aulas 05 a 12**, incluindo lógica e inferência, Prolog, aprendizagem supervisionada e Algoritmos Genéticos. Os simulados serão disponibilizados em breve. Os enunciados ainda não foram publicados. Esta página será atualizada quando os materiais estiverem disponíveis, sem antecipar questões ou gabaritos.
+Os três simulados abordam as **Aulas 05 a 12**. Cada um contém oito questões, com valor de referência de 20 pontos e tempo sugerido de 100 minutos.
 
-Enquanto isso, consulte as [aulas](../../aulas/index.md) e os [estudos guiados](../../estudos-guiados/index.md).
+- [Simulado 01](simulado-01.md)
+- [Simulado 02](simulado-02.md)
+- [Simulado 03](simulado-03.md)
+
+## Conteúdos
+
+Lógica proposicional, lógica de primeira ordem, inferência, unificação, Prolog, Árvores de Decisão, KNN, SVM, PCA, avaliação experimental e Algoritmos Genéticos.
+
+## Orientações
+
+Resolva inicialmente sem consulta e registre tanto os cálculos quanto as justificativas. Os três simulados cobrem o mesmo escopo, com problemas e dados distintos. Depois, retome as aulas, notas visuais e estudos guiados nos pontos em que encontrou dificuldades. Enunciados de treino não antecipam a prova oficial; gabaritos não são disponibilizados.
 
 [Voltar aos simulados](../index.md)

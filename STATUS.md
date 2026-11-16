@@ -6,7 +6,7 @@
 
 `v0.12.0`: materiais públicos das Aulas 00 a 13.
 
-Os PDFs de teoria e prática das Aulas 14 e 15 já estão integrados à branch `main`. Os materiais complementares desta atualização aguardam revisão e integração. A próxima tag e release ainda não foram criadas.
+Os PDFs e materiais complementares das Aulas 14 e 15 já estão integrados à branch `main`, assim como a refatoração do build. A release consolidada de referência permanece v0.12.0. Os três simulados da Prova 2 estão preparados para revisão nesta atualização.
 
 ## Conteúdo público organizado
 
@@ -20,7 +20,7 @@ Os PDFs de teoria e prática das Aulas 14 e 15 já estão integrados à branch `
 | Visualizações | Busca, lógica, Prolog, aprendizagem supervisionada, computação natural e ensembles |
 | Exemplos Python | Aulas 08 a 15 |
 | Trabalhos | Trabalho 01 e Trabalho 02 |
-| Simulados | Prova 1: três simulados; Prova 2: a disponibilizar (Aulas 05 a 12) |
+| Simulados | Prova 1: três simulados; Prova 2: três simulados preparados (Aulas 05 a 12) |
 
 O escopo acima inclui os materiais preparados na branch de atualização, cuja publicação depende da revisão e integração.
 
@@ -46,9 +46,11 @@ Também foram revisadas as notas visuais das Aulas 08 a 13 e atualizados o READM
 - [x] Build estrito do site e testes da lógica dos novos laboratórios.
 - [x] Padronização documental e sincronização das cópias do MkDocs.
 - [ ] Revisão pedagógica e inspeção visual no navegador.
-- [ ] Pull Request, integração à main e validação da publicação.
-- [ ] Criação da próxima tag e release.
-- [ ] Disponibilização dos simulados da Prova 2, em etapa independente.
+- [x] Integração dos materiais complementares à main.
+- [x] Refatoração do build para não versionar cópias geradas.
+- [ ] Consolidação da próxima release.
+- [x] Elaboração dos três simulados da Prova 2, em etapa independente.
+- [ ] Revisão dos simulados e publicação após integração.
 
 ## Materiais restritos
 

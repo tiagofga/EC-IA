@@ -10,7 +10,7 @@ A publicação dos materiais já consolidados pode ser consultada nas [aulas](au
 
 ## Atualização das Aulas 14 e 15
 
-Os PDFs de teoria e prática foram integrados à branch principal. Os materiais complementares são desenvolvidos em uma atualização separada, com revisão por etapas.
+Os PDFs de teoria e prática e os materiais complementares foram integrados à branch principal. A refatoração do build também foi integrada.
 
 | Recurso | Aula 14 - Sistemas Imunológicos | Aula 15 - Ensemble |
 |---|---|---|
@@ -21,7 +21,7 @@ Os PDFs de teoria e prática foram integrados à branch principal. Os materiais 
 | Visualizações | Integradas à atualização | Integradas à atualização |
 | Exemplos Python | Integrados e testados | Integrados e testados |
 
-Os recursos marcados como integrados à atualização estão preparados para revisão no próximo PR. A disponibilidade no site de produção depende da integração e publicação.
+Os recursos das Aulas 14 e 15 foram integrados à main. A disponibilização dos três simulados da Prova 2 depende da revisão e integração da atualização independente.
 
 ## Revisões e próximas etapas
 
@@ -32,9 +32,9 @@ Os recursos marcados como integrados à atualização estão preparados para rev
 | README principal | Integrado à atualização | Catálogo completo, percurso didático e disponibilidade dos recursos |
 | Visualizações 14 e 15 | Integradas à atualização | NSA, CLONALG e mecanismos ensemble com parâmetros, estados e decisões interpretáveis; comparação integrada de AG, ACO, BPSO e CLONALG com orçamento comum |
 | Exemplos Python 14 e 15 | Integrados à atualização | Códigos das práticas, instruções de execução, dependências, sementes e testes |
-| Simulados - Prova 2 | A disponibilizar | Revisão integrada das Aulas **05 a 12**, conforme o escopo definido para a avaliação; enunciados sem gabaritos |
+| Simulados - Prova 2 | Preparados para revisão | Três simulados das Aulas **05 a 12**, com oito questões cada e enunciados sem gabaritos |
 | Padronização documental | Integrada à atualização | Documentação principal, página inicial e sincronização das cópias utilizadas pelo MkDocs |
-| Consolidação | Planejada | Revisão de links, acessibilidade, exemplos, build estrito, PR e validação de publicação |
+| Consolidação das Aulas 14 e 15 | Integrada à main | Revisão de links, exemplos, build estrito e PR |
 | Tag e release | Planejadas | Publicação da versão após consolidação na main e revisão do changelog |
 
 ## Qualidade das notas visuais
@@ -62,8 +62,8 @@ flowchart TD
   A --> J["Simulados Prova 2 - Aulas 05 a 12"]
   classDef done fill:#e1f2f0,stroke:#20766c,color:#12463f;
   classDef pending fill:#fff0d7,stroke:#ad7321,color:#71460c;
-  class A,B,C,D,E,F,G done;
-  class H,I,J pending;
+  class A,B,C,D,E,F,G,H done;
+  class I,J pending;
 ```
 
 Verde indica etapas integradas; amarelo indica etapas pendentes. Os simulados seguem uma trilha independente, sem alterar o escopo definido para a Prova 2.

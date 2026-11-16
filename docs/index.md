@@ -72,7 +72,9 @@ As notas funcionam como mapas mentais e guias de revisão. Elas incluem diagrama
 
 ## Simulados
 
-Estão disponíveis três simulados da Prova 1 para revisão integrada das Aulas 01 a 04. Os simulados da Prova 2, referentes às Aulas 05 a 12, serão disponibilizados posteriormente. Eles cobrem fundamentos de IA, agentes inteligentes, PEAS, representação e formulação de problemas, BFS, DFS, Busca de Custo Uniforme, heurísticas, Busca Gulosa e A*.
+Estão disponíveis três simulados da Prova 1 para revisão integrada das Aulas 01 a 04. Eles cobrem fundamentos de IA, agentes inteligentes, PEAS, representação e formulação de problemas, BFS, DFS, Busca de Custo Uniforme, heurísticas, Busca Gulosa e A*.
+
+A Prova 2 possui três simulados referentes às Aulas 05 a 12, com lógica, inferência, Prolog, Árvores de Decisão, KNN, SVM, PCA, avaliação de modelos e Algoritmos Genéticos.
 
 A recomendação é resolvê-los em sequência e, inicialmente, sem consulta. O Simulado 03 utiliza um grafo didático inspirado em cidades brasileiras e apresenta a identificação das siglas das cidades utilizadas. Os gabaritos permanecem fora do site público.
 
